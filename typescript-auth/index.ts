@@ -33,12 +33,22 @@ function login(username: string, password: string): void {
 }
 
 function logout(): void {
-  console.log(`See you later, ${userIsAuth.user.username}!`);
+  try {
+    if(!userIsAuth.isAuth) {
+      throw new Error("Please login, my friend");
+    }
 
-  userIsAuth = {
-    isAuth: false,
-    user: {},
-  };
+    console.log(`See you later, ${userIsAuth.user.username}!`);
+
+    userIsAuth = {
+      isAuth: false,
+      user: {},
+    };
+  } catch (error) {
+    if (error instanceof Error) {
+      console.log(error.message);
+    }
+  }
 }
 
 function register(username: string, password: string): void {
@@ -69,6 +79,8 @@ function whoami(): void {
   console.log(`You are ${userIsAuth.user.username}`);
 }
 
+
+// Tests ------------------------------
 whoami();
 logout();
 register("Mikhail", "qwe");
