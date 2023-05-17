@@ -9,6 +9,10 @@ const credentials: Array<IUserInfo> = [];
 
 function login(username: string, password: string): void {
   try {
+    if (userIsAuth.isAuth) {
+      throw new Error(`${username}, please logout before login`);
+    }
+    
     const existUser = credentials.find(
       (user) => user.username === username && user.password === password
     );
@@ -57,6 +61,8 @@ function register(username: string, password: string): void {
       throw new Error("Username must be at least 5 characters long");
     } else if (password.length <= 6) {
       throw new Error("Password must be at least 6 characters long");
+    } else if (userIsAuth.isAuth) {
+      throw new Error(`${username}, please logout before register`);
     }
     const newUser: IUserInfo = {
       username,
