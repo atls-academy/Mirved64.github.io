@@ -34,7 +34,7 @@ function login(username: string, password: string): void {
 
 function logout(): void {
   try {
-    if(!userIsAuth.isAuth) {
+    if (!userIsAuth.isAuth) {
       throw new Error("Please login, my friend");
     }
 
@@ -76,9 +76,18 @@ function register(username: string, password: string): void {
 }
 
 function whoami(): void {
-  console.log(`You are ${userIsAuth.user.username}`);
+  try {
+    if (!userIsAuth.isAuth) {
+      throw new Error("Please login, my friend");
+    }
+    
+    console.log(`You are ${userIsAuth.user.username}`);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.log(error.message);
+    }
+  }
 }
-
 
 // Tests ------------------------------
 whoami();
