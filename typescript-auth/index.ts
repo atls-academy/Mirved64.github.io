@@ -27,11 +27,12 @@ function login(username: string, password: string): void {
     };
 
     userIsAuth = { isAuth: true, user: activeUser };
-
-    console.log(`You are welcome, ${username}!`);
+    // eslint-disable-next-line no-console
+    console.log(`You are welcome, ${username}!`); 
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error.message);
+      // eslint-disable-next-line no-console
+      console.log(error.message); 
     }
   }
 }
@@ -41,8 +42,8 @@ function logout(): void {
     if (!userIsAuth.isAuth) {
       throw new Error("Please login, my friend");
     }
-
-    console.log(`See you later, ${userIsAuth.user.username}!`);
+    // eslint-disable-next-line no-console
+    console.log(`See you later, ${userIsAuth.user.username}!`); 
 
     userIsAuth = {
       isAuth: false,
@@ -50,7 +51,8 @@ function logout(): void {
     };
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error.message);
+      // eslint-disable-next-line no-console
+      console.log(error.message); 
     }
   }
 }
@@ -70,13 +72,14 @@ function register(username: string, password: string): void {
     };
 
     userIsAuth = { isAuth: true, user: newUser };
-
-    console.log(`Nice to meet you, ${username}`);
+    // eslint-disable-next-line no-console
+    console.log(`Nice to meet you, ${username}`); 
 
     credentials.push(newUser);
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error.message);
+      // eslint-disable-next-line no-console
+      console.log(error.message); 
     }
   }
 }
@@ -86,11 +89,12 @@ function whoami(): void {
     if (!userIsAuth.isAuth) {
       throw new Error("Please login, my friend");
     }
-    
-    console.log(`You are ${userIsAuth.user.username}`);
+    // eslint-disable-next-line no-console
+    console.log(`You are ${userIsAuth.user.username}`); 
   } catch (error) {
     if (error instanceof Error) {
-      console.log(error.message);
+      // eslint-disable-next-line no-console
+      console.log(error.message); 
     }
   }
 }
@@ -106,4 +110,5 @@ logout();
 login("Mikhail", "qwerty");
 whoami();
 register("Mirved64", "1234567");
-console.log(credentials);
+// eslint-disable-next-line no-console
+console.log(credentials); 
