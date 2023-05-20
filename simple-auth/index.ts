@@ -49,3 +49,15 @@ function registerUser(): void {
     handleError(error);
   }
 }
+
+function logout(): void {
+  try {
+    if (!user.isAuth) {
+      throw new Error("Please login, my friend");
+    }
+    user.isAuth = false;
+    alert(`See you later, ${user.username}!`)
+  } catch (error) {
+    handleError(error);
+  }
+}
