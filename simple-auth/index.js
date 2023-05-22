@@ -5,6 +5,9 @@ let user = {
     isAuth: false,
 };
 const usersList = [];
+const WORK_STOP = "Work was stopped by the user";
+const ENTER_USERNAME = "Enter your username, please";
+const ENTER_PASSWORD = "Enter password, please";
 function handleError(error) {
     if (error instanceof Error) {
         alert(error.message);
@@ -22,20 +25,24 @@ const register = (username, password) => {
 };
 function registerUser() {
     try {
-        const newUserUsername = prompt("Enter your username, please");
-        const newUserPassword = prompt("Enter password, please");
-        if (newUserUsername.length <= 5 || newUserUsername === "") {
+        const newUserUsername = prompt(ENTER_USERNAME);
+        if (newUserUsername === null) {
+            throw new Error(WORK_STOP);
+        }
+        else if (newUserUsername.length <= 5) {
             throw new Error("Username must be at least 5 characters long");
         }
-        else if (newUserPassword.length <= 6 || newUserUsername === "") {
+        const newUserPassword = prompt(ENTER_PASSWORD);
+        if (newUserPassword === null) {
+            throw new Error(WORK_STOP);
+        }
+        else if (newUserPassword.length <= 6) {
             throw new Error("Password must be at least 6 characters long");
         }
-        else if (user.isAuth) {
+        if (user.isAuth) {
             throw new Error(`${user.username}, please logout before register`);
         }
-        else {
-            register(newUserUsername, newUserPassword);
-        }
+        register(newUserUsername, newUserPassword);
     }
     catch (error) {
         handleError(error);
@@ -63,11 +70,11 @@ function loginUser() {
         if (user.isAuth) {
             throw new Error(`${user.username}, please logout before login!`);
         }
-        const existUserUsername = prompt("Enter your username, please");
+        const existUserUsername = prompt(ENTER_USERNAME);
         if (existUserUsername === "") {
             throw new Error("Username can't be blank field");
         }
-        const existUserPassword = prompt("Enter password, please");
+        const existUserPassword = prompt(ENTER_PASSWORD);
         if (existUserPassword === "") {
             throw new Error("Password can't be blank field");
         }
