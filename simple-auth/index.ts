@@ -15,6 +15,7 @@ const usersList: IUser[] = [];
 const WORK_STOP: string = "Work was stopped by the user";
 const ENTER_USERNAME: string = "Enter your username, please";
 const ENTER_PASSWORD: string = "Enter password, please";
+const LOGIN_BEFORE: string = "Please login, my friend";
 
 function handleError(error: unknown): void {
   if (error instanceof Error) {
@@ -70,7 +71,7 @@ function registerUser(): void {
 function logout(): void {
   try {
     if (!user.isAuth) {
-      throw new Error("Please login, my friend");
+      throw new Error(LOGIN_BEFORE);
     }
     user.isAuth = false;
     alert(`See you later, ${user.username}!`);
@@ -131,16 +132,34 @@ function login(username: string, password: string): void {
   }
 }
 
+function whoami() {
+  try {
+    if (!user.isAuth) {
+      throw new Error(LOGIN_BEFORE);
+    }
+    // eslint-disable-next-line no-console
+    console.log(`You are ${user.username}`);
+    alert(`You are ${user.username}`);
+  } catch (error) {
+    handleError(error);
+  }
+}
+
 // TESTS------------------------------
 
 registerUser();
-logout();
+whoami();
+// logout();
+// // loginUser();
+// registerUser();
+// whoami();
+// logout();
+// registerUser();
+// whoami();
+// logout();
+// whoami();
 // loginUser();
-registerUser();
-logout();
-registerUser();
-logout();
-// loginUser();
+// whoami();
 // registerUser();
 // logout();
 // registerUser();

@@ -8,6 +8,7 @@ const usersList = [];
 const WORK_STOP = "Work was stopped by the user";
 const ENTER_USERNAME = "Enter your username, please";
 const ENTER_PASSWORD = "Enter password, please";
+const LOGIN_BEFORE = "Please login, my friend";
 function handleError(error) {
     if (error instanceof Error) {
         alert(error.message);
@@ -55,7 +56,7 @@ function registerUser() {
 function logout() {
     try {
         if (!user.isAuth) {
-            throw new Error("Please login, my friend");
+            throw new Error(LOGIN_BEFORE);
         }
         user.isAuth = false;
         alert(`See you later, ${user.username}!`);
@@ -109,15 +110,33 @@ function login(username, password) {
         handleError(error);
     }
 }
+function whoami() {
+    try {
+        if (!user.isAuth) {
+            throw new Error(LOGIN_BEFORE);
+        }
+        // eslint-disable-next-line no-console
+        console.log(`You are ${user.username}`);
+        alert(`You are ${user.username}`);
+    }
+    catch (error) {
+        handleError(error);
+    }
+}
 // TESTS------------------------------
 registerUser();
-logout();
+whoami();
+// logout();
+// // loginUser();
+// registerUser();
+// whoami();
+// logout();
+// registerUser();
+// whoami();
+// logout();
+// whoami();
 // loginUser();
-registerUser();
-logout();
-registerUser();
-logout();
-// loginUser();
+// whoami();
 // registerUser();
 // logout();
 // registerUser();
