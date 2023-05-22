@@ -71,11 +71,17 @@ function loginUser() {
             throw new Error(`${user.username}, please logout before login!`);
         }
         const existUserUsername = prompt(ENTER_USERNAME);
-        if (existUserUsername === "") {
+        if (existUserUsername === null) {
+            throw new Error(WORK_STOP);
+        }
+        else if (existUserUsername === "") {
             throw new Error("Username can't be blank field");
         }
         const existUserPassword = prompt(ENTER_PASSWORD);
-        if (existUserPassword === "") {
+        if (existUserPassword === null) {
+            throw new Error(WORK_STOP);
+        }
+        else if (existUserPassword === "") {
             throw new Error("Password can't be blank field");
         }
         login(existUserUsername, existUserPassword);
@@ -101,12 +107,15 @@ function login(username, password) {
 }
 // TESTS------------------------------
 registerUser();
-registerUser();
 logout();
-registerUser();
-logout();
+loginUser();
 registerUser();
 logout();
 loginUser();
-logout();
-loginUser();
+// registerUser();
+// logout();
+// registerUser();
+// logout();
+// loginUser();
+// logout();
+// loginUser();

@@ -82,12 +82,16 @@ function loginUser(): void {
     }
 
     const existUserUsername: string | null = prompt(ENTER_USERNAME);
-    if (existUserUsername === "") {
+    if (existUserUsername === null) {
+      throw new Error(WORK_STOP);
+    } else if (existUserUsername === "") {
       throw new Error("Username can't be blank field");
     }
 
     const existUserPassword: string | null = prompt(ENTER_PASSWORD);
-    if (existUserPassword === "") {
+    if (existUserPassword === null) {
+      throw new Error(WORK_STOP);
+    } else if (existUserPassword === "") {
       throw new Error("Password can't be blank field");
     }
 
@@ -121,12 +125,15 @@ function login(username: string, password: string): void {
 // TESTS------------------------------
 
 registerUser();
-registerUser();
 logout();
-registerUser();
-logout();
+loginUser();
 registerUser();
 logout();
 loginUser();
-logout();
-loginUser();
+// registerUser();
+// logout();
+// registerUser();
+// logout();
+// loginUser();
+// logout();
+// loginUser();
