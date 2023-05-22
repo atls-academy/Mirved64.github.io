@@ -25,6 +25,9 @@ const register = (username, password) => {
 };
 function registerUser() {
     try {
+        if (user.isAuth) {
+            throw new Error(`${user.username}, please logout before register`);
+        }
         const newUserUsername = prompt(ENTER_USERNAME);
         if (newUserUsername === null) {
             throw new Error(WORK_STOP);
@@ -32,15 +35,16 @@ function registerUser() {
         else if (newUserUsername.length <= 5) {
             throw new Error("Username must be at least 5 characters long");
         }
+        const checkSameUsers = usersList.some((user) => user.username === newUserUsername);
+        if (checkSameUsers) {
+            throw new Error("A user with this name already exists");
+        }
         const newUserPassword = prompt(ENTER_PASSWORD);
         if (newUserPassword === null) {
             throw new Error(WORK_STOP);
         }
         else if (newUserPassword.length <= 6) {
             throw new Error("Password must be at least 6 characters long");
-        }
-        if (user.isAuth) {
-            throw new Error(`${user.username}, please logout before register`);
         }
         register(newUserUsername, newUserPassword);
     }
@@ -108,10 +112,12 @@ function login(username, password) {
 // TESTS------------------------------
 registerUser();
 logout();
-loginUser();
+// loginUser();
 registerUser();
 logout();
-loginUser();
+registerUser();
+logout();
+// loginUser();
 // registerUser();
 // logout();
 // registerUser();

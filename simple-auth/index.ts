@@ -35,11 +35,23 @@ const register = (username: string, password: string): void => {
 
 function registerUser(): void {
   try {
+    if (user.isAuth) {
+      throw new Error(`${user.username}, please logout before register`);
+    }
+
     const newUserUsername: string | null = prompt(ENTER_USERNAME);
     if (newUserUsername === null) {
       throw new Error(WORK_STOP);
     } else if (newUserUsername!.length <= 5) {
       throw new Error("Username must be at least 5 characters long");
+    }
+
+    const checkSameUsers: boolean = usersList.some(
+      (user) => user.username === newUserUsername
+    );
+
+    if (checkSameUsers) {
+      throw new Error("A user with this name already exists");
     }
 
     const newUserPassword: string | null = prompt(ENTER_PASSWORD);
@@ -49,9 +61,6 @@ function registerUser(): void {
       throw new Error("Password must be at least 6 characters long");
     }
 
-    if (user.isAuth) {
-      throw new Error(`${user.username}, please logout before register`);
-    }
     register(newUserUsername!, newUserPassword!);
   } catch (error) {
     handleError(error);
@@ -126,10 +135,12 @@ function login(username: string, password: string): void {
 
 registerUser();
 logout();
-loginUser();
+// loginUser();
 registerUser();
 logout();
-loginUser();
+registerUser();
+logout();
+// loginUser();
 // registerUser();
 // logout();
 // registerUser();
