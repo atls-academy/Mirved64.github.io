@@ -1,24 +1,23 @@
-import { handleError } from "./handle-error";
-import { LOGIN_BEFORE } from "../constants";
+import handleError from "./handle-error";
 import { User } from "../types";
 
-/*  eslint-disable @typescript-eslint/no-unused-vars  */
-export default function logout(currentUser:User): User {
+export default function logout(usersList: User[]): User[] {
   try {
-    if (!currentUser.isAuth) {
-      throw new Error(LOGIN_BEFORE);
+
+    const checkAuthUser: boolean = usersList.some(
+      (user) => user.isAuth === true
+    );
+    if (!checkAuthUser) {
+      throw new Error(`No authorized users`);
     }
-    currentUser.isAuth = false;
-    // eslint-disable-next-line no-alert
-    alert(`See you later, ${currentUser.username}!`);
+    
+    const logoutUser: number = usersList.findIndex(user => user.isAuth === true)
+    usersList[logoutUser].isAuth = false;
+    // eslint-disable-next-line no-console
+    console.log(`See you later, ${usersList[logoutUser].username}!`);
     
   } catch (error) {
     handleError(error);
   }
-  return {
-    username: "",
-    password: "",
-    isAuth: false,
-  };
+  return usersList
 }
-/*  eslint-enable @typescript-eslint/no-unused-vars */

@@ -6,7 +6,6 @@
       "dom.iterable",
       "esnext",
     ],
-    "module": "ESNext",
     "esModuleInterop": true,
     "strict": true,
   }

@@ -1,6 +1,6 @@
-export function handleError(error: unknown): void {
+export default function handleError(error: unknown): void {
   if (error instanceof Error) {
-    // eslint-disable-next-line no-alert
-    alert(error.message);
+    // eslint-disable-next-line no-console
+    console.log(error.message);
   }
 }

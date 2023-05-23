@@ -1,1 +1,0 @@
-export const LOGIN_BEFORE: string = "Please login, my friend";

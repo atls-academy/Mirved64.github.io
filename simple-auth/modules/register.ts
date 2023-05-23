@@ -1,5 +1,5 @@
 import { User } from "../types";
-import { handleError } from "./handle-error";
+import handleError from "./handle-error";
 
 export default function register(
   username: string,
@@ -34,8 +34,8 @@ export default function register(
     };
 
     usersList.push(newReg);
-    // eslint-disable-next-line no-alert
-    alert(`Welcome, ${newReg.username}!`);
+    // eslint-disable-next-line no-console
+    console.log(`Welcome, ${newReg.username}!`);
     
   } catch (error) {
     handleError(error);

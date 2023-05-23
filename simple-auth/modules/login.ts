@@ -1,5 +1,5 @@
 import { User } from "../types";
-import { handleError } from "./handle-error";
+import handleError from "./handle-error";
 
 export default function login(
   username: string,
@@ -25,8 +25,8 @@ export default function login(
 
     userActive.isAuth = true;
 
-    // eslint-disable-next-line no-alert
-    alert(`You are welcome, ${username}!`);
+    // eslint-disable-next-line no-console
+    console.log(`You are welcome, ${username}!`);
   } catch (error) {
     handleError(error);
   }
