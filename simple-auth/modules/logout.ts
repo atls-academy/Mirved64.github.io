@@ -1,9 +1,9 @@
 import { handleError } from "./handle-error";
-import { LOGIN_BEFORE } from "./constants";
-import { User } from "./types";
+import { LOGIN_BEFORE } from "../constants";
+import { User } from "../types";
 
 /*  eslint-disable @typescript-eslint/no-unused-vars  */
-export function logout(currentUser:User): User {
+export default function logout(currentUser:User): User {
   try {
     if (!currentUser.isAuth) {
       throw new Error(LOGIN_BEFORE);

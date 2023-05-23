@@ -1,4 +1,4 @@
-import { User } from "./types";
+import { User } from "../types";
 import { handleError } from "./handle-error";
 
 export default function register(

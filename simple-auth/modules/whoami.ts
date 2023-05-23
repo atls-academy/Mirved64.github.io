@@ -1,6 +1,6 @@
-import { LOGIN_BEFORE } from "./constants";
+import { LOGIN_BEFORE } from "../constants";
 import { handleError } from "./handle-error";
-import { User } from "./types";
+import { User } from "../types";
 
 /*  eslint-disable @typescript-eslint/no-unused-vars  */
 export default function whoami(currentUser:User): void {
