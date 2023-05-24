@@ -1,5 +1,6 @@
 import { User } from "../types";
 import handleError from "./handle-error";
+import checkAuthUser from "./check-auth-user";
 
 export default function register(
   username: string,
@@ -7,8 +8,7 @@ export default function register(
   usersList: User[]
 ): User[] {
   try{
-    const checkAuthUser: boolean = usersList.some((user) => user.isAuth === true);
-    if (checkAuthUser) {
+    if (checkAuthUser(usersList)) {
       throw new Error(`${username},  please logout before register!`);
     }
 
