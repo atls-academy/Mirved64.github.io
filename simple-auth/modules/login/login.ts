@@ -1,6 +1,6 @@
-import { User } from "../types";
-import handleError from "./handle-error";
-import checkAuthUser from "./check-auth-user";
+import { User } from "../../types";
+import handleError from "../handle-error";
+import checkAuthUser from "../check-auth-user";
 
 export default function login(
   username: string,
