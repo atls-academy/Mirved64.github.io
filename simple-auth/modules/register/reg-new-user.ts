@@ -9,7 +9,7 @@ export default function regNewUser(usersList: User[]): User[] {
     if (checkAuthUser(usersList)) {
       throw new Error(`Please logout before register!`);
     }
-
+    // eslint-disable-next-line no-alert
     const newUserUsername: string | null = prompt(ENTER_USERNAME);
     if (newUserUsername === null) {
       throw new Error(WORK_STOP);
@@ -22,12 +22,12 @@ export default function regNewUser(usersList: User[]): User[] {
     if (checkSameUsers) {
       throw new Error("A user with this name already exists");
     }
-
+    // eslint-disable-next-line no-alert
     const newUserPassword: string | null = prompt(ENTER_PASSWORD);
     if (newUserPassword === null) {
       throw new Error(WORK_STOP);
     }
-
+    
     register(newUserUsername!, newUserPassword!, usersList);
   } catch (error) {
     handleError(error);

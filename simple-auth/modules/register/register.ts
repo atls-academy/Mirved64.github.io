@@ -1,6 +1,7 @@
 import { User } from "../../types";
 import handleError from "../handle-error";
 import checkAuthUser from "../check-auth-user";
+import hashPassword from "./hash-password";
 
 export default function register(
   username: string,
@@ -29,7 +30,7 @@ export default function register(
 
     const newReg: User = {
       username,
-      password,
+      password: hashPassword(password),
       isAuth: true,
     };
 

@@ -10,14 +10,14 @@ export default function loginUser(usersList: User[]): User[] {
     if (checkAuthUser(usersList)) {
       throw new Error("Please logout before login!");
     }
-
+    // eslint-disable-next-line no-alert
     const existUserUsername: string | null = prompt(ENTER_USERNAME);
     if (existUserUsername === null) {
       throw new Error(WORK_STOP);
     } else if (existUserUsername === "") {
       throw new Error("Username can't be blank field");
     }
-
+    // eslint-disable-next-line no-alert
     const existUserPassword: string | null = prompt(ENTER_PASSWORD);
     if (existUserPassword === null) {
       throw new Error(WORK_STOP);
