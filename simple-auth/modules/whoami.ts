@@ -1,6 +1,6 @@
-import handleError from "./handle-error";
+import handleError from "./support-modules/handle-error";
 import { User } from "../types";
-import checkAuthUserIndex from "./check-auth-user-index";
+import checkAuthUserIndex from "./support-modules/check-auth-user-index";
 
 export default async function whoami(usersList: User[]): Promise<void> {
   try {

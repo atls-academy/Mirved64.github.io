@@ -1,7 +1,7 @@
-import handleError from "./handle-error";
+import handleError from "./support-modules/handle-error";
 import { User } from "../types";
-import checkAuthUser from "./check-auth-user";
-import checkAuthUserIndex from "./check-auth-user-index";
+import checkAuthUser from "./support-modules/check-auth-user";
+import checkAuthUserIndex from "./support-modules/check-auth-user-index";
 
 export default async function logout(usersList: User[]): Promise<User[]> {
   try {
