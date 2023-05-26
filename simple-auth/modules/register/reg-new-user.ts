@@ -4,9 +4,9 @@ import { WORK_STOP, ENTER_USERNAME, ENTER_PASSWORD } from "../../constants";
 import register from "./register";
 import handleError from "../handle-error";
 
-export default function regNewUser(usersList: User[]): User[] {
+export default async function regNewUser(usersList: User[]): Promise<User[]> {
   try {
-    if (checkAuthUser(usersList)) {
+    if (await checkAuthUser(usersList)) {
       throw new Error(`Please logout before register!`);
     }
     // eslint-disable-next-line no-alert
@@ -15,7 +15,7 @@ export default function regNewUser(usersList: User[]): User[] {
       throw new Error(WORK_STOP);
     }
 
-    const checkSameUsers: boolean = usersList.some(
+    const checkSameUsers: boolean = await usersList.some(
       (user) => user.username === newUserUsername
     );
 
@@ -27,8 +27,8 @@ export default function regNewUser(usersList: User[]): User[] {
     if (newUserPassword === null) {
       throw new Error(WORK_STOP);
     }
-    
-    register(newUserUsername!, newUserPassword!, usersList);
+
+    await register(newUserUsername!, newUserPassword!, usersList);
   } catch (error) {
     handleError(error);
   }

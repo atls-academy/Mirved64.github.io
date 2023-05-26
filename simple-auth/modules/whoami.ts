@@ -2,15 +2,16 @@ import handleError from "./handle-error";
 import { User } from "../types";
 import checkAuthUserIndex from "./check-auth-user-index";
 
-
-export default function whoami(usersList:User[]): void {
+export default async function whoami(usersList: User[]): Promise<void> {
   try {
-    if (checkAuthUserIndex(usersList) === -1) {
+    const userIndex: number = await checkAuthUserIndex(usersList)
+    if (userIndex === -1) {
       throw new Error(`No authorized users`);
     }
     // eslint-disable-next-line no-console
-    console.log(`You are ${usersList[checkAuthUserIndex(usersList)].username}`);
-
+    console.log(
+      `You are ${usersList[userIndex].username}`
+    );
   } catch (error) {
     handleError(error);
   }

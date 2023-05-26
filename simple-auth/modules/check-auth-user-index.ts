@@ -1,6 +1,11 @@
 import { User } from "../types";
 
-export default function checkAuthUserIndex(usersList: User[]): number {
-  const authUserIndex = usersList.findIndex((user) => user.isAuth === true);
+export default async function checkAuthUserIndex(
+  usersList: User[]
+): Promise<number> {
+  const authUserIndex: number = await usersList.findIndex(
+    (user) => user.isAuth === true
+  );
+
   return authUserIndex;
 }

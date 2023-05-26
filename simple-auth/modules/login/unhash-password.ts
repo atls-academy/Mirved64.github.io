@@ -1,5 +1,9 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs";
 
-export default function unhashPassword(password:string, hashPassword: string): boolean {
-  return bcrypt.compareSync(password, hashPassword);
+export default async function unhashPassword(
+  password: string,
+  hashPassword: string
+): Promise<boolean> {
+  const unhashPass: boolean = await bcrypt.compareSync(password, hashPassword);
+  return unhashPass;
 }

@@ -3,13 +3,13 @@ import handleError from "../handle-error";
 import checkAuthUser from "../check-auth-user";
 import hashPassword from "./hash-password";
 
-export default function register(
+export default async function register(
   username: string,
   password: string,
   usersList: User[]
-): User[] {
-  try{
-    if (checkAuthUser(usersList)) {
+): Promise<User[]> {
+  try {
+    if (await checkAuthUser(usersList)) {
       throw new Error(`${username},  please logout before register!`);
     }
 
@@ -17,7 +17,7 @@ export default function register(
       throw new Error("Username must be at least 5 characters long");
     }
 
-    const checkSameUsers: boolean = usersList.some(
+    const checkSameUsers: boolean = await usersList.some(
       (user) => user.username === username
     );
     if (checkSameUsers) {
@@ -28,16 +28,17 @@ export default function register(
       throw new Error("Password must be at least 6 characters long");
     }
 
+    const newRegPass: string = await hashPassword(password);
+
     const newReg: User = {
       username,
-      password: hashPassword(password),
+      password: newRegPass,
       isAuth: true,
     };
 
     usersList.push(newReg);
     // eslint-disable-next-line no-console
     console.log(`Welcome, ${newReg.username}!`);
-    
   } catch (error) {
     handleError(error);
   }
