@@ -1,7 +1,7 @@
-import { User } from "../../types";
-import handleError from "../support-modules/handle-error";
-import checkAuthUser from "../support-modules/check-auth-user";
-import unhashPassword from "./unhash-password";
+import { User } from "../simple-auth.interfaces";
+import handleError from "../support-modules/support-modules.handle-error";
+import checkAuthUser from "../support-modules/support-modules.check-auth-user";
+import unhashPassword from "./login.unhash-password";
 
 export default async function login(
   username: string,

@@ -1,7 +1,7 @@
-import { User } from "../../types";
-import handleError from "../support-modules/handle-error";
-import checkAuthUser from "../support-modules/check-auth-user";
-import hashPassword from "./hash-password";
+import { User } from "../simple-auth.interfaces";
+import handleError from "../support-modules/support-modules.handle-error";
+import checkAuthUser from "../support-modules/support-modules.check-auth-user";
+import hashPassword from "./register.hash-password";
 
 export default async function register(
   username: string,

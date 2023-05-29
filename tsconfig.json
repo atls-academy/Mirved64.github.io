@@ -24,9 +24,9 @@
       "esnext",
     ],
     "rootDir": "./simple-auth",
-    "outDir": "./js"
+    "outDir": "./dist"
   },
   "include": [
-    "./simple-auth/**/**/*"
+    "./simple-auth/**/*"
   ]
 }

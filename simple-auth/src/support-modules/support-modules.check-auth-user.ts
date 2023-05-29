@@ -1,4 +1,4 @@
-import { User } from "../../types";
+import { User } from "../simple-auth.interfaces";
 
 export default async function checkAuthUser(
   usersList: User[]
