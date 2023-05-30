@@ -3,7 +3,7 @@
   "private": true,
   "license": "BSD 3-Clause",
   "workspaces": [
-    "simple-auth/**/*"
+    "auth"
   ],
   "devDependencies": {
     "@atls/code-service": "^0.0.18",

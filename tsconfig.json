@@ -23,10 +23,10 @@
       "dom.iterable",
       "esnext",
     ],
-    "rootDir": "./simple-auth",
+    "rootDir": "auth",
     "outDir": "./dist"
   },
   "include": [
-    "./simple-auth/**/*"
+    "auth/**/*"
   ]
 }
