@@ -14,14 +14,14 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
-      "name": "auth",\
+      "name": "@Mirved64/auth",\
       "reference": "workspace:auth"\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
-    ["auth", ["workspace:auth"]],\
+    ["@Mirved64/auth", ["workspace:auth"]],\
     ["template", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -35,13 +35,22 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-jest", "npm:0.0.5"],\
           ["@atls/schematics", "npm:0.0.13"],\
           ["@jest/core", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.5.0"],\
-          ["@types/bcryptjs", "npm:2.4.2"],\
           ["@types/eslint", "npm:8.37.0"],\
           ["@types/node", "npm:20.2.3"],\
-          ["bcryptjs", "npm:2.4.3"],\
           ["eslint", "npm:8.18.0"],\
           ["husky", "npm:8.0.3"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@Mirved64/auth", [\
+      ["workspace:auth", {\
+        "packageLocation": "./auth/",\
+        "packageDependencies": [\
+          ["@Mirved64/auth", "workspace:auth"],\
+          ["@types/bcryptjs", "npm:2.4.2"],\
+          ["bcryptjs", "npm:2.4.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3625,26 +3634,6 @@ const RAW_RUNTIME_STATE =
           ["astral-regex", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["auth", [\
-      ["workspace:auth", {\
-        "packageLocation": "./auth/",\
-        "packageDependencies": [\
-          ["auth", "workspace:auth"],\
-          ["@atls/code-service", "npm:0.0.18"],\
-          ["@atls/config-jest", "npm:0.0.5"],\
-          ["@atls/schematics", "npm:0.0.13"],\
-          ["@jest/core", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.5.0"],\
-          ["@types/bcryptjs", "npm:2.4.2"],\
-          ["@types/eslint", "npm:8.37.0"],\
-          ["@types/node", "npm:20.2.3"],\
-          ["bcryptjs", "npm:2.4.3"],\
-          ["eslint", "npm:8.18.0"],\
-          ["husky", "npm:8.0.3"],\
-          ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\
-        ],\
-        "linkType": "SOFT"\
       }]\
     ]],\
     ["auto-bind", [\
@@ -8012,10 +8001,8 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-jest", "npm:0.0.5"],\
           ["@atls/schematics", "npm:0.0.13"],\
           ["@jest/core", "virtual:e82efaeb5dbad3cc20561562a12571d1e6ab3b0e3e16ee76fe3fbc78f117981828ff47b8e7cf32973a7efbf625114ac6c926b7c54a2ddba69de3de5d64ffe7f6#npm:29.5.0"],\
-          ["@types/bcryptjs", "npm:2.4.2"],\
           ["@types/eslint", "npm:8.37.0"],\
           ["@types/node", "npm:20.2.3"],\
-          ["bcryptjs", "npm:2.4.3"],\
           ["eslint", "npm:8.18.0"],\
           ["husky", "npm:8.0.3"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=ad5954"]\

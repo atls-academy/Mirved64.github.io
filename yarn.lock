@@ -5,6 +5,15 @@ __metadata:
   version: 7
   cacheKey: 9
 
+"@Mirved64/auth@workspace:auth":
+  version: 0.0.0-use.local
+  resolution: "@Mirved64/auth@workspace:auth"
+  dependencies:
+    "@types/bcryptjs": "npm:^2.4.2"
+    bcryptjs: "npm:^2.4.3"
+  languageName: unknown
+  linkType: soft
+
 "@algolia/cache-browser-local-storage@npm:4.17.0":
   version: 4.17.0
   resolution: "@algolia/cache-browser-local-storage@npm:4.17.0"
@@ -2580,24 +2589,6 @@ __metadata:
   checksum: e24f6eb6f33ba55ffe8d89c60ab490791cd29772a896339388db11efcbfcd6da0d6ed59b655933f7c26ca4c2ae926f86d21bdedb142b69829d9d4a1074faa1d2
   languageName: node
   linkType: hard
-
-"auth@workspace:auth":
-  version: 0.0.0-use.local
-  resolution: "auth@workspace:auth"
-  dependencies:
-    "@atls/code-service": "npm:^0.0.18"
-    "@atls/config-jest": "npm:^0.0.5"
-    "@atls/schematics": "npm:^0.0.13"
-    "@jest/core": "npm:^29.5.0"
-    "@types/bcryptjs": "npm:^2.4.2"
-    "@types/eslint": "npm:8"
-    "@types/node": "npm:^20.2.3"
-    bcryptjs: "npm:^2.4.3"
-    eslint: "npm:8.18.0"
-    husky: "npm:^8.0.3"
-    typescript: "npm:^4.6.3"
-  languageName: unknown
-  linkType: soft
 
 "auto-bind@npm:4.0.0":
   version: 4.0.0
@@ -6350,10 +6341,8 @@ __metadata:
     "@atls/config-jest": "npm:^0.0.5"
     "@atls/schematics": "npm:^0.0.13"
     "@jest/core": "npm:^29.5.0"
-    "@types/bcryptjs": "npm:^2.4.2"
     "@types/eslint": "npm:8"
     "@types/node": "npm:^20.2.3"
-    bcryptjs: "npm:^2.4.3"
     eslint: "npm:8.18.0"
     husky: "npm:^8.0.3"
     typescript: "npm:^4.6.3"
