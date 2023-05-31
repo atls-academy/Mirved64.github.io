@@ -1,9 +1,9 @@
-import handleError from "../support-modules/support-modules.handle-error";
-import { User } from "../simple-auth.interfaces";
-import checkAuthUser from "../support-modules/support-modules.check-auth-user";
-import checkAuthUserIndex from "../support-modules/support-modules.check-auth-user-index";
+import { User }               from "../simple-auth.interfaces";
+import { handleError }        from "../support-modules";
+import { checkAuthUser }      from "../support-modules";
+import { checkAuthUserIndex } from "../support-modules";
 
-export default async function logout(usersList: User[]): Promise<User[]> {
+export async function logout(usersList: User[]): Promise<User[]> {
   try {
     if (!(await checkAuthUser(usersList))) {
       throw new Error(`No authorized users`);

@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 
-export default async function unhashPassword(
+export async function unhashPassword(
   password: string,
   hashPassword: string
 ): Promise<boolean> {

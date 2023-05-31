@@ -1,9 +1,9 @@
-import { User } from "../simple-auth.interfaces";
-import handleError from "../support-modules/support-modules.handle-error";
-import checkAuthUser from "../support-modules/support-modules.check-auth-user";
-import hashPassword from "./register.hash-password";
+import { User }          from "../simple-auth.interfaces";
+import { hashPassword }  from "./register.hash-password";
+import { handleError }   from "../support-modules";
+import { checkAuthUser } from "../support-modules";
 
-export default async function register(
+export async function register(
   username: string,
   password: string,
   usersList: User[]

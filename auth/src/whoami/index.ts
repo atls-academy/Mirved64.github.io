@@ -1,8 +1,8 @@
-import handleError from "../support-modules/support-modules.handle-error";
-import { User } from "../simple-auth.interfaces";
-import checkAuthUserIndex from "../support-modules/support-modules.check-auth-user-index";
+import { User }               from "../simple-auth.interfaces";
+import { handleError }        from "../support-modules";
+import { checkAuthUserIndex } from "../support-modules";
 
-export default async function whoami(usersList: User[]): Promise<void> {
+export async function whoami(usersList: User[]): Promise<void> {
   try {
     const userIndex: number = await checkAuthUserIndex(usersList);
     if (userIndex === -1) {
