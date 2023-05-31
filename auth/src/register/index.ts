@@ -3,11 +3,11 @@ import { hashPassword }  from "./register.hash-password";
 import { handleError }   from "../support-modules";
 import { checkAuthUser } from "../support-modules";
 
-export async function register(
+export const register = async (
   username: string,
   password: string,
   usersList: User[]
-): Promise<User[]> {
+): Promise<User[]> => {
   try {
     if (await checkAuthUser(usersList)) {
       throw new Error(`${username},  please logout before register!`);

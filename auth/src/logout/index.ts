@@ -3,7 +3,7 @@ import { handleError }        from "../support-modules";
 import { checkAuthUser }      from "../support-modules";
 import { checkAuthUserIndex } from "../support-modules";
 
-export async function logout(usersList: User[]): Promise<User[]> {
+export const logout = async (usersList: User[]): Promise<User[]> => {
   try {
     if (!(await checkAuthUser(usersList))) {
       throw new Error(`No authorized users`);

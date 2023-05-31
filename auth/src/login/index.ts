@@ -3,12 +3,11 @@ import { unhashPassword } from "./login.unhash-password";
 import { handleError }    from "../support-modules";
 import { checkAuthUser }  from "../support-modules";;
 
-
-export async function login(
+export const login = async (
   username: string,
   password: string,
   usersList: User[]
-): Promise<User[]> {
+): Promise<User[]> => {
   try {
     if (await checkAuthUser(usersList)) {
       throw new Error(`${username}, please logout before login!`);

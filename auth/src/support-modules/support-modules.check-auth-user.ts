@@ -1,8 +1,8 @@
 import { User } from "../simple-auth.interfaces";
 
-export async function checkAuthUser(
+export const checkAuthUser = async (
   usersList: User[]
-): Promise<boolean> {
+): Promise<boolean> => {
   const userIsAuth: boolean = await usersList.some(
     (user) => user.isAuth === true
   );

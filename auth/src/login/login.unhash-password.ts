@@ -1,9 +1,9 @@
 import bcrypt from "bcryptjs";
 
-export async function unhashPassword(
+export const unhashPassword = async (
   password: string,
   hashPassword: string
-): Promise<boolean> {
+): Promise<boolean> => {
   const unhashPass: boolean = await bcrypt.compareSync(password, hashPassword);
   return unhashPass;
 }
