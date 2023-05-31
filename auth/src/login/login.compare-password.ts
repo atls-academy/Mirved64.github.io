@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 
-export const unhashPassword = (
+export const comparePassword = (
   password: string,
   hashPassword: string
 ): boolean => {

@@ -1,5 +1,5 @@
 import { User }           from "../simple-auth.interfaces";
-import { unhashPassword } from "./login.unhash-password";
+import { comparePassword } from "./login.compare-password";
 import { handleError }    from "../support-modules";
 import { checkAuthUser }  from "../support-modules";;
 
@@ -15,7 +15,7 @@ export const login = (
 
     const userIndex: number = usersList.findIndex(
       (user) =>
-        user.username === username && unhashPassword(password, user.password)
+        user.username === username && comparePassword(password, user.password)
     );
     if (userIndex === -1) {
       throw new Error("Incorrect username or password, try again!");
