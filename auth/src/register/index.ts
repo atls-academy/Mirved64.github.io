@@ -3,13 +3,13 @@ import { hashPassword }  from "./register.hash-password";
 import { handleError }   from "../support-modules";
 import { checkAuthUser } from "../support-modules";
 
-export const register = async (
+export const register = (
   username: string,
   password: string,
   usersList: User[]
-): Promise<User[]> => {
+): User[] => {
   try {
-    if (await checkAuthUser(usersList)) {
+    if (checkAuthUser(usersList)) {
       throw new Error(`${username},  please logout before register!`);
     }
 
@@ -17,7 +17,7 @@ export const register = async (
       throw new Error("Username must be at least 5 characters long");
     }
 
-    const checkSameUsers: boolean = await usersList.some(
+    const checkSameUsers: boolean = usersList.some(
       (user) => user.username === username
     );
     if (checkSameUsers) {
@@ -28,7 +28,7 @@ export const register = async (
       throw new Error("Password must be at least 6 characters long");
     }
 
-    const newRegPass: string = await hashPassword(password);
+    const newRegPass: string = hashPassword(password);
 
     const newReg: User = {
       username,

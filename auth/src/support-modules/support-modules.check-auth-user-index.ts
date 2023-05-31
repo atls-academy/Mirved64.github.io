@@ -1,9 +1,9 @@
 import { User } from "../simple-auth.interfaces";
 
-export const checkAuthUserIndex = async (
+export const checkAuthUserIndex = (
   usersList: User[]
-): Promise<number> => {
-  const authUserIndex: number = await usersList.findIndex(
+): number => {
+  const authUserIndex: number = usersList.findIndex(
     (user) => user.isAuth === true
   );
 

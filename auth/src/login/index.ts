@@ -3,17 +3,17 @@ import { unhashPassword } from "./login.unhash-password";
 import { handleError }    from "../support-modules";
 import { checkAuthUser }  from "../support-modules";;
 
-export const login = async (
+export const login = (
   username: string,
   password: string,
   usersList: User[]
-): Promise<User[]> => {
+): User[] => {
   try {
-    if (await checkAuthUser(usersList)) {
+    if (checkAuthUser(usersList)) {
       throw new Error(`${username}, please logout before login!`);
     }
 
-    const userIndex: number = await usersList.findIndex(
+    const userIndex: number = usersList.findIndex(
       (user) =>
         user.username === username && unhashPassword(password, user.password)
     );
