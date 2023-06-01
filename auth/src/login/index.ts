@@ -1,7 +1,8 @@
-import { User }            from '../simple-auth.interfaces'
-import { handleError }     from '../support-modules'
-import { checkAuthUser }   from '../support-modules'
-import { comparePassword } from './login.compare-password'
+import { User }           from '../simple-auth.interfaces'
+import { handleError }    from '../support-modules'
+import { checkAuthUser }  from '../support-modules'
+import { compareStrings } from './login.compare-strings'
+
 export const login = (username: string, password: string, usersList: User[]): User[] => {
   try {
     if (checkAuthUser(usersList)) {
@@ -9,7 +10,7 @@ export const login = (username: string, password: string, usersList: User[]): Us
     }
 
     const userIndex: number = usersList.findIndex(
-      (user) => user.username === username && comparePassword(password, user.password)
+      (user) => user.username === username && compareStrings(password, user.password)
     )
     if (userIndex === -1) {
       throw new Error('Incorrect username or password, try again!')

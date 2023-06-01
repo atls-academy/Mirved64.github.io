@@ -1,7 +1,7 @@
 import { User }          from '../simple-auth.interfaces'
 import { handleError }   from '../support-modules'
 import { checkAuthUser } from '../support-modules'
-import { hashPassword }  from './register.hash-password'
+import { hashString }    from './register.hash-string'
 
 export const register = (username: string, password: string, usersList: User[]): User[] => {
   try {
@@ -22,7 +22,7 @@ export const register = (username: string, password: string, usersList: User[]):
       throw new Error('Password must be at least 6 characters long')
     }
 
-    const newRegPass: string = hashPassword(password)
+    const newRegPass: string = hashString(password)
 
     const newReg: User = {
       username,
