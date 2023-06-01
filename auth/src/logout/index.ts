@@ -10,7 +10,7 @@ export const logout = (usersList: User[]): User[] => {
     }
     const authUserIndex: number = checkAuthUserIndex(usersList)
     const newUsersList: User[] = [
-      ...usersList.filter((el, index) => el[index] !== usersList[authUserIndex]),
+      ...usersList.filter((el) => el.isAuth === false),
       {
         username: usersList[authUserIndex].username,
         password: usersList[authUserIndex].password,
