@@ -1,5 +1,5 @@
 export interface User {
-  username: string;
-  password: string;
-  isAuth?: boolean;
+  username: string
+  password: string
+  isAuth?: boolean
 }

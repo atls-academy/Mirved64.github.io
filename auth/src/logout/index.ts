@@ -1,20 +1,28 @@
-import { User }               from "../simple-auth.interfaces";
-import { handleError }        from "../support-modules";
-import { checkAuthUser }      from "../support-modules";
-import { checkAuthUserIndex } from "../support-modules";
+import { User }               from '../simple-auth.interfaces'
+import { handleError }        from '../support-modules'
+import { checkAuthUser }      from '../support-modules'
+import { checkAuthUserIndex } from '../support-modules'
 
 export const logout = (usersList: User[]): User[] => {
   try {
     if (!checkAuthUser(usersList)) {
-      throw new Error(`No authorized users`);
+      throw new Error(`No authorized users`)
     }
-    const authUserIndex: number = checkAuthUserIndex(usersList);
-    // eslint-disable-next-line no-param-reassign
-    usersList[authUserIndex].isAuth = false;
+    const authUserIndex: number = checkAuthUserIndex(usersList)
+    const newUsersList: User[] = [
+      ...usersList.filter((el, index) => el[index] !== usersList[authUserIndex]),
+      {
+        username: usersList[authUserIndex].username,
+        password: usersList[authUserIndex].password,
+        isAuth: false,
+      },
+    ]
+
     // eslint-disable-next-line no-console
-    console.log(`See you later, ${usersList[authUserIndex].username}!`);
+    console.log(`See you later, ${usersList[authUserIndex].username}!`)
+    return newUsersList
   } catch (error) {
-    handleError(error);
+    handleError(error)
+    return usersList
   }
-  return usersList;
 }
