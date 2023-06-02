@@ -1,4 +1,4 @@
-import { User }               from '../simple-auth.interfaces'
+import { User }               from '../auth.interfaces'
 import { handleError }        from '../support-modules'
 import { checkAuthUser }      from '../support-modules'
 import { checkAuthUserIndex } from '../support-modules'
@@ -17,9 +17,6 @@ export const logout = (usersList: User[]): User[] => {
         isAuth: false,
       },
     ]
-
-    // eslint-disable-next-line no-console
-    console.log(`See you later, ${usersList[authUserIndex].username}!`)
     return newUsersList
   } catch (error) {
     handleError(error)

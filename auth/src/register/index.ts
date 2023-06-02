@@ -1,4 +1,4 @@
-import { User }          from '../simple-auth.interfaces'
+import { User }          from '../auth.interfaces'
 import { handleError }   from '../support-modules'
 import { checkAuthUser } from '../support-modules'
 import { hashString }    from './register.hash-string'
@@ -31,8 +31,6 @@ export const register = (username: string, password: string, usersList: User[]):
     }
 
     usersList.push(newReg)
-    // eslint-disable-next-line no-console
-    console.log(`Welcome, ${newReg.username}!`)
   } catch (error) {
     handleError(error)
   }

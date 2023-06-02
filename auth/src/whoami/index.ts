@@ -1,4 +1,4 @@
-import { User }               from '../simple-auth.interfaces'
+import { User }               from '../auth.interfaces'
 import { handleError }        from '../support-modules'
 import { checkAuthUserIndex } from '../support-modules'
 

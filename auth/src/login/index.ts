@@ -1,4 +1,4 @@
-import { User }           from '../simple-auth.interfaces'
+import { User }           from '../auth.interfaces'
 import { handleError }    from '../support-modules'
 import { checkAuthUser }  from '../support-modules'
 import { compareStrings } from './login.compare-strings'
@@ -19,9 +19,6 @@ export const login = (username: string, password: string, usersList: User[]): Us
     const userActive: User = usersList[userIndex]
 
     userActive.isAuth = true
-
-    // eslint-disable-next-line no-console
-    console.log(`You are welcome, ${username}!`)
   } catch (error) {
     handleError(error)
   }
