@@ -4,12 +4,13 @@ import { checkAuthUser }      from '../helpers'
 import { checkAuthUserIndex } from '../helpers'
 
 export const logout = (usersList: User[]): User[] => {
+  let newUsersList: User[] = []
   try {
     if (!checkAuthUser(usersList)) {
       throw new Error(`No authorized users`)
     }
     const authUserIndex: number = checkAuthUserIndex(usersList)
-    const newUsersList: User[] = [
+    newUsersList = [
       ...usersList.filter((el) => el.isAuth === false),
       {
         username: usersList[authUserIndex].username,
@@ -17,9 +18,8 @@ export const logout = (usersList: User[]): User[] => {
         isAuth: false,
       },
     ]
-    return newUsersList
   } catch (error) {
     handleError(error)
-    return usersList
   }
+  return newUsersList
 }
