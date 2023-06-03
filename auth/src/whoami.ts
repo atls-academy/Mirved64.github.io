@@ -2,9 +2,9 @@ import { User }               from './auth.interfaces'
 import { handleError }        from './helpers'
 import { checkAuthUserIndex } from './helpers'
 
-export async function whoami(usersList: User[]): Promise<void> {
+export const whoami = (usersList: User[]): void => {
   try {
-    const userIndex: number = await checkAuthUserIndex(usersList)
+    const userIndex: number = checkAuthUserIndex(usersList)
     if (userIndex === -1) {
       throw new Error(`No authorized users`)
     }

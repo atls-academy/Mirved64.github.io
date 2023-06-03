@@ -1,7 +1,8 @@
-import { User }           from './auth.interfaces'
-import { handleError }    from './helpers'
-import { checkAuthUser }  from './helpers'
-import { compareStrings } from './helpers'
+import bcrypt            from 'bcryptjs'
+
+import { User }          from './auth.interfaces'
+import { handleError }   from './helpers'
+import { checkAuthUser } from './helpers'
 
 export const login = (username: string, password: string, usersList: User[]): User[] => {
   try {
@@ -9,16 +10,16 @@ export const login = (username: string, password: string, usersList: User[]): Us
       throw new Error(`${username}, please logout before login!`)
     }
 
-    const userIndex: number = usersList.findIndex(
-      (user) => user.username === username && compareStrings(password, user.password)
+    const foundUserIndex: number = usersList.findIndex(
+      (user) => user.username === username && bcrypt.compareSync(password, user.password)
     )
-    if (userIndex === -1) {
+    if (foundUserIndex === -1) {
       throw new Error('Incorrect username or password, try again!')
     }
 
-    const userActive: User = usersList[userIndex]
+    const foundUser: User = usersList[foundUserIndex]
 
-    userActive.isAuth = true
+    foundUser.isAuth = true
   } catch (error) {
     handleError(error)
   }

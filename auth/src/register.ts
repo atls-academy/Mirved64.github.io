@@ -1,7 +1,8 @@
+import bcrypt            from 'bcryptjs'
+
 import { User }          from './auth.interfaces'
 import { handleError }   from './helpers'
 import { checkAuthUser } from './helpers'
-import { hashString }    from './helpers'
 
 export const register = (username: string, password: string, usersList: User[]): User[] => {
   try {
@@ -22,15 +23,14 @@ export const register = (username: string, password: string, usersList: User[]):
       throw new Error('Password must be at least 6 characters long')
     }
 
-    const newRegPass: string = hashString(password)
-
-    const newReg: User = {
+    const newUserPassword: string = bcrypt.hashSync(password, 10)
+    const newUser: User = {
       username,
-      password: newRegPass,
+      password: newUserPassword,
       isAuth: true,
     }
 
-    usersList.push(newReg)
+    usersList.push(newUser)
   } catch (error) {
     handleError(error)
   }
