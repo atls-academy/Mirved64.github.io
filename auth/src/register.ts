@@ -1,7 +1,7 @@
-import { User }          from '../auth.interfaces'
-import { handleError }   from '../helpers'
-import { checkAuthUser } from '../helpers'
-import { hashString }    from './register.hash-string'
+import { User }          from './auth.interfaces'
+import { handleError }   from './helpers'
+import { checkAuthUser } from './helpers'
+import { hashString }    from './helpers'
 
 export const register = (username: string, password: string, usersList: User[]): User[] => {
   try {

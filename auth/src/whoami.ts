@@ -1,6 +1,6 @@
-import { User }               from '../auth.interfaces'
-import { handleError }        from '../helpers'
-import { checkAuthUserIndex } from '../helpers'
+import { User }               from './auth.interfaces'
+import { handleError }        from './helpers'
+import { checkAuthUserIndex } from './helpers'
 
 export async function whoami(usersList: User[]): Promise<void> {
   try {

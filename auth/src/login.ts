@@ -1,7 +1,7 @@
-import { User }           from '../auth.interfaces'
-import { handleError }    from '../helpers'
-import { checkAuthUser }  from '../helpers'
-import { compareStrings } from './login.compare-strings'
+import { User }           from './auth.interfaces'
+import { handleError }    from './helpers'
+import { checkAuthUser }  from './helpers'
+import { compareStrings } from './helpers'
 
 export const login = (username: string, password: string, usersList: User[]): User[] => {
   try {
