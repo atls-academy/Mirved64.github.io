@@ -1,10 +1,9 @@
 import { User }                 from './auth.interfaces'
-import { checkIndexOfAuthUser } from './check-utils'
 import { handleError }          from './handle-error'
 
 export const whoami = (usersList: User[]): void => {
   try {
-    const userIndex: number = checkIndexOfAuthUser(usersList)
+    const userIndex: number = usersList.findIndex((user) => user.isAuth === true)
     if (userIndex === -1) {
       throw new Error(`No authorized users`)
     }

@@ -1,12 +1,11 @@
 import bcrypt            from 'bcryptjs'
 
 import { User }          from './auth.interfaces'
-import { checkAuthUser } from './check-utils'
 import { handleError }   from './handle-error'
 
 export const register = (username: string, password: string, usersList: User[]): User[] => {
   try {
-    if (checkAuthUser(usersList)) {
+    if (usersList.some((user) => user.isAuth === true)) {
       throw new Error(`${username},  please logout before register!`)
     }
 
