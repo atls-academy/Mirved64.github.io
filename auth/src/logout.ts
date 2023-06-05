@@ -1,10 +1,10 @@
-import { User }               from './auth.interfaces'
-import { handleError }        from './helpers'
-import { checkAuthUserIndex } from './helpers'
+import { User }                 from './auth.interfaces'
+import { checkIndexOfAuthUser } from './check-utils'
+import { handleError }          from './handle-error'
 
 export const logout = (usersList: User[]): User[] => {
   try {
-    const authUserIndex: number = checkAuthUserIndex(usersList)
+    const authUserIndex: number = checkIndexOfAuthUser(usersList)
     if (authUserIndex === -1) {
       throw new Error(`No authorized users`)
     }

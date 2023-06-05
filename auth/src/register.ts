@@ -1,8 +1,8 @@
 import bcrypt            from 'bcryptjs'
 
 import { User }          from './auth.interfaces'
-import { handleError }   from './helpers'
-import { checkAuthUser } from './helpers'
+import { checkAuthUser } from './check-utils'
+import { handleError }   from './handle-error'
 
 export const register = (username: string, password: string, usersList: User[]): User[] => {
   try {
