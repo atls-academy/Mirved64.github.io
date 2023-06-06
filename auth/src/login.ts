@@ -1,27 +1,22 @@
-import bcrypt            from 'bcryptjs'
+import bcrypt   from 'bcryptjs'
 
-import { User }          from './auth.interfaces'
-import { handleError }   from './handle-error'
+import { User } from './auth.interfaces'
 
 export const login = (username: string, password: string, usersList: User[]): User[] => {
-  try {
-    if (usersList.some((user) => user.isAuth === true)) {
-      throw new Error(`${username}, please logout before login!`)
-    }
+  const authUser: boolean = usersList.some((user) => user.isAuth === true)
 
-    const foundUserIndex: number = usersList.findIndex(
-      (user) => user.username === username && bcrypt.compareSync(password, user.password)
-    )
-    if (foundUserIndex === -1) {
-      throw new Error('Incorrect username or password, try again!')
-    }
-
-    const foundUser: User = usersList[foundUserIndex]
-
-    foundUser.isAuth = true
-  } catch (error) {
-    handleError(error)
+  if (authUser) {
+    throw new Error(`AuthError! ${username}, please logout before login!`)
   }
+  const foundUserIndex: number = usersList.findIndex(
+    (user) => user.username === username && bcrypt.compareSync(password, user.password)
+  )
+  if (foundUserIndex === -1) {
+    throw new Error('ValidationError! Incorrect username or password, try again!')
+  }
+  const foundUser: User = usersList[foundUserIndex]
+
+  foundUser.isAuth = true
 
   return usersList
 }
