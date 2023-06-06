@@ -2581,6 +2581,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"auth@workspace:auth":
+  version: 0.0.0-use.local
+  resolution: "auth@workspace:auth"
+  dependencies:
+    "@types/bcryptjs": "npm:^2.4.2"
+    bcryptjs: "npm:^2.4.3"
+  languageName: unknown
+  linkType: soft
+
 "auto-bind@npm:4.0.0":
   version: 4.0.0
   resolution: "auto-bind@npm:4.0.0"

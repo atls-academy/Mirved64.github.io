@@ -12,11 +12,16 @@ const RAW_RUNTIME_STATE =
     {\
       "name": "template",\
       "reference": "workspace:."\
+    },\
+    {\
+      "name": "auth",\
+      "reference": "workspace:auth"\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
+    ["auth", ["workspace:auth"]],\
     ["template", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -3620,6 +3625,17 @@ const RAW_RUNTIME_STATE =
           ["astral-regex", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["auth", [\
+      ["workspace:auth", {\
+        "packageLocation": "./auth/",\
+        "packageDependencies": [\
+          ["auth", "workspace:auth"],\
+          ["@types/bcryptjs", "npm:2.4.2"],\
+          ["bcryptjs", "npm:2.4.3"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["auto-bind", [\
