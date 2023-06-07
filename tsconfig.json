@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": false,
@@ -17,10 +19,10 @@
     "removeComments": true,
     "strict": true,
     "sourceMap": false,
+    "resolveJsonModule": true,
     "target": "es2022",
+    "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "rootDir": "auth",
-    "outDir": "auth/dist"
   },
-  "include": ["auth/**/*"]
+  "include": ["auth/**/*", "landing/**/*"]
 }

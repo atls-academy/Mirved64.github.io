@@ -3,18 +3,21 @@
   "private": true,
   "license": "BSD 3-Clause",
   "workspaces": [
-    "auth"
+    "auth",
+    "landing/**/*"
   ],
-  "dependencies": {
-    "bcryptjs": "^2.4.3"
+  "resolutions": {
+    "@types/react": "17.0.39",
+    "next": "12.3.4"
   },
   "devDependencies": {
     "@atls/code-service": "^0.0.18",
     "@atls/config-jest": "^0.0.5",
+    "@atls/config-typescript": "^0.0.2",
     "@atls/schematics": "^0.0.13",
-    "@jest/core": "^29.5.0",
-    "@types/bcryptjs": "^2.4.2",
     "@types/eslint": "8",
+    "@jest/core": "^27.4.5",
+    "@types/react": "^17.0.37",
     "@types/node": "^20.2.3",
     "eslint": "8.18.0",
     "husky": "^8.0.3",
