@@ -1,5 +1,5 @@
 {
-  "name": "@landing/main-section-fragments",
+  "name": "@landing/main-section-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "devDependencies": {

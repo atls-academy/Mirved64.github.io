@@ -1,5 +1,5 @@
 {
-  "name": "@landing/cources-fragment",
+  "name": "@landing/navigation-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "devDependencies": {

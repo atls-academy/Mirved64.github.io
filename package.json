@@ -4,6 +4,7 @@
   "license": "BSD 3-Clause",
   "workspaces": [
     "auth",
+    "ui/**/*",
     "landing/**/*"
   ],
   "resolutions": {
@@ -21,7 +22,7 @@
     "@types/react": "^17.0.37",
     "eslint": "8.18.0",
     "husky": "^8.0.3",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.2"
   },
   "packageManager": "yarn@3.5.1"
 }

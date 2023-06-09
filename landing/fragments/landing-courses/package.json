@@ -1,5 +1,5 @@
 {
-  "name": "@landing/process-fragment",
+  "name": "@landing/courses-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "devDependencies": {
