@@ -2,8 +2,9 @@
   "name": "@landing/navigation-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
-  "dependencies": {
-    "react": "18.2.0"
+  "devDependencies": {
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4"
   },
   "peerDependencies": {
     "react": "*",
