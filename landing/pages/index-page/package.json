@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.tsx",
-  "dependencies": {
+  "devDependencies": {
     "@landing/courses-fragment": "workspace:0.0.1",
     "@landing/faq-fragment": "workspace:0.0.1",
     "@landing/main-section-fragment": "workspace:0.0.1",
     "@landing/navigation-fragment": "workspace:0.0.1",
     "@landing/process-fragment": "workspace:0.0.1"
   },
-  "devDependencies": {
+  "dependencies": {
     "react": "18.2.0"
   },
   "peerDependencies": {

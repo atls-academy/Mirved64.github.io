@@ -2,7 +2,7 @@
   "name": "@landing/courses-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
-  "devDependencies": {
+  "dependencies": {
     "react": "18.2.0"
   },
   "peerDependencies": {
