@@ -1,5 +1,3 @@
 import React from 'react'
 
-export const Navigation = () => {
-  return <h1>Hellow from Navigation</h1>
-}
+export const Navigation = () => <h1>Hellow from Navigation</h1>
