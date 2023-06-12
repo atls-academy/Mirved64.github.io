@@ -15,7 +15,6 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-dom": "*",
-    "react-intl": "*"
+    "react-dom": "*"
   }
 }
