@@ -1,3 +1,9 @@
-import React from 'react'
+import React      from 'react'
 
-export const Process = () => <h1>Hellow from Process</h1>
+import { Column } from '@ui/layout'
+
+export const Process = () => (
+  <Column width='1920px' margin='0 auto'>
+    TextText
+  </Column>
+)
