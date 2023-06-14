@@ -12,6 +12,7 @@
     "@atls/config-jest": "^0.0.5",
     "@atls/config-typescript": "^0.0.2",
     "@atls/schematics": "^0.0.13",
+    "@emotion/css": "^11.11.0",
     "@jest/core": "^27.4.5",
     "@types/eslint": "8",
     "@types/node": "^20.2.3",

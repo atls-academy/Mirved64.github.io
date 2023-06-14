@@ -9252,6 +9252,7 @@ __metadata:
     "@atls/config-jest": "npm:^0.0.5"
     "@atls/config-typescript": "npm:^0.0.2"
     "@atls/schematics": "npm:^0.0.13"
+    "@emotion/css": "npm:^11.11.0"
     "@jest/core": "npm:^27.4.5"
     "@types/eslint": "npm:8"
     "@types/node": "npm:^20.2.3"
