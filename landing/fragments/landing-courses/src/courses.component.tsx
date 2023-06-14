@@ -1,9 +1,9 @@
-import React                from 'react'
+import React      from 'react'
 
-import { Box }              from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Row } from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Box }    from '@ui/layout'
+import { Column } from '@ui/layout'
+import { Row }    from '@ui/layout'
+import { Text }   from '@ui/text'
 
 export const Courses = () => (
   <Box backgroundColor='#ffffff' width='1920px' margin='0 auto'>

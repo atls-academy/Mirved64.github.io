@@ -1,11 +1,14 @@
-import React   from 'react'
+import React           from 'react'
 
-import { Box } from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { NextLink }    from '@ui/link'
+import { Text }        from '@ui/text'
+
+import { navLinkList } from './navigation-list/navigation.list'
 
 export const Navigation = () => (
   <Box
     backgroundColor='#666666'
-    border='solid 2px black'
     width='1920px'
     height='120px'
     justifyContent='space-between'
@@ -15,11 +18,21 @@ export const Navigation = () => (
     <Box border='solid 2px red' width='56px' height='56px' marginLeft='40px'>
       TextText
     </Box>
-    <Box border='solid 2px green' width='860px' height='18px'>
-      TextText
+    <Box width='860px' height='18px' justifyContent='space-between'>
+      {navLinkList.map((link) => (
+        <NextLink>
+          <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
+            {link.name}
+          </Text>
+        </NextLink>
+      ))}
     </Box>
-    <Box border='solid 2px blue' width='54px' height='18px' marginRight='40px'>
-      TextText
+    <Box width='54px' height='18px' marginRight='40px'>
+      <NextLink>
+        <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
+          Курсы
+        </Text>
+      </NextLink>
     </Box>
   </Box>
 )
