@@ -2634,6 +2634,7 @@ __metadata:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -3414,6 +3415,12 @@ __metadata:
   checksum: f6c8a0c3cc28b9604cc2e3a747944577f562be8dd5be46fbb522237fe52e0266c51571764322032f6d7e96d6b8f27cf51ba8e4be3024c6e68f5f173e1bd38761
   languageName: node
   linkType: hard
+
+"@ui/icons@workspace:landing/ui/icons":
+  version: 0.0.0-use.local
+  resolution: "@ui/icons@workspace:landing/ui/icons"
+  languageName: unknown
+  linkType: soft
 
 "@ui/layout@workspace: 0.0.1, @ui/layout@workspace:landing/ui/layout":
   version: 0.0.0-use.local

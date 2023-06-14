@@ -28,7 +28,8 @@ export const MainSection = () => (
         />
         <Box width='640px' height='56px'>
           <Text color='primary' fontSize='big' fontWeight='normal' lineHeight='normalMedium'>
-            Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать невозможные идеи
+            Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать
+            невозможные идеи
           </Text>
         </Box>
       </Box>

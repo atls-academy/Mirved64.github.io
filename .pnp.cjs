@@ -46,6 +46,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:landing/pages/index-page"\
     },\
     {\
+      "name": "@ui/icons",\
+      "reference": "workspace:landing/ui/icons"\
+    },\
+    {\
       "name": "@ui/layout",\
       "reference": "workspace:landing/ui/layout"\
     },\
@@ -72,6 +76,7 @@ const RAW_RUNTIME_STATE =
     ["@landing/navigation-fragment", ["virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-navigation", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-navigation", "workspace:landing/fragments/landing-navigation"]],\
     ["@landing/process-fragment", ["virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-process", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-process", "workspace:landing/fragments/landing-process"]],\
     ["@landing/renderer-entrypoint", ["workspace:landing/entrypoints/renderer"]],\
+    ["@ui/icons", ["workspace:landing/ui/icons"]],\
     ["@ui/layout", ["workspace:landing/ui/layout"]],\
     ["@ui/link", ["workspace:landing/ui/link"]],\
     ["@ui/text", ["workspace:landing/ui/text"]],\
@@ -4413,6 +4418,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
           ["@ui/layout", "workspace:landing/ui/layout"],\
+          ["@ui/text", "workspace:landing/ui/text"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", null]\
         ],\
@@ -4429,6 +4435,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
           ["@ui/layout", "workspace:landing/ui/layout"],\
+          ["@ui/text", "workspace:landing/ui/text"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:9b7e10184703fd8df9d1ef6454d6dbdcb0b9cdac52480e2d052d3f418d9a84fa9c713496b06917fcc4f404e2be786c081a2dc1deb9495599deeca1d99a070875#npm:18.2.0"]\
         ],\
@@ -4446,7 +4453,8 @@ const RAW_RUNTIME_STATE =
           ["@landing/courses-fragment", "workspace:landing/fragments/landing-courses"],\
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
-          ["@ui/layout", "workspace:landing/ui/layout"]\
+          ["@ui/layout", "workspace:landing/ui/layout"],\
+          ["@ui/text", "workspace:landing/ui/text"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -5483,6 +5491,15 @@ const RAW_RUNTIME_STATE =
           ["@types/yoga-layout", "npm:1.9.2"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@ui/icons", [\
+      ["workspace:landing/ui/icons", {\
+        "packageLocation": "./landing/ui/icons/",\
+        "packageDependencies": [\
+          ["@ui/icons", "workspace:landing/ui/icons"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@ui/layout", [\
