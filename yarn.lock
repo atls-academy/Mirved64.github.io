@@ -201,6 +201,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/link@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@atls-ui-parts/link@npm:0.0.10"
+  dependencies:
+    "@atls-ui-parts/text": "npm:0.0.10"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    next: "*"
+    react: ^17.0.1
+    styled-system: ^5.1.5
+  checksum: 58501abfd7609057f3786050b19b713c504b5cd54deb5c0aefd1b49bd100caadc6285ff10118109e1b54000499066b7d8c66291ac8d9d34b143c611f1708d28f
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/text@npm:0.0.10, @atls-ui-parts/text@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@atls-ui-parts/text@npm:0.0.10"
+  dependencies:
+    styled-system: "npm:^5.1.5"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+  checksum: ba7f2f04fc678d1a84b34a2a864282f54c784bd2b3197fb0bc5061fbd0b787db76a987aec17c0f1943f42853ea9d8c3753d6b071a69fbc4f12c22243d0f0e343
+  languageName: node
+  linkType: hard
+
+"@atls-ui-proto/text@npm:^0.0.10":
+  version: 0.0.10
+  resolution: "@atls-ui-proto/text@npm:0.0.10"
+  dependencies:
+    "@atls-ui-parts/text": "npm:0.0.10"
+  checksum: d94c8c3a61518dd22e01c4c4c696f8ec47c371d3f62d5155fff95b29f3b99298fe601bb1706993f6843b5fff9f3a9930bbef1243c0b411cfb4f43aa8e2c6db2d
+  languageName: node
+  linkType: hard
+
+"@atls-ui-proto/theme@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "@atls-ui-proto/theme@npm:0.0.9"
+  peerDependencies:
+    "@emotion/react": ^11.1.5
+    react: ^17.0.1
+  checksum: 27425bcd97c7be38d8c296ff6d37f9e0e9d610cc4b8bf28cdc4eb754f6a3f0635904d00f58ae9fd160279b015b350eaf98e293f8227414f24be7a64d1413f063
+  languageName: node
+  linkType: hard
+
 "@atls/code-service@npm:^0.0.18":
   version: 0.0.18
   resolution: "@atls/code-service@npm:0.0.18"
@@ -2099,6 +2144,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/css@npm:^11.11.0":
+  version: 11.11.0
+  resolution: "@emotion/css@npm:11.11.0"
+  dependencies:
+    "@emotion/babel-plugin": "npm:^11.11.0"
+    "@emotion/cache": "npm:^11.11.0"
+    "@emotion/serialize": "npm:^1.1.2"
+    "@emotion/sheet": "npm:^1.2.2"
+    "@emotion/utils": "npm:^1.2.1"
+  checksum: e1ab96761cc9dfaee8a8f779ff86e5f883123c9b3dd3338f9994ebdc140bf235519e7dcbaac4c8e038335b9fd6346d25c4630b399af64668b47b81ecdaea02fc
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.9.1":
   version: 0.9.1
   resolution: "@emotion/hash@npm:0.9.1"
@@ -2617,6 +2675,7 @@ __metadata:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/text": "workspace:^"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2630,6 +2689,8 @@ __metadata:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/link": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2657,6 +2718,7 @@ __metadata:
     "@types/node": "npm:18"
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/theme": "workspace:^"
     next: "npm:^13.4.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -3305,7 +3367,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-system@npm:^5":
+"@types/styled-system@npm:^5, @types/styled-system@npm:^5.1.16":
   version: 5.1.16
   resolution: "@types/styled-system@npm:5.1.16"
   dependencies:
@@ -3368,6 +3430,58 @@ __metadata:
     react-dom: "npm:^18.2.0"
     styled-components: "npm:6.0.0-rc.3"
     styled-system: "npm:^5.1.5"
+  languageName: unknown
+  linkType: soft
+
+"@ui/link@workspace: 0.0.1, @ui/link@workspace:landing/ui/link":
+  version: 0.0.0-use.local
+  resolution: "@ui/link@workspace:landing/ui/link"
+  dependencies:
+    "@atls-ui-parts/link": "npm:^0.0.10"
+    "@atls-ui-proto/text": "npm:^0.0.10"
+    "@emotion/css": "npm:^11.11.0"
+    "@emotion/react": "npm:^11.11.1"
+    "@emotion/styled": "npm:^11.11.0"
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@types/styled-system": "npm:^5.1.16"
+    "@ui/text": "workspace: 0.0.1"
+    next: "npm:^13.4.5"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    styled-components: "npm:6.0.0-rc.3"
+    styled-system: "npm:^5.1.5"
+  languageName: unknown
+  linkType: soft
+
+"@ui/text@workspace: 0.0.1, @ui/text@workspace:^, @ui/text@workspace:landing/ui/text":
+  version: 0.0.0-use.local
+  resolution: "@ui/text@workspace:landing/ui/text"
+  dependencies:
+    "@atls-ui-parts/text": "npm:^0.0.10"
+    "@emotion/react": "npm:^11.11.1"
+    "@emotion/styled": "npm:^11.11.0"
+    "@types/react": "npm:^18.2.9"
+    "@types/styled-system": "npm:^5"
+    react: "npm:^18.2.0"
+    styled-components: "npm:6.0.0-rc.3"
+    styled-system: "npm:^5.1.5"
+  languageName: unknown
+  linkType: soft
+
+"@ui/theme@workspace:^, @ui/theme@workspace:landing/ui/theme":
+  version: 0.0.0-use.local
+  resolution: "@ui/theme@workspace:landing/ui/theme"
+  dependencies:
+    "@atls-ui-proto/theme": "npm:^0.0.9"
+    "@emotion/css": "npm:^11.11.0"
+    "@emotion/react": "npm:^11.11.1"
+    "@emotion/styled": "npm:^11.11.0"
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@types/styled-system": "npm:^5.1.16"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
   languageName: unknown
   linkType: soft
 

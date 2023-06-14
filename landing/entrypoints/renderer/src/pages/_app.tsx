@@ -1,5 +1,11 @@
-import React from 'react'
+import React             from 'react'
 
-const App = ({ Component, pageProps, ...props }) => <Component {...pageProps} {...props} />
+import { ThemeProvider } from '@ui/theme'
+
+const App = ({ Component, pageProps, ...props }) => (
+  <ThemeProvider>
+    <Component {...pageProps} {...props} />
+  </ThemeProvider>
+)
 
 export default App
