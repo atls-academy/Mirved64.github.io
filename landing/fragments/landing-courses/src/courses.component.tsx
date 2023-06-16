@@ -1,11 +1,11 @@
-import React          from 'react'
+import React           from 'react'
 
 import { DefaultIcon } from '@ui/icons'
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { NextLink }   from '@ui/link'
-import { Text }       from '@ui/text'
+import { Box }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { NextLink }    from '@ui/link'
+import { Text }        from '@ui/text'
 
 export const Courses = () => (
   <Box backgroundColor='#ffffff' width='1920px' margin='0 auto'>
