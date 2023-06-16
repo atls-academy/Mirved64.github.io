@@ -3,7 +3,7 @@ import React    from 'react'
 import { Box }  from '@ui/layout'
 import { Text } from '@ui/text'
 
-export const MainSection = () => (
+export const Hero = () => (
   <Box backgroundColor='#666666' width='1920px' flexDirection='column' margin='0 auto'>
     <Box
       backgroundColor='#666666'

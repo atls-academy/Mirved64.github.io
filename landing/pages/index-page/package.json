@@ -9,7 +9,7 @@
   "devDependencies": {
     "@landing/courses-fragment": "workspace:0.0.1",
     "@landing/faq-fragment": "workspace:0.0.1",
-    "@landing/main-section-fragment": "workspace:0.0.1",
+    "@landing/hero-fragment": "workspace:0.0.1",
     "@landing/navigation-fragment": "workspace:0.0.1",
     "@landing/process-fragment": "workspace:0.0.1"
   },
