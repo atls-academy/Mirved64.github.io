@@ -7,8 +7,8 @@ export const TelegramIcon = (props: any) => {
   const theme: any = useTheme()
   return (
     <svg
-      width='1em'
-      height='1em'
+      width='18px'
+      height='15px'
       viewBox='0 0 19 15'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

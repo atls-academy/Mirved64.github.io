@@ -1,7 +1,13 @@
-import React    from 'react'
+import React            from 'react'
 
-import { Box }  from '@ui/layout'
-import { Text } from '@ui/text'
+import { DefaultIcon }  from '@ui/icons'
+import { TelegramIcon } from '@ui/icons'
+import { GitHubIcon }   from '@ui/icons'
+import { MailIcon }     from '@ui/icons'
+import { Box }          from '@ui/layout'
+import { Column }       from '@ui/layout'
+import { Text }         from '@ui/text'
+import { Space }        from '@ui/text'
 
 export const Hero = () => (
   <Box backgroundColor='#666666' width='1920px' flexDirection='column' margin='0 auto'>
@@ -13,7 +19,7 @@ export const Hero = () => (
       justifyContent='space-between'
       alignItems='end'
     >
-      <Box width='1460px' height='498px' flexDirection='column'>
+      <Column width='1460px' height='498px'>
         <Box width='1166px' height='345px'>
           <Text color='primary' fontSize='biggest' fontWeight='normal' lineHeight='biggest'>
             Обучаем профессионалов для революции в IT
@@ -32,18 +38,54 @@ export const Hero = () => (
             невозможные идеи
           </Text>
         </Box>
-      </Box>
-      <Box border='solid 2px olive' width='56px' height='200px' flexDirection='column'>
-        Text
-      </Box>
+      </Column>
+      <Column width='56px' height='200px' justifyContent='space-between'>
+        <TelegramIcon />
+        <GitHubIcon />
+        <MailIcon />
+      </Column>
     </Box>
-    <Box width='1460px' height='350px' margin='160px 230px' flexWrap='wrap'>
-      <Text color='primary' fontSize='giant' fontWeight='normal' lineHeight='largeNormal'>
-        Digital становится всё более многолюдным, востребованность по направлениям при этом не
-        снижается Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
-        Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
-        дизайнеров
-      </Text>
-    </Box>
+    <Column width='1460px' height='350px' margin='160px 230px' alignItems='center'>
+      <Box display='inline'>
+        <Text
+          color='primary'
+          fontSize='giant'
+          fontWeight='normal'
+          lineHeight='largeNormal'
+          display='inline'
+        >
+          Digital становится всё более многолюдным, востребованность по направлениям при этом не
+          снижается
+        </Text>
+        <Space count='8' />
+        <DefaultIcon />
+        <Space count='8' />
+        <Text
+          color='primary'
+          fontSize='giant'
+          fontWeight='normal'
+          lineHeight='largeNormal'
+          display='inline'
+        >
+          Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
+        </Text>
+        <Space count='8' />
+        <DefaultIcon />
+      </Box>
+      <Box marginTop='40px' display='inline'>
+        <Text
+          color='primary'
+          fontSize='giant'
+          fontWeight='normal'
+          lineHeight='largeNormal'
+          display='inline'
+        >
+          Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
+          дизайнеров
+        </Text>
+        <Space count='8' />
+        <DefaultIcon />
+      </Box>
+    </Column>
   </Box>
 )
