@@ -2936,7 +2936,9 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/icons": "workspace:^"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/link": "workspace:^"
     "@ui/text": "workspace: 0.0.1"
   peerDependencies:
     react: "*"
@@ -3913,7 +3915,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/link@workspace: 0.0.1, @ui/link@workspace:landing/ui/link":
+"@ui/link@workspace: 0.0.1, @ui/link@workspace:^, @ui/link@workspace:landing/ui/link":
   version: 0.0.0-use.local
   resolution: "@ui/link@workspace:landing/ui/link"
   dependencies:

@@ -1,9 +1,11 @@
-import React      from 'react'
+import React          from 'react'
 
-import { Box }    from '@ui/layout'
-import { Column } from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Text }   from '@ui/text'
+import { DefaultIcon } from '@ui/icons'
+import { Box }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { NextLink }   from '@ui/link'
+import { Text }       from '@ui/text'
 
 export const Courses = () => (
   <Box backgroundColor='#ffffff' width='1920px' margin='0 auto'>
@@ -21,9 +23,11 @@ export const Courses = () => (
           </Text>
         </Box>
         <Box width='150px' height='22px'>
-          <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
-            Все материалы
-          </Text>
+          <NextLink>
+            <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+              Все материалы
+            </Text>
+          </NextLink>
         </Box>
       </Row>
       <Box
@@ -116,8 +120,8 @@ export const Courses = () => (
               собираем большие группы, что позволяет курировать работу каждого студента.
             </Text>
           </Box>
-          <Box border='solid 2px red' width='240px' height='240px' margin='0 auto 62px'>
-            Image
+          <Box width='240px' height='240px' margin='0 auto 62px'>
+            <DefaultIcon width='100%' height='100%' />
           </Box>
           <Column width='188px' height='116px' marginLeft='32px' marginBottom='68px'>
             <Text
