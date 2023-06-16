@@ -20,7 +20,7 @@ export const Navigation = () => (
     </Box>
     <Box width='860px' height='18px' justifyContent='space-between'>
       {navLinkList.map((link) => (
-        <NextLink>
+        <NextLink key={link.name}>
           <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
             {link.name}
           </Text>
