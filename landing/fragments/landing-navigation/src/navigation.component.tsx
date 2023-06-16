@@ -1,10 +1,11 @@
-import React           from 'react'
+import React             from 'react'
 
-import { Box }         from '@ui/layout'
-import { NextLink }    from '@ui/link'
-import { Text }        from '@ui/text'
+import { LogoWhiteIcon } from '@ui/icons'
+import { Box }           from '@ui/layout'
+import { NextLink }      from '@ui/link'
+import { Text }          from '@ui/text'
 
-import { navLinkList } from './navigation-list/navigation.list'
+import { navLinkList }   from './navigation-list/navigation.list'
 
 export const Navigation = () => (
   <Box
@@ -15,8 +16,10 @@ export const Navigation = () => (
     alignItems='center'
     margin='0 auto'
   >
-    <Box border='solid 2px red' width='56px' height='56px' marginLeft='40px'>
-      TextText
+    <Box width='56px' height='56px' marginLeft='40px'>
+      <NextLink>
+        <LogoWhiteIcon />
+      </NextLink>
     </Box>
     <Box width='860px' height='18px' justifyContent='space-between'>
       {navLinkList.map((link) => (

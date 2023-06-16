@@ -7,8 +7,8 @@ export const LogoWhiteIcon = (props: any) => {
   const theme: any = useTheme()
   return (
     <svg
-      width='1em'
-      height='1em'
+      width='56px'
+      height='56px'
       viewBox='0 0 40 36'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

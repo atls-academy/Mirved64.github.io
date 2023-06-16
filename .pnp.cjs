@@ -4746,6 +4746,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/navigation-fragment", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-navigation"],\
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
+          ["@ui/icons", "workspace:landing/ui/icons"],\
           ["@ui/layout", "workspace:landing/ui/layout"],\
           ["@ui/link", "workspace:landing/ui/link"],\
           ["@ui/text", "workspace:landing/ui/text"],\
@@ -4764,6 +4765,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/navigation-fragment", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-navigation"],\
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
+          ["@ui/icons", "workspace:landing/ui/icons"],\
           ["@ui/layout", "workspace:landing/ui/layout"],\
           ["@ui/link", "workspace:landing/ui/link"],\
           ["@ui/text", "workspace:landing/ui/text"],\
@@ -4784,6 +4786,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/navigation-fragment", "workspace:landing/fragments/landing-navigation"],\
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
+          ["@ui/icons", "workspace:landing/ui/icons"],\
           ["@ui/layout", "workspace:landing/ui/layout"],\
           ["@ui/link", "workspace:landing/ui/link"],\
           ["@ui/text", "workspace:landing/ui/text"]\
