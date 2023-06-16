@@ -33,7 +33,7 @@ export const Navigation = () => (
     <Box width='54px' height='18px' marginRight='40px'>
       <NextLink>
         <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
-          Курсы
+        <NextLink>Курсы</NextLink>
         </Text>
       </NextLink>
     </Box>
