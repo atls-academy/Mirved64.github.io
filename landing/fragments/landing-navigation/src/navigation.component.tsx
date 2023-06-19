@@ -18,7 +18,7 @@ export const Navigation = () => (
   >
     <Box width='56px' height='56px' marginLeft='40px'>
       <NextLink>
-        <LogoWhiteIcon />
+        <LogoWhiteIcon width='100%' height='100%' />
       </NextLink>
     </Box>
     <Box width='860px' height='18px' justifyContent='space-between'>

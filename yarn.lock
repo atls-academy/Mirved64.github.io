@@ -3014,9 +3014,9 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
-    "@ui/icons": "workspace:^"
+    "@ui/icons": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
-    "@ui/text": "workspace:^"
+    "@ui/text": "workspace: 0.0.1"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -3884,7 +3884,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/icons@workspace:^, @ui/icons@workspace:landing/ui/icons":
+"@ui/icons@workspace: 0.0.1, @ui/icons@workspace:^, @ui/icons@workspace:landing/ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:landing/ui/icons"
   dependencies:

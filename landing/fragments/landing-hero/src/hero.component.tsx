@@ -39,10 +39,10 @@ export const Hero = () => (
           </Text>
         </Box>
       </Column>
-      <Column width='56px' height='200px' justifyContent='space-between'>
-        <TelegramIcon />
-        <GitHubIcon />
-        <MailIcon />
+      <Column width='56px' height='200px' justifyContent='space-between' alignItems='center'>
+        <TelegramIcon width='18px' height='15px' />
+        <GitHubIcon width='18px' height='18px' />
+        <MailIcon width='18px' height='14px' />
       </Column>
     </Box>
     <Column width='1460px' height='350px' margin='160px 230px' alignItems='center'>
@@ -58,7 +58,7 @@ export const Hero = () => (
           снижается
         </Text>
         <Space count='8' />
-        <DefaultIcon />
+        <DefaultIcon width='40px' height='40px' />
         <Space count='8' />
         <Text
           color='primary'
@@ -70,7 +70,7 @@ export const Hero = () => (
           Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
         </Text>
         <Space count='8' />
-        <DefaultIcon />
+        <DefaultIcon width='40px' height='40px' />
       </Box>
       <Box marginTop='40px' display='inline'>
         <Text
@@ -84,7 +84,7 @@ export const Hero = () => (
           дизайнеров
         </Text>
         <Space count='8' />
-        <DefaultIcon />
+        <DefaultIcon width='40px' height='40px' />
       </Box>
     </Column>
   </Box>

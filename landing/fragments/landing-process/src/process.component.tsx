@@ -1,15 +1,19 @@
-import React           from 'react'
+import React                                          from 'react'
 
+import { ArrowLeftIcon }                              from '@ui/icons'
+import { ArrowRightIcon }              from '@ui/icons'
 import { DefaultIcon } from '@ui/icons'
-import { Box }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Text }        from '@ui/text'
+import { Box }                                        from '@ui/layout'
+import { Column }                                     from '@ui/layout'
+import { Row }                                        from '@ui/layout'
+import { Text }                                       from '@ui/text'
 
-import { processList } from './process-list/process.list'
+import { processList }                                from './process-list/process.list'
+import { technologiesListTop }                        from './technologies-list/technologies.list'
+import { technologiesListBottom }                     from './technologies-list/technologies.list'
 
 export const Process = () => (
-  <Box backgroundColor='#666666' width='1920px' margin='0 auto'>
+  <Box backgroundColor='#666666' width='1920px' margin='0 auto' flexDirection='column'>
     <Box width='1760px' margin='160px auto' position='relative' flexDirection='column'>
       {processList.map((process, index) => {
         if (index !== processList.length - 1) {
@@ -101,5 +105,68 @@ export const Process = () => (
         <DefaultIcon width='100%' height='100%' />
       </Box>
     </Box>
+    <Column>
+      <Box border='solid 1px #FFFFFF' margin='64px 0' />
+      <Row marginBottom='64px' overflow='hidden'>
+        {technologiesListTop.map((technology) => (
+          <Box flexShrink='0' key={technology.technology}>
+            <Text
+              color='primary'
+              fontSize='extraSuper'
+              fontWeight='lighter'
+              lineHeight='largeLarge'
+            >
+              {technology.technology}
+            </Text>
+            <Box width='48px' margin='auto 24px' border='solid 2px #FFFFFF' />
+          </Box>
+        ))}
+      </Row>
+      <Row marginBottom='64px' overflow='hidden'>
+        {technologiesListBottom.map((technology) => (
+          <Box flexShrink='0' key={technology.technology}>
+            <Text
+              color='primary'
+              fontFamily='GellaDisplay'
+              fontSize='extraSuper'
+              fontWeight='lighter'
+              lineHeight='largeLarge'
+            >
+              {technology.technology}
+            </Text>
+            <Box width='48px' margin='auto 24px' border='solid 2px #FFFFFF' />
+          </Box>
+        ))}
+      </Row>
+      <Box border='solid 1px #FFFFFF' marginBottom='64px' />
+    </Column>
+    <Column>
+      <Column margin='160px auto 50px' alignItems='center' flexWrap='wrap' width='960px'>
+        <Text color='primary' fontSize='atom' lineHeight='extraSmall' marginBottom='24px'>
+          ПРОЦЕСС СОЗДАНИЯ
+        </Text>
+        <Text color='primary' fontSize='extraLarge' lineHeight='LargeSmall' textAlign='center'>
+          Любой процесс перестаёт быть сложным, когда знаешь как он протекает
+        </Text>
+      </Column>
+      <Column margin='0 auto'>
+        <Box width='960px' height='540px' marginBottom='32px'>
+          <DefaultIcon width='100%' height='100%' />
+        </Box>
+        <Row justifyContent='space-around' alignItems='center' marginBottom='160px'>
+          <Box width='10px' height='5px'>
+            <ArrowLeftIcon width='100%' height='100%' fill='#FFFFFF' />
+          </Box>
+          <Box padding='19px 0 19px'>
+            <Text color='primary' fontSize='small' lineHeight='normalNormal'>
+              Формирование системы базовых фрагментов и компонентов
+            </Text>
+          </Box>
+          <Box width='10px' height='5px'>
+            <ArrowRightIcon width='100%' height='100%' color='primory' fill='#FFFFFF' />
+          </Box>
+        </Row>
+      </Column>
+    </Column>
   </Box>
 )

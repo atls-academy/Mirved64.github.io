@@ -1,3 +1,5 @@
+export * from './ArrowLeftIcon'
+export * from './ArrowRightIcon'
 export * from './DefaultIcon'
 export * from './GitHubIcon'
 export * from './LogoWhiteIcon'

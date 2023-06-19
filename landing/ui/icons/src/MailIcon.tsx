@@ -7,8 +7,8 @@ export const MailIcon = (props: any) => {
   const theme: any = useTheme()
   return (
     <svg
-      width='18px'
-      height='14px'
+      width='1em'
+      height='1em'
       viewBox='0 0 18 14'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
