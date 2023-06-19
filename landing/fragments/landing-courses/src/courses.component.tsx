@@ -32,7 +32,7 @@ export const Courses = () => (
       </Row>
       <Box
         border='solid 1px black'
-        width='1460px'
+        width='100%'
         height='1px'
         marginTop='48px'
         marginBottom='48px'
