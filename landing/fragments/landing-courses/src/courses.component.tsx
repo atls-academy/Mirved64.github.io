@@ -8,10 +8,10 @@ import { NextLink }    from '@ui/link'
 import { Text }        from '@ui/text'
 
 export const Courses = () => (
-  <Box backgroundColor='#ffffff' width='1920px' margin='0 auto'>
-    <Column width='1610px' height='1225px' margin='160px 80px 240px 230px'>
-      <Row width='100%' height='115px' justifyContent='space-between' alignItems='center'>
-        <Box width='890px' height='115px'>
+  <Box backgroundColor='#ffffff' width='100%' margin='0 auto'>
+    <Column margin='160px 80px 240px 230px'>
+      <Row justifyContent='space-between' alignItems='center'>
+        <Box flexWrap='wrap' flexGrow='1'>
           <Text
             color='second'
             fontSize='biggest'
@@ -22,7 +22,7 @@ export const Courses = () => (
             Курсы и материалы
           </Text>
         </Box>
-        <Box width='150px' height='22px'>
+        <Box flexWrap='wrap'>
           <NextLink>
             <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               Все материалы
@@ -37,28 +37,22 @@ export const Courses = () => (
         marginTop='48px'
         marginBottom='48px'
       />
-      <Box width='100%' height='135px' justifyContent='space-between' marginBottom='80px'>
-        <Box width='710px' height='100%'>
+      <Row justifyContent='space-between' marginBottom='80px'>
+        <Box flexWrap='wrap' flexBasis='40%'>
           <Text color='second' fontSize='xl' fontWeight='normal' lineHeight='largeSmall'>
             Являясь серым кардиналом, Atlantis имеет влияние на сферу IT и неограниченные
             возможности в применении навыков.
           </Text>
         </Box>
-        <Box width='559px' height='100%'>
+        <Box flexWrap='wrap' flexBasis='35%'>
           <Text color='second' fontSize='xl' fontWeight='normal' lineHeight='largeSmall'>
             Эффективность обучения заметно вырастает благодаря практики на существующих проектах.
           </Text>
         </Box>
-      </Box>
-      <Box width='100%' height='734px' justifyContent='space-between'>
-        <Column width='1160px' height='688px'>
-          <Column
-            width='694px'
-            height='146px'
-            marginTop='40px'
-            marginLeft='20px'
-            marginBottom='120px'
-          >
+      </Row>
+      <Row width='100%' justifyContent='space-between'>
+        <Column flexBasis='1160px'>
+          <Column marginTop='40px' marginLeft='20px' marginBottom='120px' maxWidth='694px'>
             <Text
               color='second'
               fontSize='extraLarge'
@@ -74,7 +68,7 @@ export const Courses = () => (
               технологий
             </Text>
           </Column>
-          <Column width='694px' height='146px' marginLeft='20px' marginBottom='112px'>
+          <Column marginLeft='20px' marginBottom='112px' maxWidth='694px'>
             <Text
               color='second'
               fontSize='extraLarge'
@@ -90,8 +84,8 @@ export const Courses = () => (
               технологий
             </Text>
           </Column>
-          <Box width='100%' height='156px' justifyContent='space-between'>
-            <Box width='496px' height='92px' margin='32px'>
+          <Row width='100%' height='156px' justifyContent='space-between'>
+            <Box margin='32px'>
               <Text
                 color='second'
                 fontSize='extraLarge'
@@ -101,7 +95,7 @@ export const Courses = () => (
                 Как использовать библиотеки
               </Text>
             </Box>
-            <Box width='496px' height='92px' margin='32px'>
+            <Box margin='32px'>
               <Text
                 color='second'
                 fontSize='extraLarge'
@@ -111,10 +105,10 @@ export const Courses = () => (
                 Дизайн, Figma, Математика
               </Text>
             </Box>
-          </Box>
+          </Row>
         </Column>
-        <Column width='410px' height='100%'>
-          <Box width='346px' height='104px' margin='32px auto 74px'>
+        <Column maxWidth='410px'>
+          <Box margin='32px auto 74px' maxWidth='346px'>
             <Text color='second' fontSize='small' fontWeight='normal' lineHeight='normalNormal'>
               Вы изучите фундаментальные знания в IT и прокачаете нужные для сферы навыки. Мы не
               собираем большие группы, что позволяет курировать работу каждого студента.
@@ -123,7 +117,7 @@ export const Courses = () => (
           <Box width='240px' height='240px' margin='0 auto 62px'>
             <DefaultIcon width='100%' height='100%' />
           </Box>
-          <Column width='188px' height='116px' marginLeft='32px' marginBottom='68px'>
+          <Column marginLeft='32px' marginBottom='68px' maxWidth='188px' flexWrap='wrap'>
             <Text
               color='second'
               fontSize='super'
@@ -137,13 +131,13 @@ export const Courses = () => (
               студентов обучаются в одной практической группе
             </Text>
           </Column>
-          <Box width='220px' height='22px' marginLeft='32px'>
+          <Box marginLeft='32px'>
             <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               Процесс поступления
             </Text>
           </Box>
         </Column>
-      </Box>
+      </Row>
     </Column>
   </Box>
 )

@@ -8,22 +8,15 @@ import { Text }          from '@ui/text'
 import { navLinkList }   from './navigation-list/navigation.list'
 
 export const Navigation = () => (
-  <Box
-    backgroundColor='#666666'
-    width='1920px'
-    height='120px'
-    justifyContent='space-between'
-    alignItems='center'
-    margin='0 auto'
-  >
-    <Box width='56px' height='56px' marginLeft='40px'>
+  <Box backgroundColor='#666666' width='100%' height='120px' alignItems='center'>
+    <Box  flexGrow='1'  paddingLeft='40px'>
       <NextLink>
-        <LogoWhiteIcon width='100%' height='100%' />
+        <LogoWhiteIcon width='56px' height='56px' />
       </NextLink>
     </Box>
-    <Box width='860px' height='18px' justifyContent='space-between'>
+    <Box height='18px'  flexGrow='1'>
       {navLinkList.map((link) => (
-        <Box key={link.name}>
+        <Box key={link.name} flexGrow='5' justifyContent='center'>
           <NextLink>
             <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
               {link.name}
@@ -32,7 +25,7 @@ export const Navigation = () => (
         </Box>
       ))}
     </Box>
-    <Box width='54px' height='18px' marginRight='40px'>
+    <Box width='54px' height='18px' flexGrow='1' justifyContent='end' paddingRight='40px'>
       <NextLink>
         <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
           Курсы

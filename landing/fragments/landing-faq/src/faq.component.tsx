@@ -9,16 +9,10 @@ import { Text }     from '@ui/text'
 import { faqList }  from './faq-list/faq.list'
 
 export const Faq = () => (
-  <Box
-    backgroundColor='#ffffff'
-    width='1920px'
-    margin='0 auto'
-    flexDirection='column'
-    height='1200px'
-  >
-    <Column width='1610px' height='1200px' margin='160px 80px 240px 230px'>
-      <Row width='100%' height='115px' justifyContent='space-between' alignItems='center'>
-        <Box width='890px' height='115px'>
+  <Box backgroundColor='#ffffff' width='100%' margin='0 auto' flexDirection='column'>
+    <Column margin='160px 80px 240px 230px'>
+      <Row width='100%' justifyContent='space-between' alignItems='center'>
+        <Box>
           <Text
             color='second'
             fontSize='biggest'
@@ -29,7 +23,7 @@ export const Faq = () => (
             Вопросы и ответы
           </Text>
         </Box>
-        <Box width='150px' height='22px'>
+        <Box>
           <NextLink>
             <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               Задать вопрос

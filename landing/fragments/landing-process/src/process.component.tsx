@@ -1,20 +1,20 @@
-import React                                          from 'react'
+import React                      from 'react'
 
-import { ArrowLeftIcon }                              from '@ui/icons'
-import { ArrowRightIcon }              from '@ui/icons'
-import { DefaultIcon } from '@ui/icons'
-import { Box }                                        from '@ui/layout'
-import { Column }                                     from '@ui/layout'
-import { Row }                                        from '@ui/layout'
-import { Text }                                       from '@ui/text'
+import { ArrowLeftIcon }          from '@ui/icons'
+import { ArrowRightIcon }         from '@ui/icons'
+import { DefaultIcon }            from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Text }                   from '@ui/text'
 
-import { processList }                                from './process-list/process.list'
-import { technologiesListTop }                        from './technologies-list/technologies.list'
-import { technologiesListBottom }                     from './technologies-list/technologies.list'
+import { processList }            from './process-list/process.list'
+import { technologiesListTop }    from './technologies-list/technologies.list'
+import { technologiesListBottom } from './technologies-list/technologies.list'
 
 export const Process = () => (
-  <Box backgroundColor='#666666' width='1920px' margin='0 auto' flexDirection='column'>
-    <Box width='1760px' margin='160px auto' position='relative' flexDirection='column'>
+  <Box backgroundColor='#666666' width='100%' margin='0 auto' flexDirection='column'>
+    <Box margin='160px auto' position='relative' width='90%' flexDirection='column'>
       {processList.map((process, index) => {
         if (index !== processList.length - 1) {
           return (
@@ -145,8 +145,15 @@ export const Process = () => (
         <Text color='primary' fontSize='atom' lineHeight='extraSmall' marginBottom='24px'>
           ПРОЦЕСС СОЗДАНИЯ
         </Text>
-        <Text color='primary' fontSize='extraLarge' lineHeight='LargeSmall' textAlign='center'>
-          Любой процесс перестаёт быть сложным, когда знаешь как он протекает
+        <Text
+          color='primary'
+          fontSize='extraLarge'
+          lineHeight='LargeSmall'
+          textAlign='center'
+          letter='-1%'
+        >
+          Любой процесс перестаёт быть сложным, <br />
+          когда знаешь как он протекает
         </Text>
       </Column>
       <Column margin='0 auto'>
@@ -154,16 +161,16 @@ export const Process = () => (
           <DefaultIcon width='100%' height='100%' />
         </Box>
         <Row justifyContent='space-around' alignItems='center' marginBottom='160px'>
-          <Box width='10px' height='5px'>
-            <ArrowLeftIcon width='100%' height='100%' fill='#FFFFFF' />
+          <Box padding='29px 15px'>
+            <ArrowLeftIcon width='10px' height='5px' fill='#FFFFFF' />
           </Box>
           <Box padding='19px 0 19px'>
             <Text color='primary' fontSize='small' lineHeight='normalNormal'>
               Формирование системы базовых фрагментов и компонентов
             </Text>
           </Box>
-          <Box width='10px' height='5px'>
-            <ArrowRightIcon width='100%' height='100%' color='primory' fill='#FFFFFF' />
+          <Box padding='29px 15px'>
+            <ArrowRightIcon width='10px' height='5px' fill='#FFFFFF' />
           </Box>
         </Row>
       </Column>

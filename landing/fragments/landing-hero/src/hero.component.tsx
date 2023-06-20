@@ -10,34 +10,43 @@ import { Text }         from '@ui/text'
 import { Space }        from '@ui/text'
 
 export const Hero = () => (
-  <Box backgroundColor='#666666' width='1920px' flexDirection='column' margin='0 auto'>
+  <Box backgroundColor='#666666' width='100%' flexDirection='column' margin='0 auto'>
     <Box
       backgroundColor='#666666'
-      width='1650px'
-      height='498px'
       margin='412px 40px 50px 230px'
       justifyContent='space-between'
       alignItems='end'
     >
-      <Column width='1460px' height='498px'>
-        <Box width='1166px' height='345px'>
+      <Column>
+        <Column flexWrap='wrap'>
           <Text color='primary' fontSize='biggest' fontWeight='normal' lineHeight='biggest'>
-            Обучаем профессионалов для революции в IT
+            Обучаем профессионалов
           </Text>
-        </Box>
-        <Box
-          border='solid 1px white'
-          width='1460px'
-          height='1px'
-          marginTop='48px'
-          marginBottom='48px'
-        />
-        <Box width='640px' height='56px'>
-          <Text color='primary' fontSize='big' fontWeight='normal' lineHeight='normalMedium'>
-            Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать
-            невозможные идеи
+          <Text color='primary' fontSize='biggest' fontWeight='normal' lineHeight='biggest'>
+            для революции в IT
           </Text>
-        </Box>
+        </Column>
+        <Box border='solid 1px white' height='1px' marginTop='48px' marginBottom='48px' />
+        <Column>
+          <Text
+            color='primary'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='normalMedium'
+            flexWrap='wrap'
+          >
+            Мы не учим программированию и дизайну, мы учим мышлению,{' '}
+          </Text>
+          <Text
+            color='primary'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='normalMedium'
+            flexWrap='wrap'
+          >
+            способному реализовывывать невозможные идеи
+          </Text>
+        </Column>
       </Column>
       <Column width='56px' height='200px' justifyContent='space-between' alignItems='center'>
         <TelegramIcon width='18px' height='15px' />
@@ -45,7 +54,7 @@ export const Hero = () => (
         <MailIcon width='18px' height='14px' />
       </Column>
     </Box>
-    <Column width='1460px' height='350px' margin='160px 230px' alignItems='center'>
+    <Column margin='160px 230px' alignItems='center'>
       <Box display='inline'>
         <Text
           color='primary'
