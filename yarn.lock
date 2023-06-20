@@ -2969,6 +2969,7 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@ui/icons": "workspace:^"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/link": "workspace:^"
     "@ui/text": "workspace:^"
   peerDependencies:
     react: "*"

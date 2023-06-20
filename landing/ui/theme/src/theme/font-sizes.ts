@@ -4,6 +4,7 @@ const fontSizes = {
   normal: '18px',
   big: '20px',
   large: '24px',
+  normalLarge: '28px',
   xl: '32px',
   extraLarge: '40px',
   giant: '44px',

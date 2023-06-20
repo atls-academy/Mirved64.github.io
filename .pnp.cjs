@@ -5111,6 +5111,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.4"],\
           ["@ui/icons", "workspace:landing/ui/icons"],\
           ["@ui/layout", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/layout"],\
+          ["@ui/link", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/link"],\
           ["@ui/text", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/text"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", null]\
@@ -5129,6 +5130,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.4"],\
           ["@ui/icons", "workspace:landing/ui/icons"],\
           ["@ui/layout", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/layout"],\
+          ["@ui/link", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/link"],\
           ["@ui/text", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/text"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"]\
@@ -5149,6 +5151,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.4"],\
           ["@ui/icons", "workspace:landing/ui/icons"],\
           ["@ui/layout", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/layout"],\
+          ["@ui/link", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/link"],\
           ["@ui/text", "virtual:8c557b46d3c773b6ee19cd10b95a485f47d0b611b08694049a91ef0dea4af750952a381534f7d815e328a84561fd14a4c2111518228b4ad248d45776ec44cbbe#workspace:landing/ui/text"]\
         ],\
         "linkType": "SOFT"\
