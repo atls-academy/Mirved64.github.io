@@ -19,51 +19,46 @@ export const Hero = () => (
       justifyContent='space-between'
       alignItems={['center', 'end']}
     >
-      <Column marginBottom={['24px', '0px']}>
-        <Column flexWrap='wrap'>
-          <Text
-            color='primary'
-            fontSize={['normalLarge', 'biggest']}
-            fontWeight='normal'
-            lineHeight={['normal', 'biggest']}
-          >
-            Обучаем профессионалов
-          </Text>
-          <Text
-            color='primary'
-            fontSize={['normalLarge', 'biggest']}
-            fontWeight='normal'
-            lineHeight={['normal', 'biggest']}
-          >
-            для революции в IT
-          </Text>
+      <Column marginBottom={['24px', '0px']} flexBasis={['100%', '1460px']}>
+        <Column>
+          <Box flexWrap='wrap' maxWidth={['100%', '800px']}>
+            <Text
+              color='primary'
+              fontSize={['normalLarge', 'biggest']}
+              fontWeight='normal'
+              lineHeight={['normal', 'biggest']}
+            >
+              Обучаем профессионалов
+            </Text>
+          </Box>
+          <Box>
+            <Text
+              color='primary'
+              fontSize={['normalLarge', 'biggest']}
+              fontWeight='normal'
+              lineHeight={['normal', 'biggest']}
+            >
+              для революции в IT
+            </Text>
+          </Box>
         </Column>
         <Box
           border='solid 1px white'
-          height='1px'
           marginTop={['24px', '48px']}
           marginBottom={['24px', '48px']}
         />
-        <Column>
+
+        <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
           <Text
             color='primary'
             fontSize={['atom', 'big']}
             fontWeight='normal'
             lineHeight={['smallMedium', 'normalMedium']}
-            flexWrap='wrap'
           >
-            Мы не учим программированию и дизайну, мы учим мышлению,{' '}
+            Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать
+            невозможные идеи
           </Text>
-          <Text
-            color='primary'
-            fontSize={['atom', 'big']}
-            fontWeight='normal'
-            lineHeight={['smallMedium', 'normalMedium']}
-            flexWrap='wrap'
-          >
-            способному реализовывывать невозможные идеи
-          </Text>
-        </Column>
+        </Box>
       </Column>
       <Box
         flexDirection={['row', 'column']}
@@ -103,10 +98,9 @@ export const Hero = () => (
           снижается
         </Text>
         <Space count='8' />
-        <Box>
+        <Box display='inline'>
           <DefaultIcon width='40px' height='40px' />
         </Box>
-
         <Space count='8' />
         <Text
           color='primary'
@@ -118,11 +112,10 @@ export const Hero = () => (
           Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
         </Text>
         <Space count='8' />
-        <Box>
+        <Box display='inline'>
           <DefaultIcon width='40px' height='40px' />
         </Box>
       </Box>
-
       <Column display={['flex', 'none']}>
         <Text
           color='primary'
@@ -146,7 +139,6 @@ export const Hero = () => (
           дизайнеров
         </Text>
       </Column>
-
       <Box marginTop='40px' display={['none', 'inline']}>
         <Text
           color='primary'
@@ -159,7 +151,7 @@ export const Hero = () => (
           дизайнеров
         </Text>
         <Space count='8' />
-        <Box>
+        <Box display='inline'>
           <DefaultIcon width='40px' height='40px' />
         </Box>
       </Box>
