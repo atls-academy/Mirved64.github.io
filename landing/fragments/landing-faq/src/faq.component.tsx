@@ -31,18 +31,27 @@ export const Faq = () => (
           </NextLink>
         </Box>
       </Row>
-      <Box border='solid 1px black' width='100%' marginTop='80px' display={['none', 'flex']}/>
+      <Box border='solid 1px black' width='100%' marginTop='80px' display={['none', 'flex']} />
       <Column>
         {faqList.map((question) => (
           <Column key={question.id} height='100%'>
-            <Row marginBottom={['16px', '40px']} marginTop={['16px', '40px']} justifyContent={['space-between', 'start']}>
-              <Box marginRight={['0', '27px']} alignItems='center' order={['2', '0']} >
-                <Text color='second' fontSize='small' fontWeight='normal' >
+            <Row
+              marginBottom={['16px', '40px']}
+              marginTop={['16px', '40px']}
+              justifyContent={['space-between', 'start']}
+            >
+              <Box marginRight={['0', '27px']} alignItems='center' order={['2', '0']}>
+                <Text color='second' fontSize='small' fontWeight='normal'>
                   +
                 </Text>
               </Box>
               <Box alignItems='center'>
-                <Text color='second' fontSize={['big', 'xl']} fontWeight='normal' lineHeight={['normalLarge', 'largeSmall']}>
+                <Text
+                  color='second'
+                  fontSize={['big', 'xl']}
+                  fontWeight='normal'
+                  lineHeight={['normalLarge', 'largeSmall']}
+                >
                   {question.question}
                 </Text>
               </Box>
@@ -52,12 +61,12 @@ export const Faq = () => (
         ))}
       </Column>
       <Box display={['flex', 'none']} marginTop='60px'>
-          <NextLink>
-            <Text color='second' fontSize='big' fontWeight='normal' lineHeight='smallMedium'>
-              Задать вопрос
-            </Text>
-          </NextLink>
-        </Box>
+        <NextLink>
+          <Text color='second' fontSize='big' fontWeight='normal' lineHeight='smallMedium'>
+            Задать вопрос
+          </Text>
+        </NextLink>
+      </Box>
     </Column>
   </Box>
 )
