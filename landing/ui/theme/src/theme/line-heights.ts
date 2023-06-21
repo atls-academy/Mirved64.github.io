@@ -1,4 +1,5 @@
 const lineHeights = {
+  atom: '11px',
   extraSmall: '14px',
   small: '18px',
   smallMedium: '20px',
@@ -8,6 +9,7 @@ const lineHeights = {
   normalLarge: '34px',
   normal: '39px',
   largeSmall: '45px',
+  large: '48px',
   largeNormal: '62px',
   largeMedium: '64px',
   largeLarge: '80px',
