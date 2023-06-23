@@ -3,6 +3,7 @@ import React                      from 'react'
 import { ArrowLeftIcon }          from '@ui/icons'
 import { ArrowRightIcon }         from '@ui/icons'
 import { DefaultIcon }            from '@ui/icons'
+import { ImageBlock }             from '@ui/image'
 import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Row }                    from '@ui/layout'
@@ -189,8 +190,13 @@ export const Process = () => (
         </Box>
       </Column>
       <Column margin='0 auto'>
-        <Box width={['335px', '960px']} marginBottom={['18px', '32px']}>
-          <DefaultIcon width={['130px', '100%']} height={['340px', '100%']} />
+        <Box
+          margin='0 auto'
+          width={['138px', '960px']}
+          height={['340px', '540px']}
+          marginBottom={['18px', '32px']}
+        >
+          <ImageBlock src='./image/Default.png' />
         </Box>
         <Row justifyContent='space-between' alignItems='center' marginBottom={['70px', '160px']}>
           <Box padding='29px 15px'>

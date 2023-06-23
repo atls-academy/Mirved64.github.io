@@ -7,8 +7,8 @@ export const ArrowLeftIcon = (props: any) => {
   const theme: any = useTheme()
   return (
     <svg
-      width='10px'
-      height='5px'
+      width='1em'
+      height='1em'
       viewBox='0 0 8 14'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

@@ -1,6 +1,7 @@
 import React           from 'react'
 
 import { DefaultIcon } from '@ui/icons'
+import { ImageBlock }  from '@ui/image'
 import { Box }         from '@ui/layout'
 import { Column }      from '@ui/layout'
 import { Row }         from '@ui/layout'
@@ -160,7 +161,7 @@ export const Courses = () => (
           </Row>
         </Column>
         <Column maxWidth='410px' order={['1', '0']}>
-          <Box margin={['0 16px 16px', '32px auto 74px']} maxWidth={['content', '346px']}>
+          <Box margin={['0 16px 16px', '32px auto 74px']} maxWidth={['none', '346px']}>
             <Text
               color='second'
               fontSize='small'
@@ -176,33 +177,40 @@ export const Courses = () => (
           </Box>
 
           <Box
-            flexDirection={['row', 'column']}
-            margin={['0 auto 76px', '0 0 68px']}
-            maxWidth={['90%', '188px']}
-            alignItems={['center', 'normal']}
+            maxWidth={['100%', '188px']}
+            justifyContent='space-between'
+            margin={['0 16px', '0 0 68px']}
           >
-            <Box marginBottom={['0', '8px']} marginRight={['12px', '0']}>
-              <Text
-                color='second'
-                fontSize={['extraGiant', 'super']}
-                fontWeight='normal'
-                lineHeight='largeMedium'
-              >
-                5
-              </Text>
+            <Box
+              flexDirection={['row', 'column']}
+              marginBottom={['76px', '68px']}
+              maxWidth={['content', '188px']}
+              alignItems={['center', 'normal']}
+              height={['64px', 'content']}
+            >
+              <Box marginBottom={['0', '8px']} marginRight={['12px', '0']}>
+                <Text
+                  color='second'
+                  fontSize={['extraGiant', 'super']}
+                  fontWeight='normal'
+                  lineHeight='largeMedium'
+                >
+                  5
+                </Text>
+              </Box>
+              <Box flexBasis={['131px', 'auto']}>
+                <Text
+                  color='second'
+                  fontSize={['extraAtom', 'atom']}
+                  fontWeight='normal'
+                  lineHeight={['extraSmall', 'normalSmall']}
+                >
+                  студентов обучаются в одной практической группе
+                </Text>
+              </Box>
             </Box>
-            <Box flexBasis={['131px', 'auto']}>
-              <Text
-                color='second'
-                fontSize={['extraAtom', 'atom']}
-                fontWeight='normal'
-                lineHeight={['extraSmall', 'normalSmall']}
-              >
-                студентов обучаются в одной практической группе
-              </Text>
-            </Box>
-            <Box display={['flex', 'none']} flexGrow='1' justifyContent='end'>
-              <DefaultIcon width='64px' height='64px' />
+            <Box display={['flex', 'none']} width='88px' height='64px'>
+              <ImageBlock src='./image/Default.png' />
             </Box>
           </Box>
           <Box display={['none', 'flex']}>
