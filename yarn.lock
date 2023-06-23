@@ -3908,9 +3908,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/icons@workspace: 0.0.1, @ui/icons@workspace:^, @ui/icons@workspace:landing/ui/icons":
+"@ui/icons@workspace: 0.0.1, @ui/icons@workspace:^, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
-  resolution: "@ui/icons@workspace:landing/ui/icons"
+  resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
     "@atls-ui-generators/icons": "npm:^0.0.2"
     "@emotion/react": "npm:^11.11.1"
@@ -3924,9 +3924,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/image@workspace:^, @ui/image@workspace:landing/ui/image":
+"@ui/image@workspace:^, @ui/image@workspace:ui/image":
   version: 0.0.0-use.local
-  resolution: "@ui/image@workspace:landing/ui/image"
+  resolution: "@ui/image@workspace:ui/image"
   dependencies:
     "@atls-ui-parts/image": "npm:^0.0.4"
     "@emotion/react": "npm:^11.11.1"
@@ -3943,9 +3943,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace: 0.0.1, @ui/layout@workspace:^, @ui/layout@workspace:landing/ui/layout":
+"@ui/layout@workspace: 0.0.1, @ui/layout@workspace:^, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
-  resolution: "@ui/layout@workspace:landing/ui/layout"
+  resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
     "@atls-ui-parts/layout": "npm:^0.0.7"
     "@emotion/react": "npm:^11.11.1"
@@ -3963,9 +3963,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/link@workspace: 0.0.1, @ui/link@workspace:^, @ui/link@workspace:landing/ui/link":
+"@ui/link@workspace: 0.0.1, @ui/link@workspace:^, @ui/link@workspace:ui/link":
   version: 0.0.0-use.local
-  resolution: "@ui/link@workspace:landing/ui/link"
+  resolution: "@ui/link@workspace:ui/link"
   dependencies:
     "@atls-ui-parts/link": "npm:^0.0.10"
     "@atls-ui-proto/text": "npm:^0.0.10"
@@ -3986,9 +3986,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/text@workspace: 0.0.1, @ui/text@workspace:^, @ui/text@workspace:landing/ui/text":
+"@ui/text@workspace: 0.0.1, @ui/text@workspace:^, @ui/text@workspace:ui/text":
   version: 0.0.0-use.local
-  resolution: "@ui/text@workspace:landing/ui/text"
+  resolution: "@ui/text@workspace:ui/text"
   dependencies:
     "@atls-ui-parts/text": "npm:^0.0.10"
     "@emotion/react": "npm:^11.11.1"
@@ -4005,9 +4005,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/theme@workspace:^, @ui/theme@workspace:landing/ui/theme":
+"@ui/theme@workspace:^, @ui/theme@workspace:ui/theme":
   version: 0.0.0-use.local
-  resolution: "@ui/theme@workspace:landing/ui/theme"
+  resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
     "@atls-ui-proto/theme": "npm:^0.0.9"
     "@emotion/css": "npm:^11.11.0"
