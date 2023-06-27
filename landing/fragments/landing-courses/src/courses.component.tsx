@@ -9,12 +9,12 @@ import { NextLink }    from '@ui/link'
 import { Text }        from '@ui/text'
 
 export const Courses = () => (
-  <Box backgroundColor='#ffffff' width='100%' margin='0 auto'>
+  <Box backgroundColor='background.courses' width='100%' margin='0 auto'>
     <Column margin={['64px 20px', '160px 80px 240px 230px']}>
       <Row justifyContent='space-between' alignItems='center'>
         <Box flexWrap='wrap' flexGrow='1'>
           <Text
-            color='second'
+            color='text.second'
             fontSize={['extraLarge', 'biggest']}
             fontWeight='normal'
             lineHeight={['large', 'biggest']}
@@ -25,7 +25,7 @@ export const Courses = () => (
         </Box>
         <Box flexWrap='wrap' display={['none', 'flex']}>
           <NextLink>
-            <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+            <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               Все материалы
             </Text>
           </NextLink>
@@ -41,7 +41,7 @@ export const Courses = () => (
       <Box flexDirection={['column', 'row']} justifyContent='space-between' marginBottom='80px'>
         <Box flexWrap='wrap' flexBasis='45%' marginBottom={['20px', '0']}>
           <Text
-            color='second'
+            color='text.second'
             fontSize={['big', 'xl']}
             fontWeight='normal'
             lineHeight={['normalMedium', 'largeSmall']}
@@ -52,7 +52,7 @@ export const Courses = () => (
         </Box>
         <Box flexWrap='wrap' flexBasis='37%'>
           <Text
-            color='second'
+            color='text.second'
             fontSize={['big', 'xl']}
             fontWeight='normal'
             lineHeight={['normalMedium', 'largeSmall']}
@@ -70,7 +70,7 @@ export const Courses = () => (
             maxWidth='694px'
           >
             <Text
-              color='second'
+              color='text.second'
               fontSize={['large', 'extraLarge']}
               fontWeight='normal'
               lineHeight={['normalMedium', 'largeSmall']}
@@ -79,7 +79,7 @@ export const Courses = () => (
               Frontend Engineer
             </Text>
             <Text
-              color='second'
+              color='text.second'
               fontSize='big'
               fontWeight='normal'
               lineHeight='normalMedium'
@@ -90,7 +90,7 @@ export const Courses = () => (
               технологий
             </Text>
             <Text
-              color='second'
+              color='text.second'
               fontSize='atom'
               fontWeight='normal'
               lineHeight='normalSmall'
@@ -102,7 +102,7 @@ export const Courses = () => (
           </Column>
           <Column marginLeft='32px' marginBottom={['36px', '112px']} maxWidth='694px'>
             <Text
-              color='second'
+              color='text.second'
               fontSize={['large', 'extraLarge']}
               fontWeight='normal'
               lineHeight={['normalMedium', 'largeSmall']}
@@ -111,7 +111,7 @@ export const Courses = () => (
               Основы разработки
             </Text>
             <Text
-              color='second'
+              color='text.second'
               fontSize='big'
               fontWeight='normal'
               lineHeight='normalMedium'
@@ -122,7 +122,7 @@ export const Courses = () => (
               технологий
             </Text>
             <Text
-              color='second'
+              color='text.second'
               fontSize='atom'
               fontWeight='normal'
               lineHeight='normalSmall'
@@ -140,7 +140,7 @@ export const Courses = () => (
           >
             <Box margin={['0', '32px']} flexShrink='0' flexBasis={['228px', '490px']}>
               <Text
-                color='second'
+                color='text.second'
                 fontSize={['big', 'extraLarge']}
                 fontWeight='normal'
                 lineHeight={['normalSmall', 'largeSmall']}
@@ -150,7 +150,7 @@ export const Courses = () => (
             </Box>
             <Box margin={['0', '32px']} flexShrink='0' flexBasis={['228px', '496px']}>
               <Text
-                color='second'
+                color='text.second'
                 fontSize={['big', 'extraLarge']}
                 fontWeight='normal'
                 lineHeight={['normalSmall', 'largeSmall']}
@@ -163,7 +163,7 @@ export const Courses = () => (
         <Column maxWidth='410px' order={['1', '0']}>
           <Box margin={['0 16px 16px', '32px auto 74px']} maxWidth={['none', '346px']}>
             <Text
-              color='second'
+              color='text.second'
               fontSize='small'
               fontWeight='normal'
               lineHeight={['small', 'normalNormal']}
@@ -190,7 +190,7 @@ export const Courses = () => (
             >
               <Box marginBottom={['0', '8px']} marginRight={['12px', '0']}>
                 <Text
-                  color='second'
+                  color='text.second'
                   fontSize={['extraGiant', 'super']}
                   fontWeight='normal'
                   lineHeight='largeMedium'
@@ -200,7 +200,7 @@ export const Courses = () => (
               </Box>
               <Box flexBasis={['131px', 'auto']}>
                 <Text
-                  color='second'
+                  color='text.second'
                   fontSize={['extraAtom', 'atom']}
                   fontWeight='normal'
                   lineHeight={['extraSmall', 'normalSmall']}
@@ -214,7 +214,7 @@ export const Courses = () => (
             </Box>
           </Box>
           <Box display={['none', 'flex']}>
-            <Text color='second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+            <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               Процесс поступления
             </Text>
           </Box>
@@ -222,7 +222,7 @@ export const Courses = () => (
       </Box>
       <Box flexWrap='wrap' display={['flex', 'none']}>
         <NextLink>
-          <Text color='second' fontSize='small' fontWeight='normal' lineHeight='small'>
+          <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='small'>
             Все материалы
           </Text>
         </NextLink>

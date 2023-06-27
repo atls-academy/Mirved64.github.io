@@ -11,10 +11,9 @@ import { Text }         from '@ui/text'
 import { Space }        from '@ui/text'
 
 export const Hero = () => (
-  <Box backgroundColor='#666666' width='100%' flexDirection='column' margin='0 auto'>
+  <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Box
       flexDirection={['column', 'row']}
-      backgroundColor='#666666'
       margin={['100px 20px 64px', '412px 40px 50px 230px']}
       justifyContent='space-between'
       alignItems={['center', 'end']}
@@ -23,7 +22,7 @@ export const Hero = () => (
         <Column>
           <Box flexWrap='wrap' maxWidth={['100%', '800px']}>
             <Text
-              color='primary'
+              color='text.primary'
               fontSize={['normalLarge', 'biggest']}
               fontWeight='normal'
               lineHeight={['normal', 'biggest']}
@@ -33,7 +32,7 @@ export const Hero = () => (
           </Box>
           <Box>
             <Text
-              color='primary'
+              color='text.primary'
               fontSize={['normalLarge', 'biggest']}
               fontWeight='normal'
               lineHeight={['normal', 'biggest']}
@@ -50,7 +49,7 @@ export const Hero = () => (
 
         <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
           <Text
-            color='primary'
+            color='text.primary'
             fontSize={['atom', 'big']}
             fontWeight='normal'
             lineHeight={['smallMedium', 'normalMedium']}
@@ -88,7 +87,7 @@ export const Hero = () => (
     <Column margin={['0 20px 64px', '160px 230px']} alignItems='center'>
       <Box display={['none', 'inline']}>
         <Text
-          color='primary'
+          color='text.primary'
           fontSize='giant'
           fontWeight='normal'
           lineHeight='largeNormal'
@@ -103,7 +102,7 @@ export const Hero = () => (
         </Box>
         <Space count='8' />
         <Text
-          color='primary'
+          color='text.primary'
           fontSize='giant'
           fontWeight='normal'
           lineHeight='largeNormal'
@@ -118,7 +117,7 @@ export const Hero = () => (
       </Box>
       <Column display={['flex', 'none']}>
         <Text
-          color='primary'
+          color='text.primary'
           fontSize='big'
           fontWeight='normal'
           lineHeight='normalMedium'
@@ -129,7 +128,7 @@ export const Hero = () => (
           снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало.
         </Text>
         <Text
-          color='primary'
+          color='text.primary'
           fontSize='big'
           fontWeight='normal'
           lineHeight='normalMedium'
@@ -141,7 +140,7 @@ export const Hero = () => (
       </Column>
       <Box marginTop='40px' display={['none', 'inline']}>
         <Text
-          color='primary'
+          color='text.primary'
           fontSize='giant'
           fontWeight='normal'
           lineHeight='largeNormal'

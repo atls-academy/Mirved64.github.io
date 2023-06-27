@@ -1,6 +1,6 @@
 const fonts = {
   primary: 'Helvetica',
-  secong: 'GellaDisplay',
+  second: 'GellaDisplay',
 }
 
 export { fonts }

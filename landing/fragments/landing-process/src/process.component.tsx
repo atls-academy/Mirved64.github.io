@@ -14,7 +14,7 @@ import { technologiesListTop }    from './technologies-list/technologies.list'
 import { technologiesListBottom } from './technologies-list/technologies.list'
 
 export const Process = () => (
-  <Box backgroundColor='#666666' width='100%' margin='0 auto' flexDirection='column'>
+  <Box backgroundColor='background.process' width='100%' margin='0 auto' flexDirection='column'>
     <Box
       margin={['64px auto 56px', '160px auto']}
       position='relative'
@@ -33,7 +33,7 @@ export const Process = () => (
                 <Box>
                   <Box alignItems='center' marginRight={['12px', '32px']}>
                     <Text
-                      color='primary'
+                      color='text.primary'
                       fontSize={['normal', 'large']}
                       fontWeight='normal'
                       lineHeight={['small', 'normalNormal']}
@@ -43,7 +43,7 @@ export const Process = () => (
                   </Box>
                   <Box alignItems='center'>
                     <Text
-                      color='primary'
+                      color='text.primary'
                       fontSize={['large', 'extraLarge']}
                       fontWeight={['normalMedium', 'normal']}
                       lineHeight='largeSmall'
@@ -54,7 +54,7 @@ export const Process = () => (
                 </Box>
                 <Box flexBasis={['100%', '560px']} flexWrap='wrap' paddingLeft={['23px', '0']}>
                   <Text
-                    color='primary'
+                    color='text.primary'
                     fontSize={['atom', 'large']}
                     fontWeight='normal'
                     lineHeight={['smallMedium', 'normalLarge']}
@@ -77,7 +77,7 @@ export const Process = () => (
               <Box>
                 <Box alignItems='center' marginRight={['12px', '32px']}>
                   <Text
-                    color='primary'
+                    color='text.primary'
                     fontSize={['normal', 'large']}
                     fontWeight='normal'
                     lineHeight={['small', 'normalNormal']}
@@ -87,7 +87,7 @@ export const Process = () => (
                 </Box>
                 <Box alignItems='center'>
                   <Text
-                    color='primary'
+                    color='text.primary'
                     fontSize={['large', 'extraLarge']}
                     fontWeight={['normalMedium', 'normal']}
                     lineHeight='largeSmall'
@@ -98,7 +98,7 @@ export const Process = () => (
               </Box>
               <Box flexBasis={['100%', '560px']} flexWrap='wrap' paddingLeft={['23px', '0']}>
                 <Text
-                  color='primary'
+                  color='text.primary'
                   fontSize={['atom', 'large']}
                   fontWeight='normal'
                   lineHeight={['smallMedium', 'normalLarge']}
@@ -131,7 +131,7 @@ export const Process = () => (
         {technologiesListTop.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
-              color='primary'
+              color='text.primary'
               fontSize={['giantMedium', 'extraSuper']}
               fontWeight='lighter'
               lineHeight={['largeSmall', 'largeLarge']}
@@ -146,8 +146,8 @@ export const Process = () => (
         {technologiesListBottom.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
-              color='primary'
-              fontFamily='GellaDisplay'
+              color='text.primary'
+              fontFamily='second'
               fontSize={['giantMedium', 'extraSuper']}
               fontWeight='lighter'
               lineHeight={['largeSmall', 'largeLarge']}
@@ -169,7 +169,7 @@ export const Process = () => (
       >
         <Box>
           <Text
-            color='primary'
+            color='text.primary'
             fontSize={['extraAtom', 'atom']}
             lineHeight={['atom', 'extraSmall']}
             marginBottom='24px'
@@ -179,7 +179,7 @@ export const Process = () => (
         </Box>
         <Box>
           <Text
-            color='primary'
+            color='text.primary'
             fontSize={['large', 'extraLarge']}
             lineHeight={['normalMedium', 'large']}
             textAlign='center'
@@ -203,7 +203,12 @@ export const Process = () => (
             <ArrowLeftIcon width='10px' height='5px' fill='#FFFFFF' />
           </Box>
           <Box padding={['0', '19px 0 19px']} maxWidth={['190px', '780px']}>
-            <Text color='primary' fontSize='small' lineHeight='normalNormal' textAlign='center'>
+            <Text
+              color='text.primary'
+              fontSize='small'
+              lineHeight='normalNormal'
+              textAlign='center'
+            >
               Формирование системы базовых фрагментов и компонентов
             </Text>
           </Box>

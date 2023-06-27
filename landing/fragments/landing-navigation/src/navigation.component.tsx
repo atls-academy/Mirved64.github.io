@@ -8,7 +8,12 @@ import { Text }          from '@ui/text'
 import { navLinkList }   from './navigation-list/navigation.list'
 
 export const Navigation = () => (
-  <Box backgroundColor='#666666' width='100%' height={['80px', '120px']} alignItems='center'>
+  <Box
+    backgroundColor='background.navigation'
+    width='100%'
+    height={['80px', '120px']}
+    alignItems='center'
+  >
     <Box flexGrow='1' paddingLeft={['0', '40px']} justifyContent={['center', 'start']}>
       <NextLink>
         <LogoWhiteIcon width='56px' height='56px' />
@@ -18,7 +23,7 @@ export const Navigation = () => (
       {navLinkList.map((link) => (
         <Box key={link.name} flexGrow='5' justifyContent='center'>
           <NextLink>
-            <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
+            <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
               {link.name}
             </Text>
           </NextLink>
@@ -34,7 +39,7 @@ export const Navigation = () => (
       display={['none', 'flex']}
     >
       <NextLink>
-        <Text color='primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
+        <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
           Курсы
         </Text>
       </NextLink>
