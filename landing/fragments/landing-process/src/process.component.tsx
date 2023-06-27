@@ -5,6 +5,7 @@ import { ArrowRightIcon }         from '@ui/icons'
 import { DefaultIcon }            from '@ui/icons'
 import { ImageBlock }             from '@ui/image'
 import { Box }                    from '@ui/layout'
+import { Layout }                 from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Row }                    from '@ui/layout'
 import { Text }                   from '@ui/text'
@@ -15,23 +16,15 @@ import { technologiesListBottom } from './technologies-list/technologies.list'
 
 export const Process = () => (
   <Box backgroundColor='background.process' width='100%' margin='0 auto' flexDirection='column'>
-    <Box
-      margin={['64px auto 56px', '160px auto']}
-      position='relative'
-      width='90%'
-      flexDirection='column'
-    >
+    <Layout flexBasis={[64, 160]} />
+    <Box margin='0 auto' position='relative' width='92%' flexDirection='column'>
       {processList.map((process, index) => {
         if (index !== processList.length - 1) {
           return (
             <Column key={process.id}>
-              <Box
-                flexDirection={['column', 'row']}
-                justifyContent='space-between'
-                marginBottom='48px'
-              >
-                <Box>
-                  <Box alignItems='center' marginRight={['12px', '32px']}>
+              <Box flexDirection={['column', 'row']} justifyContent='space-between'>
+                <Box flexBasis={['', 560]}>
+                  <Box alignItems='center'>
                     <Text
                       color='text.primary'
                       fontSize={['normal', 'large']}
@@ -41,6 +34,7 @@ export const Process = () => (
                       {process.id}
                     </Text>
                   </Box>
+                  <Layout flexBasis={[1, 32]} />
                   <Box alignItems='center'>
                     <Text
                       color='text.primary'
@@ -52,7 +46,7 @@ export const Process = () => (
                     </Text>
                   </Box>
                 </Box>
-                <Box flexBasis={['100%', '560px']} flexWrap='wrap' paddingLeft={['23px', '0']}>
+                <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
                   <Text
                     color='text.primary'
                     fontSize={['atom', 'large']}
@@ -63,19 +57,17 @@ export const Process = () => (
                   </Text>
                 </Box>
               </Box>
-              <Box border='solid 1px #FFFFFF' marginBottom={['28px', '48px']} />
+              <Layout flexBasis={[28, 48]} />
+              <Box border='solid 1px #FFFFFF' />
+              <Layout flexBasis={[28, 48]} />
             </Column>
           )
         }
         return (
           <Column key={process.id}>
-            <Box
-              flexDirection={['column', 'row']}
-              justifyContent='space-between'
-              marginBottom={['0', '48px']}
-            >
-              <Box>
-                <Box alignItems='center' marginRight={['12px', '32px']}>
+            <Box flexDirection={['column', 'row']} justifyContent='space-between'>
+              <Box flexBasis={['', 560]}>
+                <Box alignItems='center'>
                   <Text
                     color='text.primary'
                     fontSize={['normal', 'large']}
@@ -85,6 +77,7 @@ export const Process = () => (
                     {process.id}
                   </Text>
                 </Box>
+                <Layout flexBasis={[12, 32]} />
                 <Box alignItems='center'>
                   <Text
                     color='text.primary'
@@ -96,7 +89,8 @@ export const Process = () => (
                   </Text>
                 </Box>
               </Box>
-              <Box flexBasis={['100%', '560px']} flexWrap='wrap' paddingLeft={['23px', '0']}>
+              <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
+                <Layout flexBasis={[23, 0]} />
                 <Text
                   color='text.primary'
                   fontSize={['atom', 'large']}
@@ -107,6 +101,7 @@ export const Process = () => (
                 </Text>
               </Box>
             </Box>
+            <Layout flexBasis={[0, 160]} />
           </Column>
         )
       })}
@@ -126,8 +121,10 @@ export const Process = () => (
       </Box>
     </Box>
     <Column>
-      <Box border='solid 1px #FFFFFF' margin={['0 0 36px', '64px 0']} />
-      <Row marginBottom={['36px', '64px']} overflow='hidden'>
+      <Layout flexBasis={[0, 64]} />
+      <Box border='solid 1px #FFFFFF' />
+      <Layout flexBasis={[36, 64]} />
+      <Row overflowX='hidden' width='100%'>
         {technologiesListTop.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
@@ -135,14 +132,18 @@ export const Process = () => (
               fontSize={['giantMedium', 'extraSuper']}
               fontWeight='lighter'
               lineHeight={['largeSmall', 'largeLarge']}
+              whiteSpace='nowrap'
             >
               {technology.technology}
             </Text>
-            <Box width='48px' margin='auto 24px' border='solid 2px #FFFFFF' />
+            <Layout flexBasis={24} />
+            <Box width='48px' margin='auto 0' border='solid 2px #FFFFFF' />
+            <Layout flexBasis={24} />
           </Box>
         ))}
       </Row>
-      <Row marginBottom={['36px', '64px']} overflow='hidden'>
+      <Layout flexBasis={[36, 64]} />
+      <Row overflow='hidden' width='100%'>
         {technologiesListBottom.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
@@ -151,32 +152,33 @@ export const Process = () => (
               fontSize={['giantMedium', 'extraSuper']}
               fontWeight='lighter'
               lineHeight={['largeSmall', 'largeLarge']}
+              whiteSpace='nowrap'
             >
               {technology.technology}
             </Text>
-            <Box width='48px' margin='auto 24px' border='solid 2px #FFFFFF' />
+            <Layout flexBasis={24} />
+            <Box width='48px' margin='auto 0' border='solid 2px #FFFFFF' />
+            <Layout flexBasis={24} />
           </Box>
         ))}
       </Row>
-      <Box border='solid 1px #FFFFFF' marginBottom={['56px', '64px']} />
+      <Layout flexBasis={[36, 64]} />
+      <Box border='solid 1px #FFFFFF' />
+      <Layout flexBasis={[56, 64]} />
     </Column>
     <Column>
-      <Column
-        margin={['0 auto 24px', '160px auto 50px']}
-        alignItems='center'
-        flexWrap='wrap'
-        maxWidth={['90%', '890px']}
-      >
+      <Layout flexBasis={[0, 160]} />
+      <Column margin='0 auto' alignItems='center' flexWrap='wrap' maxWidth={['90%', '890px']}>
         <Box>
           <Text
             color='text.primary'
             fontSize={['extraAtom', 'atom']}
             lineHeight={['atom', 'extraSmall']}
-            marginBottom='24px'
           >
             ПРОЦЕСС СОЗДАНИЯ
           </Text>
         </Box>
+        <Layout flexBasis={24} />
         <Box>
           <Text
             color='text.primary'
@@ -190,15 +192,11 @@ export const Process = () => (
         </Box>
       </Column>
       <Column margin='0 auto'>
-        <Box
-          margin='0 auto'
-          width={['138px', '960px']}
-          height={['340px', '540px']}
-          marginBottom={['18px', '32px']}
-        >
+        <Box margin='0 auto' width={['138px', '960px']} height={['340px', '540px']}>
           <ImageBlock src='./image/Default.png' />
         </Box>
-        <Row justifyContent='space-between' alignItems='center' marginBottom={['70px', '160px']}>
+        <Layout flexBasis={[18, 51]} />
+        <Row justifyContent='space-between' alignItems='center'>
           <Box padding='29px 15px'>
             <ArrowLeftIcon width='10px' height='5px' fill='#FFFFFF' />
           </Box>
@@ -216,6 +214,7 @@ export const Process = () => (
             <ArrowRightIcon width='10px' height='5px' fill='#FFFFFF' />
           </Box>
         </Row>
+        <Layout flexBasis={[70, 160]} />
       </Column>
     </Column>
   </Box>
