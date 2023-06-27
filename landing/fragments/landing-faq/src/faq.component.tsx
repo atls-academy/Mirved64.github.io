@@ -1,6 +1,7 @@
 import React        from 'react'
 
 import { Box }      from '@ui/layout'
+import { Layout }   from '@ui/layout'
 import { Column }   from '@ui/layout'
 import { Row }      from '@ui/layout'
 import { NextLink } from '@ui/link'
@@ -9,8 +10,10 @@ import { Text }     from '@ui/text'
 import { faqList }  from './faq-list/faq.list'
 
 export const Faq = () => (
-  <Box backgroundColor='background.faq' width='100%' margin='0 auto' flexDirection='column'>
-    <Column margin={['80px 16px', '160px 80px 240px 230px']}>
+  <Box backgroundColor='background.faq' width='100%' margin='0 auto'>
+    <Layout flexBasis={[16, 230]} />
+    <Column flexGrow='1'>
+      <Layout flexBasis={[80, 160]} />
       <Row width='100%' justifyContent='space-between' alignItems='center'>
         <Box>
           <Text
@@ -31,20 +34,19 @@ export const Faq = () => (
           </NextLink>
         </Box>
       </Row>
-      <Box border='solid 1px black' width='100%' marginTop='80px' display={['none', 'flex']} />
+      <Layout flexBasis={80} display={['none', 'flex']} />
+      <Box border='solid 1px black' width='100%' display={['none', 'flex']} />
       <Column>
         {faqList.map((question) => (
           <Column key={question.id} height='100%'>
-            <Row
-              marginBottom={['16px', '40px']}
-              marginTop={['16px', '40px']}
-              justifyContent={['space-between', 'start']}
-            >
-              <Box marginRight={['0', '27px']} alignItems='center' order={['2', '0']}>
-                <Text color='text.second' fontSize='small' fontWeight='normal'>
+            <Layout flexBasis={[16, 40]} />
+            <Row justifyContent={['space-between', 'start']}>
+              <Box alignItems='center' order={['2', '0']}>
+                <Text color='text.second' fontSize='xl' fontWeight='normal'>
                   +
                 </Text>
               </Box>
+              <Layout flexBasis={[0, 27]} />
               <Box alignItems='center'>
                 <Text
                   color='text.second'
@@ -56,17 +58,21 @@ export const Faq = () => (
                 </Text>
               </Box>
             </Row>
+            <Layout flexBasis={[16, 40]} />
             <Box border='solid 1px black' />
           </Column>
         ))}
       </Column>
-      <Box display={['flex', 'none']} marginTop='60px'>
+      <Layout flexBasis={60} />
+      <Box display={['flex', 'none']}>
         <NextLink>
           <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='smallMedium'>
             Задать вопрос
           </Text>
         </NextLink>
       </Box>
+      <Layout flexBasis={[80, 160]} />
     </Column>
+    <Layout flexBasis={[16, 80]} />
   </Box>
 )
