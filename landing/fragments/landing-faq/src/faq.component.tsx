@@ -47,7 +47,7 @@ export const Faq = () => (
                 </Text>
               </Box>
               <Layout flexBasis={[0, 27]} />
-              <Box alignItems='center'>
+              <Box alignItems='center' flexGrow={[1, 0]}>
                 <Text
                   color='text.second'
                   fontSize={['big', 'xl']}
