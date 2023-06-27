@@ -5,6 +5,7 @@ import { TelegramIcon } from '@ui/icons'
 import { GitHubIcon }   from '@ui/icons'
 import { MailIcon }     from '@ui/icons'
 import { Box }          from '@ui/layout'
+import { Layout }       from '@ui/layout'
 import { Column }       from '@ui/layout'
 import { NextLink }     from '@ui/link'
 import { Text }         from '@ui/text'
@@ -12,13 +13,10 @@ import { Space }        from '@ui/text'
 
 export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
-    <Box
-      flexDirection={['column', 'row']}
-      margin={['100px 20px 64px', '412px 40px 50px 230px']}
-      justifyContent='space-between'
-      alignItems={['center', 'end']}
-    >
-      <Column marginBottom={['24px', '0px']} flexBasis={['100%', '1460px']}>
+    <Layout flexDirection='column' flexBasis={[100, 412]} />
+    <Box flexDirection={['column', 'row']} alignItems={['center', 'end']}>
+      <Layout flexBasis={[20, 230]} />
+      <Column flexBasis={['100%', '1460px']}>
         <Column>
           <Box flexWrap='wrap' maxWidth={['100%', '800px']}>
             <Text
@@ -41,12 +39,9 @@ export const Hero = () => (
             </Text>
           </Box>
         </Column>
-        <Box
-          border='solid 1px white'
-          marginTop={['24px', '48px']}
-          marginBottom={['24px', '48px']}
-        />
-
+        <Layout flexBasis={[24, 48]} />
+        <Box border='solid 1px white' maxWidth={['100%', 1460]} />
+        <Layout flexBasis={[24, 48]} />
         <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
           <Text
             color='text.primary'
@@ -58,14 +53,16 @@ export const Hero = () => (
             невозможные идеи
           </Text>
         </Box>
+        <Layout flexBasis={[24, 0]} />
       </Column>
       <Box
         flexDirection={['row', 'column']}
         order={['1', '0']}
+        flexGrow={[0, 2]}
         width={['100%', '56px']}
         height={['44px', '200px']}
-        justifyContent={['space-around', 'space-between']}
-        alignItems='center'
+        justifyContent='space-around'
+        alignItems='end'
       >
         <Box width={['15px', '18px']} height={['12px', '15px']}>
           <NextLink>
@@ -83,77 +80,86 @@ export const Hero = () => (
           </NextLink>
         </Box>
       </Box>
+      <Layout flexBasis={[20, 40]} />
     </Box>
-    <Column margin={['0 20px 64px', '160px 230px']} alignItems='center'>
-      <Box display={['none', 'inline']}>
-        <Text
-          color='text.primary'
-          fontSize='giant'
-          fontWeight='normal'
-          lineHeight='largeNormal'
-          display='inline'
-        >
-          Digital становится всё более многолюдным, востребованность по направлениям при этом не
-          снижается
-        </Text>
-        <Space count='8' />
-        <Box display='inline'>
-          <DefaultIcon width='40px' height='40px' />
+    <Layout flexDirection='column' flexBasis={[64, 210]} />
+    <Box>
+      <Layout flexBasis={[20, 230]} />
+      <Column maxWidth={['100%', 1460]}>
+        <Box display={['none', 'inline']}>
+          <Text
+            color='text.primary'
+            fontSize='giant'
+            fontWeight='normal'
+            lineHeight='largeNormal'
+            display='inline'
+          >
+            Digital становится всё более многолюдным, востребованность по направлениям при этом не
+            снижается
+          </Text>
+          <Space count='8' />
+          <Box display='inline'>
+            <DefaultIcon width='40px' height='40px' />
+          </Box>
+          <Space count='8' />
+          <Text
+            color='text.primary'
+            fontSize='giant'
+            fontWeight='normal'
+            lineHeight='largeNormal'
+            display='inline'
+          >
+            Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
+          </Text>
+          <Space count='8' />
+          <Box display='inline'>
+            <DefaultIcon width='40px' height='40px' />
+          </Box>
         </Box>
-        <Space count='8' />
-        <Text
-          color='text.primary'
-          fontSize='giant'
-          fontWeight='normal'
-          lineHeight='largeNormal'
-          display='inline'
-        >
-          Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
-        </Text>
-        <Space count='8' />
-        <Box display='inline'>
-          <DefaultIcon width='40px' height='40px' />
+        <Column display={['flex', 'none']}>
+          <Text
+            color='text.primary'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='normalMedium'
+            display='inline'
+          >
+            Digital становится всё более многолюдным, востребованность по направлениям при этом не
+            снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему
+            мало.
+          </Text>
+          <Layout flexBasis={20} />
+          <Text
+            color='text.primary'
+            fontSize='big'
+            fontWeight='normal'
+            lineHeight='normalMedium'
+            display='inline'
+          >
+            Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
+            дизайнеров
+          </Text>
+        </Column>
+        <Layout flexDirection='column' flexBasis={40} />
+        <Box display={['none', 'inline']}>
+          <Text
+            color='text.primary'
+            fontSize='giant'
+            fontWeight='normal'
+            lineHeight='largeNormal'
+            display='inline'
+          >
+            Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
+            дизайнеров
+          </Text>
+          <Space count='8' />
+          <Box display='inline'>
+            <DefaultIcon width='40px' height='40px' />
+          </Box>
         </Box>
-      </Box>
-      <Column display={['flex', 'none']}>
-        <Text
-          color='text.primary'
-          fontSize='big'
-          fontWeight='normal'
-          lineHeight='normalMedium'
-          display='inline'
-          marginBottom='20px'
-        >
-          Digital становится всё более многолюдным, востребованность по направлениям при этом не
-          снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало.
-        </Text>
-        <Text
-          color='text.primary'
-          fontSize='big'
-          fontWeight='normal'
-          lineHeight='normalMedium'
-          display='inline'
-        >
-          Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
-          дизайнеров
-        </Text>
+        <Layout flexBasis={[64, 160]} />
       </Column>
-      <Box marginTop='40px' display={['none', 'inline']}>
-        <Text
-          color='text.primary'
-          fontSize='giant'
-          fontWeight='normal'
-          lineHeight='largeNormal'
-          display='inline'
-        >
-          Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
-          дизайнеров
-        </Text>
-        <Space count='8' />
-        <Box display='inline'>
-          <DefaultIcon width='40px' height='40px' />
-        </Box>
-      </Box>
-    </Column>
+      <Layout flexBasis={[20, 230]} />
+    </Box>
   </Box>
 )
