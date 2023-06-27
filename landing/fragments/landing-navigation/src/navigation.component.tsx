@@ -2,6 +2,7 @@ import React             from 'react'
 
 import { LogoWhiteIcon } from '@ui/icons'
 import { Box }           from '@ui/layout'
+import { Layout }        from '@ui/layout'
 import { NextLink }      from '@ui/link'
 import { Text }          from '@ui/text'
 
@@ -14,12 +15,13 @@ export const Navigation = () => (
     height={['80px', '120px']}
     alignItems='center'
   >
-    <Box flexGrow='1' paddingLeft={['0', '40px']} justifyContent={['center', 'start']}>
+    <Layout flexBasis={[0, 40]} />
+    <Box flexGrow='1' justifyContent={['center', 'start']}>
       <NextLink>
         <LogoWhiteIcon width='56px' height='56px' />
       </NextLink>
     </Box>
-    <Box height='18px' flexGrow='1' display={['none', 'flex']}>
+    <Box height='18px' flexGrow='2' display={['none', 'flex']}>
       {navLinkList.map((link) => (
         <Box key={link.name} flexGrow='5' justifyContent='center'>
           <NextLink>
@@ -30,19 +32,13 @@ export const Navigation = () => (
         </Box>
       ))}
     </Box>
-    <Box
-      width='54px'
-      height='18px'
-      flexGrow='1'
-      justifyContent='end'
-      paddingRight='40px'
-      display={['none', 'flex']}
-    >
+    <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
           Курсы
         </Text>
       </NextLink>
     </Box>
+    <Layout flexBasis={[0, 40]} />
   </Box>
 )
