@@ -13,12 +13,12 @@ import { Space }        from '@ui/text'
 
 export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
-    <Layout flexDirection='column' flexBasis={[100, 412]} />
+    <Layout flexDirection='column' flexBasis={[80, 412]} />
     <Box flexDirection={['column', 'row']} alignItems={['center', 'end']}>
       <Layout flexBasis={[20, 230]} />
-      <Column flexBasis={['100%', '1460px']}>
+      <Column flexBasis={['content', 1460]} maxWidth={['90%', '100%']}>
         <Column>
-          <Box flexWrap='wrap' maxWidth={['100%', '800px']}>
+          <Box flexWrap='wrap' maxWidth={['90%', '800px']}>
             <Text
               color='text.primary'
               fontSize={['normalLarge', 'biggest']}
@@ -53,16 +53,15 @@ export const Hero = () => (
             невозможные идеи
           </Text>
         </Box>
-        <Layout flexBasis={[24, 0]} />
       </Column>
       <Box
         flexDirection={['row', 'column']}
         order={['1', '0']}
         flexGrow={[0, 2]}
-        width={['100%', '56px']}
+        width={['90%', '56px']}
         height={['44px', '200px']}
         justifyContent='space-around'
-        alignItems='end'
+        alignItems={['center', 'end']}
       >
         <Box width={['15px', '18px']} height={['12px', '15px']}>
           <NextLink>
@@ -82,10 +81,10 @@ export const Hero = () => (
       </Box>
       <Layout flexBasis={[20, 40]} />
     </Box>
-    <Layout flexDirection='column' flexBasis={[64, 210]} />
+    <Layout flexDirection='column' flexBasis={[84, 210]} />
     <Box>
       <Layout flexBasis={[20, 230]} />
-      <Column maxWidth={['100%', 1460]}>
+      <Column maxWidth={['90%', 1460]}>
         <Box display={['none', 'inline']}>
           <Text
             color='text.primary'
@@ -136,7 +135,7 @@ export const Hero = () => (
             lineHeight='normalMedium'
             display='inline'
           >
-            Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
+            Atlantis Academy формирует инженеров и архитекторов, а не программистов и
             дизайнеров
           </Text>
         </Column>
