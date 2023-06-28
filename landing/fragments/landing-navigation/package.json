@@ -6,7 +6,8 @@
     "@ui/icons": "workspace:^",
     "@ui/layout": "workspace: 0.0.1",
     "@ui/link": "workspace: 0.0.1",
-    "@ui/text": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1",
+    "react-intl": "^6.4.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",

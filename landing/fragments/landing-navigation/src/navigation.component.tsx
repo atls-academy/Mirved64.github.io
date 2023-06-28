@@ -1,14 +1,17 @@
-import React             from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { LogoWhiteIcon } from '@ui/icons'
-import { Box }           from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { NextLink }      from '@ui/link'
-import { Text }          from '@ui/text'
+import { LogoWhiteIcon }    from '@ui/icons'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
 
-import { navLinkList }   from './navigation-list/navigation.list'
+import { navLinkList }      from './navigation-list/navigation.list'
+// import { IntlProvider }     from 'react-intl'
 
 export const Navigation = () => (
+  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box
     backgroundColor='background.navigation'
     width='100%'
@@ -31,7 +34,7 @@ export const Navigation = () => (
         <Box key={link.name} flexGrow='5' justifyContent='center'>
           <NextLink>
             <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
-              {link.name}
+              <FormattedMessage id='#' defaultMessage={link.name} />
             </Text>
           </NextLink>
         </Box>
@@ -40,10 +43,11 @@ export const Navigation = () => (
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
-          Курсы
+          <FormattedMessage id='#' defaultMessage='Курсы' />
         </Text>
       </NextLink>
     </Box>
     <Layout flexBasis={[0, 40]} />
   </Box>
+  // </IntlProvider>
 )

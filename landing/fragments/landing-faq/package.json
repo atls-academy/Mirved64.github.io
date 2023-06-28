@@ -5,7 +5,8 @@
   "dependencies": {
     "@ui/layout": "workspace:^",
     "@ui/link": "workspace:^",
-    "@ui/text": "workspace:^"
+    "@ui/text": "workspace:^",
+    "react-intl": "^6.4.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",

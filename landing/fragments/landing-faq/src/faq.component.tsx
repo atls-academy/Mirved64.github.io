@@ -1,15 +1,18 @@
-import React        from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { Box }      from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Column }   from '@ui/layout'
-import { Row }      from '@ui/layout'
-import { NextLink } from '@ui/link'
-import { Text }     from '@ui/text'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
 
-import { faqList }  from './faq-list/faq.list'
+import { faqList }          from './faq-list/faq.list'
+// import { IntlProvider }     from 'react-intl'
 
 export const Faq = () => (
+  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.faq' width='100%' margin='0 auto'>
     <Layout flexBasis={[16, 230]} />
     <Column flexGrow='1'>
@@ -23,19 +26,24 @@ export const Faq = () => (
             lineHeight={['largeSmall', 'biggest']}
             letter='-2%'
           >
-            Вопросы и ответы
+            <FormattedMessage id='#' defaultMessage='Вопросы и ответы' />
           </Text>
         </Box>
         <Box display={['none', 'flex']}>
           <NextLink>
             <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
-              Задать вопрос
+              <FormattedMessage id='#' defaultMessage='Задать вопрос' />
             </Text>
           </NextLink>
         </Box>
       </Row>
       <Layout flexBasis={80} display={['none', 'flex']} />
-      <Box border='solid 1px' borderColor='divider.second' width='100%' display={['none', 'flex']} />
+      <Box
+        border='solid 1px'
+        borderColor='divider.second'
+        width='100%'
+        display={['none', 'flex']}
+      />
       <Column>
         {faqList.map((question) => (
           <Column key={question.id} height='100%'>
@@ -43,7 +51,7 @@ export const Faq = () => (
             <Row justifyContent={['space-between', 'start']}>
               <Box alignItems='center' order={['2', '0']}>
                 <Text color='text.second' fontSize='xl' fontWeight='normal'>
-                  +
+                  <FormattedMessage id='#' defaultMessage='+' />
                 </Text>
               </Box>
               <Layout flexBasis={[0, 27]} />
@@ -54,12 +62,12 @@ export const Faq = () => (
                   fontWeight='normal'
                   lineHeight={['normalLarge', 'largeSmall']}
                 >
-                  {question.question}
+                  <FormattedMessage id='#' defaultMessage={question.question} />
                 </Text>
               </Box>
             </Row>
             <Layout flexBasis={[16, 40]} />
-            <Box border='solid 1px' borderColor='divider.second'/>
+            <Box border='solid 1px' borderColor='divider.second' />
           </Column>
         ))}
       </Column>
@@ -67,7 +75,7 @@ export const Faq = () => (
       <Box display={['flex', 'none']}>
         <NextLink>
           <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='smallMedium'>
-            Задать вопрос
+            <FormattedMessage id='#' defaultMessage='Задать вопрос' />
           </Text>
         </NextLink>
       </Box>
@@ -75,4 +83,5 @@ export const Faq = () => (
     </Column>
     <Layout flexBasis={[16, 80]} />
   </Box>
+  // </IntlProvider>
 )

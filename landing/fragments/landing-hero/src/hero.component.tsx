@@ -1,17 +1,20 @@
-import React            from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { DefaultIcon }  from '@ui/icons'
-import { TelegramIcon } from '@ui/icons'
-import { GitHubIcon }   from '@ui/icons'
-import { MailIcon }     from '@ui/icons'
-import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { NextLink }     from '@ui/link'
-import { Text }         from '@ui/text'
-import { Space }        from '@ui/text'
+import { DefaultIcon }      from '@ui/icons'
+import { TelegramIcon }     from '@ui/icons'
+import { GitHubIcon }       from '@ui/icons'
+import { MailIcon }         from '@ui/icons'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
+import { Space }            from '@ui/text'
+// import { IntlProvider }     from 'react-intl'
 
 export const Hero = () => (
+  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[80, 412]} />
     <Box flexDirection={['column', 'row']} alignItems={['center', 'end']}>
@@ -25,7 +28,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['normal', 'biggest']}
             >
-              Обучаем профессионалов
+              <FormattedMessage id='#' defaultMessage='Обучаем профессионалов' />
             </Text>
           </Box>
           <Box>
@@ -35,7 +38,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['normal', 'biggest']}
             >
-              для революции в IT
+              <FormattedMessage id='#' defaultMessage='для революции в IT' />
             </Text>
           </Box>
         </Column>
@@ -49,8 +52,11 @@ export const Hero = () => (
             fontWeight='normal'
             lineHeight={['smallMedium', 'normalMedium']}
           >
-            Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать
-            невозможные идеи
+            <FormattedMessage
+              id='#'
+              defaultMessage='Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать
+            невозможные идеи'
+            />
           </Text>
         </Box>
       </Column>
@@ -93,8 +99,11 @@ export const Hero = () => (
             lineHeight='largeNormal'
             display='inline'
           >
-            Digital становится всё более многолюдным, востребованность по направлениям при этом не
-            снижается
+            <FormattedMessage
+              id='#'
+              defaultMessage='Digital становится всё более многолюдным, востребованность по направлениям при этом не
+            снижается'
+            />
           </Text>
           <Space count='8' />
           <Box display='inline'>
@@ -108,7 +117,10 @@ export const Hero = () => (
             lineHeight='largeNormal'
             display='inline'
           >
-            Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало
+            <FormattedMessage
+              id='#'
+              defaultMessage='Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало'
+            />
           </Text>
           <Space count='8' />
           <Box display='inline'>
@@ -123,9 +135,12 @@ export const Hero = () => (
             lineHeight='normalMedium'
             display='inline'
           >
-            Digital становится всё более многолюдным, востребованность по направлениям при этом не
+            <FormattedMessage
+              id='#'
+              defaultMessage='Digital становится всё более многолюдным, востребованность по направлениям при этом не
             снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему
-            мало.
+            мало.'
+            />
           </Text>
           <Layout flexBasis={20} />
           <Text
@@ -135,7 +150,10 @@ export const Hero = () => (
             lineHeight='normalMedium'
             display='inline'
           >
-            Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров
+            <FormattedMessage
+              id='#'
+              defaultMessage='Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров'
+            />
           </Text>
         </Column>
         <Layout flexDirection='column' flexBasis={40} />
@@ -147,8 +165,11 @@ export const Hero = () => (
             lineHeight='largeNormal'
             display='inline'
           >
-            Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
-            дизайнеров
+            <FormattedMessage
+              id='#'
+              defaultMessage='Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
+            дизайнеров'
+            />
           </Text>
           <Space count='8' />
           <Box display='inline'>
@@ -159,4 +180,5 @@ export const Hero = () => (
     </Box>
     <Layout flexBasis={[64, 160]} />
   </Box>
+  // </IntlProvider>
 )

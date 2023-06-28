@@ -1,15 +1,18 @@
-import React           from 'react'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { DefaultIcon } from '@ui/icons'
-import { ImageBlock }  from '@ui/image'
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { NextLink }    from '@ui/link'
-import { Text }        from '@ui/text'
+import { DefaultIcon }      from '@ui/icons'
+import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
+// import { IntlProvider }     from 'react-intl'
 
 export const Courses = () => (
+  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.courses' width='100%' margin='0 auto'>
     <Layout flexBasis={[0, 230]} />
     <Column flexBasis={[335, 1610]} margin={['0 auto', '0']}>
@@ -23,13 +26,13 @@ export const Courses = () => (
             lineHeight={['large', 'biggest']}
             letter='-2%'
           >
-            Курсы и материалы
+            <FormattedMessage id='#' defaultMessage='Курсы и материалы' />
           </Text>
         </Box>
         <Box flexWrap='wrap' display={['none', 'flex']}>
           <NextLink>
             <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
-              Все материалы
+              <FormattedMessage id='#' defaultMessage='Все материалы' />
             </Text>
           </NextLink>
         </Box>
@@ -45,8 +48,11 @@ export const Courses = () => (
             fontWeight='normal'
             lineHeight={['normalMedium', 'largeSmall']}
           >
-            Являясь серым кардиналом, Atlantis имеет влияние на сферу IT и неограниченные
-            возможности в применении навыков.
+            <FormattedMessage
+              id='#'
+              defaultMessage='Являясь серым кардиналом, Atlantis имеет влияние на сферу IT и неограниченные
+            возможности в применении навыков.'
+            />
           </Text>
         </Box>
         <Layout display={['flex', 'none']} flexDirection='column' flexBasis={20} />
@@ -57,7 +63,10 @@ export const Courses = () => (
             fontWeight='normal'
             lineHeight={['normalMedium', 'largeSmall']}
           >
-            Эффективность обучения заметно вырастает благодаря практики на существующих проектах.
+            <FormattedMessage
+              id='#'
+              defaultMessage='Эффективность обучения заметно вырастает благодаря практики на существующих проектах.'
+            />
           </Text>
         </Box>
       </Box>
@@ -77,7 +86,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['normalMedium', 'largeSmall']}
                   >
-                    Frontend Engineer
+                    <FormattedMessage id='#' defaultMessage='Frontend Engineer' />
                   </Text>
                 </Box>
                 <Layout flexBasis={[12, 16]} />
@@ -88,9 +97,12 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='normalMedium'
                   >
-                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
+                    <FormattedMessage
+                      id='#'
+                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
                     программирования. Получите востребованную профессию и возможность открыть бизнес
-                    в сфере информационных технологий
+                    в сфере информационных технологий'
+                    />
                   </Text>
                 </Box>
                 <Layout flexBasis={120} display={['none', 'flex']} />
@@ -101,8 +113,11 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='normalSmall'
                   >
-                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
-                    Получите востребованную профессию и возможность открыть бизнес.
+                    <FormattedMessage
+                      id='#'
+                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
+                    Получите востребованную профессию и возможность открыть бизнес.'
+                    />
                   </Text>
                 </Box>
                 <Layout flexBasis={52} display={['flex', 'none']} />
@@ -115,7 +130,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['normalMedium', 'largeSmall']}
                   >
-                    Основы разработки
+                    <FormattedMessage id='#' defaultMessage='Основы разработки' />
                   </Text>
                 </Box>
                 <Layout flexBasis={[12, 16]} />
@@ -126,9 +141,12 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='normalMedium'
                   >
-                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
+                    <FormattedMessage
+                      id='#'
+                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
                     программирования. Получите востребованную профессию и возможность открыть бизнес
-                    в сфере информационных технологий
+                    в сфере информационных технологий'
+                    />
                   </Text>
                 </Box>
                 <Box display={['flex', 'none']}>
@@ -138,8 +156,11 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='normalSmall'
                   >
-                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
-                    Получите востребованную профессию и возможность открыть бизнес.
+                    <FormattedMessage
+                      id='#'
+                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
+                    Получите востребованную профессию и возможность открыть бизнес.'
+                    />
                   </Text>
                 </Box>
                 <Layout flexBasis={[36, 112]} />
@@ -153,7 +174,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['normalSmall', 'largeSmall']}
                   >
-                    Как использовать библиотеки
+                    <FormattedMessage id='#' defaultMessage='Как использовать библиотеки' />
                   </Text>
                 </Box>
                 <Box flexShrink='0' flexBasis={[200, 496]}>
@@ -163,7 +184,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['normalSmall', 'largeSmall']}
                   >
-                    Дизайн, Figma, Математика
+                    <FormattedMessage id='#' defaultMessage='Дизайн, Figma, Математика' />
                   </Text>
                 </Box>
               </Row>
@@ -171,10 +192,7 @@ export const Courses = () => (
           </Box>
           <Layout flexBasis={[52, 0]} />
         </Column>
-        <Box
-          flexBasis={['content', 410]}
-
-        >
+        <Box flexBasis={['content', 410]}>
           <Column flexBasis={[303, 346]} order={['1', '0']} margin='0 auto'>
             <Layout flexBasis={[0, 32]} />
             <Box maxWidth={['none', '346px']}>
@@ -184,8 +202,11 @@ export const Courses = () => (
                 fontWeight='normal'
                 lineHeight={['small', 'normalNormal']}
               >
-                Вы изучите фундаментальные знания в IT и прокачаете нужные для сферы навыки. Мы не
-                собираем большие группы, что позволяет курировать работу каждого студента.
+                <FormattedMessage
+                  id='#'
+                  defaultMessage='Вы изучите фундаментальные знания в IT и прокачаете нужные для сферы навыки. Мы не
+                собираем большие группы, что позволяет курировать работу каждого студента.'
+                />
               </Text>
             </Box>
             <Layout flexBasis={[0, 74]} />
@@ -207,7 +228,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='largeMedium'
                   >
-                    5
+                    <FormattedMessage id='#' defaultMessage='5' />
                   </Text>
                 </Box>
                 <Layout display={['flex', 'none']} flexBasis={12} />
@@ -219,7 +240,10 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['extraSmall', 'normalSmall']}
                   >
-                    студентов обучаются в одной практической группе
+                    <FormattedMessage
+                      id='#'
+                      defaultMessage='студентов обучаются в одной практической группе'
+                    />
                   </Text>
                 </Box>
               </Box>
@@ -230,7 +254,7 @@ export const Courses = () => (
             <Layout flexBasis={[56, 68]} />
             <Box display={['none', 'flex']}>
               <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
-                Процесс поступления
+                <FormattedMessage id='#' defaultMessage='Процесс поступления' />
               </Text>
             </Box>
           </Column>
@@ -239,7 +263,7 @@ export const Courses = () => (
       <Box flexWrap='wrap' display={['flex', 'none']}>
         <NextLink>
           <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='small'>
-            Все материалы
+            <FormattedMessage id='#' defaultMessage='Все материалы' />
           </Text>
         </NextLink>
       </Box>
@@ -247,4 +271,5 @@ export const Courses = () => (
     </Column>
     <Layout flexBasis={[0, 80]} />
   </Box>
+  // </IntlProvider>
 )

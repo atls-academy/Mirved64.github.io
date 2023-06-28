@@ -14,14 +14,15 @@
   "dependencies": {
     "next": "^13.4.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.4.4"
   },
   "devDependencies": {
     "@landing/index-page": "workspace:0.0.1",
     "@types/node": "18",
     "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
-    "@ui/theme": "workspace:^",
+    "@ui/theme": "workspace:0.0.1",
     "typescript": "4.6.2"
   }
 }
