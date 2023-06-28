@@ -22,19 +22,23 @@ export const Process = () => (
         if (index !== processList.length - 1) {
           return (
             <Column key={process.id}>
-              <Box flexDirection={['column', 'row']} justifyContent='space-between'>
-                <Box flexBasis={['', 560]}>
-                  <Box alignItems='center'>
-                    <Text
-                      color='text.primary'
-                      fontSize={['normal', 'large']}
-                      fontWeight='normal'
-                      lineHeight={['small', 'normalNormal']}
-                    >
-                      {process.id}
-                    </Text>
-                  </Box>
-                  <Layout flexBasis={[1, 32]} />
+              <Box flexBasis={['content', 'content']}>
+                <Box alignItems={['start', 'center']}>
+                  <Text
+                    color='text.primary'
+                    fontSize={['normal', 'large']}
+                    fontWeight='normal'
+                    lineHeight={['small', 'normalNormal']}
+                  >
+                    {process.id}
+                  </Text>
+                </Box>
+                <Layout flexBasis={[12, 32]} />
+                <Box
+                  flexDirection={['column', 'row']}
+                  justifyContent={['start', 'space-between']}
+                  flexBasis={['content', 1760]}
+                >
                   <Box alignItems='center'>
                     <Text
                       color='text.primary'
@@ -45,6 +49,52 @@ export const Process = () => (
                       {process.process}
                     </Text>
                   </Box>
+                  <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
+                    <Text
+                      color='text.primary'
+                      fontSize={['atom', 'large']}
+                      fontWeight='normal'
+                      lineHeight={['smallMedium', 'normalLarge']}
+                    >
+                      {process.text}
+                    </Text>
+                  </Box>
+                </Box>
+              </Box>
+              <Layout flexBasis={[28, 48]} />
+              <Box border='solid 1px #FFFFFF' />
+              <Layout flexBasis={[28, 48]} />
+            </Column>
+          )
+        }
+        return (
+          <Column key={process.id}>
+            <Box flexBasis={['content', 'content']}>
+              <Box alignItems={['start', 'center']}>
+                <Text
+                  color='text.primary'
+                  fontSize={['normal', 'large']}
+                  fontWeight='normal'
+                  lineHeight={['small', 'normalNormal']}
+                >
+                  {process.id}
+                </Text>
+              </Box>
+              <Layout flexBasis={[12, 32]} />
+              <Box
+                flexDirection={['column', 'row']}
+                justifyContent={['start', 'space-between']}
+                flexBasis={['content', 1760]}
+              >
+                <Box alignItems='center'>
+                  <Text
+                    color='text.primary'
+                    fontSize={['large', 'extraLarge']}
+                    fontWeight={['normalMedium', 'normal']}
+                    lineHeight='largeSmall'
+                  >
+                    {process.process}
+                  </Text>
                 </Box>
                 <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
                   <Text
@@ -57,51 +107,8 @@ export const Process = () => (
                   </Text>
                 </Box>
               </Box>
-              <Layout flexBasis={[28, 48]} />
-              <Box border='solid 1px #FFFFFF' />
-              <Layout flexBasis={[28, 48]} />
-            </Column>
-          )
-        }
-        return (
-          <Column key={process.id}>
-            <Box flexDirection={['column', 'row']} justifyContent='space-between'>
-              <Box flexBasis={['', 560]}>
-                <Box alignItems='center'>
-                  <Text
-                    color='text.primary'
-                    fontSize={['normal', 'large']}
-                    fontWeight='normal'
-                    lineHeight={['small', 'normalNormal']}
-                  >
-                    {process.id}
-                  </Text>
-                </Box>
-                <Layout flexBasis={[12, 32]} />
-                <Box alignItems='center'>
-                  <Text
-                    color='text.primary'
-                    fontSize={['large', 'extraLarge']}
-                    fontWeight={['normalMedium', 'normal']}
-                    lineHeight='largeSmall'
-                  >
-                    {process.process}
-                  </Text>
-                </Box>
-              </Box>
-              <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
-                <Layout flexBasis={[23, 0]} />
-                <Text
-                  color='text.primary'
-                  fontSize={['atom', 'large']}
-                  fontWeight='normal'
-                  lineHeight={['smallMedium', 'normalLarge']}
-                >
-                  {process.text}
-                </Text>
-              </Box>
             </Box>
-            <Layout flexBasis={[0, 160]} />
+            <Layout flexBasis={[24, 160]} />
           </Column>
         )
       })}
@@ -121,10 +128,10 @@ export const Process = () => (
       </Box>
     </Box>
     <Column>
-      <Layout flexBasis={[0, 64]} />
+      <Layout flexBasis={[32, 64]} />
       <Box border='solid 1px #FFFFFF' />
       <Layout flexBasis={[36, 64]} />
-      <Row overflowX='hidden' width='100%'>
+      <Row overflow='hidden' width='100%'>
         {technologiesListTop.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
