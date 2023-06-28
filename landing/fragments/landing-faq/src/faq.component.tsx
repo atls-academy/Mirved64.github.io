@@ -35,7 +35,7 @@ export const Faq = () => (
         </Box>
       </Row>
       <Layout flexBasis={80} display={['none', 'flex']} />
-      <Box border='solid 1px black' width='100%' display={['none', 'flex']} />
+      <Box border='solid 1px' borderColor='divider.second' width='100%' display={['none', 'flex']} />
       <Column>
         {faqList.map((question) => (
           <Column key={question.id} height='100%'>
@@ -59,7 +59,7 @@ export const Faq = () => (
               </Box>
             </Row>
             <Layout flexBasis={[16, 40]} />
-            <Box border='solid 1px black' />
+            <Box border='solid 1px' borderColor='divider.second'/>
           </Column>
         ))}
       </Column>

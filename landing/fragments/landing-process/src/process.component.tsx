@@ -62,7 +62,7 @@ export const Process = () => (
                 </Box>
               </Box>
               <Layout flexBasis={[28, 48]} />
-              <Box border='solid 1px #FFFFFF' />
+              <Box border='solid 1px' borderColor='divider.primary' />
               <Layout flexBasis={[28, 48]} />
             </Column>
           )
@@ -129,7 +129,7 @@ export const Process = () => (
     </Box>
     <Column>
       <Layout flexBasis={[32, 64]} />
-      <Box border='solid 1px #FFFFFF' />
+      <Box border='solid 1px' borderColor='divider.primary'/>
       <Layout flexBasis={[36, 64]} />
       <Row overflow='hidden' width='100%'>
         {technologiesListTop.map((technology) => (
@@ -144,7 +144,7 @@ export const Process = () => (
               {technology.technology}
             </Text>
             <Layout flexBasis={24} />
-            <Box width='48px' margin='auto 0' border='solid 2px #FFFFFF' />
+            <Box width='48px' margin='auto 0' border='solid 2px' borderColor='divider.primary'/>
             <Layout flexBasis={24} />
           </Box>
         ))}
@@ -164,13 +164,13 @@ export const Process = () => (
               {technology.technology}
             </Text>
             <Layout flexBasis={24} />
-            <Box width='48px' margin='auto 0' border='solid 2px #FFFFFF' />
+            <Box width='48px' margin='auto 0' border='solid 2px' borderColor='divider.primary' />
             <Layout flexBasis={24} />
           </Box>
         ))}
       </Row>
       <Layout flexBasis={[36, 64]} />
-      <Box border='solid 1px #FFFFFF' />
+      <Box border='solid 1px' borderColor='divider.primary' />
       <Layout flexBasis={[56, 64]} />
     </Column>
     <Column>

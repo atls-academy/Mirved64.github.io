@@ -40,7 +40,7 @@ export const Hero = () => (
           </Box>
         </Column>
         <Layout flexBasis={[24, 48]} />
-        <Box border='solid 1px white' maxWidth={['100%', 1460]} />
+        <Box border='solid 1px' borderColor='divider.primary' maxWidth={['100%', 1460]} />
         <Layout flexBasis={[24, 48]} />
         <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
           <Text

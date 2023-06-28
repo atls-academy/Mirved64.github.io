@@ -35,7 +35,7 @@ export const Courses = () => (
         </Box>
       </Row>
       <Layout flexBasis={[40, 80]} />
-      <Box border='solid 1px black' width='100%' />
+      <Box border='solid 1px' borderColor='divider.second' width='100%' />
       <Layout flexBasis={[40, 80]} />
       <Box flexDirection={['column', 'row']} justifyContent='space-between'>
         <Box flexWrap='wrap' flexBasis={['content', 725]}>
@@ -173,7 +173,7 @@ export const Courses = () => (
         </Column>
         <Box
           flexBasis={['content', 410]}
-          // margin={['0', '0 auto']}
+
         >
           <Column flexBasis={[303, 346]} order={['1', '0']} margin='0 auto'>
             <Layout flexBasis={[0, 32]} />
