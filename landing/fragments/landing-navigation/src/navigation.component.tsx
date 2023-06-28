@@ -8,10 +8,8 @@ import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
 import { navLinkList }      from './navigation-list/navigation.list'
-// import { IntlProvider }     from 'react-intl'
 
 export const Navigation = () => (
-  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box
     backgroundColor='background.navigation'
     width='100%'
@@ -49,5 +47,4 @@ export const Navigation = () => (
     </Box>
     <Layout flexBasis={[0, 40]} />
   </Box>
-  // </IntlProvider>
 )

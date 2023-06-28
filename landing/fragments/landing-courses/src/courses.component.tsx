@@ -9,10 +9,8 @@ import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
-// import { IntlProvider }     from 'react-intl'
 
 export const Courses = () => (
-  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.courses' width='100%' margin='0 auto'>
     <Layout flexBasis={[0, 230]} />
     <Column flexBasis={[335, 1610]} margin={['0 auto', '0']}>
@@ -271,5 +269,4 @@ export const Courses = () => (
     </Column>
     <Layout flexBasis={[0, 80]} />
   </Box>
-  // </IntlProvider>
 )

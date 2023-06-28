@@ -14,10 +14,8 @@ import { Text }                   from '@ui/text'
 import { processList }            from './process-list/process.list'
 import { technologiesListTop }    from './technologies-list/technologies.list'
 import { technologiesListBottom } from './technologies-list/technologies.list'
-// import { IntlProvider }           from 'react-intl'
 
 export const Process = () => (
-  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.process' width='100%' margin='0 auto' flexDirection='column'>
     <Layout flexBasis={[64, 160]} />
     <Box margin='0 auto' position='relative' width='92%' flexDirection='column'>
@@ -210,10 +208,10 @@ export const Process = () => (
         </Box>
         <Layout flexBasis={[18, 51]} />
         <Row justifyContent='space-between' alignItems='center'>
-          <Box padding='29px 15px'>
-            <ArrowLeftIcon width='10px' height='5px' fill='#FFFFFF' />
+          <Box height='60px' width='40px' justifyContent='center' alignItems='center'>
+            <ArrowLeftIcon width='30px' height='15px' />
           </Box>
-          <Box padding={['0', '19px 0 19px']} maxWidth={['190px', '780px']}>
+          <Box height={['100%', 60]} maxWidth={['190px', '780px']} alignItems='center'>
             <Text
               color='text.primary'
               fontSize='small'
@@ -226,13 +224,12 @@ export const Process = () => (
               />
             </Text>
           </Box>
-          <Box padding='29px 15px'>
-            <ArrowRightIcon width='10px' height='5px' fill='#FFFFFF' />
+          <Box height='60px' width='40px' justifyContent='center' alignItems='center'>
+            <ArrowRightIcon width='30px' height='15px' />
           </Box>
         </Row>
         <Layout flexBasis={[70, 160]} />
       </Column>
     </Column>
   </Box>
-  // </IntlProvider>
 )

@@ -9,10 +9,8 @@ import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
 import { faqList }          from './faq-list/faq.list'
-// import { IntlProvider }     from 'react-intl'
 
 export const Faq = () => (
-  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.faq' width='100%' margin='0 auto'>
     <Layout flexBasis={[16, 230]} />
     <Column flexGrow='1'>
@@ -83,5 +81,4 @@ export const Faq = () => (
     </Column>
     <Layout flexBasis={[16, 80]} />
   </Box>
-  // </IntlProvider>
 )

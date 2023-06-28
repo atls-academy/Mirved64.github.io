@@ -11,10 +11,8 @@ import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
-// import { IntlProvider }     from 'react-intl'
 
 export const Hero = () => (
-  // <IntlProvider messages={{}} locale='ru' defaultLocale='ru'>
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[80, 412]} />
     <Box flexDirection={['column', 'row']} alignItems={['center', 'end']}>
@@ -180,5 +178,4 @@ export const Hero = () => (
     </Box>
     <Layout flexBasis={[64, 160]} />
   </Box>
-  // </IntlProvider>
 )
