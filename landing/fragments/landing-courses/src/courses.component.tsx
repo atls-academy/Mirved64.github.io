@@ -11,11 +11,11 @@ import { Text }        from '@ui/text'
 
 export const Courses = () => (
   <Box backgroundColor='background.courses' width='100%' margin='0 auto'>
-    <Layout flexBasis={[20, 230]} />
-    <Column maxWidth={['100%', 1610]}>
+    <Layout flexBasis={[0, 230]} />
+    <Column flexBasis={[335, 1610]} margin={['0 auto', '0']}>
       <Layout flexBasis={[64, 160]} />
       <Row justifyContent='space-between' alignItems='center'>
-        <Box flexWrap='wrap' flexGrow='1'>
+        <Box flexWrap='wrap'>
           <Text
             color='text.second'
             fontSize={['extraLarge', 'biggest']}
@@ -38,7 +38,7 @@ export const Courses = () => (
       <Box border='solid 1px black' width='100%' />
       <Layout flexBasis={[40, 80]} />
       <Box flexDirection={['column', 'row']} justifyContent='space-between'>
-        <Box flexWrap='wrap' flexBasis={725}>
+        <Box flexWrap='wrap' flexBasis={['content', 725]}>
           <Text
             color='text.second'
             fontSize={['big', 'xl']}
@@ -49,8 +49,8 @@ export const Courses = () => (
             возможности в применении навыков.
           </Text>
         </Box>
-        <Layout display={['flex', 'none']} flexDirection='column' flexBasis={[20, 0]} />
-        <Box flexWrap='wrap' flexBasis={600}>
+        <Layout display={['flex', 'none']} flexDirection='column' flexBasis={20} />
+        <Box flexWrap='wrap' flexBasis={['content', 600]}>
           <Text
             color='text.second'
             fontSize={['big', 'xl']}
@@ -61,111 +61,121 @@ export const Courses = () => (
           </Text>
         </Box>
       </Box>
-      <Layout flexBasis={80} />
-      <Box flexDirection={['column', 'row']} width='100%' justifyContent='space-between'>
-        <Column flexBasis={['auto', '1000px']} order={['2', '0']}>
+      <Layout flexBasis={[40, 80]} />
+      <Box flexDirection={['column', 'row']} justifyContent='space-between'>
+        <Column flexBasis={['content', 1160]} order={['2', '0']}>
           <Layout flexBasis={[0, 40]} />
-          <Box>
-            <Layout flexBasis={['', 32]} />
-            <Column maxWidth='694px'>
-              <Text
-                color='text.second'
-                fontSize={['large', 'extraLarge']}
-                fontWeight='normal'
-                lineHeight={['normalMedium', 'largeSmall']}
+          <Box flexBasis={[300, 'content']}>
+            <Layout flexBasis={[0, 32]} />
+            <Column flexBasis={[303, 694]} margin={['0 auto', '0']}>
+              <Column flexBasis='content' 
+              ><Layout flexBasis={[0, 32]} />
+                <Box>
+                  <Text
+                    color='text.second'
+                    fontSize={['large', 'extraLarge']}
+                    fontWeight='normal'
+                    lineHeight={['normalMedium', 'largeSmall']}
+                  >
+                    Frontend Engineer
+                  </Text>
+                </Box>
+                <Layout flexBasis={[12, 16]} />
+                <Box display={['none', 'flex']}>
+                  <Text
+                    color='text.second'
+                    fontSize='big'
+                    fontWeight='normal'
+                    lineHeight='normalMedium'
+                  >
+                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
+                    программирования. Получите востребованную профессию и возможность открыть бизнес
+                    в сфере информационных технологий
+                  </Text>
+                </Box>
+                <Layout flexBasis={120} display={['none', 'flex']} />
+                <Box display={['flex', 'none']}>
+                  <Text
+                    color='text.second'
+                    fontSize='atom'
+                    fontWeight='normal'
+                    lineHeight='normalSmall'
+                  >
+                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
+                    Получите востребованную профессию и возможность открыть бизнес.
+                  </Text>
+                </Box>
+                <Layout flexBasis={52} display={['flex', 'none']} />
+              </Column>
+              <Column flexBasis='content'
               >
-                Frontend Engineer
-              </Text>
-              <Layout flexBasis={16} />
-              <Text
-                color='text.second'
-                fontSize='big'
-                fontWeight='normal'
-                lineHeight='normalMedium'
-                display={['none', 'flex']}
-              >
-                Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
-                программирования. Получите востребованную профессию и возможность открыть бизнес в
-                сфере информационных технологий
-              </Text>
-              <Text
-                color='text.second'
-                fontSize='atom'
-                fontWeight='normal'
-                lineHeight='normalSmall'
-                display={['flex', 'none']}
-              >
-                Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование. Получите
-                востребованную профессию и возможность открыть бизнес.
-              </Text>
+                <Box>
+                  <Text
+                    color='text.second'
+                    fontSize={['large', 'extraLarge']}
+                    fontWeight='normal'
+                    lineHeight={['normalMedium', 'largeSmall']}
+                  >
+                    Основы разработки
+                  </Text>
+                </Box>
+                <Layout flexBasis={[12, 16]} />
+                <Box display={['none', 'flex']}>
+                  <Text
+                    color='text.second'
+                    fontSize='big'
+                    fontWeight='normal'
+                    lineHeight='normalMedium'
+                  >
+                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
+                    программирования. Получите востребованную профессию и возможность открыть бизнес
+                    в сфере информационных технологий
+                  </Text>
+                </Box>
+                <Box display={['flex', 'none']}>
+                  <Text
+                    color='text.second'
+                    fontSize='atom'
+                    fontWeight='normal'
+                    lineHeight='normalSmall'
+                  >
+                    Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
+                    Получите востребованную профессию и возможность открыть бизнес.
+                  </Text>
+                </Box>
+                <Layout flexBasis={[36, 112]} />
+              </Column>
+              <Row justifyContent='space-between' overflow={['hidden', 'visible']}>
+                <Layout flexBasis={16} display={['flex', 'none']} />
+                <Box flexShrink='0' flexBasis={[200, 496]}>
+                  <Text
+                    color='text.second'
+                    fontSize={['big', 'extraLarge']}
+                    fontWeight='normal'
+                    lineHeight={['normalSmall', 'largeSmall']}
+                  >
+                    Как использовать библиотеки
+                  </Text>
+                </Box>
+                <Box flexShrink='0' flexBasis={[200, 496]}>
+                  <Text
+                    color='text.second'
+                    fontSize={['big', 'extraLarge']}
+                    fontWeight='normal'
+                    lineHeight={['normalSmall', 'largeSmall']}
+                  >
+                    Дизайн, Figma, Математика
+                  </Text>
+                </Box>
+              </Row>
             </Column>
           </Box>
-          <Layout flexBasis={[52, 120]} />
-          <Box>
-            <Layout flexBasis={['', 32]} />
-            <Column maxWidth='694px'>
-              <Text
-                color='text.second'
-                fontSize={['large', 'extraLarge']}
-                fontWeight='normal'
-                lineHeight={['normalMedium', 'largeSmall']}
-              >
-                Основы разработки
-              </Text>
-              <Layout flexBasis={16} />
-              <Text
-                color='text.second'
-                fontSize='big'
-                fontWeight='normal'
-                lineHeight='normalMedium'
-                display={['none', 'flex']}
-              >
-                Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
-                программирования. Получите востребованную профессию и возможность открыть бизнес в
-                сфере информационных технологий
-              </Text>
-              <Text
-                color='text.second'
-                fontSize='atom'
-                fontWeight='normal'
-                lineHeight='normalSmall'
-                display={['flex', 'none']}
-              >
-                Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование. Получите
-                востребованную профессию и возможность открыть бизнес.
-              </Text>
-              <Layout flexBasis={[36, 112]} />
-            </Column>
-          </Box>
-          <Row justifyContent='space-between' paddingLeft={['20px', '0']}>
-            <Box flexShrink='0' flexBasis={[228, 496]}>
-              <Layout flexBasis={[0, 32]} />
-              <Text
-                color='text.second'
-                fontSize={['big', 'extraLarge']}
-                fontWeight='normal'
-                lineHeight={['normalSmall', 'largeSmall']}
-              >
-                Как использовать библиотеки
-              </Text>
-            </Box>
-            <Box flexShrink='0' flexBasis={[228, 496]}>
-              <Text
-                textAlign='center'
-                color='text.second'
-                fontSize={['big', 'extraLarge']}
-                fontWeight='normal'
-                lineHeight={['normalSmall', 'largeSmall']}
-              >
-                Дизайн, Figma, Математика
-              </Text>
-            </Box>
-          </Row>
           <Layout flexBasis={[52, 0]} />
         </Column>
-        <Box flexBasis={['', 410]}>
-          <Layout flexBasis={['', 32]} />
-          <Column maxWidth='410px' order={['1', '0']}>
+        <Box flexBasis={['content', 410]} 
+        // margin={['0', '0 auto']}
+        >
+          <Column flexBasis={[303, 346]} order={['1', '0']} margin='0 auto'>
             <Layout flexBasis={[0, 32]} />
             <Box maxWidth={['none', '346px']}>
               <Text
@@ -178,12 +188,14 @@ export const Courses = () => (
                 собираем большие группы, что позволяет курировать работу каждого студента.
               </Text>
             </Box>
-            <Layout flexBasis={[16, 74]} />
+            <Layout flexBasis={[0, 74]} />
             <Box display={['none', 'flex']} width='240px' height='240px' margin='0 auto'>
               <DefaultIcon width='100%' height='100%' />
             </Box>
-            <Layout flexBasis={62} />
-            <Box maxWidth={['100%', '188px']} justifyContent='space-between'>
+            <Layout flexBasis={[40, 62]} />
+            <Box 
+            
+            justifyContent='space-between'>
               <Box
                 flexDirection={['row', 'column']}
                 maxWidth={['content', '100%']}
@@ -199,10 +211,10 @@ export const Courses = () => (
                   >
                     5
                   </Text>
-                  <Layout flexBasis={[12, 0]} />
                 </Box>
+                <Layout display={['flex', 'none']} flexBasis={12} />
 
-                <Box flexBasis={[131, 'auto']}>
+                <Box flexBasis={[125, 'content']} maxWidth={['100%', 188]}>
                   <Text
                     color='text.second'
                     fontSize={['extraAtom', 'atom']}
@@ -213,18 +225,18 @@ export const Courses = () => (
                   </Text>
                 </Box>
               </Box>
-              <Box display={['flex', 'none']} width='88px' height='64px'>
+              <Box display={['flex', 'none']} width='74px' height='64px'>
                 <ImageBlock src='./image/Default.png' />
               </Box>
             </Box>
-            <Layout flexBasis={[76, 68]} />
+            <Layout flexBasis={[56, 68]} />
             <Box display={['none', 'flex']}>
               <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
                 Процесс поступления
               </Text>
             </Box>
           </Column>
-          <Layout flexBasis={['', 32]} />
+          
         </Box>
       </Box>
       <Box flexWrap='wrap' display={['flex', 'none']}>
@@ -236,6 +248,6 @@ export const Courses = () => (
       </Box>
       <Layout flexBasis={[64, 240]} />
     </Column>
-    <Layout flexBasis={[20, 80]} />
+    <Layout flexBasis={[0, 80]} />
   </Box>
 )
