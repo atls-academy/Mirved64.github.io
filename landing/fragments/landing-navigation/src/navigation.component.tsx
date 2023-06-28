@@ -16,7 +16,12 @@ export const Navigation = () => (
     alignItems='center'
   >
     <Layout flexBasis={[0, 40]} />
-    <Box flexGrow='1' justifyContent={['center', 'start']} width={['40px', '56px']} height={['40px', '56px']}>
+    <Box
+      flexGrow='1'
+      justifyContent={['center', 'start']}
+      width={['40px', '56px']}
+      height={['40px', '56px']}
+    >
       <NextLink>
         <LogoWhiteIcon width='100%' height='100%' />
       </NextLink>

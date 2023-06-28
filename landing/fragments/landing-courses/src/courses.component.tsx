@@ -68,8 +68,8 @@ export const Courses = () => (
           <Box flexBasis={[300, 'content']}>
             <Layout flexBasis={[0, 32]} />
             <Column flexBasis={[303, 694]} margin={['0 auto', '0']}>
-              <Column flexBasis='content' 
-              ><Layout flexBasis={[0, 32]} />
+              <Column flexBasis='content'>
+                <Layout flexBasis={[0, 32]} />
                 <Box>
                   <Text
                     color='text.second'
@@ -107,8 +107,7 @@ export const Courses = () => (
                 </Box>
                 <Layout flexBasis={52} display={['flex', 'none']} />
               </Column>
-              <Column flexBasis='content'
-              >
+              <Column flexBasis='content'>
                 <Box>
                   <Text
                     color='text.second'
@@ -172,8 +171,9 @@ export const Courses = () => (
           </Box>
           <Layout flexBasis={[52, 0]} />
         </Column>
-        <Box flexBasis={['content', 410]} 
-        // margin={['0', '0 auto']}
+        <Box
+          flexBasis={['content', 410]}
+          // margin={['0', '0 auto']}
         >
           <Column flexBasis={[303, 346]} order={['1', '0']} margin='0 auto'>
             <Layout flexBasis={[0, 32]} />
@@ -193,9 +193,7 @@ export const Courses = () => (
               <DefaultIcon width='100%' height='100%' />
             </Box>
             <Layout flexBasis={[40, 62]} />
-            <Box 
-            
-            justifyContent='space-between'>
+            <Box justifyContent='space-between'>
               <Box
                 flexDirection={['row', 'column']}
                 maxWidth={['content', '100%']}
@@ -236,7 +234,6 @@ export const Courses = () => (
               </Text>
             </Box>
           </Column>
-          
         </Box>
       </Box>
       <Box flexWrap='wrap' display={['flex', 'none']}>

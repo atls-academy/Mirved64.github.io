@@ -13,12 +13,12 @@ import { Space }        from '@ui/text'
 
 export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
-    <Layout flexDirection='column' flexBasis={[80, 412]} />
+    <Layout flexBasis={[80, 412]} />
     <Box flexDirection={['column', 'row']} alignItems={['center', 'end']}>
       <Layout flexBasis={[20, 230]} />
-      <Column flexBasis={['content', 1460]} maxWidth={['90%', '100%']}>
+      <Column flexBasis={['content', 1460]} maxWidth={[335, '100%']}>
         <Column>
-          <Box flexWrap='wrap' maxWidth={['90%', '800px']}>
+          <Box flexWrap='wrap'>
             <Text
               color='text.primary'
               fontSize={['normalLarge', 'biggest']}
@@ -81,10 +81,10 @@ export const Hero = () => (
       </Box>
       <Layout flexBasis={[20, 40]} />
     </Box>
-    <Layout flexDirection='column' flexBasis={[84, 210]} />
+    <Layout flexBasis={[84, 210]} />
     <Box>
       <Layout flexBasis={[20, 230]} />
-      <Column maxWidth={['90%', 1460]}>
+      <Column flexBasis={['90%', 1460]}>
         <Box display={['none', 'inline']}>
           <Text
             color='text.primary'
@@ -135,8 +135,7 @@ export const Hero = () => (
             lineHeight='normalMedium'
             display='inline'
           >
-            Atlantis Academy формирует инженеров и архитекторов, а не программистов и
-            дизайнеров
+            Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров
           </Text>
         </Column>
         <Layout flexDirection='column' flexBasis={40} />
@@ -156,9 +155,8 @@ export const Hero = () => (
             <DefaultIcon width='40px' height='40px' />
           </Box>
         </Box>
-        <Layout flexBasis={[64, 160]} />
       </Column>
-      <Layout flexBasis={[20, 230]} />
     </Box>
+    <Layout flexBasis={[64, 160]} />
   </Box>
 )
