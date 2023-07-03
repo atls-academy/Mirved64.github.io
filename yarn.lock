@@ -270,6 +270,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/text@npm:0.0.11":
+  version: 0.0.11
+  resolution: "@atls-ui-parts/text@npm:0.0.11"
+  dependencies:
+    styled-system: "npm:^5.1.5"
+  peerDependencies:
+    "@emotion/styled": ^11.9.3
+    react: ^18.2.0
+  checksum: 5ff00c3edaa36dc58964739533764aabe439f65bc8c05935a7ffc31f725fe2a70dd42c0737739c721a297fef6947759643e406faaa150d1e666bed7a6e46f6f3
+  languageName: node
+  linkType: hard
+
 "@atls-ui-proto/divider@npm:^0.0.6":
   version: 0.0.6
   resolution: "@atls-ui-proto/divider@npm:0.0.6"
@@ -284,12 +296,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-proto/text@npm:^0.0.10":
-  version: 0.0.10
-  resolution: "@atls-ui-proto/text@npm:0.0.10"
+"@atls-ui-proto/text@npm:^0.0.11":
+  version: 0.0.11
+  resolution: "@atls-ui-proto/text@npm:0.0.11"
   dependencies:
-    "@atls-ui-parts/text": "npm:0.0.10"
-  checksum: d94c8c3a61518dd22e01c4c4c696f8ec47c371d3f62d5155fff95b29f3b99298fe601bb1706993f6843b5fff9f3a9930bbef1243c0b411cfb4f43aa8e2c6db2d
+    "@atls-ui-parts/text": "npm:0.0.11"
+  checksum: 91a7e9d1417fc217893eedc457ed4b11e759bbcd9324dfa32ac52fb0cf429f5e69a5b56e505bf84640411373e797d741bbbfb990d2b5f42572addfaad4acdfa9
   languageName: node
   linkType: hard
 
@@ -3112,6 +3124,8 @@ __metadata:
     "@landing/hero-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
     "@landing/process-fragment": "workspace:0.0.1"
+    "@landing/slider-fragment": "workspace:^"
+    "@landing/technologies-fragment": "workspace:^"
     react: "npm:18.2.0"
   peerDependencies:
     react: "*"
@@ -3146,7 +3160,6 @@ __metadata:
     "@types/react-dom": "npm:^18.2.4"
     "@ui/divider": "workspace:^"
     "@ui/icons": "workspace: 0.0.1"
-    "@ui/image": "workspace:^"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     react-intl: "npm:^6.4.4"
@@ -3171,6 +3184,41 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-intl: "npm:^6.4.4"
     typescript: "npm:4.6.2"
+  languageName: unknown
+  linkType: soft
+
+"@landing/slider-fragment@workspace:^, @landing/slider-fragment@workspace:landing/fragments/landing-slider":
+  version: 0.0.0-use.local
+  resolution: "@landing/slider-fragment@workspace:landing/fragments/landing-slider"
+  dependencies:
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@ui/icons": "workspace:^"
+    "@ui/image": "workspace:^"
+    "@ui/layout": "workspace:^"
+    "@ui/text": "workspace:^"
+    react-intl: "npm:^6.4.4"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/technologies-fragment@workspace:^, @landing/technologies-fragment@workspace:landing/fragments/landing-technologies":
+  version: 0.0.0-use.local
+  resolution: "@landing/technologies-fragment@workspace:landing/fragments/landing-technologies"
+  dependencies:
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@ui/divider": "workspace:^"
+    "@ui/layout": "workspace:^"
+    "@ui/text": "workspace:^"
+    react-intl: "npm:^6.4.4"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -4134,7 +4182,7 @@ __metadata:
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
     "@atls-ui-parts/link": "npm:^0.0.10"
-    "@atls-ui-proto/text": "npm:^0.0.10"
+    "@atls-ui-proto/text": "npm:^0.0.11"
     "@emotion/css": "npm:^11.11.0"
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"

@@ -30,7 +30,12 @@ export const Faq = () => (
         </Box>
         <Box display={['none', 'flex']}>
           <NextLink>
-            <Text color='text.secondary' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+            <Text
+              color='text.secondary'
+              fontSize='big'
+              fontWeight='normal'
+              lineHeight='normalSmall'
+            >
               <FormattedMessage id='faqButtonDesctop' defaultMessage='Задать вопрос' />
             </Text>
           </NextLink>

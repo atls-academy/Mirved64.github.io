@@ -1,12 +1,12 @@
 {
-  "name": "@landing/process-fragment",
+  "name": "@landing/slider-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/divider": "workspace:^",
-    "@ui/icons": "workspace: 0.0.1",
-    "@ui/layout": "workspace: 0.0.1",
-    "@ui/text": "workspace: 0.0.1"
+    "@ui/icons": "workspace:^",
+    "@ui/image": "workspace:^",
+    "@ui/layout": "workspace:^",
+    "@ui/text": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",

@@ -4,6 +4,8 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@landing/slider-fragment": "workspace:^",
+    "@landing/technologies-fragment": "workspace:^",
     "react": "18.2.0"
   },
   "devDependencies": {

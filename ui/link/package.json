@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/link": "^0.0.10",
-    "@atls-ui-proto/text": "^0.0.10",
+    "@atls-ui-proto/text": "^0.0.11",
     "@ui/text": "workspace: 0.0.1"
   },
   "devDependencies": {
