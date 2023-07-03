@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Divider }           from '@ui/divider'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -36,12 +37,7 @@ export const Faq = () => (
         </Box>
       </Row>
       <Layout flexBasis={80} display={['none', 'flex']} />
-      <Box
-        border='solid 1px'
-        borderColor='divider.second'
-        width='100%'
-        display={['none', 'flex']}
-      />
+      <Divider backgroundColor='divider.second' weight='1px' display={['none', 'flex']} />
       <Column>
         {faqList.map((question, index) => (
           <Column key={question.id} height='100%'>
@@ -68,7 +64,7 @@ export const Faq = () => (
               </Box>
             </Row>
             <Layout flexBasis={[16, 40]} />
-            <Box border='solid 1px' borderColor='divider.second' />
+            <Divider backgroundColor='divider.second' weight='1px' />
           </Column>
         ))}
       </Column>

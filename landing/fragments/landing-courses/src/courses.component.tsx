@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Divider }           from '@ui/divider'
 import { DefaultIcon }      from '@ui/icons'
 import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
@@ -36,7 +37,7 @@ export const Courses = () => (
         </Box>
       </Row>
       <Layout flexBasis={[40, 80]} />
-      <Box border='solid 1px' borderColor='divider.second' width='100%' />
+      <Divider backgroundColor='divider.second' weight='1px' />
       <Layout flexBasis={[40, 80]} />
       <Box flexDirection={['column', 'row']} justifyContent='space-between'>
         <Box flexWrap='wrap' flexBasis={['content', 725]}>

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/divider": "workspace:^",
     "@ui/layout": "workspace:^",
     "@ui/link": "workspace:^",
     "@ui/text": "workspace:^"

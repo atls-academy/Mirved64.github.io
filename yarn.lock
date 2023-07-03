@@ -231,7 +231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/layout@npm:^0.0.7":
+"@atls-ui-parts/layout@npm:0.0.7, @atls-ui-parts/layout@npm:^0.0.7":
   version: 0.0.7
   resolution: "@atls-ui-parts/layout@npm:0.0.7"
   dependencies:
@@ -267,6 +267,20 @@ __metadata:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
   checksum: ba7f2f04fc678d1a84b34a2a864282f54c784bd2b3197fb0bc5061fbd0b787db76a987aec17c0f1943f42853ea9d8c3753d6b071a69fbc4f12c22243d0f0e343
+  languageName: node
+  linkType: hard
+
+"@atls-ui-proto/divider@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@atls-ui-proto/divider@npm:0.0.6"
+  dependencies:
+    "@atls-ui-parts/layout": "npm:0.0.7"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: 4a1cce42ceff93a1b0a04e4e194f634f36b5ffa257058ad55ee714a9267f2c81a4058bac044e4bf349557caf8fea01dafc600bac3d23d5ae35c3112f7c41bb6f
   languageName: node
   linkType: hard
 
@@ -3038,6 +3052,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/divider": "workspace:^"
     "@ui/icons": "workspace:^"
     "@ui/image": "workspace:^"
     "@ui/layout": "workspace: 0.0.1"
@@ -3057,6 +3072,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/divider": "workspace:^"
     "@ui/layout": "workspace:^"
     "@ui/link": "workspace:^"
     "@ui/text": "workspace:^"
@@ -3074,6 +3090,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/divider": "workspace:^"
     "@ui/icons": "workspace:^"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/link": "workspace:^"
@@ -3127,6 +3144,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/divider": "workspace:^"
     "@ui/icons": "workspace: 0.0.1"
     "@ui/image": "workspace:^"
     "@ui/layout": "workspace: 0.0.1"
@@ -4031,6 +4049,30 @@ __metadata:
   checksum: f6c8a0c3cc28b9604cc2e3a747944577f562be8dd5be46fbb522237fe52e0266c51571764322032f6d7e96d6b8f27cf51ba8e4be3024c6e68f5f173e1bd38761
   languageName: node
   linkType: hard
+
+"@ui/divider@workspace:^, @ui/divider@workspace:ui/divider":
+  version: 0.0.0-use.local
+  resolution: "@ui/divider@workspace:ui/divider"
+  dependencies:
+    "@atls-ui-parts/layout": "npm:^0.0.7"
+    "@atls-ui-proto/divider": "npm:^0.0.6"
+    "@emotion/react": "npm:^11.11.1"
+    "@emotion/styled": "npm:^11.11.0"
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@types/styled-system": "npm:^5.1.16"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    styled-system: "npm:^5.1.5"
+    styled-tools: "npm:^1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
 
 "@ui/icons@workspace: 0.0.1, @ui/icons@workspace:^, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
@@ -13886,6 +13928,13 @@ __metadata:
     "@styled-system/variant": "npm:^5.1.5"
     object-assign: "npm:^4.1.1"
   checksum: 3779f07e58e8c6729fd18e379be71977a3e4c8fce72e8d8a70d68eb1576922243ae7534070530998942685fe56a8f328e2c2fb1c68b3438a74d39fc7d23c9870
+  languageName: node
+  linkType: hard
+
+"styled-tools@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "styled-tools@npm:1.7.2"
+  checksum: 726ba9b48df8bab6c091dc1508c9913e0b793a63a65099bfc28b1b807577fa5914644ba9f07ff49c8b1479d8b857a8877cb942ef5a2033385a87756fd3b3d596
   languageName: node
   linkType: hard
 

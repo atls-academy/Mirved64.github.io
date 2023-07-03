@@ -1,6 +1,7 @@
 import React                      from 'react'
 import { FormattedMessage }       from 'react-intl'
 
+import { Divider }                 from '@ui/divider'
 import { ArrowLeftIcon }          from '@ui/icons'
 import { ArrowRightIcon }         from '@ui/icons'
 import { DefaultIcon }            from '@ui/icons'
@@ -66,7 +67,7 @@ export const Process = () => (
                 </Box>
               </Box>
               <Layout flexBasis={[28, 48]} />
-              <Box border='solid 1px' borderColor='divider.primary' />
+              <Divider backgroundColor='divider.primary' weight='1px' />
               <Layout flexBasis={[28, 48]} />
             </Column>
           )
@@ -139,7 +140,7 @@ export const Process = () => (
     </Box>
     <Column>
       <Layout flexBasis={[32, 64]} />
-      <Box border='solid 1px' borderColor='divider.primary' />
+      <Divider backgroundColor='divider.primary' weight='1px' />
       <Layout flexBasis={[36, 64]} />
       <Row overflow='hidden' width='100%'>
         {technologiesListTop.map((technology, index) => (
@@ -157,7 +158,9 @@ export const Process = () => (
               />
             </Text>
             <Layout flexBasis={24} />
-            <Box width='48px' margin='auto 0' border='solid 2px' borderColor='divider.primary' />
+            <Box width='48px'>
+              <Divider backgroundColor='divider.primary' weight='4px' margin='auto 0' />
+            </Box>
             <Layout flexBasis={24} />
           </Box>
         ))}
@@ -180,13 +183,15 @@ export const Process = () => (
               />
             </Text>
             <Layout flexBasis={24} />
-            <Box width='48px' margin='auto 0' border='solid 2px' borderColor='divider.primary' />
+            <Box width='48px'>
+              <Divider backgroundColor='divider.primary' weight='4px' margin='auto 0' />
+            </Box>
             <Layout flexBasis={24} />
           </Box>
         ))}
       </Row>
       <Layout flexBasis={[36, 64]} />
-      <Box border='solid 1px' borderColor='divider.primary' />
+      <Divider backgroundColor='divider.primary' weight='1px' />
       <Layout flexBasis={[56, 64]} />
     </Column>
     <Column>

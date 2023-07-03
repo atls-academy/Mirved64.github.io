@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Divider }           from '@ui/divider'
 import { DefaultIcon }      from '@ui/icons'
 import { TelegramIcon }     from '@ui/icons'
 import { GitHubIcon }       from '@ui/icons'
@@ -41,7 +42,7 @@ export const Hero = () => (
           </Box>
         </Column>
         <Layout flexBasis={[24, 48]} />
-        <Box border='solid 1px' borderColor='divider.primary' maxWidth={['100%', 1460]} />
+        <Divider backgroundColor='divider.primary' weight='1px' />
         <Layout flexBasis={[24, 48]} />
         <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
           <Text
