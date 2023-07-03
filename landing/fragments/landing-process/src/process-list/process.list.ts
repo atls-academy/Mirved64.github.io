@@ -2,27 +2,27 @@ import { Process } from './process.interfaces'
 
 export const processList: Process[] = [
   {
-    id: 1,
+    id: 'process1',
     process: 'Интеграция в команду',
     text: 'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
   },
   {
-    id: 2,
+    id: 'process2',
     process: 'Создание среды',
     text: 'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
   },
   {
-    id: 3,
+    id: 'process3',
     process: 'Изучение технологий',
     text: 'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
   },
   {
-    id: 4,
+    id: 'process4',
     process: 'Практика изученого',
     text: 'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
   },
   {
-    id: 5,
+    id: 'process5',
     process: 'Интеграция в проект',
     text: 'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
   },

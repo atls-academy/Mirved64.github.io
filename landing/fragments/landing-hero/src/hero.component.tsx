@@ -26,7 +26,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['normal', 'biggest']}
             >
-              <FormattedMessage id='#' defaultMessage='Обучаем профессионалов' />
+              <FormattedMessage id='heroTitleFirst' defaultMessage='Обучаем профессионалов' />
             </Text>
           </Box>
           <Box>
@@ -36,7 +36,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['normal', 'biggest']}
             >
-              <FormattedMessage id='#' defaultMessage='для революции в IT' />
+              <FormattedMessage id='heroTitleSecond' defaultMessage='для революции в IT' />
             </Text>
           </Box>
         </Column>
@@ -51,7 +51,7 @@ export const Hero = () => (
             lineHeight={['smallMedium', 'normalMedium']}
           >
             <FormattedMessage
-              id='#'
+              id='heroSlogan'
               defaultMessage='Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать
             невозможные идеи'
             />
@@ -98,7 +98,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='#'
+              id='heroTextFirstDesctop'
               defaultMessage='Digital становится всё более многолюдным, востребованность по направлениям при этом не
             снижается'
             />
@@ -116,7 +116,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='#'
+              id='heroTextSecondDesctop'
               defaultMessage='Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало'
             />
           </Text>
@@ -134,7 +134,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='#'
+              id='heroTextFirstMobile'
               defaultMessage='Digital становится всё более многолюдным, востребованность по направлениям при этом не
             снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему
             мало.'
@@ -149,7 +149,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='#'
+              id='heroTextThirdDesctop'
               defaultMessage='Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров'
             />
           </Text>
@@ -164,7 +164,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='#'
+              id='heroTextSecondMobile'
               defaultMessage='Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
             дизайнеров'
             />

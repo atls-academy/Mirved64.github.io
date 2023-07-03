@@ -32,7 +32,7 @@ export const Navigation = () => (
         <Box key={link.name} flexGrow='5' justifyContent='center'>
           <NextLink>
             <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='#' defaultMessage={link.name} />
+              <FormattedMessage id={link.name} defaultMessage={link.name} />
             </Text>
           </NextLink>
         </Box>
@@ -41,7 +41,7 @@ export const Navigation = () => (
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
-          <FormattedMessage id='#' defaultMessage='Курсы' />
+          <FormattedMessage id='navigationCourses' defaultMessage='Курсы' />
         </Text>
       </NextLink>
     </Box>

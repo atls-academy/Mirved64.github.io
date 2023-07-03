@@ -22,7 +22,7 @@ export const Process = () => (
       {processList.map((process, index) => {
         if (index !== processList.length - 1) {
           return (
-            <Column key={process.id}>
+            <Column key={process.process}>
               <Box flexBasis={['content', 'content']}>
                 <Box alignItems={['start', 'center']}>
                   <Text
@@ -31,7 +31,7 @@ export const Process = () => (
                     fontWeight='normal'
                     lineHeight={['small', 'normalNormal']}
                   >
-                    {process.id}
+                    {index + 1}
                   </Text>
                 </Box>
                 <Layout flexBasis={[12, 32]} />
@@ -47,7 +47,7 @@ export const Process = () => (
                       fontWeight={['normalMedium', 'normal']}
                       lineHeight='largeSmall'
                     >
-                      <FormattedMessage id='#' defaultMessage={process.process} />
+                      <FormattedMessage id={process.process} defaultMessage={process.process} />
                     </Text>
                   </Box>
                   <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
@@ -57,7 +57,10 @@ export const Process = () => (
                       fontWeight='normal'
                       lineHeight={['smallMedium', 'normalLarge']}
                     >
-                      <FormattedMessage id='#' defaultMessage={process.text} />
+                      <FormattedMessage
+                        id={`processText ${String(index)}`}
+                        defaultMessage={process.text}
+                      />
                     </Text>
                   </Box>
                 </Box>
@@ -69,7 +72,7 @@ export const Process = () => (
           )
         }
         return (
-          <Column key={process.id}>
+          <Column key={process.process}>
             <Box flexBasis={['content', 'content']}>
               <Box alignItems={['start', 'center']}>
                 <Text
@@ -78,7 +81,7 @@ export const Process = () => (
                   fontWeight='normal'
                   lineHeight={['small', 'normalNormal']}
                 >
-                  {process.id}
+                  {index + 1}
                 </Text>
               </Box>
               <Layout flexBasis={[12, 32]} />
@@ -94,7 +97,10 @@ export const Process = () => (
                     fontWeight={['normalMedium', 'normal']}
                     lineHeight='largeSmall'
                   >
-                    <FormattedMessage id='#' defaultMessage={process.process} />
+                    <FormattedMessage
+                      id={`process ${String(index)}`}
+                      defaultMessage={process.process}
+                    />
                   </Text>
                 </Box>
                 <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
@@ -104,7 +110,10 @@ export const Process = () => (
                     fontWeight='normal'
                     lineHeight={['smallMedium', 'normalLarge']}
                   >
-                    <FormattedMessage id='#' defaultMessage={process.text} />
+                    <FormattedMessage
+                      id={`processText ${String(index)}`}
+                      defaultMessage={process.text}
+                    />
                   </Text>
                 </Box>
               </Box>
@@ -133,7 +142,7 @@ export const Process = () => (
       <Box border='solid 1px' borderColor='divider.primary' />
       <Layout flexBasis={[36, 64]} />
       <Row overflow='hidden' width='100%'>
-        {technologiesListTop.map((technology) => (
+        {technologiesListTop.map((technology, index) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
               color='text.primary'
@@ -142,7 +151,10 @@ export const Process = () => (
               lineHeight={['largeSmall', 'largeLarge']}
               whiteSpace='nowrap'
             >
-              <FormattedMessage id='#' defaultMessage={technology.technology} />
+              <FormattedMessage
+                id={`technologyTop ${String(index)}`}
+                defaultMessage={technology.technology}
+              />
             </Text>
             <Layout flexBasis={24} />
             <Box width='48px' margin='auto 0' border='solid 2px' borderColor='divider.primary' />
@@ -152,7 +164,7 @@ export const Process = () => (
       </Row>
       <Layout flexBasis={[36, 64]} />
       <Row overflow='hidden' width='100%'>
-        {technologiesListBottom.map((technology) => (
+        {technologiesListBottom.map((technology, index) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
               color='text.primary'
@@ -162,7 +174,10 @@ export const Process = () => (
               lineHeight={['largeSmall', 'largeLarge']}
               whiteSpace='nowrap'
             >
-              <FormattedMessage id='#' defaultMessage={technology.technology} />
+              <FormattedMessage
+                id={`technologyBottom ${String(index)}`}
+                defaultMessage={technology.technology}
+              />
             </Text>
             <Layout flexBasis={24} />
             <Box width='48px' margin='auto 0' border='solid 2px' borderColor='divider.primary' />
@@ -183,7 +198,7 @@ export const Process = () => (
             fontSize={['extraAtom', 'atom']}
             lineHeight={['atom', 'extraSmall']}
           >
-            <FormattedMessage id='#' defaultMessage='ПРОЦЕСС СОЗДАНИЯ' />
+            <FormattedMessage id='processSubtitle' defaultMessage='ПРОЦЕСС СОЗДАНИЯ' />
           </Text>
         </Box>
         <Layout flexBasis={24} />
@@ -196,7 +211,7 @@ export const Process = () => (
             letter='-1%'
           >
             <FormattedMessage
-              id='#'
+              id='processSlogan'
               defaultMessage='Любой процесс перестаёт быть сложным, когда знаешь как он протекает'
             />
           </Text>
@@ -219,7 +234,7 @@ export const Process = () => (
               textAlign='center'
             >
               <FormattedMessage
-                id='#'
+                id='processSign'
                 defaultMessage='Формирование системы базовых фрагментов и компонентов'
               />
             </Text>

@@ -1,5 +1,5 @@
 export interface Process {
-  id: number
+  id: string
   process: string
   text: string
 }
