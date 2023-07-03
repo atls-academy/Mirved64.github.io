@@ -31,7 +31,13 @@ export const Navigation = () => (
       {navLinkList.map((link) => (
         <Box key={link.name} flexGrow='5' justifyContent='center'>
           <NextLink>
-            <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
+            <Text
+              color='text.primary'
+              fontSize='normal'
+              fontWeight='normal'
+              lineHeight='small'
+              textTransform='uppercase'
+            >
               <FormattedMessage id={link.name} defaultMessage={link.name} />
             </Text>
           </NextLink>
