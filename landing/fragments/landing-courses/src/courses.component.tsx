@@ -1,7 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Divider }           from '@ui/divider'
+import { Divider }          from '@ui/divider'
 import { DefaultIcon }      from '@ui/icons'
 import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
@@ -20,9 +20,9 @@ export const Courses = () => (
         <Box flexWrap='wrap'>
           <Text
             color='text.second'
-            fontSize={['extraLarge', 'biggest']}
+            fontSize={['regular', 'stupendous']}
             fontWeight='normal'
-            lineHeight={['large', 'biggest']}
+            lineHeight={['common', 'stupendous']}
             letter='-2%'
           >
             <FormattedMessage id='coursesTitle' defaultMessage='Курсы и материалы' />
@@ -43,9 +43,9 @@ export const Courses = () => (
         <Box flexWrap='wrap' flexBasis={['content', 725]}>
           <Text
             color='text.second'
-            fontSize={['big', 'xl']}
+            fontSize={['small', 'ordinary']}
             fontWeight='normal'
-            lineHeight={['normalMedium', 'largeSmall']}
+            lineHeight={['normal', 'regular']}
           >
             <FormattedMessage
               id='coursesTextFirst'
@@ -58,9 +58,9 @@ export const Courses = () => (
         <Box flexWrap='wrap' flexBasis={['content', 600]}>
           <Text
             color='text.second'
-            fontSize={['big', 'xl']}
+            fontSize={['small', 'ordinary']}
             fontWeight='normal'
-            lineHeight={['normalMedium', 'largeSmall']}
+            lineHeight={['normal', 'regular']}
           >
             <FormattedMessage
               id='coursesTextSecond'
@@ -81,9 +81,9 @@ export const Courses = () => (
                 <Box>
                   <Text
                     color='text.second'
-                    fontSize={['large', 'extraLarge']}
+                    fontSize={['medium', 'regular']}
                     fontWeight='normal'
-                    lineHeight={['normalMedium', 'largeSmall']}
+                    lineHeight={['normal', 'regular']}
                   >
                     <FormattedMessage
                       id='coursesCardTitleFirst'
@@ -95,9 +95,9 @@ export const Courses = () => (
                 <Box display={['none', 'flex']}>
                   <Text
                     color='text.second'
-                    fontSize='big'
+                    fontSize='small'
                     fontWeight='normal'
-                    lineHeight='normalMedium'
+                    lineHeight='normal'
                   >
                     <FormattedMessage
                       id='coursesCardTextFirstDesctop'
@@ -109,12 +109,7 @@ export const Courses = () => (
                 </Box>
                 <Layout flexBasis={120} display={['none', 'flex']} />
                 <Box display={['flex', 'none']}>
-                  <Text
-                    color='text.second'
-                    fontSize='atom'
-                    fontWeight='normal'
-                    lineHeight='normalSmall'
-                  >
+                  <Text color='text.second' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                     <FormattedMessage
                       id='coursesCardTextFirstMobile'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
@@ -128,9 +123,9 @@ export const Courses = () => (
                 <Box>
                   <Text
                     color='text.second'
-                    fontSize={['large', 'extraLarge']}
+                    fontSize={['medium', 'regular']}
                     fontWeight='normal'
-                    lineHeight={['normalMedium', 'largeSmall']}
+                    lineHeight={['normal', 'regular']}
                   >
                     <FormattedMessage
                       id='coursesCardTitleSecond'
@@ -142,9 +137,9 @@ export const Courses = () => (
                 <Box display={['none', 'flex']}>
                   <Text
                     color='text.second'
-                    fontSize='big'
+                    fontSize='small'
                     fontWeight='normal'
-                    lineHeight='normalMedium'
+                    lineHeight='normal'
                   >
                     <FormattedMessage
                       id='coursesCardTextSecondDesctop'
@@ -155,12 +150,7 @@ export const Courses = () => (
                   </Text>
                 </Box>
                 <Box display={['flex', 'none']}>
-                  <Text
-                    color='text.second'
-                    fontSize='atom'
-                    fontWeight='normal'
-                    lineHeight='normalSmall'
-                  >
+                  <Text color='text.second' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                     <FormattedMessage
                       id='coursesCardTextSecondMobile'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
@@ -175,9 +165,9 @@ export const Courses = () => (
                 <Box flexShrink='0' flexBasis={[200, 496]}>
                   <Text
                     color='text.second'
-                    fontSize={['big', 'extraLarge']}
+                    fontSize={['small', 'regular']}
                     fontWeight='normal'
-                    lineHeight={['normalSmall', 'largeSmall']}
+                    lineHeight={['small', 'regular']}
                   >
                     <FormattedMessage
                       id='coursesSmallCardFirst'
@@ -188,9 +178,9 @@ export const Courses = () => (
                 <Box flexShrink='0' flexBasis={[200, 496]}>
                   <Text
                     color='text.second'
-                    fontSize={['big', 'extraLarge']}
+                    fontSize={['small', 'regular']}
                     fontWeight='normal'
-                    lineHeight={['normalSmall', 'largeSmall']}
+                    lineHeight={['small', 'regular']}
                   >
                     <FormattedMessage
                       id='coursesSmallCardSecond'
@@ -209,9 +199,9 @@ export const Courses = () => (
             <Box maxWidth={['none', '346px']}>
               <Text
                 color='text.second'
-                fontSize='small'
+                fontSize='little'
                 fontWeight='normal'
-                lineHeight={['small', 'normalNormal']}
+                lineHeight={['little', 'medium']}
               >
                 <FormattedMessage
                   id='coursesSidebarText'
@@ -235,9 +225,9 @@ export const Courses = () => (
                 <Box>
                   <Text
                     color='text.second'
-                    fontSize={['extraGiant', 'super']}
+                    fontSize={['giant', 'enormous']}
                     fontWeight='normal'
-                    lineHeight='largeMedium'
+                    lineHeight='big'
                   >
                     <FormattedMessage id='coursesSidebarNumber' defaultMessage='5' />
                   </Text>
@@ -247,9 +237,9 @@ export const Courses = () => (
                 <Box flexBasis={[125, 'content']} maxWidth={['100%', 188]}>
                   <Text
                     color='text.second'
-                    fontSize={['extraAtom', 'atom']}
+                    fontSize={['atom', 'tiny']}
                     fontWeight='normal'
-                    lineHeight={['extraSmall', 'normalSmall']}
+                    lineHeight={['tiny', 'small']}
                   >
                     <FormattedMessage
                       id='coursesSidebarSubtitle'
@@ -264,7 +254,7 @@ export const Courses = () => (
             </Box>
             <Layout flexBasis={[56, 68]} />
             <Box display={['none', 'flex']}>
-              <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+              <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage
                   id='coursesSidebarButtonDisplay'
                   defaultMessage='Процесс поступления'
@@ -276,7 +266,7 @@ export const Courses = () => (
       </Box>
       <Box flexWrap='wrap' display={['flex', 'none']}>
         <NextLink>
-          <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='small'>
+          <Text color='text.second' fontSize='little' fontWeight='normal' lineHeight='little'>
             <FormattedMessage id='coursesButtonMobile' defaultMessage='Все материалы' />
           </Text>
         </NextLink>

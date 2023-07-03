@@ -1,7 +1,7 @@
 import React                      from 'react'
 import { FormattedMessage }       from 'react-intl'
 
-import { Divider }                 from '@ui/divider'
+import { Divider }                from '@ui/divider'
 import { ArrowLeftIcon }          from '@ui/icons'
 import { ArrowRightIcon }         from '@ui/icons'
 import { DefaultIcon }            from '@ui/icons'
@@ -28,9 +28,9 @@ export const Process = () => (
                 <Box alignItems={['start', 'center']}>
                   <Text
                     color='text.primary'
-                    fontSize={['normal', 'large']}
+                    fontSize={['compact', 'medium']}
                     fontWeight='normal'
-                    lineHeight={['small', 'normalNormal']}
+                    lineHeight={['little', 'medium']}
                   >
                     {index + 1}
                   </Text>
@@ -44,9 +44,9 @@ export const Process = () => (
                   <Box alignItems='center'>
                     <Text
                       color='text.primary'
-                      fontSize={['large', 'extraLarge']}
+                      fontSize={['medium', 'regular']}
                       fontWeight={['normalMedium', 'normal']}
-                      lineHeight='largeSmall'
+                      lineHeight='regular'
                     >
                       <FormattedMessage id={process.process} defaultMessage={process.process} />
                     </Text>
@@ -54,9 +54,9 @@ export const Process = () => (
                   <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
                     <Text
                       color='text.primary'
-                      fontSize={['atom', 'large']}
+                      fontSize={['tiny', 'medium']}
                       fontWeight='normal'
-                      lineHeight={['smallMedium', 'normalLarge']}
+                      lineHeight={['compact', 'standart']}
                     >
                       <FormattedMessage
                         id={`processText ${String(index)}`}
@@ -78,9 +78,9 @@ export const Process = () => (
               <Box alignItems={['start', 'center']}>
                 <Text
                   color='text.primary'
-                  fontSize={['normal', 'large']}
+                  fontSize={['compact', 'medium']}
                   fontWeight='normal'
-                  lineHeight={['small', 'normalNormal']}
+                  lineHeight={['little', 'medium']}
                 >
                   {index + 1}
                 </Text>
@@ -94,9 +94,9 @@ export const Process = () => (
                 <Box alignItems='center'>
                   <Text
                     color='text.primary'
-                    fontSize={['large', 'extraLarge']}
+                    fontSize={['medium', 'regular']}
                     fontWeight={['normalMedium', 'normal']}
-                    lineHeight='largeSmall'
+                    lineHeight='regular'
                   >
                     <FormattedMessage
                       id={`process ${String(index)}`}
@@ -107,9 +107,9 @@ export const Process = () => (
                 <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
                   <Text
                     color='text.primary'
-                    fontSize={['atom', 'large']}
+                    fontSize={['tiny', 'medium']}
                     fontWeight='normal'
-                    lineHeight={['smallMedium', 'normalLarge']}
+                    lineHeight={['compact', 'standart']}
                   >
                     <FormattedMessage
                       id={`processText ${String(index)}`}
@@ -147,9 +147,9 @@ export const Process = () => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
               color='text.primary'
-              fontSize={['giantMedium', 'extraSuper']}
+              fontSize={['huge', 'massive']}
               fontWeight='lighter'
-              lineHeight={['largeSmall', 'largeLarge']}
+              lineHeight={['regular', 'giant']}
               whiteSpace='nowrap'
             >
               <FormattedMessage
@@ -171,10 +171,10 @@ export const Process = () => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
               color='text.primary'
-              fontFamily='second'
-              fontSize={['giantMedium', 'extraSuper']}
+              fontFamily='secondary'
+              fontSize={['huge', 'massive']}
               fontWeight='lighter'
-              lineHeight={['largeSmall', 'largeLarge']}
+              lineHeight={['regular', 'giant']}
               whiteSpace='nowrap'
             >
               <FormattedMessage
@@ -200,7 +200,7 @@ export const Process = () => (
         <Box>
           <Text
             color='text.primary'
-            fontSize={['extraAtom', 'atom']}
+            fontSize={['atom', 'tiny']}
             lineHeight={['atom', 'extraSmall']}
           >
             <FormattedMessage id='processSubtitle' defaultMessage='ПРОЦЕСС СОЗДАНИЯ' />
@@ -210,8 +210,8 @@ export const Process = () => (
         <Box>
           <Text
             color='text.primary'
-            fontSize={['large', 'extraLarge']}
-            lineHeight={['normalMedium', 'large']}
+            fontSize={['medium', 'regular']}
+            lineHeight={['normal', 'common']}
             textAlign='center'
             letter='-1%'
           >
@@ -232,12 +232,7 @@ export const Process = () => (
             <ArrowLeftIcon width='30px' height='15px' />
           </Box>
           <Box height={['100%', 60]} maxWidth={['190px', '780px']} alignItems='center'>
-            <Text
-              color='text.primary'
-              fontSize='small'
-              lineHeight='normalNormal'
-              textAlign='center'
-            >
+            <Text color='text.primary' fontSize='little' lineHeight='medium' textAlign='center'>
               <FormattedMessage
                 id='processSign'
                 defaultMessage='Формирование системы базовых фрагментов и компонентов'

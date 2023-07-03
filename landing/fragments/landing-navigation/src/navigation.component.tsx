@@ -33,9 +33,9 @@ export const Navigation = () => (
           <NextLink>
             <Text
               color='text.primary'
-              fontSize='normal'
+              fontSize='compact'
               fontWeight='normal'
-              lineHeight='small'
+              lineHeight='little'
               textTransform='uppercase'
             >
               <FormattedMessage id={link.name} defaultMessage={link.name} />
@@ -46,7 +46,7 @@ export const Navigation = () => (
     </Box>
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
-        <Text color='text.primary' fontSize='normal' fontWeight='normal' lineHeight='small'>
+        <Text color='text.primary' fontSize='compact' fontWeight='normal' lineHeight='little'>
           <FormattedMessage id='navigationCourses' defaultMessage='Курсы' />
         </Text>
       </NextLink>

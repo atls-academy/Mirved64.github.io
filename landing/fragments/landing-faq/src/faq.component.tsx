@@ -1,7 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Divider }           from '@ui/divider'
+import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -20,9 +20,9 @@ export const Faq = () => (
         <Box>
           <Text
             color='text.second'
-            fontSize={['xl', 'biggest']}
+            fontSize={['ordinary', 'stupendous']}
             fontWeight='normal'
-            lineHeight={['largeSmall', 'biggest']}
+            lineHeight={['regular', 'stupendous']}
             letter='-2%'
           >
             <FormattedMessage id='faqTitle' defaultMessage='Вопросы и ответы' />
@@ -52,9 +52,9 @@ export const Faq = () => (
               <Box alignItems='center' flexGrow={[1, 0]}>
                 <Text
                   color='text.second'
-                  fontSize={['big', 'xl']}
+                  fontSize={['small', 'ordinary']}
                   fontWeight='normal'
-                  lineHeight={['normalLarge', 'largeSmall']}
+                  lineHeight={['standart', 'regular']}
                 >
                   <FormattedMessage
                     id={`question ${String(index)}`}
@@ -71,7 +71,7 @@ export const Faq = () => (
       <Layout flexBasis={60} />
       <Box display={['flex', 'none']}>
         <NextLink>
-          <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='smallMedium'>
+          <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='compact'>
             <FormattedMessage id='faqButtonMobile' defaultMessage='Задать вопрос' />
           </Text>
         </NextLink>

@@ -1,7 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Divider }           from '@ui/divider'
+import { Divider }          from '@ui/divider'
 import { DefaultIcon }      from '@ui/icons'
 import { TelegramIcon }     from '@ui/icons'
 import { GitHubIcon }       from '@ui/icons'
@@ -20,22 +20,30 @@ export const Hero = () => (
       <Layout flexBasis={[20, 230]} />
       <Column flexBasis={['content', 1460]} maxWidth={[335, '100%']}>
         <Column>
-          <Box flexWrap='wrap'>
+          <Column>
             <Text
               color='text.primary'
-              fontSize={['normalLarge', 'biggest']}
+              fontSize={['normal', 'stupendous']}
               fontWeight='normal'
-              lineHeight={['normal', 'biggest']}
+              lineHeight={['ordinary', 'stupendous']}
             >
-              <FormattedMessage id='heroTitleFirst' defaultMessage='Обучаем профессионалов' />
+              <FormattedMessage id='heroTitleFirst' defaultMessage='Обучаем' />
             </Text>
-          </Box>
+            <Text
+              color='text.primary'
+              fontSize={['normal', 'stupendous']}
+              fontWeight='normal'
+              lineHeight={['ordinary', 'stupendous']}
+            >
+              <FormattedMessage id='heroTitleFirst' defaultMessage='профессионалов' />
+            </Text>
+          </Column>
           <Box>
             <Text
               color='text.primary'
-              fontSize={['normalLarge', 'biggest']}
+              fontSize={['normal', 'stupendous']}
               fontWeight='normal'
-              lineHeight={['normal', 'biggest']}
+              lineHeight={['ordinary', 'stupendous']}
             >
               <FormattedMessage id='heroTitleSecond' defaultMessage='для революции в IT' />
             </Text>
@@ -47,9 +55,9 @@ export const Hero = () => (
         <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
           <Text
             color='text.primary'
-            fontSize={['atom', 'big']}
+            fontSize={['tiny', 'small']}
             fontWeight='normal'
-            lineHeight={['smallMedium', 'normalMedium']}
+            lineHeight={['compact', 'normal']}
           >
             <FormattedMessage
               id='heroSlogan'
@@ -93,9 +101,9 @@ export const Hero = () => (
         <Box display={['none', 'inline']}>
           <Text
             color='text.primary'
-            fontSize='giant'
+            fontSize='common'
             fontWeight='normal'
-            lineHeight='largeNormal'
+            lineHeight='huge'
             display='inline'
           >
             <FormattedMessage
@@ -111,9 +119,9 @@ export const Hero = () => (
           <Space count='8' />
           <Text
             color='text.primary'
-            fontSize='giant'
+            fontSize='common'
             fontWeight='normal'
-            lineHeight='largeNormal'
+            lineHeight='huge'
             display='inline'
           >
             <FormattedMessage
@@ -129,9 +137,9 @@ export const Hero = () => (
         <Column display={['flex', 'none']}>
           <Text
             color='text.primary'
-            fontSize='big'
+            fontSize='small'
             fontWeight='normal'
-            lineHeight='normalMedium'
+            lineHeight='normal'
             display='inline'
           >
             <FormattedMessage
@@ -144,9 +152,9 @@ export const Hero = () => (
           <Layout flexBasis={20} />
           <Text
             color='text.primary'
-            fontSize='big'
+            fontSize='small'
             fontWeight='normal'
-            lineHeight='normalMedium'
+            lineHeight='normal'
             display='inline'
           >
             <FormattedMessage
@@ -159,9 +167,9 @@ export const Hero = () => (
         <Box display={['none', 'inline']}>
           <Text
             color='text.primary'
-            fontSize='giant'
+            fontSize='common'
             fontWeight='normal'
-            lineHeight='largeNormal'
+            lineHeight='huge'
             display='inline'
           >
             <FormattedMessage
