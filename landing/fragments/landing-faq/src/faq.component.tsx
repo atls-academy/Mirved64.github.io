@@ -19,7 +19,7 @@ export const Faq = () => (
       <Row width='100%' justifyContent='space-between' alignItems='center'>
         <Box>
           <Text
-            color='text.second'
+            color='text.secondary'
             fontSize={['ordinary', 'stupendous']}
             fontWeight='normal'
             lineHeight={['regular', 'stupendous']}
@@ -30,28 +30,28 @@ export const Faq = () => (
         </Box>
         <Box display={['none', 'flex']}>
           <NextLink>
-            <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+            <Text color='text.secondary' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               <FormattedMessage id='faqButtonDesctop' defaultMessage='Задать вопрос' />
             </Text>
           </NextLink>
         </Box>
       </Row>
       <Layout flexBasis={80} display={['none', 'flex']} />
-      <Divider backgroundColor='divider.second' weight='1px' display={['none', 'flex']} />
+      <Divider backgroundColor='divider.secondary' weight='1px' display={['none', 'flex']} />
       <Column>
         {faqList.map((question, index) => (
           <Column key={question.id} height='100%'>
             <Layout flexBasis={[16, 40]} />
             <Row justifyContent={['space-between', 'start']}>
               <Box alignItems='center' order={['2', '0']}>
-                <Text color='text.second' fontSize='xl' fontWeight='normal'>
+                <Text color='text.secondary' fontSize='xl' fontWeight='normal'>
                   <FormattedMessage id={`+ ${String(index)}`} defaultMessage='+' />
                 </Text>
               </Box>
               <Layout flexBasis={[0, 27]} />
               <Box alignItems='center' flexGrow={[1, 0]}>
                 <Text
-                  color='text.second'
+                  color='text.secondary'
                   fontSize={['small', 'ordinary']}
                   fontWeight='normal'
                   lineHeight={['standart', 'regular']}
@@ -64,14 +64,14 @@ export const Faq = () => (
               </Box>
             </Row>
             <Layout flexBasis={[16, 40]} />
-            <Divider backgroundColor='divider.second' weight='1px' />
+            <Divider backgroundColor='divider.secondary' weight='1px' />
           </Column>
         ))}
       </Column>
       <Layout flexBasis={60} />
       <Box display={['flex', 'none']}>
         <NextLink>
-          <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='compact'>
+          <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='compact'>
             <FormattedMessage id='faqButtonMobile' defaultMessage='Задать вопрос' />
           </Text>
         </NextLink>

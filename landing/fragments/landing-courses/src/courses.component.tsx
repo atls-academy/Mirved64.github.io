@@ -19,7 +19,7 @@ export const Courses = () => (
       <Row justifyContent='space-between' alignItems='center'>
         <Box flexWrap='wrap'>
           <Text
-            color='text.second'
+            color='text.secondary'
             fontSize={['regular', 'stupendous']}
             fontWeight='normal'
             lineHeight={['common', 'stupendous']}
@@ -30,19 +30,19 @@ export const Courses = () => (
         </Box>
         <Box flexWrap='wrap' display={['none', 'flex']}>
           <NextLink>
-            <Text color='text.second' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
+            <Text color='text.secondary' fontSize='big' fontWeight='normal' lineHeight='normalSmall'>
               <FormattedMessage id='coursesButtonDesctop' defaultMessage='Все материалы' />
             </Text>
           </NextLink>
         </Box>
       </Row>
       <Layout flexBasis={[40, 80]} />
-      <Divider backgroundColor='divider.second' weight='1px' />
+      <Divider backgroundColor='divider.secondary' weight='1px' />
       <Layout flexBasis={[40, 80]} />
       <Box flexDirection={['column', 'row']} justifyContent='space-between'>
         <Box flexWrap='wrap' flexBasis={['content', 725]}>
           <Text
-            color='text.second'
+            color='text.secondary'
             fontSize={['small', 'ordinary']}
             fontWeight='normal'
             lineHeight={['normal', 'regular']}
@@ -57,7 +57,7 @@ export const Courses = () => (
         <Layout display={['flex', 'none']} flexDirection='column' flexBasis={20} />
         <Box flexWrap='wrap' flexBasis={['content', 600]}>
           <Text
-            color='text.second'
+            color='text.secondary'
             fontSize={['small', 'ordinary']}
             fontWeight='normal'
             lineHeight={['normal', 'regular']}
@@ -80,7 +80,7 @@ export const Courses = () => (
                 <Layout flexBasis={[0, 32]} />
                 <Box>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize={['medium', 'regular']}
                     fontWeight='normal'
                     lineHeight={['normal', 'regular']}
@@ -94,7 +94,7 @@ export const Courses = () => (
                 <Layout flexBasis={[12, 16]} />
                 <Box display={['none', 'flex']}>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize='small'
                     fontWeight='normal'
                     lineHeight='normal'
@@ -109,7 +109,7 @@ export const Courses = () => (
                 </Box>
                 <Layout flexBasis={120} display={['none', 'flex']} />
                 <Box display={['flex', 'none']}>
-                  <Text color='text.second' fontSize='tiny' fontWeight='normal' lineHeight='small'>
+                  <Text color='text.secondary' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                     <FormattedMessage
                       id='coursesCardTextFirstMobile'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
@@ -122,7 +122,7 @@ export const Courses = () => (
               <Column flexBasis='content'>
                 <Box>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize={['medium', 'regular']}
                     fontWeight='normal'
                     lineHeight={['normal', 'regular']}
@@ -136,7 +136,7 @@ export const Courses = () => (
                 <Layout flexBasis={[12, 16]} />
                 <Box display={['none', 'flex']}>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize='small'
                     fontWeight='normal'
                     lineHeight='normal'
@@ -150,7 +150,7 @@ export const Courses = () => (
                   </Text>
                 </Box>
                 <Box display={['flex', 'none']}>
-                  <Text color='text.second' fontSize='tiny' fontWeight='normal' lineHeight='small'>
+                  <Text color='text.secondary' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                     <FormattedMessage
                       id='coursesCardTextSecondMobile'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
@@ -164,7 +164,7 @@ export const Courses = () => (
                 <Layout flexBasis={16} display={['flex', 'none']} />
                 <Box flexShrink='0' flexBasis={[200, 496]}>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize={['small', 'regular']}
                     fontWeight='normal'
                     lineHeight={['small', 'regular']}
@@ -177,7 +177,7 @@ export const Courses = () => (
                 </Box>
                 <Box flexShrink='0' flexBasis={[200, 496]}>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize={['small', 'regular']}
                     fontWeight='normal'
                     lineHeight={['small', 'regular']}
@@ -198,7 +198,7 @@ export const Courses = () => (
             <Layout flexBasis={[0, 32]} />
             <Box maxWidth={['none', '346px']}>
               <Text
-                color='text.second'
+                color='text.secondary'
                 fontSize='little'
                 fontWeight='normal'
                 lineHeight={['little', 'medium']}
@@ -224,7 +224,7 @@ export const Courses = () => (
               >
                 <Box>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize={['giant', 'enormous']}
                     fontWeight='normal'
                     lineHeight='big'
@@ -236,7 +236,7 @@ export const Courses = () => (
 
                 <Box flexBasis={[125, 'content']} maxWidth={['100%', 188]}>
                   <Text
-                    color='text.second'
+                    color='text.secondary'
                     fontSize={['atom', 'tiny']}
                     fontWeight='normal'
                     lineHeight={['tiny', 'small']}
@@ -254,7 +254,7 @@ export const Courses = () => (
             </Box>
             <Layout flexBasis={[56, 68]} />
             <Box display={['none', 'flex']}>
-              <Text color='text.second' fontSize='small' fontWeight='normal' lineHeight='small'>
+              <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage
                   id='coursesSidebarButtonDisplay'
                   defaultMessage='Процесс поступления'
@@ -266,7 +266,7 @@ export const Courses = () => (
       </Box>
       <Box flexWrap='wrap' display={['flex', 'none']}>
         <NextLink>
-          <Text color='text.second' fontSize='little' fontWeight='normal' lineHeight='little'>
+          <Text color='text.secondary' fontSize='little' fontWeight='normal' lineHeight='little'>
             <FormattedMessage id='coursesButtonMobile' defaultMessage='Все материалы' />
           </Text>
         </NextLink>
