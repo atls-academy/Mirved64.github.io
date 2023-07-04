@@ -49,8 +49,8 @@ export const Faq = () => (
             <Layout flexBasis={[16, 40]} />
             <Row justifyContent={['space-between', 'start']}>
               <Box alignItems='center' order={['2', '0']}>
-                <Text color='text.secondary' fontSize='xl' fontWeight='normal'>
-                  <FormattedMessage id={`+ ${String(index)}`} defaultMessage='+' />
+                <Text color='text.secondary' fontSize='small' fontWeight='normal'>
+                  <FormattedMessage id={`cross${String(index)}`} defaultMessage='+' />
                 </Text>
               </Box>
               <Layout flexBasis={[0, 27]} />

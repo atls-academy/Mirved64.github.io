@@ -13,6 +13,6 @@ const BaseLink = styled(Text.withComponent('a'))<{ active: boolean; theme: any }
 export const Link = (props) => <BaseLink {...props} />
 
 export const NextLink = (props) => {
-  const NextLinkRenderer: any = createNextLink(BaseLink)
+  const NextLinkRenderer = createNextLink(BaseLink)
   return <NextLinkRenderer {...props} />
 }

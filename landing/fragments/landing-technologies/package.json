@@ -1,5 +1,5 @@
 {
-  "name": "@landing/technologies-fragment",
+  "name": "@landing/fragment-technologies",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {

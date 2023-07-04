@@ -4,16 +4,16 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@landing/slider-fragment": "workspace:^",
-    "@landing/technologies-fragment": "workspace:^",
     "react": "18.2.0"
   },
   "devDependencies": {
-    "@landing/courses-fragment": "workspace:0.0.1",
-    "@landing/faq-fragment": "workspace:0.0.1",
-    "@landing/hero-fragment": "workspace:0.0.1",
-    "@landing/navigation-fragment": "workspace:0.0.1",
-    "@landing/process-fragment": "workspace:0.0.1"
+    "@landing/fragment-courses": "workspace:0.0.1",
+    "@landing/fragment-faq": "workspace:0.0.1",
+    "@landing/fragment-hero": "workspace:0.0.1",
+    "@landing/fragment-navigation": "workspace:0.0.1",
+    "@landing/fragment-process": "workspace:0.0.1",
+    "@landing/fragment-slider": "workspace:0.0.1",
+    "@landing/fragment-technologies": "workspace:0.0.1"
   },
   "peerDependencies": {
     "react": "*",

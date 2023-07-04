@@ -3058,9 +3058,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@landing/courses-fragment@workspace:0.0.1, @landing/courses-fragment@workspace:landing/fragments/landing-courses":
+"@landing/fragment-courses@workspace:0.0.1, @landing/fragment-courses@workspace:landing/fragments/landing-courses":
   version: 0.0.0-use.local
-  resolution: "@landing/courses-fragment@workspace:landing/fragments/landing-courses"
+  resolution: "@landing/fragment-courses@workspace:landing/fragments/landing-courses"
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
@@ -3078,9 +3078,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/faq-fragment@workspace:0.0.1, @landing/faq-fragment@workspace:landing/fragments/landing-faq":
+"@landing/fragment-faq@workspace:0.0.1, @landing/fragment-faq@workspace:landing/fragments/landing-faq":
   version: 0.0.0-use.local
-  resolution: "@landing/faq-fragment@workspace:landing/fragments/landing-faq"
+  resolution: "@landing/fragment-faq@workspace:landing/fragments/landing-faq"
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
@@ -3096,9 +3096,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/hero-fragment@workspace:0.0.1, @landing/hero-fragment@workspace:landing/fragments/landing-hero":
+"@landing/fragment-hero@workspace:0.0.1, @landing/fragment-hero@workspace:landing/fragments/landing-hero":
   version: 0.0.0-use.local
-  resolution: "@landing/hero-fragment@workspace:landing/fragments/landing-hero"
+  resolution: "@landing/fragment-hero@workspace:landing/fragments/landing-hero"
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
@@ -3115,28 +3115,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/index-page@workspace:0.0.1, @landing/index-page@workspace:landing/pages/index-page":
+"@landing/fragment-navigation@workspace:0.0.1, @landing/fragment-navigation@workspace:landing/fragments/landing-navigation":
   version: 0.0.0-use.local
-  resolution: "@landing/index-page@workspace:landing/pages/index-page"
-  dependencies:
-    "@landing/courses-fragment": "workspace:0.0.1"
-    "@landing/faq-fragment": "workspace:0.0.1"
-    "@landing/hero-fragment": "workspace:0.0.1"
-    "@landing/navigation-fragment": "workspace:0.0.1"
-    "@landing/process-fragment": "workspace:0.0.1"
-    "@landing/slider-fragment": "workspace:^"
-    "@landing/technologies-fragment": "workspace:^"
-    react: "npm:18.2.0"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@landing/navigation-fragment@workspace:0.0.1, @landing/navigation-fragment@workspace:landing/fragments/landing-navigation":
-  version: 0.0.0-use.local
-  resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
+  resolution: "@landing/fragment-navigation@workspace:landing/fragments/landing-navigation"
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
@@ -3152,9 +3133,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/process-fragment@workspace:0.0.1, @landing/process-fragment@workspace:landing/fragments/landing-process":
+"@landing/fragment-process@workspace:0.0.1, @landing/fragment-process@workspace:landing/fragments/landing-process":
   version: 0.0.0-use.local
-  resolution: "@landing/process-fragment@workspace:landing/fragments/landing-process"
+  resolution: "@landing/fragment-process@workspace:landing/fragments/landing-process"
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
@@ -3163,6 +3144,60 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     react-intl: "npm:^6.4.4"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/fragment-slider@workspace:0.0.1, @landing/fragment-slider@workspace:landing/fragments/landing-slider":
+  version: 0.0.0-use.local
+  resolution: "@landing/fragment-slider@workspace:landing/fragments/landing-slider"
+  dependencies:
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@ui/icons": "workspace:^"
+    "@ui/image": "workspace:^"
+    "@ui/layout": "workspace:^"
+    "@ui/text": "workspace:^"
+    react-intl: "npm:^6.4.4"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/fragment-technologies@workspace:0.0.1, @landing/fragment-technologies@workspace:landing/fragments/landing-technologies":
+  version: 0.0.0-use.local
+  resolution: "@landing/fragment-technologies@workspace:landing/fragments/landing-technologies"
+  dependencies:
+    "@types/react": "npm:^18.2.9"
+    "@types/react-dom": "npm:^18.2.4"
+    "@ui/divider": "workspace:^"
+    "@ui/layout": "workspace:^"
+    "@ui/text": "workspace:^"
+    react-intl: "npm:^6.4.4"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/index-page@workspace:0.0.1, @landing/index-page@workspace:landing/pages/index-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/index-page@workspace:landing/pages/index-page"
+  dependencies:
+    "@landing/fragment-courses": "workspace:0.0.1"
+    "@landing/fragment-faq": "workspace:0.0.1"
+    "@landing/fragment-hero": "workspace:0.0.1"
+    "@landing/fragment-navigation": "workspace:0.0.1"
+    "@landing/fragment-process": "workspace:0.0.1"
+    "@landing/fragment-slider": "workspace:0.0.1"
+    "@landing/fragment-technologies": "workspace:0.0.1"
+    react: "npm:18.2.0"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -3184,41 +3219,6 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-intl: "npm:^6.4.4"
     typescript: "npm:4.6.2"
-  languageName: unknown
-  linkType: soft
-
-"@landing/slider-fragment@workspace:^, @landing/slider-fragment@workspace:landing/fragments/landing-slider":
-  version: 0.0.0-use.local
-  resolution: "@landing/slider-fragment@workspace:landing/fragments/landing-slider"
-  dependencies:
-    "@types/react": "npm:^18.2.9"
-    "@types/react-dom": "npm:^18.2.4"
-    "@ui/icons": "workspace:^"
-    "@ui/image": "workspace:^"
-    "@ui/layout": "workspace:^"
-    "@ui/text": "workspace:^"
-    react-intl: "npm:^6.4.4"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@landing/technologies-fragment@workspace:^, @landing/technologies-fragment@workspace:landing/fragments/landing-technologies":
-  version: 0.0.0-use.local
-  resolution: "@landing/technologies-fragment@workspace:landing/fragments/landing-technologies"
-  dependencies:
-    "@types/react": "npm:^18.2.9"
-    "@types/react-dom": "npm:^18.2.4"
-    "@ui/divider": "workspace:^"
-    "@ui/layout": "workspace:^"
-    "@ui/text": "workspace:^"
-    react-intl: "npm:^6.4.4"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 

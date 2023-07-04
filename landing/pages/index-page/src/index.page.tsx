@@ -1,12 +1,12 @@
 import React            from 'react'
 
-import { Courses }      from '@landing/courses-fragment'
-import { Faq }          from '@landing/faq-fragment'
-import { Hero }         from '@landing/hero-fragment'
-import { Navigation }   from '@landing/navigation-fragment'
-import { Process }      from '@landing/process-fragment'
-import { Slider }       from '@landing/slider-fragment'
-import { Technologies } from '@landing/technologies-fragment'
+import { Courses }      from '@landing/fragment-courses'
+import { Faq }          from '@landing/fragment-faq'
+import { Hero }         from '@landing/fragment-hero'
+import { Navigation }   from '@landing/fragment-navigation'
+import { Process }      from '@landing/fragment-process'
+import { Slider }       from '@landing/fragment-slider'
+import { Technologies } from '@landing/fragment-technologies'
 
 export const IndexPage = () => (
   <>
