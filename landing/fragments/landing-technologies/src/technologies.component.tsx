@@ -23,7 +23,7 @@ export const Technologies = () => (
       <Divider backgroundColor='divider.primary' weight='1px' />
       <Layout flexBasis={[36, 64]} />
       <Row overflow='hidden' width='100%'>
-        {technologiesListTop.map((technology, index) => (
+        {technologiesListTop.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
               color='text.primary'
@@ -32,10 +32,7 @@ export const Technologies = () => (
               lineHeight={['regular', 'giant']}
               whiteSpace='nowrap'
             >
-              <FormattedMessage
-                id={`technologyTopLine${String(index)}`}
-                defaultMessage={technology.technology}
-              />
+              <FormattedMessage id={technology.technology} />
             </Text>
             <Layout flexBasis={24} />
             <Box width='48px'>
@@ -47,7 +44,7 @@ export const Technologies = () => (
       </Row>
       <Layout flexBasis={[36, 64]} />
       <Row overflow='hidden' width='100%'>
-        {technologiesListBottom.map((technology, index) => (
+        {technologiesListBottom.map((technology) => (
           <Box flexShrink='0' key={technology.technology}>
             <Text
               color='text.primary'
@@ -57,10 +54,7 @@ export const Technologies = () => (
               lineHeight={['regular', 'giant']}
               whiteSpace='nowrap'
             >
-              <FormattedMessage
-                id={`technologyBottomLine${String(index)}`}
-                defaultMessage={technology.technology}
-              />
+              <FormattedMessage id={technology.technology} />
             </Text>
             <Layout flexBasis={24} />
             <Box width='48px'>

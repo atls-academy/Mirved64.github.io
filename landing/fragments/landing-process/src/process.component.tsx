@@ -42,7 +42,7 @@ export const Process = () => (
                       fontWeight={['normalMedium', 'normal']}
                       lineHeight='regular'
                     >
-                      <FormattedMessage id={process.process} defaultMessage={process.process} />
+                      <FormattedMessage id={process.process} />
                     </Text>
                   </Box>
                   <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
@@ -52,10 +52,7 @@ export const Process = () => (
                       fontWeight='normal'
                       lineHeight={['compact', 'standart']}
                     >
-                      <FormattedMessage
-                        id={`processText${String(index)}`}
-                        defaultMessage={process.text}
-                      />
+                      <FormattedMessage id={process.text} />
                     </Text>
                   </Box>
                 </Box>
@@ -92,10 +89,7 @@ export const Process = () => (
                     fontWeight={['normalMedium', 'normal']}
                     lineHeight='regular'
                   >
-                    <FormattedMessage
-                      id={`process${String(index)}`}
-                      defaultMessage={process.process}
-                    />
+                    <FormattedMessage id={process.process} />
                   </Text>
                 </Box>
                 <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
@@ -105,10 +99,7 @@ export const Process = () => (
                     fontWeight='normal'
                     lineHeight={['compact', 'standart']}
                   >
-                    <FormattedMessage
-                      id={`processText${String(index)}`}
-                      defaultMessage={process.text}
-                    />
+                    <FormattedMessage id={process.text} />
                   </Text>
                 </Box>
               </Box>

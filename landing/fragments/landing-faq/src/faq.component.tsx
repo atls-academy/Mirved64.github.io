@@ -25,18 +25,13 @@ export const Faq = () => (
             lineHeight={['regular', 'stupendous']}
             letter='-2%'
           >
-            <FormattedMessage id='faqTitle' defaultMessage='Вопросы и ответы' />
+            <FormattedMessage id='faqTitle' />
           </Text>
         </Box>
         <Box display={['none', 'flex']}>
           <NextLink>
-            <Text
-              color='text.secondary'
-              fontSize='big'
-              fontWeight='normal'
-              lineHeight='normalSmall'
-            >
-              <FormattedMessage id='faqButtonDesktop' defaultMessage='Задать вопрос' />
+            <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='compact'>
+              <FormattedMessage id='faqButtonDesktop' />
             </Text>
           </NextLink>
         </Box>
@@ -50,7 +45,7 @@ export const Faq = () => (
             <Row justifyContent={['space-between', 'start']}>
               <Box alignItems='center' order={['2', '0']}>
                 <Text color='text.secondary' fontSize='small' fontWeight='normal'>
-                  <FormattedMessage id={`cross${String(index)}`} defaultMessage='+' />
+                  <FormattedMessage id='cross' />
                 </Text>
               </Box>
               <Layout flexBasis={[0, 27]} />
@@ -61,10 +56,7 @@ export const Faq = () => (
                   fontWeight='normal'
                   lineHeight={['standart', 'regular']}
                 >
-                  <FormattedMessage
-                    id={`question${String(index)}`}
-                    defaultMessage={question.question}
-                  />
+                  <FormattedMessage id={question.question} />
                 </Text>
               </Box>
             </Row>
@@ -77,7 +69,7 @@ export const Faq = () => (
       <Box display={['flex', 'none']}>
         <NextLink>
           <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='compact'>
-            <FormattedMessage id='faqButtonMobile' defaultMessage='Задать вопрос' />
+            <FormattedMessage id='faqButtonMobile' />
           </Text>
         </NextLink>
       </Box>

@@ -38,7 +38,7 @@ export const Navigation = () => (
               lineHeight='little'
               textTransform='uppercase'
             >
-              <FormattedMessage id={link.name} defaultMessage={link.name} />
+              <FormattedMessage id={link.name} />
             </Text>
           </NextLink>
         </Box>
@@ -47,7 +47,7 @@ export const Navigation = () => (
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='compact' fontWeight='normal' lineHeight='little'>
-          <FormattedMessage id='navigationButton' defaultMessage='Курсы' />
+          <FormattedMessage id='navigationButton' />
         </Text>
       </NextLink>
     </Box>

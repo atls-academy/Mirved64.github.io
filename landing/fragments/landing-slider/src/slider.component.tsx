@@ -22,7 +22,7 @@ export const Slider = () => (
             lineHeight={['atom', 'extraSmall']}
             textTransform='uppercase'
           >
-            <FormattedMessage id='sliderSubtitle' defaultMessage='процесс создания' />
+            <FormattedMessage id='sliderSubtitle' />
           </Text>
         </Box>
         <Layout flexBasis={24} />
@@ -34,10 +34,7 @@ export const Slider = () => (
             textAlign='center'
             letter='-1%'
           >
-            <FormattedMessage
-              id='sliderSlogan'
-              defaultMessage='Любой процесс перестаёт быть сложным, когда знаешь как он протекает'
-            />
+            <FormattedMessage id='sliderSlogan' />
           </Text>
         </Box>
       </Column>
@@ -52,10 +49,7 @@ export const Slider = () => (
           </Box>
           <Box height={['100%', 60]} maxWidth={['190px', '780px']} alignItems='center'>
             <Text color='text.primary' fontSize='little' lineHeight='medium' textAlign='center'>
-              <FormattedMessage
-                id='sliderSign'
-                defaultMessage='Формирование системы базовых фрагментов и компонентов'
-              />
+              <FormattedMessage id='sliderSign' />
             </Text>
           </Box>
           <Box height='60px' width='40px' justifyContent='center' alignItems='center'>

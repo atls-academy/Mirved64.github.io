@@ -25,7 +25,7 @@ export const Courses = () => (
             lineHeight={['common', 'stupendous']}
             letter='-2%'
           >
-            <FormattedMessage id='coursesTitle' defaultMessage='Курсы и материалы' />
+            <FormattedMessage id='coursesTitle' />
           </Text>
         </Box>
         <Box flexWrap='wrap' display={['none', 'flex']}>
@@ -36,7 +36,7 @@ export const Courses = () => (
               fontWeight='normal'
               lineHeight='normalSmall'
             >
-              <FormattedMessage id='coursesButtonDesktop' defaultMessage='Все материалы' />
+              <FormattedMessage id='coursesButtonDesktop' />
             </Text>
           </NextLink>
         </Box>
@@ -52,11 +52,7 @@ export const Courses = () => (
             fontWeight='normal'
             lineHeight={['normal', 'regular']}
           >
-            <FormattedMessage
-              id='coursesSubtitlePowerBroker'
-              defaultMessage='Являясь серым кардиналом, Atlantis имеет влияние на сферу IT и неограниченные
-            возможности в применении навыков.'
-            />
+            <FormattedMessage id='coursesSubtitlePowerBroker' />
           </Text>
         </Box>
         <Layout display={['flex', 'none']} flexDirection='column' flexBasis={20} />
@@ -67,10 +63,7 @@ export const Courses = () => (
             fontWeight='normal'
             lineHeight={['normal', 'regular']}
           >
-            <FormattedMessage
-              id='coursesSubtitlePractice'
-              defaultMessage='Эффективность обучения заметно вырастает благодаря практики на существующих проектах.'
-            />
+            <FormattedMessage id='coursesSubtitlePractice' />
           </Text>
         </Box>
       </Box>
@@ -90,10 +83,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['normal', 'regular']}
                   >
-                    <FormattedMessage
-                      id='coursesCardTitleFrontend'
-                      defaultMessage='Frontend Engineer'
-                    />
+                    <FormattedMessage id='coursesCardTitleFrontend' />
                   </Text>
                 </Box>
                 <Layout flexBasis={[12, 16]} />
@@ -104,12 +94,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='normal'
                   >
-                    <FormattedMessage
-                      id='coursesCardTextFrontendDesktop'
-                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
-                    программирования. Получите востребованную профессию и возможность открыть бизнес
-                    в сфере информационных технологий'
-                    />
+                    <FormattedMessage id='coursesCardTextFrontendDesktop' />
                   </Text>
                 </Box>
                 <Layout flexBasis={120} display={['none', 'flex']} />
@@ -120,11 +105,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='small'
                   >
-                    <FormattedMessage
-                      id='coursesCardTextFrontendMobile'
-                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
-                    Получите востребованную профессию и возможность открыть бизнес.'
-                    />
+                    <FormattedMessage id='coursesCardTextFrontendMobile' />
                   </Text>
                 </Box>
                 <Layout flexBasis={52} display={['flex', 'none']} />
@@ -137,10 +118,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['normal', 'regular']}
                   >
-                    <FormattedMessage
-                      id='coursesCardTitleBasis'
-                      defaultMessage='Основы разработки'
-                    />
+                    <FormattedMessage id='coursesCardTitleBasis' />
                   </Text>
                 </Box>
                 <Layout flexBasis={[12, 16]} />
@@ -151,12 +129,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='normal'
                   >
-                    <FormattedMessage
-                      id='coursesCardTextBasisDesktop'
-                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
-                    программирования. Получите востребованную профессию и возможность открыть бизнес
-                    в сфере информационных технологий'
-                    />
+                    <FormattedMessage id='coursesCardTextBasisDesktop' />
                   </Text>
                 </Box>
                 <Box display={['flex', 'none']}>
@@ -166,11 +139,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='small'
                   >
-                    <FormattedMessage
-                      id='coursesCardTextBasisMobile'
-                      defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
-                    Получите востребованную профессию и возможность открыть бизнес.'
-                    />
+                    <FormattedMessage id='coursesCardTextBasisMobile' />
                   </Text>
                 </Box>
                 <Layout flexBasis={[36, 112]} />
@@ -184,10 +153,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['small', 'regular']}
                   >
-                    <FormattedMessage
-                      id='coursesSmallCardLibraries'
-                      defaultMessage='Как использовать библиотеки'
-                    />
+                    <FormattedMessage id='coursesSmallCardLibraries' />
                   </Text>
                 </Box>
                 <Box flexShrink='0' flexBasis={[200, 496]}>
@@ -197,10 +163,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['small', 'regular']}
                   >
-                    <FormattedMessage
-                      id='coursesSmallCardDesign'
-                      defaultMessage='Дизайн, Figma, Математика'
-                    />
+                    <FormattedMessage id='coursesSmallCardDesign' />
                   </Text>
                 </Box>
               </Row>
@@ -218,11 +181,7 @@ export const Courses = () => (
                 fontWeight='normal'
                 lineHeight={['little', 'medium']}
               >
-                <FormattedMessage
-                  id='coursesSidebarSubtitle'
-                  defaultMessage='Вы изучите фундаментальные знания в IT и прокачаете нужные для сферы навыки. Мы не
-                собираем большие группы, что позволяет курировать работу каждого студента.'
-                />
+                <FormattedMessage id='coursesSidebarSubtitle' />
               </Text>
             </Box>
             <Layout flexBasis={[0, 74]} />
@@ -244,7 +203,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight='big'
                   >
-                    <FormattedMessage id='coursesSidebarNumber' defaultMessage='5' />
+                    <FormattedMessage id='coursesSidebarNumber' />
                   </Text>
                 </Box>
                 <Layout display={['flex', 'none']} flexBasis={12} />
@@ -256,10 +215,7 @@ export const Courses = () => (
                     fontWeight='normal'
                     lineHeight={['tiny', 'small']}
                   >
-                    <FormattedMessage
-                      id='coursesSidebarSign'
-                      defaultMessage='студентов обучаются в одной практической группе'
-                    />
+                    <FormattedMessage id='coursesSidebarSign' />
                   </Text>
                 </Box>
               </Box>
@@ -270,10 +226,7 @@ export const Courses = () => (
             <Layout flexBasis={[56, 68]} />
             <Box display={['none', 'flex']}>
               <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='small'>
-                <FormattedMessage
-                  id='coursesSidebarButtonDesktop'
-                  defaultMessage='Процесс поступления'
-                />
+                <FormattedMessage id='coursesSidebarButtonDesktop' />
               </Text>
             </Box>
           </Column>
@@ -282,7 +235,7 @@ export const Courses = () => (
       <Box flexWrap='wrap' display={['flex', 'none']}>
         <NextLink>
           <Text color='text.secondary' fontSize='little' fontWeight='normal' lineHeight='little'>
-            <FormattedMessage id='coursesButtonMobile' defaultMessage='Все материалы' />
+            <FormattedMessage id='coursesButtonMobile' />
           </Text>
         </NextLink>
       </Box>
