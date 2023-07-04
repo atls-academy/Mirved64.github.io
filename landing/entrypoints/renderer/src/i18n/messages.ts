@@ -61,8 +61,9 @@ export const messages = {
     sliderSlogan: 'Любой процесс перестаёт быть сложным, когда знаешь как он протекает',
     sliderSign: 'Формирование системы базовых фрагментов и компонентов',
     faqTitle: 'Вопросы и ответы',
+    faqCross: '+',
+    faqQuestion: 'Подойдёт ли мне профессия?',
     faqButtonDesktop: 'Задать вопрос',
     faqButtonMobile: 'Задать вопрос',
-    cross: '+',
   },
 }
