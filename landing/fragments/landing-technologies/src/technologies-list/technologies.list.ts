@@ -1,4 +1,4 @@
-import { Technology } from './technologies.interfaces'
+import { Technology } from './index'
 
 export const technologiesListTop: Technology[] = [
   { technology: 'HTML' },
