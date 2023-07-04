@@ -27,7 +27,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['ordinary', 'stupendous']}
             >
-              <FormattedMessage id='heroTitleFirst' defaultMessage='Обучаем' />
+              <FormattedMessage id='heroTitleTeach' defaultMessage='Обучаем' />
             </Text>
             <Text
               color='text.primary'
@@ -35,7 +35,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['ordinary', 'stupendous']}
             >
-              <FormattedMessage id='heroTitleFirst' defaultMessage='профессионалов' />
+              <FormattedMessage id='heroTitleProfessionals' defaultMessage='профессионалов' />
             </Text>
           </Column>
           <Box>
@@ -45,7 +45,7 @@ export const Hero = () => (
               fontWeight='normal'
               lineHeight={['ordinary', 'stupendous']}
             >
-              <FormattedMessage id='heroTitleSecond' defaultMessage='для революции в IT' />
+              <FormattedMessage id='heroTitleRevolution' defaultMessage='для революции в IT' />
             </Text>
           </Box>
         </Column>
@@ -107,7 +107,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='heroTextFirstDesctop'
+              id='heroTextDigitalDesktop'
               defaultMessage='Digital становится всё более многолюдным, востребованность по направлениям при этом не
             снижается'
             />
@@ -125,7 +125,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='heroTextSecondDesctop'
+              id='heroTextButDesktop'
               defaultMessage='Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало'
             />
           </Text>
@@ -143,7 +143,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='heroTextFirstMobile'
+              id='heroTextMobile'
               defaultMessage='Digital становится всё более многолюдным, востребованность по направлениям при этом не
             снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему
             мало.'
@@ -158,7 +158,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='heroTextThirdDesctop'
+              id='heroTextAcademyDesktop'
               defaultMessage='Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров'
             />
           </Text>
@@ -173,7 +173,7 @@ export const Hero = () => (
             display='inline'
           >
             <FormattedMessage
-              id='heroTextSecondMobile'
+              id='heroTextAcademyMobile'
               defaultMessage='Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и
             дизайнеров'
             />

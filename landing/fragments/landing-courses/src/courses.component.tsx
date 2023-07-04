@@ -36,7 +36,7 @@ export const Courses = () => (
               fontWeight='normal'
               lineHeight='normalSmall'
             >
-              <FormattedMessage id='coursesButtonDesctop' defaultMessage='Все материалы' />
+              <FormattedMessage id='coursesButtonDesktop' defaultMessage='Все материалы' />
             </Text>
           </NextLink>
         </Box>
@@ -53,7 +53,7 @@ export const Courses = () => (
             lineHeight={['normal', 'regular']}
           >
             <FormattedMessage
-              id='coursesTextFirst'
+              id='coursesSubtitlePowerBroker'
               defaultMessage='Являясь серым кардиналом, Atlantis имеет влияние на сферу IT и неограниченные
             возможности в применении навыков.'
             />
@@ -68,7 +68,7 @@ export const Courses = () => (
             lineHeight={['normal', 'regular']}
           >
             <FormattedMessage
-              id='coursesTextSecond'
+              id='coursesSubtitlePractice'
               defaultMessage='Эффективность обучения заметно вырастает благодаря практики на существующих проектах.'
             />
           </Text>
@@ -91,7 +91,7 @@ export const Courses = () => (
                     lineHeight={['normal', 'regular']}
                   >
                     <FormattedMessage
-                      id='coursesCardTitleFirst'
+                      id='coursesCardTitleFrontend'
                       defaultMessage='Frontend Engineer'
                     />
                   </Text>
@@ -105,7 +105,7 @@ export const Courses = () => (
                     lineHeight='normal'
                   >
                     <FormattedMessage
-                      id='coursesCardTextFirstDesctop'
+                      id='coursesCardTextFrontendDesktop'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
                     программирования. Получите востребованную профессию и возможность открыть бизнес
                     в сфере информационных технологий'
@@ -121,7 +121,7 @@ export const Courses = () => (
                     lineHeight='small'
                   >
                     <FormattedMessage
-                      id='coursesCardTextFirstMobile'
+                      id='coursesCardTextFrontendMobile'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
                     Получите востребованную профессию и возможность открыть бизнес.'
                     />
@@ -138,7 +138,7 @@ export const Courses = () => (
                     lineHeight={['normal', 'regular']}
                   >
                     <FormattedMessage
-                      id='coursesCardTitleSecond'
+                      id='coursesCardTitleBasis'
                       defaultMessage='Основы разработки'
                     />
                   </Text>
@@ -152,7 +152,7 @@ export const Courses = () => (
                     lineHeight='normal'
                   >
                     <FormattedMessage
-                      id='coursesCardTextSecondDesctop'
+                      id='coursesCardTextBasisDesktop'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении
                     программирования. Получите востребованную профессию и возможность открыть бизнес
                     в сфере информационных технологий'
@@ -167,7 +167,7 @@ export const Courses = () => (
                     lineHeight='small'
                   >
                     <FormattedMessage
-                      id='coursesCardTextSecondMobile'
+                      id='coursesCardTextBasisMobile'
                       defaultMessage='Вы изучите фундаментальные знания в ИТ и прокачаетесь в программирование.
                     Получите востребованную профессию и возможность открыть бизнес.'
                     />
@@ -185,7 +185,7 @@ export const Courses = () => (
                     lineHeight={['small', 'regular']}
                   >
                     <FormattedMessage
-                      id='coursesSmallCardFirst'
+                      id='coursesSmallCardLibraries'
                       defaultMessage='Как использовать библиотеки'
                     />
                   </Text>
@@ -198,7 +198,7 @@ export const Courses = () => (
                     lineHeight={['small', 'regular']}
                   >
                     <FormattedMessage
-                      id='coursesSmallCardSecond'
+                      id='coursesSmallCardDesign'
                       defaultMessage='Дизайн, Figma, Математика'
                     />
                   </Text>
@@ -219,7 +219,7 @@ export const Courses = () => (
                 lineHeight={['little', 'medium']}
               >
                 <FormattedMessage
-                  id='coursesSidebarText'
+                  id='coursesSidebarSubtitle'
                   defaultMessage='Вы изучите фундаментальные знания в IT и прокачаете нужные для сферы навыки. Мы не
                 собираем большие группы, что позволяет курировать работу каждого студента.'
                 />
@@ -257,7 +257,7 @@ export const Courses = () => (
                     lineHeight={['tiny', 'small']}
                   >
                     <FormattedMessage
-                      id='coursesSidebarSubtitle'
+                      id='coursesSidebarSign'
                       defaultMessage='студентов обучаются в одной практической группе'
                     />
                   </Text>
@@ -271,7 +271,7 @@ export const Courses = () => (
             <Box display={['none', 'flex']}>
               <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage
-                  id='coursesSidebarButtonDisplay'
+                  id='coursesSidebarButtonDesktop'
                   defaultMessage='Процесс поступления'
                 />
               </Text>

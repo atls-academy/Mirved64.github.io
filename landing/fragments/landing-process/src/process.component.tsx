@@ -53,7 +53,7 @@ export const Process = () => (
                       lineHeight={['compact', 'standart']}
                     >
                       <FormattedMessage
-                        id={`processText ${String(index)}`}
+                        id={`processText${String(index)}`}
                         defaultMessage={process.text}
                       />
                     </Text>
@@ -93,7 +93,7 @@ export const Process = () => (
                     lineHeight='regular'
                   >
                     <FormattedMessage
-                      id={`process ${String(index)}`}
+                      id={`process${String(index)}`}
                       defaultMessage={process.process}
                     />
                   </Text>
@@ -106,7 +106,7 @@ export const Process = () => (
                     lineHeight={['compact', 'standart']}
                   >
                     <FormattedMessage
-                      id={`processText ${String(index)}`}
+                      id={`processText${String(index)}`}
                       defaultMessage={process.text}
                     />
                   </Text>

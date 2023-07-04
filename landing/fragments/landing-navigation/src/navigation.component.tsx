@@ -47,7 +47,7 @@ export const Navigation = () => (
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='compact' fontWeight='normal' lineHeight='little'>
-          <FormattedMessage id='navigationCourses' defaultMessage='Курсы' />
+          <FormattedMessage id='navigationButton' defaultMessage='Курсы' />
         </Text>
       </NextLink>
     </Box>

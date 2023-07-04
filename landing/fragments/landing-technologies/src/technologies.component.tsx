@@ -33,7 +33,7 @@ export const Technologies = () => (
               whiteSpace='nowrap'
             >
               <FormattedMessage
-                id={`technologyTop ${String(index)}`}
+                id={`technologyTopLine${String(index)}`}
                 defaultMessage={technology.technology}
               />
             </Text>
@@ -58,7 +58,7 @@ export const Technologies = () => (
               whiteSpace='nowrap'
             >
               <FormattedMessage
-                id={`technologyBottom ${String(index)}`}
+                id={`technologyBottomLine${String(index)}`}
                 defaultMessage={technology.technology}
               />
             </Text>

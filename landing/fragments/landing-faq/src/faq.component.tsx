@@ -36,7 +36,7 @@ export const Faq = () => (
               fontWeight='normal'
               lineHeight='normalSmall'
             >
-              <FormattedMessage id='faqButtonDesctop' defaultMessage='Задать вопрос' />
+              <FormattedMessage id='faqButtonDesktop' defaultMessage='Задать вопрос' />
             </Text>
           </NextLink>
         </Box>
@@ -62,7 +62,7 @@ export const Faq = () => (
                   lineHeight={['standart', 'regular']}
                 >
                   <FormattedMessage
-                    id={`question ${String(index)}`}
+                    id={`question${String(index)}`}
                     defaultMessage={question.question}
                   />
                 </Text>
