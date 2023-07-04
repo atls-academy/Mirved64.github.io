@@ -42,6 +42,21 @@ export const messages = {
     coursesSidebarSign: 'студентов обучаются в одной практической группе',
     coursesSidebarButtonDesktop: 'Процесс поступления',
     coursesButtonMobile: 'Все материалы',
+    processProcessName1: 'Интеграция в команду',
+    processProcessText1:
+      'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
+    processProcessName2: 'Создание среды',
+    processProcessText2:
+      'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
+    processProcessName3: 'Изучение технологий',
+    processProcessText3:
+      'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
+    processProcessName4: 'Практика изученого',
+    processProcessText4:
+      'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
+    processProcessName5: 'Интеграция в проект',
+    processProcessText5:
+      'Являясь серым кардиналом Atlantis имеет влияние на сферу IT и неограниченные.',
     sliderSubtitle: 'процесс создания',
     sliderSlogan: 'Любой процесс перестаёт быть сложным, когда знаешь как он протекает',
     sliderSign: 'Формирование системы базовых фрагментов и компонентов',
