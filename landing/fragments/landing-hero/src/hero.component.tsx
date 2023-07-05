@@ -2,10 +2,10 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Divider }          from '@ui/divider'
-import { DefaultIcon }      from '@ui/icons'
 import { TelegramIcon }     from '@ui/icons'
 import { GitHubIcon }       from '@ui/icons'
 import { MailIcon }         from '@ui/icons'
+import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -16,84 +16,113 @@ import { Space }            from '@ui/text'
 export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[80, 412]} />
-    <Box flexDirection={['column', 'row']} alignItems={['center', 'end']}>
-      <Layout flexBasis={[20, 230]} />
-      <Column flexBasis={['content', 1460]} maxWidth={[335, '100%']}>
-        <Column>
-          <Column>
-            <Text
-              color='text.primary'
-              fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
-              lineHeight={['ordinary', 'stupendous']}
+    <Box flexGrow='1' flexShrink='1'>
+      <Layout flexBasis={[20, 230]} flexShrink='0' />
+      <Box flexGrow='1' flexShrink='1'>
+        <Box flexBasis={[335, 1460]} flexShrink='2' flexGrow='1'>
+          <Column flexShrink='1' flexGrow={[1, 0]} flexBasis={[335, 1460]}>
+            <Box>
+              <Text
+                color='text.primary'
+                fontSize={['normal', 'stupendous']}
+                fontWeight='normal'
+                lineHeight={['ordinary', 'stupendous']}
+              >
+                <FormattedMessage id='heroTitleTeach' />
+              </Text>
+            </Box>
+            <Box>
+              <Text
+                color='text.primary'
+                fontSize={['normal', 'stupendous']}
+                fontWeight='normal'
+                lineHeight={['ordinary', 'stupendous']}
+                wordBreak='break-all'
+              >
+                <FormattedMessage id='heroTitleProfessionals' />
+              </Text>
+            </Box>
+            <Box>
+              <Text
+                color='text.primary'
+                fontSize={['normal', 'stupendous']}
+                fontWeight='normal'
+                lineHeight={['ordinary', 'stupendous']}
+                wordBreak='break-all'
+              >
+                <FormattedMessage id='heroTitleRevolution' />
+              </Text>
+            </Box>
+            <Layout flexBasis={[24, 48]} />
+            <Divider backgroundColor='divider.primary' weight={1} />
+            <Layout flexBasis={[24, 48]} />
+            <Box flexWrap='wrap' maxWidth={640}>
+              <Text
+                color='text.primary'
+                fontSize={['tiny', 'small']}
+                fontWeight='normal'
+                lineHeight={['compact', 'normal']}
+              >
+                <FormattedMessage id='heroSlogan' />
+              </Text>
+            </Box>
+            <Layout flexBasis={[24, 0]} />
+            <Box
+              display={['flex', 'none']}
+              flexShrink='1'
+              flexGrow='1'
+              flexBasis={44}
+              justifyContent='space-around'
+              alignItems='center'
             >
-              <FormattedMessage id='heroTitleTeach' />
-            </Text>
-            <Text
-              color='text.primary'
-              fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
-              lineHeight={['ordinary', 'stupendous']}
-            >
-              <FormattedMessage id='heroTitleProfessionals' />
-            </Text>
+              <Box width={['15px', '18px']} height={['12px', '15px']}>
+                <NextLink>
+                  <TelegramIcon width='100%' height='100%' />
+                </NextLink>
+              </Box>
+              <Box width={['15px', '18px']} height={['15px', '18px']}>
+                <NextLink>
+                  <GitHubIcon width='100%' height='100%' />
+                </NextLink>
+              </Box>
+              <Box width={['15px', '18px']} height={['12px', '14px']}>
+                <NextLink>
+                  <MailIcon width='100%' height='100%' />
+                </NextLink>
+              </Box>
+            </Box>
           </Column>
-          <Box>
-            <Text
-              color='text.primary'
-              fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
-              lineHeight={['ordinary', 'stupendous']}
-            >
-              <FormattedMessage id='heroTitleRevolution' />
-            </Text>
-          </Box>
-        </Column>
-        <Layout flexBasis={[24, 48]} />
-        <Divider backgroundColor='divider.primary' weight='1px' />
-        <Layout flexBasis={[24, 48]} />
-        <Box maxWidth={['350px', '600px']} flexWrap='wrap'>
-          <Text
-            color='text.primary'
-            fontSize={['tiny', 'small']}
-            fontWeight='normal'
-            lineHeight={['compact', 'normal']}
-          >
-            <FormattedMessage id='heroSlogan' />
-          </Text>
         </Box>
-      </Column>
-      <Box
-        flexDirection={['row', 'column']}
-        order={['1', '0']}
-        flexGrow={[0, 2]}
-        width={['90%', '56px']}
-        height={['44px', '200px']}
-        justifyContent='space-around'
-        alignItems={['center', 'end']}
-      >
-        <Box width={['15px', '18px']} height={['12px', '15px']}>
-          <NextLink>
-            <TelegramIcon width='100%' height='100%' />
-          </NextLink>
-        </Box>
-        <Box width={['15px', '18px']} height={['15px', '18px']}>
-          <NextLink>
-            <GitHubIcon width='100%' height='100%' />
-          </NextLink>
-        </Box>
-        <Box width={['15px', '18px']} height={['12px', '14px']}>
-          <NextLink>
-            <MailIcon width='100%' height='100%' />
-          </NextLink>
+        <Layout flexBasis={[0, 134]} />
+        <Box alignItems='end' width='56px' display={['none', 'flex']}>
+          <Column flexBasis={56} height='200px' justifyContent='space-around' alignItems='center'>
+            <Box width={['15px', '18px']} height={['12px', '15px']}>
+              <NextLink>
+                <TelegramIcon width='100%' height='100%' />
+              </NextLink>
+            </Box>
+            <Box width={['15px', '18px']} height={['15px', '18px']}>
+              <NextLink>
+                <GitHubIcon width='100%' height='100%' />
+              </NextLink>
+            </Box>
+            <Box width={['15px', '18px']} height={['12px', '14px']}>
+              <NextLink>
+                <MailIcon width='100%' height='100%' />
+              </NextLink>
+            </Box>
+          </Column>
         </Box>
       </Box>
-      <Layout flexBasis={[20, 40]} />
+      <Layout flexBasis={[20, 40]} flexShrink='0' />
     </Box>
-    <Layout flexBasis={[84, 210]} />
-    <Box>
-      <Layout flexBasis={[20, 230]} />
-      <Column flexBasis={['90%', 1460]}>
+    <Layout flexBasis={[20, 50]} />
+
+    <Box justifyContent={['center', 'start']}>
+      <Layout flexBasis={[20, 230]} flexShrink='0' />
+      <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='1'>
+        <Layout flexBasis={[64, 160]} />
+
         <Box display={['none', 'inline']}>
           <Text
             color='text.primary'
@@ -105,8 +134,8 @@ export const Hero = () => (
             <FormattedMessage id='heroTextDigitalDesktop' />
           </Text>
           <Space count='8' />
-          <Box display='inline'>
-            <DefaultIcon width='40px' height='40px' />
+          <Box display='inline-flex' width='40px' height='40px'>
+            <ImageBlock src='./image/Default.png' />
           </Box>
           <Space count='8' />
           <Text
@@ -119,8 +148,8 @@ export const Hero = () => (
             <FormattedMessage id='heroTextButDesktop' />
           </Text>
           <Space count='8' />
-          <Box display='inline'>
-            <DefaultIcon width='40px' height='40px' />
+          <Box display='inline-flex' width='40px' height='40px'>
+            <ImageBlock src='./image/Default.png' />
           </Box>
         </Box>
         <Column display={['flex', 'none']}>
@@ -144,7 +173,7 @@ export const Hero = () => (
             <FormattedMessage id='heroTextAcademyDesktop' />
           </Text>
         </Column>
-        <Layout flexDirection='column' flexBasis={40} />
+        <Layout flexBasis={[0, 40]} />
         <Box display={['none', 'inline']}>
           <Text
             color='text.primary'
@@ -156,12 +185,13 @@ export const Hero = () => (
             <FormattedMessage id='heroTextAcademyMobile' />
           </Text>
           <Space count='8' />
-          <Box display='inline'>
-            <DefaultIcon width='40px' height='40px' />
+          <Box display='inline-flex' width='40px' height='40px'>
+            <ImageBlock src='./image/Default.png' />
           </Box>
         </Box>
+        <Layout flexBasis={[64, 160]} />
       </Column>
+      <Layout flexBasis={[20, 230]} />
     </Box>
-    <Layout flexBasis={[64, 160]} />
   </Box>
 )
