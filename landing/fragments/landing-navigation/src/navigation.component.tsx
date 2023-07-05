@@ -7,7 +7,8 @@ import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
-import { navLinkList }      from './navigation-list/navigation.list'
+import { ItemsList }        from './items-list'
+import { navLinkList }      from './navigation-list'
 
 export const Navigation = () => (
   <Box
@@ -27,23 +28,7 @@ export const Navigation = () => (
         <LogoWhiteIcon width='100%' height='100%' />
       </NextLink>
     </Box>
-    <Box height='18px' flexGrow='2' display={['none', 'flex']}>
-      {navLinkList.map((link) => (
-        <Box key={link.name} flexGrow='5' justifyContent='center'>
-          <NextLink>
-            <Text
-              color='text.primary'
-              fontSize='compact'
-              fontWeight='normal'
-              lineHeight='little'
-              textTransform='uppercase'
-            >
-              <FormattedMessage id={link.name} />
-            </Text>
-          </NextLink>
-        </Box>
-      ))}
-    </Box>
+    <ItemsList navLinksList={navLinkList} />
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='compact' fontWeight='normal' lineHeight='little'>
