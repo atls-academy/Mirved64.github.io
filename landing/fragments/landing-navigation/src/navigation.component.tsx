@@ -19,6 +19,7 @@ export const Navigation = () => (
     margin='0 auto'
   >
     <Layout flexBasis={[0, 40]} />
+   
     <Box
       flexGrow='1'
       justifyContent={['center', 'start']}
@@ -29,7 +30,9 @@ export const Navigation = () => (
         <LogoWhiteIcon width='100%' height='100%' />
       </NextLink>
     </Box>
+    
     <ItemsList navLinksList={navLinkList} />
+    
     <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text color='text.primary' fontSize='compact' fontWeight='normal' lineHeight='little'>
@@ -37,6 +40,7 @@ export const Navigation = () => (
         </Text>
       </NextLink>
     </Box>
+    
     <Layout flexBasis={[0, 40]} />
   </Box>
 )

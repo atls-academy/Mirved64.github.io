@@ -12,12 +12,12 @@ import { Text }             from '@ui/text'
 
 export const Courses = () => (
   <Box backgroundColor='background.courses' width='100%' margin='0 auto' flexDirection='column'>
-    <Layout flexBasis={[64, 160]} flexShrink='0' />
+    <Layout flexBasis={[64, 160]} />
 
     <Box>
-      <Layout flexBasis={[20, 230]} flexShrink='0' />
+      <Layout flexBasis={[20, 230]} flexShrink='1' />
 
-      <Column flexBasis={[335, 1610]} flexGrow={[1, 0]} margin='0 auto'>
+      <Column flexBasis={[335, 1610]} flexGrow={[1, 0]} margin='0 auto' flexShrink='1'>
         <Row justifyContent='space-between' alignItems='center'>
           <Box flexWrap='wrap' flexShrink='1'>
             <Text
@@ -280,7 +280,7 @@ export const Courses = () => (
                 </Text>
               </Box>
             </Column>
-            <Layout flexBasis={[16, 32]} flexShrink='0' />
+            <Layout flexBasis={[16, 32]} flexShrink='1' />
           </Box>
         </Box>
       </Column>

@@ -16,14 +16,14 @@ export const Item: FC<QuestionProps> = ({ question, divider, gap = 'flex' }) => 
   <Column height='100%'>
     <Layout flexBasis={[16, 40]} flexShrink='0' />
 
-    <Row justifyContent={['space-between', 'start']} alignItems='center' >
+    <Row justifyContent={['space-between', 'start']} alignItems='center'>
       <Box
         alignItems='center'
         order={['2', '0']}
         width={['12px', '20px']}
         height={['12px', '20px']}
       >
-        <CrossIcon width='100%' height='100%'/>
+        <CrossIcon width='100%' height='100%' />
       </Box>
 
       <Layout flexBasis={[0, 27]} flexShrink='0' />
