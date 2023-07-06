@@ -18,50 +18,63 @@ export const Item: FC<ItemProps> = ({
   displayDivider = 'flex',
 }) => (
   <Column>
-    <Box flexBasis='content'>
-      <Box alignItems={['start', 'center']}>
-        <Text
-          color='text.primary'
-          fontSize={['compact', 'medium']}
-          fontWeight='normal'
-          lineHeight={['little', 'medium']}
-        >
-          {sequenceNumber}
-        </Text>
-      </Box>
-      <Layout flexBasis={[12, 32]} />
-      <Box
-        flexDirection={['column', 'row']}
-        justifyContent={['start', 'space-between']}
-        flexBasis={['content', 1760]}
-      >
-        <Box alignItems='center'>
+    <Box>
+      <Box flexBasis={[23, 56]}>
+        <Box alignItems={['start', 'center']}>
           <Text
             color='text.primary'
-            fontSize={['medium', 'regular']}
-            fontWeight={['normalMedium', 'normal']}
-            lineHeight='regular'
-            textWrap='wrap'
+            fontSize={['compact', 'medium']}
+            fontWeight='normal'
+            lineHeight={['little', 'mini']}
           >
-            <FormattedMessage id={process} />
+            {sequenceNumber}
           </Text>
         </Box>
-        <Box flexBasis={['100%', '560px']} flexWrap='wrap'>
-          <Text
-            color='text.primary'
-            fontSize={['tiny', 'medium']}
-            fontWeight='normal'
-            lineHeight={['compact', 'standart']}
-            textWrap='wrap'
-          >
-            <FormattedMessage id={text} />
-          </Text>
+
+        <Layout flexBasis={[12, 32]} flexShrink='0' />
+      </Box>
+
+      <Box flexBasis={[312, 1700]} justifyContent='space-between' flexGrow={[2, 1]}>
+        <Box
+          flexDirection={['column', 'row']}
+          justifyContent={['start', 'space-between']}
+          flexGrow='2'
+          flexShrink='0'
+          flexBasis={[40, 604]}
+        >
+          <Box alignItems='center'>
+            <Text
+              color='text.primary'
+              fontSize={['medium', 'regular']}
+              fontWeight={['normalMedium', 'normal']}
+              lineHeight={['normal', 'regular']}
+            >
+              <FormattedMessage id={process} />
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 0]} flexShrink='0' />
+
+          <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} flexShrink='1'>
+            <Text
+              color='text.primary'
+              fontSize={['tiny', 'medium']}
+              fontWeight='normal'
+              lineHeight={['compact', 'standart']}
+              textWrap='wrap'
+            >
+              <FormattedMessage id={text} />
+            </Text>
+          </Box>
         </Box>
       </Box>
     </Box>
+
     <Column display={displayDivider}>
       <Layout flexBasis={[28, 48]} />
+
       <Divider backgroundColor='divider.primary' weight={divider} />
+
       <Layout flexBasis={[28, 48]} />
     </Column>
   </Column>

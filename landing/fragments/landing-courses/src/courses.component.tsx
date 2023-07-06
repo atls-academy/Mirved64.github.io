@@ -80,12 +80,12 @@ export const Courses = () => (
         <Layout flexBasis={[40, 80]} />
 
         <Box justifyContent='space-between' flexDirection={['column', 'row']}>
-          <Column order={[2, 0]} >
+          <Column order={[2, 0]}>
             <Box>
               <Box flexBasis={[335, 1160]} flexShrink='1' flexGrow='1'>
                 <Layout flexBasis={[16, 40]} flexShrink='0' />
 
-                <Column >
+                <Column>
                   <Layout flexBasis={[16, 40]} flexShrink='0' />
 
                   <Column>
@@ -114,7 +114,7 @@ export const Courses = () => (
                         </Text>
                       </Box>
 
-                      <Box display={['flex', 'none']} >
+                      <Box display={['flex', 'none']}>
                         <Text
                           color='text.secondary'
                           fontSize='tiny'
@@ -210,7 +210,7 @@ export const Courses = () => (
             </Box>
           </Column>
 
-          <Box flexBasis={[192, 410]} order={[1, 0]} >
+          <Box flexBasis={[192, 410]} order={[1, 0]}>
             <Layout flexBasis={[16, 32]} flexShrink='0' />
 
             <Column>

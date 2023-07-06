@@ -3140,7 +3140,7 @@ __metadata:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
     "@ui/divider": "workspace:^"
-    "@ui/icons": "workspace: 0.0.1"
+    "@ui/image": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     react-intl: "npm:^6.4.4"
@@ -4122,7 +4122,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/icons@workspace: 0.0.1, @ui/icons@workspace:^, @ui/icons@workspace:ui/icons":
+"@ui/icons@workspace:^, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
@@ -4138,7 +4138,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/image@workspace:^, @ui/image@workspace:ui/image":
+"@ui/image@workspace: 0.0.1, @ui/image@workspace:^, @ui/image@workspace:ui/image":
   version: 0.0.0-use.local
   resolution: "@ui/image@workspace:ui/image"
   dependencies:

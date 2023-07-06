@@ -4,6 +4,7 @@ const lineHeights = {
   little: '18px',
   compact: '20px',
   small: '22px',
+  mini: '24px',
   medium: '26px',
   normal: '28px',
   standart: '34px',
