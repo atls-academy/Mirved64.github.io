@@ -17,15 +17,23 @@ export const Technologies = () => (
     flexDirection='column'
   >
     <Layout flexBasis={[32, 64]} />
+    
     <Divider backgroundColor='divider.primary' weight='1px' />
+   
     <Layout flexBasis={[36, 64]} />
+    
     <Column>
       <ItemsList technologies={technologiesListTop} />
+      
       <Layout flexBasis={[36, 64]} />
+      
       <ItemsList technologies={technologiesListBottom} font='secondary' />
     </Column>
+    
     <Layout flexBasis={[36, 64]} />
+    
     <Divider backgroundColor='divider.primary' weight='1px' />
+    
     <Layout flexBasis={[56, 64]} />
   </Box>
 )
