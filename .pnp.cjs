@@ -5289,6 +5289,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.4"],\
           ["@types/react-intl", null],\
           ["@ui/divider", "virtual:38813475cb75be00439d34cdcc98f191e4749b916baface24d1622c31105646f41bb930cec72205e363f2a5f29a2419435a11934e96903016e9443c8382b456e#workspace:ui/divider"],\
+          ["@ui/icons", "workspace:ui/icons"],\
           ["@ui/layout", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/layout"],\
           ["@ui/link", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/link"],\
           ["@ui/text", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/text"],\
@@ -5311,6 +5312,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.2.4"],\
           ["@types/react-intl", null],\
           ["@ui/divider", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/divider"],\
+          ["@ui/icons", "workspace:ui/icons"],\
           ["@ui/layout", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/layout"],\
           ["@ui/link", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/link"],\
           ["@ui/text", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/text"],\
@@ -5335,6 +5337,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
           ["@ui/divider", "virtual:38813475cb75be00439d34cdcc98f191e4749b916baface24d1622c31105646f41bb930cec72205e363f2a5f29a2419435a11934e96903016e9443c8382b456e#workspace:ui/divider"],\
+          ["@ui/icons", "workspace:ui/icons"],\
           ["@ui/layout", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/layout"],\
           ["@ui/link", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/link"],\
           ["@ui/text", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/text"],\

@@ -1,9 +1,11 @@
-import { useTheme } from '@emotion/react'
+import { useTheme }  from '@emotion/react'
 
 /* eslint-disable */
-import React        from 'react'
+import React         from 'react'
 
-export const GitHubIcon = (props: any) => {
+import { IconProps } from './icons.interfaces'
+
+export const GitHubIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg

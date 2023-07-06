@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ui/divider": "workspace:^",
+    "@ui/icons": "workspace:^",
     "@ui/layout": "workspace:^",
     "@ui/link": "workspace:^",
     "@ui/text": "workspace:^"

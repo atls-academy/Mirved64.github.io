@@ -3084,6 +3084,7 @@ __metadata:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
     "@ui/divider": "workspace:^"
+    "@ui/icons": "workspace:^"
     "@ui/layout": "workspace:^"
     "@ui/link": "workspace:^"
     "@ui/text": "workspace:^"

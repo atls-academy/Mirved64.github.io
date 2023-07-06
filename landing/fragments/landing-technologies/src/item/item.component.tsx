@@ -21,13 +21,13 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
     >
       <FormattedMessage id={technologyName} />
     </Text>
-    
+
     <Layout flexBasis={24} />
-    
+
     <Box width='48px'>
       <Divider backgroundColor='divider.primary' weight={divider} margin='auto 0' />
     </Box>
-    
+
     <Layout flexBasis={24} />
   </Box>
 )
