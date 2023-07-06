@@ -10,6 +10,7 @@ const lineHeights = {
   standart: '34px',
   ordinary: '39px',
   regular: '45px',
+  mean: '46px',
   common: '48px',
   huge: '62px',
   big: '64px',

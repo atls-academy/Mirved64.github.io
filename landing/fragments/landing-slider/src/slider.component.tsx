@@ -12,10 +12,11 @@ import { Text }             from '@ui/text'
 
 export const Slider = () => (
   <Box backgroundColor='background.slider' width='100%' margin='0 auto' flexDirection='column'>
-    <Layout flexBasis={[0, 160]} />
+    <Layout flexBasis={[24, 160]} flexShrink='0'/>
+    
     <Column>
-      <Column margin='0 auto' alignItems='center' flexWrap='wrap' maxWidth={['90%', '890px']}>
-        <Box flexBasis='content'>
+      <Column margin='0 auto' alignItems='center' flexWrap='wrap' >
+        <Box>
           <Text
             color='text.primary'
             fontSize={['atom', 'tiny']}
@@ -25,39 +26,52 @@ export const Slider = () => (
             <FormattedMessage id='sliderSubtitle' />
           </Text>
         </Box>
-        <Layout flexBasis={24} />
-        <Box>
+        
+        <Layout flexBasis={[16, 24]} flexShrink='0' />
+        
+        <Box justifyContent='center' >
+          <Box flexBasis={[335, 960]} flexShrink='1' >
           <Text
             color='text.primary'
             fontSize={['medium', 'regular']}
-            lineHeight={['normal', 'common']}
+            lineHeight={['normal', 'mean']}
             textAlign='center'
-            letter='-1%'
+            letterSpacing='-1%'
           >
             <FormattedMessage id='sliderSlogan' />
           </Text>
+          </Box>
         </Box>
       </Column>
+      
+      <Layout flexBasis={[24, 50]} flexShrink='0' />
+      
       <Column margin='0 auto'>
-        <Box margin='0 auto' width={['138px', '960px']} height={['340px', '540px']}>
-          <ImageBlock src='./image/Default.png' />
+        <Box margin='0 auto' maxWidth={['138px', '960px']} height={['340px', 'auto']} flexShrink='1'>
+          <ImageBlock src='./image/mockup.png' />
         </Box>
-        <Layout flexBasis={[18, 51]} />
-        <Row justifyContent='space-between' alignItems='center'>
+        
+        <Layout flexBasis={[25, 32]} flexShrink='0' />
+        
+        <Box justifyContent='center'>
+        <Row justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
           <Box height='60px' width='40px' justifyContent='center' alignItems='center'>
             <ArrowLeftIcon width='30px' height='15px' />
           </Box>
-          <Box height={['100%', 60]} maxWidth={['190px', '780px']} alignItems='center'>
-            <Text color='text.primary' fontSize='little' lineHeight='medium' textAlign='center'>
+          
+          <Box height={['100%', 60]} flexBasis={['175px', '778px']} alignItems='center' justifyContent='center'>
+            <Text color='text.primary' fontSize={['atom', 'little']} lineHeight={['tiny', 'medium']} textAlign='center'>
               <FormattedMessage id='sliderSign' />
             </Text>
           </Box>
+          
           <Box height='60px' width='40px' justifyContent='center' alignItems='center'>
             <ArrowRightIcon width='30px' height='15px' />
           </Box>
-        </Row>
+        </Row></Box>
       </Column>
     </Column>
-    <Layout flexBasis={[70, 160]} />
+    
+    <Layout flexBasis={[70, 160]} flexShrink='0'/>
   </Box>
 )
