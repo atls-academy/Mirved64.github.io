@@ -1,16 +1,16 @@
 import { Technology } from './index'
 
 export const technologiesListTop: Technology[] = [
-  { technology: 'HTML' },
-  { technology: 'CSS' },
-  { technology: 'SASS' },
-  { technology: 'VANILA JS' },
-  { technology: 'JADE' },
-  { technology: 'JAVASCRIPT' },
+  { technology: 'html' },
+  { technology: 'css' },
+  { technology: 'sass' },
+  { technology: 'vanila js' },
+  { technology: 'jade' },
+  { technology: 'javacsript' },
 ]
 
 export const technologiesListBottom: Technology[] = [
-  { technology: 'FIGMA' },
-  { technology: 'GITHUB' },
-  { technology: 'ATOM' },
+  { technology: 'figma' },
+  { technology: 'github' },
+  { technology: 'atom' },
 ]

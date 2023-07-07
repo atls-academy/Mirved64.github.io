@@ -1,5 +1,5 @@
 export interface TechnologyProps {
   technologyName?: string
-  divider?: number
+  divider?: number | number[]
   font: string
 }

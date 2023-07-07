@@ -7,12 +7,12 @@ import { Item }      from '../item'
 import { ListProps } from './items-list.interfaces'
 
 export const ItemsList: FC<ListProps> = ({ technologies, font }) => (
-  <Row overflow='hidden' width='100%'>
+  <Row overflow='hidden'>
     {technologies!.map((technology) => (
       <Item
         key={technology.technology}
         technologyName={technology.technology}
-        divider={4}
+        divider={[2, 4]}
         font={font!}
       />
     ))}
