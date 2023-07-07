@@ -16,12 +16,13 @@ import { Space }            from '@ui/text'
 export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[80, 412]} />
+    
     <Row flexGrow='1' flexShrink='1'>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Row flexGrow='1' flexShrink='1'>
         <Column flexShrink='1' flexGrow='1' flexBasis={[335, 1460]}>
-          <Box>
+          <Layout>
             <Text
               color='text.hero.primary'
               fontSize={['normal', 'stupendous']}
@@ -30,9 +31,9 @@ export const Hero = () => (
             >
               <FormattedMessage id='heroTitleTeach' />
             </Text>
-          </Box>
+          </Layout>
 
-          <Box>
+          <Layout>
             <Text
               color='text.hero.primary'
               fontSize={['normal', 'stupendous']}
@@ -42,10 +43,10 @@ export const Hero = () => (
             >
               <FormattedMessage id='heroTitleProfessionals' />
             </Text>
-          </Box>
+          </Layout>
 
           <Row>
-            <Box>
+            <Layout>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
@@ -55,11 +56,11 @@ export const Hero = () => (
               >
                 <FormattedMessage id='heroTitleRevolution' />
               </Text>
-            </Box>
+            </Layout>
 
             <Space count='8' />
 
-            <Box flexShrink='0'>
+            <Layout flexShrink='0'>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
@@ -69,7 +70,7 @@ export const Hero = () => (
               >
                 <FormattedMessage id='heroTitleIt' />
               </Text>
-            </Box>
+            </Layout>
           </Row>
 
           <Layout flexBasis={[24, 48]} />
@@ -78,7 +79,7 @@ export const Hero = () => (
 
           <Layout flexBasis={[24, 48]} />
 
-          <Box flexWrap='wrap' maxWidth={640}>
+          <Layout flexWrap='wrap' maxWidth={640}>
             <Text
               color='text.hero.primary'
               fontSize={['tiny', 'small']}
@@ -87,11 +88,11 @@ export const Hero = () => (
             >
               <FormattedMessage id='heroSlogan' />
             </Text>
-          </Box>
+          </Layout>
 
           <Layout flexBasis={[24, 0]} />
 
-          <Box
+          <Layout
             display={['flex', 'none']}
             flexShrink='1'
             flexGrow='1'
@@ -99,59 +100,59 @@ export const Hero = () => (
             justifyContent='space-between'
             alignItems='center'
           >
-            <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-              <Box width='15px' height='12px'>
+            <Layout width='104px' height='44px' justifyContent='center' alignItems='center'>
+              <Layout width='15px' height='12px'>
                 <NextLink>
-                  <TelegramIcon width='100%' height='100%' />
+                  <TelegramIcon width='15px' height='12px' />
                 </NextLink>
-              </Box>
-            </Box>
+              </Layout>
+            </Layout>
 
-            <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-              <Box width='15px' height='15px'>
+            <Layout width='104px' height='44px' justifyContent='center' alignItems='center'>
+              <Layout width='15px' height='15px'>
                 <NextLink>
-                  <GitHubIcon width='100%' height='100%' />
+                  <GitHubIcon width='15px' height='15px' />
                 </NextLink>
-              </Box>
-            </Box>
+              </Layout>
+            </Layout>
 
-            <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-              <Box width='18px' height='14px'>
+            <Layout width='104px' height='44px' justifyContent='center' alignItems='center'>
+              <Layout width='18px' height='14px'>
                 <NextLink>
-                  <MailIcon width='100%' height='100%' />
+                  <MailIcon width='18px' height='14px' />
                 </NextLink>
-              </Box>
-            </Box>
-          </Box>
+              </Layout>
+            </Layout>
+          </Layout>
         </Column>
 
         <Layout flexBasis={[0, 134]} />
 
         <Box alignItems='end' flexBasis={56} display={['none', 'flex']}>
           <Column height='200px' justifyContent='space-around' alignItems='center'>
-            <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-              <Box width='18px' height='15px' flexShrink='0'>
+            <Layout width='56px' height='56px' alignItems='center' justifyContent='center'>
+              <Layout width='18px' height='15px' flexShrink='0'>
                 <NextLink>
-                  <TelegramIcon width='100%' height='100%' />
+                  <TelegramIcon width='18px' height='15px' />
                 </NextLink>
-              </Box>
-            </Box>
+              </Layout>
+            </Layout>
 
-            <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-              <Box width='18px' height='18px' flexShrink='0'>
+            <Layout width='56px' height='56px' alignItems='center' justifyContent='center'>
+              <Layout width='18px' height='18px' flexShrink='0'>
                 <NextLink>
-                  <GitHubIcon width='100%' height='100%' />
+                  <GitHubIcon width='18px' height='18px' />
                 </NextLink>
-              </Box>
-            </Box>
+              </Layout>
+            </Layout>
 
-            <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-              <Box width='18px' height='14px' flexShrink='0'>
+            <Layout width='56px' height='56px' alignItems='center' justifyContent='center'>
+              <Layout width='18px' height='14px' flexShrink='0'>
                 <NextLink>
-                  <MailIcon width='100%' height='100%' />
+                  <MailIcon width='18px' height='14px' />
                 </NextLink>
-              </Box>
-            </Box>
+              </Layout>
+            </Layout>
           </Column>
         </Box>
       </Row>
