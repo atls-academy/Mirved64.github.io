@@ -1,5 +1,6 @@
 import React            from 'react'
 
+import { About }        from '@landing/fragment-about'
 import { Courses }      from '@landing/fragment-courses'
 import { Faq }          from '@landing/fragment-faq'
 import { Hero }         from '@landing/fragment-hero'
@@ -12,6 +13,7 @@ export const IndexPage = () => (
   <>
     <Navigation />
     <Hero />
+    <About />
     <Courses />
     <Process />
     <Technologies />

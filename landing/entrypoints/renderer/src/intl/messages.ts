@@ -9,15 +9,15 @@ export const messages = {
     heroTitleIt: 'IT',
     heroSlogan:
       'Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать невозможные идеи',
-    heroTextDigitalDesktop:
+    aboutTextDigitalDesktop:
       'Digital становится всё более многолюдным, востребованность по направлениям при этом не снижается',
-    heroTextButDesktop:
+    aboutTextButDesktop:
       'Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало',
-    heroTextMobile:
+    aboutTextMobile:
       'Digital становится всё более многолюдным, востребованность по направлениям при этом не снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало.',
-    heroTextAcademyDesktop:
+    aboutTextAcademyDesktop:
       'Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров',
-    heroTextAcademyMobile:
+    aboutTextAcademyMobile:
       'Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и дизайнеров',
     coursesTitle: 'Курсы и материалы',
     coursesButtonDesktop: 'Все материалы',

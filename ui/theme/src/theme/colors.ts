@@ -2,6 +2,7 @@ const colors = {
   background: {
     navigation: 'rgba(102, 102, 102, 1)',
     hero: 'rgba(102, 102, 102, 1)',
+    about: 'rgba(102, 102, 102, 1)',
     courses: 'rgba(255, 255, 255, 1)',
     process: 'rgba(102, 102, 102, 1)',
     slider: 'rgba(102, 102, 102, 1)',
@@ -13,6 +14,9 @@ const colors = {
       primary: 'rgba(255, 255, 255, 1)',
     },
     hero: {
+      primary: 'rgba(255, 255, 255, 1)',
+    },
+    about: {
       primary: 'rgba(255, 255, 255, 1)',
     },
     courses: {
