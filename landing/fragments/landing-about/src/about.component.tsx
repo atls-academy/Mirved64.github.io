@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl'
 
 import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
@@ -13,20 +12,22 @@ export const About = () => (
   <Box backgroundColor='background.about' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[64, 160]} flexShrink='0' />
 
-    <Row>
+    <Layout>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='1'>
         <Box display={['none', 'inline']}>
-          <Text
-            color='text.about.primary'
-            fontSize='common'
-            fontWeight='normal'
-            lineHeight='huge'
-            display='inline'
-          >
-            <FormattedMessage id='aboutTextDigitalDesktop' />
-          </Text>
+          <Layout display='inline'>
+            <Text
+              color='text.about.primary'
+              fontSize='common'
+              fontWeight='normal'
+              lineHeight='huge'
+              display='inline'
+            >
+              <FormattedMessage id='aboutTextDigitalDesktop' />
+            </Text>
+          </Layout>
 
           <Space count='8' />
 
@@ -36,15 +37,17 @@ export const About = () => (
 
           <Space count='8' />
 
-          <Text
-            color='text.about.primary'
-            fontSize='common'
-            fontWeight='normal'
-            lineHeight='huge'
-            display='inline'
-          >
-            <FormattedMessage id='aboutTextButDesktop' />
-          </Text>
+          <Layout display='inline'>
+            <Text
+              color='text.about.primary'
+              fontSize='common'
+              fontWeight='normal'
+              lineHeight='huge'
+              display='inline'
+            >
+              <FormattedMessage id='aboutTextButDesktop' />
+            </Text>
+          </Layout>
 
           <Space count='8' />
 
@@ -54,7 +57,7 @@ export const About = () => (
         </Box>
 
         <Column display={['flex', 'none']}>
-          <Box>
+          <Layout display='inline'>
             <Text
               color='text.about.primary'
               fontSize='small'
@@ -64,11 +67,11 @@ export const About = () => (
             >
               <FormattedMessage id='aboutTextMobile' />
             </Text>
-          </Box>
+          </Layout>
 
           <Layout flexBasis={28} />
 
-          <Box>
+          <Layout display='inline'>
             <Text
               color='text.about.primary'
               fontSize='small'
@@ -78,21 +81,23 @@ export const About = () => (
             >
               <FormattedMessage id='aboutTextAcademyDesktop' />
             </Text>
-          </Box>
+          </Layout>
         </Column>
 
         <Layout flexBasis={[0, 40]} />
 
         <Box display={['none', 'inline']}>
-          <Text
-            color='text.about.primary'
-            fontSize='common'
-            fontWeight='normal'
-            lineHeight='huge'
-            display='inline'
-          >
-            <FormattedMessage id='aboutTextAcademyMobile' />
-          </Text>
+          <Layout display='inline'>
+            <Text
+              color='text.about.primary'
+              fontSize='common'
+              fontWeight='normal'
+              lineHeight='huge'
+              display='inline'
+            >
+              <FormattedMessage id='aboutTextAcademyMobile' />
+            </Text>
+          </Layout>
 
           <Space count='8' />
 
@@ -103,7 +108,7 @@ export const About = () => (
       </Column>
 
       <Layout flexBasis={[20, 230]} />
-    </Row>
+    </Layout>
 
     <Layout flexBasis={[64, 160]} />
   </Box>
