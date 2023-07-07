@@ -13,7 +13,7 @@ export const About = () => (
   <Box backgroundColor='background.about' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[64, 160]} flexShrink='0' />
 
-    <Row >
+    <Row>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='1'>

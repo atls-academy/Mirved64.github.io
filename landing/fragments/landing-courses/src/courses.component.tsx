@@ -14,14 +14,14 @@ export const Courses = () => (
   <Box backgroundColor='background.courses' width='100%' margin='0 auto' flexDirection='column'>
     <Layout flexBasis={[64, 160]} />
 
-    <Box>
+    <Row>
       <Layout flexBasis={[20, 230]} flexShrink='1' />
 
-      <Column flexBasis={[335, 1610]} flexGrow={[1, 0]} margin='0 auto' flexShrink='1'>
+      <Column flexBasis={[335, 1610]} flexGrow={[1, 1]} margin='0 auto' flexShrink='1'>
         <Row justifyContent='space-between' alignItems='center'>
           <Box flexWrap='wrap' flexShrink='1'>
             <Text
-              color='text.secondary'
+              color='text.courses.primary'
               fontSize={['regular', 'stupendous']}
               fontWeight='normal'
               lineHeight={['common', 'stupendous']}
@@ -34,7 +34,7 @@ export const Courses = () => (
           <Box flexWrap='wrap' display={['none', 'flex']} flexShrink='1'>
             <NextLink>
               <Text
-                color='text.secondary'
+                color='text.courses.primary'
                 fontSize='big'
                 fontWeight='normal'
                 lineHeight='normalSmall'
@@ -54,7 +54,7 @@ export const Courses = () => (
         <Box flexDirection={['column', 'row']} justifyContent='space-between'>
           <Box flexWrap='wrap' flexBasis={[112, 710]}>
             <Text
-              color='text.secondary'
+              color='text.courses.primary'
               fontSize={['small', 'ordinary']}
               fontWeight='normal'
               lineHeight={['normal', 'regular']}
@@ -67,7 +67,7 @@ export const Courses = () => (
 
           <Box flexWrap='wrap' flexBasis={[84, 559]}>
             <Text
-              color='text.secondary'
+              color='text.courses.primary'
               fontSize={['small', 'ordinary']}
               fontWeight='normal'
               lineHeight={['normal', 'regular']}
@@ -91,7 +91,7 @@ export const Courses = () => (
                   <Column>
                     <Box flexShrink='0'>
                       <Text
-                        color='text.secondary'
+                        color='text.courses.primary'
                         fontSize={['medium', 'regular']}
                         fontWeight='normal'
                         lineHeight={['normal', 'regular']}
@@ -102,28 +102,26 @@ export const Courses = () => (
 
                     <Layout flexBasis={[12, 16]} flexShrink='0' />
 
-                    <Box maxWidth={694} flexShrink='1'>
-                      <Box display={['none', 'flex']}>
-                        <Text
-                          color='text.secondary'
-                          fontSize='small'
-                          fontWeight='normal'
-                          lineHeight='normal'
-                        >
-                          <FormattedMessage id='coursesCardTextFrontendDesktop' />
-                        </Text>
-                      </Box>
+                    <Box display={['none', 'flex']} maxWidth={694} flexShrink='1'>
+                      <Text
+                        color='text.courses.primary'
+                        fontSize='small'
+                        fontWeight='normal'
+                        lineHeight='normal'
+                      >
+                        <FormattedMessage id='coursesCardTextFrontendDesktop' />
+                      </Text>
+                    </Box>
 
-                      <Box display={['flex', 'none']}>
-                        <Text
-                          color='text.secondary'
-                          fontSize='tiny'
-                          fontWeight='normal'
-                          lineHeight='small'
-                        >
-                          <FormattedMessage id='coursesCardTextFrontendMobile' />
-                        </Text>
-                      </Box>
+                    <Box display={['flex', 'none']} flexGrow='1'>
+                      <Text
+                        color='text.courses.primary'
+                        fontSize='tiny'
+                        fontWeight='normal'
+                        lineHeight='small'
+                      >
+                        <FormattedMessage id='coursesCardTextFrontendMobile' />
+                      </Text>
                     </Box>
 
                     <Layout flexBasis={[52, 0]} flexShrink='0' />
@@ -132,7 +130,7 @@ export const Courses = () => (
 
                     <Box flexShrink='0'>
                       <Text
-                        color='text.secondary'
+                        color='text.courses.primary'
                         fontSize={['medium', 'regular']}
                         fontWeight='normal'
                         lineHeight={['normal', 'regular']}
@@ -145,7 +143,7 @@ export const Courses = () => (
 
                     <Box display={['none', 'flex']} maxWidth={694} flexShrink='1'>
                       <Text
-                        color='text.secondary'
+                        color='text.courses.primary'
                         fontSize='small'
                         fontWeight='normal'
                         lineHeight='normal'
@@ -156,7 +154,7 @@ export const Courses = () => (
 
                     <Box display={['flex', 'none']} flexGrow='1'>
                       <Text
-                        color='text.secondary'
+                        color='text.courses.primary'
                         fontSize='tiny'
                         fontWeight='normal'
                         lineHeight='small'
@@ -164,25 +162,25 @@ export const Courses = () => (
                         <FormattedMessage id='coursesCardTextBasisMobile' />
                       </Text>
                     </Box>
-
-                    <Layout flexBasis={[36, 80]} flexShrink='0' />
                   </Column>
+
+                  <Layout flexBasis={[36, 80]} flexShrink='0' />
                 </Column>
 
                 <Layout flexBasis={[16, 0]} flexShrink='0' />
               </Box>
             </Box>
 
-            <Box display={['none', 'flex']}>
+            <Row display={['none', 'flex']}>
               <Layout flexBasis={32} flexShrink='0' />
 
               <Column>
                 <Layout flexBasis={32} />
 
-                <Box justifyContent='space-between'>
+                <Row justifyContent='space-between'>
                   <Box flexShrink='1' flexBasis={496}>
                     <Text
-                      color='text.secondary'
+                      color='text.courses.primary'
                       fontSize='regular'
                       fontWeight='normal'
                       lineHeight='regular'
@@ -193,7 +191,7 @@ export const Courses = () => (
 
                   <Box flexShrink='1' flexBasis={496}>
                     <Text
-                      color='text.secondary'
+                      color='text.courses.primary'
                       fontSize='regular'
                       fontWeight='normal'
                       lineHeight='regular'
@@ -201,13 +199,13 @@ export const Courses = () => (
                       <FormattedMessage id='coursesSmallCardDesign' />
                     </Text>
                   </Box>
-                </Box>
+                </Row>
 
                 <Layout flexBasis={32} />
               </Column>
 
               <Layout flexBasis={32} flexShrink='0' />
-            </Box>
+            </Row>
           </Column>
 
           <Box flexBasis={[192, 410]} order={[1, 0]}>
@@ -218,7 +216,7 @@ export const Courses = () => (
 
               <Box>
                 <Text
-                  color='text.secondary'
+                  color='text.courses.primary'
                   fontSize={['tiny', 'little']}
                   fontWeight='normal'
                   lineHeight={['compact', 'medium']}
@@ -238,7 +236,7 @@ export const Courses = () => (
               <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
                 <Box maxWidth={[32, 36]}>
                   <Text
-                    color='text.secondary'
+                    color='text.courses.primary'
                     fontSize={['giant', 'enormous']}
                     fontWeight='normal'
                     lineHeight='big'
@@ -251,7 +249,7 @@ export const Courses = () => (
 
                 <Box flexBasis={[131, 44]} maxWidth={['100%', 188]}>
                   <Text
-                    color='text.secondary'
+                    color='text.courses.primary'
                     fontSize={['atom', 'tiny']}
                     fontWeight='normal'
                     lineHeight={['tiny', 'small']}
@@ -271,7 +269,7 @@ export const Courses = () => (
 
               <Box display={['none', 'flex']}>
                 <Text
-                  color='text.secondary'
+                  color='text.courses.primary'
                   fontSize='small'
                   fontWeight='normal'
                   lineHeight='small'
@@ -285,42 +283,55 @@ export const Courses = () => (
         </Box>
       </Column>
 
-      <Layout flexBasis={[20, 80]} flexShrink='0' />
-    </Box>
+      <Layout flexBasis={[20, 80]} flexShrink='1' />
+    </Row>
 
-    <Box display={['flex', 'none']} overflow='hidden'>
+    <Row display={['flex', 'none']} overflow='hidden'>
       <Layout flexBasis={32} flexShrink='0' />
 
-      <Column>
-        <Box justifyContent='space-between'>
-          <Box flexShrink='0' flexBasis={228}>
-            <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='coursesSmallCardLibraries' />
-            </Text>
-          </Box>
-
-          <Box flexShrink='0' flexBasis={228}>
-            <Text color='text.secondary' fontSize='small' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='coursesSmallCardDesign' />
-            </Text>
-          </Box>
+      <Row justifyContent='space-between'>
+        <Box flexShrink='0' flexBasis={228}>
+          <Text
+            color='text.courses.primary'
+            fontSize='small'
+            fontWeight='normal'
+            lineHeight='small'
+          >
+            <FormattedMessage id='coursesSmallCardLibraries' />
+          </Text>
         </Box>
-      </Column>
 
-      <Layout flexBasis={16} flexShrink='0' />
-    </Box>
+        <Box flexShrink='0' flexBasis={228}>
+          <Text
+            color='text.courses.primary'
+            fontSize='small'
+            fontWeight='normal'
+            lineHeight='small'
+          >
+            <FormattedMessage id='coursesSmallCardDesign' />
+          </Text>
+        </Box>
+      </Row>
+    </Row>
 
     <Layout flexBasis={[52, 160]} flexShrink='0' />
 
-    <Box flexWrap='wrap' display={['flex', 'none']}>
+    <Row flexWrap='wrap' display={['flex', 'none']}>
       <Layout flexBasis={20} />
 
-      <NextLink>
-        <Text color='text.secondary' fontSize='little' fontWeight='normal' lineHeight='little'>
-          <FormattedMessage id='coursesButtonMobile' />
-        </Text>
-      </NextLink>
-    </Box>
+      <Box>
+        <NextLink>
+          <Text
+            color='text.courses.primary'
+            fontSize='little'
+            fontWeight='normal'
+            lineHeight='little'
+          >
+            <FormattedMessage id='coursesButtonMobile' />
+          </Text>
+        </NextLink>
+      </Box>
+    </Row>
 
     <Layout flexBasis={[64, 0]} />
   </Box>
