@@ -7,37 +7,36 @@ import { CrossIcon }        from '@ui/icons'
 import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 import { QuestionProps }    from './item.interfaces'
 
-export const Item: FC<QuestionProps> = ({ question, divider, gap = 'flex' }) => (
+export const Item: FC<QuestionProps> = ({ question, divider }) => (
   <Column height='100%'>
     <Layout flexBasis={[16, 40]} flexShrink='0' />
 
     <Row justifyContent={['space-between', 'start']} alignItems='center'>
-      <Box
+      <Layout
         alignItems='center'
         order={['2', '0']}
         width={['12px', '20px']}
         height={['12px', '20px']}
       >
-        <CrossIcon width='100%' height='100%' />
-      </Box>
+        <CrossIcon width={['12px', '20px']} height={['12px', '20px']} />
+      </Layout>
 
       <Layout flexBasis={[0, 27]} flexShrink='0' />
 
-      <Box alignItems='center' flexGrow={[1, 0]}>
+      <Layout alignItems='center' flexGrow={[1, 0]}>
         <Text
-          color='text.secondary'
+          color='text.faq.primary'
           fontSize={['small', 'ordinary']}
           fontWeight='normal'
           lineHeight={['standart', 'regular']}
         >
           <FormattedMessage id={question} />
         </Text>
-      </Box>
+      </Layout>
     </Row>
 
     <Layout flexBasis={[16, 40]} />
