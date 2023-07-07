@@ -9,8 +9,27 @@ const colors = {
     faq: 'rgba(255, 255, 255, 1)',
   },
   text: {
-    primary: 'rgba(255, 255, 255, 1)',
-    secondary: 'rgba(0, 0, 0, 1)',
+    navigation: {
+      primary: 'rgba(255, 255, 255, 1)',
+    },
+    hero: {
+      primary: 'rgba(255, 255, 255, 1)',
+    },
+    courses: {
+      primary: 'rgba(0, 0, 0, 1)',
+    },
+    process: {
+      primary: 'rgba(255, 255, 255, 1)',
+    },
+    slider: {
+      primary: 'rgba(255, 255, 255, 1)',
+    },
+    technologies: {
+      primary: 'rgba(255, 255, 255, 1)',
+    },
+    faq: {
+      primary: 'rgba(0, 0, 0, 1)',
+    },
   },
   divider: {
     primary: 'rgba(255, 255, 255, 1)',
