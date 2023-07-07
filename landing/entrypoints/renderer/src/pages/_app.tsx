@@ -3,8 +3,8 @@ import { IntlProvider }  from 'react-intl'
 
 import { ThemeProvider } from '@ui/theme'
 
-import { LOCALES }       from '../i18n/locales'
-import { messages }      from '../i18n/messages'
+import { LOCALES }       from '../intl/locales'
+import { messages }      from '../intl/messages'
 
 const App = ({ Component, pageProps, ...props }) => {
   const locale = LOCALES.RUSSIAN
