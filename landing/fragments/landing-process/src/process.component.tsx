@@ -55,10 +55,8 @@ export const Process = () => {
           />
 
           <Box
-            maxWidth='400px'
-            maxHeight='400px'
-            width='auto'
-            height='auto'
+            width='400px'
+            height='400px'
             position='absolute'
             zIndex='10'
             margin='auto'
