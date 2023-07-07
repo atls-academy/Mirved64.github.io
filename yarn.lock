@@ -3238,6 +3238,9 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-intl: "npm:^6.4.4"
     typescript: "npm:4.6.2"
+  peerDependencies:
+    react: "*"
+    typescript: "*"
   languageName: unknown
   linkType: soft
 

@@ -15,24 +15,24 @@ export const Slider = () => (
     <Layout flexBasis={[24, 160]} flexShrink='0' />
 
     <Column>
-      <Column margin='0 auto' alignItems='center' flexWrap='wrap'>
-        <Box>
+      <Column margin='0 auto' alignItems='center'>
+        <Layout>
           <Text
-            color='text.primary'
+            color='text.slider.primary'
             fontSize={['atom', 'tiny']}
             lineHeight={['atom', 'extraSmall']}
             textTransform='uppercase'
           >
             <FormattedMessage id='sliderSubtitle' />
           </Text>
-        </Box>
+        </Layout>
 
         <Layout flexBasis={[16, 24]} flexShrink='0' />
 
-        <Box justifyContent='center'>
-          <Box flexBasis={[335, 960]} flexShrink='1'>
+        <Layout justifyContent='center'>
+          <Layout flexBasis={[335, 960]} flexShrink='1'>
             <Text
-              color='text.primary'
+              color='text.slider.primary'
               fontSize={['medium', 'regular']}
               lineHeight={['normal', 'mean']}
               textAlign='center'
@@ -40,51 +40,57 @@ export const Slider = () => (
             >
               <FormattedMessage id='sliderSlogan' />
             </Text>
-          </Box>
-        </Box>
+          </Layout>
+        </Layout>
       </Column>
 
       <Layout flexBasis={[24, 50]} flexShrink='0' />
 
       <Column margin='0 auto'>
-        <Box
+        <Layout
           margin='0 auto'
-          maxWidth={['138px', '960px']}
-          height={['340px', 'auto']}
+          maxWidth={960}
+          maxHeight={540}
+          width={[138, 'auto']}
+          height={[340, 'auto']}
           flexShrink='1'
         >
           <ImageBlock src='./image/mockup.png' />
-        </Box>
+        </Layout>
 
         <Layout flexBasis={[25, 32]} flexShrink='0' />
 
-        <Box justifyContent='center'>
+        <Layout justifyContent='center'>
           <Row justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
-            <Box height='60px' width='40px' justifyContent='center' alignItems='center'>
-              <ArrowLeftIcon width='30px' height='15px' />
-            </Box>
+            <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
+              <Layout>
+                <ArrowLeftIcon width='16px' height='16px' />
+              </Layout>
+            </Layout>
 
-            <Box
-              height={['100%', 60]}
-              flexBasis={['175px', '778px']}
+            <Layout
+              height={[58, 60]}
+              flexBasis={[175, 778]}
               alignItems='center'
               justifyContent='center'
             >
               <Text
-                color='text.primary'
+                color='text.slider.primary'
                 fontSize={['atom', 'little']}
                 lineHeight={['tiny', 'medium']}
                 textAlign='center'
               >
                 <FormattedMessage id='sliderSign' />
               </Text>
-            </Box>
+            </Layout>
 
-            <Box height='60px' width='40px' justifyContent='center' alignItems='center'>
-              <ArrowRightIcon width='30px' height='15px' />
-            </Box>
+            <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
+              <Layout>
+                <ArrowRightIcon width='16px' height='16px' />
+              </Layout>
+            </Layout>
           </Row>
-        </Box>
+        </Layout>
       </Column>
     </Column>
 

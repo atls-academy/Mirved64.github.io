@@ -24,5 +24,9 @@
     "@types/react-dom": "^18.2.4",
     "@ui/theme": "workspace:0.0.1",
     "typescript": "4.6.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "typescript": "*"
   }
 }
