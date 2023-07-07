@@ -20,7 +20,7 @@ export const Item: FC<ItemProps> = ({
 }) => (
   <Column>
     <Row>
-      <Box flexBasis={[23, 56]}>
+      <Row flexBasis={[23, 56]}>
         <Box alignItems={['start', 'center']}>
           <Text
             color='text.process.primary'
@@ -33,9 +33,9 @@ export const Item: FC<ItemProps> = ({
         </Box>
 
         <Layout flexBasis={[12, 32]} flexShrink='0' />
-      </Box>
+      </Row>
 
-      <Row
+      <Box
         flexBasis={[312, 1700]}
         flexDirection={['column', 'row']}
         justifyContent={['start', 'space-between']}
@@ -66,7 +66,7 @@ export const Item: FC<ItemProps> = ({
             <FormattedMessage id={text} />
           </Text>
         </Box>
-      </Row>
+      </Box>
     </Row>
 
     <Column display={displayDivider}>
