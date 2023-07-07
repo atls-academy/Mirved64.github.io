@@ -9,10 +9,10 @@ import { Text }             from '@ui/text'
 import { ItemProps }        from './item.interfaces'
 
 export const Item: FC<ItemProps> = ({ name, path }) => (
-  <Box key={name} flexGrow='5' justifyContent='center'>
+  <Box key={name} flexBasis={200} flexShrink='0' justifyContent='center'>
     <NextLink path={path}>
       <Text
-        color='text.primary'
+        color='text.navigation.primary'
         fontSize='compact'
         fontWeight='normal'
         lineHeight='little'
