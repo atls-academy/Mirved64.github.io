@@ -5,7 +5,8 @@ export const messages = {
     navigationButton: 'Курсы',
     heroTitleTeach: 'Обучаем',
     heroTitleProfessionals: 'профессионалов',
-    heroTitleRevolution: 'для революции в IT',
+    heroTitleRevolution: 'для революции в',
+    heroTitleIt: 'IT',
     heroSlogan:
       'Мы не учим программированию и дизайну, мы учим мышлению, способному реализовывывать невозможные идеи',
     heroTextDigitalDesktop:
