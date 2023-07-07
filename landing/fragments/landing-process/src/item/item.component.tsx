@@ -19,9 +19,9 @@ export const Item: FC<ItemProps> = ({
   displayDivider = 'flex',
 }) => (
   <Column>
-    <Row>
+    <Layout>
       <Row flexBasis={[23, 56]}>
-        <Box alignItems={['start', 'center']}>
+        <Layout alignItems={['start', 'center']}>
           <Text
             color='text.process.primary'
             fontSize={['compact', 'medium']}
@@ -30,7 +30,7 @@ export const Item: FC<ItemProps> = ({
           >
             {sequenceNumber}
           </Text>
-        </Box>
+        </Layout>
 
         <Layout flexBasis={[12, 32]} flexShrink='0' />
       </Row>
@@ -42,7 +42,7 @@ export const Item: FC<ItemProps> = ({
         flexGrow='1'
         flexShrink='1'
       >
-        <Box alignItems='center'>
+        <Layout alignItems='center'>
           <Text
             color='text.process.primary'
             fontSize={['medium', 'regular']}
@@ -51,11 +51,11 @@ export const Item: FC<ItemProps> = ({
           >
             <FormattedMessage id={process} />
           </Text>
-        </Box>
+        </Layout>
 
         <Layout flexBasis={[8, 0]} flexShrink='0' />
 
-        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} flexShrink='1'>
+        <Layout flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} flexShrink='1'>
           <Text
             color='text.process.primary'
             fontSize={['tiny', 'medium']}
@@ -65,9 +65,9 @@ export const Item: FC<ItemProps> = ({
           >
             <FormattedMessage id={text} />
           </Text>
-        </Box>
+        </Layout>
       </Box>
-    </Row>
+    </Layout>
 
     <Column display={displayDivider}>
       <Layout flexBasis={[28, 48]} />
