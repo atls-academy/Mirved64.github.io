@@ -16,7 +16,7 @@ import { Space }            from '@ui/text'
 export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[80, 412]} />
-    
+
     <Row flexGrow='1' flexShrink='1'>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
