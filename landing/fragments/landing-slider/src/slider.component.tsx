@@ -64,7 +64,7 @@ export const Slider = () => (
           <Row justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
             <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
-                <ArrowLeftIcon width='16px' height='16px' />
+                <ArrowLeftIcon width={16} height={16} />
               </Layout>
             </Layout>
 
@@ -86,7 +86,7 @@ export const Slider = () => (
 
             <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
-                <ArrowRightIcon width='16px' height='16px' />
+                <ArrowRightIcon width={16} height={16} />
               </Layout>
             </Layout>
           </Row>

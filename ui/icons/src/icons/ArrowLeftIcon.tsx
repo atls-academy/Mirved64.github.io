@@ -3,9 +3,9 @@ import { useTheme }  from '@emotion/react'
 /* eslint-disable */
 import React         from 'react'
 
-import { IconProps } from './icons.interfaces'
+import { IconProps } from '../icons.interfaces'
 
-export const ArrowRightIcon = (props: IconProps) => {
+export const ArrowLeftIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -17,7 +17,7 @@ export const ArrowRightIcon = (props: IconProps) => {
       {...props}
     >
       <path
-        d='M1.5 0.999999L6.5 6L1.5 11'
+        d='M6.5 0.999999L1.5 6L6.5 11'
         stroke='white'
         strokeWidth={1.25}
         strokeLinecap='round'

@@ -16,13 +16,8 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
     <Layout flexBasis={[16, 40]} flexShrink='0' />
 
     <Row justifyContent={['space-between', 'start']} alignItems='center'>
-      <Layout
-        alignItems='center'
-        order={['2', '0']}
-        width={['12px', '20px']}
-        height={['12px', '20px']}
-      >
-        <CrossIcon width={['12px', '20px']} height={['12px', '20px']} />
+      <Layout display={['none', 'flex']} alignItems='center'>
+        <CrossIcon width={20} height={20} />
       </Layout>
 
       <Layout flexBasis={[0, 27]} flexShrink='0' />
@@ -36,6 +31,10 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
         >
           <FormattedMessage id={question} />
         </Text>
+      </Layout>
+
+      <Layout display={['flex', 'none']} alignItems='center'>
+        <CrossIcon width={12} height={12} />
       </Layout>
     </Row>
 

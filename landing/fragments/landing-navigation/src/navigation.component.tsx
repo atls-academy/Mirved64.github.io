@@ -20,14 +20,15 @@ export const Navigation = () => (
   >
     <Layout flexBasis={[0, 40]} />
 
-    <Layout
-      flexGrow='1'
-      justifyContent={['center', 'start']}
-      width={['40px', '56px']}
-      height={['40px', '56px']}
-    >
+    <Layout display={['flex', 'none']} flexGrow='1' justifyContent='center'>
       <NextLink>
-        <LogoWhiteIcon width={['40px', '56px']} height={['40px', '56px']} />
+        <LogoWhiteIcon width={40} height={40} />
+      </NextLink>
+    </Layout>
+
+    <Layout display={['none', 'flex']} flexGrow='1' justifyContent='start'>
+      <NextLink>
+        <LogoWhiteIcon width={56} height={56} />
       </NextLink>
     </Layout>
 

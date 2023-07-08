@@ -3,7 +3,7 @@ import { useTheme }  from '@emotion/react'
 /* eslint-disable */
 import React         from 'react'
 
-import { IconProps } from './icons.interfaces'
+import { IconProps } from '../icons.interfaces'
 
 export const LogoWhiteIcon = (props: IconProps) => {
   const theme: any = useTheme()
