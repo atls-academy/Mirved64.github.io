@@ -9,6 +9,7 @@
   "scripts": {
     "build": "yarn next build src --no-lint",
     "dev": "yarn next dev src",
+    "extract": "formatjs extract",
     "start": "yarn next start src"
   },
   "dependencies": {
@@ -18,11 +19,15 @@
     "react-intl": "^6.4.4"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.1.3",
+    "@formatjs/ts-transformer": "^3.13.3",
     "@landing/index-page": "workspace:0.0.1",
     "@types/node": "18",
     "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
     "@ui/theme": "workspace:0.0.1",
+    "ts-node": "^10.9.1",
+    "ttypescript": "^1.5.15",
     "typescript": "4.6.2"
   },
   "peerDependencies": {

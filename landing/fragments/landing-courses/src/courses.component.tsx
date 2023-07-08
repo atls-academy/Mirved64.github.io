@@ -278,7 +278,7 @@ export const Courses = () => (
                 </Text>
               </Layout>
             </Column>
-            
+
             <Layout flexBasis={[16, 32]} flexShrink='1' />
           </Layout>
         </Box>
