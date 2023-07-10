@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 
 import { Image }            from '@ui/image'
 import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
@@ -12,12 +13,12 @@ export const About = () => (
   <Box backgroundColor='background.about' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[64, 160]} flexShrink='0' />
 
-    <Layout>
+    <Row>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='1'>
         <Box display={['none', 'inline']}>
-          <Layout display='inline'>
+          <Box display='inline'>
             <Text
               color='text.about.primary'
               fontSize='common'
@@ -25,9 +26,9 @@ export const About = () => (
               lineHeight='huge'
               display='inline'
             >
-              <FormattedMessage id='aboutTextDigitalDesktop' />
+              <FormattedMessage id='aboutTextIntroDesktop' />
             </Text>
-          </Layout>
+          </Box>
 
           <Space count='8' />
 
@@ -37,7 +38,7 @@ export const About = () => (
 
           <Space count='8' />
 
-          <Layout display='inline'>
+          <Box display='inline'>
             <Text
               color='text.about.primary'
               fontSize='common'
@@ -45,9 +46,9 @@ export const About = () => (
               lineHeight='huge'
               display='inline'
             >
-              <FormattedMessage id='aboutTextButDesktop' />
+              <FormattedMessage id='aboutTextProblemDesktop' />
             </Text>
-          </Layout>
+          </Box>
 
           <Space count='8' />
 
@@ -57,7 +58,7 @@ export const About = () => (
         </Box>
 
         <Column display={['flex', 'none']}>
-          <Layout display='inline'>
+          <Box display='inline'>
             <Text
               color='text.about.primary'
               fontSize='small'
@@ -65,13 +66,13 @@ export const About = () => (
               lineHeight='normal'
               display='inline'
             >
-              <FormattedMessage id='aboutTextMobile' />
+              <FormattedMessage id='aboutIntroMobile' />
             </Text>
-          </Layout>
+          </Box>
 
           <Layout flexBasis={28} />
 
-          <Layout display='inline'>
+          <Box display='inline'>
             <Text
               color='text.about.primary'
               fontSize='small'
@@ -79,15 +80,15 @@ export const About = () => (
               lineHeight='normal'
               display='inline'
             >
-              <FormattedMessage id='aboutTextAcademyMobile' />
+              <FormattedMessage id='aboutCentralIdeaMobile' />
             </Text>
-          </Layout>
+          </Box>
         </Column>
 
         <Layout flexBasis={[0, 40]} />
 
-        <Layout display={['none', 'inline']}>
-          <Layout display='inline'>
+        <Box display={['none', 'inline']}>
+          <Box display='inline'>
             <Text
               color='text.about.primary'
               fontSize='common'
@@ -95,20 +96,20 @@ export const About = () => (
               lineHeight='huge'
               display='inline'
             >
-              <FormattedMessage id='aboutTextAcademyDesktop' />
+              <FormattedMessage id='aboutCentralIdeaDesktop' />
             </Text>
-          </Layout>
+          </Box>
 
           <Space count='8' />
 
           <Box display='inline-flex'>
             <Image src='./image/Default.png' width={40} height={40} />
           </Box>
-        </Layout>
+        </Box>
       </Column>
 
       <Layout flexBasis={[20, 230]} />
-    </Layout>
+    </Row>
 
     <Layout flexBasis={[64, 160]} />
   </Box>

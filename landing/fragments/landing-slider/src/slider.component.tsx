@@ -5,6 +5,7 @@ import { ArrowLeftIcon }    from '@ui/icons'
 import { ArrowRightIcon }   from '@ui/icons'
 import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
@@ -15,7 +16,7 @@ export const Slider = () => (
 
     <Column>
       <Column margin='0 auto' alignItems='center'>
-        <Layout>
+        <Box>
           <Text
             color='text.slider.primary'
             fontSize={['atom', 'tiny']}
@@ -24,12 +25,12 @@ export const Slider = () => (
           >
             <FormattedMessage id='sliderSubtitle' />
           </Text>
-        </Layout>
+        </Box>
 
         <Layout flexBasis={[16, 24]} flexShrink='0' />
 
         <Layout justifyContent='center'>
-          <Layout flexBasis={[335, 960]} flexShrink='1'>
+          <Box flexBasis={[335, 960]} flexShrink='1'>
             <Text
               color='text.slider.primary'
               fontSize={['medium', 'regular']}
@@ -39,14 +40,14 @@ export const Slider = () => (
             >
               <FormattedMessage id='sliderSlogan' />
             </Text>
-          </Layout>
+          </Box>
         </Layout>
       </Column>
 
       <Layout flexBasis={[24, 50]} flexShrink='0' />
 
       <Column margin='0 auto'>
-        <Layout
+        <Box
           margin='0 auto'
           maxWidth={960}
           maxHeight={540}
@@ -55,19 +56,19 @@ export const Slider = () => (
           flexShrink='1'
         >
           <ImageBlock src='./image/mockup.png' />
-        </Layout>
+        </Box>
 
         <Layout flexBasis={[25, 32]} flexShrink='0' />
 
         <Layout justifyContent='center'>
-          <Layout justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
-            <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
+          <Row justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
+            <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
                 <ArrowLeftIcon width={16} height={16} />
               </Layout>
-            </Layout>
+            </Box>
 
-            <Layout
+            <Box
               height={[58, 60]}
               flexBasis={[175, 778]}
               alignItems='center'
@@ -81,14 +82,14 @@ export const Slider = () => (
               >
                 <FormattedMessage id='sliderSign' />
               </Text>
-            </Layout>
+            </Box>
 
-            <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
+            <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
                 <ArrowRightIcon width={16} height={16} />
               </Layout>
-            </Layout>
-          </Layout>
+            </Box>
+          </Row>
         </Layout>
       </Column>
     </Column>

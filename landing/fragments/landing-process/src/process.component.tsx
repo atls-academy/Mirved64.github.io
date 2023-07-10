@@ -20,36 +20,36 @@ export const Process = () => {
         <Column flexGrow='2' flexShrink='1' flexBasis={[335, 1760]}>
           <Item
             sequenceNumber='1'
-            process={intl.formatMessage({ id: 'processProcessName1' })}
-            text={intl.formatMessage({ id: 'processProcessText1' })}
+            process={intl.formatMessage({ id: 'processItemTeamIntegration' })}
+            text={intl.formatMessage({ id: 'processItemTeamIntegrationText' })}
             divider={1}
           />
 
           <Item
             sequenceNumber='2'
-            process={intl.formatMessage({ id: 'processProcessName2' })}
-            text={intl.formatMessage({ id: 'processProcessText2' })}
+            process={intl.formatMessage({ id: 'processItemCreateEnvironment' })}
+            text={intl.formatMessage({ id: 'processItemCreateEnvironmentText' })}
             divider={1}
           />
 
           <Item
             sequenceNumber='3'
-            process={intl.formatMessage({ id: 'processProcessName3' })}
-            text={intl.formatMessage({ id: 'processProcessText3' })}
+            process={intl.formatMessage({ id: 'processItemStudiesOfTechnologies' })}
+            text={intl.formatMessage({ id: 'processItemStudiesOfTechnologiesText' })}
             divider={1}
           />
 
           <Item
             sequenceNumber='4'
-            process={intl.formatMessage({ id: 'processProcessName4' })}
-            text={intl.formatMessage({ id: 'processProcessText4' })}
+            process={intl.formatMessage({ id: 'processItemPracticalWork' })}
+            text={intl.formatMessage({ id: 'processItemPracticalWorkText' })}
             divider={1}
           />
 
           <Item
             sequenceNumber='5'
-            process={intl.formatMessage({ id: 'processProcessName5' })}
-            text={intl.formatMessage({ id: 'processProcessText5' })}
+            process={intl.formatMessage({ id: 'processItemProjectIntegration' })}
+            text={intl.formatMessage({ id: 'processItemProjectIntegrationText' })}
             divider={0}
             displayDivider='none'
           />

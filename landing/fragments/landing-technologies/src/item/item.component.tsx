@@ -3,14 +3,15 @@ import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Divider }          from '@ui/divider'
+import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 
 import { TechnologyProps }  from './item.interfaces'
 
 export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'primary' }) => (
-  <Layout flexShrink='0' flexGrow='1'>
-    <Layout flexShrink='0'>
+  <Box flexShrink='0'>
+    <Box flexShrink='0'>
       <Text
         color='text.process.primary'
         fontSize={['huge', 'massive']}
@@ -22,14 +23,14 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
       >
         <FormattedMessage id={technologyName} />
       </Text>
-    </Layout>
+    </Box>
 
     <Layout flexBasis={24} flexShrink='0' />
 
-    <Layout width='48px' flexShrink='0'>
+    <Box width='48px' flexShrink='0'>
       <Divider backgroundColor='divider.primary' weight={divider} margin='auto 0' />
-    </Layout>
+    </Box>
 
     <Layout flexBasis={24} flexShrink='0' />
-  </Layout>
+  </Box>
 )

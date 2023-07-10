@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl'
 
 import { Divider }          from '@ui/divider'
 import { Column }           from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { Text }             from '@ui/text'
@@ -19,8 +20,8 @@ export const Item: FC<ItemProps> = ({
 }) => (
   <Column>
     <Layout>
-      <Layout flexBasis={[23, 56]}>
-        <Layout alignItems={['start', 'center']}>
+      <Row flexBasis={[23, 56]}>
+        <Box alignItems={['start', 'center']}>
           <Text
             color='text.process.primary'
             fontSize={['compact', 'medium']}
@@ -29,10 +30,10 @@ export const Item: FC<ItemProps> = ({
           >
             {sequenceNumber}
           </Text>
-        </Layout>
+        </Box>
 
         <Layout flexBasis={[12, 32]} flexShrink='0' />
-      </Layout>
+      </Row>
 
       <Box
         flexBasis={[312, 1700]}
@@ -41,7 +42,7 @@ export const Item: FC<ItemProps> = ({
         flexGrow='1'
         flexShrink='1'
       >
-        <Layout alignItems='center'>
+        <Box alignItems='center'>
           <Text
             color='text.process.primary'
             fontSize={['medium', 'regular']}
@@ -50,11 +51,11 @@ export const Item: FC<ItemProps> = ({
           >
             <FormattedMessage id={process} />
           </Text>
-        </Layout>
+        </Box>
 
         <Layout flexBasis={[8, 0]} flexShrink='0' />
 
-        <Layout flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} flexShrink='1'>
+        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} flexShrink='1'>
           <Text
             color='text.process.primary'
             fontSize={['tiny', 'medium']}
@@ -64,7 +65,7 @@ export const Item: FC<ItemProps> = ({
           >
             <FormattedMessage id={text} />
           </Text>
-        </Layout>
+        </Box>
       </Box>
     </Layout>
 

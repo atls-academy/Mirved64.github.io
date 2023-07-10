@@ -20,21 +20,21 @@ export const Navigation = () => (
   >
     <Layout flexBasis={[0, 40]} />
 
-    <Layout display={['flex', 'none']} flexGrow='1' justifyContent='center'>
+    <Box display={['flex', 'none']} flexGrow='1' justifyContent='center'>
       <NextLink>
         <LogoWhiteIcon width={40} height={40} />
       </NextLink>
-    </Layout>
+    </Box>
 
-    <Layout display={['none', 'flex']} flexGrow='1' justifyContent='start'>
+    <Box display={['none', 'flex']} flexGrow='1' justifyContent='start'>
       <NextLink>
         <LogoWhiteIcon width={56} height={56} />
       </NextLink>
-    </Layout>
+    </Box>
 
     <ItemsList navLinksList={navLinkList} />
 
-    <Layout width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
+    <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
       <NextLink>
         <Text
           color='text.navigation.primary'
@@ -45,7 +45,7 @@ export const Navigation = () => (
           <FormattedMessage id='navigationButton' />
         </Text>
       </NextLink>
-    </Layout>
+    </Box>
 
     <Layout flexBasis={[0, 40]} />
   </Box>

@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import { Divider }          from '@ui/divider'
 import { Image }            from '@ui/image'
 import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
@@ -13,12 +14,12 @@ export const Courses = () => (
   <Box backgroundColor='background.courses' width='100%' margin='0 auto' flexDirection='column'>
     <Layout flexBasis={[64, 160]} />
 
-    <Layout>
+    <Row>
       <Layout flexBasis={[20, 230]} flexShrink='1' />
 
       <Column flexBasis={[335, 1610]} flexGrow='1' margin='0 auto' flexShrink='1'>
-        <Layout justifyContent='space-between' alignItems='center'>
-          <Layout flexWrap='wrap' flexShrink='1'>
+        <Row justifyContent='space-between' alignItems='center'>
+          <Box flexWrap='wrap' flexShrink='1'>
             <Text
               color='text.courses.primary'
               fontSize={['regular', 'stupendous']}
@@ -28,9 +29,9 @@ export const Courses = () => (
             >
               <FormattedMessage id='coursesTitle' />
             </Text>
-          </Layout>
+          </Box>
 
-          <Layout flexWrap='wrap' display={['none', 'flex']} flexShrink='1'>
+          <Box flexWrap='wrap' display={['none', 'flex']} flexShrink='1'>
             <NextLink>
               <Text
                 color='text.courses.primary'
@@ -41,8 +42,8 @@ export const Courses = () => (
                 <FormattedMessage id='coursesButtonDesktop' />
               </Text>
             </NextLink>
-          </Layout>
-        </Layout>
+          </Box>
+        </Row>
 
         <Layout flexBasis={[40, 80]} />
 
@@ -51,40 +52,40 @@ export const Courses = () => (
         <Layout flexBasis={[40, 80]} />
 
         <Box flexDirection={['column', 'row']} justifyContent='space-between'>
-          <Layout flexWrap='wrap' flexBasis={[112, 710]}>
+          <Box flexWrap='wrap' flexBasis={[112, 710]}>
             <Text
               color='text.courses.primary'
               fontSize={['small', 'ordinary']}
               fontWeight='normal'
               lineHeight={['normal', 'regular']}
             >
-              <FormattedMessage id='coursesSubtitlePowerBroker' />
+              <FormattedMessage id='coursesSubtitleAtlantisPowerBroker' />
             </Text>
-          </Layout>
+          </Box>
 
           <Layout flexBasis={[20, 0]} />
 
-          <Layout display={['none', 'flex']} flexBasis={559} flexWrap='wrap'>
+          <Box display={['none', 'flex']} flexBasis={559} flexWrap='wrap'>
             <Text
               color='text.courses.primary'
               fontSize='ordinary'
               fontWeight='normal'
               lineHeight='regular'
             >
-              <FormattedMessage id='coursesSubtitlePracticeDesktop' />
+              <FormattedMessage id='coursesSubtitleAdvantageOfLearningDesktop' />
             </Text>
-          </Layout>
+          </Box>
 
-          <Layout display={['flex', 'none']} flexBasis={84} flexWrap='wrap'>
+          <Box display={['flex', 'none']} flexBasis={84} flexWrap='wrap'>
             <Text
               color='text.courses.primary'
               fontSize='small'
               fontWeight='normal'
               lineHeight='normal'
             >
-              <FormattedMessage id='coursesSubtitlePracticeMobile' />
+              <FormattedMessage id='coursesSubtitleAdvantageOfLearningMobile' />
             </Text>
-          </Layout>
+          </Box>
         </Box>
 
         <Layout flexBasis={[40, 80]} />
@@ -92,93 +93,93 @@ export const Courses = () => (
         <Box justifyContent='space-between' flexDirection={['column', 'row']}>
           <Column order={[2, 0]}>
             <Layout>
-              <Layout flexBasis={[335, 1160]} flexShrink='1' flexGrow='1'>
+              <Box flexBasis={[335, 1160]} flexShrink='1' flexGrow='1'>
                 <Layout flexBasis={[16, 40]} flexShrink='0' />
 
                 <Column>
                   <Layout flexBasis={[16, 40]} flexShrink='0' />
 
                   <Column>
-                    <Layout flexShrink='0'>
+                    <Box flexShrink='0'>
                       <Text
                         color='text.courses.primary'
                         fontSize={['medium', 'regular']}
                         fontWeight='normal'
                         lineHeight={['normal', 'mean']}
                       >
-                        <FormattedMessage id='coursesCardTitleFrontend' />
+                        <FormattedMessage id='coursesCardFrontendTitle' />
                       </Text>
-                    </Layout>
+                    </Box>
 
                     <Layout flexBasis={[12, 16]} flexShrink='0' />
 
-                    <Layout display={['none', 'flex']} maxWidth={694} flexShrink='1'>
+                    <Box display={['none', 'flex']} maxWidth={694} flexShrink='1'>
                       <Text
                         color='text.courses.primary'
                         fontSize='small'
                         fontWeight='normal'
                         lineHeight='normal'
                       >
-                        <FormattedMessage id='coursesCardTextFrontendDesktop' />
+                        <FormattedMessage id='coursesCardFrontendTextDesktop' />
                       </Text>
-                    </Layout>
+                    </Box>
 
-                    <Layout display={['flex', 'none']} flexGrow='1'>
+                    <Box display={['flex', 'none']} flexGrow='1'>
                       <Text
                         color='text.courses.primary'
                         fontSize='tiny'
                         fontWeight='normal'
                         lineHeight='small'
                       >
-                        <FormattedMessage id='coursesCardTextFrontendMobile' />
+                        <FormattedMessage id='coursesCardFrontendTextMobile' />
                       </Text>
-                    </Layout>
+                    </Box>
 
                     <Layout flexBasis={[52, 0]} flexShrink='0' />
 
                     <Layout flexBasis={[0, 120]} flexShrink='0' />
 
-                    <Layout flexShrink='0'>
+                    <Box flexShrink='0'>
                       <Text
                         color='text.courses.primary'
                         fontSize={['medium', 'regular']}
                         fontWeight='normal'
                         lineHeight={['normal', 'mean']}
                       >
-                        <FormattedMessage id='coursesCardTitleBasis' />
+                        <FormattedMessage id='coursesCardBasisTitle' />
                       </Text>
-                    </Layout>
+                    </Box>
 
                     <Layout flexBasis={[12, 16]} flexShrink='0' />
 
-                    <Layout display={['none', 'flex']} maxWidth={694} flexShrink='1'>
+                    <Box display={['none', 'flex']} maxWidth={694} flexShrink='1'>
                       <Text
                         color='text.courses.primary'
                         fontSize='small'
                         fontWeight='normal'
                         lineHeight='normal'
                       >
-                        <FormattedMessage id='coursesCardTextBasisDesktop' />
+                        <FormattedMessage id='coursesCardBasisTextDesktop' />
                       </Text>
-                    </Layout>
+                    </Box>
 
-                    <Layout display={['flex', 'none']} flexGrow='1'>
+                    <Box display={['flex', 'none']} flexGrow='1'>
                       <Text
                         color='text.courses.primary'
                         fontSize='tiny'
                         fontWeight='normal'
                         lineHeight='small'
                       >
-                        <FormattedMessage id='coursesCardTextBasisMobile' />
+                        <FormattedMessage id='coursesCardBasisTextMobile' />
                       </Text>
-                    </Layout>
+                    </Box>
                   </Column>
 
                   <Layout flexBasis={[36, 80]} flexShrink='0' />
                 </Column>
 
                 <Layout flexBasis={[16, 0]} flexShrink='0' />
-              </Layout>
+              </Box>
             </Layout>
 
             <Layout display={['none', 'flex']}>
@@ -187,8 +188,8 @@ export const Courses = () => (
               <Column>
                 <Layout flexBasis={32} />
 
-                <Layout justifyContent='space-between'>
-                  <Layout flexShrink='1' flexBasis={496}>
+                <Row justifyContent='space-between'>
+                  <Box flexShrink='1' flexBasis={496}>
                     <Text
                       color='text.courses.primary'
                       fontSize='regular'
@@ -197,9 +198,9 @@ export const Courses = () => (
                     >
                       <FormattedMessage id='coursesSmallCardLibraries' />
                     </Text>
-                  </Layout>
+                  </Box>
 
-                  <Layout flexShrink='1' flexBasis={496}>
+                  <Box flexShrink='1' flexBasis={496}>
                     <Text
                       color='text.courses.primary'
                       fontSize='regular'
@@ -208,8 +209,8 @@ export const Courses = () => (
                     >
                       <FormattedMessage id='coursesSmallCardDesign' />
                     </Text>
-                  </Layout>
-                </Layout>
+                  </Box>
+                </Row>
 
                 <Layout flexBasis={32} />
               </Column>
@@ -218,13 +219,13 @@ export const Courses = () => (
             </Layout>
           </Column>
 
-          <Layout flexBasis={[192, 410]} order={[1, 0]}>
+          <Row flexBasis={[192, 410]} order={[1, 0]}>
             <Layout flexBasis={[16, 32]} flexShrink='0' />
 
             <Column>
               <Layout flexBasis={[16, 32]} flexShrink='0' />
 
-              <Layout>
+              <Box>
                 <Text
                   color='text.courses.primary'
                   fontSize={['tiny', 'little']}
@@ -233,18 +234,18 @@ export const Courses = () => (
                 >
                   <FormattedMessage id='coursesSidebarSubtitle' />
                 </Text>
-              </Layout>
+              </Box>
 
               <Layout flexBasis={[16, 74]} flexShrink='0' />
 
-              <Layout display={['none', 'flex']} margin='0 auto'>
+              <Box display={['none', 'flex']} margin='0 auto'>
                 <Image src='./image/Default.png' width={240} height={240} />
-              </Layout>
+              </Box>
 
               <Layout flexBasis={[0, 62]} flexShrink='0' />
 
               <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
-                <Layout maxWidth={[32, 36]}>
+                <Box maxWidth={[32, 36]}>
                   <Text
                     color='text.courses.primary'
                     fontSize={['giant', 'enormous']}
@@ -253,11 +254,11 @@ export const Courses = () => (
                   >
                     <FormattedMessage id='coursesSidebarNumber' />
                   </Text>
-                </Layout>
+                </Box>
 
                 <Layout flexBasis={[12, 8]} />
 
-                <Layout flexBasis={[131, 44]} maxWidth={['100%', 188]}>
+                <Box flexBasis={[131, 44]} maxWidth={['100%', 188]}>
                   <Text
                     color='text.courses.primary'
                     fontSize={['atom', 'tiny']}
@@ -266,18 +267,18 @@ export const Courses = () => (
                   >
                     <FormattedMessage id='coursesSidebarSign' />
                   </Text>
-                </Layout>
+                </Box>
 
                 <Layout flexBasis={[64, 0]} flexShrink='5' flexGrow='1' />
 
-                <Layout display={['flex', 'none']} flexShrink='0'>
+                <Box display={['flex', 'none']} flexShrink='0'>
                   <Image src='./image/Default.png' width={64} height={64} />
-                </Layout>
+                </Box>
               </Box>
 
               <Layout flexBasis={[16, 68]} flexShrink='0' />
 
-              <Layout display={['none', 'flex']}>
+              <Box display={['none', 'flex']}>
                 <Text
                   color='text.courses.primary'
                   fontSize='small'
@@ -286,22 +287,22 @@ export const Courses = () => (
                 >
                   <FormattedMessage id='coursesSidebarButtonDesktop' />
                 </Text>
-              </Layout>
+              </Box>
             </Column>
 
             <Layout flexBasis={[16, 32]} flexShrink='1' />
-          </Layout>
+          </Row>
         </Box>
       </Column>
 
       <Layout flexBasis={[20, 80]} flexShrink='1' />
-    </Layout>
+    </Row>
 
-    <Layout display={['flex', 'none']} overflow='hidden'>
+    <Row display={['flex', 'none']} overflow='hidden'>
       <Layout flexBasis={32} flexShrink='0' />
 
-      <Layout justifyContent='space-between'>
-        <Layout flexShrink='0' flexBasis={228}>
+      <Row justifyContent='space-between'>
+        <Box flexShrink='0' flexBasis={228}>
           <Text
             color='text.courses.primary'
             fontSize='small'
@@ -310,9 +311,9 @@ export const Courses = () => (
           >
             <FormattedMessage id='coursesSmallCardLibraries' />
           </Text>
-        </Layout>
+        </Box>
 
-        <Layout flexShrink='0' flexBasis={228}>
+        <Box flexShrink='0' flexBasis={228}>
           <Text
             color='text.courses.primary'
             fontSize='small'
@@ -321,16 +322,16 @@ export const Courses = () => (
           >
             <FormattedMessage id='coursesSmallCardDesign' />
           </Text>
-        </Layout>
-      </Layout>
-    </Layout>
+        </Box>
+      </Row>
+    </Row>
 
     <Layout flexBasis={[52, 160]} flexShrink='0' />
 
-    <Layout flexWrap='wrap' display={['flex', 'none']}>
+    <Row flexWrap='wrap' display={['flex', 'none']}>
       <Layout flexBasis={20} />
 
-      <Layout>
+      <Box>
         <NextLink>
           <Text
             color='text.courses.primary'
@@ -341,8 +342,8 @@ export const Courses = () => (
             <FormattedMessage id='coursesButtonMobile' />
           </Text>
         </NextLink>
-      </Layout>
-    </Layout>
+      </Box>
+    </Row>
 
     <Layout flexBasis={[64, 0]} />
   </Box>

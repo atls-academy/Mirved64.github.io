@@ -1,13 +1,13 @@
 import React         from 'react'
 import { FC }        from 'react'
 
-import { Layout }    from '@ui/layout'
+import { Row }       from '@ui/layout'
 
 import { Item }      from '../item'
 import { ListProps } from './items-list.interfaces'
 
 export const ItemsList: FC<ListProps> = ({ technologies, font }) => (
-  <Layout overflow='hidden'>
+  <Row overflow='hidden'>
     {technologies!.map((technology) => (
       <Item
         key={technology.technology}
@@ -16,5 +16,5 @@ export const ItemsList: FC<ListProps> = ({ technologies, font }) => (
         font={font!}
       />
     ))}
-  </Layout>
+  </Row>
 )
