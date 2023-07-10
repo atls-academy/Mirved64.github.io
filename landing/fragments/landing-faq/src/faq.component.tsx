@@ -6,7 +6,6 @@ import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
@@ -21,13 +20,13 @@ export const Faq = () => {
       <Column flexGrow='1'>
         <Layout flexBasis={[80, 160]} />
 
-        <Row justifyContent='space-between' alignItems='center'>
+        <Layout justifyContent='space-between' alignItems='center'>
           <Layout>
             <Text
               color='text.faq.primary'
               fontSize={['ordinary', 'stupendous']}
               fontWeight='normal'
-              lineHeight={['regular', 'stupendous']}
+              lineHeight={['regular', 'massive']}
               letter='-2%'
             >
               <FormattedMessage id='faqTitle' />
@@ -46,7 +45,7 @@ export const Faq = () => {
               </Text>
             </NextLink>
           </Layout>
-        </Row>
+        </Layout>
 
         <Layout flexBasis={[0, 80]} />
 

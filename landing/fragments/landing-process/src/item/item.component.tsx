@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl'
 
 import { Divider }          from '@ui/divider'
 import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Box }              from '@ui/layout'
 import { Text }             from '@ui/text'
@@ -20,7 +19,7 @@ export const Item: FC<ItemProps> = ({
 }) => (
   <Column>
     <Layout>
-      <Row flexBasis={[23, 56]}>
+      <Layout flexBasis={[23, 56]}>
         <Layout alignItems={['start', 'center']}>
           <Text
             color='text.process.primary'
@@ -33,7 +32,7 @@ export const Item: FC<ItemProps> = ({
         </Layout>
 
         <Layout flexBasis={[12, 32]} flexShrink='0' />
-      </Row>
+      </Layout>
 
       <Box
         flexBasis={[312, 1700]}
@@ -47,7 +46,7 @@ export const Item: FC<ItemProps> = ({
             color='text.process.primary'
             fontSize={['medium', 'regular']}
             fontWeight={['normalMedium', 'normal']}
-            lineHeight={['normal', 'regular']}
+            lineHeight={['normal', 'mean']}
           >
             <FormattedMessage id={process} />
           </Text>

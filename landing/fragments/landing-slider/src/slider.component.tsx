@@ -7,7 +7,6 @@ import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
 export const Slider = () => (
@@ -20,7 +19,7 @@ export const Slider = () => (
           <Text
             color='text.slider.primary'
             fontSize={['atom', 'tiny']}
-            lineHeight={['atom', 'extraSmall']}
+            lineHeight={['subAtom', 'tiny']}
             textTransform='uppercase'
           >
             <FormattedMessage id='sliderSubtitle' />
@@ -61,7 +60,7 @@ export const Slider = () => (
         <Layout flexBasis={[25, 32]} flexShrink='0' />
 
         <Layout justifyContent='center'>
-          <Row justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
+          <Layout justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
             <Layout height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
                 <ArrowLeftIcon width={16} height={16} />
@@ -77,7 +76,7 @@ export const Slider = () => (
               <Text
                 color='text.slider.primary'
                 fontSize={['atom', 'little']}
-                lineHeight={['tiny', 'medium']}
+                lineHeight={['minor', 'medium']}
                 textAlign='center'
               >
                 <FormattedMessage id='sliderSign' />
@@ -89,7 +88,7 @@ export const Slider = () => (
                 <ArrowRightIcon width={16} height={16} />
               </Layout>
             </Layout>
-          </Row>
+          </Layout>
         </Layout>
       </Column>
     </Column>

@@ -1,4 +1,5 @@
 const fontSizes = {
+  subAtom: '11px',
   atom: '12px',
   tiny: '14px',
   little: '16px',

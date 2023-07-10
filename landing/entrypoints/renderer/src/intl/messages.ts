@@ -16,15 +16,17 @@ export const messages = {
     aboutTextMobile:
       'Digital становится всё более многолюдным, востребованность по направлениям при этом не снижается. Но специалистов, готовых нести ответсвенность за свои решения по-прежнему мало.',
     aboutTextAcademyDesktop:
-      'Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров',
-    aboutTextAcademyMobile:
       'Atlantis Academy обучает и формирует инженеров и архитекторов, а не программистов и дизайнеров',
+    aboutTextAcademyMobile:
+      'Atlantis Academy формирует инженеров и архитекторов, а не программистов и дизайнеров',
     coursesTitle: 'Курсы и материалы',
     coursesButtonDesktop: 'Все материалы',
     coursesSubtitlePowerBroker:
       'Являясь серым кардиналом, Atlantis имеет влияние на сферу IT и неограниченные возможности в применении навыков.',
-    coursesSubtitlePractice:
+    coursesSubtitlePracticeDesktop:
       'Эффективность обучения заметно вырастает благодаря практики на существующих проектах.',
+    coursesSubtitlePracticeMobile:
+      'Эффективность обучения заметно вырастает из-за практики на существующих проектах.',
     coursesCardTitleFrontend: 'Frontend Engineer',
     coursesCardTextFrontendDesktop:
       'Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении программирования. Получите востребованную профессию и возможность открыть бизнес в сфере информационных технологий',

@@ -79,14 +79,14 @@ export const About = () => (
               lineHeight='normal'
               display='inline'
             >
-              <FormattedMessage id='aboutTextAcademyDesktop' />
+              <FormattedMessage id='aboutTextAcademyMobile' />
             </Text>
           </Layout>
         </Column>
 
         <Layout flexBasis={[0, 40]} />
 
-        <Box display={['none', 'inline']}>
+        <Layout display={['none', 'inline']}>
           <Layout display='inline'>
             <Text
               color='text.about.primary'
@@ -95,7 +95,7 @@ export const About = () => (
               lineHeight='huge'
               display='inline'
             >
-              <FormattedMessage id='aboutTextAcademyMobile' />
+              <FormattedMessage id='aboutTextAcademyDesktop' />
             </Text>
           </Layout>
 
@@ -104,7 +104,7 @@ export const About = () => (
           <Box display='inline-flex'>
             <Image src='./image/Default.png' width={40} height={40} />
           </Box>
-        </Box>
+        </Layout>
       </Column>
 
       <Layout flexBasis={[20, 230]} />

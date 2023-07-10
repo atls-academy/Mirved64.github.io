@@ -5,7 +5,6 @@ import { FormattedMessage } from 'react-intl'
 import { Divider }          from '@ui/divider'
 import { CrossIcon }        from '@ui/icons'
 import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 
@@ -15,7 +14,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
   <Column height='100%'>
     <Layout flexBasis={[16, 40]} flexShrink='0' />
 
-    <Row justifyContent={['space-between', 'start']} alignItems='center'>
+    <Layout justifyContent={['space-between', 'start']} alignItems='center'>
       <Layout display={['none', 'flex']} alignItems='center'>
         <CrossIcon width={20} height={20} />
       </Layout>
@@ -27,7 +26,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
           color='text.faq.primary'
           fontSize={['small', 'ordinary']}
           fontWeight='normal'
-          lineHeight={['standart', 'regular']}
+          lineHeight={['normal', 'regular']}
         >
           <FormattedMessage id={question} />
         </Text>
@@ -36,7 +35,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
       <Layout display={['flex', 'none']} alignItems='center'>
         <CrossIcon width={12} height={12} />
       </Layout>
-    </Row>
+    </Layout>
 
     <Layout flexBasis={[16, 40]} />
 

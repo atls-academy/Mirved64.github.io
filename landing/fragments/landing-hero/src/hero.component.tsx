@@ -6,7 +6,6 @@ import { GitHubIcon }       from '@ui/icons'
 import { TelegramIcon }     from '@ui/icons'
 import { MailIcon }         from '@ui/icons'
 import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
@@ -17,12 +16,12 @@ export const Hero = () => (
   <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
     <Layout flexBasis={[80, 412]} />
 
-    <Row flexGrow='1' flexShrink='1'>
+    <Layout flexGrow='1' flexShrink='1'>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
-      <Row flexGrow='1' flexShrink='1'>
+      <Layout flexGrow='1' flexShrink='1'>
         <Column flexShrink='1' flexGrow='1' flexBasis={[335, 1460]}>
-          <Layout>
+          <Layout flexShrink='1'>
             <Text
               color='text.hero.primary'
               fontSize={['normal', 'stupendous']}
@@ -33,7 +32,7 @@ export const Hero = () => (
             </Text>
           </Layout>
 
-          <Layout>
+          <Layout flexShrink='1'>
             <Text
               color='text.hero.primary'
               fontSize={['normal', 'stupendous']}
@@ -45,8 +44,8 @@ export const Hero = () => (
             </Text>
           </Layout>
 
-          <Row>
-            <Layout>
+          <Layout flexWrap='wrap' flexShrink='1'>
+            <Layout flexShrink='1'>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
@@ -60,7 +59,7 @@ export const Hero = () => (
 
             <Space count='8' />
 
-            <Layout flexShrink='0'>
+            <Layout flexShrink='1'>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
@@ -71,20 +70,20 @@ export const Hero = () => (
                 <FormattedMessage id='heroTitleIt' />
               </Text>
             </Layout>
-          </Row>
+          </Layout>
 
-          <Layout flexBasis={[24, 48]} />
+          <Layout flexBasis={[24, 48]} flexShrink='1' />
 
-          <Divider backgroundColor='divider.primary' weight={1} />
+          <Divider backgroundColor='divider.primary' weight={1} flexShrink='1' />
 
-          <Layout flexBasis={[24, 48]} />
+          <Layout flexBasis={[24, 48]} flexShrink='1' />
 
-          <Layout flexWrap='wrap' maxWidth={640}>
+          <Layout flexWrap='wrap' maxWidth={640} flexShrink='1'>
             <Text
               color='text.hero.primary'
               fontSize={['tiny', 'small']}
               fontWeight='normal'
-              lineHeight={['compact', 'normal']}
+              lineHeight={['small', 'normal']}
             >
               <FormattedMessage id='heroSlogan' />
             </Text>
@@ -155,10 +154,10 @@ export const Hero = () => (
             </Layout>
           </Column>
         </Box>
-      </Row>
+      </Layout>
 
       <Layout flexBasis={[20, 40]} flexShrink='0' />
-    </Row>
+    </Layout>
 
     <Layout flexBasis={[20, 50]} />
   </Box>
