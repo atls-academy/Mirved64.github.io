@@ -1,12 +1,12 @@
-import React          from 'react'
-import { useIntl }    from 'react-intl'
+import React       from 'react'
+import { useIntl } from 'react-intl'
 
-import { ImageBlock } from '@ui/image'
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
+import { Image }   from '@ui/image'
+import { Box }     from '@ui/layout'
+import { Column }  from '@ui/layout'
+import { Layout }  from '@ui/layout'
 
-import { Item }       from './item'
+import { Item }    from './item'
 
 export const Process = () => {
   const intl = useIntl()
@@ -66,7 +66,7 @@ export const Process = () => {
             right='0'
             display={['none', 'flex']}
           >
-            <ImageBlock src='./image/Default.png' />
+            <Image src='./image/Default.png' width={400} height={400} />
           </Box>
         </Column>
 

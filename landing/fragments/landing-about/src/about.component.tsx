@@ -1,7 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { ImageBlock }       from '@ui/image'
+import { Image }            from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -31,8 +31,8 @@ export const About = () => (
 
           <Space count='8' />
 
-          <Box display='inline-flex' width='40px' height='40px'>
-            <ImageBlock src='./image/Default.png' />
+          <Box display='inline-flex'>
+            <Image src='./image/Default.png' width={40} height={40} />
           </Box>
 
           <Space count='8' />
@@ -51,8 +51,8 @@ export const About = () => (
 
           <Space count='8' />
 
-          <Box display='inline-flex' width='40px' height='40px'>
-            <ImageBlock src='./image/Default.png' />
+          <Box display='inline-flex'>
+            <Image src='./image/Default.png' width={40} height={40} />
           </Box>
         </Box>
 
@@ -101,8 +101,8 @@ export const About = () => (
 
           <Space count='8' />
 
-          <Box display='inline-flex' width='40px' height='40px'>
-            <ImageBlock src='./image/Default.png' />
+          <Box display='inline-flex'>
+            <Image src='./image/Default.png' width={40} height={40} />
           </Box>
         </Box>
       </Column>

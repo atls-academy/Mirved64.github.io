@@ -2,7 +2,7 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Divider }          from '@ui/divider'
-import { ImageBlock }       from '@ui/image'
+import { Image }            from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
@@ -227,8 +227,8 @@ export const Courses = () => (
 
               <Layout flexBasis={[16, 74]} flexShrink='0' />
 
-              <Box display={['none', 'flex']} width='240px' height='240px' margin='0 auto'>
-                <ImageBlock src='./image/Default.png' />
+              <Box display={['none', 'flex']} margin='0 auto'>
+                <Image src='./image/Default.png' width={240} height={240} />
               </Box>
 
               <Layout flexBasis={[0, 62]} flexShrink='0' />
@@ -260,8 +260,8 @@ export const Courses = () => (
 
                 <Layout flexBasis={[64, 0]} flexShrink='5' flexGrow='1' />
 
-                <Box display={['flex', 'none']} width='64px' height='64px' flexShrink='0'>
-                  <ImageBlock src='./image/Default.png' />
+                <Box display={['flex', 'none']} flexShrink='0'>
+                  <Image src='./image/Default.png' width={64} height={64} />
                 </Box>
               </Box>
 
