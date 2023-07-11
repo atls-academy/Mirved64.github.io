@@ -39,20 +39,18 @@ export const Hero = () => (
               fontSize={['normal', 'stupendous']}
               fontWeight='normal'
               lineHeight={['ordinary', 'stupendous']}
-              wordBreak='break-all'
             >
               <FormattedMessage id='heroTitleProfessionals' />
             </Text>
           </Box>
 
-          <Row flexWrap='wrap'>
+          <Row>
             <Box>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
                 fontWeight='normal'
                 lineHeight={['ordinary', 'stupendous']}
-                wordBreak='break-all'
               >
                 <FormattedMessage id='heroTitleRevolution' />
               </Text>
@@ -66,7 +64,6 @@ export const Hero = () => (
                 fontSize={['normal', 'stupendous']}
                 fontWeight='normal'
                 lineHeight={['ordinary', 'stupendous']}
-                wordBreak='break-all'
               >
                 <FormattedMessage id='heroTitleIt' />
               </Text>
