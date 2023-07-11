@@ -258,7 +258,7 @@ export const Courses = () => (
 
                 <Layout flexBasis={[12, 8]} />
 
-                <Box flexBasis={[131, 44]} maxWidth={['100%', 188]}>
+                <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
                   <Text
                     color='text.courses.primary'
                     fontSize={['atom', 'tiny']}

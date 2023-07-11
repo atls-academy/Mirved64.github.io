@@ -13,17 +13,17 @@ import { Text }             from '@ui/text'
 import { QuestionProps }    from './item.interfaces'
 
 export const Item: FC<QuestionProps> = ({ question, divider }) => (
-  <Column height='100%'>
+  <Column>
     <Layout flexBasis={[16, 40]} flexShrink='0' />
 
-    <Row justifyContent={['space-between', 'start']} alignItems='center'>
+    <Row justifyContent={['space-between', 'start']}>
       <Box display={['none', 'flex']} alignItems='center'>
         <CrossIcon width={20} height={20} />
       </Box>
 
       <Layout flexBasis={[0, 27]} flexShrink='0' />
 
-      <Box alignItems='center' flexGrow={[1, 0]}>
+      <Box flexGrow={[1, 0]}>
         <Text
           color='text.faq.primary'
           fontSize={['small', 'ordinary']}

@@ -18,11 +18,11 @@ export const Hero = () => (
     <Layout flexBasis={[80, 412]} />
 
     <Row flexGrow='1' flexShrink='1'>
-      <Layout flexBasis={[20, 230]} flexShrink='0' />
+      <Layout flexBasis={[20, 230]} flexShrink='1' />
 
       <Row flexGrow='1' flexShrink='1'>
         <Column flexShrink='1' flexGrow='1' flexBasis={[335, 1460]}>
-          <Box flexShrink='1'>
+          <Box>
             <Text
               color='text.hero.primary'
               fontSize={['normal', 'stupendous']}
@@ -33,7 +33,7 @@ export const Hero = () => (
             </Text>
           </Box>
 
-          <Box flexShrink='1'>
+          <Box>
             <Text
               color='text.hero.primary'
               fontSize={['normal', 'stupendous']}
@@ -45,8 +45,8 @@ export const Hero = () => (
             </Text>
           </Box>
 
-          <Row flexWrap='wrap' flexShrink='1'>
-            <Box flexShrink='1'>
+          <Row flexWrap='wrap'>
+            <Box>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
@@ -60,7 +60,7 @@ export const Hero = () => (
 
             <Space count='8' />
 
-            <Box flexShrink='1'>
+            <Box>
               <Text
                 color='text.hero.primary'
                 fontSize={['normal', 'stupendous']}
@@ -128,7 +128,7 @@ export const Hero = () => (
 
         <Layout flexBasis={[0, 134]} />
 
-        <Box alignItems='end' flexBasis={56} display={['none', 'flex']}>
+        <Box display={['none', 'flex']} alignItems='end' flexBasis={56}>
           <Column height='200px' justifyContent='space-around' alignItems='center'>
             <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
               <Layout flexShrink='0'>

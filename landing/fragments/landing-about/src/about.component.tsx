@@ -17,7 +17,7 @@ export const About = () => (
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='1'>
-        <Box display={['none', 'inline']}>
+        <Box display={['none', 'block']}>
           <Box display='inline'>
             <Text
               color='text.about.primary'
@@ -58,13 +58,12 @@ export const About = () => (
         </Box>
 
         <Column display={['flex', 'none']}>
-          <Box display='inline'>
+          <Box>
             <Text
               color='text.about.primary'
               fontSize='small'
               fontWeight='normal'
               lineHeight='normal'
-              display='inline'
             >
               <FormattedMessage id='aboutIntroMobile' />
             </Text>
@@ -72,13 +71,12 @@ export const About = () => (
 
           <Layout flexBasis={28} />
 
-          <Box display='inline'>
+          <Box>
             <Text
               color='text.about.primary'
               fontSize='small'
               fontWeight='normal'
               lineHeight='normal'
-              display='inline'
             >
               <FormattedMessage id='aboutCentralIdeaMobile' />
             </Text>
@@ -87,7 +85,7 @@ export const About = () => (
 
         <Layout flexBasis={[0, 40]} />
 
-        <Box display={['none', 'inline']}>
+        <Box display={['none', 'block']}>
           <Box display='inline'>
             <Text
               color='text.about.primary'

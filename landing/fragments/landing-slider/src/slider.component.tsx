@@ -61,7 +61,7 @@ export const Slider = () => (
         <Layout flexBasis={[25, 32]} flexShrink='0' />
 
         <Layout justifyContent='center'>
-          <Row justifyContent='space-between' alignItems='center' flexBasis={[335, 960]}>
+          <Row justifyContent='space-between' flexBasis={[335, 960]}>
             <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
                 <ArrowLeftIcon width={16} height={16} />
@@ -78,7 +78,6 @@ export const Slider = () => (
                 color='text.slider.primary'
                 fontSize={['atom', 'little']}
                 lineHeight={['minor', 'medium']}
-                textAlign='center'
               >
                 <FormattedMessage id='sliderSign' />
               </Text>
