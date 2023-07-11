@@ -17,45 +17,68 @@ export const About = () => (
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='1'>
-        <Box display={['none', 'block']}>
-          <Box display='inline'>
+        <Column display={['none', 'flex']}>
+          <Box>
             <Text
               color='text.about.primary'
               fontSize='common'
               fontWeight='normal'
               lineHeight='huge'
-              display='inline'
             >
-              <FormattedMessage id='aboutTextIntroDesktop' />
+              <FormattedMessage id='aboutTextIntroFirstDesktop' />
             </Text>
           </Box>
 
-          <Space count='8' />
+          <Row>
+            <Box>
+              <Text
+                color='text.about.primary'
+                fontSize='common'
+                fontWeight='normal'
+                lineHeight='huge'
+              >
+                <FormattedMessage id='aboutTextIntroSecondDesktop' />
+              </Text>
+            </Box>
 
-          <Box display='inline-flex'>
-            <Image src='./image/Default.png' width={40} height={40} />
-          </Box>
+            <Space count='6' />
 
-          <Space count='8' />
+            <Box width={76} height={52} alignItems='center' justifyContent='center'>
+              <Image src='./image/Default.png' width={40} height={40} />
+            </Box>
 
-          <Box display='inline'>
-            <Text
-              color='text.about.primary'
-              fontSize='common'
-              fontWeight='normal'
-              lineHeight='huge'
-              display='inline'
-            >
-              <FormattedMessage id='aboutTextProblemDesktop' />
-            </Text>
-          </Box>
+            <Space count='6' />
 
-          <Space count='8' />
+            <Box>
+              <Text
+                color='text.about.primary'
+                fontSize='common'
+                fontWeight='normal'
+                lineHeight='huge'
+              >
+                <FormattedMessage id='aboutTextProblemFirstDesktop' />
+              </Text>
+            </Box>
+          </Row>
 
-          <Box display='inline-flex'>
-            <Image src='./image/Default.png' width={40} height={40} />
-          </Box>
-        </Box>
+          <Row>
+            <Box>
+              <Text
+                color='text.about.primary'
+                fontSize='common'
+                fontWeight='normal'
+                lineHeight='huge'
+              >
+                <FormattedMessage id='aboutTextProblemSecondDesktop' />
+              </Text>
+            </Box>
+            <Space count='14' />
+
+            <Box width={76} height={52} alignItems='center' justifyContent='center'>
+              <Image src='./image/Default.png' width={40} height={40} />
+            </Box>
+          </Row>
+        </Column>
 
         <Column display={['flex', 'none']}>
           <Box>
@@ -85,7 +108,7 @@ export const About = () => (
 
         <Layout flexBasis={[0, 40]} />
 
-        <Box display={['none', 'block']}>
+        <Column display={['none', 'flex']}>
           <Box display='inline'>
             <Text
               color='text.about.primary'
@@ -94,16 +117,28 @@ export const About = () => (
               lineHeight='huge'
               display='inline'
             >
-              <FormattedMessage id='aboutCentralIdeaDesktop' />
+              <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
             </Text>
           </Box>
 
-          <Space count='8' />
+          <Row>
+            <Box>
+              <Text
+                color='text.about.primary'
+                fontSize='common'
+                fontWeight='normal'
+                lineHeight='huge'
+              >
+                <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
+              </Text>
+            </Box>
+            <Space count='6' />
 
-          <Box display='inline-flex'>
-            <Image src='./image/Default.png' width={40} height={40} />
-          </Box>
-        </Box>
+            <Box width={76} height={52} alignItems='center' justifyContent='center'>
+              <Image src='./image/Default.png' width={40} height={40} />
+            </Box>
+          </Row>
+        </Column>
       </Column>
 
       <Layout flexBasis={[20, 230]} />

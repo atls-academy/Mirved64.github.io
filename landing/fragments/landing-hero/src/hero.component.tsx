@@ -18,7 +18,7 @@ export const Hero = () => (
     <Layout flexBasis={[80, 412]} />
 
     <Row flexGrow='1' flexShrink='1'>
-      <Layout flexBasis={[20, 230]} flexShrink='1' />
+      <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Row flexGrow='1' flexShrink='1'>
         <Column flexShrink='1' flexGrow='1' flexBasis={[335, 1460]}>

@@ -27,7 +27,7 @@ export const Courses = () => (
               lineHeight={['common', 'stupendous']}
               letter='-2%'
             >
-              <FormattedMessage id='coursesTitle' />
+              <FormattedMessage id='coursesTitle' defaultMessage='Курсы' description='Курсы' />
             </Text>
           </Box>
 
