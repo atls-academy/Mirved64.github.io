@@ -27,7 +27,7 @@ export const Courses = () => (
               lineHeight={['common', 'stupendous']}
               letter='-2%'
             >
-              <FormattedMessage id='coursesTitle' defaultMessage='Курсы' description='Курсы' />
+              <FormattedMessage id='coursesTitle' />
             </Text>
           </Box>
 
@@ -39,7 +39,7 @@ export const Courses = () => (
                 fontWeight='normal'
                 lineHeight='small'
               >
-                <FormattedMessage id='coursesButtonDesktop' />
+                <FormattedMessage id='coursesButton' />
               </Text>
             </NextLink>
           </Box>
@@ -65,25 +65,14 @@ export const Courses = () => (
 
           <Layout flexBasis={[20, 0]} />
 
-          <Box display={['none', 'flex']} flexBasis={559} flexWrap='wrap'>
+          <Box flexBasis={[84, 559]} flexWrap='wrap'>
             <Text
               color='text.courses.primary'
-              fontSize='ordinary'
+              fontSize={['small', 'ordinary']}
               fontWeight='normal'
-              lineHeight='regular'
+              lineHeight={['normal', 'regular']}
             >
-              <FormattedMessage id='coursesSubtitleAdvantageOfLearningDesktop' />
-            </Text>
-          </Box>
-
-          <Box display={['flex', 'none']} flexBasis={84} flexWrap='wrap'>
-            <Text
-              color='text.courses.primary'
-              fontSize='small'
-              fontWeight='normal'
-              lineHeight='normal'
-            >
-              <FormattedMessage id='coursesSubtitleAdvantageOfLearningMobile' />
+              <FormattedMessage id='coursesSubtitleAdvantageOfLearning' />
             </Text>
           </Box>
         </Box>
@@ -113,25 +102,14 @@ export const Courses = () => (
 
                     <Layout flexBasis={[12, 16]} flexShrink='0' />
 
-                    <Box display={['none', 'flex']} maxWidth={694} flexShrink='1'>
+                    <Box maxWidth={694} flexShrink='1' flexGrow={[1, 0]}>
                       <Text
                         color='text.courses.primary'
-                        fontSize='small'
+                        fontSize={['tiny', 'small']}
                         fontWeight='normal'
-                        lineHeight='normal'
+                        lineHeight={['small', 'normal']}
                       >
-                        <FormattedMessage id='coursesCardFrontendTextDesktop' />
-                      </Text>
-                    </Box>
-
-                    <Box display={['flex', 'none']} flexGrow='1'>
-                      <Text
-                        color='text.courses.primary'
-                        fontSize='tiny'
-                        fontWeight='normal'
-                        lineHeight='small'
-                      >
-                        <FormattedMessage id='coursesCardFrontendTextMobile' />
+                        <FormattedMessage id='coursesCardFrontendText' />
                       </Text>
                     </Box>
 
@@ -152,25 +130,14 @@ export const Courses = () => (
 
                     <Layout flexBasis={[12, 16]} flexShrink='0' />
 
-                    <Box display={['none', 'flex']} maxWidth={694} flexShrink='1'>
+                    <Box maxWidth={694} flexShrink='1' flexGrow={[1, 0]}>
                       <Text
                         color='text.courses.primary'
-                        fontSize='small'
+                        fontSize={['tiny', 'small']}
                         fontWeight='normal'
-                        lineHeight='normal'
+                        lineHeight={['small', 'normal']}
                       >
-                        <FormattedMessage id='coursesCardBasisTextDesktop' />
-                      </Text>
-                    </Box>
-
-                    <Box display={['flex', 'none']} flexGrow='1'>
-                      <Text
-                        color='text.courses.primary'
-                        fontSize='tiny'
-                        fontWeight='normal'
-                        lineHeight='small'
-                      >
-                        <FormattedMessage id='coursesCardBasisTextMobile' />
+                        <FormattedMessage id='coursesCardBasisText' />
                       </Text>
                     </Box>
                   </Column>
@@ -328,7 +295,7 @@ export const Courses = () => (
 
     <Layout flexBasis={[52, 160]} flexShrink='0' />
 
-    <Row flexWrap='wrap' display={['flex', 'none']}>
+    <Row display={['flex', 'none']}>
       <Layout flexBasis={20} />
 
       <Box>
@@ -339,7 +306,7 @@ export const Courses = () => (
             fontWeight='normal'
             lineHeight='minor'
           >
-            <FormattedMessage id='coursesButtonMobile' />
+            <FormattedMessage id='coursesButton' />
           </Text>
         </NextLink>
       </Box>

@@ -78,6 +78,7 @@ export const Slider = () => (
                 color='text.slider.primary'
                 fontSize={['atom', 'little']}
                 lineHeight={['minor', 'medium']}
+                textAlign='center'
               >
                 <FormattedMessage id='sliderSign' />
               </Text>

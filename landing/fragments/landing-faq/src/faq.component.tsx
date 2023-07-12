@@ -42,7 +42,7 @@ export const Faq = () => {
                 fontWeight='normal'
                 lineHeight='compact'
               >
-                <FormattedMessage id='faqButtonDesktop' />
+                <FormattedMessage id='faqButton' />
               </Text>
             </NextLink>
           </Box>
@@ -72,7 +72,7 @@ export const Faq = () => {
                 fontWeight='normal'
                 lineHeight='compact'
               >
-                <FormattedMessage id='faqButtonMobile' />
+                <FormattedMessage id='faqButton' />
               </Text>
             </NextLink>
           </Box>

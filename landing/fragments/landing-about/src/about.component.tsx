@@ -109,13 +109,12 @@ export const About = () => (
         <Layout flexBasis={[0, 40]} />
 
         <Column display={['none', 'flex']}>
-          <Box display='inline'>
+          <Box>
             <Text
               color='text.about.primary'
               fontSize='common'
               fontWeight='normal'
               lineHeight='huge'
-              display='inline'
             >
               <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
             </Text>
