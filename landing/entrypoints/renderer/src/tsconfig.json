@@ -1,0 +1,16 @@
+{
+  "extends": "./../../../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "module": "esnext",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../locales/messages.ts"],
+  "exclude": ["node_modules"]
+}

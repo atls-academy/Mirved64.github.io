@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": false,
@@ -17,10 +19,20 @@
     "removeComments": true,
     "strict": true,
     "sourceMap": false,
-    "target": "es2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "rootDir": "auth",
-    "outDir": "auth/dist"
+    "resolveJsonModule": true,
+    "target": "es2021",
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext", "esnext.intl", "es2017.intl", "es2018.intl"],
+    "incremental": true,
+    "plugins": [
+      {
+        "transform": "@formatjs/ts-transformer",
+        "import": "transform",
+        "type": "config",
+        "overrideIdFn": "[sha512:contenthash:base64:6]",
+        "ast": true
+      }
+    ]
   },
-  "include": ["auth/**/*"]
+  "include": ["auth/**/*", "landing/**/*", "ui/**/*"]
 }
