@@ -8,7 +8,7 @@ import { ItemsProps } from './items-list.interfaces'
 
 export const ItemsList: FC<ItemsProps> = ({ navLinksList }) => (
   <Row
-    height='18px'
+    height='32px'
     flexBasis={860}
     flexShrink='1'
     display={['none', 'flex']}
