@@ -39,6 +39,7 @@ const colors = {
     primary: 'rgba(255, 255, 255, 1)',
     secondary: 'rgba(0, 0, 0, 1)',
   },
+  button: {},
 }
 
 export { colors }
