@@ -1,14 +1,14 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                   from 'react'
+import { FormattedMessage }    from 'react-intl'
 
-import { ArrowLeftIcon }    from '@ui/icons'
-import { ArrowRightIcon }   from '@ui/icons'
-import { ImageBlock }       from '@ui/image'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { ArrowLeftWhiteIcon }  from '@ui/icons'
+import { ArrowRightWhiteIcon } from '@ui/icons'
+import { ImageBlock }          from '@ui/image'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Text }                from '@ui/text'
 
 export const Slider = () => (
   <Box backgroundColor='background.slider' width='100%' margin='0 auto' flexDirection='column'>
@@ -64,7 +64,7 @@ export const Slider = () => (
           <Row justifyContent='space-between' flexBasis={[335, 960]}>
             <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
-                <ArrowLeftIcon width={16} height={16} />
+                <ArrowLeftWhiteIcon width={16} height={16} />
               </Layout>
             </Box>
 
@@ -86,7 +86,7 @@ export const Slider = () => (
 
             <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
               <Layout>
-                <ArrowRightIcon width={16} height={16} />
+                <ArrowRightWhiteIcon width={16} height={16} />
               </Layout>
             </Box>
           </Row>

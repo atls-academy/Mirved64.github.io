@@ -6,7 +6,10 @@ const colors = {
     },
     hero: 'rgba(102, 102, 102, 1)',
     about: 'rgba(102, 102, 102, 1)',
-    courses: 'rgba(255, 255, 255, 1)',
+    courses: {
+      mainColor: 'rgba(255, 255, 255, 1)',
+      white: 'rgba(255, 255, 255, 1)',
+    },
     process: 'rgba(102, 102, 102, 1)',
     slider: 'rgba(102, 102, 102, 1)',
     technologies: 'rgba(102, 102, 102, 1)',

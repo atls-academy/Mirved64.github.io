@@ -5,7 +5,7 @@ import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
 
-export const ArrowLeftIcon = (props: IconProps) => {
+export const ArrowRightWhiteIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -17,7 +17,7 @@ export const ArrowLeftIcon = (props: IconProps) => {
       {...props}
     >
       <path
-        d='M6.5 0.999999L1.5 6L6.5 11'
+        d='M1.5 0.999999L6.5 6L1.5 11'
         stroke='white'
         strokeWidth={1.25}
         strokeLinecap='round'
