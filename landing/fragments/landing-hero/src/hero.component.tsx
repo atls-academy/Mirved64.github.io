@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Button }           from '@ui/button'
 import { Divider }          from '@ui/divider'
 import { GitHubIcon }       from '@ui/icons'
 import { TelegramIcon }     from '@ui/icons'
@@ -97,29 +98,29 @@ export const Hero = () => (
             justifyContent='space-between'
             alignItems='center'
           >
-            <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-              <Layout>
+            <Button variant='transparentBackgroundWhiteText'>
+              <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
                   <TelegramIcon width={15} height={12} />
                 </NextLink>
-              </Layout>
-            </Box>
+              </Box>
+            </Button>
 
-            <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-              <Layout>
+            <Button variant='transparentBackgroundWhiteText'>
+              <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
                   <GitHubIcon width={15} height={15} />
                 </NextLink>
-              </Layout>
-            </Box>
+              </Box>
+            </Button>
 
-            <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-              <Layout>
+            <Button variant='transparentBackgroundWhiteText'>
+              <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
                   <MailIcon width={18} height={14} />
                 </NextLink>
-              </Layout>
-            </Box>
+              </Box>
+            </Button>
           </Row>
         </Column>
 
@@ -127,29 +128,29 @@ export const Hero = () => (
 
         <Box display={['none', 'flex']} alignItems='end' flexBasis={56}>
           <Column height='200px' justifyContent='space-around' alignItems='center'>
-            <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-              <Layout flexShrink='0'>
+            <Button variant='transparentBackgroundWhiteText'>
+              <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
                   <TelegramIcon width={18} height={15} />
                 </NextLink>
-              </Layout>
-            </Box>
+              </Box>
+            </Button>
 
-            <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-              <Layout flexShrink='0'>
+            <Button variant='transparentBackgroundWhiteText'>
+              <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
                   <GitHubIcon width={18} height={18} />
                 </NextLink>
-              </Layout>
-            </Box>
+              </Box>
+            </Button>
 
-            <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-              <Layout flexShrink='0'>
+            <Button variant='transparentBackgroundWhiteText'>
+              <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
                   <MailIcon width={18} height={14} />
                 </NextLink>
-              </Layout>
-            </Box>
+              </Box>
+            </Button>
           </Column>
         </Box>
       </Row>

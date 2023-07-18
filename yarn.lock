@@ -3228,6 +3228,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:^18.2.9"
     "@types/react-dom": "npm:^18.2.4"
+    "@ui/button": "workspace:^"
     "@ui/divider": "workspace:^"
     "@ui/icons": "workspace:^"
     "@ui/image": "workspace:^"

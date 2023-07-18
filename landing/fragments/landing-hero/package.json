@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/button": "workspace:^",
     "@ui/divider": "workspace:^",
     "@ui/icons": "workspace:^",
     "@ui/image": "workspace:^",
