@@ -20,7 +20,7 @@ export const Item: FC<ItemProps> = ({
 }) => (
   <Column>
     <Row>
-      <Row flexBasis={[47, 96]} >
+      <Row flexBasis={[47, 96]}>
         <Box width={[35, 64]} height={[35, 64]} alignItems='center' justifyContent='center'>
           <Text
             color='text.process.primary'

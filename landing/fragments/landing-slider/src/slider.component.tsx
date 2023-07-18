@@ -47,15 +47,17 @@ export const Slider = () => (
       <Layout flexBasis={[24, 50]} flexShrink='0' />
 
       <Column margin='0 auto'>
-        <Box
-          margin='0 auto'
-          maxWidth={960}
-          maxHeight={540}
-          width={[138, 'auto']}
-          height={[340, 'auto']}
-          flexShrink='1'
-        >
-          <ImageBlock src='./image/mockup.png' />
+        <Box width={[155, 960]} border={['thinWhite', 'boldWhite']} margin='0 auto'>
+          <Box
+            margin='0 auto'
+            maxWidth={960}
+            maxHeight={540}
+            width={[138, 'auto']}
+            height={[340, 'auto']}
+            flexShrink='1'
+          >
+            <ImageBlock src='./image/mockup.png' />
+          </Box>
         </Box>
 
         <Layout flexBasis={[25, 32]} flexShrink='0' />
