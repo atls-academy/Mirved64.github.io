@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
+  "scripts": {
+    "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
+  },
   "dependencies": {
+    "@atls-ui-generators/button": "0.0.10",
     "@atls-ui-parts/button": "^0.0.12",
+    "@atls-ui-parts/conditional-render": "^0.0.4",
     "@ui/layout": "workspace:^",
     "@ui/theme": "workspace:^",
     "styled-system": "^5.1.5",

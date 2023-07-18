@@ -1,6 +1,9 @@
 const colors = {
   background: {
-    navigation: 'rgba(102, 102, 102, 1)',
+    navigation: {
+      mainColor: 'rgba(102, 102, 102, 1)',
+      white: 'rgba(255, 255, 255, 1)',
+    },
     hero: 'rgba(102, 102, 102, 1)',
     about: 'rgba(102, 102, 102, 1)',
     courses: 'rgba(255, 255, 255, 1)',
@@ -40,7 +43,52 @@ const colors = {
     secondary: 'rgba(0, 0, 0, 1)',
     navigation: 'rgba(217, 217, 217, 1)',
   },
-  button: {},
+  button: {
+    transparentBackgroundWhiteText: {
+      default: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(0, 0, 0, 1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+    },
+    transparentBackgroundBlackText: {
+      default: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(0, 0, 0, 1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(0, 0, 0, 1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(255, 255, 255, 1)',
+        border: 'transparent',
+      },
+    },
+  },
 }
 
 export { colors }

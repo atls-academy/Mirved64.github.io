@@ -1,7 +1,9 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Button }           from '@ui/button'
 import { LogoWhiteIcon }    from '@ui/icons'
+import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
@@ -12,9 +14,9 @@ import { navLinkList }      from './navigation-list'
 
 export const Navigation = () => (
   <Box
-    backgroundColor='background.navigation'
+    backgroundColor='background.navigation.mainColor'
     width='100%'
-    height={['80px', '120px']}
+    height={[80, 120]}
     alignItems='center'
     margin='0 auto'
   >
@@ -26,25 +28,37 @@ export const Navigation = () => (
       </NextLink>
     </Box>
 
-    <Box display={['none', 'flex']} flexGrow='1' justifyContent='start'>
+    <Box display={['none', 'flex']}>
       <NextLink>
         <LogoWhiteIcon width={56} height={56} />
       </NextLink>
     </Box>
 
+    <Layout display={['none', 'flex']} flexBasis={[0, 40]} flexGrow='1' />
+
     <ItemsList navLinksList={navLinkList} />
 
-    <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
-      <NextLink>
-        <Text
-          color='text.navigation.primary'
-          fontSize='compact'
-          fontWeight='normal'
-          lineHeight='little'
+    <Layout display={['none', 'flex']} flexBasis={[0, 40]} flexGrow='1' />
+
+    <Box width={163} height={64} alignItems='center' display={['none', 'flex']}>
+      <Button variant='transparentBackgroundWhiteText' fill divider={24}>
+        <Box width={59} height={22} justifyContent='center'>
+          <NextLink>
+            <Text fontSize='compact' fontWeight='normal' lineHeight='little'>
+              <FormattedMessage id='navigationButton' />
+            </Text>
+          </NextLink>
+        </Box>
+        <Box
+          width={48}
+          height={48}
+          alignItems='center'
+          justifyContent='center'
+          backgroundColor='background.navigation.white'
         >
-          <FormattedMessage id='navigationButton' />
-        </Text>
-      </NextLink>
+          <ArrowDownIcon width={16} height={16} />
+        </Box>
+      </Button>
     </Box>
 
     <Layout flexBasis={[0, 40]} />
