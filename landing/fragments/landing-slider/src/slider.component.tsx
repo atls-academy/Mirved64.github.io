@@ -1,6 +1,7 @@
 import React                   from 'react'
 import { FormattedMessage }    from 'react-intl'
 
+import { Button }              from '@ui/button'
 import { ArrowLeftWhiteIcon }  from '@ui/icons'
 import { ArrowRightWhiteIcon } from '@ui/icons'
 import { ImageBlock }          from '@ui/image'
@@ -64,10 +65,12 @@ export const Slider = () => (
 
         <Layout justifyContent='center'>
           <Row justifyContent='space-between' flexBasis={[335, 960]}>
-            <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
-              <Layout>
-                <ArrowLeftWhiteIcon width={16} height={16} />
-              </Layout>
+            <Box width={[40, 48]} height={[60, 64]} justifyContent='center' alignItems='center'>
+              <Button variant='transparentBackgroundWhiteText' fill>
+                <Box>
+                  <ArrowLeftWhiteIcon width={16} height={16} />
+                </Box>
+              </Button>
             </Box>
 
             <Box
@@ -86,10 +89,12 @@ export const Slider = () => (
               </Text>
             </Box>
 
-            <Box height={[60, 64]} width={[40, 48]} justifyContent='center' alignItems='center'>
-              <Layout>
-                <ArrowRightWhiteIcon width={16} height={16} />
-              </Layout>
+            <Box width={[40, 48]} height={[60, 64]} justifyContent='center' alignItems='center'>
+              <Button variant='transparentBackgroundWhiteText' fill>
+                <Box>
+                  <ArrowRightWhiteIcon width={16} height={16} />
+                </Box>
+              </Button>
             </Box>
           </Row>
         </Layout>

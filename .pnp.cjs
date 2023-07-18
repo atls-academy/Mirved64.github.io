@@ -5848,6 +5848,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
           ["@types/react-intl", null],\
+          ["@ui/button", "virtual:38813475cb75be00439d34cdcc98f191e4749b916baface24d1622c31105646f41bb930cec72205e363f2a5f29a2419435a11934e96903016e9443c8382b456e#workspace:ui/button"],\
           ["@ui/icons", "workspace:ui/icons"],\
           ["@ui/image", "virtual:3bd8d99b46211438e2af7d1e7df711f753c72130b466c687107fa2eb1b1596bb7eb1c492f82866331c43eb31deb7b1c51706c7d958ce547b42ad4ce8da2f8028#workspace:ui/image"],\
           ["@ui/layout", "virtual:3bd8d99b46211438e2af7d1e7df711f753c72130b466c687107fa2eb1b1596bb7eb1c492f82866331c43eb31deb7b1c51706c7d958ce547b42ad4ce8da2f8028#workspace:ui/layout"],\
@@ -5870,6 +5871,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
           ["@types/react-intl", null],\
+          ["@ui/button", "virtual:054b332b25d2e18492bfb6cb3e5f44b5a103e03be6a25fef2cebcb62135e3225a53ca5b0f0b82b81563f0465021aa21ac573596e1c737e52addbe1380863b62d#workspace:ui/button"],\
           ["@ui/icons", "workspace:ui/icons"],\
           ["@ui/image", "virtual:3bd8d99b46211438e2af7d1e7df711f753c72130b466c687107fa2eb1b1596bb7eb1c492f82866331c43eb31deb7b1c51706c7d958ce547b42ad4ce8da2f8028#workspace:ui/image"],\
           ["@ui/layout", "virtual:3bd8d99b46211438e2af7d1e7df711f753c72130b466c687107fa2eb1b1596bb7eb1c492f82866331c43eb31deb7b1c51706c7d958ce547b42ad4ce8da2f8028#workspace:ui/layout"],\
@@ -5894,6 +5896,7 @@ const RAW_RUNTIME_STATE =
           ["@landing/fragment-slider", "workspace:landing/fragments/landing-slider"],\
           ["@types/react", "npm:18.2.9"],\
           ["@types/react-dom", "npm:18.2.4"],\
+          ["@ui/button", "virtual:38813475cb75be00439d34cdcc98f191e4749b916baface24d1622c31105646f41bb930cec72205e363f2a5f29a2419435a11934e96903016e9443c8382b456e#workspace:ui/button"],\
           ["@ui/icons", "workspace:ui/icons"],\
           ["@ui/image", "virtual:3bd8d99b46211438e2af7d1e7df711f753c72130b466c687107fa2eb1b1596bb7eb1c492f82866331c43eb31deb7b1c51706c7d958ce547b42ad4ce8da2f8028#workspace:ui/image"],\
           ["@ui/layout", "virtual:3bd8d99b46211438e2af7d1e7df711f753c72130b466c687107fa2eb1b1596bb7eb1c492f82866331c43eb31deb7b1c51706c7d958ce547b42ad4ce8da2f8028#workspace:ui/layout"],\
