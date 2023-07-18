@@ -5,7 +5,7 @@ import { Button }           from '@ui/button'
 import { Divider }          from '@ui/divider'
 import { GitHubIcon }       from '@ui/icons'
 import { TelegramIcon }     from '@ui/icons'
-import { MailIcon }         from '@ui/icons'
+import { MailWhiteIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -117,7 +117,7 @@ export const Hero = () => (
             <Button variant='transparentBackgroundWhiteText'>
               <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
-                  <MailIcon width={18} height={14} />
+                  <MailWhiteIcon width={18} height={14} />
                 </NextLink>
               </Box>
             </Button>
@@ -147,7 +147,7 @@ export const Hero = () => (
             <Button variant='transparentBackgroundWhiteText'>
               <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
-                  <MailIcon width={18} height={14} />
+                  <MailWhiteIcon width={18} height={14} />
                 </NextLink>
               </Box>
             </Button>

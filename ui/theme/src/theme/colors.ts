@@ -13,7 +13,10 @@ const colors = {
     process: 'rgba(102, 102, 102, 1)',
     slider: 'rgba(102, 102, 102, 1)',
     technologies: 'rgba(102, 102, 102, 1)',
-    faq: 'rgba(255, 255, 255, 1)',
+    faq: {
+      mainColor: 'rgba(255, 255, 255, 1)',
+      white: 'rgba(255, 255, 255, 1)',
+    },
   },
   text: {
     navigation: {

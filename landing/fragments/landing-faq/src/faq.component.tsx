@@ -2,7 +2,9 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
+import { Button }           from '@ui/button'
 import { Divider }          from '@ui/divider'
+import { MailIcon }         from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -15,7 +17,7 @@ import { Item }             from './item'
 export const Faq = () => {
   const intl = useIntl()
   return (
-    <Box backgroundColor='background.faq' width='100%' margin='0 auto'>
+    <Box backgroundColor='background.faq.mainColor' width='100%' margin='0 auto'>
       <Layout flexBasis={[16, 230]} />
 
       <Column flexGrow='1'>
@@ -34,17 +36,31 @@ export const Faq = () => {
             </Text>
           </Box>
 
-          <Box display={['none', 'flex']}>
-            <NextLink>
-              <Text
-                color='text.faq.primary'
-                fontSize='small'
-                fontWeight='normal'
-                lineHeight='compact'
+          <Box
+            width={247}
+            height={72}
+            display={['none', 'flex']}
+            alignItems='center'
+            flexShrink='0'
+          >
+            <Button variant='transparentBackgroundBlackText' divider={24} fill>
+              <Box width={139} height={20}>
+                <NextLink>
+                  <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                    <FormattedMessage id='faqButton' />
+                  </Text>
+                </NextLink>
+              </Box>
+              <Box
+                width={48}
+                height={48}
+                alignItems='center'
+                justifyContent='center'
+                backgroundColor='background.faq.white'
               >
-                <FormattedMessage id='faqButton' />
-              </Text>
-            </NextLink>
+                <MailIcon width={16} height={16} />
+              </Box>
+            </Button>
           </Box>
         </Row>
 
@@ -64,17 +80,25 @@ export const Faq = () => {
         <Column display={['flex', 'none']}>
           <Layout flexBasis={60} />
 
-          <Box>
-            <NextLink>
-              <Text
-                color='text.faq.primary'
-                fontSize='small'
-                fontWeight='normal'
-                lineHeight='compact'
+          <Box width={247} height={72} alignItems='center' flexShrink='0'>
+            <Button variant='transparentBackgroundBlackText' divider={24} fill>
+              <Box width={139} height={20}>
+                <NextLink>
+                  <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                    <FormattedMessage id='faqButton' />
+                  </Text>
+                </NextLink>
+              </Box>
+              <Box
+                width={48}
+                height={48}
+                alignItems='center'
+                justifyContent='center'
+                backgroundColor='background.faq.white'
               >
-                <FormattedMessage id='faqButton' />
-              </Text>
-            </NextLink>
+                <MailIcon width={16} height={16} />
+              </Box>
+            </Button>
           </Box>
         </Column>
 
