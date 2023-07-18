@@ -19,9 +19,9 @@ export const Item: FC<ItemProps> = ({
   displayDivider = 'flex',
 }) => (
   <Column>
-    <Layout>
-      <Row flexBasis={[23, 56]}>
-        <Box alignItems={['start', 'center']}>
+    <Row>
+      <Row flexBasis={[47, 96]} >
+        <Box width={[35, 64]} height={[35, 64]} alignItems='center' justifyContent='center'>
           <Text
             color='text.process.primary'
             fontSize={['compact', 'medium']}
@@ -67,7 +67,7 @@ export const Item: FC<ItemProps> = ({
           </Text>
         </Box>
       </Box>
-    </Layout>
+    </Row>
 
     <Column display={displayDivider}>
       <Layout flexBasis={[28, 48]} />
