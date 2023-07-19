@@ -10,7 +10,6 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 
@@ -102,11 +101,7 @@ export const Hero = () => (
               <Button
                 variant='transparentBackgroundWhiteText'
                 fill
-                icon={
-                  <NextLink>
-                    <TelegramIcon width={15} height={12} />
-                  </NextLink>
-                }
+                icon={<TelegramIcon width={15} height={12} />}
                 widthIcon={104}
                 heightIcon={44}
               />
@@ -116,11 +111,7 @@ export const Hero = () => (
               <Button
                 variant='transparentBackgroundWhiteText'
                 fill
-                icon={
-                  <NextLink>
-                    <GitHubIcon width={15} height={15} />
-                  </NextLink>
-                }
+                icon={<GitHubIcon width={15} height={15} />}
                 widthIcon={104}
                 heightIcon={44}
               />
@@ -130,11 +121,7 @@ export const Hero = () => (
               <Button
                 variant='transparentBackgroundWhiteText'
                 fill
-                icon={
-                  <NextLink>
-                    <MailWhiteIcon width={18} height={14} />
-                  </NextLink>
-                }
+                icon={<MailWhiteIcon width={18} height={14} />}
                 widthIcon={104}
                 heightIcon={44}
               />
@@ -150,11 +137,7 @@ export const Hero = () => (
               <Button
                 variant='transparentBackgroundWhiteText'
                 fill
-                icon={
-                  <NextLink>
-                    <TelegramIcon width={18} height={15} />
-                  </NextLink>
-                }
+                icon={<TelegramIcon width={18} height={15} />}
                 widthIcon={56}
                 heightIcon={56}
               />
@@ -164,11 +147,7 @@ export const Hero = () => (
               <Button
                 variant='transparentBackgroundWhiteText'
                 fill
-                icon={
-                  <NextLink>
-                    <GitHubIcon width={18} height={18} />
-                  </NextLink>
-                }
+                icon={<GitHubIcon width={18} height={18} />}
                 widthIcon={56}
                 heightIcon={56}
               />
@@ -178,11 +157,7 @@ export const Hero = () => (
               <Button
                 variant='transparentBackgroundWhiteText'
                 fill
-                icon={
-                  <NextLink>
-                    <MailWhiteIcon width={18} height={14} />
-                  </NextLink>
-                }
+                icon={<MailWhiteIcon width={18} height={14} />}
                 widthIcon={56}
                 heightIcon={56}
               />
