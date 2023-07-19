@@ -26,7 +26,9 @@ export const Item: FC<ItemProps> = ({ name, path }) => (
         </Text>
       </NextLink>
     </Box>
+
     <Layout flexBasis={10} flexShrink='0' />
+
     <Divider backgroundColor='divider.navigation' weight='1px' />
   </Column>
 )

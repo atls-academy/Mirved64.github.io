@@ -72,6 +72,7 @@ export const About = () => (
                 <FormattedMessage id='aboutTextProblemSecondDesktop' />
               </Text>
             </Box>
+
             <Space count='14' />
 
             <Box width={76} height={52} alignItems='center' justifyContent='center'>
@@ -131,6 +132,7 @@ export const About = () => (
                 <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
               </Text>
             </Box>
+
             <Space count='6' />
 
             <Box width={76} height={52} alignItems='center' justifyContent='center'>

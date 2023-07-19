@@ -51,6 +51,7 @@ export const Faq = () => {
                   </Text>
                 </NextLink>
               </Box>
+
               <Box
                 width={48}
                 height={48}
@@ -89,6 +90,7 @@ export const Faq = () => {
                   </Text>
                 </NextLink>
               </Box>
+
               <Box
                 width={48}
                 height={48}

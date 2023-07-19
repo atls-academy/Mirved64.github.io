@@ -49,6 +49,7 @@ export const Navigation = () => (
             </Text>
           </NextLink>
         </Box>
+
         <Box
           width={48}
           height={48}

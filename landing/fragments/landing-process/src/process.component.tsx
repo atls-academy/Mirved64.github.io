@@ -53,22 +53,22 @@ export const Process = () => {
             divider={0}
             displayDivider='none'
           />
-
-          <Box
-            width='400px'
-            height='400px'
-            position='absolute'
-            zIndex='10'
-            margin='auto'
-            top='0'
-            left='0'
-            bottom='0'
-            right='0'
-            display={['none', 'flex']}
-          >
-            <Image src='./image/Default.png' width={400} height={400} />
-          </Box>
         </Column>
+
+        <Box
+          width='400px'
+          height='400px'
+          position='absolute'
+          zIndex='10'
+          margin='auto'
+          top='0'
+          left='0'
+          bottom='0'
+          right='0'
+          display={['none', 'flex']}
+        >
+          <Image src='./image/Default.png' width={400} height={400} />
+        </Box>
 
         <Layout flexBasis={[20, 80]} flexShrink='0' />
       </Box>

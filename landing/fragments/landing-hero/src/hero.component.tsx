@@ -98,7 +98,7 @@ export const Hero = () => (
             justifyContent='space-between'
             alignItems='center'
           >
-            <Button variant='transparentBackgroundWhiteText'>
+            <Button variant='transparentBackgroundWhiteText' fill>
               <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
                   <TelegramIcon width={15} height={12} />
@@ -106,7 +106,7 @@ export const Hero = () => (
               </Box>
             </Button>
 
-            <Button variant='transparentBackgroundWhiteText'>
+            <Button variant='transparentBackgroundWhiteText' fill>
               <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
                   <GitHubIcon width={15} height={15} />
@@ -114,7 +114,7 @@ export const Hero = () => (
               </Box>
             </Button>
 
-            <Button variant='transparentBackgroundWhiteText'>
+            <Button variant='transparentBackgroundWhiteText' fill>
               <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
                 <NextLink>
                   <MailWhiteIcon width={18} height={14} />
@@ -128,7 +128,7 @@ export const Hero = () => (
 
         <Box display={['none', 'flex']} alignItems='end' flexBasis={56}>
           <Column height='200px' justifyContent='space-around' alignItems='center'>
-            <Button variant='transparentBackgroundWhiteText'>
+            <Button variant='transparentBackgroundWhiteText' fill>
               <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
                   <TelegramIcon width={18} height={15} />
@@ -136,7 +136,7 @@ export const Hero = () => (
               </Box>
             </Button>
 
-            <Button variant='transparentBackgroundWhiteText'>
+            <Button variant='transparentBackgroundWhiteText' fill>
               <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
                   <GitHubIcon width={18} height={18} />
@@ -144,7 +144,7 @@ export const Hero = () => (
               </Box>
             </Button>
 
-            <Button variant='transparentBackgroundWhiteText'>
+            <Button variant='transparentBackgroundWhiteText' fill>
               <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
                 <NextLink>
                   <MailWhiteIcon width={18} height={14} />
