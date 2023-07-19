@@ -31,7 +31,7 @@ export const Courses = () => {
       <Row>
         <Layout flexBasis={[20, 230]} />
 
-        <Column flexBasis={[335, 1610]} flexGrow='1' margin='0 auto'>
+        <Column flexBasis={[335, 1610]} flexGrow='1'>
           <Row justifyContent='space-between' alignItems='center'>
             <Box flexWrap='wrap'>
               <Text
