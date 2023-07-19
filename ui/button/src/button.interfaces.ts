@@ -9,10 +9,9 @@ export interface ButtonProps extends BaseButtonProps {
   size?: ButtonSize
   active?: boolean
   ref?: any
-  divider?: number
-  iconSvg?: object
-  valueRadius?: string | object
-  valueWidth?: string | object
-  valueHeight?: string | object
-  valueBackground?: string | object
+  gap?: number
+  icon?: object
+  widthIcon?: number | number[]
+  heightIcon?: number | number[]
+  backgroundIcon?: string
 }

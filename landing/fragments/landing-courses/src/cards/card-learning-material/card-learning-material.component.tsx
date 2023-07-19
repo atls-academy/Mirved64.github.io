@@ -9,7 +9,7 @@ import { Text }                      from '@ui/text'
 import { CardLearningMaterialProps } from './card-learning-material.interfaces'
 
 export const CardLearningMaterial: FC<CardLearningMaterialProps> = ({ category, title }) => (
-  <Box flexBasis={[260, 560]} flexShrink='1'>
+  <Box flexBasis={[260, 560]} flexShrink={[0, 1]}>
     <Layout flexBasis={[16, 32]} flexShrink='0' />
 
     <Column>

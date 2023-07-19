@@ -98,29 +98,47 @@ export const Hero = () => (
             justifyContent='space-between'
             alignItems='center'
           >
-            <Button variant='transparentBackgroundWhiteText' fill>
-              <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-                <NextLink>
-                  <TelegramIcon width={15} height={12} />
-                </NextLink>
-              </Box>
-            </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={
+                  <NextLink>
+                    <TelegramIcon width={15} height={12} />
+                  </NextLink>
+                }
+                widthIcon={104}
+                heightIcon={44}
+              />
+            </Box>
 
-            <Button variant='transparentBackgroundWhiteText' fill>
-              <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-                <NextLink>
-                  <GitHubIcon width={15} height={15} />
-                </NextLink>
-              </Box>
-            </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={
+                  <NextLink>
+                    <GitHubIcon width={15} height={15} />
+                  </NextLink>
+                }
+                widthIcon={104}
+                heightIcon={44}
+              />
+            </Box>
 
-            <Button variant='transparentBackgroundWhiteText' fill>
-              <Box width='104px' height='44px' justifyContent='center' alignItems='center'>
-                <NextLink>
-                  <MailWhiteIcon width={18} height={14} />
-                </NextLink>
-              </Box>
-            </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={
+                  <NextLink>
+                    <MailWhiteIcon width={18} height={14} />
+                  </NextLink>
+                }
+                widthIcon={104}
+                heightIcon={44}
+              />
+            </Box>
           </Row>
         </Column>
 
@@ -128,29 +146,47 @@ export const Hero = () => (
 
         <Box display={['none', 'flex']} alignItems='end' flexBasis={56}>
           <Column height='200px' justifyContent='space-around' alignItems='center'>
-            <Button variant='transparentBackgroundWhiteText' fill>
-              <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-                <NextLink>
-                  <TelegramIcon width={18} height={15} />
-                </NextLink>
-              </Box>
-            </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={
+                  <NextLink>
+                    <TelegramIcon width={18} height={15} />
+                  </NextLink>
+                }
+                widthIcon={56}
+                heightIcon={56}
+              />
+            </Box>
 
-            <Button variant='transparentBackgroundWhiteText' fill>
-              <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-                <NextLink>
-                  <GitHubIcon width={18} height={18} />
-                </NextLink>
-              </Box>
-            </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={
+                  <NextLink>
+                    <GitHubIcon width={18} height={18} />
+                  </NextLink>
+                }
+                widthIcon={56}
+                heightIcon={56}
+              />
+            </Box>
 
-            <Button variant='transparentBackgroundWhiteText' fill>
-              <Box width='56px' height='56px' alignItems='center' justifyContent='center'>
-                <NextLink>
-                  <MailWhiteIcon width={18} height={14} />
-                </NextLink>
-              </Box>
-            </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={
+                  <NextLink>
+                    <MailWhiteIcon width={18} height={14} />
+                  </NextLink>
+                }
+                widthIcon={56}
+                heightIcon={56}
+              />
+            </Box>
           </Column>
         </Box>
       </Row>

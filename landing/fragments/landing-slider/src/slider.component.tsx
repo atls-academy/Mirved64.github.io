@@ -65,12 +65,14 @@ export const Slider = () => (
 
         <Layout justifyContent='center'>
           <Row justifyContent='space-between' flexBasis={[335, 960]}>
-            <Box width={[40, 48]} height={[60, 64]} justifyContent='center' alignItems='center'>
-              <Button variant='transparentBackgroundWhiteText' fill>
-                <Box>
-                  <ArrowLeftWhiteIcon width={16} height={16} />
-                </Box>
-              </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={<ArrowLeftWhiteIcon width={16} height={16} />}
+                widthIcon={[40, 48]}
+                heightIcon={[60, 64]}
+              />
             </Box>
 
             <Box
@@ -89,12 +91,14 @@ export const Slider = () => (
               </Text>
             </Box>
 
-            <Box width={[40, 48]} height={[60, 64]} justifyContent='center' alignItems='center'>
-              <Button variant='transparentBackgroundWhiteText' fill>
-                <Box>
-                  <ArrowRightWhiteIcon width={16} height={16} />
-                </Box>
-              </Button>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={<ArrowRightWhiteIcon width={16} height={16} />}
+                widthIcon={[40, 48]}
+                heightIcon={[60, 64]}
+              />
             </Box>
           </Row>
         </Layout>

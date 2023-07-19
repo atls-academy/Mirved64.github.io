@@ -45,31 +45,21 @@ export const Courses = () => {
               </Text>
             </Box>
 
-            <Box
-              width={254}
-              height={72}
-              display={['none', 'flex']}
-              alignItems='center'
-              flexShrink='0'
-            >
-              <Button variant='transparentBackgroundBlackText' fill divider={24}>
-                <Box width={146} height={22}>
-                  <NextLink>
-                    <Text fontSize='small' fontWeight='normal' lineHeight='small'>
-                      <FormattedMessage id='coursesButton' />
-                    </Text>
-                  </NextLink>
-                </Box>
-
-                <Box
-                  width={48}
-                  height={48}
-                  alignItems='center'
-                  justifyContent='center'
-                  backgroundColor='background.courses.white'
-                >
-                  <ArrowRightIcon width={16} height={16} />
-                </Box>
+            <Box display={['none', 'flex']} width={254} height={72} flexShrink='0'>
+              <Button
+                variant='transparentBackgroundBlackText'
+                fill
+                gap={24}
+                icon={<ArrowRightIcon width={16} height={16} />}
+                widthIcon={48}
+                heightIcon={48}
+                backgroundIcon='background.courses.white'
+              >
+                <NextLink>
+                  <Text fontSize='small' fontWeight='normal' lineHeight='small'>
+                    <FormattedMessage id='coursesButton' />
+                  </Text>
+                </NextLink>
               </Button>
             </Box>
           </Row>
@@ -89,13 +79,7 @@ export const Courses = () => {
 
             <Layout flexBasis={[0, 40]} flexShrink='0' />
 
-            <Row flexBasis={[192, 410]} order={[1, 0]}>
-              <Layout flexBasis={[16, 32]} flexShrink='0' />
-
-              <Sidebar />
-
-              <Layout flexBasis={[16, 32]} flexShrink='0' />
-            </Row>
+            <Sidebar />
           </Box>
         </Column>
 
@@ -107,10 +91,10 @@ export const Courses = () => {
 
         <CardLearningMaterial
           category={formatMessage({
-            id: 'coursesSmallCardLearningMaterial',
+            id: 'coursesCardLearningMaterial',
           })}
           title={formatMessage({
-            id: 'coursesSmallCardLibraries',
+            id: 'coursesCardLearningMaterialLibraries',
           })}
         />
 
@@ -118,10 +102,10 @@ export const Courses = () => {
 
         <CardLearningMaterial
           category={formatMessage({
-            id: 'coursesSmallCardLearningMaterial',
+            id: 'coursesCardLearningMaterial',
           })}
           title={formatMessage({
-            id: 'coursesSmallCardDesign',
+            id: 'coursesCardLearningMaterialDesign',
           })}
         />
       </Row>
@@ -131,25 +115,21 @@ export const Courses = () => {
       <Box display={['flex', 'none']}>
         <Layout flexBasis={20} flexShrink='0' />
 
-        <Box width={254} height={72} alignItems='center' flexShrink='0'>
-          <Button variant='transparentBackgroundBlackText' fill divider={24}>
-            <Box width={146} height={22}>
-              <NextLink>
-                <Text fontSize='small' fontWeight='normal' lineHeight='small'>
-                  <FormattedMessage id='coursesButton' />
-                </Text>
-              </NextLink>
-            </Box>
-
-            <Box
-              width={48}
-              height={48}
-              alignItems='center'
-              justifyContent='center'
-              backgroundColor='background.courses.white'
-            >
-              <ArrowRightIcon width={16} height={16} />
-            </Box>
+        <Box width={254} height={72}>
+          <Button
+            variant='transparentBackgroundBlackText'
+            fill
+            gap={24}
+            icon={<ArrowRightIcon width={16} height={16} />}
+            widthIcon={48}
+            heightIcon={48}
+            backgroundIcon='background.courses.white'
+          >
+            <NextLink>
+              <Text fontSize='small' fontWeight='normal' lineHeight='small'>
+                <FormattedMessage id='coursesButton' />
+              </Text>
+            </NextLink>
           </Button>
         </Box>
       </Box>

@@ -40,25 +40,21 @@ export const Navigation = () => (
 
     <Layout display={['none', 'flex']} flexBasis={[0, 40]} flexGrow='1' />
 
-    <Box width={163} height={64} alignItems='center' display={['none', 'flex']}>
-      <Button variant='transparentBackgroundWhiteText' fill divider={24}>
-        <Box width={59} height={22} justifyContent='center'>
-          <NextLink>
-            <Text fontSize='compact' fontWeight='normal' lineHeight='little'>
-              <FormattedMessage id='navigationButton' />
-            </Text>
-          </NextLink>
-        </Box>
-
-        <Box
-          width={48}
-          height={48}
-          alignItems='center'
-          justifyContent='center'
-          backgroundColor='background.navigation.white'
-        >
-          <ArrowDownIcon width={16} height={16} />
-        </Box>
+    <Box width={163} height={64} display={['none', 'flex']} flexShrink='0'>
+      <Button
+        variant='transparentBackgroundWhiteText'
+        gap={24}
+        fill
+        icon={<ArrowDownIcon width={16} height={16} />}
+        widthIcon={48}
+        heightIcon={48}
+        backgroundIcon='background.navigation.white'
+      >
+        <NextLink>
+          <Text fontSize='compact' fontWeight='normal' lineHeight='little'>
+            <FormattedMessage id='navigationButton' />
+          </Text>
+        </NextLink>
       </Button>
     </Box>
 

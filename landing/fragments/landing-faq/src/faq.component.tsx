@@ -43,29 +43,25 @@ export const Faq = () => {
             alignItems='center'
             flexShrink='0'
           >
-            <Button variant='transparentBackgroundBlackText' divider={24} fill>
-              <Box width={139} height={20}>
-                <NextLink>
-                  <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
-                    <FormattedMessage id='faqButton' />
-                  </Text>
-                </NextLink>
-              </Box>
-
-              <Box
-                width={48}
-                height={48}
-                alignItems='center'
-                justifyContent='center'
-                backgroundColor='background.faq.white'
-              >
-                <MailIcon width={16} height={16} />
-              </Box>
+            <Button
+              variant='transparentBackgroundBlackText'
+              gap={24}
+              fill
+              icon={<MailIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={48}
+              backgroundIcon='background.faq.white'
+            >
+              <NextLink>
+                <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                  <FormattedMessage id='faqButton' />
+                </Text>
+              </NextLink>
             </Button>
           </Box>
         </Row>
 
-        <Layout flexBasis={[0, 80]} />
+        <Layout flexBasis={[60, 80]} />
 
         <Divider backgroundColor='divider.secondary' weight='1px' display={['none', 'flex']} />
 
@@ -82,24 +78,20 @@ export const Faq = () => {
           <Layout flexBasis={60} />
 
           <Box width={247} height={72} alignItems='center' flexShrink='0'>
-            <Button variant='transparentBackgroundBlackText' divider={24} fill>
-              <Box width={139} height={20}>
-                <NextLink>
-                  <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
-                    <FormattedMessage id='faqButton' />
-                  </Text>
-                </NextLink>
-              </Box>
-
-              <Box
-                width={48}
-                height={48}
-                alignItems='center'
-                justifyContent='center'
-                backgroundColor='background.faq.white'
-              >
-                <MailIcon width={16} height={16} />
-              </Box>
+            <Button
+              variant='transparentBackgroundBlackText'
+              gap={24}
+              fill
+              icon={<MailIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={48}
+              backgroundIcon='background.faq.white'
+            >
+              <NextLink>
+                <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                  <FormattedMessage id='faqButton' />
+                </Text>
+              </NextLink>
             </Button>
           </Box>
         </Column>

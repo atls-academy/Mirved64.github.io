@@ -5,10 +5,13 @@ import React                from 'react'
 import { FC }               from 'react'
 import { forwardRef }       from 'react'
 
+import { Layout }           from '@ui/layout'
+
+import { IconAttachment }   from './attachment'
 import { ButtonProps }      from './button.interfaces'
-import { baseStyles }       from './button.styles'
-import { contentStyles }    from './button.styles'
-import { fillStyles }       from './button.styles'
+import { baseStyles }       from './styles'
+import { contentStyles }    from './styles'
+import { fillStyles }       from './styles'
 import { appearanceStyles } from './styles'
 
 export const ButtonElement = styled('button')<any>(
@@ -18,8 +21,17 @@ export const ButtonElement = styled('button')<any>(
   fillStyles
 )
 
-export const Button: FC<ButtonProps> = forwardRef(({ children, divider, ...props }, ref) => (
-  <ButtonElement {...props} ref={ref} divider={divider}>
-    <Content divider={divider}>{children}</Content>
+export const Button: FC<ButtonProps> = forwardRef(({ children, gap, ...props }, ref) => (
+  <ButtonElement {...props} ref={ref}>
+    <Content>{children}</Content>
+
+    <Layout flexBasis={gap} />
+
+    <IconAttachment
+      icon={props.icon}
+      widthIcon={props.widthIcon}
+      heightIcon={props.heightIcon}
+      backgroundIcon={props.backgroundIcon}
+    />
   </ButtonElement>
 ))

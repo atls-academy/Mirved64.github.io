@@ -12,7 +12,7 @@ export const Cards = () => {
   const { formatMessage } = useIntl()
 
   return (
-    <Column order={[2, 0]} flexBasis={[335, 1160]} flexGrow='1'>
+    <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
       <CardsLearningAndCoursess />
 
       <Layout flexBasis={[20, 40]} flexShrink='0' />
@@ -20,10 +20,10 @@ export const Cards = () => {
       <Row display={['none', 'flex']}>
         <CardLearningMaterial
           category={formatMessage({
-            id: 'coursesSmallCardLearningMaterial',
+            id: 'coursesCardLearningMaterial',
           })}
           title={formatMessage({
-            id: 'coursesSmallCardLibraries',
+            id: 'coursesCardLearningMaterialLibraries',
           })}
         />
 
@@ -31,10 +31,10 @@ export const Cards = () => {
 
         <CardLearningMaterial
           category={formatMessage({
-            id: 'coursesSmallCardLearningMaterial',
+            id: 'coursesCardLearningMaterial',
           })}
           title={formatMessage({
-            id: 'coursesSmallCardDesign',
+            id: 'coursesCardLearningMaterialDesign',
           })}
         />
       </Row>
