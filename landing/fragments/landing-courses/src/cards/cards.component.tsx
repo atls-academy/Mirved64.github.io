@@ -20,7 +20,7 @@ export const Cards = () => {
 
       <Layout flexBasis={[20, 40]} flexShrink='0' />
 
-      <Row>
+      <Row display={['none', 'flex']}>
         <CardSmall
           category={formatMessage({
             id: 'coursesSmallCardLearningMaterial',
@@ -28,8 +28,6 @@ export const Cards = () => {
           title={formatMessage({
             id: 'coursesSmallCardLibraries',
           })}
-          desktop='flex'
-          mobile='none'
         />
 
         <Layout flexBasis={[20, 40]} flexShrink='0' />
@@ -41,8 +39,6 @@ export const Cards = () => {
           title={formatMessage({
             id: 'coursesSmallCardDesign',
           })}
-          desktop='flex'
-          mobile='none'
         />
       </Row>
     </Column>

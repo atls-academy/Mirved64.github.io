@@ -109,8 +109,6 @@ export const Courses = () => {
           title={formatMessage({
             id: 'coursesSmallCardLibraries',
           })}
-          desktop='none'
-          mobile='flex'
         />
 
         <Layout flexBasis={20} flexShrink='0' />
@@ -122,8 +120,6 @@ export const Courses = () => {
           title={formatMessage({
             id: 'coursesSmallCardDesign',
           })}
-          desktop='none'
-          mobile='flex'
         />
       </Row>
 

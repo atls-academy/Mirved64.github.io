@@ -8,8 +8,8 @@ import { Text }           from '@ui/text'
 
 import { CardSmallProps } from './card-small.interfaces'
 
-export const CardSmall: FC<CardSmallProps> = ({ category, title, desktop, mobile }) => (
-  <Box flexBasis={[260, 560]} display={[mobile!, desktop!]} flexShrink='0'>
+export const CardSmall: FC<CardSmallProps> = ({ category, title }) => (
+  <Box flexBasis={[260, 560]} flexShrink='0'>
     <Layout flexBasis={[16, 32]} flexShrink='0' />
 
     <Column>
