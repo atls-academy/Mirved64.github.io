@@ -1,21 +1,21 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
+import React                    from 'react'
+import { FormattedMessage }     from 'react-intl'
+import { useIntl }              from 'react-intl'
 
-import { Button }           from '@ui/button'
-import { Divider }          from '@ui/divider'
-import { ArrowRightIcon }   from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Text }             from '@ui/text'
+import { Button }               from '@ui/button'
+import { Divider }              from '@ui/divider'
+import { ArrowRightIcon }       from '@ui/icons'
+import { Box }                  from '@ui/layout'
+import { Row }                  from '@ui/layout'
+import { Layout }               from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { NextLink }             from '@ui/link'
+import { Text }                 from '@ui/text'
 
-import { CardSmall }        from './cards'
-import { Cards }            from './cards'
-import { Info }             from './info'
-import { Sidebar }          from './sidebar'
+import { CardLearningMaterial } from './cards'
+import { Cards }                from './cards'
+import { Info }                 from './info'
+import { Sidebar }              from './sidebar'
 
 export const Courses = () => {
   const { formatMessage } = useIntl()
@@ -29,11 +29,11 @@ export const Courses = () => {
       <Layout flexBasis={[64, 160]} />
 
       <Row>
-        <Layout flexBasis={[20, 230]} flexShrink='1' />
+        <Layout flexBasis={[20, 230]} />
 
-        <Column flexBasis={[335, 1610]} flexGrow='1' margin='0 auto' flexShrink='1'>
+        <Column flexBasis={[335, 1610]} flexGrow='1' margin='0 auto'>
           <Row justifyContent='space-between' alignItems='center'>
-            <Box flexWrap='wrap' flexShrink='1'>
+            <Box flexWrap='wrap'>
               <Text
                 color='text.courses.primary'
                 fontSize={['regular', 'stupendous']}
@@ -60,6 +60,7 @@ export const Courses = () => {
                     </Text>
                   </NextLink>
                 </Box>
+
                 <Box
                   width={48}
                   height={48}
@@ -90,19 +91,21 @@ export const Courses = () => {
 
             <Row flexBasis={[192, 410]} order={[1, 0]}>
               <Layout flexBasis={[16, 32]} flexShrink='0' />
+
               <Sidebar />
+
               <Layout flexBasis={[16, 32]} flexShrink='0' />
             </Row>
           </Box>
         </Column>
 
-        <Layout flexBasis={[20, 80]} flexShrink='1' />
+        <Layout flexBasis={[20, 80]} />
       </Row>
 
       <Row display={['flex', 'none']} overflow='hidden'>
         <Layout flexBasis={20} flexShrink='0' />
 
-        <CardSmall
+        <CardLearningMaterial
           category={formatMessage({
             id: 'coursesSmallCardLearningMaterial',
           })}
@@ -113,7 +116,7 @@ export const Courses = () => {
 
         <Layout flexBasis={20} flexShrink='0' />
 
-        <CardSmall
+        <CardLearningMaterial
           category={formatMessage({
             id: 'coursesSmallCardLearningMaterial',
           })}
@@ -127,6 +130,7 @@ export const Courses = () => {
 
       <Box display={['flex', 'none']}>
         <Layout flexBasis={20} flexShrink='0' />
+
         <Box width={254} height={72} alignItems='center' flexShrink='0'>
           <Button variant='transparentBackgroundBlackText' fill divider={24}>
             <Box width={146} height={22}>
@@ -136,6 +140,7 @@ export const Courses = () => {
                 </Text>
               </NextLink>
             </Box>
+
             <Box
               width={48}
               height={48}

@@ -1,3 +1,3 @@
 export * from './cards.component'
-export * from './card-small'
-export * from './cards-big'
+export * from './card-learning-material'
+export * from './cards-learning-and-courses'
