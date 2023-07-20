@@ -1,24 +1,24 @@
-import React                    from 'react'
-import { FormattedMessage }     from 'react-intl'
-import { useIntl }              from 'react-intl'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useIntl }          from 'react-intl'
 
-import { Button }               from '@ui/button'
-import { Divider }              from '@ui/divider'
-import { ArrowRightIcon }       from '@ui/icons'
-import { Box }                  from '@ui/layout'
-import { Row }                  from '@ui/layout'
-import { Layout }               from '@ui/layout'
-import { Column }               from '@ui/layout'
-import { NextLink }             from '@ui/link'
-import { Text }                 from '@ui/text'
+import { Button }           from '@ui/button'
+import { Divider }          from '@ui/divider'
+import { ArrowRightIcon }   from '@ui/icons'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
 
-import { CardLearningMaterial } from './cards'
-import { Cards }                from './cards'
-import { Info }                 from './info'
-import { Sidebar }              from './sidebar'
+import { Card }             from './cards'
+import { Info }             from './info'
+import { Sidebar }          from './sidebar'
 
 export const Courses = () => {
   const { formatMessage } = useIntl()
+
   return (
     <Box
       backgroundColor='background.courses.mainColor'
@@ -75,7 +75,61 @@ export const Courses = () => {
           <Layout flexBasis={[40, 80]} />
 
           <Box flexDirection={['column', 'row']}>
-            <Cards />
+            <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
+              <Card
+                cardType='course'
+                cardCategory={formatMessage({
+                  id: 'coursesCardFrontendCategory',
+                })}
+                cardTitle={formatMessage({
+                  id: 'coursesCardFrontendTitle',
+                })}
+                cardText={formatMessage({
+                  id: 'coursesCardFrontendText',
+                })}
+              />
+
+              <Layout flexBasis={[20, 40]} />
+
+              <Card
+                cardType='miniCourse'
+                cardCategory={formatMessage({
+                  id: 'coursesCardBasisCategory',
+                })}
+                cardTitle={formatMessage({
+                  id: 'coursesCardBasisTitle',
+                })}
+                cardText={formatMessage({
+                  id: 'coursesCardBasisText',
+                })}
+              />
+
+              <Layout flexBasis={[20, 40]} flexShrink='0' />
+
+              <Row display={['none', 'flex']}>
+                <Card
+                  cardType='materials'
+                  cardCategory={formatMessage({
+                    id: 'coursesCardLearningMaterial',
+                  })}
+                  cardTitle={formatMessage({
+                    id: 'coursesCardLearningMaterialLibraries',
+                  })}
+                />
+
+                <Layout flexBasis={[20, 40]} flexShrink='0' />
+
+                <Card
+                  cardType='materials'
+                  cardCategory={formatMessage({
+                    id: 'coursesCardLearningMaterial',
+                  })}
+                  cardTitle={formatMessage({
+                    id: 'coursesCardLearningMaterialDesign',
+                  })}
+                />
+              </Row>
+            </Column>
 
             <Layout flexBasis={[0, 40]} flexShrink='0' />
 
@@ -89,22 +143,24 @@ export const Courses = () => {
       <Row display={['flex', 'none']} overflow='hidden'>
         <Layout flexBasis={20} flexShrink='0' />
 
-        <CardLearningMaterial
-          category={formatMessage({
+        <Card
+          cardType='materials'
+          cardCategory={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          title={formatMessage({
+          cardTitle={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
         />
 
         <Layout flexBasis={20} flexShrink='0' />
 
-        <CardLearningMaterial
-          category={formatMessage({
+        <Card
+          cardType='materials'
+          cardCategory={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          title={formatMessage({
+          cardTitle={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}
         />
