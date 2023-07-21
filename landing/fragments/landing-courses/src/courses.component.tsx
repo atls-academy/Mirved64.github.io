@@ -3,6 +3,9 @@ import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
+import { CardCourse }       from '@ui/card'
+import { CardMaterials }    from '@ui/card'
+import { CardMiniCourse }   from '@ui/card'
 import { Divider }          from '@ui/divider'
 import { ArrowRightIcon }   from '@ui/icons'
 import { Box }              from '@ui/layout'
@@ -12,7 +15,6 @@ import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
-import { Card }             from './cards'
 import { Info }             from './info'
 import { Sidebar }          from './sidebar'
 
@@ -76,8 +78,7 @@ export const Courses = () => {
 
           <Box flexDirection={['column', 'row']}>
             <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
-              <Card
-                cardType='course'
+              <CardCourse
                 cardCategory={formatMessage({
                   id: 'coursesCardFrontendCategory',
                 })}
@@ -91,8 +92,7 @@ export const Courses = () => {
 
               <Layout flexBasis={[20, 40]} />
 
-              <Card
-                cardType='miniCourse'
+              <CardMiniCourse
                 cardCategory={formatMessage({
                   id: 'coursesCardBasisCategory',
                 })}
@@ -107,8 +107,7 @@ export const Courses = () => {
               <Layout flexBasis={[20, 40]} flexShrink='0' />
 
               <Row display={['none', 'flex']}>
-                <Card
-                  cardType='materials'
+                <CardMaterials
                   cardCategory={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
@@ -119,8 +118,7 @@ export const Courses = () => {
 
                 <Layout flexBasis={[20, 40]} flexShrink='0' />
 
-                <Card
-                  cardType='materials'
+                <CardMaterials
                   cardCategory={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
@@ -143,8 +141,7 @@ export const Courses = () => {
       <Row display={['flex', 'none']} overflow='hidden'>
         <Layout flexBasis={20} flexShrink='0' />
 
-        <Card
-          cardType='materials'
+        <CardMaterials
           cardCategory={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
@@ -155,8 +152,7 @@ export const Courses = () => {
 
         <Layout flexBasis={20} flexShrink='0' />
 
-        <Card
-          cardType='materials'
+        <CardMaterials
           cardCategory={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
