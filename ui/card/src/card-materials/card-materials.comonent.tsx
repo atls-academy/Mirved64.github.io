@@ -6,9 +6,9 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
-import { CardProps } from '../card.interfaces'
+import { CardMaterialsProps } from './card-materials.interfaces'
 
-export const CardMaterials: FC<CardProps> = ({ cardCategory, cardTitle }) => (
+export const CardMaterials: FC<CardMaterialsProps> = ({ category, title }) => (
   <Box flexBasis={[260, 560]} flexShrink={[0, 1]}>
     <Layout flexBasis={[16, 32]} flexShrink='0' />
 
@@ -23,7 +23,7 @@ export const CardMaterials: FC<CardProps> = ({ cardCategory, cardTitle }) => (
           lineHeight={['atom', 'tiny']}
           textTransform='uppercase'
         >
-          {cardCategory}
+          {category}
         </Text>
       </Box>
 
@@ -36,7 +36,7 @@ export const CardMaterials: FC<CardProps> = ({ cardCategory, cardTitle }) => (
           fontWeight='normal'
           lineHeight={['tiddly', 'mean']}
         >
-          {cardTitle}
+          {title}
         </Text>
       </Box>
 

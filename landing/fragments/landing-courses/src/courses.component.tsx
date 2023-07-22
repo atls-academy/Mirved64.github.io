@@ -79,13 +79,13 @@ export const Courses = () => {
           <Box flexDirection={['column', 'row']}>
             <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
               <CardCourse
-                cardCategory={formatMessage({
+                category={formatMessage({
                   id: 'coursesCardFrontendCategory',
                 })}
-                cardTitle={formatMessage({
+                title={formatMessage({
                   id: 'coursesCardFrontendTitle',
                 })}
-                cardText={formatMessage({
+                text={formatMessage({
                   id: 'coursesCardFrontendText',
                 })}
               />
@@ -93,13 +93,13 @@ export const Courses = () => {
               <Layout flexBasis={[20, 40]} />
 
               <CardMiniCourse
-                cardCategory={formatMessage({
+                category={formatMessage({
                   id: 'coursesCardBasisCategory',
                 })}
-                cardTitle={formatMessage({
+                title={formatMessage({
                   id: 'coursesCardBasisTitle',
                 })}
-                cardText={formatMessage({
+                text={formatMessage({
                   id: 'coursesCardBasisText',
                 })}
               />
@@ -108,10 +108,10 @@ export const Courses = () => {
 
               <Row display={['none', 'flex']}>
                 <CardMaterials
-                  cardCategory={formatMessage({
+                  category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
-                  cardTitle={formatMessage({
+                  title={formatMessage({
                     id: 'coursesCardLearningMaterialLibraries',
                   })}
                 />
@@ -119,10 +119,10 @@ export const Courses = () => {
                 <Layout flexBasis={[20, 40]} flexShrink='0' />
 
                 <CardMaterials
-                  cardCategory={formatMessage({
+                  category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
-                  cardTitle={formatMessage({
+                  title={formatMessage({
                     id: 'coursesCardLearningMaterialDesign',
                   })}
                 />
@@ -142,10 +142,10 @@ export const Courses = () => {
         <Layout flexBasis={20} flexShrink='0' />
 
         <CardMaterials
-          cardCategory={formatMessage({
+          category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          cardTitle={formatMessage({
+          title={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
         />
@@ -153,10 +153,10 @@ export const Courses = () => {
         <Layout flexBasis={20} flexShrink='0' />
 
         <CardMaterials
-          cardCategory={formatMessage({
+          category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          cardTitle={formatMessage({
+          title={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}
         />

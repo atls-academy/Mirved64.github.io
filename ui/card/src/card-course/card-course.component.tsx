@@ -6,9 +6,9 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
-import { CardProps } from '../card.interfaces'
+import { CardCourseProps } from './card-course.interfaces'
 
-export const CardCourse: FC<CardProps> = ({ cardCategory, cardTitle, cardText }) => (
+export const CardCourse: FC<CardCourseProps> = ({ category, title, text }) => (
   <Box>
     <Layout flexBasis={[16, 42]} flexShrink='0' />
 
@@ -24,7 +24,7 @@ export const CardCourse: FC<CardProps> = ({ cardCategory, cardTitle, cardText })
             lineHeight={['atom', 'tiny']}
             textTransform='uppercase'
           >
-            {cardCategory}
+            {category}
           </Text>
         </Box>
 
@@ -37,7 +37,7 @@ export const CardCourse: FC<CardProps> = ({ cardCategory, cardTitle, cardText })
             fontWeight='normal'
             lineHeight={['normal', 'mean']}
           >
-            {cardTitle}
+            {title}
           </Text>
         </Box>
 
@@ -50,7 +50,7 @@ export const CardCourse: FC<CardProps> = ({ cardCategory, cardTitle, cardText })
             fontWeight='normal'
             lineHeight={['small', 'normal']}
           >
-            {cardText}
+            {text}
           </Text>
         </Box>
       </Column>

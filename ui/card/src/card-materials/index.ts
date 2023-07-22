@@ -1,1 +1,1 @@
-export * from './card-materials'
+export * from './card-materials.comonent'

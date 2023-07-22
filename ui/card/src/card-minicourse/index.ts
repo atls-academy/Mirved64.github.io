@@ -1,1 +1,1 @@
-export * from './card-minicourse'
+export * from './card-minicourse.component'
