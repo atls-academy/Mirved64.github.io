@@ -23,7 +23,7 @@ export const Technologies = () => (
     <Layout flexBasis={[36, 64]} />
 
     <Column>
-      <ItemsList technologies={technologiesListTop} />
+      <ItemsList technologies={technologiesListTop} font='light' />
 
       <Layout flexBasis={[36, 64]} />
 
