@@ -3,9 +3,6 @@ import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
-import { CardCourse }       from '@ui/card'
-import { CardMaterials }    from '@ui/card'
-import { CardMiniCourse }   from '@ui/card'
 import { Divider }          from '@ui/divider'
 import { ArrowRightIcon }   from '@ui/icons'
 import { Box }              from '@ui/layout'
@@ -15,6 +12,7 @@ import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
+import { Card }             from './card'
 import { Info }             from './info'
 import { Sidebar }          from './sidebar'
 
@@ -78,53 +76,77 @@ export const Courses = () => {
 
           <Box flexDirection={['column', 'row']}>
             <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
-              <CardCourse
+              <Card
+                topGap={[16, 42]}
+                bottomGap={[16, 40]}
+                leftGap={[16, 42]}
+                gap={[104, 214]}
+                widthContent={[303, 1160]}
                 category={formatMessage({
                   id: 'coursesCardFrontendCategory',
                 })}
-                title={formatMessage({
+                titleDesktop={formatMessage({
                   id: 'coursesCardFrontendTitle',
                 })}
                 text={formatMessage({
                   id: 'coursesCardFrontendText',
                 })}
+                displayText='flex'
               />
 
               <Layout flexBasis={[20, 40]} />
 
-              <CardMiniCourse
+              <Card
+                topGap={[16, 42]}
+                bottomGap={[16, 40]}
+                leftGap={[16, 42]}
+                gap={[49, 54]}
+                widthContent={[280, 1160]}
                 category={formatMessage({
                   id: 'coursesCardBasisCategory',
                 })}
-                title={formatMessage({
+                titleDesktop={formatMessage({
                   id: 'coursesCardBasisTitle',
                 })}
                 text={formatMessage({
                   id: 'coursesCardBasisText',
                 })}
+                displayText='flex'
               />
 
               <Layout flexBasis={[20, 40]} flexShrink='0' />
 
               <Row display={['none', 'flex']}>
-                <CardMaterials
+                <Card
+                  topGap={[16, 32]}
+                  bottomGap={[16, 32]}
+                  leftGap={[16, 32]}
+                  gap={[62, 126]}
+                  widthContent={[260, 560]}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
-                  title={formatMessage({
+                  titleDesktop={formatMessage({
                     id: 'coursesCardLearningMaterialLibraries',
                   })}
+                  displayText='none'
                 />
 
                 <Layout flexBasis={[20, 40]} flexShrink='0' />
 
-                <CardMaterials
+                <Card
+                  topGap={[16, 32]}
+                  bottomGap={[16, 32]}
+                  leftGap={[16, 32]}
+                  gap={[62, 126]}
+                  widthContent={[260, 560]}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
-                  title={formatMessage({
+                  titleDesktop={formatMessage({
                     id: 'coursesCardLearningMaterialDesign',
                   })}
+                  displayText='none'
                 />
               </Row>
             </Column>
@@ -141,24 +163,48 @@ export const Courses = () => {
       <Row display={['flex', 'none']} overflow='hidden'>
         <Layout flexBasis={20} flexShrink='0' />
 
-        <CardMaterials
+        <Card
+          topGap={16}
+          bottomGap={16}
+          leftGap={16}
+          gap={62}
+          widthCard={260}
+          widthContent={228}
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          title={formatMessage({
+          titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
+          displayTitleDesktop='none'
+          titleMobile={formatMessage({
+            id: 'coursesCardLearningMaterialLibraries',
+          })}
+          displayTitleMobile='flex'
+          displayText='none'
         />
 
         <Layout flexBasis={20} flexShrink='0' />
 
-        <CardMaterials
+        <Card
+          topGap={16}
+          bottomGap={16}
+          leftGap={16}
+          gap={62}
+          widthCard={[260, 560]}
+          widthContent={260}
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          title={formatMessage({
+          titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}
+          displayTitleDesktop='none'
+          titleMobile={formatMessage({
+            id: 'coursesCardLearningMaterialDesign',
+          })}
+          displayTitleMobile='flex'
+          displayText='none'
         />
       </Row>
 
