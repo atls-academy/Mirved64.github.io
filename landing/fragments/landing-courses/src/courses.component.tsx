@@ -92,6 +92,7 @@ export const Courses = () => {
                   id: 'coursesCardFrontendText',
                 })}
                 displayText='flex'
+                path='/'
               />
 
               <Layout flexBasis={[20, 40]} />
@@ -112,17 +113,19 @@ export const Courses = () => {
                   id: 'coursesCardBasisText',
                 })}
                 displayText='flex'
+                path='/'
               />
 
               <Layout flexBasis={[20, 40]} flexShrink='0' />
 
               <Row display={['none', 'flex']}>
                 <Card
-                  topGap={[16, 32]}
-                  bottomGap={[16, 32]}
-                  leftGap={[16, 32]}
-                  gap={[62, 126]}
-                  widthContent={[260, 560]}
+                  topGap={32}
+                  bottomGap={32}
+                  leftGap={32}
+                  gap={126}
+                  widthCard={560}
+                  widthContent={496}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
@@ -130,16 +133,18 @@ export const Courses = () => {
                     id: 'coursesCardLearningMaterialLibraries',
                   })}
                   displayText='none'
+                  path='/'
                 />
 
                 <Layout flexBasis={[20, 40]} flexShrink='0' />
 
                 <Card
-                  topGap={[16, 32]}
-                  bottomGap={[16, 32]}
-                  leftGap={[16, 32]}
-                  gap={[62, 126]}
-                  widthContent={[260, 560]}
+                  topGap={32}
+                  bottomGap={32}
+                  leftGap={32}
+                  gap={126}
+                  widthCard={560}
+                  widthContent={496}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
@@ -147,6 +152,7 @@ export const Courses = () => {
                     id: 'coursesCardLearningMaterialDesign',
                   })}
                   displayText='none'
+                  path='/'
                 />
               </Row>
             </Column>
@@ -173,16 +179,15 @@ export const Courses = () => {
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          isMobailOnly={true}
+          isMobailOnly
           titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
-          
           titleMobile={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
-          
           displayText='none'
+          path='/'
         />
 
         <Layout flexBasis={20} flexShrink='0' />
@@ -192,12 +197,12 @@ export const Courses = () => {
           bottomGap={16}
           leftGap={16}
           gap={62}
-          widthCard={[260, 560]}
-          widthContent={260}
+          widthCard={260}
+          widthContent={228}
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          isMobailOnly={true}
+          isMobailOnly
           titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}
@@ -205,6 +210,7 @@ export const Courses = () => {
             id: 'coursesCardLearningMaterialDesign',
           })}
           displayText='none'
+          path='/'
         />
       </Row>
 

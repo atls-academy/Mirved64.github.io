@@ -1,5 +1,11 @@
+import { Box }      from '@atls-ui-parts/layout'
+
 import React        from 'react'
 
-import { Backdrop } from './backdrop'
+import { NextLink } from '@ui/link'
 
-export const CardContainer = ({ children, ...props }) => <Backdrop {...props}>{children}</Backdrop>
+export const CardContainer = ({ children, path, ...props }) => (
+  <NextLink path={path}>
+    <Box {...props}>{children}</Box>
+  </NextLink>
+)

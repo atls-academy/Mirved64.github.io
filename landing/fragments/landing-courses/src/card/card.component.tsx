@@ -2,7 +2,7 @@ import React             from 'react'
 import { FC }            from 'react'
 
 import { CardContainer } from '@ui/card'
-import { Condition }      from '@ui/condition'
+import { Condition }     from '@ui/condition'
 import { Box }           from '@ui/layout'
 import { Row }           from '@ui/layout'
 import { Column }        from '@ui/layout'
@@ -24,8 +24,9 @@ export const Card: FC<CardProps> = ({
   titleMobile,
   text,
   displayText,
+  path,
 }) => (
-  <CardContainer flexBasis={widthCard} flexShrink='0'>
+  <CardContainer width={widthCard} flexShrink='0' path={path}>
     <Layout flexBasis={leftGap} flexShrink='0' />
 
     <Column flexBasis={widthContent} flexGrow='1'>
