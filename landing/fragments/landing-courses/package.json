@@ -5,6 +5,7 @@
   "dependencies": {
     "@ui/button": "workspace:^",
     "@ui/card": "workspace:^",
+    "@ui/condition": "workspace:^",
     "@ui/divider": "workspace:^",
     "@ui/icons": "workspace:^",
     "@ui/image": "workspace:^",

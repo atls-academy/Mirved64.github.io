@@ -2,13 +2,14 @@ import React             from 'react'
 import { FC }            from 'react'
 
 import { CardContainer } from '@ui/card'
+import { Condition }      from '@ui/condition'
 import { Box }           from '@ui/layout'
 import { Row }           from '@ui/layout'
 import { Column }        from '@ui/layout'
 import { Layout }        from '@ui/layout'
 import { Text }          from '@ui/text'
 
-import { CardProps }     from './card.interface'
+import { CardProps }     from './card.interfaces'
 
 export const Card: FC<CardProps> = ({
   topGap,
@@ -18,14 +19,13 @@ export const Card: FC<CardProps> = ({
   widthContent,
   gap,
   category,
+  isMobailOnly = false,
   titleDesktop,
-  displayTitleDesktop = 'flex',
   titleMobile,
-  displayTitleMobile = 'none',
   text,
   displayText,
 }) => (
-  <CardContainer flexBasis={widthCard}>
+  <CardContainer flexBasis={widthCard} flexShrink='0'>
     <Layout flexBasis={leftGap} flexShrink='0' />
 
     <Column flexBasis={widthContent} flexGrow='1'>
@@ -59,27 +59,31 @@ export const Card: FC<CardProps> = ({
         <Layout flexBasis={gap} flexShrink='0' />
 
         <Box>
-          <Box display={displayTitleDesktop} flexBasis={496}>
-            <Text
-              color='text.courses.primary'
-              fontSize={['medium', 'regular']}
-              fontWeight='normal'
-              lineHeight={['normal', 'mean']}
-            >
-              {titleDesktop}
-            </Text>
-          </Box>
+          <Condition match={!isMobailOnly}>
+            <Box flexBasis={496}>
+              <Text
+                color='text.courses.primary'
+                fontSize={['medium', 'regular']}
+                fontWeight='normal'
+                lineHeight={['normal', 'mean']}
+              >
+                {titleDesktop}
+              </Text>
+            </Box>
+          </Condition>
 
-          <Box display={displayTitleMobile} flexShrink='0' flexBasis={228}>
-            <Text
-              color='text.courses.primary'
-              fontSize={['small', 'regular']}
-              fontWeight='normal'
-              lineHeight={['tiddly', 'mean']}
-            >
-              {titleMobile}
-            </Text>
-          </Box>
+          <Condition match={isMobailOnly}>
+            <Box flexShrink='0' flexBasis={228}>
+              <Text
+                color='text.courses.primary'
+                fontSize={['small', 'regular']}
+                fontWeight='normal'
+                lineHeight={['tiddly', 'mean']}
+              >
+                {titleMobile}
+              </Text>
+            </Box>
+          </Condition>
         </Box>
 
         <Column display={displayText}>
@@ -100,5 +104,7 @@ export const Card: FC<CardProps> = ({
 
       <Layout flexBasis={bottomGap} flexShrink='0' />
     </Column>
+
+    <Layout flexBasis={[16, 32]} flexShrink='0' />
   </CardContainer>
 )

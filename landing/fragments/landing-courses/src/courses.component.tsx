@@ -173,14 +173,15 @@ export const Courses = () => {
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
+          isMobailOnly={true}
           titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
-          displayTitleDesktop='none'
+          
           titleMobile={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
-          displayTitleMobile='flex'
+          
           displayText='none'
         />
 
@@ -196,14 +197,13 @@ export const Courses = () => {
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
+          isMobailOnly={true}
           titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}
-          displayTitleDesktop='none'
           titleMobile={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}
-          displayTitleMobile='flex'
           displayText='none'
         />
       </Row>

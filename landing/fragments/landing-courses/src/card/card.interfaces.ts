@@ -1,5 +1,4 @@
 type DisplayText = 'flex' | 'none'
-type DisplayTitle = 'flex' | 'none'
 
 export interface CardProps {
   topGap: string | string[] | number | number[]
@@ -9,10 +8,10 @@ export interface CardProps {
   widthContent?: string | string[] | number | number[]
   gap: string | string[] | number | number[]
   category: string
+  isMobailOnly?: boolean
   titleDesktop: string
-  displayTitleDesktop?: DisplayTitle
   titleMobile?: string
-  displayTitleMobile?: DisplayTitle
   text?: string
   displayText: DisplayText
+  path?: string
 }
