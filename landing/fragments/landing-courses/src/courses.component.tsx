@@ -77,10 +77,10 @@ export const Courses = () => {
           <Box flexDirection={['column', 'row']}>
             <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
               <Card
-                topGap={[16, 42]}
-                bottomGap={[16, 40]}
-                leftGap={[16, 42]}
-                gap={[104, 214]}
+                topGapBasis={[16, 42]}
+                bottomGapBasis={[16, 40]}
+                leftGapBasis={[16, 42]}
+                gapBasis={[104, 214]}
                 widthContent={[303, 1160]}
                 category={formatMessage({
                   id: 'coursesCardFrontendCategory',
@@ -98,10 +98,10 @@ export const Courses = () => {
               <Layout flexBasis={[20, 40]} />
 
               <Card
-                topGap={[16, 42]}
-                bottomGap={[16, 40]}
-                leftGap={[16, 42]}
-                gap={[49, 54]}
+                topGapBasis={[16, 42]}
+                bottomGapBasis={[16, 40]}
+                leftGapBasis={[16, 42]}
+                gapBasis={[49, 54]}
                 widthContent={[280, 1160]}
                 category={formatMessage({
                   id: 'coursesCardBasisCategory',
@@ -120,10 +120,10 @@ export const Courses = () => {
 
               <Row display={['none', 'flex']}>
                 <Card
-                  topGap={32}
-                  bottomGap={32}
-                  leftGap={32}
-                  gap={126}
+                  topGapBasis={32}
+                  bottomGapBasis={32}
+                  leftGapBasis={32}
+                  gapBasis={126}
                   widthCard={560}
                   widthContent={496}
                   category={formatMessage({
@@ -139,10 +139,10 @@ export const Courses = () => {
                 <Layout flexBasis={[20, 40]} flexShrink='0' />
 
                 <Card
-                  topGap={32}
-                  bottomGap={32}
-                  leftGap={32}
-                  gap={126}
+                  topGapBasis={32}
+                  bottomGapBasis={32}
+                  leftGapBasis={32}
+                  gapBasis={126}
                   widthCard={560}
                   widthContent={496}
                   category={formatMessage({
@@ -170,10 +170,10 @@ export const Courses = () => {
         <Layout flexBasis={20} flexShrink='0' />
 
         <Card
-          topGap={16}
-          bottomGap={16}
-          leftGap={16}
-          gap={62}
+          topGapBasis={16}
+          bottomGapBasis={16}
+          leftGapBasis={16}
+          gapBasis={62}
           widthCard={260}
           widthContent={228}
           category={formatMessage({
@@ -193,10 +193,10 @@ export const Courses = () => {
         <Layout flexBasis={20} flexShrink='0' />
 
         <Card
-          topGap={16}
-          bottomGap={16}
-          leftGap={16}
-          gap={62}
+          topGapBasis={16}
+          bottomGapBasis={16}
+          leftGapBasis={16}
+          gapBasis={62}
           widthCard={260}
           widthContent={228}
           category={formatMessage({

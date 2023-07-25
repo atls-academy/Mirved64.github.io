@@ -12,12 +12,12 @@ import { Text }          from '@ui/text'
 import { CardProps }     from './card.interfaces'
 
 export const Card: FC<CardProps> = ({
-  topGap,
-  bottomGap,
-  leftGap,
+  topGapBasis,
+  bottomGapBasis,
+  leftGapBasis,
   widthCard,
   widthContent,
-  gap,
+  gapBasis,
   category,
   isMobileOnly = false,
   titleDesktop,
@@ -27,10 +27,10 @@ export const Card: FC<CardProps> = ({
   path,
 }) => (
   <CardContainer width={widthCard} flexShrink='0' path={path}>
-    <Layout flexBasis={leftGap} flexShrink='0' />
+    <Layout flexBasis={leftGapBasis} flexShrink='0' />
 
     <Column flexBasis={widthContent} flexGrow='1'>
-      <Layout flexBasis={topGap} flexShrink='0' />
+      <Layout flexBasis={topGapBasis} flexShrink='0' />
 
       <Column flexGrow='1'>
         <Row>
@@ -57,7 +57,7 @@ export const Card: FC<CardProps> = ({
           <Layout flexBasis={[8, 12]} flexShrink='0' />
         </Row>
 
-        <Layout flexBasis={gap} flexShrink='0' />
+        <Layout flexBasis={gapBasis} flexShrink='0' />
 
         <Box>
           <Condition match={!isMobileOnly}>
@@ -103,7 +103,7 @@ export const Card: FC<CardProps> = ({
         </Column>
       </Column>
 
-      <Layout flexBasis={bottomGap} flexShrink='0' />
+      <Layout flexBasis={bottomGapBasis} flexShrink='0' />
     </Column>
 
     <Layout flexBasis={[16, 32]} flexShrink='0' />
