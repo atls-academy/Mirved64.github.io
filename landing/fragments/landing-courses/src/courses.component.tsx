@@ -179,7 +179,7 @@ export const Courses = () => {
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          isMobailOnly
+          isMobileOnly
           titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialLibraries',
           })}
@@ -202,7 +202,7 @@ export const Courses = () => {
           category={formatMessage({
             id: 'coursesCardLearningMaterial',
           })}
-          isMobailOnly
+          isMobileOnly
           titleDesktop={formatMessage({
             id: 'coursesCardLearningMaterialDesign',
           })}

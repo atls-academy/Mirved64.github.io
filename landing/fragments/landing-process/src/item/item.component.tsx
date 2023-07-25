@@ -27,6 +27,7 @@ export const Item: FC<ItemProps> = ({
             fontSize={['compact', 'medium']}
             fontWeight='normal'
             lineHeight={['little', 'mini']}
+            fontFamily='regular'
           >
             {sequenceNumber}
           </Text>

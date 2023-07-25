@@ -19,7 +19,7 @@ export const Card: FC<CardProps> = ({
   widthContent,
   gap,
   category,
-  isMobailOnly = false,
+  isMobileOnly = false,
   titleDesktop,
   titleMobile,
   text,
@@ -60,7 +60,7 @@ export const Card: FC<CardProps> = ({
         <Layout flexBasis={gap} flexShrink='0' />
 
         <Box>
-          <Condition match={!isMobailOnly}>
+          <Condition match={!isMobileOnly}>
             <Box flexBasis={496}>
               <Text
                 color='text.courses.primary'
@@ -73,7 +73,7 @@ export const Card: FC<CardProps> = ({
             </Box>
           </Condition>
 
-          <Condition match={isMobailOnly}>
+          <Condition match={isMobileOnly}>
             <Box flexShrink='0' flexBasis={228}>
               <Text
                 color='text.courses.primary'

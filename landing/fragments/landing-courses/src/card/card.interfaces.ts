@@ -8,7 +8,7 @@ export interface CardProps {
   widthContent?: string | string[] | number | number[]
   gap: string | string[] | number | number[]
   category: string
-  isMobailOnly?: boolean
+  isMobileOnly?: boolean
   titleDesktop: string
   titleMobile?: string
   text?: string
