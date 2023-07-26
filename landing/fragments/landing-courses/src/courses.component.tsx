@@ -10,6 +10,8 @@ import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
+import { Swiper }           from '@ui/swiper'
+import { SwiperSlide }      from '@ui/swiper'
 import { Text }             from '@ui/text'
 
 import { Card }             from './card'
@@ -77,11 +79,7 @@ export const Courses = () => {
           <Box flexDirection={['column', 'row']}>
             <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
               <Card
-                topGapBasis={[16, 42]}
-                bottomGapBasis={[16, 40]}
-                leftGapBasis={[16, 42]}
-                gapBasis={[104, 214]}
-                widthContent={[303, 1160]}
+                gap={[104, 214]}
                 category={formatMessage({
                   id: 'coursesCardFrontendCategory',
                 })}
@@ -91,18 +89,13 @@ export const Courses = () => {
                 text={formatMessage({
                   id: 'coursesCardFrontendText',
                 })}
-                displayText='flex'
                 path='/'
               />
 
               <Layout flexBasis={[20, 40]} />
 
               <Card
-                topGapBasis={[16, 42]}
-                bottomGapBasis={[16, 40]}
-                leftGapBasis={[16, 42]}
-                gapBasis={[49, 54]}
-                widthContent={[280, 1160]}
+                gap={[49, 54]}
                 category={formatMessage({
                   id: 'coursesCardBasisCategory',
                 })}
@@ -112,7 +105,6 @@ export const Courses = () => {
                 text={formatMessage({
                   id: 'coursesCardBasisText',
                 })}
-                displayText='flex'
                 path='/'
               />
 
@@ -120,38 +112,28 @@ export const Courses = () => {
 
               <Row display={['none', 'flex']}>
                 <Card
-                  topGapBasis={32}
-                  bottomGapBasis={32}
-                  leftGapBasis={32}
-                  gapBasis={126}
+                  gap={126}
                   widthCard={560}
-                  widthContent={496}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
                   titleDesktop={formatMessage({
                     id: 'coursesCardLearningMaterialLibraries',
                   })}
-                  displayText='none'
                   path='/'
                 />
 
                 <Layout flexBasis={[20, 40]} flexShrink='0' />
 
                 <Card
-                  topGapBasis={32}
-                  bottomGapBasis={32}
-                  leftGapBasis={32}
-                  gapBasis={126}
+                  gap={126}
                   widthCard={560}
-                  widthContent={496}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
                   titleDesktop={formatMessage({
                     id: 'coursesCardLearningMaterialDesign',
                   })}
-                  displayText='none'
                   path='/'
                 />
               </Row>
@@ -166,53 +148,45 @@ export const Courses = () => {
         <Layout flexBasis={[20, 80]} />
       </Row>
 
-      <Row display={['flex', 'none']} overflow='hidden'>
-        <Layout flexBasis={20} flexShrink='0' />
+      <Box display={['flex', 'none']}>
+        <Swiper spaceBetween={20} slidesPerView={1.23}>
+          <SwiperSlide>
+            <Card
+              gap={62}
+              widthCard={260}
+              category={formatMessage({
+                id: 'coursesCardLearningMaterial',
+              })}
+              isMobileOnly
+              titleDesktop={formatMessage({
+                id: 'coursesCardLearningMaterialLibraries',
+              })}
+              titleMobile={formatMessage({
+                id: 'coursesCardLearningMaterialLibraries',
+              })}
+              path='/'
+            />
+          </SwiperSlide>
 
-        <Card
-          topGapBasis={16}
-          bottomGapBasis={16}
-          leftGapBasis={16}
-          gapBasis={62}
-          widthCard={260}
-          widthContent={228}
-          category={formatMessage({
-            id: 'coursesCardLearningMaterial',
-          })}
-          isMobileOnly
-          titleDesktop={formatMessage({
-            id: 'coursesCardLearningMaterialLibraries',
-          })}
-          titleMobile={formatMessage({
-            id: 'coursesCardLearningMaterialLibraries',
-          })}
-          displayText='none'
-          path='/'
-        />
-
-        <Layout flexBasis={20} flexShrink='0' />
-
-        <Card
-          topGapBasis={16}
-          bottomGapBasis={16}
-          leftGapBasis={16}
-          gapBasis={62}
-          widthCard={260}
-          widthContent={228}
-          category={formatMessage({
-            id: 'coursesCardLearningMaterial',
-          })}
-          isMobileOnly
-          titleDesktop={formatMessage({
-            id: 'coursesCardLearningMaterialDesign',
-          })}
-          titleMobile={formatMessage({
-            id: 'coursesCardLearningMaterialDesign',
-          })}
-          displayText='none'
-          path='/'
-        />
-      </Row>
+          <SwiperSlide>
+            <Card
+              gap={62}
+              widthCard={260}
+              category={formatMessage({
+                id: 'coursesCardLearningMaterial',
+              })}
+              isMobileOnly
+              titleDesktop={formatMessage({
+                id: 'coursesCardLearningMaterialDesign',
+              })}
+              titleMobile={formatMessage({
+                id: 'coursesCardLearningMaterialDesign',
+              })}
+              path='/'
+            />
+          </SwiperSlide>
+        </Swiper>
+      </Box>
 
       <Layout flexBasis={[52, 160]} flexShrink='0' />
 
