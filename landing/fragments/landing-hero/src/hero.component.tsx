@@ -21,7 +21,7 @@ export const Hero = () => (
     <Row flexGrow='1'>
       <Layout flexBasis={[20, 230]} />
 
-      <Row >
+      <Row>
         <Column flexBasis={[335, 1460]} flexGrow={[1, 0]}>
           <Box>
             <Text

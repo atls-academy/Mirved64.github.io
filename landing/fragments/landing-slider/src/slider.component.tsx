@@ -13,7 +13,7 @@ import { Text }                from '@ui/text'
 
 export const Slider = () => (
   <Box backgroundColor='background.slider' width='100%' margin='0 auto' flexDirection='column'>
-    <Layout flexBasis={[24, 160]}/>
+    <Layout flexBasis={[24, 160]} />
 
     <Column>
       <Column margin='0 auto' alignItems='center'>
@@ -28,7 +28,7 @@ export const Slider = () => (
           </Text>
         </Box>
 
-        <Layout flexBasis={[16, 24]}/>
+        <Layout flexBasis={[16, 24]} />
 
         <Layout justifyContent='center'>
           <Box flexBasis={[335, 960]} flexShrink='1'>
@@ -45,7 +45,7 @@ export const Slider = () => (
         </Layout>
       </Column>
 
-      <Layout flexBasis={[24, 50]}/>
+      <Layout flexBasis={[24, 50]} />
 
       <Column margin='0 auto'>
         <Box width={[155, 960]} border={['thinWhite', 'boldWhite']} margin='0 auto'>
@@ -61,7 +61,7 @@ export const Slider = () => (
           </Box>
         </Box>
 
-        <Layout flexBasis={[24, 32]}/>
+        <Layout flexBasis={[24, 32]} />
 
         <Layout justifyContent='center'>
           <Row justifyContent='space-between' flexBasis={[335, 960]}>
@@ -105,6 +105,6 @@ export const Slider = () => (
       </Column>
     </Column>
 
-    <Layout flexBasis={[64, 160]}/>
+    <Layout flexBasis={[64, 160]} />
   </Box>
 )
