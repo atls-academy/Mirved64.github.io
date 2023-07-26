@@ -12,10 +12,10 @@ export const Process = () => {
   const intl = useIntl()
   return (
     <Box backgroundColor='background.process' width='100%' margin='0 auto' flexDirection='column'>
-      <Layout flexBasis={[64, 160]} flexShrink='0' />
+      <Layout flexBasis={[64, 160]} />
 
       <Box position='relative'>
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
+        <Layout flexBasis={[20, 80]} />
 
         <Column flexGrow='2' flexShrink='1' flexBasis={[335, 1760]}>
           <Item
@@ -70,10 +70,10 @@ export const Process = () => {
           <Image src='./image/Default.png' width={400} height={400} />
         </Box>
 
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
+        <Layout flexBasis={[20, 80]} />
       </Box>
 
-      <Layout flexBasis={[24, 160]} flexShrink='0' />
+      <Layout flexBasis={[24, 160]} />
     </Box>
   )
 }

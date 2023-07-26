@@ -33,7 +33,7 @@ export const Item: FC<ItemProps> = ({
           </Text>
         </Box>
 
-        <Layout flexBasis={[12, 32]} flexShrink='0' />
+        <Layout flexBasis={[12, 32]} />
       </Row>
 
       <Box
@@ -54,9 +54,9 @@ export const Item: FC<ItemProps> = ({
           </Text>
         </Box>
 
-        <Layout flexBasis={[8, 0]} flexShrink='0' />
+        <Layout flexBasis={[8, 0]} />
 
-        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} flexShrink='1'>
+        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]}>
           <Text
             color='text.process.primary'
             fontSize={['tiny', 'medium']}
