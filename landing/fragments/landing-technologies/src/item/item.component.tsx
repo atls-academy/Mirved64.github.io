@@ -10,8 +10,8 @@ import { Text }             from '@ui/text'
 import { TechnologyProps }  from './item.interfaces'
 
 export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'primary' }) => (
-  <Box flexShrink='0'>
-    <Box flexShrink='0'>
+  <Box>
+    <Box>
       <Text
         color='text.process.primary'
         fontSize={['huge', 'massive']}
@@ -25,12 +25,12 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
       </Text>
     </Box>
 
-    <Layout flexBasis={24} flexShrink='0' />
+    <Layout flexBasis={24} />
 
-    <Box width='48px' flexShrink='0'>
+    <Box width='48px'>
       <Divider backgroundColor='divider.primary' weight={divider} margin='auto 0' />
     </Box>
 
-    <Layout flexBasis={24} flexShrink='0' />
+    <Layout flexBasis={24} />
   </Box>
 )
