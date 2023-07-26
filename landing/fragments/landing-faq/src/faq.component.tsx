@@ -9,7 +9,6 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 
 import { Item }             from './item'
@@ -52,11 +51,9 @@ export const Faq = () => {
               heightIcon={48}
               backgroundIcon='background.faq.white'
             >
-              <NextLink>
-                <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
-                  <FormattedMessage id='faqButton' />
-                </Text>
-              </NextLink>
+              <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <FormattedMessage id='faqButton' />
+              </Text>
             </Button>
           </Box>
         </Row>
@@ -87,11 +84,9 @@ export const Faq = () => {
               heightIcon={48}
               backgroundIcon='background.faq.white'
             >
-              <NextLink>
-                <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
-                  <FormattedMessage id='faqButton' />
-                </Text>
-              </NextLink>
+              <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <FormattedMessage id='faqButton' />
+              </Text>
             </Button>
           </Box>
         </Column>
