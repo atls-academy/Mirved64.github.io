@@ -1,7 +1,9 @@
 import React          from 'react'
 import { FC }         from 'react'
 
+import { Box }        from '@ui/layout'
 import { Row }        from '@ui/layout'
+import { NextLink }   from '@ui/link'
 
 import { Item }       from '../item'
 import { ItemsProps } from './items-list.interfaces'
@@ -15,7 +17,11 @@ export const ItemsList: FC<ItemsProps> = ({ navLinksList }) => (
     justifyContent='space-between'
   >
     {navLinksList.map((navLink) => (
-      <Item key={navLink.id} name={navLink.name} path={navLink.path} />
+      <Box width={200}>
+        <NextLink key={navLink.id} path={navLink.path} width='100%'>
+          <Item name={navLink.name} />
+        </NextLink>
+      </Box>
     ))}
   </Row>
 )

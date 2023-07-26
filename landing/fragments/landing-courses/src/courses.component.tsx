@@ -108,7 +108,7 @@ export const Courses = () => {
                 path='/'
               />
 
-              <Layout flexBasis={[20, 40]} flexShrink='0' />
+              <Layout flexBasis={[20, 40]} />
 
               <Row display={['none', 'flex']}>
                 <Card
@@ -123,7 +123,7 @@ export const Courses = () => {
                   path='/'
                 />
 
-                <Layout flexBasis={[20, 40]} flexShrink='0' />
+                <Layout flexBasis={[20, 40]} />
 
                 <Card
                   gap={126}
@@ -139,7 +139,7 @@ export const Courses = () => {
               </Row>
             </Column>
 
-            <Layout flexBasis={[0, 40]} flexShrink='0' />
+            <Layout flexBasis={[0, 40]} />
 
             <Sidebar />
           </Box>
@@ -188,27 +188,27 @@ export const Courses = () => {
         </Swiper>
       </Box>
 
-      <Layout flexBasis={[52, 160]} flexShrink='0' />
+      <Layout flexBasis={[52, 160]} />
 
       <Box display={['flex', 'none']}>
-        <Layout flexBasis={20} flexShrink='0' />
+        <Layout flexBasis={20} />
 
-        <Box width={254} height={72}>
-          <Button
-            variant='transparentBackgroundBlackText'
-            fill
-            gap={24}
-            icon={<ArrowRightIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={48}
-            backgroundIcon='background.courses.white'
-          >
-            <NextLink>
+        <Box width={254} height={72} alignItems='center'>
+          <NextLink path='/' width='100%'>
+            <Button
+              variant='transparentBackgroundBlackText'
+              fill
+              gap={24}
+              icon={<ArrowRightIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={48}
+              backgroundIcon='background.courses.white'
+            >
               <Text fontSize='small' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage id='coursesButton' />
               </Text>
-            </NextLink>
-          </Button>
+            </Button>
+          </NextLink>
         </Box>
       </Box>
 

@@ -13,10 +13,10 @@ import { Text }             from '@ui/text'
 export const Sidebar = () => (
   <Column flexBasis={[212, 410]}>
     <Row order={[1, 0]}>
-      <Layout flexBasis={[16, 32]} flexShrink='0' />
+      <Layout flexBasis={[16, 32]} />
 
       <Column flexBasis={[303, 346]}>
-        <Layout flexBasis={[16, 32]} flexShrink='0' />
+        <Layout flexBasis={[16, 32]} />
 
         <Column>
           <Box>
@@ -30,13 +30,13 @@ export const Sidebar = () => (
             </Text>
           </Box>
 
-          <Layout flexBasis={[16, 74]} flexShrink='0' />
+          <Layout flexBasis={[16, 74]} />
 
           <Box display={['none', 'flex']} margin='0 auto'>
             <Image src='./image/Default.png' width={240} height={240} />
           </Box>
 
-          <Layout flexBasis={[0, 62]} flexShrink='0' />
+          <Layout flexBasis={[0, 62]} />
 
           <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
             <Box>
@@ -71,15 +71,15 @@ export const Sidebar = () => (
           </Box>
         </Column>
 
-        <Layout flexBasis={[16, 32]} flexShrink='0' />
+        <Layout flexBasis={[16, 32]} />
       </Column>
 
-      <Layout flexBasis={[16, 32]} flexShrink='0' />
+      <Layout flexBasis={[16, 32]} />
     </Row>
 
-    <Layout order={[2, 0]} flexBasis={[40, 20]} flexShrink='0' />
+    <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
-    <Box display={['none', 'flex']} width='100%' height={72}>
+    <Box display={['none', 'flex']} width='100%' height={72} alignItems='center'>
       <Button
         variant='transparentBackgroundBlackText'
         fill
