@@ -7,6 +7,10 @@
     "ui/**/*",
     "landing/**/*"
   ],
+  "resolutions": {
+    "@types/react": "17.0.39",
+    "next": "12.3.4"
+  },
   "devDependencies": {
     "@atls/code-service": "^0.0.18",
     "@atls/config-jest": "^0.0.5",
