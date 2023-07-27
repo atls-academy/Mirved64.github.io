@@ -20,7 +20,7 @@ export const Navigation = () => (
     alignItems='center'
     justifyContent='center'
   >
-    <Layout flexBasis={[0, 40]} />
+    <Layout flexBasis={[0, 40]} flexShrink='0' />
 
     <Box display={['flex', 'none']} flexGrow='1' justifyContent='center'>
       <NextLink>
@@ -58,6 +58,6 @@ export const Navigation = () => (
       </Button>
     </Box>
 
-    <Layout flexBasis={[0, 40]} />
+    <Layout flexBasis={[0, 40]} flexShrink='0' />
   </Box>
 )

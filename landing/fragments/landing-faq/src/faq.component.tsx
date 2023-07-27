@@ -17,7 +17,7 @@ export const Faq = () => {
   const intl = useIntl()
   return (
     <Box backgroundColor='background.faq.mainColor' width='100%' justifyContent='center'>
-      <Layout flexBasis={[16, 230]} />
+      <Layout flexBasis={[16, 230]} flexShrink='0' />
 
       <Column flexGrow='1'>
         <Layout flexBasis={[80, 160]} />
@@ -94,7 +94,7 @@ export const Faq = () => {
         <Layout flexBasis={[80, 160]} />
       </Column>
 
-      <Layout flexBasis={[16, 80]} />
+      <Layout flexBasis={[16, 80]} flexShrink='0'  />
     </Box>
   )
 }

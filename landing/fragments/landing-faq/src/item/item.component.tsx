@@ -21,7 +21,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
         <CrossIcon width={20} height={20} />
       </Box>
 
-      <Layout flexBasis={[0, 24]} />
+      <Layout flexBasis={[0, 24]} flexShrink='0' />
 
       <Box flexGrow={[1, 0]} flexBasis={[303, 740]}>
         <Text
@@ -34,7 +34,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => (
         </Text>
       </Box>
 
-      <Layout flexBasis={[24, 0]} />
+      <Layout flexBasis={[24, 0]} flexShrink='0' />
 
       <Box display={['flex', 'none']} alignItems='center'>
         <CrossIcon width={12} height={12} />

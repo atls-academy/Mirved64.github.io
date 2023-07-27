@@ -12,13 +12,8 @@ import { Column }              from '@ui/layout'
 import { Text }                from '@ui/text'
 
 export const Slider = () => (
-  <Box
-    backgroundColor='background.slider'
-    width='100%'
-    justifyContent='center'
-    flexDirection='column'
-  >
-    <Layout flexBasis={[24, 160]} />
+  <Box backgroundColor='background.slider'    width='100%'    justifyContent='center'    flexDirection='column'  >
+    <Layout flexBasis={[24, 160]} flexShrink='0' />
 
     <Column>
       <Column justifyContent='center' alignItems='center'>
@@ -33,7 +28,7 @@ export const Slider = () => (
           </Text>
         </Box>
 
-        <Layout flexBasis={[16, 24]} />
+        <Layout flexBasis={[16, 24]} flexShrink='0' />
 
         <Layout justifyContent='center'>
           <Box flexBasis={[335, 960]} flexShrink='1'>
@@ -50,7 +45,7 @@ export const Slider = () => (
         </Layout>
       </Column>
 
-      <Layout flexBasis={[24, 50]} />
+      <Layout flexBasis={[24, 50]} flexShrink='0' />
 
       <Column alignItems='center'>
         <Box width={[155, 960]} border={['thinWhite', 'boldWhite']} justifyContent='center'>
@@ -66,9 +61,9 @@ export const Slider = () => (
           </Box>
         </Box>
 
-        <Layout flexBasis={[24, 32]} />
+        <Layout flexBasis={[24, 32]} flexShrink='0' />
 
-        <Layout justifyContent='center'>
+        <Row justifyContent='center'>
           <Row justifyContent='space-between' flexBasis={[335, 960]}>
             <Box>
               <Button
@@ -106,10 +101,10 @@ export const Slider = () => (
               />
             </Box>
           </Row>
-        </Layout>
+        </Row>
       </Column>
     </Column>
 
-    <Layout flexBasis={[64, 160]} />
+    <Layout flexBasis={[64, 160]} flexShrink='0' />
   </Box>
 )
