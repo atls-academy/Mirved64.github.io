@@ -10,7 +10,7 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
+import { Link }             from '@ui/link'
 import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 
@@ -103,7 +103,7 @@ export const Hero = () => (
             alignItems='center'
           >
             <Box>
-              <NextLink path='https://web.telegram.org/'>
+              <Link href='https://web.telegram.org/'>
                 <Button
                   variant='transparentBackgroundWhiteText'
                   fill
@@ -111,11 +111,11 @@ export const Hero = () => (
                   widthIcon={104}
                   heightIcon={44}
                 />
-              </NextLink>
+              </Link>
             </Box>
 
             <Box>
-              <NextLink path='https://github.com/'>
+              <Link href='https://github.com/'>
                 <Button
                   variant='transparentBackgroundWhiteText'
                   fill
@@ -123,11 +123,11 @@ export const Hero = () => (
                   widthIcon={104}
                   heightIcon={44}
                 />
-              </NextLink>
+              </Link>
             </Box>
 
             <Box>
-              <NextLink path='https://www.google.com/intl/ru/gmail/about/'>
+              <Link href='https://www.google.com/intl/ru/gmail/about/'>
                 <Button
                   variant='transparentBackgroundWhiteText'
                   fill
@@ -135,7 +135,7 @@ export const Hero = () => (
                   widthIcon={104}
                   heightIcon={44}
                 />
-              </NextLink>
+              </Link>
             </Box>
           </Row>
         </Column>
@@ -145,7 +145,7 @@ export const Hero = () => (
         <Box display={['none', 'flex']} alignItems='end' flexBasis={56}>
           <Column height='200px' justifyContent='space-around' alignItems='center'>
             <Box>
-              <NextLink path='https://web.telegram.org/'>
+              <Link href='https://web.telegram.org/'>
                 <Button
                   variant='transparentBackgroundWhiteText'
                   fill
@@ -153,11 +153,11 @@ export const Hero = () => (
                   widthIcon={56}
                   heightIcon={56}
                 />
-              </NextLink>
+              </Link>
             </Box>
 
             <Box>
-              <NextLink path='https://github.com/'>
+              <Link href='https://github.com/'>
                 <Button
                   variant='transparentBackgroundWhiteText'
                   fill
@@ -165,11 +165,11 @@ export const Hero = () => (
                   widthIcon={56}
                   heightIcon={56}
                 />
-              </NextLink>
+              </Link>
             </Box>
 
             <Box>
-              <NextLink path='https://www.google.com/intl/ru/gmail/about/'>
+              <Link href='https://www.google.com/intl/ru/gmail/about/'>
                 <Button
                   variant='transparentBackgroundWhiteText'
                   fill
@@ -177,7 +177,7 @@ export const Hero = () => (
                   widthIcon={56}
                   heightIcon={56}
                 />
-              </NextLink>
+              </Link>
             </Box>
           </Column>
         </Box>
