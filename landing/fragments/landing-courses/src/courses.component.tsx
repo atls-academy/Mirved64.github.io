@@ -25,7 +25,7 @@ export const Courses = () => {
     <Box
       backgroundColor='background.courses.mainColor'
       width='100%'
-      margin='0 auto'
+      justifyContent='center'
       flexDirection='column'
     >
       <Layout flexBasis={[64, 160]} />

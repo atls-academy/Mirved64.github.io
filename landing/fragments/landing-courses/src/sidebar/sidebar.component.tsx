@@ -32,7 +32,7 @@ export const Sidebar = () => (
 
           <Layout flexBasis={[16, 74]} />
 
-          <Box display={['none', 'flex']} margin='0 auto'>
+          <Box display={['none', 'flex']} justifyContent='center'>
             <Image src='./image/Default.png' width={240} height={240} />
           </Box>
 

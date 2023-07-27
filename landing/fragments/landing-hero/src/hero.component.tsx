@@ -15,7 +15,12 @@ import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 
 export const Hero = () => (
-  <Box backgroundColor='background.hero' width='100%' flexDirection='column' margin='0 auto'>
+  <Box
+    backgroundColor='background.hero'
+    width='100%'
+    flexDirection='column'
+    justifyContent='center'
+  >
     <Layout flexBasis={[80, 412]} />
 
     <Row flexGrow='1'>

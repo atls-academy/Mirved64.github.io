@@ -12,11 +12,16 @@ import { Column }              from '@ui/layout'
 import { Text }                from '@ui/text'
 
 export const Slider = () => (
-  <Box backgroundColor='background.slider' width='100%' margin='0 auto' flexDirection='column'>
+  <Box
+    backgroundColor='background.slider'
+    width='100%'
+    justifyContent='center'
+    flexDirection='column'
+  >
     <Layout flexBasis={[24, 160]} />
 
     <Column>
-      <Column margin='0 auto' alignItems='center'>
+      <Column justifyContent='center' alignItems='center'>
         <Box>
           <Text
             color='text.slider.primary'
@@ -47,10 +52,10 @@ export const Slider = () => (
 
       <Layout flexBasis={[24, 50]} />
 
-      <Column margin='0 auto'>
-        <Box width={[155, 960]} border={['thinWhite', 'boldWhite']} margin='0 auto'>
+      <Column alignItems='center'>
+        <Box width={[155, 960]} border={['thinWhite', 'boldWhite']} justifyContent='center'>
           <Box
-            margin='0 auto'
+            alignItems='center'
             maxWidth={960}
             maxHeight={540}
             width={[138, 'auto']}

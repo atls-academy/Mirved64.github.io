@@ -16,7 +16,7 @@ import { Item }             from './item'
 export const Faq = () => {
   const intl = useIntl()
   return (
-    <Box backgroundColor='background.faq.mainColor' width='100%' margin='0 auto'>
+    <Box backgroundColor='background.faq.mainColor' width='100%' justifyContent='center'>
       <Layout flexBasis={[16, 230]} />
 
       <Column flexGrow='1'>

@@ -10,7 +10,12 @@ import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 
 export const About = () => (
-  <Box backgroundColor='background.about' width='100%' flexDirection='column' margin='0 auto'>
+  <Box
+    backgroundColor='background.about'
+    width='100%'
+    flexDirection='column'
+    justifyContent='center'
+  >
     <Layout flexBasis={[64, 160]} />
 
     <Row>

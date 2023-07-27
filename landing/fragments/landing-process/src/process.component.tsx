@@ -11,7 +11,12 @@ import { Item }    from './item'
 export const Process = () => {
   const intl = useIntl()
   return (
-    <Box backgroundColor='background.process' width='100%' margin='0 auto' flexDirection='column'>
+    <Box
+      backgroundColor='background.process'
+      width='100%'
+      justifyContent='center'
+      flexDirection='column'
+    >
       <Layout flexBasis={[64, 160]} />
 
       <Box position='relative'>

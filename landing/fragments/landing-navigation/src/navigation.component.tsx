@@ -18,7 +18,7 @@ export const Navigation = () => (
     width='100%'
     height={[80, 120]}
     alignItems='center'
-    margin='0 auto'
+    justifyContent='center'
   >
     <Layout flexBasis={[0, 40]} />
 

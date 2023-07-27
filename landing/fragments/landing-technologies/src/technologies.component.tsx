@@ -13,7 +13,7 @@ export const Technologies = () => (
   <Box
     backgroundColor='background.technologies'
     width='100%'
-    margin='0 auto'
+    justifyContent='center'
     flexDirection='column'
   >
     <Layout flexBasis={[32, 64]} />
