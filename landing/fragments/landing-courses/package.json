@@ -12,7 +12,8 @@
     "@ui/layout": "workspace: 0.0.1",
     "@ui/link": "workspace:^",
     "@ui/swiper": "workspace:^",
-    "@ui/text": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1",
+    "@ui/utils": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",

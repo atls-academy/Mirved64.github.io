@@ -22,87 +22,77 @@ export const Card: FC<CardProps> = ({
   path,
 }) => (
   <CardContainer path={path} width={widthCard}>
-    <Row>
+    <Layout flexBasis={[16, 40]} />
+
+    <Column flexGrow='1'>
       <Layout flexBasis={[16, 40]} />
 
-      <Column>
-        <Layout flexBasis={[16, 40]} />
+      <Row flexBasis={[27, 38]} alignItems='center'>
+        <Layout flexBasis={[8, 12]} />
 
-        <Column flexBasis={[135, 256]} flexGrow='1'>
-          <Row flexBasis={[27, 38]}>
-            <Layout flexBasis={[8, 12]} />
+        <Box>
+          <Text
+            color='text.courses.primary'
+            fontSize={['subAtom', 'tiny']}
+            fontWeight='normal'
+            lineHeight={['atom', 'tiny']}
+            textTransform='uppercase'
+          >
+            {category}
+          </Text>
+        </Box>
 
-            <Column>
-              <Layout flexBasis={[8, 12]} />
+        <Layout flexBasis={[8, 12]} />
+      </Row>
 
-              <Box>
-                <Text
-                  color='text.courses.primary'
-                  fontSize={['subAtom', 'tiny']}
-                  fontWeight='normal'
-                  lineHeight={['atom', 'tiny']}
-                  textTransform='uppercase'
-                >
-                  {category}
-                </Text>
-              </Box>
+      <Layout flexBasis={gap} />
 
-              <Layout flexBasis={[8, 12]} />
-            </Column>
+      <Condition match={!isMobileOnly}>
+        <Box>
+          <Text
+            color='text.courses.primary'
+            fontSize={['medium', 'regular']}
+            fontWeight='normal'
+            lineHeight={['normal', 'mean']}
+          >
+            {titleDesktop}
+          </Text>
+        </Box>
+      </Condition>
 
-            <Layout flexBasis={[8, 12]} />
-          </Row>
+      <Condition match={isMobileOnly}>
+        <Box>
+          <Text
+            color='text.courses.primary'
+            fontSize={['small', 'regular']}
+            fontWeight='normal'
+            lineHeight={['tiddly', 'mean']}
+          >
+            {titleMobile}
+          </Text>
+        </Box>
+      </Condition>
 
-          <Layout flexBasis={gap} />
+      <Condition match={!!text}>
+        <Column flexBasis={[132, 84]} flexGrow={[1, 0]}>
+          <Layout flexBasis={[12, 16]} />
 
-          <Box flexBasis={[28, 46]}>
-            <Condition match={!isMobileOnly}>
-              <Box flexBasis={496}>
-                <Text
-                  color='text.courses.primary'
-                  fontSize={['medium', 'regular']}
-                  fontWeight='normal'
-                  lineHeight={['normal', 'mean']}
-                >
-                  {titleDesktop}
-                </Text>
-              </Box>
-            </Condition>
-
-            <Condition match={isMobileOnly}>
-              <Box flexBasis={228}>
-                <Text
-                  color='text.courses.primary'
-                  fontSize={['small', 'regular']}
-                  fontWeight='normal'
-                  lineHeight={['tiddly', 'mean']}
-                >
-                  {titleMobile}
-                </Text>
-              </Box>
-            </Condition>
+          <Box maxWidth={[303, 694]}>
+            <Text
+              color='text.courses.primary'
+              fontSize={['tiny', 'small']}
+              fontWeight='normal'
+              lineHeight={['small', 'normal']}
+            >
+              {text}
+            </Text>
           </Box>
-
-          <Column display={text ? 'flex' : 'none'} flexBasis={[132, 84]}>
-            <Layout flexBasis={[12, 16]} />
-
-            <Box maxWidth={[303, 694]} flexGrow={[1, 0]}>
-              <Text
-                color='text.courses.primary'
-                fontSize={['tiny', 'small']}
-                fontWeight='normal'
-                lineHeight={['small', 'normal']}
-              >
-                {text}
-              </Text>
-            </Box>
-          </Column>
         </Column>
-
-        <Layout flexBasis={[16, 40]} />
-      </Column>
+      </Condition>
 
       <Layout flexBasis={[16, 40]} />
-    </Row>
+    </Column>
+
+    <Layout flexBasis={[16, 40]} />
   </CardContainer>
 )

@@ -15,14 +15,14 @@ import { useWindowWidth }   from '@ui/utils'
 import { QuestionProps }    from './item.interfaces'
 
 export const Item: FC<QuestionProps> = ({ question, divider }) => {
-  const windowWidth = useWindowWidth()
+  const { isMobile, isDesktop } = useWindowWidth()
 
   return (
     <Column>
       <Layout flexBasis={[16, 40]} />
 
       <Row>
-        <Condition match={windowWidth > 640}>
+        <Condition match={isDesktop}>
           <Box alignItems='center'>
             <CrossIcon width={20} height={20} />
           </Box>
@@ -43,7 +43,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => {
 
         <Layout flexBasis={[24, 0]} flexShrink='0' />
 
-        <Condition match={windowWidth < 640}>
+        <Condition match={isMobile}>
           <Box alignItems='center'>
             <CrossIcon width={12} height={12} />
           </Box>

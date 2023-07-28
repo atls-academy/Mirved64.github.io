@@ -11,10 +11,10 @@ import { Item }           from '../item'
 import { ItemsProps }     from './items-list.interfaces'
 
 export const ItemsList: FC<ItemsProps> = ({ navLinksList }) => {
-  const windowWidth = useWindowWidth()
+  const { isDesktop } = useWindowWidth()
 
   return (
-    <Condition match={windowWidth > 640}>
+    <Condition match={isDesktop}>
       <Row height='32px' flexBasis={860} flexShrink='1' justifyContent='space-between'>
         {navLinksList.map((navLink) => (
           <Box width={200}>

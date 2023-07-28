@@ -12,7 +12,7 @@ import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const About = () => {
-  const windowWidth = useWindowWidth()
+  const { isMobile, isDesktop } = useWindowWidth()
 
   return (
     <Box
@@ -27,7 +27,7 @@ export const About = () => {
         <Layout flexBasis={[20, 230]} flexShrink='0' />
 
         <Column flexBasis={[335, 1460]} flexGrow='1'>
-          <Condition match={windowWidth > 640}>
+          <Condition match={isDesktop}>
             <Column>
               <Box>
                 <Text
@@ -93,7 +93,7 @@ export const About = () => {
             </Column>
           </Condition>
 
-          <Condition match={windowWidth < 640}>
+          <Condition match={isMobile}>
             <Column>
               <Box>
                 <Text
@@ -123,7 +123,7 @@ export const About = () => {
 
           <Layout flexBasis={[0, 40]} />
 
-          <Condition match={windowWidth > 640}>
+          <Condition match={isDesktop}>
             <Column>
               <Box>
                 <Text

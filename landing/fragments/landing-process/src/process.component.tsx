@@ -12,7 +12,7 @@ import { Item }           from './item'
 
 export const Process = () => {
   const intl = useIntl()
-  const windowWidth = useWindowWidth()
+  const { isDesktop } = useWindowWidth()
 
   return (
     <Box
@@ -64,7 +64,7 @@ export const Process = () => {
           />
         </Column>
 
-        <Condition match={windowWidth > 640}>
+        <Condition match={isDesktop}>
           <Box
             width='400px'
             height='400px'

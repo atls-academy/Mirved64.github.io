@@ -17,7 +17,7 @@ import { Item }             from './item'
 
 export const Faq = () => {
   const intl = useIntl()
-  const windowWidth = useWindowWidth()
+  const { isMobile, isDesktop } = useWindowWidth()
 
   return (
     <Box backgroundColor='background.faq.mainColor' width='100%' justifyContent='center'>
@@ -39,7 +39,7 @@ export const Faq = () => {
             </Text>
           </Box>
 
-          <Condition match={windowWidth > 640}>
+          <Condition match={isDesktop}>
             <Box width={247} height={72} alignItems='center' flexShrink='0'>
               <Button
                 variant='transparentBackgroundBlackText'
@@ -60,7 +60,7 @@ export const Faq = () => {
 
         <Layout flexBasis={[60, 80]} />
 
-        <Condition match={windowWidth > 640}>
+        <Condition match={isDesktop}>
           <Divider backgroundColor='divider.secondary' weight='1px' />
         </Condition>
 
@@ -73,7 +73,7 @@ export const Faq = () => {
           <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
         </Column>
 
-        <Condition match={windowWidth < 640}>
+        <Condition match={isMobile}>
           <Column>
             <Layout flexBasis={60} />
 

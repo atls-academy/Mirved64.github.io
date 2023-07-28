@@ -17,7 +17,8 @@ import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const Hero = () => {
-  const windowWidth = useWindowWidth()
+  const { isMobile, isDesktop } = useWindowWidth()
+
   return (
     <Box
       backgroundColor='background.hero'
@@ -99,7 +100,7 @@ export const Hero = () => {
 
             <Layout flexBasis={[24, 0]} />
 
-            <Condition match={windowWidth < 640}>
+            <Condition match={isMobile}>
               <Row flexGrow='1' flexBasis={44} justifyContent='space-between' alignItems='center'>
                 <Box>
                   <Link href='https://web.telegram.org/'>
@@ -142,7 +143,7 @@ export const Hero = () => {
 
           <Layout flexBasis={[0, 134]} flexGrow={[0, 1]} />
 
-          <Condition match={windowWidth > 640}>
+          <Condition match={isDesktop}>
             <Box alignItems='end' flexBasis={56}>
               <Column height='200px' justifyContent='space-around' alignItems='center'>
                 <Box>

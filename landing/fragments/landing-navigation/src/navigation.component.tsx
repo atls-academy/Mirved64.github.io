@@ -15,7 +15,7 @@ import { ItemsList }        from './items-list'
 import { navLinkList }      from './navigation-list'
 
 export const Navigation = () => {
-  const windowWidth = useWindowWidth()
+  const { isMobile, isDesktop } = useWindowWidth()
 
   return (
     <Box
@@ -27,7 +27,7 @@ export const Navigation = () => {
     >
       <Layout flexBasis={[0, 40]} flexShrink='0' />
 
-      <Condition match={windowWidth < 640}>
+      <Condition match={isMobile}>
         <Box flexGrow='1' justifyContent='center'>
           <NextLink>
             <LogoWhiteIcon width={40} height={40} />
@@ -35,7 +35,7 @@ export const Navigation = () => {
         </Box>
       </Condition>
 
-      <Condition match={windowWidth > 640}>
+      <Condition match={isDesktop}>
         <Box>
           <NextLink>
             <LogoWhiteIcon width={56} height={56} />
@@ -43,17 +43,17 @@ export const Navigation = () => {
         </Box>
       </Condition>
 
-      <Condition match={windowWidth > 640}>
+      <Condition match={isDesktop}>
         <Layout flexBasis={[0, 40]} flexGrow='1' />
       </Condition>
 
       <ItemsList navLinksList={navLinkList} />
 
-      <Condition match={windowWidth > 640}>
+      <Condition match={isDesktop}>
         <Layout flexBasis={[0, 40]} flexGrow='1' />
       </Condition>
 
-      <Condition match={windowWidth > 640}>
+      <Condition match={isDesktop}>
         <Box width={163} height={64} flexShrink='0'>
           <Button
             variant='transparentBackgroundWhiteText'
