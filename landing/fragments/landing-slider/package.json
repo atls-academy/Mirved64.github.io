@@ -4,10 +4,12 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ui/button": "workspace:^",
+    "@ui/condition": "workspace:^",
     "@ui/icons": "workspace:^",
     "@ui/image": "workspace:^",
     "@ui/layout": "workspace:^",
-    "@ui/text": "workspace:^"
+    "@ui/text": "workspace:^",
+    "@ui/utils": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",

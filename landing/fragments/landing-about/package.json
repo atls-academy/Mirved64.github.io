@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/condition": "workspace:^",
     "@ui/image": "workspace:^",
     "@ui/layout": "workspace: 0.0.1",
-    "@ui/text": "workspace:^"
+    "@ui/text": "workspace:^",
+    "@ui/utils": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.9",

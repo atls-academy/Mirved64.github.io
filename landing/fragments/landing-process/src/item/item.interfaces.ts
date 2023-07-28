@@ -3,5 +3,5 @@ export interface ItemProps {
   process?: string
   text?: string
   divider?: number
-  displayDivider?: string
+  displayDivider?: boolean
 }

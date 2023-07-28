@@ -12,7 +12,12 @@ import { Column }              from '@ui/layout'
 import { Text }                from '@ui/text'
 
 export const Slider = () => (
-  <Box backgroundColor='background.slider'    width='100%'    justifyContent='center'    flexDirection='column'  >
+  <Box
+    backgroundColor='background.slider'
+    width='100%'
+    justifyContent='center'
+    flexDirection='column'
+  >
     <Layout flexBasis={[24, 160]} flexShrink='0' />
 
     <Column>

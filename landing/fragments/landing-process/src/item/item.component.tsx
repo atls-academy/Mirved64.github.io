@@ -2,6 +2,7 @@ import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -16,7 +17,7 @@ export const Item: FC<ItemProps> = ({
   process,
   text,
   divider,
-  displayDivider = 'flex',
+  displayDivider = true,
 }) => (
   <Column>
     <Row>
@@ -70,12 +71,14 @@ export const Item: FC<ItemProps> = ({
       </Box>
     </Row>
 
-    <Column display={displayDivider}>
-      <Layout flexBasis={[28, 48]} />
+    <Condition match={displayDivider}>
+      <Column>
+        <Layout flexBasis={[28, 48]} />
 
-      <Divider backgroundColor='divider.primary' weight={divider} />
+        <Divider backgroundColor='divider.primary' weight={divider} />
 
-      <Layout flexBasis={[28, 48]} />
-    </Column>
+        <Layout flexBasis={[28, 48]} />
+      </Column>
+    </Condition>
   </Column>
 )
