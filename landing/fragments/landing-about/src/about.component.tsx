@@ -15,32 +15,16 @@ export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box
-      backgroundColor='background.about'
-      width='100%'
-      flexDirection='column'
-      justifyContent='center'
-    >
-      <Layout flexBasis={[64, 160]} />
+    <Box backgroundColor='background.about' justifyContent='center'>
+      <Column width='100%'>
+        <Layout flexBasis={[64, 160]} />
 
-      <Row>
-        <Layout flexBasis={[20, 230]} flexShrink='0' />
+        <Row>
+          <Layout flexBasis={[20, 230]} flexShrink='0' />
 
-        <Column flexBasis={[335, 1460]} flexGrow='1'>
-          <Condition match={isDesktop}>
-            <Column>
-              <Box>
-                <Text
-                  color='text.about.primary'
-                  fontSize='common'
-                  fontWeight='normal'
-                  lineHeight='huge'
-                >
-                  <FormattedMessage id='aboutTextIntroFirstDesktop' />
-                </Text>
-              </Box>
-
-              <Row>
+          <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink={[1, 0]}>
+            <Condition match={isDesktop}>
+              <Column>
                 <Box>
                   <Text
                     color='text.about.primary'
@@ -48,18 +32,95 @@ export const About = () => {
                     fontWeight='normal'
                     lineHeight='huge'
                   >
-                    <FormattedMessage id='aboutTextIntroSecondDesktop' />
+                    <FormattedMessage id='aboutTextIntroFirstDesktop' />
                   </Text>
                 </Box>
 
-                <Space count='6' />
+                <Row>
+                  <Box>
+                    <Text
+                      color='text.about.primary'
+                      fontSize='common'
+                      fontWeight='normal'
+                      lineHeight='huge'
+                    >
+                      <FormattedMessage id='aboutTextIntroSecondDesktop' />
+                    </Text>
+                  </Box>
 
-                <Box width={76} height={52} alignItems='center' justifyContent='center'>
-                  <Image src='./image/Default.png' width={40} height={40} />
+                  <Space count='6' />
+
+                  <Box width={76} height={52} alignItems='center' justifyContent='center'>
+                    <Image src='./image/Default.png' width={40} height={40} />
+                  </Box>
+
+                  <Space count='6' />
+
+                  <Box>
+                    <Text
+                      color='text.about.primary'
+                      fontSize='common'
+                      fontWeight='normal'
+                      lineHeight='huge'
+                    >
+                      <FormattedMessage id='aboutTextProblemFirstDesktop' />
+                    </Text>
+                  </Box>
+                </Row>
+
+                <Row>
+                  <Box>
+                    <Text
+                      color='text.about.primary'
+                      fontSize='common'
+                      fontWeight='normal'
+                      lineHeight='huge'
+                    >
+                      <FormattedMessage id='aboutTextProblemSecondDesktop' />
+                    </Text>
+                  </Box>
+
+                  <Space count='14' />
+
+                  <Box width={76} height={52} alignItems='center' justifyContent='center'>
+                    <Image src='./image/Default.png' width={40} height={40} />
+                  </Box>
+                </Row>
+              </Column>
+            </Condition>
+
+            <Condition match={isMobile}>
+              <Column>
+                <Box>
+                  <Text
+                    color='text.about.primary'
+                    fontSize='small'
+                    fontWeight='normal'
+                    lineHeight='normal'
+                  >
+                    <FormattedMessage id='aboutIntroMobile' />
+                  </Text>
                 </Box>
 
-                <Space count='6' />
+                <Layout flexBasis={28} />
 
+                <Box>
+                  <Text
+                    color='text.about.primary'
+                    fontSize='small'
+                    fontWeight='normal'
+                    lineHeight='normal'
+                  >
+                    <FormattedMessage id='aboutCentralIdeaMobile' />
+                  </Text>
+                </Box>
+              </Column>
+            </Condition>
+
+            <Layout flexBasis={[0, 40]} />
+
+            <Condition match={isDesktop}>
+              <Column>
                 <Box>
                   <Text
                     color='text.about.primary'
@@ -67,101 +128,37 @@ export const About = () => {
                     fontWeight='normal'
                     lineHeight='huge'
                   >
-                    <FormattedMessage id='aboutTextProblemFirstDesktop' />
-                  </Text>
-                </Box>
-              </Row>
-
-              <Row>
-                <Box>
-                  <Text
-                    color='text.about.primary'
-                    fontSize='common'
-                    fontWeight='normal'
-                    lineHeight='huge'
-                  >
-                    <FormattedMessage id='aboutTextProblemSecondDesktop' />
+                    <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
                   </Text>
                 </Box>
 
-                <Space count='14' />
+                <Row>
+                  <Box>
+                    <Text
+                      color='text.about.primary'
+                      fontSize='common'
+                      fontWeight='normal'
+                      lineHeight='huge'
+                    >
+                      <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
+                    </Text>
+                  </Box>
 
-                <Box width={76} height={52} alignItems='center' justifyContent='center'>
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
-              </Row>
-            </Column>
-          </Condition>
+                  <Space count='6' />
 
-          <Condition match={isMobile}>
-            <Column>
-              <Box>
-                <Text
-                  color='text.about.primary'
-                  fontSize='small'
-                  fontWeight='normal'
-                  lineHeight='normal'
-                >
-                  <FormattedMessage id='aboutIntroMobile' />
-                </Text>
-              </Box>
+                  <Box width={76} height={52} alignItems='center' justifyContent='center'>
+                    <Image src='./image/Default.png' width={40} height={40} />
+                  </Box>
+                </Row>
+              </Column>
+            </Condition>
+          </Column>
 
-              <Layout flexBasis={28} />
+          <Layout flexBasis={[20, 230]} flexShrink={[0, 1]} />
+        </Row>
 
-              <Box>
-                <Text
-                  color='text.about.primary'
-                  fontSize='small'
-                  fontWeight='normal'
-                  lineHeight='normal'
-                >
-                  <FormattedMessage id='aboutCentralIdeaMobile' />
-                </Text>
-              </Box>
-            </Column>
-          </Condition>
-
-          <Layout flexBasis={[0, 40]} />
-
-          <Condition match={isDesktop}>
-            <Column>
-              <Box>
-                <Text
-                  color='text.about.primary'
-                  fontSize='common'
-                  fontWeight='normal'
-                  lineHeight='huge'
-                >
-                  <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
-                </Text>
-              </Box>
-
-              <Row>
-                <Box>
-                  <Text
-                    color='text.about.primary'
-                    fontSize='common'
-                    fontWeight='normal'
-                    lineHeight='huge'
-                  >
-                    <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
-                  </Text>
-                </Box>
-
-                <Space count='6' />
-
-                <Box width={76} height={52} alignItems='center' justifyContent='center'>
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
-              </Row>
-            </Column>
-          </Condition>
-        </Column>
-
-        <Layout flexBasis={[20, 230]} flexShrink='0' />
-      </Row>
-
-      <Layout flexBasis={[64, 160]} flexShrink='0' />
+        <Layout flexBasis={[64, 160]} />
+      </Column>
     </Box>
   )
 }

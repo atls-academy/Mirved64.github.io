@@ -16,7 +16,7 @@ export const Sidebar = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Column flexBasis={[212, 410]}>
+    <Column flexBasis={[212, 410]} flexShrink={[1, 0]}>
       <Row order={[1, 0]}>
         <Layout flexBasis={[16, 32]} />
 

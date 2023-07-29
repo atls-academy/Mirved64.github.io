@@ -21,7 +21,7 @@ export const Item: FC<ItemProps> = ({
 }) => (
   <Column>
     <Row>
-      <Row flexBasis={[47, 96]}>
+      <Row flexBasis={[47, 96]} alignItems={['start', 'center']}>
         <Box width={[35, 64]} height={[35, 64]} alignItems='center' justifyContent='center'>
           <Text
             color='text.process.primary'
@@ -37,14 +37,14 @@ export const Item: FC<ItemProps> = ({
         <Layout flexBasis={[12, 32]} flexShrink='0' />
       </Row>
 
-      <Box
-        flexBasis={[312, 1700]}
-        flexDirection={['column', 'row']}
-        justifyContent={['start', 'space-between']}
-        flexGrow='1'
-        flexShrink='1'
-      >
-        <Box alignItems='center'>
+      <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1' flexShrink='1'>
+        <Box
+          alignItems='center'
+          flexWrap='wrap'
+          flexBasis={[28, 367]}
+          flexShrink={[1, 0]}
+          flexGrow={[0, 1]}
+        >
           <Text
             color='text.process.primary'
             fontSize={['medium', 'regular']}
@@ -55,9 +55,9 @@ export const Item: FC<ItemProps> = ({
           </Text>
         </Box>
 
-        <Layout flexBasis={[8, 0]} flexShrink='0' />
+        <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow={[0, 3]} />
 
-        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]}>
+        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} alignItems='center'>
           <Text
             color='text.process.primary'
             fontSize={['tiny', 'medium']}

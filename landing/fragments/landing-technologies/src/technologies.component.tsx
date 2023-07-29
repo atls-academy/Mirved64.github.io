@@ -10,30 +10,27 @@ import { technologiesListTop }    from './technologies-list'
 import { technologiesListBottom } from './technologies-list'
 
 export const Technologies = () => (
-  <Box
-    backgroundColor='background.technologies'
-    width='100%'
-    justifyContent='center'
-    flexDirection='column'
-  >
-    <Layout flexBasis={[32, 64]} />
+  <Box backgroundColor='background.technologies' justifyContent='center'>
+    <Column width='100%'>
+      <Layout flexBasis={[32, 64]} />
 
-    <Divider backgroundColor='divider.primary' weight='1px' />
-
-    <Layout flexBasis={[36, 64]} />
-
-    <Column>
-      <ItemsList technologies={technologiesListTop} font='light' />
+      <Divider backgroundColor='divider.primary' weight='1px' />
 
       <Layout flexBasis={[36, 64]} />
 
-      <ItemsList technologies={technologiesListBottom} font='secondary' />
+      <Column>
+        <ItemsList technologies={technologiesListTop} font='light' />
+
+        <Layout flexBasis={[36, 64]} />
+
+        <ItemsList technologies={technologiesListBottom} font='secondary' />
+      </Column>
+
+      <Layout flexBasis={[36, 64]} />
+
+      <Divider backgroundColor='divider.primary' weight='1px' />
+
+      <Layout flexBasis={[56, 64]} />
     </Column>
-
-    <Layout flexBasis={[36, 64]} />
-
-    <Divider backgroundColor='divider.primary' weight='1px' />
-
-    <Layout flexBasis={[56, 64]} />
   </Box>
 )
