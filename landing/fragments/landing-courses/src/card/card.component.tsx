@@ -13,7 +13,7 @@ import { CardProps }     from './card.interfaces'
 
 export const Card: FC<CardProps> = ({
   widthCard,
-  gap,
+  spaceBetweenCategoryAndTitle,
   category,
   isMobileOnly = false,
   titleDesktop,
@@ -45,7 +45,7 @@ export const Card: FC<CardProps> = ({
         <Layout flexBasis={[8, 12]} />
       </Row>
 
-      <Layout flexBasis={gap} />
+      <Layout flexBasis={spaceBetweenCategoryAndTitle} />
 
       <Condition match={!isMobileOnly}>
         <Box>

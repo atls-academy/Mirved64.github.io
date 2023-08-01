@@ -26,7 +26,7 @@ export const Courses = () => {
 
   return (
     <Box backgroundColor='background.courses.mainColor' justifyContent='center'>
-      <Column width='100%'>
+      <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
         <Row>
@@ -40,7 +40,6 @@ export const Courses = () => {
                   fontSize={['regular', 'stupendous']}
                   fontWeight='normal'
                   lineHeight={['common', 'stupendous']}
-                  letter='-2%'
                 >
                   <FormattedMessage id='coursesTitle' />
                 </Text>
@@ -80,7 +79,7 @@ export const Courses = () => {
             <Box flexDirection={['column', 'row']}>
               <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
                 <Card
-                  gap={[104, 214]}
+                  spaceBetweenCategoryAndTitle={[104, 214]}
                   category={formatMessage({
                     id: 'coursesCardFrontendCategory',
                   })}
@@ -96,7 +95,7 @@ export const Courses = () => {
                 <Layout flexBasis={[20, 40]} />
 
                 <Card
-                  gap={[49, 54]}
+                  spaceBetweenCategoryAndTitle={[49, 54]}
                   category={formatMessage({
                     id: 'coursesCardBasisCategory',
                   })}
@@ -114,7 +113,7 @@ export const Courses = () => {
                 <Condition match={isDesktop}>
                   <Row>
                     <Card
-                      gap={126}
+                      spaceBetweenCategoryAndTitle={126}
                       widthCard={560}
                       category={formatMessage({
                         id: 'coursesCardLearningMaterial',
@@ -128,7 +127,7 @@ export const Courses = () => {
                     <Layout flexBasis={[20, 40]} />
 
                     <Card
-                      gap={126}
+                      spaceBetweenCategoryAndTitle={126}
                       widthCard={560}
                       category={formatMessage({
                         id: 'coursesCardLearningMaterial',
@@ -156,7 +155,7 @@ export const Courses = () => {
             <Swiper spaceBetween={20} slidesPerView={1.23}>
               <SwiperSlide>
                 <Card
-                  gap={62}
+                  spaceBetweenCategoryAndTitle={62}
                   widthCard={260}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
@@ -174,7 +173,7 @@ export const Courses = () => {
 
               <SwiperSlide>
                 <Card
-                  gap={62}
+                  spaceBetweenCategoryAndTitle={62}
                   widthCard={260}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
