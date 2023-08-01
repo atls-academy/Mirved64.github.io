@@ -18,19 +18,17 @@ export const Technologies = () => (
 
       <Layout flexBasis={[36, 64]} />
 
-      <Column>
-        <ItemsList technologies={technologiesListTop} font='light' />
+      <ItemsList technologies={technologiesListTop} font='light' />
 
-        <Layout flexBasis={[36, 64]} />
+      <Layout flexBasis={[36, 64]} />
 
-        <ItemsList technologies={technologiesListBottom} font='secondary' />
-      </Column>
+      <ItemsList technologies={technologiesListBottom} font='secondary' />
 
       <Layout flexBasis={[36, 64]} />
 
       <Divider backgroundColor='divider.primary' weight='1px' />
 
-      <Layout flexBasis={[56, 64]} />
+      <Layout flexBasis={[32, 64]} />
     </Column>
   </Box>
 )

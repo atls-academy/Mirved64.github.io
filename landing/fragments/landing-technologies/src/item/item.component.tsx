@@ -31,6 +31,6 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
       <Divider backgroundColor='divider.primary' weight={divider} />
     </Box>
 
-    <Layout flexBasis={[12, 24]} />
+    <Layout flexBasis={[12, 24]} flexShrink='0' />
   </Box>
 )
