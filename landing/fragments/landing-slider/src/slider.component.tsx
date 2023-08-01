@@ -13,7 +13,7 @@ import { Text }                from '@ui/text'
 
 export const Slider = () => (
   <Box backgroundColor='background.slider' justifyContent='center'>
-    <Column width='100%'>
+    <Column flexGrow='1'>
       <Layout flexBasis={[24, 160]} flexShrink='0' />
 
       <Column>
@@ -64,44 +64,42 @@ export const Slider = () => (
 
           <Layout flexBasis={[24, 32]} flexShrink='0' />
 
-          <Row justifyContent='center'>
-            <Row justifyContent='space-between' flexBasis={[335, 960]}>
-              <Box>
-                <Button
-                  variant='transparentBackgroundWhiteText'
-                  fill
-                  icon={<ArrowLeftWhiteIcon width={16} height={16} />}
-                  widthIcon={[40, 48]}
-                  heightIcon={[60, 64]}
-                />
-              </Box>
+          <Row justifyContent='space-between' maxWidth={[335, 960]}>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={<ArrowLeftWhiteIcon width={16} height={16} />}
+                widthIcon={[40, 48]}
+                heightIcon={[60, 64]}
+              />
+            </Box>
 
-              <Box
-                height={[58, 60]}
-                flexBasis={[175, 778]}
-                alignItems='center'
-                justifyContent='center'
+            <Box
+              height={[58, 60]}
+              flexBasis={[175, 778]}
+              alignItems='center'
+              justifyContent='center'
+            >
+              <Text
+                color='text.slider.primary'
+                fontSize={['atom', 'little']}
+                lineHeight={['minor', 'medium']}
+                textAlign='center'
               >
-                <Text
-                  color='text.slider.primary'
-                  fontSize={['atom', 'little']}
-                  lineHeight={['minor', 'medium']}
-                  textAlign='center'
-                >
-                  <FormattedMessage id='sliderSign' />
-                </Text>
-              </Box>
+                <FormattedMessage id='sliderSign' />
+              </Text>
+            </Box>
 
-              <Box>
-                <Button
-                  variant='transparentBackgroundWhiteText'
-                  fill
-                  icon={<ArrowRightWhiteIcon width={16} height={16} />}
-                  widthIcon={[40, 48]}
-                  heightIcon={[60, 64]}
-                />
-              </Box>
-            </Row>
+            <Box>
+              <Button
+                variant='transparentBackgroundWhiteText'
+                fill
+                icon={<ArrowRightWhiteIcon width={16} height={16} />}
+                widthIcon={[40, 48]}
+                heightIcon={[60, 64]}
+              />
+            </Box>
           </Row>
         </Column>
       </Column>
