@@ -21,7 +21,7 @@ export const Hero = () => {
 
   return (
     <Box backgroundColor='background.hero' justifyContent='center'>
-      <Column width='100%'>
+      <Column flexGrow='1'>
         <Layout flexBasis={[80, 412]} />
 
         <Row flexGrow='1'>

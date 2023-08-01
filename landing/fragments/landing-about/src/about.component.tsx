@@ -16,7 +16,7 @@ export const About = () => {
 
   return (
     <Box backgroundColor='background.about' justifyContent='center'>
-      <Column width='100%'>
+      <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
         <Row>

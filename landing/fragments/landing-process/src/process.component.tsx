@@ -16,7 +16,7 @@ export const Process = () => {
 
   return (
     <Box backgroundColor='background.process' justifyContent='center'>
-      <Column width='100%'>
+      <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
         <Box position='relative'>
