@@ -1,23 +1,22 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React         from 'react'
+import { FC }        from 'react'
 
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Condition } from '@ui/condition'
+import { Divider }   from '@ui/divider'
+import { Column }    from '@ui/layout'
+import { Row }       from '@ui/layout'
+import { Layout }    from '@ui/layout'
+import { Box }       from '@ui/layout'
+import { Text }      from '@ui/text'
 
-import { ItemProps }        from './item.interfaces'
+import { ItemProps } from './item.interfaces'
 
 export const Item: FC<ItemProps> = ({
   sequenceNumber,
-  process,
-  text,
-  divider,
-  displayDivider = true,
+  name,
+  description,
+  weight,
+  divider = true,
 }) => (
   <Column>
     <Row>
@@ -51,7 +50,7 @@ export const Item: FC<ItemProps> = ({
             fontWeight={['normalMedium', 'normal']}
             lineHeight={['normal', 'mean']}
           >
-            <FormattedMessage id={process} />
+            {name}
           </Text>
         </Box>
 
@@ -65,17 +64,17 @@ export const Item: FC<ItemProps> = ({
             lineHeight={['compact', 'standart']}
             textWrap='wrap'
           >
-            <FormattedMessage id={text} />
+            {description}
           </Text>
         </Box>
       </Box>
     </Row>
 
-    <Condition match={displayDivider}>
+    <Condition match={divider}>
       <Column>
         <Layout flexBasis={[28, 48]} />
 
-        <Divider backgroundColor='divider.primary' weight={divider} />
+        <Divider backgroundColor='divider.primary' weight={weight} />
 
         <Layout flexBasis={[28, 48]} />
       </Column>

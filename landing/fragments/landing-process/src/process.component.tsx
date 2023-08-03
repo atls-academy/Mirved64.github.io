@@ -25,38 +25,37 @@ export const Process = () => {
           <Column flexGrow='2' flexBasis={[335, 1760]}>
             <Item
               sequenceNumber='1'
-              process={intl.formatMessage({ id: 'processItemTeamIntegration' })}
-              text={intl.formatMessage({ id: 'processItemTeamIntegrationText' })}
-              divider={1}
+              name={intl.formatMessage({ id: 'processItemTeamIntegration' })}
+              description={intl.formatMessage({ id: 'processItemTeamIntegrationText' })}
+              weight={1}
             />
 
             <Item
               sequenceNumber='2'
-              process={intl.formatMessage({ id: 'processItemCreateEnvironment' })}
-              text={intl.formatMessage({ id: 'processItemCreateEnvironmentText' })}
-              divider={1}
+              name={intl.formatMessage({ id: 'processItemCreateEnvironment' })}
+              description={intl.formatMessage({ id: 'processItemCreateEnvironmentText' })}
+              weight={1}
             />
 
             <Item
               sequenceNumber='3'
-              process={intl.formatMessage({ id: 'processItemStudiesOfTechnologies' })}
-              text={intl.formatMessage({ id: 'processItemStudiesOfTechnologiesText' })}
-              divider={1}
+              name={intl.formatMessage({ id: 'processItemStudiesOfTechnologies' })}
+              description={intl.formatMessage({ id: 'processItemStudiesOfTechnologiesText' })}
+              weight={1}
             />
 
             <Item
               sequenceNumber='4'
-              process={intl.formatMessage({ id: 'processItemPracticalWork' })}
-              text={intl.formatMessage({ id: 'processItemPracticalWorkText' })}
-              divider={1}
+              name={intl.formatMessage({ id: 'processItemPracticalWork' })}
+              description={intl.formatMessage({ id: 'processItemPracticalWorkText' })}
+              weight={1}
             />
 
             <Item
               sequenceNumber='5'
-              process={intl.formatMessage({ id: 'processItemProjectIntegration' })}
-              text={intl.formatMessage({ id: 'processItemProjectIntegrationText' })}
-              divider={0}
-              displayDivider={false}
+              name={intl.formatMessage({ id: 'processItemProjectIntegration' })}
+              description={intl.formatMessage({ id: 'processItemProjectIntegrationText' })}
+              divider={false}
             />
           </Column>
 
