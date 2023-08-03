@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
+import { Card }             from '@ui/card'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { ArrowRightIcon }   from '@ui/icons'
@@ -16,7 +17,6 @@ import { SwiperSlide }      from '@ui/swiper'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
-import { Card }             from './card'
 import { Info }             from './info'
 import { Sidebar }          from './sidebar'
 
@@ -79,33 +79,31 @@ export const Courses = () => {
             <Box flexDirection={['column', 'row']}>
               <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
                 <Card
-                  spaceBetweenCategoryAndTitle={[104, 214]}
+                  indent={[104, 214]}
                   category={formatMessage({
                     id: 'coursesCardFrontendCategory',
                   })}
                   titleDesktop={formatMessage({
                     id: 'coursesCardFrontendTitle',
                   })}
-                  text={formatMessage({
+                  description={formatMessage({
                     id: 'coursesCardFrontendText',
                   })}
-                  path='/'
                 />
 
                 <Layout flexBasis={[20, 40]} />
 
                 <Card
-                  spaceBetweenCategoryAndTitle={[49, 54]}
+                  indent={[49, 54]}
                   category={formatMessage({
                     id: 'coursesCardBasisCategory',
                   })}
                   titleDesktop={formatMessage({
                     id: 'coursesCardBasisTitle',
                   })}
-                  text={formatMessage({
+                  description={formatMessage({
                     id: 'coursesCardBasisText',
                   })}
-                  path='/'
                 />
 
                 <Layout flexBasis={[20, 40]} />
@@ -113,29 +111,25 @@ export const Courses = () => {
                 <Condition match={isDesktop}>
                   <Row>
                     <Card
-                      spaceBetweenCategoryAndTitle={126}
-                      widthCard={560}
+                      indent={126}
                       category={formatMessage({
                         id: 'coursesCardLearningMaterial',
                       })}
                       titleDesktop={formatMessage({
                         id: 'coursesCardLearningMaterialLibraries',
                       })}
-                      path='/'
                     />
 
                     <Layout flexBasis={[20, 40]} />
 
                     <Card
-                      spaceBetweenCategoryAndTitle={126}
-                      widthCard={560}
+                      indent={126}
                       category={formatMessage({
                         id: 'coursesCardLearningMaterial',
                       })}
                       titleDesktop={formatMessage({
                         id: 'coursesCardLearningMaterialDesign',
                       })}
-                      path='/'
                     />
                   </Row>
                 </Condition>
@@ -155,8 +149,7 @@ export const Courses = () => {
             <Swiper spaceBetween={20} slidesPerView={1.23}>
               <SwiperSlide>
                 <Card
-                  spaceBetweenCategoryAndTitle={62}
-                  widthCard={260}
+                  indent={62}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
@@ -167,14 +160,12 @@ export const Courses = () => {
                   titleMobile={formatMessage({
                     id: 'coursesCardLearningMaterialLibraries',
                   })}
-                  path='/'
                 />
               </SwiperSlide>
 
               <SwiperSlide>
                 <Card
-                  spaceBetweenCategoryAndTitle={62}
-                  widthCard={260}
+                  indent={62}
                   category={formatMessage({
                     id: 'coursesCardLearningMaterial',
                   })}
@@ -185,7 +176,6 @@ export const Courses = () => {
                   titleMobile={formatMessage({
                     id: 'coursesCardLearningMaterialDesign',
                   })}
-                  path='/'
                 />
               </SwiperSlide>
             </Swiper>
@@ -195,7 +185,7 @@ export const Courses = () => {
         <Layout flexBasis={[52, 160]} />
 
         <Condition match={isMobile}>
-          <Box>
+          <Row>
             <Layout flexBasis={20} />
 
             <Box width={254} height={72} alignItems='center'>
@@ -215,7 +205,7 @@ export const Courses = () => {
                 </Button>
               </NextLink>
             </Box>
-          </Box>
+          </Row>
         </Condition>
 
         <Layout flexBasis={[64, 0]} />

@@ -5,7 +5,9 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/layout": "^0.0.7",
-    "@ui/link": "workspace:^",
+    "@ui/condition": "workspace:^",
+    "@ui/layout": "workspace:^",
+    "@ui/text": "workspace:^",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },
