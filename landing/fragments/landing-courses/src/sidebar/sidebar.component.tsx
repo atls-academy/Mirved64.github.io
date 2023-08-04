@@ -26,7 +26,7 @@ export const Sidebar = () => {
           <Column>
             <Box>
               <Text
-                color='text.courses.primary'
+                color='text.black'
                 fontSize={['tiny', 'little']}
                 fontWeight='normal'
                 lineHeight={['compact', 'medium']}
@@ -48,7 +48,7 @@ export const Sidebar = () => {
             <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
               <Box>
                 <Text
-                  color='text.courses.primary'
+                  color='text.black'
                   fontSize={['giant', 'enormous']}
                   fontWeight='normal'
                   lineHeight={['large', 'big']}
@@ -61,7 +61,7 @@ export const Sidebar = () => {
 
               <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
                 <Text
-                  color='text.courses.primary'
+                  color='text.black'
                   fontSize={['atom', 'tiny']}
                   fontWeight='normal'
                   lineHeight={['minor', 'small']}
@@ -96,7 +96,7 @@ export const Sidebar = () => {
             icon={<MouseIcon width={16} height={16} />}
             widthIcon={48}
             heightIcon={48}
-            backgroundIcon='background.courses.white'
+            backgroundIcon='background.white'
           >
             <Text fontSize='small' fontWeight='normal' lineHeight='small'>
               <FormattedMessage id='coursesSidebarButtonDesktop' />

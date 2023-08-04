@@ -16,7 +16,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => (
       <Column alignItems='center'>
         <Box>
           <Text
-            color='text.navigation.primary'
+            color='text.white'
             fontSize='compact'
             fontWeight='normal'
             lineHeight='little'
@@ -28,7 +28,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => (
 
         <Layout flexBasis={10} />
 
-        <Divider backgroundColor='divider.navigation' weight='1px' />
+        <Divider backgroundColor='divider.lightGray' weight='1px' />
       </Column>
     </NextLink>
   </Box>

@@ -15,7 +15,7 @@ export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.about' justifyContent='center'>
+    <Box backgroundColor='background.grey' justifyContent='center'>
       <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
@@ -26,12 +26,7 @@ export const About = () => {
             <Condition match={isDesktop}>
               <Column>
                 <Box>
-                  <Text
-                    color='text.about.primary'
-                    fontSize='common'
-                    fontWeight='normal'
-                    lineHeight='huge'
-                  >
+                  <Text color='text.white' fontSize='common' fontWeight='normal' lineHeight='huge'>
                     <FormattedMessage id='aboutTextIntroFirstDesktop' />
                   </Text>
                 </Box>
@@ -39,7 +34,7 @@ export const About = () => {
                 <Row>
                   <Box>
                     <Text
-                      color='text.about.primary'
+                      color='text.white'
                       fontSize='common'
                       fontWeight='normal'
                       lineHeight='huge'
@@ -58,7 +53,7 @@ export const About = () => {
 
                   <Box>
                     <Text
-                      color='text.about.primary'
+                      color='text.white'
                       fontSize='common'
                       fontWeight='normal'
                       lineHeight='huge'
@@ -71,7 +66,7 @@ export const About = () => {
                 <Row>
                   <Box>
                     <Text
-                      color='text.about.primary'
+                      color='text.white'
                       fontSize='common'
                       fontWeight='normal'
                       lineHeight='huge'
@@ -92,12 +87,7 @@ export const About = () => {
             <Condition match={isMobile}>
               <Column>
                 <Box>
-                  <Text
-                    color='text.about.primary'
-                    fontSize='small'
-                    fontWeight='normal'
-                    lineHeight='normal'
-                  >
+                  <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
                     <FormattedMessage id='aboutIntroMobile' />
                   </Text>
                 </Box>
@@ -105,12 +95,7 @@ export const About = () => {
                 <Layout flexBasis={28} />
 
                 <Box>
-                  <Text
-                    color='text.about.primary'
-                    fontSize='small'
-                    fontWeight='normal'
-                    lineHeight='normal'
-                  >
+                  <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
                     <FormattedMessage id='aboutCentralIdeaMobile' />
                   </Text>
                 </Box>
@@ -122,12 +107,7 @@ export const About = () => {
             <Condition match={isDesktop}>
               <Column>
                 <Box>
-                  <Text
-                    color='text.about.primary'
-                    fontSize='common'
-                    fontWeight='normal'
-                    lineHeight='huge'
-                  >
+                  <Text color='text.white' fontSize='common' fontWeight='normal' lineHeight='huge'>
                     <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
                   </Text>
                 </Box>
@@ -135,7 +115,7 @@ export const About = () => {
                 <Row>
                   <Box>
                     <Text
-                      color='text.about.primary'
+                      color='text.white'
                       fontSize='common'
                       fontWeight='normal'
                       lineHeight='huge'

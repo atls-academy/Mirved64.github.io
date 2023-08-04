@@ -20,7 +20,7 @@ export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.faq.mainColor' width='100%' justifyContent='center'>
+    <Box backgroundColor='background.white' width='100%' justifyContent='center'>
       <Layout flexBasis={[16, 230]} flexShrink='0' />
 
       <Column flexGrow='1'>
@@ -29,7 +29,7 @@ export const Faq = () => {
         <Row justifyContent='space-between' alignItems='center'>
           <Box>
             <Text
-              color='text.faq.primary'
+              color='text.black'
               fontSize={['ordinary', 'stupendous']}
               fontWeight='normal'
               lineHeight={['regular', 'massive']}
@@ -47,7 +47,7 @@ export const Faq = () => {
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
-                backgroundIcon='background.faq.white'
+                backgroundIcon='background.white'
               >
                 <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
                   <FormattedMessage id='faqButton' />
@@ -60,7 +60,7 @@ export const Faq = () => {
         <Layout flexBasis={[60, 80]} />
 
         <Condition match={isDesktop}>
-          <Divider backgroundColor='divider.secondary' weight='1px' />
+          <Divider backgroundColor='divider.black' weight='1px' />
         </Condition>
 
         <Column>
@@ -83,7 +83,7 @@ export const Faq = () => {
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
-                backgroundIcon='background.faq.white'
+                backgroundIcon='background.white'
               >
                 <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
                   <FormattedMessage id='faqButton' />

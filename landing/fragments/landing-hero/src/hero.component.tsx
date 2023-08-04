@@ -20,7 +20,7 @@ export const Hero = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.hero' justifyContent='center'>
+    <Box backgroundColor='background.grey' justifyContent='center'>
       <Column flexGrow='1'>
         <Layout flexBasis={[80, 412]} />
 
@@ -31,7 +31,7 @@ export const Hero = () => {
             <Column flexBasis={[335, 1460]} flexGrow={[1, 0]}>
               <Box>
                 <Text
-                  color='text.hero.primary'
+                  color='text.white'
                   fontSize={['normal', 'stupendous']}
                   fontWeight='normal'
                   lineHeight={['ordinary', 'stupendous']}
@@ -42,7 +42,7 @@ export const Hero = () => {
 
               <Box>
                 <Text
-                  color='text.hero.primary'
+                  color='text.white'
                   fontSize={['normal', 'stupendous']}
                   fontWeight='normal'
                   lineHeight={['ordinary', 'stupendous']}
@@ -54,7 +54,7 @@ export const Hero = () => {
               <Row flexWrap='wrap'>
                 <Box>
                   <Text
-                    color='text.hero.primary'
+                    color='text.white'
                     fontSize={['normal', 'stupendous']}
                     fontWeight='normal'
                     lineHeight={['ordinary', 'stupendous']}
@@ -67,7 +67,7 @@ export const Hero = () => {
 
                 <Box>
                   <Text
-                    color='text.hero.primary'
+                    color='text.white'
                     fontSize={['normal', 'stupendous']}
                     fontWeight='normal'
                     lineHeight={['ordinary', 'stupendous']}
@@ -79,13 +79,13 @@ export const Hero = () => {
 
               <Layout flexBasis={[24, 48]} />
 
-              <Divider backgroundColor='divider.primary' weight={1} flexShrink='1' />
+              <Divider backgroundColor='divider.white' weight={1} flexShrink='1' />
 
               <Layout flexBasis={[24, 48]} />
 
               <Box flexWrap='wrap' maxWidth={[335, 640]} flexShrink='1'>
                 <Text
-                  color='text.hero.primary'
+                  color='text.white'
                   fontSize={['tiny', 'small']}
                   fontWeight='normal'
                   lineHeight={['small', 'normal']}

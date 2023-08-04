@@ -9,7 +9,7 @@ export const Info = () => (
   <Box flexDirection={['column', 'row']} justifyContent='space-between'>
     <Box flexWrap='wrap' flexBasis={[112, 710]}>
       <Text
-        color='text.courses.primary'
+        color='text.black'
         fontSize={['small', 'ordinary']}
         fontWeight='normal'
         lineHeight={['normal', 'regular']}
@@ -22,7 +22,7 @@ export const Info = () => (
 
     <Box flexBasis={[84, 559]} flexWrap='wrap'>
       <Text
-        color='text.courses.primary'
+        color='text.black'
         fontSize={['small', 'ordinary']}
         fontWeight='normal'
         lineHeight={['normal', 'regular']}

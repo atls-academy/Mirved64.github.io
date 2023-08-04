@@ -21,7 +21,7 @@ export const Navigation = () => {
 
   return (
     <Box
-      backgroundColor='background.navigation.mainColor'
+      backgroundColor='background.grey'
       width='100%'
       height={[80, 120]}
       alignItems='center'
@@ -73,7 +73,7 @@ export const Navigation = () => {
             icon={<ArrowDownIcon width={16} height={16} />}
             widthIcon={48}
             heightIcon={48}
-            backgroundIcon='background.navigation.white'
+            backgroundIcon='background.white'
           >
             <NextLink>
               <Text fontSize='compact' fontWeight='normal' lineHeight='little'>

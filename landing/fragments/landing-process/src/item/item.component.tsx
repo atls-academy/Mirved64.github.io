@@ -23,7 +23,7 @@ export const Item: FC<ItemProps> = ({
       <Row flexBasis={[47, 96]} alignItems={['start', 'center']}>
         <Box width={[35, 64]} height={[35, 64]} alignItems='center' justifyContent='center'>
           <Text
-            color='text.process.primary'
+            color='text.white'
             fontSize={['compact', 'medium']}
             fontWeight='normal'
             lineHeight={['little', 'mini']}
@@ -45,7 +45,7 @@ export const Item: FC<ItemProps> = ({
           flexGrow={[0, 1]}
         >
           <Text
-            color='text.process.primary'
+            color='text.white'
             fontSize={['medium', 'regular']}
             fontWeight={['normalMedium', 'normal']}
             lineHeight={['normal', 'mean']}
@@ -58,7 +58,7 @@ export const Item: FC<ItemProps> = ({
 
         <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} alignItems='center'>
           <Text
-            color='text.process.primary'
+            color='text.white'
             fontSize={['tiny', 'medium']}
             fontWeight='normal'
             lineHeight={['compact', 'standart']}
@@ -74,7 +74,7 @@ export const Item: FC<ItemProps> = ({
       <Column>
         <Layout flexBasis={[28, 48]} />
 
-        <Divider backgroundColor='divider.primary' weight={weight} />
+        <Divider backgroundColor='divider.white' weight={weight} />
 
         <Layout flexBasis={[28, 48]} />
       </Column>

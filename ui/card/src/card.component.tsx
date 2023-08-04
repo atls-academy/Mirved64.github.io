@@ -29,7 +29,7 @@ export const Card: FC<CardProps> = ({
 
         <Box>
           <Text
-            color='text.courses.primary'
+            color='text.black'
             fontSize={['subAtom', 'tiny']}
             fontWeight='normal'
             lineHeight={['atom', 'tiny']}
@@ -47,7 +47,7 @@ export const Card: FC<CardProps> = ({
       <Condition match={!isMobileOnly}>
         <Box>
           <Text
-            color='text.courses.primary'
+            color='text.black'
             fontSize={['medium', 'regular']}
             fontWeight='normal'
             lineHeight={['normal', 'mean']}
@@ -59,12 +59,7 @@ export const Card: FC<CardProps> = ({
 
       <Condition match={isMobileOnly}>
         <Box>
-          <Text
-            color='text.courses.primary'
-            fontSize='small'
-            fontWeight='normal'
-            lineHeight='tiddly'
-          >
+          <Text color='text.black' fontSize='small' fontWeight='normal' lineHeight='tiddly'>
             {titleMobile}
           </Text>
         </Box>
@@ -76,7 +71,7 @@ export const Card: FC<CardProps> = ({
 
           <Box maxWidth={[303, 694]}>
             <Text
-              color='text.courses.primary'
+              color='text.black'
               fontSize={['tiny', 'small']}
               fontWeight='normal'
               lineHeight={['small', 'normal']}

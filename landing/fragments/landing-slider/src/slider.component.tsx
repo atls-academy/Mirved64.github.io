@@ -12,7 +12,7 @@ import { Column }              from '@ui/layout'
 import { Text }                from '@ui/text'
 
 export const Slider = () => (
-  <Box backgroundColor='background.slider' justifyContent='center'>
+  <Box backgroundColor='background.grey' justifyContent='center'>
     <Column flexGrow='1'>
       <Layout flexBasis={[24, 160]} flexShrink='0' />
 
@@ -20,7 +20,7 @@ export const Slider = () => (
         <Column justifyContent='center' alignItems='center'>
           <Box>
             <Text
-              color='text.slider.primary'
+              color='text.white'
               fontSize={['atom', 'tiny']}
               lineHeight={['subAtom', 'tiny']}
               textTransform='uppercase'
@@ -34,7 +34,7 @@ export const Slider = () => (
           <Layout justifyContent='center'>
             <Box flexBasis={[335, 960]} flexShrink='1'>
               <Text
-                color='text.slider.primary'
+                color='text.white'
                 fontSize={['medium', 'regular']}
                 lineHeight={['normal', 'mean']}
                 textAlign='center'
@@ -81,7 +81,7 @@ export const Slider = () => (
               justifyContent='center'
             >
               <Text
-                color='text.slider.primary'
+                color='text.white'
                 fontSize={['atom', 'little']}
                 lineHeight={['minor', 'medium']}
                 textAlign='center'

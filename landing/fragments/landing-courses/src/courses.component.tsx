@@ -25,7 +25,7 @@ export const Courses = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.courses.mainColor' justifyContent='center'>
+    <Box backgroundColor='background.white' justifyContent='center'>
       <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
@@ -36,7 +36,7 @@ export const Courses = () => {
             <Row justifyContent='space-between' alignItems='center'>
               <Box flexWrap='wrap'>
                 <Text
-                  color='text.courses.primary'
+                  color='text.black'
                   fontSize={['regular', 'stupendous']}
                   fontWeight='normal'
                   lineHeight={['common', 'stupendous']}
@@ -53,7 +53,7 @@ export const Courses = () => {
                     icon={<ArrowRightIcon width={16} height={16} />}
                     widthIcon={48}
                     heightIcon={48}
-                    backgroundIcon='background.courses.white'
+                    backgroundIcon='background.white'
                   >
                     <NextLink>
                       <Text fontSize='small' fontWeight='normal' lineHeight='small'>
@@ -67,7 +67,7 @@ export const Courses = () => {
 
             <Layout flexBasis={[40, 80]} />
 
-            <Divider backgroundColor='divider.secondary' weight='1px' />
+            <Divider backgroundColor='divider.black' weight='1px' />
 
             <Layout flexBasis={[40, 80]} />
 
@@ -195,7 +195,7 @@ export const Courses = () => {
                   icon={<ArrowRightIcon width={16} height={16} />}
                   widthIcon={48}
                   heightIcon={48}
-                  backgroundIcon='background.courses.white'
+                  backgroundIcon='background.white'
                 >
                   <Text fontSize='small' fontWeight='normal' lineHeight='small'>
                     <FormattedMessage id='coursesButton' />

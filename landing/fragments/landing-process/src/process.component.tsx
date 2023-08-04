@@ -15,7 +15,7 @@ export const Process = () => {
   const { isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.process' justifyContent='center'>
+    <Box backgroundColor='background.grey' justifyContent='center'>
       <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 

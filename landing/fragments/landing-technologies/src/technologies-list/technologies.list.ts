@@ -7,8 +7,4 @@ export const technologiesList = [
   { name: 'javacsript' },
 ]
 
-export const worckspaceList = [
-  { name: 'figma' },
-  { name: 'github' },
-  { name: 'atom' },
-]
+export const worckspaceList = [{ name: 'figma' }, { name: 'github' }, { name: 'atom' }]

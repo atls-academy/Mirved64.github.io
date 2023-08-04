@@ -1,4 +1,4 @@
 export interface ListProps {
-  technologies?: {name: string}[]
+  technologies?: { name: string }[]
   font?: string
 }
