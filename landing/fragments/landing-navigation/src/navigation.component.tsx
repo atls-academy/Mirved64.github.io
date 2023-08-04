@@ -70,7 +70,6 @@ export const Navigation = () => {
           <Button
             variant='transparentBackgroundWhiteText'
             gap={24}
-            fill
             icon={<ArrowDownIcon width={16} height={16} />}
             widthIcon={48}
             heightIcon={48}

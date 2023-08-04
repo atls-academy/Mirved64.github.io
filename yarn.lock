@@ -2420,7 +2420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.11.0, @emotion/cache@npm:^11.9.3":
+"@emotion/cache@npm:^11.11.0":
   version: 11.11.0
   resolution: "@emotion/cache@npm:11.11.0"
   dependencies:
@@ -2537,29 +2537,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.9.3":
-  version: 11.9.3
-  resolution: "@emotion/react@npm:11.9.3"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-    "@emotion/babel-plugin": "npm:^11.7.1"
-    "@emotion/cache": "npm:^11.9.3"
-    "@emotion/serialize": "npm:^1.0.4"
-    "@emotion/utils": "npm:^1.1.0"
-    "@emotion/weak-memoize": "npm:^0.2.5"
-    hoist-non-react-statics: "npm:^3.3.1"
-  peerDependencies:
-    "@babel/core": ^7.0.0
-    react: ">=16.8.0"
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    "@types/react":
-      optional: true
-  checksum: 6bd367b6066c657b816a055433308369875b4f36af7db2dc8c87c897dd7876939ba57294a66e614e78929f69ea7b656f795ba6c85abe6796607498a9416bc6dd
-  languageName: node
-  linkType: hard
-
 "@emotion/serialize@npm:^1.0.4, @emotion/serialize@npm:^1.1.2":
   version: 1.1.2
   resolution: "@emotion/serialize@npm:1.1.2"
@@ -2642,13 +2619,6 @@ __metadata:
   version: 1.2.1
   resolution: "@emotion/utils@npm:1.2.1"
   checksum: d80f12813e9663a1dc9e824efe57000c3ca296aa5207029682854eee09d34c0395f462cf7b0d057b5460840ac65170053e0f6c57493069c982b8070d26dc79e0
-  languageName: node
-  linkType: hard
-
-"@emotion/weak-memoize@npm:^0.2.5":
-  version: 0.2.5
-  resolution: "@emotion/weak-memoize@npm:0.2.5"
-  checksum: 669036453733b1a41f82cf1b8dcbd97f765cffa627a7a2514c2d0a009a0f999300a2a8c256f4358c0d99e7f3f9d36bf876e38e32ac4a333d15f021d945271a21
   languageName: node
   linkType: hard
 
@@ -4465,15 +4435,12 @@ __metadata:
     "@atls-ui-parts/conditional-render": "npm:^0.0.4"
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
-    "@types/react-dom": "npm:^18.2.4"
-    "@types/styled-system": "npm:^5.1.16"
     "@ui/layout": "workspace:^"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
@@ -4507,12 +4474,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
-    "@emotion/react": "npm:11.9.3"
+    "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:11.9.3"
     framer-motion: "npm:10.12.10"
     react: "npm:18.2.0"
   peerDependencies:
-    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
   languageName: unknown
@@ -4534,7 +4500,6 @@ __metadata:
     styled-system: "npm:^5.1.5"
     styled-tools: "npm:^1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
@@ -4642,15 +4607,11 @@ __metadata:
     "@atls-ui-parts/text": "npm:^0.0.10"
     "@emotion/react": "npm:^11.11.1"
     "@emotion/styled": "npm:^11.11.0"
-    "@types/react": "npm:^18.2.9"
-    "@types/react-dom": "npm:^18.2.4"
-    "@types/styled-system": "npm:^5"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    styled-components: "npm:6.0.0-rc.3"
-    styled-system: "npm:^5.1.5"
   peerDependencies:
     react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 

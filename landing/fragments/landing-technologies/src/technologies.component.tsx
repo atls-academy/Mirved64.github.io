@@ -6,8 +6,8 @@ import { Layout }                 from '@ui/layout'
 import { Column }                 from '@ui/layout'
 
 import { ItemsList }              from './items-list'
-import { technologiesListTop }    from './technologies-list'
-import { technologiesListBottom } from './technologies-list'
+import { technologiesList }    from './technologies-list'
+import { worckspaceList } from './technologies-list'
 
 export const Technologies = () => (
   <Box backgroundColor='background.technologies' justifyContent='center'>
@@ -18,11 +18,11 @@ export const Technologies = () => (
 
       <Layout flexBasis={[36, 64]} />
 
-      <ItemsList technologies={technologiesListTop} font='light' />
+      <ItemsList technologies={technologiesList} font='light' />
 
       <Layout flexBasis={[36, 64]} />
 
-      <ItemsList technologies={technologiesListBottom} font='secondary' />
+      <ItemsList technologies={worckspaceList} font='secondary' />
 
       <Layout flexBasis={[36, 64]} />
 

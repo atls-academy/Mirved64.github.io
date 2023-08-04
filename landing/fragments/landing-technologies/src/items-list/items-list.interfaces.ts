@@ -1,6 +1,4 @@
-import { Technology } from '../technologies-list'
-
 export interface ListProps {
-  technologies?: Technology[]
+  technologies?: {name: string}[]
   font?: string
 }

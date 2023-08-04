@@ -44,7 +44,6 @@ export const Faq = () => {
               <Button
                 variant='transparentBackgroundBlackText'
                 gap={24}
-                fill
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
@@ -81,7 +80,6 @@ export const Faq = () => {
               <Button
                 variant='transparentBackgroundBlackText'
                 gap={24}
-                fill
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}

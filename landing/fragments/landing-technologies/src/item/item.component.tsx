@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -21,7 +20,7 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
         whiteSpace='nowrap'
         textTransform='uppercase'
       >
-        <FormattedMessage id={technologyName} />
+        {technologyName}
       </Text>
     </Box>
 

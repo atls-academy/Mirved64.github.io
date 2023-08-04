@@ -1,18 +1,17 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { CrossIcon }        from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Condition }      from '@ui/condition'
+import { Divider }        from '@ui/divider'
+import { CrossIcon }      from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useWindowWidth } from '@ui/utils'
 
-import { QuestionProps }    from './item.interfaces'
+import { QuestionProps }  from './item.interfaces'
 
 export const Item: FC<QuestionProps> = ({ question, divider }) => {
   const { isMobile, isDesktop } = useWindowWidth()
@@ -37,7 +36,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => {
             fontWeight='normal'
             lineHeight={['normal', 'regular']}
           >
-            <FormattedMessage id={question} />
+            {question}
           </Text>
         </Box>
 

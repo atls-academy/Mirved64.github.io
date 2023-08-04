@@ -68,7 +68,6 @@ export const Slider = () => (
             <Box>
               <Button
                 variant='transparentBackgroundWhiteText'
-                fill
                 icon={<ArrowLeftWhiteIcon width={16} height={16} />}
                 widthIcon={[40, 48]}
                 heightIcon={[60, 64]}
@@ -94,7 +93,6 @@ export const Slider = () => (
             <Box>
               <Button
                 variant='transparentBackgroundWhiteText'
-                fill
                 icon={<ArrowRightWhiteIcon width={16} height={16} />}
                 widthIcon={[40, 48]}
                 heightIcon={[60, 64]}

@@ -11,7 +11,7 @@ import { Text }      from '@ui/text'
 import { ItemProps } from './item.interfaces'
 
 export const Item: FC<ItemProps> = ({ name, path }) => (
-  <Box flexBasis={200} flexShrink='0' >
+  <Box flexBasis={200} flexShrink='0'>
     <NextLink path={path} width='100%'>
       <Column alignItems='center'>
         <Box>

@@ -92,7 +92,6 @@ export const Sidebar = () => {
         <Box width='100%' height={72} alignItems='center'>
           <Button
             variant='transparentBackgroundBlackText'
-            fill
             gap={121}
             icon={<MouseIcon width={16} height={16} />}
             widthIcon={48}
