@@ -7,7 +7,7 @@
     "react": "18.2.0"
   },
   "devDependencies": {
-    "@landing/fragment-about": "workspace:^",
+    "@landing/fragment-about": "workspace: 0.0.1",
     "@landing/fragment-courses": "workspace:0.0.1",
     "@landing/fragment-faq": "workspace:0.0.1",
     "@landing/fragment-hero": "workspace:0.0.1",
