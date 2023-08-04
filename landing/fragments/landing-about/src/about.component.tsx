@@ -20,69 +20,59 @@ export const About = () => {
         <Layout flexBasis={[64, 160]} />
 
         <Row>
-          <Layout flexBasis={[20, 230]} flexShrink={[0, 5]} />
+          <Layout flexBasis={[20, 230]} />
 
           <Column flexBasis={[335, 1460]} flexGrow='1'>
             <Condition match={isDesktop}>
-              <Column>
-                <Box>
-                  <Text color='text.white' fontSize='common' fontWeight='normal' lineHeight='huge'>
-                    <FormattedMessage id='aboutTextIntroFirstDesktop' />
-                  </Text>
+              <Box display='inline'>
+                <Text
+                  display='inline'
+                  color='text.white'
+                  fontSize='common'
+                  fontWeight='normal'
+                  lineHeight='huge'
+                  wordWrap='break-word'
+                >
+                  <FormattedMessage id='aboutTextIntroDesktop' />
+                </Text>
+
+                <Space count='6' />
+
+                <Box
+                  display='inline-flex'
+                  width={76}
+                  height={52}
+                  alignItems='center'
+                  justifyContent='center'
+                >
+                  <Image src='./image/Default.png' width={40} height={40} />
                 </Box>
 
-                <Row flexWrap='wrap'>
-                  <Box>
-                    <Text
-                      color='text.white'
-                      fontSize='common'
-                      fontWeight='normal'
-                      lineHeight='huge'
-                    >
-                      <FormattedMessage id='aboutTextIntroSecondDesktop' />
-                    </Text>
-                  </Box>
+                <Space count='6' />
 
-                  <Space count='6' />
+                <Text
+                  display='inline'
+                  color='text.white'
+                  fontSize='common'
+                  fontWeight='normal'
+                  lineHeight='huge'
+                  wordWrap='break-word'
+                >
+                  <FormattedMessage id='aboutTextProblemDesktop' />
+                </Text>
 
-                  <Box width={76} height={52} alignItems='center' justifyContent='center'>
-                    <Image src='./image/Default.png' width={40} height={40} />
-                  </Box>
+                <Space count='14' />
 
-                  <Space count='6' />
-
-                  <Box>
-                    <Text
-                      color='text.white'
-                      fontSize='common'
-                      fontWeight='normal'
-                      lineHeight='huge'
-                      wordWrap='breack-word'
-                    >
-                      <FormattedMessage id='aboutTextProblemFirstDesktop' />
-                    </Text>
-                  </Box>
-                </Row>
-
-                <Row flexWrap='wrap'>
-                  <Box>
-                    <Text
-                      color='text.white'
-                      fontSize='common'
-                      fontWeight='normal'
-                      lineHeight='huge'
-                    >
-                      <FormattedMessage id='aboutTextProblemSecondDesktop' />
-                    </Text>
-                  </Box>
-
-                  <Space count='14' />
-
-                  <Box width={76} height={52} alignItems='center' justifyContent='center'>
-                    <Image src='./image/Default.png' width={40} height={40} />
-                  </Box>
-                </Row>
-              </Column>
+                <Box
+                  display='inline-flex'
+                  width={76}
+                  height={52}
+                  alignItems='center'
+                  justifyContent='center'
+                >
+                  <Image src='./image/Default.png' width={40} height={40} />
+                </Box>
+              </Box>
             </Condition>
 
             <Condition match={isMobile}>
@@ -106,54 +96,34 @@ export const About = () => {
             <Layout flexBasis={[0, 40]} />
 
             <Condition match={isDesktop}>
-              <Column>
-                <Row flexWrap='wrap'>
-                  <Box>
-                    <Text
-                      color='text.white'
-                      fontSize='common'
-                      fontWeight='normal'
-                      lineHeight='huge'
-                    >
-                      <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
-                    </Text>
-                  </Box>
-                  <Space count='6' />
-                  <Box>
-                    <Text
-                      color='text.white'
-                      fontSize='common'
-                      fontWeight='normal'
-                      lineHeight='huge'
-                    >
-                      <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
-                    </Text>
-                  </Box>
-                </Row>
+              <Box display='inline'>
+                <Text
+                  display='inline'
+                  color='text.white'
+                  fontSize='common'
+                  fontWeight='normal'
+                  lineHeight='huge'
+                  wordWrap='break-word'
+                >
+                  <FormattedMessage id='aboutCentralIdeaDesktop' />
+                </Text>
 
-                <Row>
-                  <Box>
-                    <Text
-                      color='text.white'
-                      fontSize='common'
-                      fontWeight='normal'
-                      lineHeight='huge'
-                    >
-                      <FormattedMessage id='aboutCentralIdeaThirdDesktop' />
-                    </Text>
-                  </Box>
+                <Space count='6' />
 
-                  <Space count='6' />
-
-                  <Box width={76} height={52} alignItems='center' justifyContent='center'>
-                    <Image src='./image/Default.png' width={40} height={40} />
-                  </Box>
-                </Row>
-              </Column>
+                <Box
+                  display='inline-flex'
+                  width={76}
+                  height={52}
+                  alignItems='center'
+                  justifyContent='center'
+                >
+                  <Image src='./image/Default.png' width={40} height={40} />
+                </Box>
+              </Box>
             </Condition>
           </Column>
 
-          <Layout flexBasis={[20, 230]} flexShrink={[0, 20]} />
+          <Layout flexBasis={[20, 230]} />
         </Row>
 
         <Layout flexBasis={[64, 160]} />
