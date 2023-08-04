@@ -97,8 +97,8 @@ export const Hero = () => {
               <Layout flexBasis={[24, 0]} />
 
               <Condition match={isMobile}>
-                <Row flexGrow='1' flexBasis={44} justifyContent='space-between' alignItems='center'>
-                  <Box>
+                <Row flexGrow='1' flexBasis={44} alignItems='center'>
+                  <Box flexBasis={104} flexShrink='1'>
                     <Link href='https://web.telegram.org/'>
                       <Button
                         variant='transparentBackgroundWhiteText'
@@ -109,7 +109,9 @@ export const Hero = () => {
                     </Link>
                   </Box>
 
-                  <Box>
+                  <Layout flexBasis={5} flexGrow='1' />
+
+                  <Box flexBasis={104} flexShrink='1'>
                     <Link href='https://github.com/'>
                       <Button
                         variant='transparentBackgroundWhiteText'
@@ -120,7 +122,9 @@ export const Hero = () => {
                     </Link>
                   </Box>
 
-                  <Box>
+                  <Layout flexBasis={5} flexGrow='1' />
+
+                  <Box flexBasis={104} flexShrink='1'>
                     <Link href='https://www.google.com/intl/ru/gmail/about/'>
                       <Button
                         variant='transparentBackgroundWhiteText'

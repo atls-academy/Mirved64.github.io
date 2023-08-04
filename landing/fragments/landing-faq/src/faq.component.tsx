@@ -26,7 +26,7 @@ export const Faq = () => {
       <Column flexGrow='1'>
         <Layout flexBasis={[80, 160]} />
 
-        <Row justifyContent='space-between' alignItems='center'>
+        <Row alignItems='center'>
           <Box>
             <Text
               color='text.black'
@@ -40,6 +40,8 @@ export const Faq = () => {
           </Box>
 
           <Condition match={isDesktop}>
+            <Layout flexBasis={[0, 20]} flexGrow='1' />
+
             <Box width={247} height={72} alignItems='center' flexShrink='0'>
               <Button
                 variant='transparentBackgroundBlackText'

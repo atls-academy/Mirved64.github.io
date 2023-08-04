@@ -27,7 +27,7 @@ export const Navigation = () => {
       alignItems='center'
       justifyContent='center'
     >
-      <Layout flexBasis={[0, 40]} flexShrink='0' />
+      <Layout flexBasis={[0, 40]} />
 
       <Condition match={isMobile}>
         <Box flexGrow='1' justifyContent='center'>
@@ -50,12 +50,18 @@ export const Navigation = () => {
       </Condition>
 
       <Condition match={isDesktop}>
-        <Row height='32px' flexBasis={860} flexShrink='1' justifyContent='space-between'>
+        <Row height='32px' flexBasis={860} flexShrink='1'>
           <Item name={intl.formatMessage({ id: 'navigationAcademy' })} path='/' />
+
+          <Layout flexBasis={20} />
 
           <Item name={intl.formatMessage({ id: 'navigationCourses' })} path='/' />
 
+          <Layout flexBasis={20} />
+
           <Item name={intl.formatMessage({ id: 'navigationTeaching' })} path='/' />
+
+          <Layout flexBasis={20} />
 
           <Item name={intl.formatMessage({ id: 'navigationFaq' })} path='/' />
         </Row>
@@ -84,7 +90,7 @@ export const Navigation = () => {
         </Box>
       </Condition>
 
-      <Layout flexBasis={[0, 40]} flexShrink='0' />
+      <Layout flexBasis={[0, 40]} />
     </Box>
   )
 }

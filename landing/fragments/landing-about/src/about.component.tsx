@@ -20,9 +20,9 @@ export const About = () => {
         <Layout flexBasis={[64, 160]} />
 
         <Row>
-          <Layout flexBasis={[20, 230]} flexShrink='0' />
+          <Layout flexBasis={[20, 230]} flexShrink={[0, 5]} />
 
-          <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink={[1, 0]}>
+          <Column flexBasis={[335, 1460]} flexGrow='1'>
             <Condition match={isDesktop}>
               <Column>
                 <Box>
@@ -31,7 +31,7 @@ export const About = () => {
                   </Text>
                 </Box>
 
-                <Row>
+                <Row flexWrap='wrap'>
                   <Box>
                     <Text
                       color='text.white'
@@ -57,13 +57,14 @@ export const About = () => {
                       fontSize='common'
                       fontWeight='normal'
                       lineHeight='huge'
+                      wordWrap='breack-word'
                     >
                       <FormattedMessage id='aboutTextProblemFirstDesktop' />
                     </Text>
                   </Box>
                 </Row>
 
-                <Row>
+                <Row flexWrap='wrap'>
                   <Box>
                     <Text
                       color='text.white'
@@ -106,11 +107,29 @@ export const About = () => {
 
             <Condition match={isDesktop}>
               <Column>
-                <Box>
-                  <Text color='text.white' fontSize='common' fontWeight='normal' lineHeight='huge'>
-                    <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
-                  </Text>
-                </Box>
+                <Row flexWrap='wrap'>
+                  <Box>
+                    <Text
+                      color='text.white'
+                      fontSize='common'
+                      fontWeight='normal'
+                      lineHeight='huge'
+                    >
+                      <FormattedMessage id='aboutCentralIdeaFirstDesktop' />
+                    </Text>
+                  </Box>
+                  <Space count='6' />
+                  <Box>
+                    <Text
+                      color='text.white'
+                      fontSize='common'
+                      fontWeight='normal'
+                      lineHeight='huge'
+                    >
+                      <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
+                    </Text>
+                  </Box>
+                </Row>
 
                 <Row>
                   <Box>
@@ -120,7 +139,7 @@ export const About = () => {
                       fontWeight='normal'
                       lineHeight='huge'
                     >
-                      <FormattedMessage id='aboutCentralIdeaSecondDesktop' />
+                      <FormattedMessage id='aboutCentralIdeaThirdDesktop' />
                     </Text>
                   </Box>
 
@@ -134,7 +153,7 @@ export const About = () => {
             </Condition>
           </Column>
 
-          <Layout flexBasis={[20, 230]} flexShrink={[0, 1]} />
+          <Layout flexBasis={[20, 230]} flexShrink={[0, 20]} />
         </Row>
 
         <Layout flexBasis={[64, 160]} />

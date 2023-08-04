@@ -6,7 +6,7 @@ import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 
 export const Info = () => (
-  <Box flexDirection={['column', 'row']} justifyContent='space-between'>
+  <Box flexDirection={['column', 'row']}>
     <Box flexWrap='wrap' flexBasis={[112, 710]}>
       <Text
         color='text.black'
@@ -18,7 +18,7 @@ export const Info = () => (
       </Text>
     </Box>
 
-    <Layout flexBasis={[20, 0]} />
+    <Layout flexBasis={[20, 20]} flexGrow='1' />
 
     <Box flexBasis={[84, 559]} flexWrap='wrap'>
       <Text

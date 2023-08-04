@@ -33,7 +33,7 @@ export const Courses = () => {
           <Layout flexBasis={[20, 230]} />
 
           <Column flexBasis={[335, 1610]} flexGrow='1'>
-            <Row justifyContent='space-between' alignItems='center'>
+            <Row alignItems='center'>
               <Box flexWrap='wrap'>
                 <Text
                   color='text.black'
@@ -44,6 +44,8 @@ export const Courses = () => {
                   <FormattedMessage id='coursesTitle' />
                 </Text>
               </Box>
+
+              <Layout flexBasis={20} flexShrink='1' flexGrow='1' />
 
               <Condition match={isDesktop}>
                 <Box width={254} height={72} flexShrink='0'>
