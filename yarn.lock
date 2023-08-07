@@ -367,13 +367,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-proto/theme@npm:0.0.9":
-  version: 0.0.9
-  resolution: "@atls-ui-proto/theme@npm:0.0.9"
+"@atls-ui-proto/theme@npm:0.0.12":
+  version: 0.0.12
+  resolution: "@atls-ui-proto/theme@npm:0.0.12"
   peerDependencies:
-    "@emotion/react": ^11.1.5
-    react: ^17.0.1
-  checksum: 27425bcd97c7be38d8c296ff6d37f9e0e9d610cc4b8bf28cdc4eb754f6a3f0635904d00f58ae9fd160279b015b350eaf98e293f8227414f24be7a64d1413f063
+    "@emotion/css": ^11.9.0
+    "@emotion/react": ^11.9.3
+    react: ^18.2.0
+  checksum: 92a9aa7a46e9ff6decf2af0ecc9852daa4364e82191693c22f62709ca9a21ca7cef8387b1dd1698155c13466839ab6ea233c458ee4f185d6387257e922aa3a88
   languageName: node
   linkType: hard
 
@@ -2291,8 +2292,9 @@ __metadata:
     "@landing/fragment-process": "workspace:0.0.1"
     "@landing/fragment-slider": "workspace:0.0.1"
     "@landing/fragment-technologies": "workspace:0.0.1"
-    react: "npm:18.2.0"
+    "@types/react": "npm:18.2.9"
   peerDependencies:
+    next: "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2310,16 +2312,13 @@ __metadata:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
     "@ui/theme": "workspace:0.0.1"
-    next: "npm:13.4.4"
+    next: "npm:12.3.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-intl: "npm:6.4.4"
     ts-node: "npm:10.9.1"
     ttypescript: "npm:1.5.15"
-    typescript: "npm:4.6.2"
-  peerDependencies:
-    react: "*"
-    typescript: "*"
+    typescript: "npm:4.7.4"
   languageName: unknown
   linkType: soft
 
@@ -3224,6 +3223,7 @@ __metadata:
   peerDependencies:
     "@emotion/styled": "*"
     react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3261,8 +3261,13 @@ __metadata:
     "@types/react-dom": "npm:18.2.4"
     glob: "npm:8.0.3"
     glob-promise: "npm:6.0.2"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3312,13 +3317,14 @@ __metadata:
     "@atls-ui-proto/text": "npm:0.0.11"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    next: "npm:13.4.5"
+    next: "npm:12.3.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/styled": "*"
     react: "*"
+    react-dom: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft
@@ -3357,7 +3363,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
-    "@atls-ui-proto/theme": "npm:0.0.9"
+    "@atls-ui-proto/theme": "npm:0.0.12"
     "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
@@ -5103,9 +5109,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001406":
-  version: 1.0.30001497
-  resolution: "caniuse-lite@npm:1.0.30001497"
-  checksum: ef47f73e6aef88e1155c4665f94e69b567f16613d766eeff014b2451c40f8da8c16d98b9ac89f1a2edc847be5a11180b8bb230213755687ab0a05d3e243590fa
+  version: 1.0.30001519
+  resolution: "caniuse-lite@npm:1.0.30001519"
+  checksum: 56f8482bf8f798906f8026b6042f3f04ce69df91d84bc2194ba0830764b1d9fcdc73f3e4cfaf7f10c6872d8241178dc3e8510b0774a7020d33480766ae897082
   languageName: node
   linkType: hard
 
@@ -11686,7 +11692,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0, react-dom@npm:^18.2.0":
+"react-dom@npm:18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -11756,7 +11762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:*, react@npm:18.2.0, react@npm:^18.2.0":
+"react@npm:*, react@npm:18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -13593,6 +13599,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:4.7.4":
+  version: 4.7.4
+  resolution: "typescript@npm:4.7.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 0cec8f1c0fb0c6a9b437ee4e17819510eb294aad85291e940188fc4542a5554ffe1f73e4bc396c77d0a4d7dd1c17fd795634d50938fc3558e34f32d8a682118b
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^3.2.4":
   version: 3.9.10
   resolution: "typescript@npm:3.9.10"
@@ -13630,6 +13646,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 55110ab105f77165c592d337eeaaddc1f18387e7624d218421b3121073daacbfca50c313c12b16c3b1341c47b1194fde78c7f4ebce929dcdf43d270ef9a13619
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A4.7.4#optional!builtin<compat/typescript>":
+  version: 4.7.4
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#optional!builtin<compat/typescript>::version=4.7.4&hash=65a307"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 19bcd9153bbacaabed753b39fbd6adb5417690230b07db63f02e22588865b444b7504da9b9fcdcca5b4ac34be19904271a266bfa54d75fcfb0f5d699cb1e2314
   languageName: node
   linkType: hard
 

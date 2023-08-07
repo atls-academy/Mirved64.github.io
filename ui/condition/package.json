@@ -13,6 +13,7 @@
   },
   "peerDependencies": {
     "@emotion/styled": "*",
-    "react": "*"
+    "react": "*",
+    "react-dom": "*"
   }
 }
