@@ -25,13 +25,13 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
     </Box>
 
     <Box width={[51, 96]}>
-      <Layout flexBasis={[12, 24]} flexShrink='0' />
+      <Layout flexBasis={[12, 24]} />
 
-      <Box width={[27, 48]} alignItems='center' flexShrink='0'>
+      <Box width={[27, 48]} alignItems='center'>
         <Divider backgroundColor='divider.white' weight={divider} />
       </Box>
 
-      <Layout flexBasis={[12, 24]} flexShrink='0' />
+      <Layout flexBasis={[12, 24]} />
     </Box>
   </Box>
 )
