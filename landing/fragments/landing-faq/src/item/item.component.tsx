@@ -31,7 +31,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => {
 
         <Box flexGrow={[1, 0]} flexBasis={[303, 740]}>
           <Text
-            color='text.black'
+            color='text.primary'
             fontSize={['small', 'ordinary']}
             fontWeight='normal'
             lineHeight={['normal', 'regular']}
@@ -51,7 +51,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => {
 
       <Layout flexBasis={[16, 40]} />
 
-      <Divider backgroundColor='divider.black' weight={divider} />
+      <Divider backgroundColor='divider.grayGhost' weight={divider} />
     </Column>
   )
 }

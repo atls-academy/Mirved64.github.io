@@ -20,7 +20,7 @@ export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.white' width='100%' justifyContent='center'>
+    <Box width='100%' justifyContent='center'>
       <Layout flexBasis={[16, 230]} flexShrink='0' />
 
       <Column flexGrow='1'>
@@ -29,13 +29,13 @@ export const Faq = () => {
         <Row alignItems='center'>
           <Box>
             <Text
-              color='text.black'
+              color='text.primary'
               fontSize={['ordinary', 'stupendous']}
               fontWeight='normal'
               lineHeight={['regular', 'massive']}
               letter='-2%'
             >
-              <FormattedMessage id='faqTitle' />
+              <FormattedMessage id='faq.title' />
             </Text>
           </Box>
 
@@ -52,7 +52,7 @@ export const Faq = () => {
                 backgroundIcon='background.white'
               >
                 <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
-                  <FormattedMessage id='faqButton' />
+                  <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
             </Box>
@@ -62,16 +62,16 @@ export const Faq = () => {
         <Layout flexBasis={[60, 80]} />
 
         <Condition match={isDesktop}>
-          <Divider backgroundColor='divider.black' weight='1px' />
+          <Divider backgroundColor='divider.grayGhost' weight='1px' />
         </Condition>
 
         <Column>
-          <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faqQuestion' })} divider={1} />
+          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
         </Column>
 
         <Condition match={isMobile}>
@@ -88,7 +88,7 @@ export const Faq = () => {
                 backgroundIcon='background.white'
               >
                 <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
-                  <FormattedMessage id='faqButton' />
+                  <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
             </Box>
