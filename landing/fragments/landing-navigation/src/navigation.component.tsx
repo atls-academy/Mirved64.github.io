@@ -21,7 +21,7 @@ export const Navigation = () => {
 
   return (
     <Box
-      backgroundColor='background.grey'
+      backgroundColor='background.navyBlue'
       width='100%'
       height={[80, 120]}
       alignItems='center'

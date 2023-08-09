@@ -1,5 +1,6 @@
 const colors = {
   background: {
+    navyBlue: 'rgba(77, 60, 242, 1)',
     grey: 'rgba(102, 102, 102, 1)',
     white: 'rgba(255, 255, 255, 1)',
   },

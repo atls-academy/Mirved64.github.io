@@ -15,7 +15,7 @@ export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.grey' justifyContent='center'>
+    <Box backgroundColor='background.navyBlue' justifyContent='center'>
       <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
