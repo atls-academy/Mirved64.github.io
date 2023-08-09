@@ -8,12 +8,15 @@ import { Navigation }   from '@landing/fragment-navigation'
 import { Process }      from '@landing/fragment-process'
 import { Slider }       from '@landing/fragment-slider'
 import { Technologies } from '@landing/fragment-technologies'
+import { Background }   from '@ui/background'
 
 export const IndexPage = () => (
   <>
-    <Navigation />
-    <Hero />
-    <About />
+    <Background backgroundColor='navyBlue'>
+      <Navigation />
+      <Hero />
+      <About />
+    </Background>
     <Courses />
     <Process />
     <Technologies />

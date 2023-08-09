@@ -20,13 +20,7 @@ export const Navigation = () => {
   const intl = useIntl()
 
   return (
-    <Box
-      backgroundColor='background.navyBlue'
-      width='100%'
-      height={[80, 120]}
-      alignItems='center'
-      justifyContent='center'
-    >
+    <Box width='100%' height={[80, 120]} alignItems='center' justifyContent='center'>
       <Layout flexBasis={[0, 40]} />
 
       <Condition match={isMobile}>

@@ -2294,6 +2294,7 @@ __metadata:
     "@landing/fragment-slider": "workspace:0.0.1"
     "@landing/fragment-technologies": "workspace:0.0.1"
     "@types/react": "npm:18.2.9"
+    "@ui/background": "workspace:0.0.1"
   peerDependencies:
     next: "*"
     react: "*"
@@ -3172,7 +3173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/background@workspace: 0.0.1, @ui/background@workspace:ui/background":
+"@ui/background@workspace: 0.0.1, @ui/background@workspace:0.0.1, @ui/background@workspace:ui/background":
   version: 0.0.0-use.local
   resolution: "@ui/background@workspace:ui/background"
   dependencies:
