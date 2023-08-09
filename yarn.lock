@@ -2135,6 +2135,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/card": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
@@ -3171,6 +3172,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ui/background@workspace: 0.0.1, @ui/background@workspace:ui/background":
+  version: 0.0.0-use.local
+  resolution: "@ui/background@workspace:ui/background"
+  dependencies:
+    "@emotion/react": "npm:11.11.1"
+    "@emotion/styled": "npm:11.11.0"
+    "@types/styled-system": "npm:5.1.16"
+    next: "npm:12.3.4"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/button@workspace: 0.0.1, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
@@ -3199,6 +3221,7 @@ __metadata:
     "@atls-ui-parts/layout": "npm:0.0.7"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
