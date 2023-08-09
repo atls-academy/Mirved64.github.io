@@ -36,12 +36,12 @@ export const Courses = () => {
             <Row alignItems='center'>
               <Box flexWrap='wrap'>
                 <Text
-                  color='text.black'
+                  color='text.primary'
                   fontSize={['regular', 'stupendous']}
                   fontWeight='normal'
                   lineHeight={['common', 'stupendous']}
                 >
-                  <FormattedMessage id='coursesTitle' />
+                  <FormattedMessage id='courses.title' />
                 </Text>
               </Box>
 
@@ -59,7 +59,7 @@ export const Courses = () => {
                   >
                     <NextLink>
                       <Text fontSize='small' fontWeight='normal' lineHeight='small'>
-                        <FormattedMessage id='coursesButton' />
+                        <FormattedMessage id='courses.button.all-materials' />
                       </Text>
                     </NextLink>
                   </Button>
@@ -82,13 +82,13 @@ export const Courses = () => {
                 <Card
                   indent={[104, 214]}
                   category={formatMessage({
-                    id: 'coursesCardFrontendCategory',
+                    id: 'courses.card.training',
                   })}
                   titleDesktop={formatMessage({
-                    id: 'coursesCardFrontendTitle',
+                    id: 'courses.card.frontend-engineer',
                   })}
                   description={formatMessage({
-                    id: 'coursesCardFrontendText',
+                    id: 'courses.card.you-will-learn-fundamental-knowledge-in-it',
                   })}
                 />
 
@@ -97,13 +97,13 @@ export const Courses = () => {
                 <Card
                   indent={[49, 54]}
                   category={formatMessage({
-                    id: 'coursesCardBasisCategory',
+                    id: 'courses.card.minicourse',
                   })}
                   titleDesktop={formatMessage({
-                    id: 'coursesCardBasisTitle',
+                    id: 'courses.card.development-basics',
                   })}
                   description={formatMessage({
-                    id: 'coursesCardBasisText',
+                    id: 'courses.card.you-will-learn-fundamental-knowledge-in-it',
                   })}
                 />
 
@@ -114,10 +114,10 @@ export const Courses = () => {
                     <Card
                       indent={126}
                       category={formatMessage({
-                        id: 'coursesCardLearningMaterial',
+                        id: 'courses.card.learning-material',
                       })}
                       titleDesktop={formatMessage({
-                        id: 'coursesCardLearningMaterialLibraries',
+                        id: 'courses.card.how-use-libraries',
                       })}
                     />
 
@@ -126,10 +126,10 @@ export const Courses = () => {
                     <Card
                       indent={126}
                       category={formatMessage({
-                        id: 'coursesCardLearningMaterial',
+                        id: 'courses.card.learning-material',
                       })}
                       titleDesktop={formatMessage({
-                        id: 'coursesCardLearningMaterialDesign',
+                        id: 'courses.card.design-figma-math',
                       })}
                     />
                   </Row>
@@ -152,14 +152,11 @@ export const Courses = () => {
                 <Card
                   indent={62}
                   category={formatMessage({
-                    id: 'coursesCardLearningMaterial',
+                    id: 'courses.card.learning-material',
                   })}
                   isMobileOnly
-                  titleDesktop={formatMessage({
-                    id: 'coursesCardLearningMaterialLibraries',
-                  })}
                   titleMobile={formatMessage({
-                    id: 'coursesCardLearningMaterialLibraries',
+                    id: 'courses.card.how-use-libraries',
                   })}
                 />
               </SwiperSlide>
@@ -168,14 +165,11 @@ export const Courses = () => {
                 <Card
                   indent={62}
                   category={formatMessage({
-                    id: 'coursesCardLearningMaterial',
+                    id: 'courses.card.learning-material',
                   })}
                   isMobileOnly
-                  titleDesktop={formatMessage({
-                    id: 'coursesCardLearningMaterialDesign',
-                  })}
                   titleMobile={formatMessage({
-                    id: 'coursesCardLearningMaterialDesign',
+                    id: 'courses.card.design-figma-math',
                   })}
                 />
               </SwiperSlide>
@@ -200,7 +194,7 @@ export const Courses = () => {
                   backgroundIcon='background.white'
                 >
                   <Text fontSize='small' fontWeight='normal' lineHeight='small'>
-                    <FormattedMessage id='coursesButton' />
+                    <FormattedMessage id='courses.button.all-materials' />
                   </Text>
                 </Button>
               </NextLink>

@@ -26,12 +26,12 @@ export const Sidebar = () => {
           <Column>
             <Box>
               <Text
-                color='text.black'
+                color='text.primary'
                 fontSize={['tiny', 'little']}
                 fontWeight='normal'
                 lineHeight={['compact', 'medium']}
               >
-                <FormattedMessage id='coursesSidebarSubtitle' />
+                <FormattedMessage id='courses.sidebar.subtitle' />
               </Text>
             </Box>
 
@@ -48,12 +48,12 @@ export const Sidebar = () => {
             <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
               <Box>
                 <Text
-                  color='text.black'
+                  color='text.accent'
                   fontSize={['giant', 'enormous']}
                   fontWeight='normal'
                   lineHeight={['large', 'big']}
                 >
-                  <FormattedMessage id='coursesSidebarNumber' />
+                  <FormattedMessage id='courses.sidebar.number' />
                 </Text>
               </Box>
 
@@ -61,12 +61,12 @@ export const Sidebar = () => {
 
               <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
                 <Text
-                  color='text.black'
+                  color='text.primary'
                   fontSize={['atom', 'tiny']}
                   fontWeight='normal'
                   lineHeight={['minor', 'small']}
                 >
-                  <FormattedMessage id='coursesSidebarSign' />
+                  <FormattedMessage id='courses.sidebar.sign' />
                 </Text>
               </Box>
 
@@ -99,7 +99,7 @@ export const Sidebar = () => {
             backgroundIcon='background.white'
           >
             <Text fontSize='small' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='coursesSidebarButtonDesktop' />
+              <FormattedMessage id='courses.sidebar.button-desktop' />
             </Text>
           </Button>
         </Box>

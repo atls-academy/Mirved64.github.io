@@ -3,13 +3,17 @@ const colors = {
     navyBlue: 'rgba(77, 60, 242, 1)',
     grey: 'rgba(102, 102, 102, 1)',
     white: 'rgba(255, 255, 255, 1)',
+    whiteTransparent: 'rgba(255, 255, 255, .08)',
   },
   text: {
     white: 'rgba(255, 255, 255, 1)',
-    black: 'rgba(0, 0, 0, 1)',
+    whiteSemiTransparent: 'rgba(255, 255, 255, .5)',
+    primary: 'rgba(58, 55, 93, 1)',
+    accent: 'rgba(77, 60, 242, 1)',
   },
   divider: {
     white: 'rgba(255, 255, 255, 1)',
+    whiteSemiTransparent: 'rgba(255, 255, 255, .5)',
     black: 'rgba(0, 0, 0, 1)',
     lightGray: 'rgba(217, 217, 217, 1)',
   },
