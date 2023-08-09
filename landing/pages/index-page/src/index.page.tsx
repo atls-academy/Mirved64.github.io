@@ -18,9 +18,11 @@ export const IndexPage = () => (
       <About />
     </Background>
     <Courses />
-    <Process />
-    <Technologies />
-    <Slider />
+    <Background backgroundColor='darkPurple'>
+      <Process />
+      <Technologies />
+      <Slider />
+    </Background>
     <Faq />
   </>
 )
