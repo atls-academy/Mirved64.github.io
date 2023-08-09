@@ -47,7 +47,12 @@
   "process.item.project-integration": "Интеграция в проект",
   "process.item.studies-of-technologies": "Изучение технологий",
   "process.item.team-integration": "Интеграция в команду",
-  "sliderSign": "Формирование системы базовых фрагментов и компонентов",
-  "sliderSlogan": "Любой процесс перестаёт быть сложным, когда знаешь как он протекает",
-  "sliderSubtitle": "процесс создания"
+  "slider.sign": "Формирование системы базовых фрагментов и компонентов",
+  "slider.subtitle": "процесс создания",
+  "slider.slogan.any-process-stops": "Любой процесс перестаёт",
+  "slider.slogan.be": "быть",
+  "slider.slogan.difficult": "сложным,",
+  "slider.slogan.when": "когда",
+  "slider.slogan.you-know": "знаешь",
+  "slider.slogan.how-it-happen": "как он протекает"
 }
