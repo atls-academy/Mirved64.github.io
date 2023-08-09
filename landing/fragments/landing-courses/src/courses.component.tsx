@@ -80,10 +80,11 @@ export const Courses = () => {
             <Box flexDirection={['column', 'row']}>
               <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
                 <Card
-                  indent={[104, 214]}
+                  indent={[148, 214]}
                   category={formatMessage({
                     id: 'courses.card.training',
                   })}
+                  widthCategoryBox={[80, 104]}
                   titleDesktop={formatMessage({
                     id: 'courses.card.frontend-engineer',
                   })}
@@ -95,10 +96,11 @@ export const Courses = () => {
                 <Layout flexBasis={[20, 40]} />
 
                 <Card
-                  indent={[49, 54]}
+                  indent={[93, 56]}
                   category={formatMessage({
                     id: 'courses.card.minicourse',
                   })}
+                  widthCategoryBox={[87, 112]}
                   titleDesktop={formatMessage({
                     id: 'courses.card.development-basics',
                   })}
@@ -112,22 +114,24 @@ export const Courses = () => {
                 <Condition match={isDesktop}>
                   <Row>
                     <Card
-                      indent={126}
+                      indent={110}
                       category={formatMessage({
                         id: 'courses.card.learning-material',
                       })}
+                      widthCategoryBox={180}
                       titleDesktop={formatMessage({
                         id: 'courses.card.how-use-libraries',
                       })}
                     />
 
-                    <Layout flexBasis={[20, 40]} />
+                    <Layout flexBasis={[20, 40]} flexShrink='0' />
 
                     <Card
-                      indent={126}
+                      indent={110}
                       category={formatMessage({
                         id: 'courses.card.learning-material',
                       })}
+                      widthCategoryBox={180}
                       titleDesktop={formatMessage({
                         id: 'courses.card.design-figma-math',
                       })}
@@ -154,6 +158,7 @@ export const Courses = () => {
                   category={formatMessage({
                     id: 'courses.card.learning-material',
                   })}
+                  widthCategoryBox={142}
                   isMobileOnly
                   titleMobile={formatMessage({
                     id: 'courses.card.how-use-libraries',
@@ -167,6 +172,7 @@ export const Courses = () => {
                   category={formatMessage({
                     id: 'courses.card.learning-material',
                   })}
+                  widthCategoryBox={142}
                   isMobileOnly
                   titleMobile={formatMessage({
                     id: 'courses.card.design-figma-math',

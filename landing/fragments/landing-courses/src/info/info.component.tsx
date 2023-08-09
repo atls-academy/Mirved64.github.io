@@ -92,7 +92,7 @@ export const Info = () => (
 
     <Layout flexBasis={[20, 20]} flexGrow='1' />
 
-    <Box display='inline' maxWidth={[84, 559]}>
+    <Box display='inline' maxWidth={[335, 559]}>
       <Text
         display='inline'
         color='text.primary'
