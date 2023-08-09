@@ -1,30 +1,36 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { Condition } from '@ui/condition'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
+import { Background } from '@ui/background'
+import { Condition }  from '@ui/condition'
+import { Box }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Text }       from '@ui/text'
 
-import { CardProps } from './card.interfaces'
+import { CardProps }  from './card.interfaces'
 
 export const Card: FC<CardProps> = ({
   indent,
   category,
+  widthCategoryBox,
   isMobileOnly = false,
   titleDesktop,
   titleMobile,
   description,
 }) => (
-  <Row>
-    <Layout flexBasis={[16, 40]} />
+  <Background display='flex' backgroundColor='lightGray' width='100%'>
+    <Layout flexBasis={[16, 40]} flexShrink='0' />
 
-    <Column flexGrow='1'>
+    <Column>
       <Layout flexBasis={[16, 40]} />
 
-      <Row flexBasis={[27, 38]} alignItems='center'>
+      <Box
+        flexBasis={[27, 38]}
+        width={widthCategoryBox}
+        alignItems='center'
+        backgroundColor='background.white'
+      >
         <Layout flexBasis={[8, 12]} />
 
         <Box>
@@ -40,7 +46,7 @@ export const Card: FC<CardProps> = ({
         </Box>
 
         <Layout flexBasis={[8, 12]} />
-      </Row>
+      </Box>
 
       <Layout flexBasis={indent} />
 
@@ -58,7 +64,7 @@ export const Card: FC<CardProps> = ({
       </Condition>
 
       <Condition match={isMobileOnly}>
-        <Box>
+        <Box maxWidth={228}>
           <Text color='text.primary' fontSize='small' fontWeight='normal' lineHeight='tiddly'>
             {titleMobile}
           </Text>
@@ -85,6 +91,6 @@ export const Card: FC<CardProps> = ({
       <Layout flexBasis={[16, 40]} />
     </Column>
 
-    <Layout flexBasis={[16, 40]} />
-  </Row>
+    <Layout flexBasis={[16, 40]} flexShrink='0' />
+  </Background>
 )
