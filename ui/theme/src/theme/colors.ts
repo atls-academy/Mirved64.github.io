@@ -17,6 +17,7 @@ const colors = {
     whiteSemiTransparent: 'rgba(255, 255, 255, .5)',
     black: 'rgba(0, 0, 0, 1)',
     lightGray: 'rgba(217, 217, 217, 1)',
+    ghost: 'rgba(255, 255, 255, 0.25)',
   },
   button: {
     transparentBackgroundWhiteText: {

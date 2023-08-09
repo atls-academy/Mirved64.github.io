@@ -20,21 +20,26 @@ export const Item: FC<ItemProps> = ({
 }) => (
   <Column>
     <Row>
-      <Row flexBasis={[47, 96]} alignItems={['start', 'center']}>
-        <Box width={[35, 64]} height={[35, 64]} alignItems='center' justifyContent='center'>
-          <Text
-            color='text.white'
-            fontSize={['compact', 'medium']}
-            fontWeight='normal'
-            lineHeight={['little', 'mini']}
-            fontFamily='regular'
-          >
-            {sequenceNumber}
-          </Text>
-        </Box>
+      <Box
+        width={[35, 64]}
+        height={[35, 64]}
+        alignItems='center'
+        justifyContent='center'
+        backgroundColor='background.whiteTransparent'
+        flexShrink='0'
+      >
+        <Text
+          color='text.white'
+          fontSize={['compact', 'medium']}
+          fontWeight='normal'
+          lineHeight={['little', 'mini']}
+          fontFamily='regular'
+        >
+          {sequenceNumber}
+        </Text>
+      </Box>
 
-        <Layout flexBasis={[12, 32]} flexShrink='0' />
-      </Row>
+      <Layout flexBasis={[12, 32]} flexShrink='0' />
 
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1' flexShrink='1'>
         <Box
@@ -47,8 +52,8 @@ export const Item: FC<ItemProps> = ({
           <Text
             color='text.white'
             fontSize={['medium', 'regular']}
-            fontWeight={['normalMedium', 'normal']}
-            lineHeight={['normal', 'mean']}
+            fontWeight='normal'
+            lineHeight={['usual', 'mean']}
           >
             {name}
           </Text>
@@ -74,7 +79,7 @@ export const Item: FC<ItemProps> = ({
       <Column>
         <Layout flexBasis={[28, 48]} />
 
-        <Divider backgroundColor='divider.white' weight={weight} />
+        <Divider backgroundColor='divider.ghost' weight={weight} />
 
         <Layout flexBasis={[28, 48]} />
       </Column>
