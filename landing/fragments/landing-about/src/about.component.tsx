@@ -2,7 +2,6 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Condition }        from '@ui/condition'
-import { Image }            from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -10,6 +9,8 @@ import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
+
+import { Delimiter }        from './delimiter'
 
 export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
@@ -33,20 +34,12 @@ export const About = () => {
                   lineHeight='huge'
                   wordWrap='break-word'
                 >
-                  <FormattedMessage id='aboutTextIntroDesktop' />
+                  <FormattedMessage id='about.intro-desktop' />
                 </Text>
 
                 <Space count='6' />
 
-                <Box
-                  display='inline-flex'
-                  width={76}
-                  height={52}
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
+                <Delimiter />
 
                 <Space count='6' />
 
@@ -58,20 +51,12 @@ export const About = () => {
                   lineHeight='huge'
                   wordWrap='break-word'
                 >
-                  <FormattedMessage id='aboutTextProblemDesktop' />
+                  <FormattedMessage id='about.problem-desktop' />
                 </Text>
 
                 <Space count='14' />
 
-                <Box
-                  display='inline-flex'
-                  width={76}
-                  height={52}
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
+                <Delimiter />
               </Box>
             </Condition>
 
@@ -79,7 +64,7 @@ export const About = () => {
               <Column>
                 <Box>
                   <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
-                    <FormattedMessage id='aboutIntroMobile' />
+                    <FormattedMessage id='about.intro-mobile' />
                   </Text>
                 </Box>
 
@@ -87,7 +72,7 @@ export const About = () => {
 
                 <Box>
                   <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
-                    <FormattedMessage id='aboutCentralIdeaMobile' />
+                    <FormattedMessage id='about.central-idea' />
                   </Text>
                 </Box>
               </Column>
@@ -105,20 +90,12 @@ export const About = () => {
                   lineHeight='huge'
                   wordWrap='break-word'
                 >
-                  <FormattedMessage id='aboutCentralIdeaDesktop' />
+                  <FormattedMessage id='about.central-idea' />
                 </Text>
 
                 <Space count='6' />
 
-                <Box
-                  display='inline-flex'
-                  width={76}
-                  height={52}
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
+                <Delimiter />
               </Box>
             </Condition>
           </Column>
