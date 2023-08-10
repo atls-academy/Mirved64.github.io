@@ -169,7 +169,7 @@ export const Slider = () => {
           <Layout flexBasis={[24, 50]} flexShrink='0' />
 
           <Column alignItems='center'>
-            <Box width={[155, 960]} border={['thinWhite', 'boldWhite']} justifyContent='center'>
+            <Box width={[155, 960]} border={['thinGhost', 'boldGhost']} justifyContent='center'>
               <Box
                 alignItems='center'
                 maxWidth={960}
