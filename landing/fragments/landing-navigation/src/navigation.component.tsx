@@ -45,19 +45,19 @@ export const Navigation = () => {
 
       <Condition match={isDesktop}>
         <Row height='32px' flexBasis={860} flexShrink='1'>
-          <Item name={intl.formatMessage({ id: 'navigationAcademy' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
 
           <Layout flexBasis={20} />
 
-          <Item name={intl.formatMessage({ id: 'navigationCourses' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.courses' })} path='/' />
 
           <Layout flexBasis={20} />
 
-          <Item name={intl.formatMessage({ id: 'navigationTeaching' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.teaching' })} path='/' />
 
           <Layout flexBasis={20} />
 
-          <Item name={intl.formatMessage({ id: 'navigationFaq' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.faq' })} path='/' />
         </Row>
       </Condition>
 
@@ -77,7 +77,7 @@ export const Navigation = () => {
           >
             <NextLink>
               <Text fontSize='compact' fontWeight='normal' lineHeight='little'>
-                <FormattedMessage id='navigationButton' />
+                <FormattedMessage id='navigation.button' />
               </Text>
             </NextLink>
           </Button>
