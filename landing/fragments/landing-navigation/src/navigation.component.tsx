@@ -68,7 +68,8 @@ export const Navigation = () => {
       <Condition match={isDesktop}>
         <Box width={163} height={64} flexShrink='0'>
           <Button
-            variant='transparentBackgroundWhiteText'
+            variant='ghostBackgroundWhiteText'
+            size='normal'
             gap={24}
             icon={<ArrowDownIcon width={16} height={16} />}
             widthIcon={48}
@@ -76,7 +77,7 @@ export const Navigation = () => {
             backgroundIcon='background.white'
           >
             <NextLink>
-              <Text fontSize='compact' fontWeight='normal' lineHeight='little'>
+              <Text color='white' fontSize='compact' fontWeight='normal' lineHeight='little'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </NextLink>

@@ -4,78 +4,78 @@ import { ifProp }                 from 'styled-tools'
 import { switchProp }             from 'styled-tools'
 import { prop }                   from 'styled-tools'
 
-const appearanceTransparentBackgroundWhiteTextDefaultStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundWhiteText.default.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundWhiteText.default.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundWhiteText.default.border'),
+const appearancePrimaryBackgroundWhiteTextDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primaryBackgroundWhiteText.default.font'),
+  backgroundColor: prop('theme.colors.button.primaryBackgroundWhiteText.default.background'),
+  borderColor: prop('theme.colors.button.primaryBackgroundWhiteText.default.border'),
 })
 
-const appearanceTransparentBackgroundWhiteTextHoverStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundWhiteText.hover.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundWhiteText.hover.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundWhiteText.hover.border'),
+const appearancePrimaryBackgroundWhiteTextHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primaryBackgroundWhiteText.hover.font'),
+  backgroundColor: prop('theme.colors.button.primaryBackgroundWhiteText.hover.background'),
+  borderColor: prop('theme.colors.button.primaryBackgroundWhiteText.hover.border'),
 })
 
-const appearanceTransparentBackgroundWhiteTextPressedStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundWhiteText.pressed.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundWhiteText.pressed.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundWhiteText.pressed.border'),
+const appearancePrimaryBackgroundWhiteTextPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primaryBackgroundWhiteText.pressed.font'),
+  backgroundColor: prop('theme.colors.button.primaryBackgroundWhiteText.pressed.background'),
+  borderColor: prop('theme.colors.button.primaryBackgroundWhiteText.pressed.border'),
 })
 
-const appearanceTransparentBackgroundWhiteTextDisabledStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundWhiteText.disabled.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundWhiteText.disabled.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundWhiteText.disabled.border'),
+const appearancePrimaryBackgroundWhiteTextDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.primaryBackgroundWhiteText.disabled.font'),
+  backgroundColor: prop('theme.colors.button.primaryBackgroundWhiteText.disabled.background'),
+  borderColor: prop('theme.colors.button.primaryBackgroundWhiteText.disabled.border'),
 })
 
-const appearanceTransparentBackgroundBlackTextDefaultStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundBlackText.default.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundBlackText.default.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundBlackText.default.border'),
+const appearanceGhostBackgroundWhiteTextDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.ghostBackgroundWhiteText.default.font'),
+  backgroundColor: prop('theme.colors.button.ghostBackgroundWhiteText.default.background'),
+  borderColor: prop('theme.colors.button.ghostBackgroundWhiteText.default.border'),
 })
 
-const appearanceTransparentBackgroundBlackTextHoverStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundBlackText.hover.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundBlackText.hover.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundBlackText.hover.border'),
+const appearanceGhostBackgroundWhiteTextHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.ghostBackgroundWhiteText.hover.font'),
+  backgroundColor: prop('theme.colors.button.ghostBackgroundWhiteText.hover.background'),
+  borderColor: prop('theme.colors.button.ghostBackgroundWhiteText.hover.border'),
 })
 
-const appearanceTransparentBackgroundBlackTextPressedStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundBlackText.pressed.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundBlackText.pressed.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundBlackText.pressed.border'),
+const appearanceGhostBackgroundWhiteTextPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.ghostBackgroundWhiteText.pressed.font'),
+  backgroundColor: prop('theme.colors.button.ghostBackgroundWhiteText.pressed.background'),
+  borderColor: prop('theme.colors.button.ghostBackgroundWhiteText.pressed.border'),
 })
 
-const appearanceTransparentBackgroundBlackTextDisabledStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundBlackText.disabled.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundBlackText.disabled.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundBlackText.disabled.border'),
+const appearanceGhostBackgroundWhiteTextDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.ghostBackgroundWhiteText.disabled.font'),
+  backgroundColor: prop('theme.colors.button.ghostBackgroundWhiteText.disabled.background'),
+  borderColor: prop('theme.colors.button.ghostBackgroundWhiteText.disabled.border'),
 })
 
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
-  transparentBackgroundWhiteText: ifProp(
+  primaryBackgroundWhiteText: ifProp(
     prop('disabled', false),
-    appearanceTransparentBackgroundWhiteTextDisabledStyles,
+    appearancePrimaryBackgroundWhiteTextDisabledStyles,
     ifProp(
       prop('pressed', false),
-      appearanceTransparentBackgroundWhiteTextPressedStyles,
+      appearancePrimaryBackgroundWhiteTextPressedStyles,
       ifProp(
         prop('hover', false),
-        appearanceTransparentBackgroundWhiteTextHoverStyles,
-        appearanceTransparentBackgroundWhiteTextDefaultStyles
+        appearancePrimaryBackgroundWhiteTextHoverStyles,
+        appearancePrimaryBackgroundWhiteTextDefaultStyles
       )
     )
   ),
-  transparentBackgroundBlackText: ifProp(
+  ghostBackgroundWhiteText: ifProp(
     prop('disabled', false),
-    appearanceTransparentBackgroundBlackTextDisabledStyles,
+    appearanceGhostBackgroundWhiteTextDisabledStyles,
     ifProp(
       prop('pressed', false),
-      appearanceTransparentBackgroundBlackTextPressedStyles,
+      appearanceGhostBackgroundWhiteTextPressedStyles,
       ifProp(
         prop('hover', false),
-        appearanceTransparentBackgroundBlackTextHoverStyles,
-        appearanceTransparentBackgroundBlackTextDefaultStyles
+        appearanceGhostBackgroundWhiteTextHoverStyles,
+        appearanceGhostBackgroundWhiteTextDefaultStyles
       )
     )
   ),

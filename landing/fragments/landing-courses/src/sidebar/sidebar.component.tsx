@@ -93,14 +93,15 @@ export const Sidebar = () => {
       <Condition match={isDesktop}>
         <Box width='100%' height={72} alignItems='center'>
           <Button
-            variant='transparentBackgroundBlackText'
+            variant='primaryBackgroundWhiteText'
+            size='big'
             gap={121}
             icon={<MouseIcon width={16} height={16} />}
             widthIcon={48}
             heightIcon={48}
             backgroundIcon='background.white'
           >
-            <Text fontSize='small' fontWeight='normal' lineHeight='small'>
+            <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
               <FormattedMessage id='courses.sidebar.button-desktop' />
             </Text>
           </Button>

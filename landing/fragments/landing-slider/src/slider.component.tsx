@@ -187,7 +187,7 @@ export const Slider = () => {
             <Row justifyContent='space-between' maxWidth={[335, 960]}>
               <Box>
                 <Button
-                  variant='transparentBackgroundWhiteText'
+                  variant='ghostBackgroundWhiteText'
                   icon={<ArrowLeftWhiteIcon width={16} height={16} />}
                   widthIcon={[40, 48]}
                   heightIcon={[60, 64]}
@@ -212,7 +212,7 @@ export const Slider = () => {
 
               <Box>
                 <Button
-                  variant='transparentBackgroundWhiteText'
+                  variant='ghostBackgroundWhiteText'
                   icon={<ArrowRightWhiteIcon width={16} height={16} />}
                   widthIcon={[40, 48]}
                   heightIcon={[60, 64]}

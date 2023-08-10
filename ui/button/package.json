@@ -10,7 +10,7 @@
     "@atls-ui-generators/button": "0.0.10",
     "@atls-ui-parts/button": "0.0.12",
     "@atls-ui-parts/conditional-render": "0.0.4",
-    "@ui/layout": "workspace: 0.0.1",
+    "@atls-ui-parts/layout": "0.0.7",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },

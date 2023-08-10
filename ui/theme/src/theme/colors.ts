@@ -21,48 +21,32 @@ const colors = {
     grayGhost: 'rgba(27, 26, 51, 0.15)',
   },
   button: {
-    transparentBackgroundWhiteText: {
+    primaryBackgroundWhiteText: {
       default: {
-        background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(255, 255, 255, 1)',
-        border: 'transparent',
+        background: 'rgba(58, 55, 93, 1)',
       },
       hover: {
         background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(0, 0, 0, 1)',
-        border: 'transparent',
       },
       pressed: {
         background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(255, 255, 255, 1)',
-        border: 'transparent',
       },
       disabled: {
         background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(255, 255, 255, 1)',
-        border: 'transparent',
       },
     },
-    transparentBackgroundBlackText: {
+    ghostBackgroundWhiteText: {
       default: {
-        background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(0, 0, 0, 1)',
-        border: 'transparent',
+        background: 'rgba(255, 255, 255, 0.08)',
       },
       hover: {
         background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(0, 0, 0, 1)',
-        border: 'transparent',
       },
       pressed: {
         background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(255, 255, 255, 1)',
-        border: 'transparent',
       },
       disabled: {
         background: 'rgba(0, 0, 0, 0)',
-        font: 'rgba(255, 255, 255, 1)',
-        border: 'transparent',
       },
     },
   },

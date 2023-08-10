@@ -44,14 +44,15 @@ export const Faq = () => {
 
             <Box width={247} height={72} alignItems='center' flexShrink='0'>
               <Button
-                variant='transparentBackgroundBlackText'
+                variant='primaryBackgroundWhiteText'
+                size='big'
                 gap={24}
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
                 backgroundIcon='background.white'
               >
-                <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
                   <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
@@ -80,14 +81,15 @@ export const Faq = () => {
 
             <Box width={247} height={72} alignItems='center' flexShrink='0'>
               <Button
-                variant='transparentBackgroundBlackText'
+                variant='primaryBackgroundWhiteText'
+                size='big'
                 gap={24}
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
                 backgroundIcon='background.white'
               >
-                <Text fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
                   <FormattedMessage id='faq.button' />
                 </Text>
               </Button>

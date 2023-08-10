@@ -106,7 +106,7 @@ export const Hero = () => {
                   <Box flexBasis={104} flexShrink='1'>
                     <Link href='https://web.telegram.org/'>
                       <Button
-                        variant='transparentBackgroundWhiteText'
+                        variant='ghostBackgroundWhiteText'
                         icon={<TelegramIcon width={15} height={12} />}
                         widthIcon={104}
                         heightIcon={44}
@@ -119,7 +119,7 @@ export const Hero = () => {
                   <Box flexBasis={104} flexShrink='1'>
                     <Link href='https://github.com/'>
                       <Button
-                        variant='transparentBackgroundWhiteText'
+                        variant='ghostBackgroundWhiteText'
                         icon={<GitHubIcon width={15} height={15} />}
                         widthIcon={104}
                         heightIcon={44}
@@ -132,7 +132,7 @@ export const Hero = () => {
                   <Box flexBasis={104} flexShrink='1'>
                     <Link href='https://www.google.com/intl/ru/gmail/about/'>
                       <Button
-                        variant='transparentBackgroundWhiteText'
+                        variant='ghostBackgroundWhiteText'
                         icon={<MailWhiteIcon width={18} height={14} />}
                         widthIcon={104}
                         heightIcon={44}
@@ -151,7 +151,7 @@ export const Hero = () => {
                   <Box>
                     <Link href='https://web.telegram.org/'>
                       <Button
-                        variant='transparentBackgroundWhiteText'
+                        variant='ghostBackgroundWhiteText'
                         icon={<TelegramIcon width={18} height={15} />}
                         widthIcon={56}
                         heightIcon={56}
@@ -162,7 +162,7 @@ export const Hero = () => {
                   <Box>
                     <Link href='https://github.com/'>
                       <Button
-                        variant='transparentBackgroundWhiteText'
+                        variant='ghostBackgroundWhiteText'
                         icon={<GitHubIcon width={18} height={18} />}
                         widthIcon={56}
                         heightIcon={56}
@@ -173,7 +173,7 @@ export const Hero = () => {
                   <Box>
                     <Link href='https://www.google.com/intl/ru/gmail/about/'>
                       <Button
-                        variant='transparentBackgroundWhiteText'
+                        variant='ghostBackgroundWhiteText'
                         icon={<MailWhiteIcon width={18} height={14} />}
                         widthIcon={56}
                         heightIcon={56}

@@ -1,6 +1,6 @@
 import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 
-export type ButtonVariant = 'transparentBackgroundWhiteText' | 'transparentBackgroundBlackText'
+export type ButtonVariant = 'primaryBackgroundWhiteText' | 'ghostBackgroundWhiteText'
 
 export type ButtonSize = 'normal' | 'big'
 

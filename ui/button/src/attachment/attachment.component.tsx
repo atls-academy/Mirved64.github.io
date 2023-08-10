@@ -1,7 +1,7 @@
+import { Box }             from '@atls-ui-parts/layout'
+
 import React               from 'react'
 import { FC }              from 'react'
-
-import { Box }             from '@ui/layout'
 
 import { AttachmentProps } from './attachment.interfaces'
 
