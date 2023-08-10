@@ -13,7 +13,6 @@ import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Link }             from '@ui/link'
 import { Text }             from '@ui/text'
-import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const Hero = () => {
@@ -36,7 +35,7 @@ export const Hero = () => {
                   fontWeight='normal'
                   lineHeight={['ordinary', 'stupendous']}
                 >
-                  <FormattedMessage id='heroTitleTeach' />
+                  <FormattedMessage id='hero.title.teach' />
                 </Text>
               </Box>
 
@@ -47,7 +46,7 @@ export const Hero = () => {
                   fontWeight='normal'
                   lineHeight={['ordinary', 'stupendous']}
                 >
-                  <FormattedMessage id='heroTitleProfessionals' />
+                  <FormattedMessage id='hero.title.professionals' />
                 </Text>
               </Box>
 
@@ -59,20 +58,26 @@ export const Hero = () => {
                     fontWeight='normal'
                     lineHeight={['ordinary', 'stupendous']}
                   >
-                    <FormattedMessage id='heroTitleRevolution' />
+                    <FormattedMessage id='hero.title.revolution' />
                   </Text>
                 </Box>
 
-                <Space count='8' />
+                <Layout flexBasis={[8, 28]} flexShrink='0' />
 
-                <Box>
+                <Box
+                  width={[49, 134]}
+                  height={[39, 116]}
+                  justifyContent='center'
+                  alignItems='center'
+                  backgroundColor='background.whiteTransparent'
+                >
                   <Text
                     color='text.white'
                     fontSize={['normal', 'stupendous']}
                     fontWeight='normal'
                     lineHeight={['ordinary', 'stupendous']}
                   >
-                    <FormattedMessage id='heroTitleIt' />
+                    <FormattedMessage id='hero.title.it' />
                   </Text>
                 </Box>
               </Row>
@@ -90,7 +95,7 @@ export const Hero = () => {
                   fontWeight='normal'
                   lineHeight={['small', 'normal']}
                 >
-                  <FormattedMessage id='heroSlogan' />
+                  <FormattedMessage id='hero.slogan' />
                 </Text>
               </Box>
 
