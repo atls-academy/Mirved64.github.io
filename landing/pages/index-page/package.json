@@ -12,15 +12,18 @@
     "@landing/fragment-process": "workspace:0.0.1",
     "@landing/fragment-slider": "workspace:0.0.1",
     "@landing/fragment-technologies": "workspace:0.0.1",
-    "@ui/background": "workspace:0.0.1"
+    "@ui/background": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@types/react": "18.2.9"
+    "@types/react": "18.2.9",
+    "react-scroll-parallax": "3.3.2"
   },
   "peerDependencies": {
     "next": "*",
     "react": "*",
     "react-dom": "*",
-    "react-intl": "*"
+    "react-intl": "*",
+    "react-scroll-parallax": "*"
   }
 }

@@ -2266,11 +2266,14 @@ __metadata:
     "@landing/fragment-technologies": "workspace:0.0.1"
     "@types/react": "npm:18.2.9"
     "@ui/background": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    react-scroll-parallax: "npm:3.3.2"
   peerDependencies:
     next: "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
+    react-scroll-parallax: "*"
   languageName: unknown
   linkType: soft
 
@@ -2289,6 +2292,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-intl: "npm:6.4.4"
+    react-scroll-parallax: "npm:3.3.2"
     ts-node: "npm:10.9.1"
     ttypescript: "npm:1.5.15"
     typescript: "npm:4.7.4"
@@ -3207,7 +3211,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/condition@workspace: 0.0.1, @ui/condition@workspace:ui/condition":
+"@ui/condition@workspace: 0.0.1, @ui/condition@workspace:0.0.1, @ui/condition@workspace:ui/condition":
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
@@ -4789,6 +4793,13 @@ __metadata:
   version: 2.4.3
   resolution: "bcryptjs@npm:2.4.3"
   checksum: bf6a43e9c45ce8e93bd0d5a5c229acabdb632db08a027e986757524cac1d7f0e6e4c3b733637729d3c287df7500911fbfb4a99931014f05d51ee36ad52784e73
+  languageName: node
+  linkType: hard
+
+"bezier-easing@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "bezier-easing@npm:2.1.0"
+  checksum: 4214df751c27355016de4ac178abd97c08ec8e2cac0ded2f1234bbcda53d819ec7fac30b14960bbebebe6c40fe359354a42f646b2a5ee347b34146dac37b152b
   languageName: node
   linkType: hard
 
@@ -11193,6 +11204,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parallax-controller@npm:^1.5.0":
+  version: 1.7.0
+  resolution: "parallax-controller@npm:1.7.0"
+  dependencies:
+    bezier-easing: "npm:^2.1.0"
+  checksum: 951f508e49428165f47dbcddefe63b60263ff81da2c82c31887b5cd5e52d70ae5591393f295a09d24856d0fb24c242fc660051a9128d8758ca147d65cc2e6ab6
+  languageName: node
+  linkType: hard
+
 "parallel-transform@npm:^1.1.0":
   version: 1.2.0
   resolution: "parallel-transform@npm:1.2.0"
@@ -11761,6 +11781,18 @@ __metadata:
   peerDependencies:
     react: ^17.0.2
   checksum: 6afc7bc37899ff5cfec336b6b9dd70e5e76840e903c6e95e49257b6e335df9459e0a952338a09ed10035d4ad403200839dd58e42ff152be30bfe92ce6104a574
+  languageName: node
+  linkType: hard
+
+"react-scroll-parallax@npm:3.3.2":
+  version: 3.3.2
+  resolution: "react-scroll-parallax@npm:3.3.2"
+  dependencies:
+    parallax-controller: "npm:^1.5.0"
+  peerDependencies:
+    react: ^16.8.0-0 || >=17.0.1 || ^18.0.0
+    react-dom: ^16.8.0-0 || >=17.0.1 || ^18.0.0
+  checksum: f5b575924bc0a7c5b0cd6ff7779ec9a5e2d1369f1b93c2129890e9bbe7cdb2c682662916f144d32014f7a4e3d8b63f7fb53eef38ee39510682b9f5a77e251281
   languageName: node
   linkType: hard
 
