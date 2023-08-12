@@ -25,62 +25,60 @@ export const Sidebar = () => {
           <Column flexBasis={[303, 346]} flexGrow={[1, 0]}>
             <Layout flexBasis={[16, 32]} />
 
-            <Column>
+            <Box>
+              <Text
+                color='text.primary'
+                fontSize={['tiny', 'little']}
+                fontWeight='normal'
+                lineHeight={['compact', 'medium']}
+              >
+                <FormattedMessage id='courses.sidebar.subtitle' />
+              </Text>
+            </Box>
+
+            <Layout flexBasis={[16, 74]} />
+
+            <Condition match={isDesktop}>
+              <Box justifyContent='center'>
+                <Image src='./image/Default.png' width={240} height={240} />
+              </Box>
+            </Condition>
+
+            <Layout flexBasis={[0, 62]} />
+
+            <Box flexDirection={['row', 'column']} alignItems={['center', 'start']}>
               <Box>
                 <Text
-                  color='text.primary'
-                  fontSize={['tiny', 'little']}
+                  color='text.accent'
+                  fontSize={['giant', 'enormous']}
                   fontWeight='normal'
-                  lineHeight={['compact', 'medium']}
+                  lineHeight={['large', 'big']}
                 >
-                  <FormattedMessage id='courses.sidebar.subtitle' />
+                  <FormattedMessage id='courses.sidebar.number' />
                 </Text>
               </Box>
 
-              <Layout flexBasis={[16, 74]} />
+              <Layout flexBasis={[12, 8]} />
 
-              <Condition match={isDesktop}>
-                <Box justifyContent='center'>
-                  <Image src='./image/Default.png' width={240} height={240} />
+              <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
+                <Text
+                  color='text.primary'
+                  fontSize={['atom', 'tiny']}
+                  fontWeight='normal'
+                  lineHeight={['minor', 'small']}
+                >
+                  <FormattedMessage id='courses.sidebar.sign' />
+                </Text>
+              </Box>
+
+              <Layout flexBasis={[64, 0]} flexShrink='5' flexGrow='1' />
+
+              <Condition match={isMobile}>
+                <Box flexShrink='0'>
+                  <Image src='./image/Default.png' width={64} height={64} />
                 </Box>
               </Condition>
-
-              <Layout flexBasis={[0, 62]} />
-
-              <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
-                <Box>
-                  <Text
-                    color='text.accent'
-                    fontSize={['giant', 'enormous']}
-                    fontWeight='normal'
-                    lineHeight={['large', 'big']}
-                  >
-                    <FormattedMessage id='courses.sidebar.number' />
-                  </Text>
-                </Box>
-
-                <Layout flexBasis={[12, 8]} />
-
-                <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
-                  <Text
-                    color='text.primary'
-                    fontSize={['atom', 'tiny']}
-                    fontWeight='normal'
-                    lineHeight={['minor', 'small']}
-                  >
-                    <FormattedMessage id='courses.sidebar.sign' />
-                  </Text>
-                </Box>
-
-                <Layout flexBasis={[64, 0]} flexShrink='5' flexGrow='1' />
-
-                <Condition match={isMobile}>
-                  <Box flexShrink='0'>
-                    <Image src='./image/Default.png' width={64} height={64} />
-                  </Box>
-                </Condition>
-              </Box>
-            </Column>
+            </Box>
 
             <Layout flexBasis={[16, 32]} />
           </Column>
@@ -88,24 +86,22 @@ export const Sidebar = () => {
           <Layout flexBasis={[16, 32]} />
         </Row>
       </Background>
+
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
       <Condition match={isDesktop}>
-        <Box width='100%' height={72} alignItems='center'>
-          <Button
-            variant='primaryBackgroundWhiteText'
-            size='big'
-            gap={121}
-            icon={<MouseIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={48}
-            backgroundIcon='background.white'
-          >
-            <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='courses.sidebar.button-desktop' />
-            </Text>
-          </Button>
-        </Box>
+        <Button
+          variant='primaryBackgroundWhiteText'
+          size='big'
+          icon={<MouseIcon width={16} height={16} />}
+          widthIcon={48}
+          heightIcon={48}
+          backgroundIcon='background.white'
+        >
+          <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
+            <FormattedMessage id='courses.sidebar.button-desktop' />
+          </Text>
+        </Button>
       </Condition>
     </Column>
   )

@@ -20,7 +20,7 @@ export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box width='100%' justifyContent='center'>
+    <Row>
       <Layout flexBasis={[16, 230]} flexShrink='0' />
 
       <Column flexGrow='1'>
@@ -42,11 +42,10 @@ export const Faq = () => {
           <Condition match={isDesktop}>
             <Layout flexBasis={[0, 20]} flexGrow='1' />
 
-            <Box width={247} height={72} alignItems='center' flexShrink='0'>
+            <Box width={247} flexShrink='0'>
               <Button
                 variant='primaryBackgroundWhiteText'
                 size='big'
-                gap={24}
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
@@ -66,41 +65,36 @@ export const Faq = () => {
           <Divider backgroundColor='divider.grayGhost' weight='1px' />
         </Condition>
 
-        <Column>
-          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-          <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        </Column>
+        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
 
         <Condition match={isMobile}>
-          <Column>
-            <Layout flexBasis={60} />
+          <Layout flexBasis={60} />
 
-            <Box width={247} height={72} alignItems='center' flexShrink='0'>
-              <Button
-                variant='primaryBackgroundWhiteText'
-                size='big'
-                gap={24}
-                icon={<MailIcon width={16} height={16} />}
-                widthIcon={48}
-                heightIcon={48}
-                backgroundIcon='background.white'
-              >
-                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
-                  <FormattedMessage id='faq.button' />
-                </Text>
-              </Button>
-            </Box>
-          </Column>
+          <Box>
+            <Button
+              variant='primaryBackgroundWhiteText'
+              size='big'
+              icon={<MailIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={48}
+              backgroundIcon='background.white'
+            >
+              <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <FormattedMessage id='faq.button' />
+              </Text>
+            </Button>
+          </Box>
         </Condition>
 
         <Layout flexBasis={[80, 160]} />
       </Column>
 
       <Layout flexBasis={[16, 80]} flexShrink='0' />
-    </Box>
+    </Row>
   )
 }

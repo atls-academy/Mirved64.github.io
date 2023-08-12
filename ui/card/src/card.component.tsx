@@ -51,7 +51,7 @@ export const Card: FC<CardProps> = ({
       <Layout flexBasis={indent} />
 
       <Condition match={!isMobileOnly}>
-        <Box>
+        <Box maxWidth={[303, 496]}>
           <Text
             color='text.primary'
             fontSize={['medium', 'regular']}
@@ -72,7 +72,7 @@ export const Card: FC<CardProps> = ({
       </Condition>
 
       <Condition match={!!description}>
-        <Column flexBasis={[132, 84]} flexGrow={[1, 0]}>
+        <Column flexBasis={[132, 84]}>
           <Layout flexBasis={[12, 16]} />
 
           <Box maxWidth={[303, 694]}>

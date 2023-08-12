@@ -1,5 +1,4 @@
 import { Content }        from '@atls-ui-parts/button'
-import { Layout }         from '@atls-ui-parts/layout'
 
 import React              from 'react'
 import { FC }             from 'react'
@@ -9,11 +8,9 @@ import { IconAttachment } from './attachment'
 import { ButtonElement }  from './button.element'
 import { ButtonProps }    from './button.interfaces'
 
-export const Button: FC<ButtonProps> = forwardRef(({ children, gap, ...props }, ref) => (
-  <ButtonElement {...props} ref={ref}>
+export const Button: FC<ButtonProps> = forwardRef(({ children, ...props }, ref) => (
+  <ButtonElement {...props} ref={ref} contentAlign='space-between'>
     <Content>{children}</Content>
-
-    <Layout flexBasis={gap} />
 
     <IconAttachment
       icon={props.icon}

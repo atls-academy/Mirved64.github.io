@@ -16,7 +16,7 @@ export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Column flexGrow='1' alignItems='center'>
+    <Column>
       <Layout flexBasis={[64, 160]} />
 
       <Row>
@@ -60,21 +60,19 @@ export const About = () => {
           </Condition>
 
           <Condition match={isMobile}>
-            <Column>
-              <Box>
-                <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
-                  <FormattedMessage id='about.intro-mobile' />
-                </Text>
-              </Box>
+            <Box>
+              <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
+                <FormattedMessage id='about.intro-mobile' />
+              </Text>
+            </Box>
 
-              <Layout flexBasis={28} />
+            <Layout flexBasis={28} />
 
-              <Box>
-                <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
-                  <FormattedMessage id='about.central-idea' />
-                </Text>
-              </Box>
-            </Column>
+            <Box>
+              <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea' />
+              </Text>
+            </Box>
           </Condition>
 
           <Layout flexBasis={[0, 40]} />

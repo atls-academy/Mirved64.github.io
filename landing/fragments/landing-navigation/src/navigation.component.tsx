@@ -20,31 +20,25 @@ export const Navigation = () => {
   const intl = useIntl()
 
   return (
-    <Box width='100%' height={[80, 120]} alignItems='center' justifyContent='center'>
-      <Layout flexBasis={[0, 40]} />
-
+    <Row height={[80, 120]} alignItems='center' justifyContent='center'>
       <Condition match={isMobile}>
-        <Box flexGrow='1' justifyContent='center'>
-          <NextLink>
-            <LogoWhiteIcon width={40} height={40} />
-          </NextLink>
-        </Box>
+        <NextLink>
+          <LogoWhiteIcon width={40} height={40} />
+        </NextLink>
       </Condition>
 
       <Condition match={isDesktop}>
+        <Layout flexBasis={[0, 40]} />
+
         <Box>
           <NextLink>
             <LogoWhiteIcon width={56} height={56} />
           </NextLink>
         </Box>
-      </Condition>
 
-      <Condition match={isDesktop}>
         <Layout flexBasis={[0, 40]} flexGrow='1' />
-      </Condition>
 
-      <Condition match={isDesktop}>
-        <Row height='32px' flexBasis={860} flexShrink='1'>
+        <Row height='29px' flexBasis={860} flexShrink='1'>
           <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
 
           <Layout flexBasis={20} />
@@ -59,18 +53,13 @@ export const Navigation = () => {
 
           <Item name={intl.formatMessage({ id: 'navigation.item.faq' })} path='/' />
         </Row>
-      </Condition>
 
-      <Condition match={isDesktop}>
         <Layout flexBasis={[0, 40]} flexGrow='1' />
-      </Condition>
 
-      <Condition match={isDesktop}>
-        <Box width={163} height={64} flexShrink='0'>
+        <Box width={163}>
           <Button
             variant='ghostBackgroundWhiteText'
             size='normal'
-            gap={24}
             icon={<ArrowDownIcon width={16} height={16} />}
             widthIcon={48}
             heightIcon={48}
@@ -83,9 +72,8 @@ export const Navigation = () => {
             </NextLink>
           </Button>
         </Box>
+        <Layout flexBasis={[0, 40]} />
       </Condition>
-
-      <Layout flexBasis={[0, 40]} />
-    </Box>
+    </Row>
   )
 }

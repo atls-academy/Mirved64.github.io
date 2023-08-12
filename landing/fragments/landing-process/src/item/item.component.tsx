@@ -19,7 +19,7 @@ export const Item: FC<ItemProps> = ({
   divider = true,
 }) => (
   <Column>
-    <Row>
+    <Row alignItems={['start', 'center']}>
       <Box
         width={[35, 64]}
         height={[35, 64]}
@@ -42,13 +42,7 @@ export const Item: FC<ItemProps> = ({
       <Layout flexBasis={[12, 32]} flexShrink='0' />
 
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1' flexShrink='1'>
-        <Box
-          alignItems='center'
-          flexWrap='wrap'
-          flexBasis={[28, 367]}
-          flexShrink={[1, 0]}
-          flexGrow={[0, 1]}
-        >
+        <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
           <Text
             color='text.white'
             fontSize={['medium', 'regular']}
@@ -59,9 +53,9 @@ export const Item: FC<ItemProps> = ({
           </Text>
         </Box>
 
-        <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow={[0, 3]} />
+        <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow='3' />
 
-        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} alignItems='center'>
+        <Box flexBasis={[40, 560]}>
           <Text
             color='text.white'
             fontSize={['tiny', 'medium']}

@@ -22,7 +22,7 @@ const IndexPage = () => {
         <Navigation />
 
         <Condition match={isDesktop}>
-          <Parallax translateY={[-6.5, 10]}>
+          <Parallax translateY={[-7.5, 10]}>
             <Hero />
 
             <About />
