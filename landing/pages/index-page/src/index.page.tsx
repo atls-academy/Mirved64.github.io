@@ -1,52 +1,58 @@
-import React            from 'react'
-import { Parallax }     from 'react-scroll-parallax'
+import React              from 'react'
+import { Parallax }       from 'react-scroll-parallax'
 
-import { About }        from '@landing/fragment-about'
-import { Courses }      from '@landing/fragment-courses'
-import { Faq }          from '@landing/fragment-faq'
-import { Hero }         from '@landing/fragment-hero'
-import { Navigation }   from '@landing/fragment-navigation'
-import { Process }      from '@landing/fragment-process'
-import { Slider }       from '@landing/fragment-slider'
-import { Technologies } from '@landing/fragment-technologies'
-import { Background }   from '@ui/background'
+import { About }          from '@landing/fragment-about'
+import { Courses }        from '@landing/fragment-courses'
+import { Faq }            from '@landing/fragment-faq'
+import { Hero }           from '@landing/fragment-hero'
+import { Navigation }     from '@landing/fragment-navigation'
+import { Process }        from '@landing/fragment-process'
+import { Slider }         from '@landing/fragment-slider'
+import { Technologies }   from '@landing/fragment-technologies'
+import { Background }     from '@ui/background'
+import { Condition }      from '@ui/condition'
+import { useWindowWidth } from '@ui/utils'
 
-export const IndexPage = () => (
-  <>
-    {/* <Parallax
-      translateY={['0px', '-100px']}
-      
-    > */}
-    <Background backgroundColor='navyBlue'>
-      <Navigation />
-      <Hero />
-      <About />
-    </Background>
-    {/* </Parallax> */}
+const IndexPage = () => {
+  const { isMobile, isDesktop } = useWindowWidth()
 
-    <Parallax translateY={['0px', '-1830px']}>
+  return (
+    <>
+      <Background backgroundColor='navyBlue'>
+        <Navigation />
+
+        <Condition match={isDesktop}>
+          <Parallax translateY={[-6.5, 10]}>
+            <Hero />
+
+            <About />
+          </Parallax>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Hero />
+
+          <About />
+        </Condition>
+      </Background>
+
       <Background backgroundColor='white'>
         <Courses />
       </Background>
-    </Parallax>
 
-    <Parallax
-    translateY={['-1690px', '-3520px']}
-    >
-    <Background backgroundColor='darkPurple'>
-      <Process />
-      <Technologies />
-      <Slider />
-    </Background>
-    </Parallax>
+      <Background backgroundColor='darkPurple'>
+        <Process />
 
-    {/* <Parallax
-    // translateY={[-30, 100]}
-    > */}
-    <Background backgroundColor='white'>
-      <Faq />
-    </Background>
-    {/* </Parallax> */}
-  </>
-)
+        <Technologies />
+
+        <Slider />
+      </Background>
+
+      <Background backgroundColor='white'>
+        <Faq />
+      </Background>
+    </>
+  )
+}
+
 export default IndexPage
