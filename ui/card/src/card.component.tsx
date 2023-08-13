@@ -19,7 +19,12 @@ export const Card: FC<CardProps> = ({
   titleMobile,
   description,
 }) => (
-  <Background display='flex' backgroundColor='lightGray' width='100%'>
+  <Background
+    display='flex'
+    backgroundColor='lightGray'
+    width='100%'
+    borderRadius={['normal', 'regular']}
+  >
     <Layout flexBasis={[16, 40]} flexShrink='0' />
 
     <Column>
@@ -30,6 +35,7 @@ export const Card: FC<CardProps> = ({
         width={widthCategoryBox}
         alignItems='center'
         backgroundColor='background.white'
+        borderRadius='tiny'
       >
         <Layout flexBasis={[8, 12]} />
 

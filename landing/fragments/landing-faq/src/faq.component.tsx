@@ -45,11 +45,12 @@ export const Faq = () => {
             <Box width={247} flexShrink='0'>
               <Button
                 variant='primaryBackgroundWhiteText'
-                size='big'
+                size='hugeSizeRegularRadii'
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
                 backgroundIcon='background.white'
+                radiiIcon='normal'
               >
                 <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
                   <FormattedMessage id='faq.button' />
@@ -78,11 +79,12 @@ export const Faq = () => {
           <Box>
             <Button
               variant='primaryBackgroundWhiteText'
-              size='big'
-              icon={<MailIcon width={16} height={16} />}
-              widthIcon={48}
-              heightIcon={48}
+              size='bigSizeNormalRadiiSmallPadding'
+              icon={<MailIcon width={12} height={10} />}
+              widthIcon={32}
+              heightIcon={32}
               backgroundIcon='background.white'
+              radiiIcon='tiny'
             >
               <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
                 <FormattedMessage id='faq.button' />

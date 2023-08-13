@@ -17,6 +17,7 @@ export const Button: FC<ButtonProps> = forwardRef(({ children, ...props }, ref) 
       widthIcon={props.widthIcon}
       heightIcon={props.heightIcon}
       backgroundIcon={props.backgroundIcon}
+      radiiIcon={props.radiiIcon}
     />
   </ButtonElement>
 ))

@@ -18,7 +18,11 @@ export const Sidebar = () => {
 
   return (
     <Column flexShrink={[1, 0]} flexBasis={[212, 410]}>
-      <Background display='flex' backgroundColor='blackTransparent'>
+      <Background
+        display='flex'
+        backgroundColor='blackTransparent'
+        borderRadius={['normal', 'regular']}
+      >
         <Row order={[1, 0]}>
           <Layout flexBasis={[16, 32]} />
 
@@ -92,11 +96,12 @@ export const Sidebar = () => {
       <Condition match={isDesktop}>
         <Button
           variant='primaryBackgroundWhiteText'
-          size='big'
+          size='hugeSizeRegularRadii'
           icon={<MouseIcon width={16} height={16} />}
           widthIcon={48}
           heightIcon={48}
           backgroundIcon='background.white'
+          radiiIcon='normal'
         >
           <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
             <FormattedMessage id='courses.sidebar.button-desktop' />

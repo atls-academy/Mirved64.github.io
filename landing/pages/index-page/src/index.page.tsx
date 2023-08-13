@@ -36,11 +36,11 @@ const IndexPage = () => {
         </Condition>
       </Background>
 
-      <Background backgroundColor='white'>
+      <Background backgroundColor='white' borderRadius={['hugeTop', 'giantTop']}>
         <Courses />
       </Background>
 
-      <Background backgroundColor='darkPurple'>
+      <Background backgroundColor='darkPurple' borderRadius={['hugeTop', 'giantTop']}>
         <Process />
 
         <Technologies />
@@ -48,7 +48,7 @@ const IndexPage = () => {
         <Slider />
       </Background>
 
-      <Background backgroundColor='white'>
+      <Background backgroundColor='white' borderRadius={['hugeTop', 'giantTop']}>
         <Faq />
       </Background>
     </>

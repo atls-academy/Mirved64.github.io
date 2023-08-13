@@ -50,11 +50,12 @@ export const Courses = () => {
               <Box width={254} flexShrink='0'>
                 <Button
                   variant='primaryBackgroundWhiteText'
-                  size='big'
+                  size='hugeSizeRegularRadii'
                   icon={<ArrowRightIcon width={16} height={16} />}
                   widthIcon={48}
                   heightIcon={48}
                   backgroundIcon='background.white'
+                  radiiIcon='normal'
                 >
                   <NextLink>
                     <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
@@ -190,11 +191,12 @@ export const Courses = () => {
             <NextLink path='/' width='100%'>
               <Button
                 variant='primaryBackgroundWhiteText'
-                size='big'
-                icon={<ArrowRightIcon width={16} height={16} />}
-                widthIcon={48}
-                heightIcon={48}
+                size='bigSizeNormalRadiiSmallPadding'
+                icon={<ArrowRightIcon width={6} height={12} />}
+                widthIcon={32}
+                heightIcon={32}
                 backgroundIcon='background.white'
+                radiiIcon='tiny'
               >
                 <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
                   <FormattedMessage id='courses.button.all-materials' />

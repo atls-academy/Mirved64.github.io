@@ -68,6 +68,7 @@ export const Hero = () => {
               justifyContent='center'
               alignItems='center'
               backgroundColor='background.whiteTransparent'
+              borderRadius={['little', 'regular']}
             >
               <Text
                 color='text.white'
@@ -105,9 +106,11 @@ export const Hero = () => {
                 <Link href='https://web.telegram.org/'>
                   <Button
                     variant='ghostBackgroundWhiteText'
+                    size='littleSizeLittleRadii'
                     icon={<TelegramIcon width={15} height={12} />}
                     widthIcon={104}
                     heightIcon={44}
+                    radiiIcon='little'
                   />
                 </Link>
               </Box>
@@ -118,9 +121,11 @@ export const Hero = () => {
                 <Link href='https://github.com/'>
                   <Button
                     variant='ghostBackgroundWhiteText'
+                    size='littleSizeLittleRadii'
                     icon={<GitHubIcon width={15} height={15} />}
                     widthIcon={104}
                     heightIcon={44}
+                    radiiIcon='little'
                   />
                 </Link>
               </Box>
@@ -131,9 +136,11 @@ export const Hero = () => {
                 <Link href='https://www.google.com/intl/ru/gmail/about/'>
                   <Button
                     variant='ghostBackgroundWhiteText'
+                    size='littleSizeLittleRadii'
                     icon={<MailWhiteIcon width={18} height={14} />}
                     widthIcon={104}
                     heightIcon={44}
+                    radiiIcon='little'
                   />
                 </Link>
               </Box>
@@ -146,35 +153,41 @@ export const Hero = () => {
         <Condition match={isDesktop}>
           <Box alignItems='end'>
             <Column height='200px' justifyContent='space-between'>
-              <Box>
+              <Box width={56}>
                 <Link href='https://web.telegram.org/'>
                   <Button
                     variant='ghostBackgroundWhiteText'
+                    size='bigSizeNormalRadii'
                     icon={<TelegramIcon width={18} height={15} />}
                     widthIcon={56}
                     heightIcon={56}
+                    radiiIcon='normal'
                   />
                 </Link>
               </Box>
 
-              <Box>
+              <Box width={56}>
                 <Link href='https://github.com/'>
                   <Button
                     variant='ghostBackgroundWhiteText'
+                    size='bigSizeNormalRadii'
                     icon={<GitHubIcon width={18} height={18} />}
                     widthIcon={56}
                     heightIcon={56}
+                    radiiIcon='normal'
                   />
                 </Link>
               </Box>
 
-              <Box>
+              <Box width={56}>
                 <Link href='https://www.google.com/intl/ru/gmail/about/'>
                   <Button
                     variant='ghostBackgroundWhiteText'
+                    size='bigSizeNormalRadii'
                     icon={<MailWhiteIcon width={18} height={14} />}
                     widthIcon={56}
                     heightIcon={56}
+                    radiiIcon='normal'
                   />
                 </Link>
               </Box>

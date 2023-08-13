@@ -22,9 +22,35 @@ export const Navigation = () => {
   return (
     <Row height={[80, 120]} alignItems='center' justifyContent='center'>
       <Condition match={isMobile}>
-        <NextLink>
-          <LogoWhiteIcon width={40} height={40} />
-        </NextLink>
+        <Layout flexBasis={20} />
+
+        <Box>
+          <NextLink>
+            <LogoWhiteIcon width={40} height={40} />
+          </NextLink>
+        </Box>
+
+        <Layout flexBasis={195} flexGrow='1' flexShrink='10' />
+
+        <Box width={100}>
+          <Button
+            variant='ghostBackgroundWhiteText'
+            size='smallSizeLittleRadii'
+            icon={<ArrowDownIcon width={9} height={5} />}
+            widthIcon={28}
+            heightIcon={28}
+            backgroundIcon='background.white'
+            radiiIcon='atom'
+          >
+            <NextLink>
+              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='tiny'>
+                <FormattedMessage id='navigation.button' />
+              </Text>
+            </NextLink>
+          </Button>
+        </Box>
+
+        <Layout flexBasis={20} />
       </Condition>
 
       <Condition match={isDesktop}>
@@ -56,14 +82,15 @@ export const Navigation = () => {
 
         <Layout flexBasis={[0, 40]} flexGrow='1' />
 
-        <Box width={163}>
+        <Box width={136}>
           <Button
             variant='ghostBackgroundWhiteText'
-            size='normal'
-            icon={<ArrowDownIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={48}
+            size='bigSizeNormalRadiiBigPadding'
+            icon={<ArrowDownIcon width={12} height={6} />}
+            widthIcon={40}
+            heightIcon={40}
             backgroundIcon='background.white'
+            radiiIcon='little'
           >
             <NextLink>
               <Text color='white' fontSize='compact' fontWeight='normal' lineHeight='little'>

@@ -11,6 +11,7 @@ export const Delimiter = () => (
     height={52}
     alignItems='center'
     justifyContent='center'
+    borderRadius='little'
   >
     <Image src='./image/Default.png' width={40} height={40} />
   </Box>

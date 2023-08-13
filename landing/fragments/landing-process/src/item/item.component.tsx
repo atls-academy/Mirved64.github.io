@@ -27,6 +27,7 @@ export const Item: FC<ItemProps> = ({
         justifyContent='center'
         backgroundColor='background.whiteTransparent'
         flexShrink='0'
+        borderRadius={['little', 'ordinary']}
       >
         <Text
           color='text.white'
