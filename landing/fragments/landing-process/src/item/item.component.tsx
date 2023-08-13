@@ -70,13 +70,11 @@ export const Item: FC<ItemProps> = ({
     </Row>
 
     <Condition match={divider}>
-      <Column>
-        <Layout flexBasis={[28, 48]} />
+      <Layout flexBasis={[28, 48]} />
 
-        <Divider backgroundColor='divider.ghost' weight={weight} />
+      <Divider backgroundColor='divider.ghost' weight={weight} />
 
-        <Layout flexBasis={[28, 48]} />
-      </Column>
+      <Layout flexBasis={[28, 48]} />
     </Condition>
   </Column>
 )

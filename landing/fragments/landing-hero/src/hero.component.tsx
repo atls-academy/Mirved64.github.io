@@ -145,7 +145,7 @@ export const Hero = () => {
 
         <Condition match={isDesktop}>
           <Box alignItems='end'>
-            <Column height='200px' justifyContent='space-around'>
+            <Column height='200px' justifyContent='space-between'>
               <Box>
                 <Link href='https://web.telegram.org/'>
                   <Button
