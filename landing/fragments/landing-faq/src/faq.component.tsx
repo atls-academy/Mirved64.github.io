@@ -61,7 +61,7 @@ export const Faq = () => {
         <Layout flexBasis={[60, 80]} />
 
         <Condition match={isDesktop}>
-          <Divider backgroundColor='divider.grayGhost' weight='1px' />
+          <Divider backgroundColor='divider.grayGhost' weight={1} />
         </Condition>
 
         <Item question={intl.formatMessage({ id: 'faq.question' })} />

@@ -22,7 +22,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => (
 
         <Layout flexBasis={10} />
 
-        <Divider backgroundColor='divider.white' weight='1px' />
+        <Divider backgroundColor='divider.white' weight={1} />
       </Column>
     </NextLink>
   </Box>
