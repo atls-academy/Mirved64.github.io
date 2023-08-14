@@ -48,7 +48,7 @@ export const Hero = () => {
             </Text>
           </Box>
 
-          <Row flexWrap='wrap'>
+          <Row flexWrap='wrap' alignItems='center'>
             <Box>
               <Text
                 color='text.white'
@@ -64,7 +64,7 @@ export const Hero = () => {
 
             <Box
               width={[49, 134]}
-              height={[39, 116]}
+              height={[39, 96]}
               justifyContent='center'
               alignItems='center'
               backgroundColor='background.whiteTransparent'
