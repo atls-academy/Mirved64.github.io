@@ -4,12 +4,12 @@ import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
-import { LogoWhiteIcon }    from '@ui/icons'
 import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
+import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
@@ -22,18 +22,18 @@ export const Navigation = () => {
   return (
     <Row height={[80, 120]} alignItems='center' justifyContent='center'>
       <Condition match={isMobile}>
-        <NextLink>
-          <LogoWhiteIcon width={40} height={40} />
-        </NextLink>
+        <Box>
+          <Logo fill='white' logoWidth={40} logoHeight={40} />
+        </Box>
       </Condition>
 
       <Condition match={isDesktop}>
         <Layout flexBasis={[0, 40]} />
 
         <Box>
-          <NextLink>
-            <LogoWhiteIcon width={56} height={56} />
-          </NextLink>
+          <Box>
+            <Logo fill='white' logoWidth={56} logoHeight={56} />
+          </Box>
         </Box>
 
         <Layout flexBasis={[0, 40]} flexGrow='1' />
