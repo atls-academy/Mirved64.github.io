@@ -149,38 +149,42 @@ export const Courses = () => {
       </Row>
 
       <Condition match={isMobile}>
-        <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
-          <SwiperSlide>
-            <Card
-              indent={62}
-              category={formatMessage({
-                id: 'courses.card.learning-material',
-              })}
-              widthCategoryBox={142}
-              isMobileOnly
-              titleMobile={formatMessage({
-                id: 'courses.card.how-use-libraries',
-              })}
-            />
-          </SwiperSlide>
+        <Row>
+          <Layout flexBasis={20} flexShrink='0' />
 
-          <SwiperSlide>
-            <Card
-              indent={62}
-              category={formatMessage({
-                id: 'courses.card.learning-material',
-              })}
-              widthCategoryBox={142}
-              isMobileOnly
-              titleMobile={formatMessage({
-                id: 'courses.card.design-figma-math',
-              })}
-            />
-          </SwiperSlide>
-        </Swiper>
+          <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
+            <SwiperSlide>
+              <Card
+                indent={62}
+                category={formatMessage({
+                  id: 'courses.card.learning-material',
+                })}
+                widthCategoryBox={142}
+                isMobileOnly
+                titleMobile={formatMessage({
+                  id: 'courses.card.how-use-libraries',
+                })}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Card
+                indent={62}
+                category={formatMessage({
+                  id: 'courses.card.learning-material',
+                })}
+                widthCategoryBox={142}
+                isMobileOnly
+                titleMobile={formatMessage({
+                  id: 'courses.card.design-figma-math',
+                })}
+              />
+            </SwiperSlide>
+          </Swiper>
+        </Row>
       </Condition>
 
-      <Layout flexBasis={[52, 160]} />
+      <Layout flexBasis={[20, 160]} />
 
       <Condition match={isMobile}>
         <Row>
