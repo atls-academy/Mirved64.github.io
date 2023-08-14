@@ -11,13 +11,7 @@ import { Text }      from '@ui/text'
 
 import { ItemProps } from './item.interfaces'
 
-export const Item: FC<ItemProps> = ({
-  sequenceNumber,
-  name,
-  description,
-  weight,
-  divider = true,
-}) => (
+export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
   <Column>
     <Row alignItems={['start', 'center']}>
       <Box
@@ -34,7 +28,7 @@ export const Item: FC<ItemProps> = ({
           lineHeight={['little', 'mini']}
           fontFamily='regular'
         >
-          {sequenceNumber}
+          {props.sequenceNumber}
         </Text>
       </Box>
 
@@ -43,7 +37,7 @@ export const Item: FC<ItemProps> = ({
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1'>
         <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
           <Text color='text.white' fontSize={['medium', 'regular']} lineHeight={['usual', 'mean']}>
-            {name}
+            {props.name}
           </Text>
         </Box>
 
@@ -56,7 +50,7 @@ export const Item: FC<ItemProps> = ({
             lineHeight={['compact', 'standart']}
             textWrap='wrap'
           >
-            {description}
+            {props.description}
           </Text>
         </Box>
       </Box>
@@ -66,7 +60,7 @@ export const Item: FC<ItemProps> = ({
       <Column>
         <Layout flexBasis={[28, 48]} />
 
-        <Divider backgroundColor='divider.ghost' weight={weight} />
+        <Divider backgroundColor='divider.ghost' weight={1} />
 
         <Layout flexBasis={[28, 48]} />
       </Column>
