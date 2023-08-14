@@ -1,7 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { GitHubIcon }       from '@ui/icons'
@@ -11,9 +10,10 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { Link }             from '@ui/link'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
+
+import { SocialLink }       from './social-link'
 
 export const Hero = () => {
   const { isMobile, isDesktop } = useWindowWidth()
@@ -72,42 +72,21 @@ export const Hero = () => {
 
           <Condition match={isMobile}>
             <Row>
-              <Box>
-                <Link href='https://web.telegram.org/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    icon={<TelegramIcon width={15} height={12} />}
-                    widthIcon={104}
-                    heightIcon={44}
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<TelegramIcon width={15} height={12} />}
+                href='https://web.telegram.org/'
+              />
 
               <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-              <Box>
-                <Link href='https://github.com/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    icon={<GitHubIcon width={15} height={15} />}
-                    widthIcon={104}
-                    heightIcon={44}
-                  />
-                </Link>
-              </Box>
+              <SocialLink icon={<GitHubIcon width={15} height={15} />} href='https://github.com/' />
 
               <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-              <Box>
-                <Link href='https://www.google.com/intl/ru/gmail/about/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    icon={<MailWhiteIcon width={18} height={14} />}
-                    widthIcon={104}
-                    heightIcon={44}
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<MailWhiteIcon width={18} height={14} />}
+                href='https://www.google.com/intl/ru/gmail/about/'
+              />
             </Row>
           </Condition>
         </Column>
@@ -117,38 +96,17 @@ export const Hero = () => {
         <Condition match={isDesktop}>
           <Box alignItems='end'>
             <Column height='200px' justifyContent='space-around'>
-              <Box>
-                <Link href='https://web.telegram.org/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    icon={<TelegramIcon width={18} height={15} />}
-                    widthIcon={56}
-                    heightIcon={56}
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<TelegramIcon width={15} height={12} />}
+                href='https://web.telegram.org/'
+              />
 
-              <Box>
-                <Link href='https://github.com/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    icon={<GitHubIcon width={18} height={18} />}
-                    widthIcon={56}
-                    heightIcon={56}
-                  />
-                </Link>
-              </Box>
+              <SocialLink icon={<GitHubIcon width={15} height={15} />} href='https://github.com/' />
 
-              <Box>
-                <Link href='https://www.google.com/intl/ru/gmail/about/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    icon={<MailWhiteIcon width={18} height={14} />}
-                    widthIcon={56}
-                    heightIcon={56}
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<MailWhiteIcon width={18} height={14} />}
+                href='https://www.google.com/intl/ru/gmail/about/'
+              />
             </Column>
           </Box>
         </Condition>
