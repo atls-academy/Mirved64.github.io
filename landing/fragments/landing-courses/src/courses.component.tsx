@@ -68,7 +68,7 @@ export const Courses = () => {
 
           <Layout flexBasis={[40, 80]} />
 
-          <Divider backgroundColor='divider.black' weight='1px' />
+          <Divider backgroundColor='divider.grayGhost' weight='1px' />
 
           <Layout flexBasis={[40, 80]} />
 
