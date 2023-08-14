@@ -48,6 +48,7 @@ export const Hero = () => {
                 alignItems='center'
                 backgroundColor='background.whiteTransparent'
                 borderRadius={['little', 'regular']}
+                border='thinnestGhost'
               >
                 <Text
                   color='text.white'

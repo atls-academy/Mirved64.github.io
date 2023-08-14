@@ -147,6 +147,7 @@ export const Slider = () => {
           alignItems='center'
           justifyContent='center'
           borderRadius='little'
+          border='thinnestGhostWhite'
         >
           <Text
             color='text.white'

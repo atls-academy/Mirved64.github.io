@@ -22,6 +22,7 @@ export const Sidebar = () => {
         display='flex'
         backgroundColor='blackTransparent'
         borderRadius={['normal', 'regular']}
+        border='thinnestGhostGray'
       >
         <Row order={[1, 0]}>
           <Layout flexBasis={[16, 32]} />
