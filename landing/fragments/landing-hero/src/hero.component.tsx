@@ -26,34 +26,14 @@ export const Hero = () => {
         <Layout flexBasis={[20, 230]} flexShrink='0' />
 
         <Column flexBasis={[335, 1460]} flexGrow={[1, 0]}>
-          <Box>
-            <Text
-              color='text.white'
-              fontSize={['normal', 'stupendous']}
-              lineHeight={['ordinary', 'stupendous']}
-            >
-              <FormattedMessage id='hero.title.teach' />
-            </Text>
-          </Box>
-
-          <Box>
-            <Text
-              color='text.white'
-              fontSize={['normal', 'stupendous']}
-              lineHeight={['ordinary', 'stupendous']}
-            >
-              <FormattedMessage id='hero.title.professionals' />
-            </Text>
-          </Box>
-
-          <Row flexWrap='wrap'>
-            <Box>
+          <Row alignItems='end' flexWrap='wrap'>
+            <Box width={[225, 770]}>
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
                 lineHeight={['ordinary', 'stupendous']}
               >
-                <FormattedMessage id='hero.title.revolution' />
+                <FormattedMessage id='hero.title.text' />
               </Text>
             </Box>
 
