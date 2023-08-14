@@ -30,7 +30,6 @@ export const Hero = () => {
             <Text
               color='text.white'
               fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
               lineHeight={['ordinary', 'stupendous']}
             >
               <FormattedMessage id='hero.title.teach' />
@@ -41,7 +40,6 @@ export const Hero = () => {
             <Text
               color='text.white'
               fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
               lineHeight={['ordinary', 'stupendous']}
             >
               <FormattedMessage id='hero.title.professionals' />
@@ -53,7 +51,6 @@ export const Hero = () => {
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
-                fontWeight='normal'
                 lineHeight={['ordinary', 'stupendous']}
               >
                 <FormattedMessage id='hero.title.revolution' />
@@ -72,7 +69,6 @@ export const Hero = () => {
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
-                fontWeight='normal'
                 lineHeight={['ordinary', 'stupendous']}
               >
                 <FormattedMessage id='hero.title.it' />
@@ -87,12 +83,7 @@ export const Hero = () => {
           <Layout flexBasis={[24, 48]} />
 
           <Box flexWrap='wrap' maxWidth={[335, 640]} flexShrink='1'>
-            <Text
-              color='text.white'
-              fontSize={['tiny', 'small']}
-              fontWeight='normal'
-              lineHeight={['small', 'normal']}
-            >
+            <Text color='text.white' fontSize={['tiny', 'small']} lineHeight={['small', 'normal']}>
               <FormattedMessage id='hero.slogan' />
             </Text>
           </Box>

@@ -37,7 +37,6 @@ export const Courses = () => {
               <Text
                 color='text.primary'
                 fontSize={['regular', 'stupendous']}
-                fontWeight='normal'
                 lineHeight={['common', 'stupendous']}
               >
                 <FormattedMessage id='courses.title' />
@@ -57,7 +56,7 @@ export const Courses = () => {
                   backgroundIcon='background.white'
                 >
                   <NextLink>
-                    <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
+                    <Text color='white' fontSize='small' lineHeight='small'>
                       <FormattedMessage id='courses.button.all-materials' />
                     </Text>
                   </NextLink>
@@ -200,7 +199,7 @@ export const Courses = () => {
                 heightIcon={48}
                 backgroundIcon='background.white'
               >
-                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
+                <Text color='white' fontSize='small' lineHeight='small'>
                   <FormattedMessage id='courses.button.all-materials' />
                 </Text>
               </Button>

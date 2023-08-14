@@ -29,7 +29,6 @@ export const About = () => {
                 display='inline'
                 color='text.white'
                 fontSize='common'
-                fontWeight='normal'
                 lineHeight='huge'
                 wordWrap='break-word'
               >
@@ -46,7 +45,6 @@ export const About = () => {
                 display='inline'
                 color='text.white'
                 fontSize='common'
-                fontWeight='normal'
                 lineHeight='huge'
                 wordWrap='break-word'
               >
@@ -61,7 +59,7 @@ export const About = () => {
 
           <Condition match={isMobile}>
             <Box>
-              <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
                 <FormattedMessage id='about.intro-mobile' />
               </Text>
             </Box>
@@ -69,7 +67,7 @@ export const About = () => {
             <Layout flexBasis={28} />
 
             <Box>
-              <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
                 <FormattedMessage id='about.central-idea' />
               </Text>
             </Box>
@@ -83,7 +81,6 @@ export const About = () => {
                 display='inline'
                 color='text.white'
                 fontSize='common'
-                fontWeight='normal'
                 lineHeight='huge'
                 wordWrap='break-word'
               >

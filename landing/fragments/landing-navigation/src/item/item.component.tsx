@@ -15,13 +15,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => (
     <NextLink path={path} width='100%'>
       <Column alignItems='center'>
         <Box>
-          <Text
-            color='text.white'
-            fontSize='compact'
-            fontWeight='normal'
-            lineHeight='little'
-            textTransform='uppercase'
-          >
+          <Text color='text.white' fontSize='compact' lineHeight='little' textTransform='uppercase'>
             {name}
           </Text>
         </Box>

@@ -13,7 +13,6 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.power-broker' />
@@ -25,7 +24,6 @@ export const Info = () => (
         display='inline'
         color='text.accent'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.atlantis' />
@@ -37,7 +35,6 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.has-an-impact-on' />
@@ -49,7 +46,6 @@ export const Info = () => (
         display='inline'
         color='text.accent'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.it' />
@@ -61,7 +57,6 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.unlimited-possibilities' />
@@ -73,7 +68,6 @@ export const Info = () => (
         display='inline'
         color='text.accent'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.use-skills' />
@@ -83,7 +77,6 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.point' />
@@ -97,7 +90,6 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.advantage-of-learning' />
@@ -109,7 +101,6 @@ export const Info = () => (
         display='inline'
         color='text.accent'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.practice' />
@@ -121,7 +112,6 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        fontWeight='normal'
         lineHeight={['normal', 'regular']}
       >
         <FormattedMessage id='courses.subtitle.on-existing-projects' />

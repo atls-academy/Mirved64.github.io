@@ -29,7 +29,6 @@ export const Sidebar = () => {
               <Text
                 color='text.primary'
                 fontSize={['tiny', 'little']}
-                fontWeight='normal'
                 lineHeight={['compact', 'medium']}
               >
                 <FormattedMessage id='courses.sidebar.subtitle' />
@@ -51,7 +50,6 @@ export const Sidebar = () => {
                 <Text
                   color='text.accent'
                   fontSize={['giant', 'enormous']}
-                  fontWeight='normal'
                   lineHeight={['large', 'big']}
                 >
                   <FormattedMessage id='courses.sidebar.number' />
@@ -64,7 +62,6 @@ export const Sidebar = () => {
                 <Text
                   color='text.primary'
                   fontSize={['atom', 'tiny']}
-                  fontWeight='normal'
                   lineHeight={['minor', 'small']}
                 >
                   <FormattedMessage id='courses.sidebar.sign' />
@@ -98,7 +95,7 @@ export const Sidebar = () => {
           heightIcon={48}
           backgroundIcon='background.white'
         >
-          <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
+          <Text color='white' fontSize='small' lineHeight='small'>
             <FormattedMessage id='courses.sidebar.button-desktop' />
           </Text>
         </Button>

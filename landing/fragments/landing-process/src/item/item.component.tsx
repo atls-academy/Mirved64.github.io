@@ -31,7 +31,6 @@ export const Item: FC<ItemProps> = ({
         <Text
           color='text.white'
           fontSize={['compact', 'medium']}
-          fontWeight='normal'
           lineHeight={['little', 'mini']}
           fontFamily='regular'
         >
@@ -43,12 +42,7 @@ export const Item: FC<ItemProps> = ({
 
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1' flexShrink='1'>
         <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
-          <Text
-            color='text.white'
-            fontSize={['medium', 'regular']}
-            fontWeight='normal'
-            lineHeight={['usual', 'mean']}
-          >
+          <Text color='text.white' fontSize={['medium', 'regular']} lineHeight={['usual', 'mean']}>
             {name}
           </Text>
         </Box>
@@ -59,7 +53,6 @@ export const Item: FC<ItemProps> = ({
           <Text
             color='text.white'
             fontSize={['tiny', 'medium']}
-            fontWeight='normal'
             lineHeight={['compact', 'standart']}
             textWrap='wrap'
           >

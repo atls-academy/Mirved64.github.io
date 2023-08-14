@@ -31,7 +31,6 @@ export const Faq = () => {
             <Text
               color='text.primary'
               fontSize={['ordinary', 'stupendous']}
-              fontWeight='normal'
               lineHeight={['regular', 'massive']}
               letter='-2%'
             >
@@ -51,7 +50,7 @@ export const Faq = () => {
                 heightIcon={48}
                 backgroundIcon='background.white'
               >
-                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <Text color='white' fontSize='small' lineHeight='compact'>
                   <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
@@ -84,7 +83,7 @@ export const Faq = () => {
               heightIcon={48}
               backgroundIcon='background.white'
             >
-              <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
+              <Text color='white' fontSize='small' lineHeight='compact'>
                 <FormattedMessage id='faq.button' />
               </Text>
             </Button>

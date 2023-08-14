@@ -33,7 +33,6 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => {
           <Text
             color='text.primary'
             fontSize={['small', 'ordinary']}
-            fontWeight='normal'
             lineHeight={['normal', 'regular']}
           >
             {question}

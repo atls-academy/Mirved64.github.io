@@ -66,7 +66,7 @@ export const Navigation = () => {
             backgroundIcon='background.white'
           >
             <NextLink>
-              <Text color='white' fontSize='compact' fontWeight='normal' lineHeight='little'>
+              <Text color='white' fontSize='compact' lineHeight='little'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </NextLink>
