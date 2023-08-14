@@ -13,7 +13,7 @@ import { useWindowWidth } from '@ui/utils'
 
 import { QuestionProps }  from './item.interfaces'
 
-export const Item: FC<QuestionProps> = ({ question, divider }) => {
+export const Item: FC<QuestionProps> = ({ question }) => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
@@ -50,7 +50,7 @@ export const Item: FC<QuestionProps> = ({ question, divider }) => {
 
       <Layout flexBasis={[16, 40]} />
 
-      <Divider backgroundColor='divider.grayGhost' weight={divider} />
+      <Divider backgroundColor='divider.grayGhost' weight={1} />
     </Column>
   )
 }

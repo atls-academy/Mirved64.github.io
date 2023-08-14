@@ -64,12 +64,12 @@ export const Faq = () => {
           <Divider backgroundColor='divider.grayGhost' weight='1px' />
         </Condition>
 
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
 
         <Condition match={isMobile}>
           <Layout flexBasis={60} />
