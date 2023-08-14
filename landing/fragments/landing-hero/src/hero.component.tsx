@@ -58,11 +58,11 @@ export const Hero = () => {
 
           <Layout flexBasis={[24, 48]} />
 
-          <Divider backgroundColor='divider.white' weight={1} flexShrink='1' />
+          <Divider backgroundColor='divider.white' weight={1} />
 
           <Layout flexBasis={[24, 48]} />
 
-          <Box flexWrap='wrap' maxWidth={[335, 640]} flexShrink='1'>
+          <Box flexWrap='wrap' maxWidth={[335, 640]}>
             <Text color='text.white' fontSize={['tiny', 'small']} lineHeight={['small', 'normal']}>
               <FormattedMessage id='hero.slogan' />
             </Text>

@@ -43,7 +43,7 @@ export const Courses = () => {
               </Text>
             </Box>
 
-            <Layout flexBasis={20} flexShrink='1' flexGrow='1' />
+            <Layout flexBasis={20} flexGrow='1' />
 
             <Condition match={isDesktop}>
               <Box width={254} flexShrink='0'>

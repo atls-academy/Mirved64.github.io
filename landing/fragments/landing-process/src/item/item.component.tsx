@@ -40,7 +40,7 @@ export const Item: FC<ItemProps> = ({
 
       <Layout flexBasis={[12, 32]} flexShrink='0' />
 
-      <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1' flexShrink='1'>
+      <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1'>
         <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
           <Text color='text.white' fontSize={['medium', 'regular']} lineHeight={['usual', 'mean']}>
             {name}

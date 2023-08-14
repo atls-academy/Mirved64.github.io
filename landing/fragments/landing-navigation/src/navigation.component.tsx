@@ -38,7 +38,7 @@ export const Navigation = () => {
 
         <Layout flexBasis={[0, 40]} flexGrow='1' />
 
-        <Row height='29px' flexBasis={860} flexShrink='1'>
+        <Row height='29px' flexBasis={860}>
           <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
 
           <Layout flexBasis={20} />
