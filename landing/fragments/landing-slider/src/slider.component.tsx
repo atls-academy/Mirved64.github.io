@@ -5,7 +5,7 @@ import { Button }              from '@ui/button'
 import { Condition }           from '@ui/condition'
 import { ArrowLeftWhiteIcon }  from '@ui/icons'
 import { ArrowRightWhiteIcon } from '@ui/icons'
-import { ImageBlock }          from '@ui/image'
+import { Image }               from '@ui/image'
 import { Box }                 from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { Layout }              from '@ui/layout'
@@ -116,16 +116,44 @@ export const Slider = () => {
 
       <Layout flexBasis={[24, 50]} flexShrink='0' />
 
-      <Box
-        width={[155, 960]}
-        border={['thinGhost', 'boldGhost']}
-        justifyContent='center'
-        borderRadius={['ordinary', 'regular']}
-      >
-        <Box maxHeight={540} width={[138, 'auto']} height={[340, 'auto']}>
-          <ImageBlock src='./image/mockup.png' />
+      <Condition match={isDesktop}>
+        <Box
+          width={960}
+          border='boldGhost'
+          justifyContent='center'
+          borderRadius='regular'
+          position='relative'
+          maxHeight={540}
+          overflow='hidden'
+        >
+          <Box position='absolute'>
+            <Image src='./image/integrated-title-bar.png' width={936} height={25} />
+          </Box>
+
+          <Box>
+            <Image src='./image/mockup.png' width={720} height={540} />
+          </Box>
         </Box>
-      </Box>
+      </Condition>
+
+      <Condition match={isMobile}>
+        <Box
+          position='relative'
+          width={155}
+          border='thinGhost'
+          justifyContent='center'
+          borderRadius='ordinary'
+          overflow='hidden'
+        >
+          <Box position='absolute' top='2px'>
+            <Image src='./image/toolbar-mobile.png' width={143} height={22} />
+          </Box>
+
+          <Box width={155} height={323} justifyContent='center'>
+            <Image src='./image/mockup.png' width={138} height={339} />
+          </Box>
+        </Box>
+      </Condition>
 
       <Layout flexBasis={[24, 32]} />
 
