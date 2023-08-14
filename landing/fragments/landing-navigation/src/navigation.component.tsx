@@ -4,12 +4,12 @@ import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
-import { LogoWhiteIcon }    from '@ui/icons'
 import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
+import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
@@ -25,9 +25,7 @@ export const Navigation = () => {
         <Layout flexBasis={20} />
 
         <Box>
-          <NextLink>
-            <LogoWhiteIcon width={40} height={40} />
-          </NextLink>
+          <Logo fill='white' logoWidth={40} logoHeight={40} />
         </Box>
 
         <Layout flexBasis={195} flexGrow='1' flexShrink='10' />
@@ -57,14 +55,14 @@ export const Navigation = () => {
         <Layout flexBasis={[0, 40]} />
 
         <Box>
-          <NextLink>
-            <LogoWhiteIcon width={56} height={56} />
-          </NextLink>
+          <Box>
+            <Logo fill='white' logoWidth={56} logoHeight={56} />
+          </Box>
         </Box>
 
         <Layout flexBasis={[0, 40]} flexGrow='1' />
 
-        <Row height='29px' flexBasis={860} flexShrink='1'>
+        <Row height='29px' flexBasis={860}>
           <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
 
           <Layout flexBasis={20} />
@@ -93,7 +91,7 @@ export const Navigation = () => {
             radiiIcon='little'
           >
             <NextLink>
-              <Text color='white' fontSize='compact' fontWeight='normal' lineHeight='little'>
+              <Text color='white' fontSize='compact' lineHeight='little'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </NextLink>

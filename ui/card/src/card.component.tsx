@@ -10,15 +10,7 @@ import { Text }       from '@ui/text'
 
 import { CardProps }  from './card.interfaces'
 
-export const Card: FC<CardProps> = ({
-  indent,
-  category,
-  widthCategoryBox,
-  isMobileOnly = false,
-  titleDesktop,
-  titleMobile,
-  description,
-}) => (
+export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => (
   <Background
     display='flex'
     backgroundColor='lightGray'
@@ -32,7 +24,7 @@ export const Card: FC<CardProps> = ({
 
       <Box
         flexBasis={[27, 38]}
-        width={widthCategoryBox}
+        width={props.widthCategoryBox}
         alignItems='center'
         backgroundColor='background.white'
         borderRadius='tiny'
@@ -43,41 +35,39 @@ export const Card: FC<CardProps> = ({
           <Text
             color='text.primary'
             fontSize={['subAtom', 'tiny']}
-            fontWeight='normal'
             lineHeight={['atom', 'tiny']}
             textTransform='uppercase'
           >
-            {category}
+            {props.category}
           </Text>
         </Box>
 
         <Layout flexBasis={[8, 12]} />
       </Box>
 
-      <Layout flexBasis={indent} />
+      <Layout flexBasis={props.indent} />
 
       <Condition match={!isMobileOnly}>
         <Box maxWidth={[303, 496]}>
           <Text
             color='text.primary'
             fontSize={['medium', 'regular']}
-            fontWeight='normal'
             lineHeight={['normal', 'mean']}
           >
-            {titleDesktop}
+            {props.titleDesktop}
           </Text>
         </Box>
       </Condition>
 
       <Condition match={isMobileOnly}>
         <Box maxWidth={228}>
-          <Text color='text.primary' fontSize='small' fontWeight='normal' lineHeight='tiddly'>
-            {titleMobile}
+          <Text color='text.primary' fontSize='small' lineHeight='tiddly'>
+            {props.titleMobile}
           </Text>
         </Box>
       </Condition>
 
-      <Condition match={!!description}>
+      <Condition match={!!props.description}>
         <Column flexBasis={[132, 84]}>
           <Layout flexBasis={[12, 16]} />
 
@@ -85,10 +75,9 @@ export const Card: FC<CardProps> = ({
             <Text
               color='text.primary'
               fontSize={['tiny', 'small']}
-              fontWeight='normal'
               lineHeight={['small', 'normal']}
             >
-              {description}
+              {props.description}
             </Text>
           </Box>
         </Column>

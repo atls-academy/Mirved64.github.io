@@ -31,7 +31,6 @@ export const Faq = () => {
             <Text
               color='text.primary'
               fontSize={['ordinary', 'stupendous']}
-              fontWeight='normal'
               lineHeight={['regular', 'massive']}
               letter='-2%'
             >
@@ -52,7 +51,7 @@ export const Faq = () => {
                 backgroundIcon='background.white'
                 radiiIcon='normal'
               >
-                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
+                <Text color='white' fontSize='small' lineHeight='compact'>
                   <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
@@ -63,15 +62,15 @@ export const Faq = () => {
         <Layout flexBasis={[60, 80]} />
 
         <Condition match={isDesktop}>
-          <Divider backgroundColor='divider.grayGhost' weight='1px' />
+          <Divider backgroundColor='divider.grayGhost' weight={1} />
         </Condition>
 
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} divider={1} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        <Item question={intl.formatMessage({ id: 'faq.question' })} />
 
         <Condition match={isMobile}>
           <Layout flexBasis={60} />
@@ -86,7 +85,7 @@ export const Faq = () => {
               backgroundIcon='background.white'
               radiiIcon='tiny'
             >
-              <Text color='white' fontSize='small' fontWeight='normal' lineHeight='compact'>
+              <Text color='white' fontSize='small' lineHeight='compact'>
                 <FormattedMessage id='faq.button' />
               </Text>
             </Button>

@@ -1,7 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { GitHubIcon }       from '@ui/icons'
@@ -11,9 +10,10 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { Link }             from '@ui/link'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
+
+import { SocialLink }       from './social-link'
 
 export const Hero = () => {
   const { isMobile, isDesktop } = useWindowWidth()
@@ -26,37 +26,14 @@ export const Hero = () => {
         <Layout flexBasis={[20, 230]} flexShrink='0' />
 
         <Column flexBasis={[335, 1460]} flexGrow={[1, 0]}>
-          <Box>
-            <Text
-              color='text.white'
-              fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
-              lineHeight={['ordinary', 'stupendous']}
-            >
-              <FormattedMessage id='hero.title.teach' />
-            </Text>
-          </Box>
-
-          <Box>
-            <Text
-              color='text.white'
-              fontSize={['normal', 'stupendous']}
-              fontWeight='normal'
-              lineHeight={['ordinary', 'stupendous']}
-            >
-              <FormattedMessage id='hero.title.professionals' />
-            </Text>
-          </Box>
-
-          <Row flexWrap='wrap' alignItems='center'>
-            <Box>
+          <Row alignItems='end' flexWrap='wrap'>
+            <Box width={[225, 770]}>
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
-                fontWeight='normal'
                 lineHeight={['ordinary', 'stupendous']}
               >
-                <FormattedMessage id='hero.title.revolution' />
+                <FormattedMessage id='hero.title.text' />
               </Text>
             </Box>
 
@@ -73,7 +50,6 @@ export const Hero = () => {
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
-                fontWeight='normal'
                 lineHeight={['ordinary', 'stupendous']}
               >
                 <FormattedMessage id='hero.title.it' />
@@ -83,17 +59,12 @@ export const Hero = () => {
 
           <Layout flexBasis={[24, 48]} />
 
-          <Divider backgroundColor='divider.white' weight={1} flexShrink='1' />
+          <Divider backgroundColor='divider.white' weight={1} />
 
           <Layout flexBasis={[24, 48]} />
 
-          <Box flexWrap='wrap' maxWidth={[335, 640]} flexShrink='1'>
-            <Text
-              color='text.white'
-              fontSize={['tiny', 'small']}
-              fontWeight='normal'
-              lineHeight={['small', 'normal']}
-            >
+          <Box flexWrap='wrap' maxWidth={[335, 640]}>
+            <Text color='text.white' fontSize={['tiny', 'small']} lineHeight={['small', 'normal']}>
               <FormattedMessage id='hero.slogan' />
             </Text>
           </Box>
@@ -102,48 +73,21 @@ export const Hero = () => {
 
           <Condition match={isMobile}>
             <Row>
-              <Box>
-                <Link href='https://web.telegram.org/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    size='littleSizeLittleRadii'
-                    icon={<TelegramIcon width={15} height={12} />}
-                    widthIcon={104}
-                    heightIcon={44}
-                    radiiIcon='little'
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<TelegramIcon width={15} height={12} />}
+                href='https://web.telegram.org/'
+              />
 
               <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-              <Box>
-                <Link href='https://github.com/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    size='littleSizeLittleRadii'
-                    icon={<GitHubIcon width={15} height={15} />}
-                    widthIcon={104}
-                    heightIcon={44}
-                    radiiIcon='little'
-                  />
-                </Link>
-              </Box>
+              <SocialLink icon={<GitHubIcon width={15} height={15} />} href='https://github.com/' />
 
               <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-              <Box>
-                <Link href='https://www.google.com/intl/ru/gmail/about/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    size='littleSizeLittleRadii'
-                    icon={<MailWhiteIcon width={18} height={14} />}
-                    widthIcon={104}
-                    heightIcon={44}
-                    radiiIcon='little'
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<MailWhiteIcon width={18} height={14} />}
+                href='https://www.google.com/intl/ru/gmail/about/'
+              />
             </Row>
           </Condition>
         </Column>
@@ -153,44 +97,17 @@ export const Hero = () => {
         <Condition match={isDesktop}>
           <Box alignItems='end'>
             <Column height='200px' justifyContent='space-between'>
-              <Box width={56}>
-                <Link href='https://web.telegram.org/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    size='bigSizeNormalRadii'
-                    icon={<TelegramIcon width={18} height={15} />}
-                    widthIcon={56}
-                    heightIcon={56}
-                    radiiIcon='normal'
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<TelegramIcon width={15} height={12} />}
+                href='https://web.telegram.org/'
+              />
 
-              <Box width={56}>
-                <Link href='https://github.com/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    size='bigSizeNormalRadii'
-                    icon={<GitHubIcon width={18} height={18} />}
-                    widthIcon={56}
-                    heightIcon={56}
-                    radiiIcon='normal'
-                  />
-                </Link>
-              </Box>
+              <SocialLink icon={<GitHubIcon width={15} height={15} />} href='https://github.com/' />
 
-              <Box width={56}>
-                <Link href='https://www.google.com/intl/ru/gmail/about/'>
-                  <Button
-                    variant='ghostBackgroundWhiteText'
-                    size='bigSizeNormalRadii'
-                    icon={<MailWhiteIcon width={18} height={14} />}
-                    widthIcon={56}
-                    heightIcon={56}
-                    radiiIcon='normal'
-                  />
-                </Link>
-              </Box>
+              <SocialLink
+                icon={<MailWhiteIcon width={18} height={14} />}
+                href='https://www.google.com/intl/ru/gmail/about/'
+              />
             </Column>
           </Box>
         </Condition>

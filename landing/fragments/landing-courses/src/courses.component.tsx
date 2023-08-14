@@ -37,14 +37,13 @@ export const Courses = () => {
               <Text
                 color='text.primary'
                 fontSize={['regular', 'stupendous']}
-                fontWeight='normal'
                 lineHeight={['common', 'stupendous']}
               >
                 <FormattedMessage id='courses.title' />
               </Text>
             </Box>
 
-            <Layout flexBasis={20} flexShrink='1' flexGrow='1' />
+            <Layout flexBasis={20} flexGrow='1' />
 
             <Condition match={isDesktop}>
               <Box width={254} flexShrink='0'>
@@ -58,7 +57,7 @@ export const Courses = () => {
                   radiiIcon='normal'
                 >
                   <NextLink>
-                    <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
+                    <Text color='white' fontSize='small' lineHeight='small'>
                       <FormattedMessage id='courses.button.all-materials' />
                     </Text>
                   </NextLink>
@@ -69,7 +68,7 @@ export const Courses = () => {
 
           <Layout flexBasis={[40, 80]} />
 
-          <Divider backgroundColor='divider.black' weight='1px' />
+          <Divider backgroundColor='divider.grayGhost' weight={1} />
 
           <Layout flexBasis={[40, 80]} />
 
@@ -150,38 +149,42 @@ export const Courses = () => {
       </Row>
 
       <Condition match={isMobile}>
-        <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
-          <SwiperSlide>
-            <Card
-              indent={62}
-              category={formatMessage({
-                id: 'courses.card.learning-material',
-              })}
-              widthCategoryBox={142}
-              isMobileOnly
-              titleMobile={formatMessage({
-                id: 'courses.card.how-use-libraries',
-              })}
-            />
-          </SwiperSlide>
+        <Row>
+          <Layout flexBasis={20} flexShrink='0' />
 
-          <SwiperSlide>
-            <Card
-              indent={62}
-              category={formatMessage({
-                id: 'courses.card.learning-material',
-              })}
-              widthCategoryBox={142}
-              isMobileOnly
-              titleMobile={formatMessage({
-                id: 'courses.card.design-figma-math',
-              })}
-            />
-          </SwiperSlide>
-        </Swiper>
+          <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
+            <SwiperSlide>
+              <Card
+                indent={62}
+                category={formatMessage({
+                  id: 'courses.card.learning-material',
+                })}
+                widthCategoryBox={142}
+                isMobileOnly
+                titleMobile={formatMessage({
+                  id: 'courses.card.how-use-libraries',
+                })}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Card
+                indent={62}
+                category={formatMessage({
+                  id: 'courses.card.learning-material',
+                })}
+                widthCategoryBox={142}
+                isMobileOnly
+                titleMobile={formatMessage({
+                  id: 'courses.card.design-figma-math',
+                })}
+              />
+            </SwiperSlide>
+          </Swiper>
+        </Row>
       </Condition>
 
-      <Layout flexBasis={[52, 160]} />
+      <Layout flexBasis={[20, 160]} />
 
       <Condition match={isMobile}>
         <Row>
@@ -198,7 +201,7 @@ export const Courses = () => {
                 backgroundIcon='background.white'
                 radiiIcon='tiny'
               >
-                <Text color='white' fontSize='small' fontWeight='normal' lineHeight='small'>
+                <Text color='white' fontSize='small' lineHeight='small'>
                   <FormattedMessage id='courses.button.all-materials' />
                 </Text>
               </Button>

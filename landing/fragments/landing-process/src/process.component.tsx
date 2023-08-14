@@ -26,28 +26,24 @@ export const Process = () => {
             sequenceNumber='1'
             name={intl.formatMessage({ id: 'process.item.team-integration' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
-            weight={1}
           />
 
           <Item
             sequenceNumber='2'
             name={intl.formatMessage({ id: 'process.item.create-environment' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
-            weight={1}
           />
 
           <Item
             sequenceNumber='3'
             name={intl.formatMessage({ id: 'process.item.studies-of-technologies' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
-            weight={1}
           />
 
           <Item
             sequenceNumber='4'
             name={intl.formatMessage({ id: 'process.item.practical-work' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
-            weight={1}
           />
 
           <Item
