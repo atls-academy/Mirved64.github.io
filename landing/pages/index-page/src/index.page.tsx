@@ -18,7 +18,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Background backgroundColor='navyBlue'>
+      <Background backgroundColor='navyBlueGradient'>
         <Navigation />
 
         <Condition match={isDesktop}>

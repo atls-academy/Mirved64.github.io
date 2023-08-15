@@ -1,38 +1,41 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { Condition } from '@ui/condition'
-import { Divider }   from '@ui/divider'
-import { Column }    from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Box }       from '@ui/layout'
-import { Text }      from '@ui/text'
+import { Background } from '@ui/background'
+import { Condition }  from '@ui/condition'
+import { Divider }    from '@ui/divider'
+import { Column }     from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Box }        from '@ui/layout'
+import { Text }       from '@ui/text'
 
-import { ItemProps } from './item.interfaces'
+import { ItemProps }  from './item.interfaces'
 
 export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
   <Column>
     <Row alignItems={['start', 'center']}>
-      <Box
-        width={[35, 64]}
-        height={[35, 64]}
-        alignItems='center'
-        justifyContent='center'
-        backgroundColor='background.whiteTransparent'
-        flexShrink='0'
-        borderRadius={['little', 'ordinary']}
-        border='thinnestGhost'
-      >
-        <Text
-          color='text.white'
-          fontSize={['compact', 'medium']}
-          lineHeight={['little', 'mini']}
-          fontFamily='regular'
+      <Background backgroundColor='ghostTransparentGradient' borderRadius={['little', 'ordinary']}>
+        <Box
+          width={[35, 64]}
+          height={[35, 64]}
+          alignItems='center'
+          justifyContent='center'
+          backgroundColor='background.whiteTransparent'
+          flexShrink='0'
+          borderRadius={['little', 'ordinary']}
+          border='thinnestGhost'
         >
-          {props.sequenceNumber}
-        </Text>
-      </Box>
+          <Text
+            color='text.white'
+            fontSize={['compact', 'medium']}
+            lineHeight={['little', 'mini']}
+            fontFamily='regular'
+          >
+            {props.sequenceNumber}
+          </Text>
+        </Box>
+      </Background>
 
       <Layout flexBasis={[12, 32]} flexShrink='0' />
 

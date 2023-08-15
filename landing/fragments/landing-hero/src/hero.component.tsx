@@ -1,6 +1,7 @@
 import React                 from 'react'
 import { FormattedMessage }  from 'react-intl'
 
+import { Background }        from '@ui/background'
 import { Condition }         from '@ui/condition'
 import { Divider }           from '@ui/divider'
 import { GitHubIcon }        from '@ui/icons'
@@ -41,23 +42,27 @@ export const Hero = () => {
             <Layout flexBasis={[8, 28]} flexShrink='0' />
 
             <Column>
-              <Box
-                width={[49, 134]}
-                height={[39, 96]}
-                justifyContent='center'
-                alignItems='center'
-                backgroundColor='background.whiteTransparent'
+              <Background
+                backgroundColor='ghostTransparentGradient'
                 borderRadius={['little', 'regular']}
-                border='thinnestGhost'
               >
-                <Text
-                  color='text.white'
-                  fontSize={['normal', 'stupendous']}
-                  lineHeight={['ordinary', 'enormous']}
+                <Box
+                  width={[49, 134]}
+                  height={[39, 96]}
+                  justifyContent='center'
+                  alignItems='center'
+                  borderRadius={['little', 'regular']}
+                  border='thinnestGhost'
                 >
-                  <FormattedMessage id='hero.title.it' />
-                </Text>
-              </Box>
+                  <Text
+                    color='text.white'
+                    fontSize={['normal', 'stupendous']}
+                    lineHeight={['ordinary', 'enormous']}
+                  >
+                    <FormattedMessage id='hero.title.it' />
+                  </Text>
+                </Box>
+              </Background>
 
               <Layout flexBasis={[0, 10]} />
             </Column>

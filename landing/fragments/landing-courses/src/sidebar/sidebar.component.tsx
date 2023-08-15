@@ -20,7 +20,7 @@ export const Sidebar = () => {
     <Column flexShrink={[1, 0]} flexBasis={[212, 410]}>
       <Background
         display='flex'
-        backgroundColor='blackTransparent'
+        backgroundColor='blackTransparentGradient'
         borderRadius={['normal', 'regular']}
         border='thinnestGhostGray'
       >

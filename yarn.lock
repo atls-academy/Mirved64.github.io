@@ -2085,6 +2085,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/image": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
@@ -2151,6 +2152,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/divider": "workspace: 0.0.1"
@@ -2197,6 +2199,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/divider": "workspace: 0.0.1"
     "@ui/image": "workspace: 0.0.1"
@@ -2217,6 +2220,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/icons": "workspace: 0.0.1"

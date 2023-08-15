@@ -1,6 +1,7 @@
 import React                   from 'react'
 import { FormattedMessage }    from 'react-intl'
 
+import { Background }          from '@ui/background'
 import { Button }              from '@ui/button'
 import { Condition }           from '@ui/condition'
 import { ArrowLeftWhiteIcon }  from '@ui/icons'
@@ -117,42 +118,44 @@ export const Slider = () => {
       <Layout flexBasis={[24, 50]} flexShrink='0' />
 
       <Condition match={isDesktop}>
-        <Box
-          width={960}
-          border='boldGhost'
-          justifyContent='center'
-          borderRadius='regular'
-          position='relative'
-          maxHeight={540}
-          overflow='hidden'
-        >
-          <Box position='absolute'>
-            <Image src='./image/integrated-title-bar.png' width={936} height={25} />
-          </Box>
+        <Background backgroundColor='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
+          <Box
+            width={960}
+            justifyContent='center'
+            borderRadius='regular'
+            position='relative'
+            maxHeight={540}
+            overflow='hidden'
+          >
+            <Box position='absolute'>
+              <Image src='./image/integrated-title-bar.png' width={936} height={25} />
+            </Box>
 
-          <Box>
-            <Image src='./image/mockup.png' width={720} height={540} />
+            <Box>
+              <Image src='./image/mockup.png' width={720} height={540} />
+            </Box>
           </Box>
-        </Box>
+        </Background>
       </Condition>
 
       <Condition match={isMobile}>
-        <Box
-          position='relative'
-          width={155}
-          border='thinGhost'
-          justifyContent='center'
-          borderRadius='ordinary'
-          overflow='hidden'
-        >
-          <Box position='absolute' top='2px'>
-            <Image src='./image/toolbar-mobile.png' width={143} height={22} />
-          </Box>
+        <Background backgroundColor='darkPurpleGradient' borderRadius='ordinary' border='thinGhost'>
+          <Box
+            position='relative'
+            borderRadius='ordinary'
+            width={155}
+            justifyContent='center'
+            overflow='hidden'
+          >
+            <Box position='absolute' top='2px'>
+              <Image src='./image/toolbar-mobile.png' width={143} height={22} />
+            </Box>
 
-          <Box width={155} height={323} justifyContent='center'>
-            <Image src='./image/mockup.png' width={138} height={339} />
+            <Box width={155} height={323} justifyContent='center'>
+              <Image src='./image/mockup.png' width={138} height={339} />
+            </Box>
           </Box>
-        </Box>
+        </Background>
       </Condition>
 
       <Layout flexBasis={[24, 32]} />
