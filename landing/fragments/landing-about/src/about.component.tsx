@@ -60,7 +60,19 @@ export const About = () => {
           <Condition match={isMobile}>
             <Box>
               <Text color='text.white' fontSize='small' lineHeight='normal'>
-                <FormattedMessage id='about.intro-mobile' />
+                <FormattedMessage id='about.intro-digital-mobile' />
+              </Text>
+            </Box>
+
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.intro-not-decrease-mobile' />
+              </Text>
+            </Box>
+
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.intro-for-your-decisions-mobile' />
               </Text>
             </Box>
 
@@ -68,7 +80,25 @@ export const About = () => {
 
             <Box>
               <Text color='text.white' fontSize='small' lineHeight='normal'>
-                <FormattedMessage id='about.central-idea' />
+                <FormattedMessage id='about.central-idea-atlantis-teach-mobile' />
+              </Text>
+            </Box>
+
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-make-engineers-mobile' />
+              </Text>
+            </Box>
+
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-architects-mobile' />
+              </Text>
+            </Box>
+
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-not-programmers-mobile' />
               </Text>
             </Box>
           </Condition>
@@ -84,7 +114,7 @@ export const About = () => {
                 lineHeight='huge'
                 wordWrap='break-word'
               >
-                <FormattedMessage id='about.central-idea' />
+                <FormattedMessage id='about.central-idea-desktop' />
               </Text>
 
               <Space count='6' />
