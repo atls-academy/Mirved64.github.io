@@ -69,11 +69,27 @@ export const Hero = () => {
 
           <Layout flexBasis={[24, 48]} />
 
-          <Box flexWrap='wrap' maxWidth={[335, 640]}>
-            <Text color='text.white' fontSize={['tiny', 'small']} lineHeight={['small', 'normal']}>
-              <FormattedMessage id='hero.slogan' />
-            </Text>
-          </Box>
+          <Condition match={isDesktop}>
+            <Box flexWrap='wrap' maxWidth={640}>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='hero.slogan-desktop' />
+              </Text>
+            </Box>
+          </Condition>
+
+          <Condition match={isMobile}>
+            <Box>
+              <Text color='text.white' fontSize='tiny' lineHeight='compact'>
+                <FormattedMessage id='hero.slogan-we-dont-teach-mobile' />
+              </Text>
+            </Box>
+
+            <Box>
+              <Text color='text.white' fontSize='tiny' lineHeight='compact'>
+                <FormattedMessage id='hero.slogan-we-teach-mobile' />
+              </Text>
+            </Box>
+          </Condition>
 
           <Layout flexBasis={[24, 0]} />
 

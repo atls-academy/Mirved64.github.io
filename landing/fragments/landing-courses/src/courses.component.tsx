@@ -150,35 +150,41 @@ export const Courses = () => {
 
       <Condition match={isMobile}>
         <Row>
-          <Layout flexBasis={20} flexShrink='0' />
-
           <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
             <SwiperSlide>
-              <Card
-                indent={62}
-                category={formatMessage({
-                  id: 'courses.card.learning-material',
-                })}
-                widthCategoryBox={142}
-                isMobileOnly
-                titleMobile={formatMessage({
-                  id: 'courses.card.how-use-libraries',
-                })}
-              />
+              <Row>
+                <Layout flexBasis={20} flexShrink='0' />
+
+                <Card
+                  indent={62}
+                  category={formatMessage({
+                    id: 'courses.card.learning-material',
+                  })}
+                  widthCategoryBox={142}
+                  isMobileOnly
+                  titleMobile={formatMessage({
+                    id: 'courses.card.how-use-libraries',
+                  })}
+                />
+              </Row>
             </SwiperSlide>
 
             <SwiperSlide>
-              <Card
-                indent={62}
-                category={formatMessage({
-                  id: 'courses.card.learning-material',
-                })}
-                widthCategoryBox={142}
-                isMobileOnly
-                titleMobile={formatMessage({
-                  id: 'courses.card.design-figma-math',
-                })}
-              />
+              <Row>
+                <Card
+                  indent={62}
+                  category={formatMessage({
+                    id: 'courses.card.learning-material',
+                  })}
+                  widthCategoryBox={142}
+                  isMobileOnly
+                  titleMobile={formatMessage({
+                    id: 'courses.card.design-figma-math',
+                  })}
+                />
+
+                <Layout flexBasis={20} flexShrink='0' />
+              </Row>
             </SwiperSlide>
           </Swiper>
         </Row>
