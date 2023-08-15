@@ -116,8 +116,14 @@ export const Slider = () => {
 
       <Layout flexBasis={[24, 50]} flexShrink='0' />
 
-      <Box width={[155, 960]} border={['thinGhost', 'boldGhost']} justifyContent='center'>
-        <Box maxHeight={540} width={[138, 'auto']} height={[340, 'auto']}>
+      <Box
+        width={[155, 960]}
+        height={[323, 516]}
+        border={['thinGhost', 'boldGhost']}
+        justifyContent='center'
+        overflow='hidden'
+      >
+        <Box width={[138, 720]} height={[339, 540]}>
           <ImageBlock src='./image/mockup.png' />
         </Box>
       </Box>
