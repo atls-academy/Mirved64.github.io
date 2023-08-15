@@ -7,7 +7,6 @@ export type ButtonSize = 'normal' | 'big'
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
   size?: ButtonSize
-  active?: boolean
   ref?: any
   icon?: object
   widthIcon?: number | number[]
