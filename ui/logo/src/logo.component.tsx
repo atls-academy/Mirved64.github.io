@@ -4,8 +4,8 @@ import { NextLink } from '@ui/link'
 
 import { Icon }     from './icon.component'
 
-export const Logo = ({ fill, logoWidth, logoHeight }) => (
+export const Logo = ({ fill, width, height }) => (
   <NextLink path='/'>
-    <Icon fill={fill} logoWidth={logoWidth} logoHeight={logoHeight} />
+    <Icon fill={fill} width={width} height={height} />
   </NextLink>
 )

@@ -20,23 +20,17 @@ export const Navigation = () => {
   const intl = useIntl()
 
   return (
-    <Row height={[80, 120]} alignItems='center' justifyContent='center'>
+    <Row height={[80, 128]} alignItems='center' justifyContent='center'>
       <Condition match={isMobile}>
-        <Box>
-          <Logo fill='white' logoWidth={40} logoHeight={40} />
-        </Box>
+        <Logo fill='white' width={40} height={40} />
       </Condition>
 
       <Condition match={isDesktop}>
-        <Layout flexBasis={[0, 40]} />
+        <Layout flexBasis={40} />
 
-        <Box>
-          <Box>
-            <Logo fill='white' logoWidth={56} logoHeight={56} />
-          </Box>
-        </Box>
+        <Logo fill='white' width={56} height={56} />
 
-        <Layout flexBasis={[0, 40]} flexGrow='1' />
+        <Layout flexBasis={40} flexGrow='1' />
 
         <Row height='29px' flexBasis={860}>
           <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
@@ -54,7 +48,7 @@ export const Navigation = () => {
           <Item name={intl.formatMessage({ id: 'navigation.item.faq' })} path='/' />
         </Row>
 
-        <Layout flexBasis={[0, 40]} flexGrow='1' />
+        <Layout flexBasis={40} flexGrow='1' />
 
         <Box width={163}>
           <Button

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Icon = ({ fill, logoWidth, logoHeight }) => (
+export const Icon = ({ fill, width, height }) => (
   <svg
-    width={logoWidth}
-    height={logoHeight}
+    width={width}
+    height={height}
     viewBox='0 0 40 36'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
