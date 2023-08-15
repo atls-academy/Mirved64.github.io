@@ -153,7 +153,7 @@ export const Courses = () => {
             <SwiperSlide>
               <Row>
                 <Layout flexBasis={20} flexShrink='0' />
-                
+
                 <Card
                   indent={62}
                   category={formatMessage({
@@ -181,7 +181,7 @@ export const Courses = () => {
                     id: 'courses.card.design-figma-math',
                   })}
                 />
-                
+
                 <Layout flexBasis={20} flexShrink='0' />
               </Row>
             </SwiperSlide>
