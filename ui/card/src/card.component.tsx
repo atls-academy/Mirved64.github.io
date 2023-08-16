@@ -17,29 +17,83 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => (
     <Column>
       <Layout flexBasis={[16, 40]} />
 
-      <Box
-        flexBasis={[27, 38]}
-        width={props.widthCategoryBox}
-        alignItems='center'
-        backgroundColor='background.white'
-      >
-        <Layout flexBasis={[8, 12]} />
+      <Condition match={props.category === 'обучение'}>
+        <Box
+          flexBasis={[27, 38]}
+          width={[80, 104]}
+          alignItems='center'
+          backgroundColor='background.white'
+        >
+          <Layout flexBasis={[8, 12]} />
 
-        <Box>
-          <Text
-            color='text.primary'
-            fontSize={['subAtom', 'tiny']}
-            lineHeight={['atom', 'tiny']}
-            textTransform='uppercase'
-          >
-            {props.category}
-          </Text>
+          <Box>
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
+            >
+              {props.category}
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 12]} />
         </Box>
 
-        <Layout flexBasis={[8, 12]} />
-      </Box>
+        <Layout flexBasis={[104, 214]} />
+      </Condition>
 
-      <Layout flexBasis={props.indent} />
+      <Condition match={props.category === 'мини-курс'}>
+        <Box
+          flexBasis={[27, 38]}
+          width={[87, 112]}
+          alignItems='center'
+          backgroundColor='background.white'
+        >
+          <Layout flexBasis={[8, 12]} />
+
+          <Box>
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
+            >
+              {props.category}
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 12]} />
+        </Box>
+
+        <Layout flexBasis={[49, 56]} />
+      </Condition>
+
+      <Condition match={props.category === 'учебный материал'}>
+        <Box
+          flexBasis={[27, 38]}
+          width={[142, 180]}
+          alignItems='center'
+          backgroundColor='background.white'
+        >
+          <Layout flexBasis={[8, 12]} />
+
+          <Box>
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
+            >
+              {props.category}
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 12]} />
+        </Box>
+
+        <Layout flexBasis={[62, 110]} />
+      </Condition>
 
       <Condition match={!isMobileOnly}>
         <Box maxWidth={[303, 496]}>
@@ -54,7 +108,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => (
       </Condition>
 
       <Condition match={isMobileOnly}>
-        <Box maxWidth={228}>
+        <Box maxWidth={228} flexBasis={46}>
           <Text color='text.primary' fontSize='small' lineHeight='tiddly'>
             {props.titleMobile}
           </Text>
