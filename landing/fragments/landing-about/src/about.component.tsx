@@ -16,7 +16,7 @@ export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Column>
+    <Column flexGrow='1'>
       <Layout flexBasis={[64, 160]} />
 
       <Row>

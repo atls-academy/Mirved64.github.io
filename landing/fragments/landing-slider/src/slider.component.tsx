@@ -202,7 +202,7 @@ export const Slider = () => {
         </Box>
       </Row>
 
-      <Layout flexBasis={[64, 160]} flexShrink='0' />
+      <Layout flexBasis={[128, 240]} flexShrink='0' />
     </Column>
   )
 }

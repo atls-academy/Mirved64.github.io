@@ -18,7 +18,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Background backgroundColor='navyBlueGradient'>
+      <Background backgroundColor='navyBlueGradient' position='absolute' width='100%'>
         <Navigation />
 
         <Condition match={isDesktop}>
@@ -36,11 +36,25 @@ const IndexPage = () => {
         </Condition>
       </Background>
 
-      <Background backgroundColor='white' borderRadius={['hugeTop', 'giantTop']}>
+      <Background
+        backgroundColor='white'
+        borderRadius={['hugeTop', 'giantTop']}
+        position='absolute'
+        width='100%'
+        zIndex={1}
+        top={[940, 1750]}
+      >
         <Courses />
       </Background>
 
-      <Background backgroundColor='darkPurple' borderRadius={['hugeTop', 'giantTop']}>
+      <Background
+        backgroundColor='darkPurple'
+        borderRadius={['hugeTop', 'giantTop']}
+        position='absolute'
+        width='100%'
+        zIndex={2}
+        top={[2722, 3761]}
+      >
         <Process />
 
         <Technologies />
@@ -48,7 +62,14 @@ const IndexPage = () => {
         <Slider />
       </Background>
 
-      <Background backgroundColor='white' borderRadius={['hugeTop', 'giantTop']}>
+      <Background
+        backgroundColor='white'
+        borderRadius={['hugeTop', 'giantTop']}
+        position='absolute'
+        width='100%'
+        zIndex={3}
+        top={[4350, 6460]}
+      >
         <Faq />
       </Background>
     </>

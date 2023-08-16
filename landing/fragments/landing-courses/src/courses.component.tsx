@@ -25,11 +25,7 @@ export const Courses = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box
-      border='3px solid black'
-      borderRadius={['hugeTop', 'giantTop']}
-      // translateY={['-64px', '-80px']}
-    >
+    <Box borderRadius={['hugeTop', 'giantTop']} flexGrow='1'>
       <Column>
         <Layout flexBasis={[64, 160]} />
 
@@ -223,7 +219,7 @@ export const Courses = () => {
           </Row>
         </Condition>
 
-        <Layout flexBasis={[64, 0]} />
+        <Layout flexBasis={[64, 80]} />
       </Column>
     </Box>
   )

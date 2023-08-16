@@ -21,7 +21,7 @@ export const Hero = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Column>
+    <Column flexGrow='1'>
       <Layout flexBasis={[80, 412]} />
 
       <Row flexGrow='1'>
