@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
@@ -13,10 +12,10 @@ import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
+import { FaqList }          from './faq-list'
 import { Item }             from './item'
 
 export const Faq = () => {
-  const intl = useIntl()
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
@@ -32,7 +31,6 @@ export const Faq = () => {
               color='text.primary'
               fontSize={['ordinary', 'stupendous']}
               lineHeight={['regular', 'massive']}
-              letter='-2%'
             >
               <FormattedMessage id='faq.title' />
             </Text>
@@ -64,12 +62,9 @@ export const Faq = () => {
           <Divider backgroundColor='divider.grayGhost' weight={1} />
         </Condition>
 
-        <Item question={intl.formatMessage({ id: 'faq.question' })} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} />
-        <Item question={intl.formatMessage({ id: 'faq.question' })} />
+        {FaqList.map((item) => (
+          <Item question={item.question} key={item.id} />
+        ))}
 
         <Condition match={isMobile}>
           <Layout flexBasis={60} />
