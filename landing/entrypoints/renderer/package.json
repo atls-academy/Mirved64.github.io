@@ -16,7 +16,7 @@
     "next": "12.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intl": "6.4.4",
+    "react-intl": "6.0.8",
     "react-scroll-parallax": "3.3.2"
   },
   "devDependencies": {
