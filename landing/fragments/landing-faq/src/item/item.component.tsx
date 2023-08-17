@@ -1,46 +1,57 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Divider }          from '@ui/divider'
-import { CrossIcon }        from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Condition }      from '@ui/condition'
+import { Divider }        from '@ui/divider'
+import { CrossIcon }      from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useWindowWidth } from '@ui/utils'
 
-import { QuestionProps }    from './item.interfaces'
+import { QuestionProps }  from './item.interfaces'
 
-export const Item: FC<QuestionProps> = ({ question, divider }) => (
-  <Column>
-    <Layout flexBasis={[16, 40]} flexShrink='0' />
+export const Item: FC<QuestionProps> = ({ question, divider }) => {
+  const { isMobile, isDesktop } = useWindowWidth()
 
-    <Row justifyContent={['space-between', 'start']}>
-      <Box display={['none', 'flex']} alignItems='center'>
-        <CrossIcon width={20} height={20} />
-      </Box>
+  return (
+    <Column>
+      <Layout flexBasis={[16, 40]} />
 
-      <Layout flexBasis={[0, 27]} flexShrink='0' />
+      <Row>
+        <Condition match={isDesktop}>
+          <Box alignItems='center'>
+            <CrossIcon width={20} height={20} />
+          </Box>
+        </Condition>
 
-      <Box flexGrow={[1, 0]}>
-        <Text
-          color='text.faq.primary'
-          fontSize={['small', 'ordinary']}
-          fontWeight='normal'
-          lineHeight={['normal', 'regular']}
-        >
-          <FormattedMessage id={question} />
-        </Text>
-      </Box>
+        <Layout flexBasis={[0, 24]} flexShrink='0' />
 
-      <Box display={['flex', 'none']} alignItems='center'>
-        <CrossIcon width={12} height={12} />
-      </Box>
-    </Row>
+        <Box flexGrow={[1, 0]} flexBasis={[303, 740]}>
+          <Text
+            color='text.black'
+            fontSize={['small', 'ordinary']}
+            fontWeight='normal'
+            lineHeight={['normal', 'regular']}
+          >
+            {question}
+          </Text>
+        </Box>
 
-    <Layout flexBasis={[16, 40]} />
+        <Layout flexBasis={[24, 0]} flexShrink='0' />
 
-    <Divider backgroundColor='divider.secondary' weight={divider} />
-  </Column>
-)
+        <Condition match={isMobile}>
+          <Box alignItems='center'>
+            <CrossIcon width={12} height={12} />
+          </Box>
+        </Condition>
+      </Row>
+
+      <Layout flexBasis={[16, 40]} />
+
+      <Divider backgroundColor='divider.black' weight={divider} />
+    </Column>
+  )
+}

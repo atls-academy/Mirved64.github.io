@@ -4,19 +4,20 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-proto/theme": "^0.0.9",
-    "@emotion/css": "^11.11.0"
+    "@atls-ui-proto/theme": "0.0.12",
+    "@emotion/css": "11.11.0"
   },
   "devDependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@types/react": "^18.2.9",
-    "@types/react-dom": "^18.2.4",
-    "@types/styled-system": "^5.1.16",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "@types/react": "18.2.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "peerDependencies": {
-    "react": "*"
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

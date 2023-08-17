@@ -1,0 +1,14 @@
+{
+  "name": "@ui/utils",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

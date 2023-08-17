@@ -1,7 +1,7 @@
 export interface ItemProps {
   sequenceNumber?: string
-  process?: string
-  text?: string
-  divider?: number
-  displayDivider?: string
+  name?: string
+  description?: string
+  weight?: number
+  divider?: boolean
 }

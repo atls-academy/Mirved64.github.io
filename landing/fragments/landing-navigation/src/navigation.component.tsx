@@ -1,52 +1,96 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { useIntl }          from 'react-intl'
 
+import { Button }           from '@ui/button'
+import { Condition }        from '@ui/condition'
 import { LogoWhiteIcon }    from '@ui/icons'
+import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
+import { useWindowWidth }   from '@ui/utils'
 
-import { ItemsList }        from './items-list'
-import { navLinkList }      from './navigation-list'
+import { Item }             from './item'
 
-export const Navigation = () => (
-  <Box
-    backgroundColor='background.navigation'
-    width='100%'
-    height={['80px', '120px']}
-    alignItems='center'
-    margin='0 auto'
-  >
-    <Layout flexBasis={[0, 40]} />
+export const Navigation = () => {
+  const { isMobile, isDesktop } = useWindowWidth()
+  const intl = useIntl()
 
-    <Box display={['flex', 'none']} flexGrow='1' justifyContent='center'>
-      <NextLink>
-        <LogoWhiteIcon width={40} height={40} />
-      </NextLink>
+  return (
+    <Box
+      backgroundColor='background.grey'
+      width='100%'
+      height={[80, 120]}
+      alignItems='center'
+      justifyContent='center'
+    >
+      <Layout flexBasis={[0, 40]} />
+
+      <Condition match={isMobile}>
+        <Box flexGrow='1' justifyContent='center'>
+          <NextLink>
+            <LogoWhiteIcon width={40} height={40} />
+          </NextLink>
+        </Box>
+      </Condition>
+
+      <Condition match={isDesktop}>
+        <Box>
+          <NextLink>
+            <LogoWhiteIcon width={56} height={56} />
+          </NextLink>
+        </Box>
+      </Condition>
+
+      <Condition match={isDesktop}>
+        <Layout flexBasis={[0, 40]} flexGrow='1' />
+      </Condition>
+
+      <Condition match={isDesktop}>
+        <Row height='32px' flexBasis={860} flexShrink='1'>
+          <Item name={intl.formatMessage({ id: 'navigationAcademy' })} path='/' />
+
+          <Layout flexBasis={20} />
+
+          <Item name={intl.formatMessage({ id: 'navigationCourses' })} path='/' />
+
+          <Layout flexBasis={20} />
+
+          <Item name={intl.formatMessage({ id: 'navigationTeaching' })} path='/' />
+
+          <Layout flexBasis={20} />
+
+          <Item name={intl.formatMessage({ id: 'navigationFaq' })} path='/' />
+        </Row>
+      </Condition>
+
+      <Condition match={isDesktop}>
+        <Layout flexBasis={[0, 40]} flexGrow='1' />
+      </Condition>
+
+      <Condition match={isDesktop}>
+        <Box width={163} height={64} flexShrink='0'>
+          <Button
+            variant='transparentBackgroundWhiteText'
+            gap={24}
+            icon={<ArrowDownIcon width={16} height={16} />}
+            widthIcon={48}
+            heightIcon={48}
+            backgroundIcon='background.white'
+          >
+            <NextLink>
+              <Text fontSize='compact' fontWeight='normal' lineHeight='little'>
+                <FormattedMessage id='navigationButton' />
+              </Text>
+            </NextLink>
+          </Button>
+        </Box>
+      </Condition>
+
+      <Layout flexBasis={[0, 40]} />
     </Box>
-
-    <Box display={['none', 'flex']} flexGrow='1' justifyContent='start'>
-      <NextLink>
-        <LogoWhiteIcon width={56} height={56} />
-      </NextLink>
-    </Box>
-
-    <ItemsList navLinksList={navLinkList} />
-
-    <Box width='54px' height='18px' flexGrow='1' justifyContent='end' display={['none', 'flex']}>
-      <NextLink>
-        <Text
-          color='text.navigation.primary'
-          fontSize='compact'
-          fontWeight='normal'
-          lineHeight='little'
-        >
-          <FormattedMessage id='navigationButton' />
-        </Text>
-      </NextLink>
-    </Box>
-
-    <Layout flexBasis={[0, 40]} />
-  </Box>
-)
+  )
+}

@@ -1,317 +1,215 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { useIntl }          from 'react-intl'
 
+import { Button }           from '@ui/button'
+import { Card }             from '@ui/card'
+import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
-import { Image }            from '@ui/image'
+import { ArrowRightIcon }   from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
+import { Swiper }           from '@ui/swiper'
+import { SwiperSlide }      from '@ui/swiper'
 import { Text }             from '@ui/text'
+import { useWindowWidth }   from '@ui/utils'
 
-export const Courses = () => (
-  <Box backgroundColor='background.courses' width='100%' margin='0 auto' flexDirection='column'>
-    <Layout flexBasis={[64, 160]} />
+import { Info }             from './info'
+import { Sidebar }          from './sidebar'
 
-    <Row>
-      <Layout flexBasis={[20, 230]} flexShrink='1' />
+export const Courses = () => {
+  const { formatMessage } = useIntl()
+  const { isMobile, isDesktop } = useWindowWidth()
 
-      <Column flexBasis={[335, 1610]} flexGrow='1' margin='0 auto' flexShrink='1'>
-        <Row justifyContent='space-between' alignItems='center'>
-          <Box flexWrap='wrap' flexShrink='1'>
-            <Text
-              color='text.courses.primary'
-              fontSize={['regular', 'stupendous']}
-              fontWeight='normal'
-              lineHeight={['common', 'stupendous']}
-              letter='-2%'
-            >
-              <FormattedMessage id='coursesTitle' />
-            </Text>
-          </Box>
+  return (
+    <Box backgroundColor='background.white' justifyContent='center'>
+      <Column flexGrow='1'>
+        <Layout flexBasis={[64, 160]} />
 
-          <Box flexWrap='wrap' display={['none', 'flex']} flexShrink='1'>
-            <NextLink>
-              <Text
-                color='text.courses.primary'
-                fontSize='small'
-                fontWeight='normal'
-                lineHeight='small'
-              >
-                <FormattedMessage id='coursesButton' />
-              </Text>
-            </NextLink>
-          </Box>
-        </Row>
+        <Row>
+          <Layout flexBasis={[20, 230]} />
 
-        <Layout flexBasis={[40, 80]} />
-
-        <Divider backgroundColor='divider.secondary' weight='1px' />
-
-        <Layout flexBasis={[40, 80]} />
-
-        <Box flexDirection={['column', 'row']} justifyContent='space-between'>
-          <Box flexWrap='wrap' flexBasis={[112, 710]}>
-            <Text
-              color='text.courses.primary'
-              fontSize={['small', 'ordinary']}
-              fontWeight='normal'
-              lineHeight={['normal', 'regular']}
-            >
-              <FormattedMessage id='coursesSubtitleAtlantisPowerBroker' />
-            </Text>
-          </Box>
-
-          <Layout flexBasis={[20, 0]} />
-
-          <Box flexBasis={[84, 559]} flexWrap='wrap'>
-            <Text
-              color='text.courses.primary'
-              fontSize={['small', 'ordinary']}
-              fontWeight='normal'
-              lineHeight={['normal', 'regular']}
-            >
-              <FormattedMessage id='coursesSubtitleAdvantageOfLearning' />
-            </Text>
-          </Box>
-        </Box>
-
-        <Layout flexBasis={[40, 80]} />
-
-        <Box justifyContent='space-between' flexDirection={['column', 'row']}>
-          <Column order={[2, 0]}>
-            <Layout>
-              <Box flexBasis={[335, 1160]} flexShrink='1' flexGrow='1'>
-                <Layout flexBasis={[16, 40]} flexShrink='0' />
-
-                <Column>
-                  <Layout flexBasis={[16, 40]} flexShrink='0' />
-
-                  <Column>
-                    <Box flexShrink='0'>
-                      <Text
-                        color='text.courses.primary'
-                        fontSize={['medium', 'regular']}
-                        fontWeight='normal'
-                        lineHeight={['normal', 'mean']}
-                      >
-                        <FormattedMessage id='coursesCardFrontendTitle' />
-                      </Text>
-                    </Box>
-
-                    <Layout flexBasis={[12, 16]} flexShrink='0' />
-
-                    <Box maxWidth={694} flexShrink='1' flexGrow={[1, 0]}>
-                      <Text
-                        color='text.courses.primary'
-                        fontSize={['tiny', 'small']}
-                        fontWeight='normal'
-                        lineHeight={['small', 'normal']}
-                      >
-                        <FormattedMessage id='coursesCardFrontendText' />
-                      </Text>
-                    </Box>
-
-                    <Layout flexBasis={[52, 0]} flexShrink='0' />
-
-                    <Layout flexBasis={[0, 120]} flexShrink='0' />
-
-                    <Box flexShrink='0'>
-                      <Text
-                        color='text.courses.primary'
-                        fontSize={['medium', 'regular']}
-                        fontWeight='normal'
-                        lineHeight={['normal', 'mean']}
-                      >
-                        <FormattedMessage id='coursesCardBasisTitle' />
-                      </Text>
-                    </Box>
-
-                    <Layout flexBasis={[12, 16]} flexShrink='0' />
-
-                    <Box maxWidth={694} flexShrink='1' flexGrow={[1, 0]}>
-                      <Text
-                        color='text.courses.primary'
-                        fontSize={['tiny', 'small']}
-                        fontWeight='normal'
-                        lineHeight={['small', 'normal']}
-                      >
-                        <FormattedMessage id='coursesCardBasisText' />
-                      </Text>
-                    </Box>
-                  </Column>
-
-                  <Layout flexBasis={[36, 80]} flexShrink='0' />
-                </Column>
-
-                <Layout flexBasis={[16, 0]} flexShrink='0' />
+          <Column flexBasis={[335, 1610]} flexGrow='1'>
+            <Row alignItems='center'>
+              <Box flexWrap='wrap'>
+                <Text
+                  color='text.black'
+                  fontSize={['regular', 'stupendous']}
+                  fontWeight='normal'
+                  lineHeight={['common', 'stupendous']}
+                >
+                  <FormattedMessage id='coursesTitle' />
+                </Text>
               </Box>
-            </Layout>
 
-            <Layout display={['none', 'flex']}>
-              <Layout flexBasis={32} flexShrink='0' />
+              <Layout flexBasis={20} flexShrink='1' flexGrow='1' />
 
-              <Column>
-                <Layout flexBasis={32} />
+              <Condition match={isDesktop}>
+                <Box width={254} height={72} flexShrink='0'>
+                  <Button
+                    variant='transparentBackgroundBlackText'
+                    gap={24}
+                    icon={<ArrowRightIcon width={16} height={16} />}
+                    widthIcon={48}
+                    heightIcon={48}
+                    backgroundIcon='background.white'
+                  >
+                    <NextLink>
+                      <Text fontSize='small' fontWeight='normal' lineHeight='small'>
+                        <FormattedMessage id='coursesButton' />
+                      </Text>
+                    </NextLink>
+                  </Button>
+                </Box>
+              </Condition>
+            </Row>
 
-                <Row justifyContent='space-between'>
-                  <Box flexShrink='1' flexBasis={496}>
-                    <Text
-                      color='text.courses.primary'
-                      fontSize='regular'
-                      fontWeight='normal'
-                      lineHeight='mean'
-                    >
-                      <FormattedMessage id='coursesSmallCardLibraries' />
-                    </Text>
-                  </Box>
+            <Layout flexBasis={[40, 80]} />
 
-                  <Box flexShrink='1' flexBasis={496}>
-                    <Text
-                      color='text.courses.primary'
-                      fontSize='regular'
-                      fontWeight='normal'
-                      lineHeight='mean'
-                    >
-                      <FormattedMessage id='coursesSmallCardDesign' />
-                    </Text>
-                  </Box>
-                </Row>
+            <Divider backgroundColor='divider.black' weight='1px' />
 
-                <Layout flexBasis={32} />
+            <Layout flexBasis={[40, 80]} />
+
+            <Info />
+
+            <Layout flexBasis={[40, 80]} />
+
+            <Box flexDirection={['column', 'row']}>
+              <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
+                <Card
+                  indent={[104, 214]}
+                  category={formatMessage({
+                    id: 'coursesCardFrontendCategory',
+                  })}
+                  titleDesktop={formatMessage({
+                    id: 'coursesCardFrontendTitle',
+                  })}
+                  description={formatMessage({
+                    id: 'coursesCardFrontendText',
+                  })}
+                />
+
+                <Layout flexBasis={[20, 40]} />
+
+                <Card
+                  indent={[49, 54]}
+                  category={formatMessage({
+                    id: 'coursesCardBasisCategory',
+                  })}
+                  titleDesktop={formatMessage({
+                    id: 'coursesCardBasisTitle',
+                  })}
+                  description={formatMessage({
+                    id: 'coursesCardBasisText',
+                  })}
+                />
+
+                <Layout flexBasis={[20, 40]} />
+
+                <Condition match={isDesktop}>
+                  <Row>
+                    <Card
+                      indent={126}
+                      category={formatMessage({
+                        id: 'coursesCardLearningMaterial',
+                      })}
+                      titleDesktop={formatMessage({
+                        id: 'coursesCardLearningMaterialLibraries',
+                      })}
+                    />
+
+                    <Layout flexBasis={[20, 40]} />
+
+                    <Card
+                      indent={126}
+                      category={formatMessage({
+                        id: 'coursesCardLearningMaterial',
+                      })}
+                      titleDesktop={formatMessage({
+                        id: 'coursesCardLearningMaterialDesign',
+                      })}
+                    />
+                  </Row>
+                </Condition>
               </Column>
 
-              <Layout flexBasis={32} flexShrink='0' />
-            </Layout>
+              <Layout flexBasis={[0, 40]} />
+
+              <Sidebar />
+            </Box>
           </Column>
 
-          <Row flexBasis={[192, 410]} order={[1, 0]}>
-            <Layout flexBasis={[16, 32]} flexShrink='0' />
+          <Layout flexBasis={[20, 80]} />
+        </Row>
 
-            <Column>
-              <Layout flexBasis={[16, 32]} flexShrink='0' />
+        <Condition match={isMobile}>
+          <Box>
+            <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
+              <SwiperSlide>
+                <Card
+                  indent={62}
+                  category={formatMessage({
+                    id: 'coursesCardLearningMaterial',
+                  })}
+                  isMobileOnly
+                  titleDesktop={formatMessage({
+                    id: 'coursesCardLearningMaterialLibraries',
+                  })}
+                  titleMobile={formatMessage({
+                    id: 'coursesCardLearningMaterialLibraries',
+                  })}
+                />
+              </SwiperSlide>
 
-              <Box>
-                <Text
-                  color='text.courses.primary'
-                  fontSize={['tiny', 'little']}
-                  fontWeight='normal'
-                  lineHeight={['compact', 'medium']}
+              <SwiperSlide>
+                <Card
+                  indent={62}
+                  category={formatMessage({
+                    id: 'coursesCardLearningMaterial',
+                  })}
+                  isMobileOnly
+                  titleDesktop={formatMessage({
+                    id: 'coursesCardLearningMaterialDesign',
+                  })}
+                  titleMobile={formatMessage({
+                    id: 'coursesCardLearningMaterialDesign',
+                  })}
+                />
+              </SwiperSlide>
+            </Swiper>
+          </Box>
+        </Condition>
+
+        <Layout flexBasis={[52, 160]} />
+
+        <Condition match={isMobile}>
+          <Row>
+            <Layout flexBasis={20} />
+
+            <Box width={254} height={72} alignItems='center'>
+              <NextLink path='/' width='100%'>
+                <Button
+                  variant='transparentBackgroundBlackText'
+                  gap={24}
+                  icon={<ArrowRightIcon width={16} height={16} />}
+                  widthIcon={48}
+                  heightIcon={48}
+                  backgroundIcon='background.white'
                 >
-                  <FormattedMessage id='coursesSidebarSubtitle' />
-                </Text>
-              </Box>
-
-              <Layout flexBasis={[16, 74]} flexShrink='0' />
-
-              <Box display={['none', 'flex']} margin='0 auto'>
-                <Image src='./image/Default.png' width={240} height={240} />
-              </Box>
-
-              <Layout flexBasis={[0, 62]} flexShrink='0' />
-
-              <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
-                <Box maxWidth={[32, 36]}>
-                  <Text
-                    color='text.courses.primary'
-                    fontSize={['giant', 'enormous']}
-                    fontWeight='normal'
-                    lineHeight={['large', 'big']}
-                  >
-                    <FormattedMessage id='coursesSidebarNumber' />
+                  <Text fontSize='small' fontWeight='normal' lineHeight='small'>
+                    <FormattedMessage id='coursesButton' />
                   </Text>
-                </Box>
-
-                <Layout flexBasis={[12, 8]} />
-
-                <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
-                  <Text
-                    color='text.courses.primary'
-                    fontSize={['atom', 'tiny']}
-                    fontWeight='normal'
-                    lineHeight={['minor', 'small']}
-                  >
-                    <FormattedMessage id='coursesSidebarSign' />
-                  </Text>
-                </Box>
-
-                <Layout flexBasis={[64, 0]} flexShrink='5' flexGrow='1' />
-
-                <Box display={['flex', 'none']} flexShrink='0'>
-                  <Image src='./image/Default.png' width={64} height={64} />
-                </Box>
-              </Box>
-
-              <Layout flexBasis={[16, 68]} flexShrink='0' />
-
-              <Box display={['none', 'flex']}>
-                <Text
-                  color='text.courses.primary'
-                  fontSize='small'
-                  fontWeight='normal'
-                  lineHeight='small'
-                >
-                  <FormattedMessage id='coursesSidebarButtonDesktop' />
-                </Text>
-              </Box>
-            </Column>
-
-            <Layout flexBasis={[16, 32]} flexShrink='1' />
+                </Button>
+              </NextLink>
+            </Box>
           </Row>
-        </Box>
+        </Condition>
+
+        <Layout flexBasis={[64, 0]} />
       </Column>
-
-      <Layout flexBasis={[20, 80]} flexShrink='1' />
-    </Row>
-
-    <Row display={['flex', 'none']} overflow='hidden'>
-      <Layout flexBasis={32} flexShrink='0' />
-
-      <Row justifyContent='space-between'>
-        <Box flexShrink='0' flexBasis={228}>
-          <Text
-            color='text.courses.primary'
-            fontSize='small'
-            fontWeight='normal'
-            lineHeight='tiddly'
-          >
-            <FormattedMessage id='coursesSmallCardLibraries' />
-          </Text>
-        </Box>
-
-        <Box flexShrink='0' flexBasis={228}>
-          <Text
-            color='text.courses.primary'
-            fontSize='small'
-            fontWeight='normal'
-            lineHeight='tiddly'
-          >
-            <FormattedMessage id='coursesSmallCardDesign' />
-          </Text>
-        </Box>
-      </Row>
-    </Row>
-
-    <Layout flexBasis={[52, 160]} flexShrink='0' />
-
-    <Row display={['flex', 'none']}>
-      <Layout flexBasis={20} />
-
-      <Box>
-        <NextLink>
-          <Text
-            color='text.courses.primary'
-            fontSize='little'
-            fontWeight='normal'
-            lineHeight='minor'
-          >
-            <FormattedMessage id='coursesButton' />
-          </Text>
-        </NextLink>
-      </Box>
-    </Row>
-
-    <Layout flexBasis={[64, 0]} />
-  </Box>
-)
+    </Box>
+  )
+}

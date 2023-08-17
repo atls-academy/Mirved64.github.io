@@ -4,10 +4,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "react": "18.2.0"
-  },
-  "devDependencies": {
-    "@landing/fragment-about": "workspace:^",
+    "@landing/fragment-about": "workspace: 0.0.1",
     "@landing/fragment-courses": "workspace:0.0.1",
     "@landing/fragment-faq": "workspace:0.0.1",
     "@landing/fragment-hero": "workspace:0.0.1",
@@ -16,7 +13,11 @@
     "@landing/fragment-slider": "workspace:0.0.1",
     "@landing/fragment-technologies": "workspace:0.0.1"
   },
+  "devDependencies": {
+    "@types/react": "18.2.9"
+  },
   "peerDependencies": {
+    "next": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

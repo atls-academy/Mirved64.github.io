@@ -1,19 +1,18 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React               from 'react'
+import { FC }              from 'react'
 
-import { Divider }          from '@ui/divider'
-import { Box }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Divider }         from '@ui/divider'
+import { Box }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Text }            from '@ui/text'
 
-import { TechnologyProps }  from './item.interfaces'
+import { TechnologyProps } from './item.interfaces'
 
 export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'primary' }) => (
-  <Box flexShrink='0'>
-    <Box flexShrink='0'>
+  <Box>
+    <Box>
       <Text
-        color='text.process.primary'
+        color='text.white'
         fontSize={['huge', 'massive']}
         fontWeight='lighter'
         fontFamily={font}
@@ -21,16 +20,18 @@ export const Item: FC<TechnologyProps> = ({ technologyName, divider, font = 'pri
         whiteSpace='nowrap'
         textTransform='uppercase'
       >
-        <FormattedMessage id={technologyName} />
+        {technologyName}
       </Text>
     </Box>
 
-    <Layout flexBasis={24} flexShrink='0' />
+    <Box width={[51, 96]}>
+      <Layout flexBasis={[12, 24]} />
 
-    <Box width='48px' flexShrink='0'>
-      <Divider backgroundColor='divider.primary' weight={divider} margin='auto 0' />
+      <Box width={[27, 48]} alignItems='center'>
+        <Divider backgroundColor='divider.white' weight={divider} />
+      </Box>
+
+      <Layout flexBasis={[12, 24]} />
     </Box>
-
-    <Layout flexBasis={24} flexShrink='0' />
   </Box>
 )

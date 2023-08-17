@@ -1,25 +1,35 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React         from 'react'
+import { FC }        from 'react'
 
-import { Box }              from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Text }             from '@ui/text'
+import { Divider }   from '@ui/divider'
+import { Box }       from '@ui/layout'
+import { Column }    from '@ui/layout'
+import { Layout }    from '@ui/layout'
+import { NextLink }  from '@ui/link'
+import { Text }      from '@ui/text'
 
-import { ItemProps }        from './item.interfaces'
+import { ItemProps } from './item.interfaces'
 
 export const Item: FC<ItemProps> = ({ name, path }) => (
-  <Box key={name} flexBasis={200} flexShrink='0' justifyContent='center'>
-    <NextLink path={path}>
-      <Text
-        color='text.navigation.primary'
-        fontSize='compact'
-        fontWeight='normal'
-        lineHeight='little'
-        textTransform='uppercase'
-      >
-        <FormattedMessage id={name} />
-      </Text>
+  <Box flexBasis={200} flexShrink='0'>
+    <NextLink path={path} width='100%'>
+      <Column alignItems='center'>
+        <Box>
+          <Text
+            color='text.white'
+            fontSize='compact'
+            fontWeight='normal'
+            lineHeight='little'
+            textTransform='uppercase'
+          >
+            {name}
+          </Text>
+        </Box>
+
+        <Layout flexBasis={10} />
+
+        <Divider backgroundColor='divider.lightGray' weight='1px' />
+      </Column>
     </NextLink>
   </Box>
 )
