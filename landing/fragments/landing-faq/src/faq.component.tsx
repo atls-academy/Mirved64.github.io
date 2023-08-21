@@ -17,6 +17,7 @@ import { Item }             from './item'
 
 export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
+  // const items = (FaqList) => (FaqList.Array.from({ length: 6 }))
 
   return (
     <Row>
@@ -64,7 +65,7 @@ export const Faq = () => {
         </Condition>
 
         {FaqList.map((item) => (
-          <Item question={item.question} key={item.id} />
+          <Item question={item.question} answer={item.answer} key={item.id} />
         ))}
 
         <Condition match={isMobile}>
