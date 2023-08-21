@@ -9,6 +9,7 @@ const lineHeights = {
   mini: '24px',
   medium: '26px',
   normal: '28px',
+  usual: '33px',
   standart: '34px',
   ordinary: '39px',
   regular: '45px',

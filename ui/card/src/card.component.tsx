@@ -1,82 +1,131 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { Condition } from '@ui/condition'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
+import { Background } from '@ui/background'
+import { Condition }  from '@ui/condition'
+import { Box }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Text }       from '@ui/text'
 
-import { CardProps } from './card.interfaces'
+import { CardProps }  from './card.interfaces'
 
-export const Card: FC<CardProps> = ({
-  indent,
-  category,
-  isMobileOnly = false,
-  titleDesktop,
-  titleMobile,
-  description,
-}) => (
-  <Row>
-    <Layout flexBasis={[16, 40]} />
+export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => (
+  <Background display='flex' backgroundColor='lightGray' width='100%'>
+    <Layout flexBasis={[16, 40]} flexShrink='0' />
 
-    <Column flexGrow='1'>
+    <Column>
       <Layout flexBasis={[16, 40]} />
 
-      <Row flexBasis={[27, 38]} alignItems='center'>
-        <Layout flexBasis={[8, 12]} />
+      <Condition match={props.category === 'обучение'}>
+        <Box
+          flexBasis={[27, 38]}
+          width={[80, 104]}
+          alignItems='center'
+          backgroundColor='background.white'
+        >
+          <Layout flexBasis={[8, 12]} />
 
-        <Box>
-          <Text
-            color='text.black'
-            fontSize={['subAtom', 'tiny']}
-            fontWeight='normal'
-            lineHeight={['atom', 'tiny']}
-            textTransform='uppercase'
-          >
-            {category}
-          </Text>
+          <Box>
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
+            >
+              {props.category}
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 12]} />
         </Box>
 
-        <Layout flexBasis={[8, 12]} />
-      </Row>
+        <Layout flexBasis={[104, 214]} />
+      </Condition>
 
-      <Layout flexBasis={indent} />
+      <Condition match={props.category === 'мини-курс'}>
+        <Box
+          flexBasis={[27, 38]}
+          width={[87, 112]}
+          alignItems='center'
+          backgroundColor='background.white'
+        >
+          <Layout flexBasis={[8, 12]} />
+
+          <Box>
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
+            >
+              {props.category}
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 12]} />
+        </Box>
+
+        <Layout flexBasis={[49, 56]} />
+      </Condition>
+
+      <Condition match={props.category === 'учебный материал'}>
+        <Box
+          flexBasis={[27, 38]}
+          width={[142, 180]}
+          alignItems='center'
+          backgroundColor='background.white'
+        >
+          <Layout flexBasis={[8, 12]} />
+
+          <Box>
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
+            >
+              {props.category}
+            </Text>
+          </Box>
+
+          <Layout flexBasis={[8, 12]} />
+        </Box>
+
+        <Layout flexBasis={[62, 110]} />
+      </Condition>
 
       <Condition match={!isMobileOnly}>
-        <Box>
+        <Box maxWidth={[303, 496]}>
           <Text
-            color='text.black'
+            color='text.primary'
             fontSize={['medium', 'regular']}
-            fontWeight='normal'
             lineHeight={['normal', 'mean']}
           >
-            {titleDesktop}
+            {props.titleDesktop}
           </Text>
         </Box>
       </Condition>
 
       <Condition match={isMobileOnly}>
-        <Box>
-          <Text color='text.black' fontSize='small' fontWeight='normal' lineHeight='tiddly'>
-            {titleMobile}
+        <Box maxWidth={228} flexBasis={46}>
+          <Text color='text.primary' fontSize='small' lineHeight='tiddly'>
+            {props.titleMobile}
           </Text>
         </Box>
       </Condition>
 
-      <Condition match={!!description}>
-        <Column flexBasis={[132, 84]} flexGrow={[1, 0]}>
+      <Condition match={!!props.description}>
+        <Column flexBasis={[132, 84]}>
           <Layout flexBasis={[12, 16]} />
 
           <Box maxWidth={[303, 694]}>
             <Text
-              color='text.black'
+              color='text.primary'
               fontSize={['tiny', 'small']}
-              fontWeight='normal'
               lineHeight={['small', 'normal']}
             >
-              {description}
+              {props.description}
             </Text>
           </Box>
         </Column>
@@ -85,6 +134,6 @@ export const Card: FC<CardProps> = ({
       <Layout flexBasis={[16, 40]} />
     </Column>
 
-    <Layout flexBasis={[16, 40]} />
-  </Row>
+    <Layout flexBasis={[16, 40]} flexShrink='0' />
+  </Background>
 )

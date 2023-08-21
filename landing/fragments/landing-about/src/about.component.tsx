@@ -2,7 +2,6 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Condition }        from '@ui/condition'
-import { Image }            from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -11,123 +10,124 @@ import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
+import { Delimiter }        from './delimiter'
+
 export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Box backgroundColor='background.grey' justifyContent='center'>
-      <Column flexGrow='1'>
-        <Layout flexBasis={[64, 160]} />
+    <Column>
+      <Layout flexBasis={[64, 160]} />
 
-        <Row>
-          <Layout flexBasis={[20, 230]} />
+      <Row>
+        <Layout flexBasis={[20, 230]} />
 
-          <Column flexBasis={[335, 1460]} flexGrow='1'>
-            <Condition match={isDesktop}>
-              <Box display='inline'>
-                <Text
-                  display='inline'
-                  color='text.white'
-                  fontSize='common'
-                  fontWeight='normal'
-                  lineHeight='huge'
-                  wordWrap='break-word'
-                >
-                  <FormattedMessage id='aboutTextIntroDesktop' />
-                </Text>
+        <Column flexBasis={[335, 1460]} flexGrow='1'>
+          <Condition match={isDesktop}>
+            <Box display='inline'>
+              <Text
+                display='inline'
+                color='text.white'
+                fontSize='common'
+                lineHeight='huge'
+                wordWrap='break-word'
+              >
+                <FormattedMessage id='about.intro-desktop' />
+              </Text>
 
-                <Space count='6' />
+              <Space count='6' />
 
-                <Box
-                  display='inline-flex'
-                  width={76}
-                  height={52}
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
+              <Delimiter />
 
-                <Space count='6' />
+              <Space count='6' />
 
-                <Text
-                  display='inline'
-                  color='text.white'
-                  fontSize='common'
-                  fontWeight='normal'
-                  lineHeight='huge'
-                  wordWrap='break-word'
-                >
-                  <FormattedMessage id='aboutTextProblemDesktop' />
-                </Text>
+              <Text
+                display='inline'
+                color='text.white'
+                fontSize='common'
+                lineHeight='huge'
+                wordWrap='break-word'
+              >
+                <FormattedMessage id='about.problem-desktop' />
+              </Text>
 
-                <Space count='14' />
+              <Space count='14' />
 
-                <Box
-                  display='inline-flex'
-                  width={76}
-                  height={52}
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
-              </Box>
-            </Condition>
+              <Delimiter />
+            </Box>
+          </Condition>
 
-            <Condition match={isMobile}>
-              <Column>
-                <Box>
-                  <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
-                    <FormattedMessage id='aboutIntroMobile' />
-                  </Text>
-                </Box>
+          <Condition match={isMobile}>
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.intro-digital-mobile' />
+              </Text>
+            </Box>
 
-                <Layout flexBasis={28} />
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.intro-not-decrease-mobile' />
+              </Text>
+            </Box>
 
-                <Box>
-                  <Text color='text.white' fontSize='small' fontWeight='normal' lineHeight='normal'>
-                    <FormattedMessage id='aboutCentralIdeaMobile' />
-                  </Text>
-                </Box>
-              </Column>
-            </Condition>
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.intro-for-your-decisions-mobile' />
+              </Text>
+            </Box>
 
-            <Layout flexBasis={[0, 40]} />
+            <Layout flexBasis={28} />
 
-            <Condition match={isDesktop}>
-              <Box display='inline'>
-                <Text
-                  display='inline'
-                  color='text.white'
-                  fontSize='common'
-                  fontWeight='normal'
-                  lineHeight='huge'
-                  wordWrap='break-word'
-                >
-                  <FormattedMessage id='aboutCentralIdeaDesktop' />
-                </Text>
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-atlantis-teach-mobile' />
+              </Text>
+            </Box>
 
-                <Space count='6' />
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-make-engineers-mobile' />
+              </Text>
+            </Box>
 
-                <Box
-                  display='inline-flex'
-                  width={76}
-                  height={52}
-                  alignItems='center'
-                  justifyContent='center'
-                >
-                  <Image src='./image/Default.png' width={40} height={40} />
-                </Box>
-              </Box>
-            </Condition>
-          </Column>
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-architects-mobile' />
+              </Text>
+            </Box>
 
-          <Layout flexBasis={[20, 230]} />
-        </Row>
+            <Box>
+              <Text color='text.white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='about.central-idea-not-programmers-mobile' />
+              </Text>
+            </Box>
+          </Condition>
 
-        <Layout flexBasis={[64, 160]} />
-      </Column>
-    </Box>
+          <Layout flexBasis={[0, 40]} />
+
+          <Condition match={isDesktop}>
+            <Box display='inline'>
+              <Text
+                display='inline'
+                color='text.white'
+                fontSize='common'
+                lineHeight='huge'
+                wordWrap='break-word'
+              >
+                <FormattedMessage id='about.central-idea-desktop' />
+              </Text>
+
+              <Space count='6' />
+
+              <Delimiter />
+            </Box>
+          </Condition>
+        </Column>
+
+        <Layout flexBasis={[20, 230]} />
+      </Row>
+
+      <Layout flexBasis={[64, 160]} />
+    </Column>
   )
 }

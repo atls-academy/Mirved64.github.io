@@ -15,20 +15,14 @@ export const Item: FC<ItemProps> = ({ name, path }) => (
     <NextLink path={path} width='100%'>
       <Column alignItems='center'>
         <Box>
-          <Text
-            color='text.white'
-            fontSize='compact'
-            fontWeight='normal'
-            lineHeight='little'
-            textTransform='uppercase'
-          >
+          <Text color='text.white' fontSize='compact' lineHeight='little' textTransform='uppercase'>
             {name}
           </Text>
         </Box>
 
         <Layout flexBasis={10} />
 
-        <Divider backgroundColor='divider.lightGray' weight='1px' />
+        <Divider backgroundColor='divider.white' weight={1} />
       </Column>
     </NextLink>
   </Box>

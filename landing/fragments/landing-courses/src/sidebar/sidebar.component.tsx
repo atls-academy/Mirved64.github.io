@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Background }       from '@ui/background'
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { MouseIcon }        from '@ui/icons'
@@ -16,22 +17,21 @@ export const Sidebar = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Column flexBasis={[212, 410]} flexShrink={[1, 0]}>
-      <Row order={[1, 0]}>
-        <Layout flexBasis={[16, 32]} />
-
-        <Column flexBasis={[303, 346]} flexGrow={[1, 0]}>
+    <Column flexBasis={[212, 410]}>
+      <Background display='flex' backgroundColor='blackTransparent'>
+        <Row order={[1, 0]}>
           <Layout flexBasis={[16, 32]} />
 
-          <Column>
+          <Column flexBasis={[303, 346]} flexGrow={[1, 0]} flexShrink={2}>
+            <Layout flexBasis={[16, 32]} />
+
             <Box>
               <Text
-                color='text.black'
+                color='text.primary'
                 fontSize={['tiny', 'little']}
-                fontWeight='normal'
                 lineHeight={['compact', 'medium']}
               >
-                <FormattedMessage id='coursesSidebarSubtitle' />
+                <FormattedMessage id='courses.sidebar.subtitle' />
               </Text>
             </Box>
 
@@ -45,15 +45,14 @@ export const Sidebar = () => {
 
             <Layout flexBasis={[0, 62]} />
 
-            <Box flexDirection={['row', 'column']} alignItems={['center', 'normal']}>
+            <Box flexDirection={['row', 'column']} alignItems={['center', 'start']}>
               <Box>
                 <Text
-                  color='text.black'
+                  color='text.accent'
                   fontSize={['giant', 'enormous']}
-                  fontWeight='normal'
                   lineHeight={['large', 'big']}
                 >
-                  <FormattedMessage id='coursesSidebarNumber' />
+                  <FormattedMessage id='courses.sidebar.number' />
                 </Text>
               </Box>
 
@@ -61,12 +60,11 @@ export const Sidebar = () => {
 
               <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
                 <Text
-                  color='text.black'
+                  color='text.primary'
                   fontSize={['atom', 'tiny']}
-                  fontWeight='normal'
                   lineHeight={['minor', 'small']}
                 >
-                  <FormattedMessage id='coursesSidebarSign' />
+                  <FormattedMessage id='courses.sidebar.sign' />
                 </Text>
               </Box>
 
@@ -78,31 +76,29 @@ export const Sidebar = () => {
                 </Box>
               </Condition>
             </Box>
+
+            <Layout flexBasis={[16, 32]} />
           </Column>
 
           <Layout flexBasis={[16, 32]} />
-        </Column>
-
-        <Layout flexBasis={[16, 32]} />
-      </Row>
+        </Row>
+      </Background>
 
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
       <Condition match={isDesktop}>
-        <Box width='100%' height={72} alignItems='center'>
-          <Button
-            variant='transparentBackgroundBlackText'
-            gap={121}
-            icon={<MouseIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={48}
-            backgroundIcon='background.white'
-          >
-            <Text fontSize='small' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='coursesSidebarButtonDesktop' />
-            </Text>
-          </Button>
-        </Box>
+        <Button
+          variant='primaryBackgroundWhiteText'
+          size='big'
+          icon={<MouseIcon width={16} height={16} />}
+          widthIcon={48}
+          heightIcon={48}
+          backgroundIcon='background.white'
+        >
+          <Text color='white' fontSize='small' lineHeight='small'>
+            <FormattedMessage id='courses.sidebar.button-desktop' />
+          </Text>
+        </Button>
       </Condition>
     </Column>
   )

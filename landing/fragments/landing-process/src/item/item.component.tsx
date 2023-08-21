@@ -11,60 +11,46 @@ import { Text }      from '@ui/text'
 
 import { ItemProps } from './item.interfaces'
 
-export const Item: FC<ItemProps> = ({
-  sequenceNumber,
-  name,
-  description,
-  weight,
-  divider = true,
-}) => (
+export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
   <Column>
-    <Row>
-      <Row flexBasis={[47, 96]} alignItems={['start', 'center']}>
-        <Box width={[35, 64]} height={[35, 64]} alignItems='center' justifyContent='center'>
-          <Text
-            color='text.white'
-            fontSize={['compact', 'medium']}
-            fontWeight='normal'
-            lineHeight={['little', 'mini']}
-            fontFamily='regular'
-          >
-            {sequenceNumber}
-          </Text>
-        </Box>
-
-        <Layout flexBasis={[12, 32]} flexShrink='0' />
-      </Row>
-
-      <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1' flexShrink='1'>
-        <Box
-          alignItems='center'
-          flexWrap='wrap'
-          flexBasis={[28, 367]}
-          flexShrink={[1, 0]}
-          flexGrow={[0, 1]}
+    <Row alignItems={['start', 'center']}>
+      <Box
+        width={[35, 64]}
+        height={[35, 64]}
+        alignItems='center'
+        justifyContent='center'
+        backgroundColor='background.whiteTransparent'
+        flexShrink='0'
+      >
+        <Text
+          color='text.white'
+          fontSize={['compact', 'medium']}
+          lineHeight={['little', 'mini']}
+          fontFamily='regular'
         >
-          <Text
-            color='text.white'
-            fontSize={['medium', 'regular']}
-            fontWeight={['normalMedium', 'normal']}
-            lineHeight={['normal', 'mean']}
-          >
-            {name}
+          {props.sequenceNumber}
+        </Text>
+      </Box>
+
+      <Layout flexBasis={[12, 32]} flexShrink='0' />
+
+      <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1'>
+        <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
+          <Text color='text.white' fontSize={['medium', 'regular']} lineHeight={['usual', 'mean']}>
+            {props.name}
           </Text>
         </Box>
 
-        <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow={[0, 3]} />
+        <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow='3' />
 
-        <Box flexBasis={[40, 560]} flexWrap='wrap' flexGrow={[1, 0]} alignItems='center'>
+        <Box flexBasis={[40, 560]}>
           <Text
             color='text.white'
             fontSize={['tiny', 'medium']}
-            fontWeight='normal'
             lineHeight={['compact', 'standart']}
             textWrap='wrap'
           >
-            {description}
+            {props.description}
           </Text>
         </Box>
       </Box>
@@ -74,7 +60,7 @@ export const Item: FC<ItemProps> = ({
       <Column>
         <Layout flexBasis={[28, 48]} />
 
-        <Divider backgroundColor='divider.white' weight={weight} />
+        <Divider backgroundColor='divider.ghost' weight={1} />
 
         <Layout flexBasis={[28, 48]} />
       </Column>
