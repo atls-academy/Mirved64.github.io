@@ -1,9 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
-import { Card }             from '@ui/card'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { ArrowRightIcon }   from '@ui/icons'
@@ -12,16 +10,16 @@ import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
-import { Swiper }           from '@ui/swiper'
-import { SwiperSlide }      from '@ui/swiper'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
+import { CardsMaterials }   from './cards'
+import { CardsSwiper }      from './cards'
+import { CardsLearning }    from './cards'
 import { Info }             from './info'
 import { Sidebar }          from './sidebar'
 
 export const Courses = () => {
-  const { formatMessage } = useIntl()
   const { isMobile, isDesktop } = useWindowWidth()
 
   return (
@@ -79,64 +77,10 @@ export const Courses = () => {
 
             <Box flexDirection={['column', 'row']}>
               <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
-                <Card
-                  indent={[148, 214]}
-                  category={formatMessage({
-                    id: 'courses.card.training',
-                  })}
-                  widthCategoryBox={[80, 104]}
-                  titleDesktop={formatMessage({
-                    id: 'courses.card.frontend-engineer',
-                  })}
-                  description={formatMessage({
-                    id: 'courses.card.you-will-learn-fundamental-knowledge-in-it',
-                  })}
-                />
-
-                <Layout flexBasis={[20, 40]} />
-
-                <Card
-                  indent={[93, 56]}
-                  category={formatMessage({
-                    id: 'courses.card.minicourse',
-                  })}
-                  widthCategoryBox={[87, 112]}
-                  titleDesktop={formatMessage({
-                    id: 'courses.card.development-basics',
-                  })}
-                  description={formatMessage({
-                    id: 'courses.card.you-will-learn-fundamental-knowledge-in-it',
-                  })}
-                />
-
-                <Layout flexBasis={[20, 40]} />
+                <CardsLearning />
 
                 <Condition match={isDesktop}>
-                  <Row>
-                    <Card
-                      indent={110}
-                      category={formatMessage({
-                        id: 'courses.card.learning-material',
-                      })}
-                      widthCategoryBox={180}
-                      titleDesktop={formatMessage({
-                        id: 'courses.card.how-use-libraries',
-                      })}
-                    />
-
-                    <Layout flexBasis={[20, 40]} flexShrink='0' />
-
-                    <Card
-                      indent={110}
-                      category={formatMessage({
-                        id: 'courses.card.learning-material',
-                      })}
-                      widthCategoryBox={180}
-                      titleDesktop={formatMessage({
-                        id: 'courses.card.design-figma-math',
-                      })}
-                    />
-                  </Row>
+                  <CardsMaterials />
                 </Condition>
               </Column>
 
@@ -151,43 +95,7 @@ export const Courses = () => {
 
         <Condition match={isMobile}>
           <Row>
-            <Swiper spaceBetween={20} slidesPerView={1.23} className='swiper-1'>
-              <SwiperSlide>
-                <Row>
-                  <Layout flexBasis={20} flexShrink='0' />
-
-                  <Card
-                    indent={62}
-                    category={formatMessage({
-                      id: 'courses.card.learning-material',
-                    })}
-                    widthCategoryBox={142}
-                    isMobileOnly
-                    titleMobile={formatMessage({
-                      id: 'courses.card.how-use-libraries',
-                    })}
-                  />
-                </Row>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Row>
-                  <Card
-                    indent={62}
-                    category={formatMessage({
-                      id: 'courses.card.learning-material',
-                    })}
-                    widthCategoryBox={142}
-                    isMobileOnly
-                    titleMobile={formatMessage({
-                      id: 'courses.card.design-figma-math',
-                    })}
-                  />
-
-                  <Layout flexBasis={20} flexShrink='0' />
-                </Row>
-              </SwiperSlide>
-            </Swiper>
+            <CardsSwiper spaceBetween={20} className='swiper-1' slidesPerView={1.23} />
           </Row>
         </Condition>
 
