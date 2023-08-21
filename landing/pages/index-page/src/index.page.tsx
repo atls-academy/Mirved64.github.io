@@ -42,7 +42,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={1}
-        top={[940, 1750]}
+        top={[939, 1750]}
       >
         <Courses />
       </Background>
@@ -53,7 +53,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={2}
-        top={[2722, 3761]}
+        top={[2634, 3761]}
       >
         <Process />
 
@@ -68,7 +68,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={3}
-        top={[4350, 6460]}
+        top={[4264, 6450]}
       >
         <Faq />
       </Background>
