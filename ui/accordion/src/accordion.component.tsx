@@ -19,7 +19,7 @@ import { MinusIcon }       from './icons'
 export const Accordion = ({ answer, question }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
-  const [hover, hoverProps] = useHover()
+  const { hover, hoverProps } = useHover()
 
   return (
     <Column>
@@ -51,7 +51,11 @@ export const Accordion = ({ answer, question }) => {
         <Condition match={isMobile}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <Box flexGrow='1' flexBasis={303}>
-              <Text color='text.primary' fontSize='small' lineHeight='normal'>
+              <Text
+                color={hover ? 'text.accent' : 'text.primary'}
+                fontSize='small'
+                lineHeight='normal'
+              >
                 {question}
               </Text>
             </Box>

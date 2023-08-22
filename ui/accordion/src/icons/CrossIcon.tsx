@@ -2,11 +2,12 @@ import { useTheme }  from '@emotion/react'
 
 /* eslint-disable */
 import React         from 'react'
+import { FC }        from 'react'
 import { motion }    from 'framer-motion'
 
 import { IconProps } from './icons.interfaces'
 
-export const CrossIcon = (props: IconProps) => {
+export const CrossIcon: FC<IconProps> = ({ hover, ...props }) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -19,7 +20,7 @@ export const CrossIcon = (props: IconProps) => {
     >
       <motion.path
         d='M1.00009 7.00011H13.0001M7.00009 1.00011V13.0001'
-        stroke={props.hover ? '#4D3CF2' : '#3A375D'}
+        stroke={hover ? '#4D3CF2' : '#3A375D'}
         strokeWidth={1.75}
         strokeLinecap='round'
       />

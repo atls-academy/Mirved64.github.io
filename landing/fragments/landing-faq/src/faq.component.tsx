@@ -12,11 +12,14 @@ import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
-import { FaqList }          from './faq-list'
+import { Question }         from './data'
 import { Item }             from './item'
 
 export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
+
+  const Items = () =>
+    Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
 
   return (
     <Row>
@@ -63,7 +66,7 @@ export const Faq = () => {
           <Divider backgroundColor='divider.grayGhost' weight={1} />
         </Condition>
 
-        {FaqList.map((item) => (
+        {Items().map((item) => (
           <Item question={item.question} answer={item.answer} key={item.id} />
         ))}
 

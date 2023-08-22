@@ -1,5 +1,5 @@
 export interface IconProps {
-  hover?: boolean | { onMouseEnter: () => void; onMouseLeave: () => void }
+  hover?: boolean
   width?: string | number
   height?: string | number
 }
