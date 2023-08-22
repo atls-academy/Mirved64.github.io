@@ -10,6 +10,7 @@ const colors = {
     white: 'rgba(255, 255, 255, 1)',
     whiteSemiTransparent: 'rgba(255, 255, 255, .5)',
     primary: 'rgba(58, 55, 93, 1)',
+    primaryText: 'rgba(27, 26, 51, 1)',
     accent: 'rgba(77, 60, 242, 1)',
   },
   divider: {

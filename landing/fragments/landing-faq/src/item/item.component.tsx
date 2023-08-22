@@ -12,7 +12,5 @@ export const Item: FC<QuestionProps> = ({ question, answer }) => (
     <Layout flexBasis={[16, 40]} />
 
     <Accordion question={question} answer={answer} />
-
-    <Layout flexBasis={[16, 40]} />
   </Column>
 )

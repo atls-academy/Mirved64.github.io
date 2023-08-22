@@ -17,7 +17,6 @@ import { Item }             from './item'
 
 export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
-  // const items = (FaqList) => (FaqList.Array.from({ length: 6 }))
 
   return (
     <Row>

@@ -4,17 +4,11 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@landing/fragment-faq": "workspace:0.0.1",
-    "@ui/button": "workspace:0.0.1",
+    "@atls-ui-parts/layout": "0.0.7",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
-    "@ui/drawer": "workspace:0.0.1",
-    "@ui/image": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/link": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
-    "dompurify": "2.3.10",
     "framer-motion": "4.1.7"
   },
   "devDependencies": {
@@ -30,7 +24,6 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "graphql": "*",
     "react": "*",
     "react-dom": "*",
     "styled-system": "*"
