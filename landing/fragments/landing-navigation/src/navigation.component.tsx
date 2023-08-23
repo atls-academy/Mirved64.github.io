@@ -59,19 +59,19 @@ export const Navigation = () => {
         <Layout flexBasis={40} flexGrow='1' />
 
         <Row height='29px' flexBasis={860}>
-          <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='academy' />
 
           <Layout flexBasis={20} />
 
-          <Item name={intl.formatMessage({ id: 'navigation.item.courses' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.courses' })} path='courses' />
 
           <Layout flexBasis={20} />
 
-          <Item name={intl.formatMessage({ id: 'navigation.item.teaching' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.teaching' })} path='teaching' />
 
           <Layout flexBasis={20} />
 
-          <Item name={intl.formatMessage({ id: 'navigation.item.faq' })} path='/' />
+          <Item name={intl.formatMessage({ id: 'navigation.item.faq' })} path='faq' />
         </Row>
 
         <Layout flexBasis={40} flexGrow='1' />

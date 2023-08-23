@@ -18,7 +18,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <Background backgroundColor='navyBlueGradient' position='absolute' width='100%'>
+      <Background backgroundColor='navyBlueGradient' position='absolute' width='100%' id='academy'>
         <Navigation />
 
         <Condition match={isDesktop}>
@@ -37,6 +37,7 @@ const IndexPage = () => {
       </Background>
 
       <Background
+        id='courses'
         backgroundColor='white'
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
@@ -48,6 +49,7 @@ const IndexPage = () => {
       </Background>
 
       <Background
+        id='teaching'
         backgroundColor='darkPurple'
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
@@ -63,6 +65,7 @@ const IndexPage = () => {
       </Background>
 
       <Background
+        id='faq'
         backgroundColor='white'
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
