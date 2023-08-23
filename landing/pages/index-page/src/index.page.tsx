@@ -7,7 +7,7 @@ import { Faq }            from '@landing/fragment-faq'
 import { Hero }           from '@landing/fragment-hero'
 import { Navigation }     from '@landing/fragment-navigation'
 import { Process }        from '@landing/fragment-process'
-import { Slider }         from '@landing/fragment-slider'
+import { Steps }          from '@landing/fragment-steps'
 import { Technologies }   from '@landing/fragment-technologies'
 import { Background }     from '@ui/background'
 import { Condition }      from '@ui/condition'
@@ -55,11 +55,11 @@ const IndexPage = () => {
         zIndex={2}
         top={[2634, 3761]}
       >
-        <Process />
+        <Steps />
 
         <Technologies />
 
-        <Slider />
+        <Process />
       </Background>
 
       <Background

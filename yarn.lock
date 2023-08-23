@@ -2301,11 +2301,9 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
-    "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
-    "@ui/divider": "workspace: 0.0.1"
-    "@ui/image": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/slider": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
     react-intl: "npm:6.0.8"
@@ -2316,16 +2314,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/fragment-slider@workspace:0.0.1, @landing/fragment-slider@workspace:landing/fragments/landing-slider":
+"@landing/fragment-steps@workspace:0.0.1, @landing/fragment-steps@workspace:landing/fragments/landing-steps":
   version: 0.0.0-use.local
-  resolution: "@landing/fragment-slider@workspace:landing/fragments/landing-slider"
+  resolution: "@landing/fragment-steps@workspace:landing/fragments/landing-steps"
   dependencies:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
-    "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
-    "@ui/icons": "workspace: 0.0.1"
+    "@ui/divider": "workspace: 0.0.1"
     "@ui/image": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
@@ -2369,7 +2366,7 @@ __metadata:
     "@landing/fragment-hero": "workspace:0.0.1"
     "@landing/fragment-navigation": "workspace:0.0.1"
     "@landing/fragment-process": "workspace:0.0.1"
-    "@landing/fragment-slider": "workspace:0.0.1"
+    "@landing/fragment-steps": "workspace:0.0.1"
     "@landing/fragment-technologies": "workspace:0.0.1"
     "@types/react": "npm:18.2.9"
     "@ui/background": "workspace:0.0.1"
@@ -3518,6 +3515,29 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/slider@workspace: 0.0.1, @ui/slider@workspace:ui/slider":
+  version: 0.0.0-use.local
+  resolution: "@ui/slider@workspace:ui/slider"
+  dependencies:
+    "@types/react": "npm:18.2.9"
+    "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
+    "@ui/button": "workspace: 0.0.1"
+    "@ui/condition": "workspace: 0.0.1"
+    "@ui/icons": "workspace: 0.0.1"
+    "@ui/image": "workspace: 0.0.1"
+    "@ui/layout": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1"
+    "@ui/utils": "workspace: 0.0.1"
+    framer-motion: "npm:^10.16.1"
+    react-intl: "npm:6.0.8"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -7015,7 +7035,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:10.16.1":
+"framer-motion@npm:10.16.1, framer-motion@npm:^10.16.1":
   version: 10.16.1
   resolution: "framer-motion@npm:10.16.1"
   dependencies:

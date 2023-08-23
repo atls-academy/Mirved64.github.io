@@ -10,7 +10,7 @@
     "@landing/fragment-hero": "workspace:0.0.1",
     "@landing/fragment-navigation": "workspace:0.0.1",
     "@landing/fragment-process": "workspace:0.0.1",
-    "@landing/fragment-slider": "workspace:0.0.1",
+    "@landing/fragment-steps": "workspace:0.0.1",
     "@landing/fragment-technologies": "workspace:0.0.1",
     "@ui/background": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",

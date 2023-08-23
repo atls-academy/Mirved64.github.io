@@ -1,79 +1,124 @@
-import React              from 'react'
-import { useIntl }        from 'react-intl'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { Condition }      from '@ui/condition'
-import { Image }          from '@ui/image'
-import { Box }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { useWindowWidth } from '@ui/utils'
+import { Condition }        from '@ui/condition'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Space }            from '@ui/text'
+import { Text }             from '@ui/text'
+import { useWindowWidth }   from '@ui/utils'
 
-import { Item }           from './item'
+import { SliderContainer }  from './slider'
 
 export const Process = () => {
-  const intl = useIntl()
-  const { isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop } = useWindowWidth()
 
   return (
-    <Column>
-      <Layout flexBasis={[64, 160]} />
+    <Column flexGrow='1' alignItems='center'>
+      <Layout flexBasis={[24, 160]} flexShrink='0' />
 
-      <Box position='relative'>
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
-
-        <Column flexGrow='1' flexBasis={[335, 1760]}>
-          <Item
-            sequenceNumber='1'
-            name={intl.formatMessage({ id: 'process.item.team-integration' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Item
-            sequenceNumber='2'
-            name={intl.formatMessage({ id: 'process.item.create-environment' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Item
-            sequenceNumber='3'
-            name={intl.formatMessage({ id: 'process.item.studies-of-technologies' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Item
-            sequenceNumber='4'
-            name={intl.formatMessage({ id: 'process.item.practical-work' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Item
-            sequenceNumber='5'
-            name={intl.formatMessage({ id: 'process.item.project-integration' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-            divider={false}
-          />
-        </Column>
-
-        <Condition match={isDesktop}>
-          <Box
-            width='400px'
-            height='400px'
-            position='absolute'
-            zIndex='10'
-            margin='auto'
-            top='0'
-            left='0'
-            bottom='0'
-            right='0'
-          >
-            <Image src='./image/Default.png' width={400} height={400} />
-          </Box>
-        </Condition>
-
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
+      <Box>
+        <Text
+          color='text.whiteSemiTransparent'
+          fontSize={['atom', 'tiny']}
+          lineHeight={['subAtom', 'tiny']}
+          textTransform='uppercase'
+        >
+          <FormattedMessage id='slider.subtitle' />
+        </Text>
       </Box>
 
-      <Layout flexBasis={[24, 160]} />
+      <Layout flexBasis={[16, 24]} flexShrink='0' />
+
+      <Condition match={isDesktop}>
+        <Column maxWidth={960}>
+          <Row>
+            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+              <FormattedMessage id='slider.slogan.any-process-stops' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='mean'>
+              <FormattedMessage id='slider.slogan.be' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+              <FormattedMessage id='slider.slogan.difficult' />
+            </Text>
+          </Row>
+
+          <Row justifyContent='center'>
+            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+              <FormattedMessage id='slider.slogan.when' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='mean'>
+              <FormattedMessage id='slider.slogan.you-know' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+              <FormattedMessage id='slider.slogan.how-it-happen' />
+            </Text>
+          </Row>
+        </Column>
+      </Condition>
+
+      <Condition match={isMobile}>
+        <Column maxWidth={335}>
+          <Row justifyContent='center'>
+            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+              <FormattedMessage id='slider.slogan.any-process-stops' />
+            </Text>
+          </Row>
+
+          <Row>
+            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='normal'>
+              <FormattedMessage id='slider.slogan.be' />
+            </Text>
+
+            <Space count={2} />
+
+            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+              <FormattedMessage id='slider.slogan.difficult' />
+            </Text>
+
+            <Space count={2} />
+
+            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+              <FormattedMessage id='slider.slogan.when' />
+            </Text>
+
+            <Space count={2} />
+
+            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='normal'>
+              <FormattedMessage id='slider.slogan.you-know' />
+            </Text>
+          </Row>
+
+          <Row justifyContent='center'>
+            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+              <FormattedMessage id='slider.slogan.how-it-happen' />
+            </Text>
+          </Row>
+        </Column>
+      </Condition>
+
+      <Layout flexBasis={[24, 50]} flexShrink='0' />
+
+      <SliderContainer />
+
+      <Layout flexBasis={[64, 160]} flexShrink='0' />
+
+      <Layout flexBasis={[64, 80]} flexShrink='0' />
     </Column>
   )
 }
