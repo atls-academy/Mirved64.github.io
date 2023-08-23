@@ -9,6 +9,7 @@
     "@ui/condition": "workspace: 0.0.1",
     "@ui/layout": "workspace: 0.0.1",
     "@ui/text": "workspace: 0.0.1",
+    "@ui/utils": "workspace: 0.0.1",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },
