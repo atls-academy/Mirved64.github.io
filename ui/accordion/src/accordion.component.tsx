@@ -26,7 +26,7 @@ export const Accordion = ({ answer, question }) => {
       <motion.div onClick={() => setSelected(!selected)}>
         <Condition match={isDesktop}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
-            <motion.div>
+            <motion.div style={{ display: 'flex', alignItems: 'center' }}>
               {selected === true ? (
                 <MinusIcon width={20} height={20} hover={hover} />
               ) : (
@@ -62,7 +62,7 @@ export const Accordion = ({ answer, question }) => {
 
             <Layout flexBasis={24} flexShrink='0' />
 
-            <motion.div>
+            <motion.div style={{ display: 'flex', alignItems: 'center' }}>
               {selected === true ? (
                 <MinusIcon width={14} height={14} hover={hover} />
               ) : (
