@@ -2,7 +2,6 @@ import { Scrollspy }        from '@makotot/ghostui'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { Link }             from 'react-scroll'
 
 import { Background }       from '@ui/background'
 import { Button }           from '@ui/button'
@@ -18,15 +17,14 @@ import { Row }              from '@ui/layout'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
-import { useHover }         from '@ui/utils'
 
 import { CardDataDesktop }  from '../data'
 import { CardDataMobile }   from '../data'
 import { NavLinks }         from '../data'
+import { ItemDrawer }       from '../item'
 
 export const Drawer = ({ active, onClose, sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
-  const { hover, hoverProps } = useHover()
 
   const cardsList = () =>
     Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({ ...el, id: index }))
@@ -49,55 +47,13 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
                 {({ currentElementIndexInViewport }) => (
                   <Box flexBasis={860}>
                     {NavLinks.map((navLink, index) => (
-                      <Box
-                        width={index < NavLinks.length - 1 ? 220 : 200}
-                        key={`drawer-${navLink.id}`}
-                      >
-                        <Box flexBasis={200} cursor='pointer' {...hoverProps}>
-                          <Link to={navLink.path} width='100%' spy smooth duration={1000}>
-                            <Column alignItems='center'>
-                              <Condition match={currentElementIndexInViewport !== index}>
-                                <Box>
-                                  <Text
-                                    color={hover ? 'text.black' : 'text.ghost'}
-                                    fontSize='compact'
-                                    lineHeight='little'
-                                    textTransform='uppercase'
-                                  >
-                                    {navLink.name}
-                                  </Text>
-                                </Box>
-
-                                <Layout flexBasis={10} />
-
-                                <Divider
-                                  backgroundColor={
-                                    hover ? 'divider.black' : 'divider.blackTransparent'
-                                  }
-                                  weight={1}
-                                  width={200}
-                                />
-                              </Condition>
-
-                              <Condition match={currentElementIndexInViewport === index}>
-                                <Box>
-                                  <Text
-                                    color='text.black'
-                                    fontSize='compact'
-                                    lineHeight='little'
-                                    textTransform='uppercase'
-                                  >
-                                    {navLink.name}
-                                  </Text>
-                                </Box>
-
-                                <Layout flexBasis={10} />
-
-                                <Divider backgroundColor='divider.black' weight={1} width={200} />
-                              </Condition>
-                            </Column>
-                          </Link>
-                        </Box>
+                      <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                        <ItemDrawer
+                          path={navLink.path}
+                          name={navLink.name}
+                          currentElementIndexInViewport={currentElementIndexInViewport}
+                          index={index}
+                        />
 
                         <Condition match={index < NavLinks.length - 1}>
                           <Layout flexBasis={20} />
@@ -135,6 +91,14 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
               <Layout flexBasis={40} flexShrink='0' />
               {cardsList().map((card, index, array) => (
                 <Row key={card.id}>
+                  <Condition match={index === array.length - 1}>
+                    <Layout flexBasis={20} flexShrink='0' />
+                  </Condition>
+
+                  <Condition match={index !== 0 && index !== array.length - 1}>
+                    <Layout flexBasis={10} flexShrink='0' />
+                  </Condition>
+
                   <Card
                     category={card.category}
                     titleDesktop={card.title}
@@ -143,8 +107,12 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
                     widthCategoryBox={104}
                   />
 
-                  <Condition match={index < array.length - 1}>
-                    <Layout flexBasis={30} flexShrink='0' />
+                  <Condition match={index !== 0 && index !== array.length - 1}>
+                    <Layout flexBasis={10} flexShrink='0' />
+                  </Condition>
+
+                  <Condition match={index === 0}>
+                    <Layout flexBasis={20} flexShrink='0' />
                   </Condition>
                 </Row>
               ))}
