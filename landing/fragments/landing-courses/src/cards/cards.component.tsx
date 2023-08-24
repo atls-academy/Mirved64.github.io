@@ -18,7 +18,25 @@ export const CardsLearning = () => (
       card
     ) => (
       <Column key={card.id}>
-        <Card category={card.category} titleDesktop={card.title} description={card.description} />
+        <Condition match={card.category === 'обучение'}>
+          <Card
+            category={card.category}
+            titleDesktop={card.title}
+            description={card.description}
+            indent={[104, 214]}
+            widthCategoryBox={[80, 104]}
+          />
+        </Condition>
+
+        <Condition match={card.category === 'мини-курс'}>
+          <Card
+            category={card.category}
+            titleDesktop={card.title}
+            description={card.description}
+            indent={[49, 112]}
+            widthCategoryBox={[87, 112]}
+          />
+        </Condition>
 
         <Layout flexBasis={[20, 40]} />
       </Column>
@@ -34,24 +52,27 @@ export const CardsMaterials = () => (
       array
     ) => (
       <Row key={card.id}>
-        <Condition match={index === 0}>
-          <Card category={card.category} titleDesktop={card.title} />
-
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
-
         <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-
-          <Card category={card.category} titleDesktop={card.title} />
-
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
 
         <Condition match={index === array.length - 1}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
+        </Condition>
 
-          <Card category={card.category} titleDesktop={card.title} />
+        <Card
+          category={card.category}
+          titleDesktop={card.title}
+          indent={110}
+          widthCategoryBox={180}
+        />
+
+        <Condition match={index === 0}>
+          <Layout flexBasis={[10, 20]} flexShrink='0' />
+        </Condition>
+
+        <Condition match={index !== 0 && index !== array.length - 1}>
+          <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
       </Row>
     ))}
@@ -66,37 +87,23 @@ export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, clas
       array
     ) => (
       <SwiperSlide key={card.id}>
-        <Condition match={index === 0}>
-          <Row>
+        <Row>
+          <Condition match={index === 0}>
             <Layout flexBasis={20} flexShrink='0' />
+          </Condition>
 
-            <Card
-              category={card.category}
-              titleMobile={card.title}
-              isMobileOnly={card.isMobileOnly}
-            />
-          </Row>
-        </Condition>
-
-        <Condition match={index !== 0 && index !== array.length - 1}>
           <Card
             category={card.category}
             titleMobile={card.title}
             isMobileOnly={card.isMobileOnly}
+            indent={62}
+            widthCategoryBox={142}
           />
-        </Condition>
 
-        <Condition match={index === array.length - 1}>
-          <Row>
-            <Card
-              category={card.category}
-              titleMobile={card.title}
-              isMobileOnly={card.isMobileOnly}
-            />
-
+          <Condition match={index === array.length - 1}>
             <Layout flexBasis={20} flexShrink='0' />
-          </Row>
-        </Condition>
+          </Condition>
+        </Row>
       </SwiperSlide>
     ))}
   </Swiper>

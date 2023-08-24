@@ -6,6 +6,7 @@ import { Link }             from 'react-scroll'
 
 import { Background }       from '@ui/background'
 import { Button }           from '@ui/button'
+import { Card }             from '@ui/card'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { DrawerContainer }  from '@ui/drawer'
@@ -19,18 +20,24 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 import { useHover }         from '@ui/utils'
 
+import { CardDataDesktop }  from '../data'
+import { CardDataMobile }   from '../data'
 import { NavLinks }         from '../data'
 
 export const Drawer = ({ active, onClose, sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
+  const cardsList = () =>
+    Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({ ...el, id: index }))
+
   return (
-    <DrawerContainer heightDrawer={[455, 600]} active={active}>
+    <DrawerContainer heightDrawer={[495, 600]} active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
         <Column>
           <Condition match={isDesktop}>
             <Layout flexBasis={32} />
+
             <Row alignItems='center' height={56}>
               <Layout flexBasis={40} />
 
@@ -124,10 +131,34 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
             </Row>
 
             <Layout flexBasis={50} />
+            <Row>
+              <Layout flexBasis={40} flexShrink='0' />
+              {cardsList().map((card, index, array) => (
+                <Row key={card.id}>
+                  <Card
+                    category={card.category}
+                    titleDesktop={card.title}
+                    description={card.description}
+                    indent={110}
+                    widthCategoryBox={104}
+                  />
+
+                  <Condition match={index < array.length - 1}>
+                    <Layout flexBasis={30} flexShrink='0' />
+                  </Condition>
+                </Row>
+              ))}
+
+              <Layout flexBasis={40} flexShrink='0' />
+            </Row>
+
+            <Layout flexBasis={32} />
           </Condition>
 
           <Condition match={isMobile}>
-            <Row height={80} alignItems='center'>
+            <Layout flexBasis={20} />
+
+            <Row height={40} alignItems='center'>
               <Layout flexBasis={20} />
 
               <Box>
@@ -157,6 +188,58 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
             </Row>
 
             <Layout flexBasis={78} />
+
+            <Row>
+              <Layout flexBasis={20} />
+
+              <Column flexGrow='1'>
+                {CardDataMobile.map((card, index, array) => (
+                  <Column key={card.id} flexBasis={85}>
+                    <Box
+                      width={card.category === 'базовый' ? 87 : 122}
+                      height={32}
+                      border='thinnestPrimary'
+                      borderRadius='tiny'
+                      justifyContent='center'
+                      alignItems='center'
+                    >
+                      <Text
+                        color='text.primaryText'
+                        fontSize='atom'
+                        lineHeight='petty'
+                        textTransform='uppercase'
+                      >
+                        {card.category}
+                      </Text>
+                    </Box>
+
+                    <Layout flexBasis={8} />
+
+                    <Box>
+                      <Text color='text.primaryText' fontSize='ordinary' lineHeight='regular'>
+                        {card.title}
+                      </Text>
+                    </Box>
+
+                    <Condition match={index < array.length - 1}>
+                      <Layout flexBasis={20} />
+
+                      <Divider
+                        backgroundColor='divider.primaryTransparent'
+                        weight={1}
+                        width='100%'
+                      />
+
+                      <Layout flexBasis={20} />
+                    </Condition>
+                  </Column>
+                ))}
+              </Column>
+
+              <Layout flexBasis={20} />
+            </Row>
+
+            <Layout flexBasis={20} />
           </Condition>
         </Column>
       </Background>

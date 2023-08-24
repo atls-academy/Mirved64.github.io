@@ -31,6 +31,7 @@ const colors = {
     lightGray: 'rgba(217, 217, 217, 1)',
     ghost: 'rgba(255, 255, 255, 0.25)',
     grayGhost: 'rgba(27, 26, 51, 0.15)',
+    primaryTransparent: 'rgba(58, 55, 93, 0.25)',
   },
   button: {
     primaryBackgroundWhiteText: {

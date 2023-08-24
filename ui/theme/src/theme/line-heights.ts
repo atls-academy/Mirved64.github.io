@@ -1,5 +1,6 @@
 const lineHeights = {
   atom: '11px',
+  petty: '12px',
   tiny: '14px',
   minor: '16px',
   little: '18px',

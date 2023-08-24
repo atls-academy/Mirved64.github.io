@@ -6,6 +6,7 @@
     "@makotot/ghostui": "2.0.0",
     "@ui/background": "workspace: 0.0.1",
     "@ui/button": "workspace: 0.0.1",
+    "@ui/card": "workspace: 0.0.1",
     "@ui/condition": "workspace: 0.0.1",
     "@ui/divider": "workspace: 0.0.1",
     "@ui/drawer": "workspace: 0.0.1",

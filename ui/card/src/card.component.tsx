@@ -32,84 +32,25 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
         <Column>
           <Layout flexBasis={[16, 40]} />
 
-          <Condition match={props.category === 'обучение'}>
-            <Box
-              flexBasis={[27, 38]}
-              width={[80, 104]}
-              alignItems='center'
-              backgroundColor='background.white'
-              borderRadius='tiny'
+          <Box
+            flexBasis={[27, 38]}
+            width={props.widthCategoryBox}
+            alignItems='center'
+            backgroundColor='background.white'
+            borderRadius='tiny'
+            justifyContent='center'
+          >
+            <Text
+              color='text.primary'
+              fontSize={['subAtom', 'tiny']}
+              lineHeight={['atom', 'tiny']}
+              textTransform='uppercase'
             >
-              <Layout flexBasis={[8, 12]} />
+              {props.category}
+            </Text>
+          </Box>
 
-              <Box>
-                <Text
-                  color='text.primary'
-                  fontSize={['subAtom', 'tiny']}
-                  lineHeight={['atom', 'tiny']}
-                  textTransform='uppercase'
-                >
-                  {props.category}
-                </Text>
-              </Box>
-
-              <Layout flexBasis={[8, 12]} />
-            </Box>
-
-            <Layout flexBasis={[104, 214]} />
-          </Condition>
-
-          <Condition match={props.category === 'мини-курс'}>
-            <Box
-              flexBasis={[27, 38]}
-              width={[87, 112]}
-              alignItems='center'
-              backgroundColor='background.white'
-            >
-              <Layout flexBasis={[8, 12]} />
-
-              <Box>
-                <Text
-                  color='text.primary'
-                  fontSize={['subAtom', 'tiny']}
-                  lineHeight={['atom', 'tiny']}
-                  textTransform='uppercase'
-                >
-                  {props.category}
-                </Text>
-              </Box>
-
-              <Layout flexBasis={[8, 12]} />
-            </Box>
-
-            <Layout flexBasis={[49, 56]} />
-          </Condition>
-
-          <Condition match={props.category === 'учебный материал'}>
-            <Box
-              flexBasis={[27, 38]}
-              width={[142, 180]}
-              alignItems='center'
-              backgroundColor='background.white'
-            >
-              <Layout flexBasis={[8, 12]} />
-
-              <Box>
-                <Text
-                  color='text.primary'
-                  fontSize={['subAtom', 'tiny']}
-                  lineHeight={['atom', 'tiny']}
-                  textTransform='uppercase'
-                >
-                  {props.category}
-                </Text>
-              </Box>
-
-              <Layout flexBasis={[8, 12]} />
-            </Box>
-
-            <Layout flexBasis={[62, 110]} />
-          </Condition>
+          <Layout flexBasis={props.indent} />
 
           <Condition match={!isMobileOnly}>
             <Box maxWidth={[303, 496]}>
