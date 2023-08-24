@@ -2373,6 +2373,7 @@ __metadata:
     "@types/react": "npm:18.2.9"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/navbar": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-scroll-parallax: "npm:3.3.2"
   peerDependencies:
@@ -2407,6 +2408,15 @@ __metadata:
     typescript: "npm:4.6.2"
   languageName: unknown
   linkType: soft
+
+"@makotot/ghostui@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@makotot/ghostui@npm:2.0.0"
+  peerDependencies:
+    react: ">=16"
+  checksum: 582a2e1c7443e2a1811753412aefefcec4f34c64dd25d4c93f3c21d2c4819cdc2c37a44e28ec18c8ba2e446bcc16358fc9f01916bed227069d18192540c68b05
+  languageName: node
+  linkType: hard
 
 "@monstrs/jest-pnp-resolver@npm:0.0.1":
   version: 0.0.1
@@ -3513,9 +3523,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/navbar@workspace:ui/navbar":
+"@ui/navbar@workspace:0.0.1, @ui/navbar@workspace:ui/navbar":
   version: 0.0.0-use.local
   resolution: "@ui/navbar@workspace:ui/navbar"
+  dependencies:
+    "@makotot/ghostui": "npm:2.0.0"
+    "@types/react": "npm:18.2.9"
+    "@types/react-dom": "npm:18.2.4"
+    "@types/react-scroll": "npm:1.8.7"
+    "@ui/condition": "workspace: 0.0.1"
+    "@ui/layout": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1"
+    "@ui/utils": "workspace: 0.0.1"
+    react-scroll: "npm:1.8.9"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
