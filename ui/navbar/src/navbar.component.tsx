@@ -42,6 +42,7 @@ export const Navbar = ({ sectionRefs }) => {
                         width={8}
                         height={8}
                         borderRadius='50%'
+                        cursor='pointer'
                         style={{ transition: '0.3s' }}
                         backgroundColor={
                           currentElementIndexInViewport === 0 || currentElementIndexInViewport === 2
@@ -62,6 +63,7 @@ export const Navbar = ({ sectionRefs }) => {
                               : 'text.purpur'
                           }
                           style={{ transition: '0.3s' }}
+                          cursor='pointer'
                           fontSize='tiny'
                           lineHeight='tiny'
                         >
@@ -81,6 +83,7 @@ export const Navbar = ({ sectionRefs }) => {
                               ? 'text.whiteTransparent'
                               : 'text.primaryTransparent'
                           }
+                          cursor='pointer'
                           style={{ transition: '0.3s' }}
                           fontSize='tiny'
                           lineHeight='tiny'
@@ -91,7 +94,7 @@ export const Navbar = ({ sectionRefs }) => {
                     </Condition>
                   </Row>
 
-                  <Condition match={index < 3}>
+                  <Condition match={index < NavLinks.length - 1}>
                     <Layout flexBasis={20} flexShrink='0' />
                   </Condition>
                 </Column>

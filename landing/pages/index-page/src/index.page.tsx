@@ -35,7 +35,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
       >
-        <Navigation />
+        <Navigation sectionRefs={sectionRefs} />
 
         <Condition match={isDesktop}>
           <Parallax translateY={[-7.5, 10]}>
