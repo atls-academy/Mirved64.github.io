@@ -44,7 +44,7 @@ export const Sidebar = () => {
 
             <Condition match={isDesktop}>
               <Box justifyContent='center'>
-                <Image src='./image/Default.png' width={240} height={240} />
+                <Image src='./image/Sphere.png' width={240} height={240} />
               </Box>
             </Condition>
 
@@ -77,7 +77,7 @@ export const Sidebar = () => {
 
               <Condition match={isMobile}>
                 <Box flexShrink='0'>
-                  <Image src='./image/Default.png' width={64} height={64} />
+                  <Image src='./image/Sphere.png' width={64} height={64} />
                 </Box>
               </Condition>
             </Box>

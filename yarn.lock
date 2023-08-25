@@ -3357,6 +3357,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.0"
     "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
+    "@ui/image": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"

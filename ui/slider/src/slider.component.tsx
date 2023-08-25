@@ -66,7 +66,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             overflow='hidden'
           >
             <Box position='absolute' zIndex={9}>
-              <Image src='./image/integrated-title-bar.png' width={960} height={25} />
+              <Image src='./image/Title-bar.png' width={960} height={25} />
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
@@ -88,7 +88,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             overflow='hidden'
           >
             <Box position='absolute' top='2px'>
-              <Image src='./image/toolbar-mobile.png' width={143} height={22} />
+              <Image src='./image/Toolbar-mobile.png' width={143} height={22} />
             </Box>
 
             <Box width={155} height={323} justifyContent='center'>

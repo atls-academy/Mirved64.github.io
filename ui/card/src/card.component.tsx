@@ -1,18 +1,21 @@
-import React          from 'react'
-import { FC }         from 'react'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Background } from '@ui/background'
-import { Condition }  from '@ui/condition'
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { useHover }   from '@ui/utils'
+import { Background }     from '@ui/background'
+import { Condition }      from '@ui/condition'
+import { Image }          from '@ui/image'
+import { Box }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useHover }       from '@ui/utils'
+import { useWindowWidth } from '@ui/utils'
 
-import { CardProps }  from './card.interfaces'
+import { CardProps }      from './card.interfaces'
 
 export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
   const { hover, hoverProps } = useHover()
+  const { isDesktop } = useWindowWidth()
 
   return (
     <Box
@@ -20,6 +23,8 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
       boxShadow={hover ? 'blurBorder' : ''}
       borderRadius={['normal', 'regular']}
       width='100%'
+      overflow='hidden'
+      position='relative'
     >
       <Background
         display='flex'
@@ -27,6 +32,12 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
         width='100%'
         borderRadius={['normal', 'regular']}
       >
+        <Condition match={!!props.image && isDesktop}>
+          <Box position='absolute' top='40px' right='40px'>
+            <Image src={props.image} width={360} height={360} />
+          </Box>
+        </Condition>
+
         <Layout flexBasis={[16, 40]} flexShrink='0' />
 
         <Column>

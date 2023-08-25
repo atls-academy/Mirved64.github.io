@@ -66,7 +66,7 @@ export const Steps = () => {
             bottom='0'
             right='0'
           >
-            <Image src='./image/Default.png' width={400} height={400} />
+            <Image src='./image/Cubics.png' width={400} height={400} />
           </Box>
         </Condition>
 

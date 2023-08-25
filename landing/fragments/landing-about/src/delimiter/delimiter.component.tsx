@@ -18,7 +18,7 @@ export const Delimiter = () => (
       borderRadius='little'
       border='thinnestGhost'
     >
-      <Image src='./image/Default.png' width={40} height={40} />
+      <Image src='./image/Sphere.png' width={40} height={40} />
     </Box>
   </Background>
 )

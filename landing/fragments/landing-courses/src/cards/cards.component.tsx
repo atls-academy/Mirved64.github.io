@@ -25,6 +25,7 @@ export const CardsLearning = () => (
             description={card.description}
             indent={[104, 214]}
             widthCategoryBox={[80, 104]}
+            image={card.image}
           />
         </Condition>
 
@@ -35,6 +36,7 @@ export const CardsLearning = () => (
             description={card.description}
             indent={[49, 112]}
             widthCategoryBox={[87, 112]}
+            image={card.image}
           />
         </Condition>
 
