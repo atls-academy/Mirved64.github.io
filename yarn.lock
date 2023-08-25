@@ -3336,6 +3336,7 @@ __metadata:
     "@atls-ui-parts/layout": "npm:0.0.7"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
+    "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"

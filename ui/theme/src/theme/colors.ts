@@ -39,13 +39,13 @@ const colors = {
         background: 'rgba(58, 55, 93, 1)',
       },
       hover: {
-        background: 'rgba(0, 0, 0, 0)',
+        background: 'rgba(88, 83, 140, 1)',
       },
       pressed: {
-        background: 'rgba(0, 0, 0, 0)',
+        background: 'rgba(114, 108, 182, 1)',
       },
       disabled: {
-        background: 'rgba(0, 0, 0, 0)',
+        background: 'rgba(58, 55, 93, 0.25)',
       },
     },
     ghostBackgroundWhiteText: {
@@ -53,13 +53,13 @@ const colors = {
         background: 'rgba(255, 255, 255, 0.08)',
       },
       hover: {
-        background: 'rgba(0, 0, 0, 0)',
+        background: 'rgba(255, 255, 255, 0.35)',
       },
       pressed: {
-        background: 'rgba(0, 0, 0, 0)',
+        background: 'rgba(255, 255, 255, 0.5)',
       },
       disabled: {
-        background: 'rgba(0, 0, 0, 0)',
+        background: 'rgba(255, 255, 255, 0.1)',
       },
     },
   },
