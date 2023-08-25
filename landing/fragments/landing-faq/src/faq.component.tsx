@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Accordion }        from '@ui/accordion'
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
@@ -13,7 +14,6 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 import { Question }         from './data'
-import { Item }             from './item'
 
 export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
@@ -64,10 +64,22 @@ export const Faq = () => {
 
         <Condition match={isDesktop}>
           <Divider backgroundColor='divider.grayGhost' weight={1} />
+
+          <Layout flexBasis={40} />
         </Condition>
 
-        {Items().map((item) => (
-          <Item question={item.question} answer={item.answer} key={item.id} />
+        {Items().map((item, index, array) => (
+          <Column key={item.id}>
+            <Condition match={index !== 0}>
+              <Layout flexBasis={[16, 40]} />
+            </Condition>
+
+            <Accordion
+              question={item.question}
+              answer={item.answer}
+              isDivider={(index !== array.length - 1 && isMobile) || isDesktop}
+            />
+          </Column>
         ))}
 
         <Condition match={isMobile}>

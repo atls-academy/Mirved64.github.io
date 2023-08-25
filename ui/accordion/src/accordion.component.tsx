@@ -16,7 +16,7 @@ import { useHover }        from '@ui/utils'
 import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
-export const Accordion = ({ answer, question }) => {
+export const Accordion = ({ answer, question, isDivider = true }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
@@ -95,9 +95,11 @@ export const Accordion = ({ answer, question }) => {
           )}
         </AnimatePresence>
 
-        <Layout height={[16, 40]} />
+        <Condition match={isDivider}>
+          <Layout height={[16, 40]} />
 
-        <Divider backgroundColor='divider.grayGhost' weight={1} />
+          <Divider backgroundColor='divider.grayGhost' weight={1} />
+        </Condition>
       </motion.div>
     </Column>
   )

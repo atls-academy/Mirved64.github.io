@@ -30,7 +30,7 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
     Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({ ...el, id: index }))
 
   return (
-    <DrawerContainer heightDrawer={[495, 600]} active={active}>
+    <DrawerContainer heightDrawer='100%' active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
         <Column>
           <Condition match={isDesktop}>
@@ -45,7 +45,7 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
 
               <Scrollspy sectionRefs={sectionRefs} offset={-640}>
                 {({ currentElementIndexInViewport }) => (
-                  <Box flexBasis={860}>
+                  <Box>
                     {NavLinks.map((navLink, index) => (
                       <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
                         <ItemDrawer
@@ -162,7 +162,7 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
 
               <Column flexGrow='1'>
                 {CardDataMobile.map((card, index, array) => (
-                  <Column key={card.id} flexBasis={85}>
+                  <Column key={card.id}>
                     <Box
                       width={card.category === 'базовый' ? 87 : 122}
                       height={32}
