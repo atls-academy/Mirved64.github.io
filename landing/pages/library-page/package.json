@@ -1,0 +1,21 @@
+{
+  "name": "@landing/library-page",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@landing/fragment-navigation": "workspace:0.0.1",
+    "@ui/background": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.9"
+  },
+  "peerDependencies": {
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-intl": "*"
+  }
+}
