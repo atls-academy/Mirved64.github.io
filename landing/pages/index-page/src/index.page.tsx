@@ -35,18 +35,32 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
       >
-        <Navigation sectionRefs={sectionRefs} />
-
         <Condition match={isDesktop}>
-          <Parallax translateY={[-7.5, 10]}>
-            <Hero />
+          <Parallax translateY={[-5, 10]}>
+            <Background
+              backgroundColor='banner'
+              backgroundSize='cover'
+              backgroundRepeat='no-repeat'
+            >
+              <Navigation sectionRefs={sectionRefs} />
+              <Hero />
+            </Background>
 
             <About />
           </Parallax>
         </Condition>
 
         <Condition match={isMobile}>
-          <Hero />
+          <Background
+            backgroundColor='banner'
+            backgroundSize='736px 415px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-260px -20px'
+          >
+            <Navigation sectionRefs={sectionRefs} />
+
+            <Hero />
+          </Background>
 
           <About />
         </Condition>
@@ -62,7 +76,14 @@ const IndexPage = () => {
         zIndex={1}
         top={[939, 1750]}
       >
-        <Courses />
+        <Background
+          backgroundColor='wavesGradient'
+          backgroundSize={['2200px 400px', '4400px 800px']}
+          backgroundRepeat='no-repeat'
+          backgroundPosition={['-982px 409px', '-2480px 645px']}
+        >
+          <Courses />
+        </Background>
       </Background>
 
       <Background
@@ -75,11 +96,25 @@ const IndexPage = () => {
         zIndex={2}
         top={[2634, 3761]}
       >
-        <Steps />
+        <Background
+          backgroundColor='wavesGradient'
+          backgroundSize={['1015px 464px', 'cover']}
+          backgroundRepeat='no-repeat'
+          backgroundPosition={['-340px 121px', '0 124px']}
+        >
+          <Steps />
+        </Background>
 
         <Technologies />
 
-        <Process />
+        <Background
+          backgroundColor='wavesGradient'
+          backgroundSize={['1015px 464px', '4400px 800px']}
+          backgroundRepeat='no-repeat'
+          backgroundPosition={['-341px 165px', '-2480px 235px']}
+        >
+          <Process />
+        </Background>
       </Background>
 
       <Background
@@ -92,7 +127,14 @@ const IndexPage = () => {
         zIndex={3}
         top={[4264, 6450]}
       >
-        <Faq />
+        <Background
+          backgroundColor='wavesGradient'
+          backgroundSize={['1015px 464px', '4400px 800px']}
+          backgroundRepeat='no-repeat'
+          backgroundPosition={['-340px 121px', '-2480px 232px']}
+        >
+          <Faq />
+        </Background>
       </Background>
     </>
   )

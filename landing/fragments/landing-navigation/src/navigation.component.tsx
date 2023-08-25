@@ -6,6 +6,7 @@ import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Logo }             from '@ui/logo'
@@ -21,8 +22,9 @@ export const Navigation = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
 
   return (
-    <>
+    <Column>
       <Drawer active={active} onClose={() => setActive(false)} sectionRefs={sectionRefs} />
+
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
         <Condition match={isMobile}>
           <Layout flexBasis={20} />
@@ -92,6 +94,6 @@ export const Navigation = ({ sectionRefs }) => {
           <Layout flexBasis={[0, 40]} />
         </Condition>
       </Row>
-    </>
+    </Column>
   )
 }
