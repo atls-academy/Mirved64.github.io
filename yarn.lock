@@ -2272,6 +2272,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@landing/fragment-library@workspace:0.0.1, @landing/fragment-library@workspace:landing/fragments/landing-library":
+  version: 0.0.0-use.local
+  resolution: "@landing/fragment-library@workspace:landing/fragments/landing-library"
+  dependencies:
+    "@types/react": "npm:18.2.9"
+    "@types/react-dom": "npm:18.2.4"
+    "@ui/background": "workspace: 0.0.1"
+    "@ui/condition": "workspace: 0.0.1"
+    "@ui/divider": "workspace: 0.0.1"
+    "@ui/icons": "workspace: 0.0.1"
+    "@ui/layout": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1"
+    "@ui/utils": "workspace: 0.0.1"
+    react-intl: "npm:6.0.8"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/fragment-navigation@workspace:0.0.1, @landing/fragment-navigation@workspace:landing/fragments/landing-navigation":
   version: 0.0.0-use.local
   resolution: "@landing/fragment-navigation@workspace:landing/fragments/landing-navigation"
@@ -2392,6 +2413,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/library-page@workspace:landing/pages/library-page"
   dependencies:
+    "@landing/fragment-library": "workspace:0.0.1"
     "@landing/fragment-navigation": "workspace:0.0.1"
     "@types/react": "npm:18.2.9"
     "@ui/background": "workspace:0.0.1"

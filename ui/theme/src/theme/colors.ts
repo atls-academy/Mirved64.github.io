@@ -1,4 +1,7 @@
 const colors = {
+  darkPurpur: 'rgba(58, 55, 93, 1)',
+  accentPurpur: 'rgba(77, 60, 242, 1)',
+  ghostPurpur: 'rgba(114, 108, 182, 1)',
   background: {
     navyBlue: 'rgba(77, 60, 242, 1)',
     gray: 'rgba(102, 102, 102, 1)',
@@ -21,6 +24,7 @@ const colors = {
     primaryText: 'rgba(27, 26, 51, 1)',
     accent: 'rgba(77, 60, 242, 1)',
     purpur: 'rgba(123, 84, 233, 1)',
+    active: 'rgba(114, 108, 182, 1)',
   },
   divider: {
     white: 'rgba(255, 255, 255, 1)',
