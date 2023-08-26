@@ -1,6 +1,7 @@
 export interface ItemProps {
   name: string
   path: string
+  active?: boolean
 }
 
 export interface ItemDrawerProps {

@@ -42,7 +42,7 @@ const IndexPage = () => {
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             >
-              <Navigation sectionRefs={sectionRefs} />
+              <Navigation sectionRefs={sectionRefs} isIndex />
               <Hero />
             </Background>
 
@@ -57,7 +57,7 @@ const IndexPage = () => {
             backgroundRepeat='no-repeat'
             backgroundPosition='-260px -20px'
           >
-            <Navigation sectionRefs={sectionRefs} />
+            <Navigation sectionRefs={sectionRefs} isIndex />
 
             <Hero />
           </Background>

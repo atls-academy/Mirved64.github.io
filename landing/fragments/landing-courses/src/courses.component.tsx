@@ -46,21 +46,21 @@ export const Courses = () => {
 
               <Condition match={isDesktop}>
                 <Box width={254} flexShrink='0'>
-                  <Button
-                    variant='primaryBackgroundWhiteText'
-                    size='hugeSizeRegularRadii'
-                    icon={<ArrowRightIcon width={16} height={16} />}
-                    widthIcon={48}
-                    heightIcon={48}
-                    backgroundIcon='background.white'
-                    radiiIcon='normal'
-                  >
-                    <NextLink>
+                  <NextLink path='/library' width='100%'>
+                    <Button
+                      variant='primaryBackgroundWhiteText'
+                      size='hugeSizeRegularRadii'
+                      icon={<ArrowRightIcon width={16} height={16} />}
+                      widthIcon={48}
+                      heightIcon={48}
+                      backgroundIcon='background.white'
+                      radiiIcon='normal'
+                    >
                       <Text color='white' fontSize='small' lineHeight='small'>
                         <FormattedMessage id='courses.button.all-materials' />
                       </Text>
-                    </NextLink>
-                  </Button>
+                    </Button>
+                  </NextLink>
                 </Box>
               </Condition>
             </Row>

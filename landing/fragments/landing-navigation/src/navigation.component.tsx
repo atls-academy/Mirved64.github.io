@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 
@@ -15,15 +16,28 @@ import { useWindowWidth }   from '@ui/utils'
 
 import { NavLinks }         from './data'
 import { Drawer }           from './drawer'
+import { DrawerIndexPage }  from './drawer'
 import { Item }             from './item'
+import { ItemNavLink }      from './item'
+import { NavigationProps }  from './navigation.interfaces'
 
-export const Navigation = ({ sectionRefs }) => {
+export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   return (
     <Column>
-      <Drawer active={active} onClose={() => setActive(false)} sectionRefs={sectionRefs} />
+      <Condition match={isIndex}>
+        <DrawerIndexPage
+          active={active}
+          onClose={() => setActive(false)}
+          sectionRefs={sectionRefs}
+        />
+      </Condition>
+
+      <Condition match={!isIndex}>
+        <Drawer active={active} onClose={() => setActive(false)} />
+      </Condition>
 
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
         <Condition match={isMobile}>
@@ -62,15 +76,29 @@ export const Navigation = ({ sectionRefs }) => {
 
           <Layout flexBasis={40} flexGrow='1' />
 
-          {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-              <Item name={navLink.name} path={navLink.path} />
+          <Condition match={isIndex}>
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                <Item name={navLink.name} path={navLink.path} />
 
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
-              </Condition>
-            </Box>
-          ))}
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={20} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
+
+          <Condition match={!isIndex}>
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                <ItemNavLink name={navLink.name} path={navLink.path} />
+
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={20} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
 
           <Layout flexBasis={40} flexGrow='1' />
 

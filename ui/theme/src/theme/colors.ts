@@ -67,6 +67,72 @@ const colors = {
       },
     },
   },
+  // input: {
+  //   common: {
+  //     default: {
+  //       border: 'rgba(58, 55, 94, 0.15)',
+  //       font: 'rgba(58, 55, 94, 0.6)',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     },
+  //     hover: {
+  //       border: '',
+  //       font: '',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     },
+  //     focus: {
+  //       border: '',
+  //       font: '',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     },
+  //     filled: {
+  //       border: '',
+  //       font: '',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     },
+  //     error: {
+  //       border: '',
+  //       font: '',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     },
+  //     success: {
+  //       border: '',
+  //       font: '',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     },
+  //     disabled: {
+  //       border: '',
+  //       font: '',
+  //       background: 'rgba(255, 255, 255, 1)',
+  //     }
+  //   },
+  //   search: {
+  //     default: {
+  //       border: 'rgba(0, 0, 0, 0)',
+  //       font: 'rgba(161, 160, 163, 1)',
+  //       background: 'rgba(248, 248, 248, 1)',
+  //     },
+  //     hover: {
+  //       border: 'rgba(0, 0, 0, 0)',
+  //       font: 'rgba(58, 55, 93, 0.75)',
+  //       background: 'rgba(248, 248, 248, 1)',
+  //     },
+  //     focus: {
+  //       border: '',
+  //       font: 'rgba(34, 33, 36, 1)',
+  //       background: 'rgba(248, 248, 248, 1)',
+  //     },
+  //     filled: {
+  //       border: 'rgba(0, 0, 0, 0)',
+  //       font: 'rgba(34, 33, 36, 1)',
+  //       background: 'rgba(248, 248, 248, 1)',
+  //     },
+  //     selected: {
+  //       border: 'rgba(0, 0, 0, 0)',
+  //       font: 'rgba(34, 33, 36, 1)',
+  //       background: 'rgba(248, 248, 248, 1)',
+  //     }
+  //   }
+  // }
 }
 
 export { colors }
