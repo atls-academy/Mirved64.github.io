@@ -4,7 +4,7 @@ export const useActive = () => {
   const [active, setActive] = useState<boolean>(false)
 
   const activeProps = {
-    onClick: () => setActive(!active),
+    onClick: () => setActive(true),
   }
 
   return { active, activeProps }
