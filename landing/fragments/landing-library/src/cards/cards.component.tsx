@@ -10,7 +10,7 @@ import { CardKeys }  from '../card'
 import { Card }      from '../card'
 import { dataCards } from '../data'
 
-export const Cards = () => {
+export const CardsLibrary = () => {
   const cards = (array: Array<CardKeys>): Array<CardKeys> =>
     Array.from({ length: 3 })
       .fill(array)
@@ -18,7 +18,7 @@ export const Cards = () => {
       .map((el, index) => ({ ...(el as CardKeys), id: index }))
 
   return (
-    <Box backgroundColor='background.white' borderRadius={['hugeTop', 'giantTop']}>
+    <Box>
       <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexGrow='1'>
