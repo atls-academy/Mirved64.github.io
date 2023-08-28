@@ -52,6 +52,18 @@ const appearanceGhostBackgroundWhiteTextDisabledStyles = createAppearanceStyles(
   borderColor: prop('theme.colors.button.ghostBackgroundWhiteText.disabled.border'),
 })
 
+const appearanceNavyBackgroundWhiteTextDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.navyBackgroundWhiteText.default.font'),
+  backgroundColor: prop('theme.colors.button.navyBackgroundWhiteText.default.background'),
+  borderColor: prop('theme.colors.button.navyBackgroundWhiteText.default.border'),
+})
+
+const appearanceNavyBackgroundWhiteTextHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.navyBackgroundWhiteText.hover.font'),
+  backgroundColor: prop('theme.colors.button.navyBackgroundWhiteText.hover.background'),
+  borderColor: prop('theme.colors.button.navyBackgroundWhiteText.hover.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   primaryBackgroundWhiteText: ifProp(
     prop('disabled', false),
@@ -78,6 +90,11 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         appearanceGhostBackgroundWhiteTextDefaultStyles
       )
     )
+  ),
+  navyBackgroundWhiteText: ifProp(
+    prop('hover', false),
+    appearanceNavyBackgroundWhiteTextHoverStyles,
+    appearanceNavyBackgroundWhiteTextDefaultStyles
   ),
 })
 

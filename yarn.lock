@@ -225,6 +225,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-generators/input@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-generators/input@npm:0.0.7"
+  dependencies:
+    "@atls-ui-generators/utils": "npm:0.0.5"
+    "@atls/config-prettier": "npm:^0.0.5"
+    "@atls/prettier-plugin": "npm:^0.0.7"
+    "@babel/standalone": "npm:^7.19.5"
+    camelcase: "npm:^6.3.0"
+    commander: "npm:^9.4.1"
+    prettier: "npm:^2.5.1"
+  bin:
+    generate-styles: dist/generator.js
+  checksum: 6cffa8b03e55876f104e27aa73ef8b8231e4f683b5fc7fd9f51f4be1b9f28c25d98e932afe580531de47ab9a703417f75132d2ed5b33510e244bf86748a9e78c
+  languageName: node
+  linkType: hard
+
 "@atls-ui-generators/utils@npm:0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-generators/utils@npm:0.0.4"
@@ -234,6 +251,18 @@ __metadata:
     camelcase: "npm:^6.3.0"
     prettier: "npm:^2.5.1"
   checksum: c40a5e0abd37c62bc5902910f98c7341becfa45c9f1284edafd01eb8c81f44af6529c75ec71696d1b012d5256a637fb834644611d0e7df4293283e1c23008eec
+  languageName: node
+  linkType: hard
+
+"@atls-ui-generators/utils@npm:0.0.5":
+  version: 0.0.5
+  resolution: "@atls-ui-generators/utils@npm:0.0.5"
+  dependencies:
+    "@atls/config-prettier": "npm:^0.0.5"
+    "@atls/prettier-plugin": "npm:^0.0.7"
+    camelcase: "npm:^6.3.0"
+    prettier: "npm:^2.5.1"
+  checksum: 38c4e3a0d99eac474c61a821d32201ce18a0590257727fc638ada70b3934380ec1673cd278a8fc915c3d88a22a2650916089ccfe9e168f99b6cb6164e8c0e9b6
   languageName: node
   linkType: hard
 
@@ -260,6 +289,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/events-state@npm:0.0.4":
+  version: 0.0.4
+  resolution: "@atls-ui-parts/events-state@npm:0.0.4"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: 6bb519eb0658de5d36e286fb82004ace396c79807e74a1d0d368cabe1280e08a2d3ba8b2ea45d3cddaa22a0260a330b2bbef7bfc5929aa04d492389fed87bf2c
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/image@npm:0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-parts/image@npm:0.0.4"
@@ -268,6 +306,21 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
   checksum: ea6c4ef122152a5a3e8662c14e371e0bd7e049e31715686bb0a05a9cd0942b78d8086b13a6ce8c698ce186edda2c81696e19b6aa97eb7a17186803053a930d81
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/input@npm:0.0.13":
+  version: 0.0.13
+  resolution: "@atls-ui-parts/input@npm:0.0.13"
+  dependencies:
+    "@atls-ui-parts/events-state": "npm:0.0.4"
+    "@atls-ui-parts/styles": "npm:0.0.4"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: 43d627a4e7aedbfbb5b8d184a52a3f8c21ae2480b8c4486743a9201cde302c3d668b62489b0f4dd1c9ba5bf87d45e6e3241a8c4294110bb808d18aeb35d76262
   languageName: node
   linkType: hard
 
@@ -446,6 +499,21 @@ __metadata:
     prettier: "npm:^2.6.2"
     sort-package-json: "npm:^1.57.0"
   checksum: 2b22c138fd3eabf6b183deffd71f69841ed9ab6f24d130108bfcb619f54d5b1427e9fb03003b35942f1c66581d1166e5b1cd89221afe6173be7f91cc414095c6
+  languageName: node
+  linkType: hard
+
+"@atls/prettier-plugin@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "@atls/prettier-plugin@npm:0.0.7"
+  dependencies:
+    globby: "npm:^11.0.4"
+    import-sort: "npm:^6.0.0"
+    import-sort-parser: "npm:^6.0.0"
+    import-sort-parser-typescript: "npm:^6.0.0"
+    import-sort-style: "npm:^6.0.0"
+    prettier: "npm:^2.6.2"
+    sort-package-json: "npm:^1.57.0"
+  checksum: 107fc2cbcfd0b2c967e68a718cb28f39596478bf2808818a3c133d04332ca4d11373ea588a0075a5c44de2eb671655e96cf37332ffd5402b717a7b78d4aadebd
   languageName: node
   linkType: hard
 
@@ -2218,9 +2286,11 @@ __metadata:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
+    "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/divider": "workspace: 0.0.1"
     "@ui/icons": "workspace: 0.0.1"
+    "@ui/input": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
@@ -3451,6 +3521,35 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/input@workspace: 0.0.1, @ui/input@workspace:ui/input":
+  version: 0.0.0-use.local
+  resolution: "@ui/input@workspace:ui/input"
+  dependencies:
+    "@atls-ui-generators/input": "npm:0.0.7"
+    "@atls-ui-parts/conditional-render": "npm:0.0.4"
+    "@atls-ui-parts/input": "npm:0.0.13"
+    "@atls-ui-parts/layout": "npm:0.0.7"
+    "@emotion/react": "npm:11.11.1"
+    "@emotion/styled": "npm:11.11.0"
+    "@types/styled-system": "npm:5.1.16"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 

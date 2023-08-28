@@ -1,6 +1,9 @@
 import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 
-export type ButtonVariant = 'primaryBackgroundWhiteText' | 'ghostBackgroundWhiteText'
+export type ButtonVariant =
+  | 'primaryBackgroundWhiteText'
+  | 'ghostBackgroundWhiteText'
+  | 'navyBackgroundWhiteText'
 
 export type ButtonSize =
   | 'smallSizeLittleRadii'
@@ -11,14 +14,15 @@ export type ButtonSize =
   | 'bigSizeNormalRadiiBigPadding'
   | 'LargeSizelittleRadii'
   | 'hugeSizeRegularRadii'
+  | 'smallSizeCompactRadii'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
   size?: ButtonSize
   ref?: any
-  icon: object
-  widthIcon: number | number[]
-  heightIcon: number | number[]
+  icon?: object
+  widthIcon?: number | number[]
+  heightIcon?: number | number[]
   backgroundIcon?: string
-  radiiIcon: string
+  radiiIcon?: string
 }

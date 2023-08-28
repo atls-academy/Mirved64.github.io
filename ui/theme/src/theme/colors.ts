@@ -1,7 +1,10 @@
 const colors = {
   darkPurpur: 'rgba(58, 55, 93, 1)',
+  darkPurpurTransparent: 'rgba(58, 55, 93, .75)',
+  darkestPurpur: 'rgba(34, 33, 36, 1)',
   accentPurpur: 'rgba(77, 60, 242, 1)',
   ghostPurpur: 'rgba(114, 108, 182, 1)',
+  gray: 'rgba(161, 160, 163, 1)',
   background: {
     navyBlue: 'rgba(77, 60, 242, 1)',
     gray: 'rgba(102, 102, 102, 1)',
@@ -66,73 +69,81 @@ const colors = {
         background: 'rgba(255, 255, 255, 0.1)',
       },
     },
+    navyBackgroundWhiteText: {
+      default: {
+        background: 'rgba(77, 60, 242, 1)',
+      },
+      hover: {
+        background: 'rgba(77, 60, 242, .5)',
+      },
+    },
   },
-  // input: {
-  //   common: {
-  //     default: {
-  //       border: 'rgba(58, 55, 94, 0.15)',
-  //       font: 'rgba(58, 55, 94, 0.6)',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     },
-  //     hover: {
-  //       border: '',
-  //       font: '',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     },
-  //     focus: {
-  //       border: '',
-  //       font: '',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     },
-  //     filled: {
-  //       border: '',
-  //       font: '',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     },
-  //     error: {
-  //       border: '',
-  //       font: '',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     },
-  //     success: {
-  //       border: '',
-  //       font: '',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     },
-  //     disabled: {
-  //       border: '',
-  //       font: '',
-  //       background: 'rgba(255, 255, 255, 1)',
-  //     }
-  //   },
-  //   search: {
-  //     default: {
-  //       border: 'rgba(0, 0, 0, 0)',
-  //       font: 'rgba(161, 160, 163, 1)',
-  //       background: 'rgba(248, 248, 248, 1)',
-  //     },
-  //     hover: {
-  //       border: 'rgba(0, 0, 0, 0)',
-  //       font: 'rgba(58, 55, 93, 0.75)',
-  //       background: 'rgba(248, 248, 248, 1)',
-  //     },
-  //     focus: {
-  //       border: '',
-  //       font: 'rgba(34, 33, 36, 1)',
-  //       background: 'rgba(248, 248, 248, 1)',
-  //     },
-  //     filled: {
-  //       border: 'rgba(0, 0, 0, 0)',
-  //       font: 'rgba(34, 33, 36, 1)',
-  //       background: 'rgba(248, 248, 248, 1)',
-  //     },
-  //     selected: {
-  //       border: 'rgba(0, 0, 0, 0)',
-  //       font: 'rgba(34, 33, 36, 1)',
-  //       background: 'rgba(248, 248, 248, 1)',
-  //     }
-  //   }
-  // }
+  input: {
+    // common: {
+    //   default: {
+    //     border: 'rgba(58, 55, 94, 0.15)',
+    //     font: 'rgba(58, 55, 94, 0.6)',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   },
+    //   hover: {
+    //     border: '',
+    //     font: '',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   },
+    //   focus: {
+    //     border: '',
+    //     font: '',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   },
+    //   filled: {
+    //     border: '',
+    //     font: '',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   },
+    //   error: {
+    //     border: '',
+    //     font: '',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   },
+    //   success: {
+    //     border: '',
+    //     font: '',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   },
+    //   disabled: {
+    //     border: '',
+    //     font: '',
+    //     background: 'rgba(255, 255, 255, 1)',
+    //   }
+    // },
+    search: {
+      default: {
+        border: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(161, 160, 163, 1)',
+        background: 'rgba(246, 246, 246, 1)',
+      },
+      hover: {
+        border: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(58, 55, 93, 0.75)',
+        background: 'rgba(246, 246, 246, 1)',
+      },
+      focus: {
+        border: 'rgba(36, 130, 240, 1)',
+        font: 'rgba(34, 33, 36, 1)',
+        background: 'rgba(248, 248, 248, 1)',
+      },
+      filled: {
+        border: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(34, 33, 36, 1)',
+        background: 'rgba(248, 248, 248, 1)',
+      },
+      selected: {
+        border: 'rgba(0, 0, 0, 0)',
+        font: 'rgba(34, 33, 36, 1)',
+        background: 'rgba(248, 248, 248, 1)',
+      },
+    },
+  },
 }
 
 export { colors }

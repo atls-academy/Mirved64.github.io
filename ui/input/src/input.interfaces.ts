@@ -1,0 +1,16 @@
+import { InputProps as BaseInputProps } from '@atls-ui-parts/input'
+
+export type InputSize = 'normalSizeNormallRadii'
+
+export type InputVariant = 'default' | 'search'
+
+export interface InputProps extends BaseInputProps {
+  addon?: JSX.Element | null
+  variant: InputVariant
+  size: InputSize
+  placeholder: string
+  ref?: any
+  icon?: JSX.Element | null
+  widthIcon?: number | number[]
+  heightIcon?: number | number[]
+}
