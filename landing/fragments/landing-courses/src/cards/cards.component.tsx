@@ -33,7 +33,7 @@ export const CardsLearning = () => (
             category={card.category}
             titleDesktop={card.title}
             description={card.description}
-            indent={[49, 112]}
+            indent={[49, 56]}
             widthCategoryBox={[87, 112]}
           />
         </Condition>
