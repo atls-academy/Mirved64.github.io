@@ -98,7 +98,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
         <Condition match={isDivider}>
           <Layout height={[16, 40]} />
 
-          <Divider backgroundColor='divider.grayGhost' weight={1} />
+          <Divider backgroundColor='background.grayGhost' weight={1} />
         </Condition>
       </motion.div>
     </Column>

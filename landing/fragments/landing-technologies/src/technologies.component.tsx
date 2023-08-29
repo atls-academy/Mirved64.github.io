@@ -13,7 +13,7 @@ export const Technologies = () => (
   <Column width='100%'>
     <Layout flexBasis={[32, 64]} />
 
-    <Divider backgroundColor='divider.ghost' weight={1} />
+    <Divider backgroundColor='background.ghost' weight={1} />
 
     <Layout flexBasis={[36, 64]} />
 
@@ -29,7 +29,7 @@ export const Technologies = () => (
 
     <Layout flexBasis={[36, 64]} />
 
-    <Divider backgroundColor='divider.ghost' weight={1} />
+    <Divider backgroundColor='background.ghost' weight={1} />
 
     <Layout flexBasis={[32, 64]} />
   </Column>

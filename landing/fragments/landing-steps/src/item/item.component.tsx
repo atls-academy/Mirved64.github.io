@@ -64,7 +64,7 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
     <Condition match={divider}>
       <Layout flexBasis={[28, 48]} />
 
-      <Divider backgroundColor='divider.ghost' weight={1} />
+      <Divider backgroundColor='background.ghost' weight={1} />
 
       <Layout flexBasis={[28, 48]} />
     </Condition>

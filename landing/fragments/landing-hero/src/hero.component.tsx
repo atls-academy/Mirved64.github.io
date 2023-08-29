@@ -70,7 +70,7 @@ export const Hero = () => {
 
           <Layout flexBasis={[24, 48]} />
 
-          <Divider backgroundColor='divider.white' weight={1} />
+          <Divider backgroundColor='background.white' weight={1} />
 
           <Layout flexBasis={[24, 48]} />
 

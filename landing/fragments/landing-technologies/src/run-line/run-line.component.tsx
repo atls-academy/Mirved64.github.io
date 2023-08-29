@@ -46,7 +46,7 @@ export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) =>
             <Layout flexBasis={[12, 24]} flexShrink='0' />
 
             <Box width={[27, 48]} alignItems='center' flexShrink='0'>
-              <Divider backgroundColor='divider.white' weight={[2, 4]} />
+              <Divider backgroundColor='background.white' weight={[2, 4]} />
             </Box>
 
             <Layout flexBasis={[12, 24]} flexShrink='0' />

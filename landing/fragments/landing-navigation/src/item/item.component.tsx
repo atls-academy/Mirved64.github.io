@@ -34,7 +34,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => {
           <Layout flexBasis={10} />
 
           <Divider
-            backgroundColor={hover ? 'divider.white' : 'divider.gray'}
+            backgroundColor={hover ? 'background.white' : 'background.graySemiTransparent'}
             weight={1}
             width={200}
           />
@@ -71,7 +71,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
             <Layout flexBasis={10} />
 
             <Divider
-              backgroundColor={hover ? 'divider.black' : 'divider.blackTransparent'}
+              backgroundColor={hover ? 'background.black' : 'background.blackTransparent'}
               weight={1}
               width={200}
             />
@@ -91,7 +91,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
 
             <Layout flexBasis={10} />
 
-            <Divider backgroundColor='divider.black' weight={1} width={200} />
+            <Divider backgroundColor='background.black' weight={1} width={200} />
           </Condition>
         </Column>
       </Link>

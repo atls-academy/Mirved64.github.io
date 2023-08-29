@@ -193,7 +193,7 @@ export const Drawer = ({ active, onClose, sectionRefs }) => {
                       <Layout flexBasis={20} />
 
                       <Divider
-                        backgroundColor='divider.primaryTransparent'
+                        backgroundColor='background.primaryTransparent'
                         weight={1}
                         width='100%'
                       />
