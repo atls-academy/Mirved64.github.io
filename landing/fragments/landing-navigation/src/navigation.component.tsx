@@ -89,7 +89,7 @@ export const Navigation = ({ sectionRefs }) => {
             </Button>
           </Box>
 
-          <Layout flexBasis={[0, 40]} />
+          <Layout flexBasis={40} />
         </Condition>
       </Row>
     </>

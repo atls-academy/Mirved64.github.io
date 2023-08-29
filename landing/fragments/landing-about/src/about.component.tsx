@@ -127,8 +127,7 @@ export const About = () => {
         <Layout flexBasis={[20, 230]} />
       </Row>
 
-      <Layout flexBasis={[64, 160]} />
-      <Layout flexBasis={[64, 80]} />
+      <Layout flexBasis={[128, 240]} />
     </Column>
   )
 }
