@@ -76,43 +76,28 @@ const colors = {
     },
   },
   input: {
-    // common: {
-    //   default: {
-    //     border: 'rgba(58, 55, 94, 0.15)',
-    //     font: 'rgba(58, 55, 94, 0.6)',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   },
-    //   hover: {
-    //     border: '',
-    //     font: '',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   },
-    //   focus: {
-    //     border: '',
-    //     font: '',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   },
-    //   filled: {
-    //     border: '',
-    //     font: '',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   },
-    //   error: {
-    //     border: '',
-    //     font: '',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   },
-    //   success: {
-    //     border: '',
-    //     font: '',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   },
-    //   disabled: {
-    //     border: '',
-    //     font: '',
-    //     background: 'rgba(255, 255, 255, 1)',
-    //   }
-    // },
+    common: {
+      default: {
+        border: 'rgba(58, 55, 94, 0.15)',
+        font: 'rgba(58, 55, 94, 0.6)',
+        background: 'rgba(255, 255, 255, 1)',
+      },
+      hover: {
+        border: 'rgba(123, 84, 233, 1)',
+        font: 'rgba(58, 55, 94, 0.6)',
+        background: 'rgba(255, 255, 255, 1)',
+      },
+      focus: {
+        border: 'rgba(123, 84, 233, 1)',
+        font: 'rgba(58, 55, 94, 0.15)',
+        background: 'rgba(255, 255, 255, 1)',
+      },
+      filled: {
+        border: 'rgba(58, 55, 93, 1)',
+        font: 'rgba(27, 26, 51, 1)',
+        background: 'rgba(255, 255, 255, 1)',
+      },
+    },
     search: {
       default: {
         border: 'rgba(0, 0, 0, 0)',

@@ -2,6 +2,7 @@ import { RawInput }                 from '@atls-ui-parts/input'
 import { Layout }                   from '@atls-ui-parts/layout'
 import { Box }                      from '@atls-ui-parts/layout'
 import { useChangeValue }           from '@atls-ui-parts/input'
+import { createTextareaProps }      from '@atls-ui-parts/input'
 
 import React                        from 'react'
 import { ForwardRefRenderFunction } from 'react'
@@ -16,7 +17,19 @@ import { InputElement }             from './input.element'
 import { InputProps }               from './input.interfaces'
 
 export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
-  { disabled, onChange, addon, placeholder, icon, widthIcon, heightIcon, size, ...props },
+  {
+    disabled,
+    onChange,
+    addon,
+    placeholder,
+    icon,
+    widthIcon,
+    heightIcon,
+    size,
+    textarea = false,
+    filled,
+    ...props
+  },
   ref
 ) => {
   const { hover, hoverProps } = useHover()
@@ -24,15 +37,20 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
 
   const changeValue = useChangeValue(disabled, onChange)
 
+  const { containerProps, rawInputProps } = createTextareaProps()
+
   return (
     <InputElement
       {...props}
       size={size}
       hover={hover}
       focus={focus}
+      filled={filled}
+      textarea={textarea}
       disabled={disabled}
       {...hoverProps}
       {...focusProps}
+      {...(textarea && containerProps)}
     >
       <Condition match={!!icon}>
         <IconAttachment icon={icon} widthIcon={widthIcon} heightIcon={heightIcon} />
@@ -41,7 +59,13 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
       </Condition>
 
       <Box flexGrow='1'>
-        <RawInput placeholder={placeholder} onChange={changeValue} ref={ref} />
+        <RawInput
+          placeholder={placeholder}
+          onChange={changeValue}
+          ref={ref}
+          {...(textarea && rawInputProps)}
+          style={{ resize: 'none', width: '100%', height: '100%' }}
+        />
       </Box>
 
       {addon}
