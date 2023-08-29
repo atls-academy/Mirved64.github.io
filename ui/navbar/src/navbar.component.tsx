@@ -65,7 +65,7 @@ export const Navbar = ({ sectionRefs }) => {
                           style={{ transition: '0.3s' }}
                           cursor='pointer'
                           fontSize='tiny'
-                          lineHeight='tiny'
+                          lineHeight='small'
                         >
                           {element.name}
                         </Text>
@@ -86,7 +86,7 @@ export const Navbar = ({ sectionRefs }) => {
                           cursor='pointer'
                           style={{ transition: '0.3s' }}
                           fontSize='tiny'
-                          lineHeight='tiny'
+                          lineHeight='small'
                         >
                           {element.name}
                         </Text>

@@ -33,7 +33,7 @@ export const Faq = () => {
             <Text
               color='text.primary'
               fontSize={['ordinary', 'stupendous']}
-              lineHeight={['regular', 'massive']}
+              lineHeight={['huge', 'normal']}
             >
               <FormattedMessage id='faq.title' />
             </Text>
@@ -52,7 +52,7 @@ export const Faq = () => {
                 backgroundIcon='background.white'
                 radiiIcon='normal'
               >
-                <Text color='white' fontSize='small' lineHeight='compact'>
+                <Text color='white' fontSize='small' lineHeight='normal'>
                   <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
@@ -63,7 +63,7 @@ export const Faq = () => {
         <Layout flexBasis={[60, 80]} />
 
         <Condition match={isDesktop}>
-          <Divider backgroundColor='divider.grayGhost' weight={1} />
+          <Divider backgroundColor='background.grayGhost' weight={1} />
 
           <Layout flexBasis={40} />
         </Condition>
@@ -95,7 +95,7 @@ export const Faq = () => {
               backgroundIcon='background.white'
               radiiIcon='tiny'
             >
-              <Text color='white' fontSize='small' lineHeight='compact'>
+              <Text color='white' fontSize='small' lineHeight='small'>
                 <FormattedMessage id='faq.button' />
               </Text>
             </Button>

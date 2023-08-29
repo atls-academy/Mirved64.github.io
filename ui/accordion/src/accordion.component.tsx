@@ -40,7 +40,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
               <Text
                 color={hover ? 'text.accent' : 'text.primary'}
                 fontSize='ordinary'
-                lineHeight='regular'
+                lineHeight='huge'
               >
                 {question}
               </Text>
@@ -54,7 +54,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
               <Text
                 color={hover ? 'text.accent' : 'text.primary'}
                 fontSize='small'
-                lineHeight='normal'
+                lineHeight='huge'
               >
                 {question}
               </Text>
@@ -82,11 +82,11 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
             >
               <Layout height={[16, 24]} />
 
-              <Box maxWidth={[335, 784]}>
+              <Box maxWidth={[335, 740]}>
                 <Text
                   color='text.primaryText'
                   fontSize={['tiny', 'compact']}
-                  lineHeight={['little', 'normal']}
+                  lineHeight={['huge', 'big']}
                 >
                   {answer}
                 </Text>
@@ -98,7 +98,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
         <Condition match={isDivider}>
           <Layout height={[16, 40]} />
 
-          <Divider backgroundColor='divider.grayGhost' weight={1} />
+          <Divider backgroundColor='background.grayGhost' weight={1} />
         </Condition>
       </motion.div>
     </Column>

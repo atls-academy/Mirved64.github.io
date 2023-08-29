@@ -25,7 +25,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => {
             <Text
               color={hover ? 'text.white' : 'text.gray'}
               fontSize='compact'
-              lineHeight='little'
+              lineHeight='small'
               textTransform='uppercase'
             >
               {name}
@@ -35,7 +35,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => {
           <Layout flexBasis={10} />
 
           <Divider
-            backgroundColor={hover ? 'divider.white' : 'divider.gray'}
+            backgroundColor={hover ? 'background.white' : 'background.graySemiTransparent'}
             weight={1}
             width={200}
           />
@@ -62,7 +62,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
                 fontSize='compact'
-                lineHeight='little'
+                lineHeight='small'
                 textTransform='uppercase'
               >
                 {name}
@@ -72,7 +72,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
             <Layout flexBasis={10} />
 
             <Divider
-              backgroundColor={hover ? 'divider.black' : 'divider.blackTransparent'}
+              backgroundColor={hover ? 'background.black' : 'background.blackTransparent'}
               weight={1}
               width={200}
             />
@@ -83,7 +83,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
               <Text
                 color='text.black'
                 fontSize='compact'
-                lineHeight='little'
+                lineHeight='small'
                 textTransform='uppercase'
               >
                 {name}
@@ -92,7 +92,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
 
             <Layout flexBasis={10} />
 
-            <Divider backgroundColor='divider.black' weight={1} width={200} />
+            <Divider backgroundColor='background.black' weight={1} width={200} />
           </Condition>
         </Column>
       </Link>

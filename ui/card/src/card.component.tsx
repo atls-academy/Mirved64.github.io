@@ -54,7 +54,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
             <Text
               color='text.primary'
               fontSize={['subAtom', 'tiny']}
-              lineHeight={['atom', 'tiny']}
+              lineHeight='small'
               textTransform='uppercase'
             >
               {props.category}
@@ -65,11 +65,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
 
           <Condition match={!isMobileOnly}>
             <Box maxWidth={[303, 496]}>
-              <Text
-                color='text.primary'
-                fontSize={['medium', 'regular']}
-                lineHeight={['normal', 'mean']}
-              >
+              <Text color='text.primary' fontSize={['medium', 'regular']} lineHeight='usual'>
                 {props.titleDesktop}
               </Text>
             </Box>
@@ -77,7 +73,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
 
           <Condition match={isMobileOnly}>
             <Box maxWidth={228} flexBasis={46}>
-              <Text color='text.primary' fontSize='small' lineHeight='tiddly'>
+              <Text color='text.primary' fontSize='small' lineHeight='usual'>
                 {props.titleMobile}
               </Text>
             </Box>
@@ -87,11 +83,11 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
             <Column flexBasis={[132, 84]}>
               <Layout flexBasis={[12, 16]} />
 
-              <Box maxWidth={[303, 694]}>
+              <Box maxWidth={[303, 690]}>
                 <Text
                   color='text.primary'
                   fontSize={['tiny', 'small']}
-                  lineHeight={['small', 'normal']}
+                  lineHeight={['big', 'huge']}
                 >
                   {props.description}
                 </Text>

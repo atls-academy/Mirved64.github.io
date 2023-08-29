@@ -129,7 +129,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             <Text
               color='text.white'
               fontSize={['atom', 'little']}
-              lineHeight={['minor', 'medium']}
+              lineHeight={['usual', 'big']}
               textAlign='center'
             >
               <FormattedMessage id='slider.sign' />

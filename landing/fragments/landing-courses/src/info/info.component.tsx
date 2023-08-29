@@ -13,19 +13,14 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
+        lineHeight='huge'
       >
         <FormattedMessage id='courses.subtitle.power-broker' />
       </Text>
 
       <Space count={2} />
 
-      <Text
-        display='inline'
-        color='text.accent'
-        fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
-      >
+      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
         <FormattedMessage id='courses.subtitle.atlantis' />
       </Text>
 
@@ -35,19 +30,14 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
+        lineHeight='huge'
       >
         <FormattedMessage id='courses.subtitle.has-an-impact-on' />
       </Text>
 
       <Space count={2} />
 
-      <Text
-        display='inline'
-        color='text.accent'
-        fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
-      >
+      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
         <FormattedMessage id='courses.subtitle.it' />
       </Text>
 
@@ -57,19 +47,14 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
+        lineHeight='huge'
       >
         <FormattedMessage id='courses.subtitle.unlimited-possibilities' />
       </Text>
 
       <Space count={2} />
 
-      <Text
-        display='inline'
-        color='text.accent'
-        fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
-      >
+      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
         <FormattedMessage id='courses.subtitle.use-skills' />
       </Text>
 
@@ -77,7 +62,7 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
+        lineHeight='huge'
       >
         <FormattedMessage id='courses.subtitle.point' />
       </Text>
@@ -90,19 +75,14 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
+        lineHeight='huge'
       >
         <FormattedMessage id='courses.subtitle.advantage-of-learning' />
       </Text>
 
       <Space count={2} />
 
-      <Text
-        display='inline'
-        color='text.accent'
-        fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
-      >
+      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
         <FormattedMessage id='courses.subtitle.practice' />
       </Text>
 
@@ -112,7 +92,7 @@ export const Info = () => (
         display='inline'
         color='text.primary'
         fontSize={['small', 'ordinary']}
-        lineHeight={['normal', 'regular']}
+        lineHeight='huge'
       >
         <FormattedMessage id='courses.subtitle.on-existing-projects' />
       </Text>

@@ -59,19 +59,19 @@ export const About = () => {
 
           <Condition match={isMobile}>
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.intro-digital-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.intro-not-decrease-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.intro-for-your-decisions-mobile' />
               </Text>
             </Box>
@@ -79,25 +79,25 @@ export const About = () => {
             <Layout flexBasis={28} />
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-atlantis-teach-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-make-engineers-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-architects-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-not-programmers-mobile' />
               </Text>
             </Box>
@@ -127,8 +127,7 @@ export const About = () => {
         <Layout flexBasis={[20, 230]} />
       </Row>
 
-      <Layout flexBasis={[64, 160]} />
-      <Layout flexBasis={[64, 80]} />
+      <Layout flexBasis={[128, 240]} />
     </Column>
   )
 }

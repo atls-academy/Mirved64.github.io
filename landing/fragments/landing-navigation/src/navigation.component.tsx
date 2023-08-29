@@ -60,7 +60,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
               backgroundIcon='background.white'
               radiiIcon='atom'
             >
-              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='tiny'>
+              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
@@ -113,13 +113,13 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
               backgroundIcon='background.white'
               radiiIcon='little'
             >
-              <Text color='white' fontSize='compact' lineHeight='little'>
+              <Text color='white' fontSize='compact' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
           </Box>
 
-          <Layout flexBasis={[0, 40]} />
+          <Layout flexBasis={40} />
         </Condition>
       </Row>
     </Column>
