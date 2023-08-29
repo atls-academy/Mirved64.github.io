@@ -106,7 +106,7 @@ export const Courses = () => {
             <Layout flexBasis={20} />
 
             <Box flexBasis={335} flexGrow='1'>
-              <NextLink path='/' width='100%'>
+              <NextLink path='/library' width='100%'>
                 <Button
                   variant='primaryBackgroundWhiteText'
                   size='bigSizeNormalRadiiSmallPadding'

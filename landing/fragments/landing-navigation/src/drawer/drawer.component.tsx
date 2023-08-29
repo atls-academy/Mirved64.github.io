@@ -261,7 +261,7 @@ export const Drawer = ({ active, onClose }) => {
                   backgroundIcon='background.white'
                   radiiIcon='little'
                 >
-                  <Text color='white' fontSize='compact' lineHeight='little'>
+                  <Text color='white' fontSize='compact' lineHeight='small'>
                     <FormattedMessage id='navigation.button' />
                   </Text>
                 </Button>
@@ -330,7 +330,7 @@ export const Drawer = ({ active, onClose }) => {
                   backgroundIcon='background.white'
                   radiiIcon='atom'
                 >
-                  <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='tiny'>
+                  <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                     <FormattedMessage id='navigation.button' />
                   </Text>
                 </Button>
@@ -358,7 +358,7 @@ export const Drawer = ({ active, onClose }) => {
                       <Text
                         color='text.primaryText'
                         fontSize='atom'
-                        lineHeight='petty'
+                        lineHeight='small'
                         textTransform='uppercase'
                       >
                         {card.category}
@@ -368,7 +368,7 @@ export const Drawer = ({ active, onClose }) => {
                     <Layout flexBasis={8} />
 
                     <Box>
-                      <Text color='text.primaryText' fontSize='ordinary' lineHeight='regular'>
+                      <Text color='text.primaryText' fontSize='ordinary' lineHeight='huge'>
                         {card.title}
                       </Text>
                     </Box>
@@ -377,7 +377,7 @@ export const Drawer = ({ active, onClose }) => {
                       <Layout flexBasis={20} />
 
                       <Divider
-                        backgroundColor='divider.primaryTransparent'
+                        backgroundColor='background.primaryTransparent'
                         weight={1}
                         width='100%'
                       />

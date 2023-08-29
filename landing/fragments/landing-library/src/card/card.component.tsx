@@ -19,7 +19,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
   const { hover, hoverProps } = useHover()
   const { active, activeProps } = useActive()
 
-  const getColor = () => {
+  const getColor = (): string => {
     if (hover) return 'accentPurpur'
     if (active) return 'ghostPurpur'
     return 'darkPurpur'
@@ -29,7 +29,11 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
     <Box alignItems='center' {...hoverProps} {...activeProps} cursor='pointer'>
       <Column maxWidth={['100%', 785]}>
         <Box>
-          <Text color={getColor()} fontSize={['regular', 'giant']} lineHeight={['common', 'large']}>
+          <Text
+            color={getColor()}
+            fontSize={['regular', 'giant']}
+            lineHeight={['standart', 'small']}
+          >
             {title}
           </Text>
         </Box>
@@ -51,7 +55,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
                   <Text
                     color='text.primaryText'
                     fontSize='atom'
-                    lineHeight='petty'
+                    lineHeight='small'
                     textTransform='uppercase'
                   >
                     {technology}
@@ -71,7 +75,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
         <Layout flexBasis={8} />
 
         <Box>
-          <Text color='text.primaryTransparent' fontSize='little' lineHeight='medium'>
+          <Text color='text.primaryTransparent' fontSize='little' lineHeight='big'>
             {description}
           </Text>
         </Box>

@@ -12,28 +12,28 @@ import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
-import { useActive }        from '@ui/utils'
+import { useFocus }         from '@ui/utils'
 import { useHover }         from '@ui/utils'
 
 export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
-  const { active, activeProps } = useActive()
+  const { focus, focusProps } = useFocus()
   const intl = useIntl()
   const [searchQuery, setSearchQuery] = useState('')
 
   const searcButton = (
-    <Box width={102}>
+    <Box width={[112, 102]}>
       <Button variant='navyBackgroundWhiteText' size='smallSizeCompactRadii'>
-        <Text color='text.white' fontSize='little' lineHeight='little'>
+        <Text color='text.white' fontSize='little' lineHeight='usual'>
           <FormattedMessage id='library.search-button' />
         </Text>
       </Button>
     </Box>
   )
 
-  const getColor = () => {
+  const getColor = (): string => {
     if (hover) return 'darkPurpurTransparent'
-    if (active) return 'darkestPurpur'
+    if (focus) return 'darkestPurpur'
     return 'gray'
   }
 
@@ -48,7 +48,7 @@ export const LibraryBanner = () => {
           <Text
             color='text.white'
             fontSize={['normal', 'stupendous']}
-            lineHeight={['ordinary', 'massive']}
+            lineHeight={['huge', 'normal']}
           >
             <FormattedMessage id='library.title' />
           </Text>
@@ -56,12 +56,12 @@ export const LibraryBanner = () => {
 
         <Layout flexBasis={[24, 48]} />
 
-        <Divider backgroundColor='divider.ghost' weight={1} />
+        <Divider backgroundColor='background.ghost' weight={1} />
 
         <Layout flexBasis={[24, 48]} />
 
         <Box maxWidth={['100%', '600px']}>
-          <Text color='text.white' fontSize={['tiny', 'medium']} lineHeight={['compact', 'usual']}>
+          <Text color='text.white' fontSize={['tiny', 'medium']} lineHeight='huge'>
             <FormattedMessage id='library.text' />
           </Text>
         </Box>
@@ -80,7 +80,7 @@ export const LibraryBanner = () => {
             addon={searchQuery ? searcButton : null}
             placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
             {...hoverProps}
-            {...activeProps}
+            {...focusProps}
             color={getColor()}
           />
         </Box>

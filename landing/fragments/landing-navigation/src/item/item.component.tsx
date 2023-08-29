@@ -112,7 +112,7 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
                 fontSize='compact'
-                lineHeight='little'
+                lineHeight='small'
                 textTransform='uppercase'
               >
                 {name}
@@ -122,7 +122,7 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
             <Layout flexBasis={10} />
 
             <Divider
-              backgroundColor={hover ? 'divider.black' : 'divider.blackTransparent'}
+              backgroundColor={hover ? 'background.black' : 'background.blackTransparent'}
               weight={1}
               width={200}
             />
@@ -135,7 +135,7 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
               <Text
                 color={hover ? 'text.white' : 'text.gray'}
                 fontSize='compact'
-                lineHeight='little'
+                lineHeight='small'
                 textTransform='uppercase'
               >
                 {name}
@@ -145,7 +145,7 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
             <Layout flexBasis={10} />
 
             <Divider
-              backgroundColor={hover ? 'divider.white' : 'divider.gray'}
+              backgroundColor={hover ? 'background.white' : 'background.gray'}
               weight={1}
               width={200}
             />

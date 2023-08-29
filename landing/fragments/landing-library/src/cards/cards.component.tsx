@@ -24,7 +24,7 @@ export const CardsLibrary = () => {
       <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
-        <Divider weight={1} backgroundColor='divider.grayGhost' />
+        <Divider weight={1} backgroundColor='background.grayGhost' />
 
         {cards(dataCards).map((card, index, array) => (
           <Column key={card.id}>
@@ -38,7 +38,7 @@ export const CardsLibrary = () => {
 
             <Layout flexBasis={32} />
 
-            <Divider weight={1} backgroundColor='divider.grayGhost' />
+            <Divider weight={1} backgroundColor='background.grayGhost' />
 
             <Condition match={index === array.length - 1}>
               <Layout flexBasis={32} />
