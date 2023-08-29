@@ -17,6 +17,7 @@ export const Delimiter = () => (
       justifyContent='center'
       borderRadius='little'
       border='thinnestGhost'
+      backgroundColor='background.whiteTransparent'
     >
       <Image src='./image/Sphere.png' width={40} height={40} />
     </Box>
