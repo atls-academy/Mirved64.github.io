@@ -23,7 +23,7 @@ export const Process = () => {
         <Text
           color='text.whiteSemiTransparent'
           fontSize={['atom', 'tiny']}
-          lineHeight={['subAtom', 'tiny']}
+          lineHeight='small'
           textTransform='uppercase'
         >
           <FormattedMessage id='slider.subtitle' />
@@ -35,37 +35,37 @@ export const Process = () => {
       <Condition match={isDesktop}>
         <Column maxWidth={960}>
           <Row>
-            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+            <Text color='text.white' fontSize='regular' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.any-process-stops' />
             </Text>
 
             <Space count={3} />
 
-            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='mean'>
+            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.be' />
             </Text>
 
             <Space count={3} />
 
-            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+            <Text color='text.white' fontSize='regular' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.difficult' />
             </Text>
           </Row>
 
           <Row justifyContent='center'>
-            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+            <Text color='text.white' fontSize='regular' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.when' />
             </Text>
 
             <Space count={3} />
 
-            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='mean'>
+            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.you-know' />
             </Text>
 
             <Space count={3} />
 
-            <Text color='text.white' fontSize='regular' lineHeight='mean'>
+            <Text color='text.white' fontSize='regular' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.how-it-happen' />
             </Text>
           </Row>
@@ -75,37 +75,37 @@ export const Process = () => {
       <Condition match={isMobile}>
         <Column maxWidth={335}>
           <Row justifyContent='center'>
-            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+            <Text color='text.white' fontSize='medium' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.any-process-stops' />
             </Text>
           </Row>
 
           <Row>
-            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='normal'>
+            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.be' />
             </Text>
 
             <Space count={2} />
 
-            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+            <Text color='text.white' fontSize='medium' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.difficult' />
             </Text>
 
             <Space count={2} />
 
-            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+            <Text color='text.white' fontSize='medium' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.when' />
             </Text>
 
             <Space count={2} />
 
-            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='normal'>
+            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.you-know' />
             </Text>
           </Row>
 
           <Row justifyContent='center'>
-            <Text color='text.white' fontSize='medium' lineHeight='normal'>
+            <Text color='text.white' fontSize='medium' lineHeight='usual'>
               <FormattedMessage id='slider.slogan.how-it-happen' />
             </Text>
           </Row>

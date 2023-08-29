@@ -34,7 +34,7 @@ export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) =>
               fontSize={['huge', 'massive']}
               fontWeight='lighter'
               fontFamily={font}
-              lineHeight={['mean', 'giant']}
+              lineHeight='normal'
               whiteSpace='nowrap'
               textTransform='uppercase'
             >

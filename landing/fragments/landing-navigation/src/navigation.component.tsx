@@ -44,7 +44,7 @@ export const Navigation = ({ sectionRefs }) => {
               backgroundIcon='background.white'
               radiiIcon='atom'
             >
-              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='tiny'>
+              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
@@ -83,7 +83,7 @@ export const Navigation = ({ sectionRefs }) => {
               backgroundIcon='background.white'
               radiiIcon='little'
             >
-              <Text color='white' fontSize='compact' lineHeight='little'>
+              <Text color='white' fontSize='compact' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>

@@ -36,7 +36,7 @@ export const Courses = () => {
                 <Text
                   color='text.primary'
                   fontSize={['regular', 'stupendous']}
-                  lineHeight={['common', 'stupendous']}
+                  lineHeight='standart'
                 >
                   <FormattedMessage id='courses.title' />
                 </Text>
@@ -56,7 +56,7 @@ export const Courses = () => {
                     radiiIcon='normal'
                   >
                     <NextLink>
-                      <Text color='white' fontSize='small' lineHeight='small'>
+                      <Text color='white' fontSize='small' lineHeight='normal'>
                         <FormattedMessage id='courses.button.all-materials' />
                       </Text>
                     </NextLink>

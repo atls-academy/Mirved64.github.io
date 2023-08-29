@@ -29,7 +29,7 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
           <Text
             color='text.white'
             fontSize={['compact', 'medium']}
-            lineHeight={['little', 'mini']}
+            lineHeight='small'
             fontFamily='regular'
           >
             {props.sequenceNumber}
@@ -41,7 +41,7 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
 
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1'>
         <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
-          <Text color='text.white' fontSize={['medium', 'regular']} lineHeight={['usual', 'mean']}>
+          <Text color='text.white' fontSize={['medium', 'regular']} lineHeight='usual'>
             {props.name}
           </Text>
         </Box>
@@ -49,12 +49,7 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
         <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow='3' />
 
         <Box flexBasis={[40, 560]}>
-          <Text
-            color='text.white'
-            fontSize={['tiny', 'medium']}
-            lineHeight={['compact', 'standart']}
-            textWrap='wrap'
-          >
+          <Text color='text.white' fontSize={['tiny', 'medium']} lineHeight='huge' textWrap='wrap'>
             {props.description}
           </Text>
         </Box>

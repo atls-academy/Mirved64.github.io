@@ -33,7 +33,7 @@ export const Hero = () => {
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
-                lineHeight={['ordinary', 'stupendous']}
+                lineHeight={['huge', 'standart']}
               >
                 <FormattedMessage id='hero.title.text' />
               </Text>
@@ -57,7 +57,7 @@ export const Hero = () => {
                   <Text
                     color='text.white'
                     fontSize={['normal', 'stupendous']}
-                    lineHeight={['ordinary', 'enormous']}
+                    lineHeight={['huge', 'standart']}
                   >
                     <FormattedMessage id='hero.title.it' />
                   </Text>
@@ -76,7 +76,7 @@ export const Hero = () => {
 
           <Condition match={isDesktop}>
             <Box flexWrap='wrap' maxWidth={640}>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-desktop' />
               </Text>
             </Box>
@@ -84,13 +84,13 @@ export const Hero = () => {
 
           <Condition match={isMobile}>
             <Box>
-              <Text color='text.white' fontSize='tiny' lineHeight='compact'>
+              <Text color='text.white' fontSize='tiny' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-we-dont-teach-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='tiny' lineHeight='compact'>
+              <Text color='text.white' fontSize='tiny' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-we-teach-mobile' />
               </Text>
             </Box>

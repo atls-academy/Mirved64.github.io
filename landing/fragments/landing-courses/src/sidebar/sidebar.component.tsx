@@ -31,11 +31,7 @@ export const Sidebar = () => {
             <Layout flexBasis={[16, 32]} />
 
             <Box>
-              <Text
-                color='text.primary'
-                fontSize={['tiny', 'little']}
-                lineHeight={['compact', 'medium']}
-              >
+              <Text color='text.primary' fontSize={['tiny', 'little']} lineHeight={['huge', 'big']}>
                 <FormattedMessage id='courses.sidebar.subtitle' />
               </Text>
             </Box>
@@ -52,11 +48,7 @@ export const Sidebar = () => {
 
             <Box flexDirection={['row', 'column']} alignItems={['center', 'start']}>
               <Box>
-                <Text
-                  color='text.accent'
-                  fontSize={['giant', 'enormous']}
-                  lineHeight={['large', 'big']}
-                >
+                <Text color='text.accent' fontSize={['giant', 'enormous']} lineHeight='small'>
                   <FormattedMessage id='courses.sidebar.number' />
                 </Text>
               </Box>
@@ -67,7 +59,7 @@ export const Sidebar = () => {
                 <Text
                   color='text.primary'
                   fontSize={['atom', 'tiny']}
-                  lineHeight={['minor', 'small']}
+                  lineHeight={['large', 'big']}
                 >
                   <FormattedMessage id='courses.sidebar.sign' />
                 </Text>
@@ -101,7 +93,7 @@ export const Sidebar = () => {
           backgroundIcon='background.white'
           radiiIcon='normal'
         >
-          <Text color='white' fontSize='small' lineHeight='small'>
+          <Text color='white' fontSize='small' lineHeight='normal'>
             <FormattedMessage id='courses.sidebar.button-desktop' />
           </Text>
         </Button>

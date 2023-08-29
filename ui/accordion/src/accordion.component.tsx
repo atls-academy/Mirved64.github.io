@@ -40,7 +40,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
               <Text
                 color={hover ? 'text.accent' : 'text.primary'}
                 fontSize='ordinary'
-                lineHeight='regular'
+                lineHeight='huge'
               >
                 {question}
               </Text>
@@ -54,7 +54,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
               <Text
                 color={hover ? 'text.accent' : 'text.primary'}
                 fontSize='small'
-                lineHeight='normal'
+                lineHeight='huge'
               >
                 {question}
               </Text>
@@ -86,7 +86,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
                 <Text
                   color='text.primaryText'
                   fontSize={['tiny', 'compact']}
-                  lineHeight={['little', 'normal']}
+                  lineHeight={['huge', 'big']}
                 >
                   {answer}
                 </Text>

@@ -24,7 +24,7 @@ export const Item: FC<ItemProps> = ({ name, path }) => {
             <Text
               color={hover ? 'text.white' : 'text.gray'}
               fontSize='compact'
-              lineHeight='little'
+              lineHeight='small'
               textTransform='uppercase'
             >
               {name}
@@ -61,7 +61,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
                 fontSize='compact'
-                lineHeight='little'
+                lineHeight='small'
                 textTransform='uppercase'
               >
                 {name}
@@ -82,7 +82,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
               <Text
                 color='text.black'
                 fontSize='compact'
-                lineHeight='little'
+                lineHeight='small'
                 textTransform='uppercase'
               >
                 {name}
