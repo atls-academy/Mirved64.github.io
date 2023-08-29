@@ -26,6 +26,7 @@ const colors = {
     black: 'rgba(0, 0, 0, 1)',
     primary: 'rgba(58, 55, 93, 1)',
     primaryTransparent: 'rgba(58, 55, 94, 0.6)',
+    primaryTransparentText: 'rgba(58, 55, 93, 0.75)',
     primaryText: 'rgba(27, 26, 51, 1)',
     accent: 'rgba(77, 60, 242, 1)',
     purpur: 'rgba(123, 84, 233, 1)',

@@ -84,7 +84,7 @@ export const Accordion = ({ answer, question, isDivider = true }) => {
 
               <Box maxWidth={[335, 740]}>
                 <Text
-                  color='text.primaryText'
+                  color={['text.primaryTransparentText', 'text.primaryText']}
                   fontSize={['tiny', 'compact']}
                   lineHeight={['huge', 'big']}
                 >
