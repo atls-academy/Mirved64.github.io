@@ -1,50 +1,73 @@
-import React           from 'react'
-import { FC }          from 'react'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Card }        from '@ui/card'
-import { Condition }   from '@ui/condition'
-import { Column }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { SwiperProps } from '@ui/swiper'
-import { Swiper }      from '@ui/swiper'
-import { SwiperSlide } from '@ui/swiper'
+import { Card }           from '@ui/card'
+import { Condition }      from '@ui/condition'
+import { Column }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { SwiperProps }    from '@ui/swiper'
+import { Swiper }         from '@ui/swiper'
+import { SwiperSlide }    from '@ui/swiper'
+import { useWindowWidth } from '@ui/utils'
 
-import { CadrsList }   from '../cards-list'
+import { CadrsList }      from '../cards-list'
 
-export const CardsLearning = () => (
-  <Column>
-    {CadrsList.filter((card) => card.category === 'обучение' || card.category === 'мини-курс').map((
-      card
-    ) => (
-      <Column key={card.id}>
-        <Condition match={card.category === 'обучение'}>
-          <Card
-            category={card.category}
-            titleDesktop={card.title}
-            description={card.description}
-            indent={[104, 214]}
-            widthCategoryBox={[80, 104]}
-            image={card.image}
-          />
-        </Condition>
+export const CardsLearning = () => {
+  const { isDesktop, isMobile } = useWindowWidth()
 
-        <Condition match={card.category === 'мини-курс'}>
-          <Card
-            category={card.category}
-            titleDesktop={card.title}
-            description={card.description}
-            indent={[49, 56]}
-            widthCategoryBox={[87, 112]}
-            image={card.image}
-          />
-        </Condition>
+  return (
+    <Column>
+      {CadrsList.filter(
+        (card) => card.category === 'обучение' || card.category === 'мини-курс'
+      ).map((card) => (
+        <Column key={card.id}>
+          <Condition match={card.category === 'обучение' && isDesktop}>
+            <Card
+              category={card.category}
+              titleDesktop={card.title}
+              description={card.descriptionDesktop}
+              indent={214}
+              widthCategoryBox={104}
+            />
+          </Condition>
 
-        <Layout flexBasis={[20, 40]} />
-      </Column>
-    ))}
-  </Column>
-)
+          <Condition match={card.category === 'обучение' && isMobile}>
+            <Card
+              category={card.category}
+              titleDesktop={card.title}
+              description={card.descriptionMobile}
+              indent={104}
+              widthCategoryBox={80}
+            />
+          </Condition>
+
+          <Condition match={card.category === 'мини-курс' && isDesktop}>
+            <Card
+              category={card.category}
+              titleDesktop={card.title}
+              description={card.descriptionDesktop}
+              indent={56}
+              widthCategoryBox={112}
+            />
+          </Condition>
+
+          <Condition match={card.category === 'мини-курс' && isMobile}>
+            <Card
+              category={card.category}
+              titleDesktop={card.title}
+              description={card.descriptionMobile}
+              indent={49}
+              widthCategoryBox={87}
+            />
+          </Condition>
+
+          <Layout flexBasis={[20, 40]} />
+        </Column>
+      ))}
+    </Column>
+  )
+}
 
 export const CardsMaterials = () => (
   <Row>
