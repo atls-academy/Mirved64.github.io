@@ -52,7 +52,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
       {...(textarea && containerProps)}
     >
       <Condition match={!!icon}>
-        <IconAttachment icon={icon} widthIcon={widthIcon} heightIcon={heightIcon} hover={hover} />
+        <IconAttachment icon={icon} widthIcon={widthIcon} heightIcon={heightIcon} />
 
         <Layout width={12} />
       </Condition>

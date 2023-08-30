@@ -22,8 +22,8 @@ export const LibraryBanner = () => {
   const [searchQuery, setSearchQuery] = useState('')
 
   const searcButton = (
-    <Box width={[112, 102]}>
-      <Button variant='navyBackgroundWhiteText' size='smallSizeCompactRadii'>
+    <Box width={[172, 132]}>
+      <Button variant='navyBackgroundWhiteText' size='usualSizeCompactRadii'>
         <Text color='text.white' fontSize='little' lineHeight='usual'>
           <FormattedMessage id='library.search-button' />
         </Text>
@@ -34,6 +34,7 @@ export const LibraryBanner = () => {
   const getColor = (): string => {
     if (hover) return 'darkPurpurTransparent'
     if (focus) return 'darkestPurpur'
+    if (searchQuery) return 'darkestPurpur'
     return 'gray'
   }
 
@@ -68,7 +69,7 @@ export const LibraryBanner = () => {
 
         <Layout flexBasis={[24, 48]} />
 
-        <Box maxWidth={[335, 600]}>
+        <Box maxWidth={[335, 600]} {...hoverProps} {...focusProps}>
           <Input
             value={searchQuery}
             onChange={setSearchQuery}
@@ -77,10 +78,9 @@ export const LibraryBanner = () => {
             icon={<SearchIcon width={20} height={20} color={getColor()} />}
             widthIcon={20}
             heightIcon={20}
+            filled={searchQuery}
             addon={searchQuery ? searcButton : null}
             placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
-            {...hoverProps}
-            {...focusProps}
             color={getColor()}
           />
         </Box>

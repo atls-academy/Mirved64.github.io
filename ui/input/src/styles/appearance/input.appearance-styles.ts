@@ -52,6 +52,12 @@ const appearanceSearchFocusStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.input.search.focus.border'),
 })
 
+const appearanceSearchFilledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.input.search.filled.font'),
+  backgroundColor: prop('theme.colors.input.search.filled.background'),
+  borderColor: prop('theme.colors.input.search.filled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
   common: ifProp(
     prop('disabled', false),
@@ -67,9 +73,13 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
     )
   ),
   search: ifProp(
-    prop('focus', false),
-    appearanceSearchFocusStyles,
-    ifProp(prop('hover', false), appearanceSearchHoverStyles, appearanceSearchDefaultStyles)
+    prop('filled', false),
+    appearanceSearchFilledStyles,
+    ifProp(
+      prop('focus', false),
+      appearanceSearchFocusStyles,
+      ifProp(prop('hover', false), appearanceSearchHoverStyles, appearanceSearchDefaultStyles)
+    )
   ),
 })
 
