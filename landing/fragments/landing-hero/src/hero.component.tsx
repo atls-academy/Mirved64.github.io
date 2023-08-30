@@ -57,7 +57,7 @@ export const Hero = () => {
                 >
                   <Text
                     color='text.white'
-                    fontSize={['normal', 'stupendous']}
+                    fontSize={['normal', 'massive']}
                     lineHeight={['huge', 'standart']}
                   >
                     <FormattedMessage id='hero.title.it' />
@@ -65,7 +65,7 @@ export const Hero = () => {
                 </Box>
               </Background>
 
-              <Layout flexBasis={[0, 10]} />
+              <Layout flexBasis={[0, 8]} />
             </Column>
           </Row>
 
