@@ -2263,11 +2263,14 @@ __metadata:
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
     "@ui/accordion": "workspace: 0.0.1"
+    "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/divider": "workspace: 0.0.1"
+    "@ui/form": "workspace: 0.0.1"
     "@ui/icons": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
+    "@ui/modal": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
     react-intl: "npm:6.0.8"
@@ -3507,7 +3510,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/form@workspace:ui/form":
+"@ui/form@workspace: 0.0.1, @ui/form@workspace:ui/form":
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
@@ -3651,7 +3654,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/modal@workspace:ui/modal":
+"@ui/modal@workspace: 0.0.1, @ui/modal@workspace:ui/modal":
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:

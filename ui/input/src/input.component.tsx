@@ -1,6 +1,5 @@
 import { RawInput }                 from '@atls-ui-parts/input'
 import { Layout }                   from '@atls-ui-parts/layout'
-import { Box }                      from '@atls-ui-parts/layout'
 import { useChangeValue }           from '@atls-ui-parts/input'
 import { createTextareaProps }      from '@atls-ui-parts/input'
 
@@ -53,20 +52,18 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
       {...(textarea && containerProps)}
     >
       <Condition match={!!icon}>
-        <IconAttachment icon={icon} widthIcon={widthIcon} heightIcon={heightIcon} />
+        <IconAttachment icon={icon} widthIcon={widthIcon} heightIcon={heightIcon} hover={hover} />
 
         <Layout width={12} />
       </Condition>
 
-      <Box flexGrow='1'>
-        <RawInput
-          placeholder={placeholder}
-          onChange={changeValue}
-          ref={ref}
-          {...(textarea && rawInputProps)}
-          style={{ resize: 'none', width: '100%', height: '100%' }}
-        />
-      </Box>
+      <RawInput
+        placeholder={placeholder}
+        onChange={changeValue}
+        ref={ref}
+        {...(textarea && rawInputProps)}
+        style={{ resize: 'none', width: '100%', height: '100%' }}
+      />
 
       {addon}
     </InputElement>

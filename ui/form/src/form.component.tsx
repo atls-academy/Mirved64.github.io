@@ -1,6 +1,6 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
 import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
@@ -15,45 +15,53 @@ import { Row }              from '@ui/layout'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
-export const Form = () => {
-  const [message, setMessage] = useState<string>('')
-  const [name, setName] = useState<string>('')
-  const [phoneNumber, setPhoneNumber] = useState<string>('')
-  const [send, setSend] = useState<boolean>(false)
-  const [display, setDisplay] = useState<boolean>(false)
+import { FormProps }        from './form.interfaces'
+
+export const Form: FC<FormProps> = ({
+  message,
+  setMessage,
+  name,
+  setName,
+  phoneNumber,
+  setPhoneNumber,
+  send,
+  setSend,
+  display,
+  setDisplay,
+  onClose,
+}) => {
   const intl = useIntl()
 
   return (
-    <Box>
+    <Box width={375} borderRadius='regular' overflow='hidden' backgroundColor='background.white'>
       <Condition match={!send}>
-        <Layout flexBasis={20} />
+        <Layout flexBasis={20} flexShrink='0' />
 
         <Column>
           <Layout flexBasis={32} />
 
-          <Box>
-            <Input
-              textarea
-              value={message}
-              onChange={setMessage}
-              variant='common'
-              size='bigSizeRegularRadii'
-              placeholder={intl.formatMessage({ id: 'form.textare.placeholder' })}
-              onClick={() => setDisplay(true)}
-              filled={!!message}
-            />
-          </Box>
+          <Input
+            textarea
+            value={message}
+            onChange={setMessage}
+            variant='common'
+            size='textarea'
+            placeholder={intl.formatMessage({ id: 'form.message.placeholder' })}
+            onClick={setDisplay}
+            filled={Boolean(message)}
+            maxLength={500}
+          />
 
-          <Condition match={display}>
+          <Condition match={!!display}>
             <Layout flexBasis={12} />
 
             <Input
               value={name}
               onChange={setName}
               variant='common'
-              size='normalSizeNormallRadii'
+              size='bigSizeRegularRadii'
               placeholder={intl.formatMessage({ id: 'form.name.placeholder' })}
-              filled={!!name}
+              filled={Boolean(name)}
             />
 
             <Layout flexBasis={12} />
@@ -62,10 +70,9 @@ export const Form = () => {
               value={phoneNumber}
               onChange={setPhoneNumber}
               variant='common'
-              size='normalSizeNormallRadii'
+              size='bigSizeRegularRadii'
               placeholder={intl.formatMessage({ id: 'form.phone-number.placeholder' })}
-              filled={!!phoneNumber}
-              maxLength={500}
+              filled={Boolean(phoneNumber)}
             />
           </Condition>
 
@@ -80,7 +87,7 @@ export const Form = () => {
               heightIcon={48}
               backgroundIcon='background.white'
               radiiIcon='normal'
-              onClick={() => setSend(true)}
+              onClick={setSend}
               disabled={!name || !phoneNumber || !message}
             >
               <Text color='text.white' fontSize='small' lineHeight='normal'>
@@ -114,30 +121,31 @@ export const Form = () => {
           <Layout flexBasis={32} />
         </Column>
 
-        <Layout flexBasis={20} />
+        <Layout flexBasis={20} flexShrink='0' />
       </Condition>
 
       <Condition match={send}>
         <Row>
-          <Layout flexBasis={20} />
+          <Layout flexBasis={20} flexShrink='0' />
 
           <Column alignItems='center'>
             <Layout flexBasis={32} />
 
-            <Box
-              width={16}
-              height={16}
-              justifyContent='center'
-              alignItems='center'
-              backgroundColor='background.navyBlue'
-              borderRadius='normal'
-            >
-              <CheckIcon width={9} height={14} />
+            <Box width={48} justifyContent='center' alignItems='center' onClick={onClose}>
+              <Button
+                variant='navyBackgroundWhiteText'
+                size='usualSizeNormalRadii'
+                icon={<CheckIcon width={16} height={16} />}
+                widthIcon={48}
+                heightIcon={48}
+                radiiIcon='normal'
+                onClick={setSend}
+              />
             </Box>
 
             <Layout flexBasis={24} />
 
-            <Box>
+            <Box width={335}>
               <Text color='primary' fontSize='small' lineHeight='normal' textAlign='center'>
                 <FormattedMessage id='form.success-message' />
               </Text>
@@ -146,7 +154,7 @@ export const Form = () => {
             <Layout flexBasis={32} />
           </Column>
 
-          <Layout flexBasis={20} />
+          <Layout flexBasis={20} flexShrink='0' />
         </Row>
       </Condition>
     </Box>

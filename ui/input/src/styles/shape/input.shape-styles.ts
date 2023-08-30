@@ -19,15 +19,17 @@ const bigSizeRegularRadiiStyles = createShapeStyles({
   rounding: prop('theme.radii.regular') as unknown as number,
 })
 
-export const shapeStyles = switchProp(prop('size', 'normalSizeNormallRadii'), {
-  normalSizeNormallRadii: normalSizeNormallRadiiStyles,
-  bigSizeRegularRadii: bigSizeRegularRadiiStyles,
-})
-
-export const textareaStyles: styleFn = ifProp(prop('textarea', false), {
+export const textareaStyles: styleFn = ifProp(prop('textarea', true), {
   paddingTop: 16,
   paddingLeft: 24,
   paddingBottom: 16,
   paddingRight: 24,
   minHeight: 150,
+  borderRadius: 24,
+})
+
+export const shapeStyles = switchProp(prop('size', 'normalSizeNormallRadii'), {
+  normalSizeNormallRadii: normalSizeNormallRadiiStyles,
+  bigSizeRegularRadii: bigSizeRegularRadiiStyles,
+  textarea: textareaStyles,
 })
