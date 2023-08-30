@@ -74,7 +74,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
 
               <Box maxWidth={[303, 690]}>
                 <Text
-                  color='text.primary'
+                  color={['text.primaryTransparentText', 'text.primary']}
                   fontSize={['tiny', 'small']}
                   lineHeight={['big', 'huge']}
                 >
