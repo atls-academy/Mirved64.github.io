@@ -16,11 +16,10 @@ import { Text }               from '@ui/text'
 import { QuestionModalProps } from './question-modal.intarfaces'
 
 export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
-  const [message, setMessage] = useState<string>('')
-  const [name, setName] = useState<string>('')
-  const [phoneNumber, setPhoneNumber] = useState<string>('')
   const [send, setSend] = useState<boolean>(false)
-  const [display, setDisplay] = useState<boolean>(false)
+  const [name, setName] = useState<string>('')
+
+  const handleNameChange = (userName: string) => setName(userName)
 
   return (
     <Modal open={open} onClose={setOpen}>
@@ -60,17 +59,11 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
           </Background>
 
           <Form
-            message={message}
-            setMessage={setMessage}
             name={name}
-            setName={setName}
-            phoneNumber={phoneNumber}
-            setPhoneNumber={setPhoneNumber}
             send={send}
-            setSend={() => setSend(true)}
-            setDisplay={() => setDisplay(true)}
-            display={display}
+            setSend={setSend}
             onClose={setOpen}
+            onChange={handleNameChange}
           />
         </Background>
       </Column>

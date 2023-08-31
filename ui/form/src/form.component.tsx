@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
 import { useIntl }          from 'react-intl'
 
 import { Button }           from '@ui/button'
@@ -17,20 +18,29 @@ import { Text }             from '@ui/text'
 
 import { FormProps }        from './form.interfaces'
 
-export const Form: FC<FormProps> = ({
-  message,
-  setMessage,
-  name,
-  setName,
-  phoneNumber,
-  setPhoneNumber,
-  send,
-  setSend,
-  display,
-  setDisplay,
-  onClose,
-}) => {
+export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) => {
+  const [message, setMessage] = useState<string>('')
+  const [phoneNumber, setPhoneNumber] = useState<string>('')
+
+  const [display, setDisplay] = useState<boolean>(false)
   const intl = useIntl()
+
+  const handleChangeName = (userName) => {
+    onChange(userName)
+  }
+
+  const handleSend = () => {
+    setSend(true)
+
+    setMessage('')
+    setPhoneNumber('')
+  }
+
+  const handleClose = () => {
+    onClose()
+    setSend(false)
+    onChange('')
+  }
 
   return (
     <Box width={375} borderRadius='regular' overflow='hidden' backgroundColor='background.white'>
@@ -47,7 +57,7 @@ export const Form: FC<FormProps> = ({
             variant='common'
             size='textarea'
             placeholder={intl.formatMessage({ id: 'form.message.placeholder' })}
-            onClick={setDisplay}
+            onClick={() => setDisplay(true)}
             filled={Boolean(message)}
             maxLength={500}
           />
@@ -57,7 +67,7 @@ export const Form: FC<FormProps> = ({
 
             <Input
               value={name}
-              onChange={setName}
+              onChange={handleChangeName}
               variant='common'
               size='bigSizeRegularRadii'
               placeholder={intl.formatMessage({ id: 'form.name.placeholder' })}
@@ -87,8 +97,8 @@ export const Form: FC<FormProps> = ({
               heightIcon={48}
               backgroundIcon='background.white'
               radiiIcon='normal'
-              onClick={setSend}
-              disabled={!name || !phoneNumber || !message}
+              onClick={handleSend}
+              disabled={!handleChangeName || !phoneNumber || !message}
             >
               <Text color='text.white' fontSize='small' lineHeight='normal'>
                 <FormattedMessage id='form.button.send' />
@@ -96,7 +106,7 @@ export const Form: FC<FormProps> = ({
             </Button>
           </Box>
 
-          <Condition match={!!message && !!name && !!phoneNumber}>
+          <Condition match={!!message && !!handleChangeName && !!phoneNumber}>
             <Layout flexBasis={24} />
 
             <Box display='inline'>
@@ -139,7 +149,7 @@ export const Form: FC<FormProps> = ({
                 widthIcon={48}
                 heightIcon={48}
                 radiiIcon='normal'
-                onClick={setSend}
+                onClick={handleClose}
               />
             </Box>
 
