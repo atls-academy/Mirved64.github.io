@@ -2433,6 +2433,7 @@ __metadata:
     "@types/react": "npm:18.2.9"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
     "@ui/navbar": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react-scroll-parallax: "npm:3.3.2"
@@ -3600,7 +3601,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace: 0.0.1, @ui/layout@workspace:ui/layout":
+"@ui/layout@workspace: 0.0.1, @ui/layout@workspace:0.0.1, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
