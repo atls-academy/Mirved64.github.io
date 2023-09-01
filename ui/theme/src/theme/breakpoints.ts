@@ -1,13 +1,11 @@
-type BreakpointsProp = Array<string | number | undefined> & {
-  small?: string | number | undefined
+type BreakpointsProp = Array<string> & {
   standard?: string | number | undefined
   wide?: string | number | undefined
   ultra?: string | number | undefined
 }
 
-export const breakpoints: BreakpointsProp = ['40em', '80em', '160em', '240em']
+export const breakpoints: BreakpointsProp = ['80em', '160em', '240em']
 
-breakpoints[0] = breakpoints.small
-breakpoints[1] = breakpoints.standard
-breakpoints[2] = breakpoints.wide
-breakpoints[3] = breakpoints.ultra
+breakpoints.standard = breakpoints[0] // eslint-disable-line
+breakpoints.wide = breakpoints[1] // eslint-disable-line
+breakpoints.ultra = breakpoints[2] // eslint-disable-line

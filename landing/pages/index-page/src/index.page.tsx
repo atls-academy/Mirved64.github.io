@@ -1,41 +1,34 @@
 import React   from 'react'
 
-// import { About }          from '@landing/fragment-about'
-// import { Courses }        from '@landing/fragment-courses'
-// import { Faq }            from '@landing/fragment-faq'
-// import { Hero }           from '@landing/fragment-hero'
-// import { Navigation }     from '@landing/fragment-navigation'
-// import { Process }        from '@landing/fragment-process'
-// import { Steps }          from '@landing/fragment-steps'
-// import { Technologies }   from '@landing/fragment-technologies'
-// import { Background }     from '@ui/background'
-// import { Condition }      from '@ui/condition'
-import { Box } from '@ui/layout'
+import { About }          from '@landing/fragment-about'
+import { Courses }        from '@landing/fragment-courses'
+import { Faq }            from '@landing/fragment-faq'
+import { Hero }           from '@landing/fragment-hero'
+import { Navigation }     from '@landing/fragment-navigation'
+import { Process }        from '@landing/fragment-process'
+import { Steps }          from '@landing/fragment-steps'
+import { Technologies }   from '@landing/fragment-technologies'
+import { Background }     from '@ui/background'
+import { Condition }      from '@ui/condition'
 
-// import { Parallax }       from 'react-scroll-parallax'
-// import { useRef }         from 'react'
+import { Parallax }       from 'react-scroll-parallax'
+import { useRef }         from 'react'
 
-// import { Navbar }         from '@ui/navbar'
-// import { useWindowWidth } from '@ui/utils'
+import { Navbar }         from '@ui/navbar'
+import { useWindowWidth } from '@ui/utils'
 
-const IndexPage = () => (
-  // {
-  // const { isMobile, isDesktop } = useWindowWidth()
-  // const sectionRefs = [
-  //   useRef<HTMLDivElement>(null),
-  //   useRef<HTMLDivElement>(null),
-  //   useRef<HTMLDivElement>(null),
-  //   useRef<HTMLDivElement>(null),
-  // ]
+const IndexPage = () =>   {
+  const { isMobile, isDesktop } = useWindowWidth()
+  const sectionRefs = [
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+    useRef<HTMLDivElement>(null),
+  ]
 
-  // return (
+  return (
   <>
-    <Box
-      backgroundColor='red'
-      width={600}
-      height={{ small: 400, standard: 500, wide: 600, ultra: 700 }}
-    />
-    {/* <Navbar sectionRefs={sectionRefs} />
+    <Navbar sectionRefs={sectionRefs} />
 
       <Background
         id='academy'
@@ -144,8 +137,8 @@ const IndexPage = () => (
         >
           <Faq />
         </Background>
-      </Background> */}
+      </Background>
   </>
-)
+)}
 
 export default IndexPage
