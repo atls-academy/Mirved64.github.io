@@ -1,6 +1,9 @@
-import React from 'react'
+import React         from 'react'
+import { FC }        from 'react'
 
-export const Icon = ({ fill, width, height }) => (
+import { IconProps } from './icon.interfaces'
+
+export const Icon: FC<IconProps> = ({ fill, width, height }) => (
   <svg
     width={width}
     height={height}

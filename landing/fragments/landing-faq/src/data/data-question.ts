@@ -1,4 +1,10 @@
-export const Question = {
+interface QuestionProps {
+  id: number
+  question: string
+  answer: string
+}
+
+export const Question: QuestionProps = {
   id: 0,
   question: 'Подойдёт ли мне профессия?',
   answer:

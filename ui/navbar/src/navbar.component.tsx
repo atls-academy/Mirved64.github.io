@@ -1,6 +1,7 @@
 import { Scrollspy }      from '@makotot/ghostui'
 
 import React              from 'react'
+import { FC }             from 'react'
 import { Link }           from 'react-scroll'
 
 import { Condition }      from '@ui/condition'
@@ -12,8 +13,9 @@ import { Text }           from '@ui/text'
 import { useWindowWidth } from '@ui/utils'
 
 import { NavLinks }       from './data'
+import { NavbarProps }    from './navbar.interfaces'
 
-export const Navbar = ({ sectionRefs }) => {
+export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
   const { isDesktop } = useWindowWidth()
 
   return (

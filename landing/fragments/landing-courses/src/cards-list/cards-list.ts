@@ -1,4 +1,13 @@
-export const CadrsList = [
+interface CardProps {
+  id: number
+  isMobileOnly?: boolean
+  category: string
+  title: string
+  descriptionMobile?: string
+  descriptionDesktop?: string
+}
+
+export const CadrsList: CardProps[] = [
   {
     id: 0,
     isMobileOnly: false,

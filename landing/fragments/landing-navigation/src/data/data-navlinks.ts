@@ -1,4 +1,10 @@
-export const NavLinks = [
+interface NavLinksProps {
+  id: string | number
+  name: string
+  path: string
+}
+
+export const NavLinks: NavLinksProps[] = [
   {
     id: 'academy',
     name: 'Academy',

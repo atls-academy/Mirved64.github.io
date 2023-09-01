@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 
@@ -15,8 +16,9 @@ import { useWindowWidth }   from '@ui/utils'
 import { NavLinks }         from './data'
 import { Drawer }           from './drawer'
 import { Item }             from './item'
+import { NavigationProps }  from './navigation.interfaces'
 
-export const Navigation = ({ sectionRefs }) => {
+export const Navigation: FC<NavigationProps> = ({ sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 

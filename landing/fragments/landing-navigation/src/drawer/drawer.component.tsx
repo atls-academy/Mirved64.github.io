@@ -1,6 +1,7 @@
 import { Scrollspy }        from '@makotot/ghostui'
 
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Background }       from '@ui/background'
@@ -22,8 +23,9 @@ import { CardDataDesktop }  from '../data'
 import { CardDataMobile }   from '../data'
 import { NavLinks }         from '../data'
 import { ItemDrawer }       from '../item'
+import { DrawerProps }      from './drawer.interfaces'
 
-export const Drawer = ({ active, onClose, sectionRefs }) => {
+export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   const cardsList = () =>

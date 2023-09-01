@@ -4,6 +4,7 @@ import { Layout }          from '@atls-ui-parts/layout'
 
 import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
+import { FC }              from 'react'
 import { motion }          from 'framer-motion'
 import { useState }        from 'react'
 
@@ -13,10 +14,11 @@ import { Text }            from '@ui/text'
 import { useWindowWidth }  from '@ui/utils'
 import { useHover }        from '@ui/utils'
 
+import { AccordionProps }  from './accordion.interfaces'
 import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
-export const Accordion = ({ answer, question, isDivider = true }) => {
+export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
