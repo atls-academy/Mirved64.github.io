@@ -18,8 +18,7 @@ import { Question }         from './data'
 export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
-  const Items = () =>
-    Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
+  const Items = Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
 
   return (
     <Row>
@@ -68,7 +67,7 @@ export const Faq = () => {
           <Layout flexBasis={40} />
         </Condition>
 
-        {Items().map((item, index, array) => (
+        {Items.map((item, index, array) => (
           <Column key={item.id}>
             <Condition match={index !== 0}>
               <Layout flexBasis={[16, 40]} />

@@ -28,8 +28,10 @@ import { DrawerProps }      from './drawer.interfaces'
 export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
 
-  const cardsList = () =>
-    Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({ ...el, id: index }))
+  const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
+    ...el,
+    id: index,
+  }))
 
   return (
     <DrawerContainer heightDrawer='100%' active={active}>
@@ -91,7 +93,7 @@ export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
             <Layout flexBasis={50} />
             <Row>
               <Layout flexBasis={40} flexShrink='0' />
-              {cardsList().map((card, index, array) => (
+              {cardsList.map((card, index, array) => (
                 <Row key={card.id}>
                   <Condition match={index === array.length - 1}>
                     <Layout flexBasis={20} flexShrink='0' />

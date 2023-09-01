@@ -10,7 +10,7 @@ import { technologiesList } from './technologies-list'
 import { worckspaceList }   from './technologies-list'
 
 export const Technologies = () => (
-  <Column width='100%'>
+  <Column fill>
     <Layout flexBasis={[32, 64]} />
 
     <Divider backgroundColor='background.ghost' weight={1} />

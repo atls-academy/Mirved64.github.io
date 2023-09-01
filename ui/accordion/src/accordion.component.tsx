@@ -23,9 +23,11 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
 
+  const handleSelect = () => setSelected(!selected)
+
   return (
     <Column>
-      <motion.div onClick={() => setSelected(!selected)}>
+      <motion.div onClick={handleSelect}>
         <Condition match={isDesktop}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
