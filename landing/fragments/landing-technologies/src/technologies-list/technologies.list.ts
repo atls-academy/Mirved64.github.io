@@ -1,4 +1,12 @@
-export const technologiesList = [
+interface TechnologyProps {
+  name: string
+}
+
+interface WorckspaceProps {
+  name: string
+}
+
+export const technologiesList: TechnologyProps[] = [
   { name: 'html' },
   { name: 'css' },
   { name: 'sass' },
@@ -7,4 +15,8 @@ export const technologiesList = [
   { name: 'javacsript' },
 ]
 
-export const worckspaceList = [{ name: 'figma' }, { name: 'github' }, { name: 'atom' }]
+export const worckspaceList: WorckspaceProps[] = [
+  { name: 'figma' },
+  { name: 'github' },
+  { name: 'atom' },
+]

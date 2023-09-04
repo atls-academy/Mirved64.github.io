@@ -1,3 +1,3 @@
-export interface NavigationProps {
+export interface NavbarProps {
   sectionRefs: React.RefObject<HTMLDivElement>[]
 }

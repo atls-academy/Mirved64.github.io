@@ -1,4 +1,11 @@
-export const dataCards = [
+interface CardProps {
+  id: number
+  title: string
+  technologiesList: string[]
+  description: string
+}
+
+export const dataCards: CardProps[] = [
   {
     id: 0,
     title: 'Дизайн, Figma, Математика',

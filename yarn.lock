@@ -1824,15 +1824,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/expect-utils@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "@jest/expect-utils@npm:29.5.0"
-  dependencies:
-    jest-get-type: "npm:^29.4.3"
-  checksum: 2ffcb9ec8b7b19fd8d41c41e41c705979feb6bb75e9657abe2bcd7a8bd2c7dbb786c67d1a35c2e5ffdfb8f4b1ce2334623939a2ab981b037466e45547ab786cd
-  languageName: node
-  linkType: hard
-
 "@jest/expect@npm:^28.1.3":
   version: 28.1.3
   resolution: "@jest/expect@npm:28.1.3"
@@ -1975,15 +1966,6 @@ __metadata:
   dependencies:
     "@sinclair/typebox": "npm:^0.24.1"
   checksum: 2cca489834190bccea6ac80e79680f46edeee9a0bdf4a892e94b74d9cacb34194182aa774309cdb22566f847aa129bff3f427ccfc2fb4fc83be15246a6c284d6
-  languageName: node
-  linkType: hard
-
-"@jest/schemas@npm:^29.4.3":
-  version: 29.4.3
-  resolution: "@jest/schemas@npm:29.4.3"
-  dependencies:
-    "@sinclair/typebox": "npm:^0.25.16"
-  checksum: 8f80ca480298411120052fcea19fd0ebee0cd148b5409ae46e93c9f7dc34e1e31147bde3eca1d0c120cabbe9c95273799eaf170f397cd8a4b31dbd3f2525c392
   languageName: node
   linkType: hard
 
@@ -2130,20 +2112,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "@jest/types@npm:29.5.0"
-  dependencies:
-    "@jest/schemas": "npm:^29.4.3"
-    "@types/istanbul-lib-coverage": "npm:^2.0.0"
-    "@types/istanbul-reports": "npm:^3.0.0"
-    "@types/node": "npm:*"
-    "@types/yargs": "npm:^17.0.8"
-    chalk: "npm:^4.0.0"
-  checksum: 4ccd31a720a23d51e71d3bf1a952a1511bb31c1624a07c16c324c27c10f26a780898d50e5a4875f825b45a2a3ef9a6f7ec6519f0a1a8406ade42acaaa40fa58e
-  languageName: node
-  linkType: hard
-
 "@jridgewell/gen-mapping@npm:^0.3.0, @jridgewell/gen-mapping@npm:^0.3.2":
   version: 0.3.3
   resolution: "@jridgewell/gen-mapping@npm:0.3.3"
@@ -2214,14 +2182,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-about@workspace:landing/fragments/landing-about"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/image": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2234,8 +2202,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-courses@workspace:landing/fragments/landing-courses"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/card": "workspace: 0.0.1"
@@ -2248,6 +2214,8 @@ __metadata:
     "@ui/swiper": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2260,8 +2228,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-faq@workspace:landing/fragments/landing-faq"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/accordion": "workspace: 0.0.1"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
@@ -2273,6 +2239,8 @@ __metadata:
     "@ui/modal": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2285,8 +2253,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-hero@workspace:landing/fragments/landing-hero"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
@@ -2297,6 +2263,8 @@ __metadata:
     "@ui/link": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2309,8 +2277,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-library@workspace:landing/fragments/landing-library"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
@@ -2320,6 +2286,8 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2333,8 +2301,6 @@ __metadata:
   resolution: "@landing/fragment-navigation@workspace:landing/fragments/landing-navigation"
   dependencies:
     "@makotot/ghostui": "npm:2.0.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@types/react-scroll": "npm:1.8.7"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
@@ -2348,12 +2314,14 @@ __metadata:
     "@ui/logo": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
-    react-scroll: "npm:1.8.9"
   peerDependencies:
     react: "*"
     react-dom: "*"
     react-intl: "*"
+    react-scroll: "*"
   languageName: unknown
   linkType: soft
 
@@ -2361,13 +2329,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-process@workspace:landing/fragments/landing-process"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/slider": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2380,8 +2348,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-steps@workspace:landing/fragments/landing-steps"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/divider": "workspace: 0.0.1"
@@ -2389,6 +2355,8 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2403,15 +2371,17 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/divider": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2430,11 +2400,15 @@ __metadata:
     "@landing/fragment-process": "workspace:0.0.1"
     "@landing/fragment-steps": "workspace:0.0.1"
     "@landing/fragment-technologies": "workspace:0.0.1"
-    "@types/react": "npm:18.2.9"
+    "@types/react": "npm:18.2.6"
+    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/navbar": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-scroll: "npm:1.8.9"
     react-scroll-parallax: "npm:3.3.2"
   peerDependencies:
     next: "*"
@@ -2452,9 +2426,13 @@ __metadata:
     "@landing/fragment-library": "workspace:0.0.1"
     "@landing/fragment-navigation": "workspace:0.0.1"
     "@types/react": "npm:18.2.9"
+    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-scroll: "npm:1.8.9"
   peerDependencies:
     next: "*"
     react: "*"
@@ -2467,6 +2445,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
+    "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
     "@formatjs/cli": "npm:6.1.3"
@@ -2653,13 +2632,6 @@ __metadata:
   version: 0.24.47
   resolution: "@sinclair/typebox@npm:0.24.47"
   checksum: 7203db7975eb1af445f29d1cc6c0273dd831b97f394e4692bd4ef7facdf903a41e8d8e9ec1b423b4ce79df04579649e9d7a2707c1e186994f5b565f440e41eaa
-  languageName: node
-  linkType: hard
-
-"@sinclair/typebox@npm:^0.25.16":
-  version: 0.25.24
-  resolution: "@sinclair/typebox@npm:0.25.24"
-  checksum: 1441d9862135d3248d15edb20dd31746b6a092d62d5d6c0a463b176c11cb5baade334c9f20c0d2605e9b0da6596148a1a5d9d9156eca008fc88197b098def65b
   languageName: node
   linkType: hard
 
@@ -3152,16 +3124,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.5.2":
-  version: 29.5.2
-  resolution: "@types/jest@npm:29.5.2"
-  dependencies:
-    expect: "npm:^29.0.0"
-    pretty-format: "npm:^29.0.0"
-  checksum: 999a7c560e956f32a60842495e079964c1d2c816fbc98520c6f83b5947e6c93d6598f92687676619b309f759cc7ad276a8548ee1dd579267d76b18c89ec87439
-  languageName: node
-  linkType: hard
-
 "@types/json-schema@npm:*, @types/json-schema@npm:^7.0.8":
   version: 7.0.11
   resolution: "@types/json-schema@npm:7.0.11"
@@ -3360,10 +3322,8 @@ __metadata:
   resolution: "@ui/accordion@workspace:ui/accordion"
   dependencies:
     "@atls-ui-parts/layout": "npm:0.0.7"
-    "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/styled-system": "npm:5.1.16"
     "@ui/condition": "workspace:0.0.1"
     "@ui/divider": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -3375,6 +3335,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    framer-motion: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -3388,14 +3349,12 @@ __metadata:
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
     "@types/styled-system": "npm:5.1.16"
-    next: "npm:12.3.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
-    next: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -3418,9 +3377,12 @@ __metadata:
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
+    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -3442,8 +3404,12 @@ __metadata:
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -3451,14 +3417,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
-    "@emotion/react": "npm:11.11.1"
-    "@emotion/styled": "npm:11.11.0"
-    framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
   peerDependencies:
-    "@emotion/styled": "*"
     react: "*"
-    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3470,18 +3431,17 @@ __metadata:
     "@atls-ui-proto/divider": "npm:0.0.6"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
-    "@types/styled-system": "npm:5.1.16"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
+    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -3493,8 +3453,6 @@ __metadata:
     "@atls-ui-parts/text": "npm:0.0.11"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react-dom": "npm:18.2.4"
-    "@types/styled-system": "npm:5.1.16"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     framer-motion: "npm:10.16.1"
@@ -3504,6 +3462,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    framer-motion: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -3514,8 +3473,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/icons": "workspace: 0.0.1"
@@ -3523,6 +3480,8 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -3538,8 +3497,6 @@ __metadata:
     "@atls-ui-generators/icons": "npm:0.0.2"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     glob: "npm:8.0.3"
     glob-promise: "npm:6.0.2"
     react: "npm:18.2.0"
@@ -3559,12 +3516,10 @@ __metadata:
     "@atls-ui-parts/image": "npm:0.0.4"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/jest": "npm:29.5.2"
-    "@types/react": "npm:18.2.9"
-    "@types/styled-system": "npm:5.1.16"
     react: "npm:18.2.0"
     styled-system: "npm:5.1.5"
   peerDependencies:
+    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     styled-system: "*"
@@ -3632,7 +3587,9 @@ __metadata:
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
   peerDependencies:
+    "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -3662,8 +3619,6 @@ __metadata:
     "@emotion/css": "npm:11.11.2"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     framer-motion: "npm:6.3.11"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -3682,17 +3637,17 @@ __metadata:
   resolution: "@ui/navbar@workspace:ui/navbar"
   dependencies:
     "@makotot/ghostui": "npm:2.0.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@types/react-scroll": "npm:1.8.7"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
-    react-scroll: "npm:1.8.9"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
   peerDependencies:
     react: "*"
     react-dom: "*"
+    react-scroll: "*"
   languageName: unknown
   linkType: soft
 
@@ -3700,8 +3655,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
@@ -3711,8 +3664,11 @@ __metadata:
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
     framer-motion: "npm:10.16.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
+    framer-motion: "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -3729,8 +3685,10 @@ __metadata:
     react-dom: "npm:18.2.0"
     swiper: "npm:8.4.7"
   peerDependencies:
+    "@emotion/css": "*"
     react: "*"
     react-dom: "*"
+    swiper: "*"
   languageName: unknown
   linkType: soft
 
@@ -3744,6 +3702,8 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -3757,10 +3717,11 @@ __metadata:
     "@emotion/css": "npm:11.11.0"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.9"
+    "@types/react": "npm:18.2.6"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
   peerDependencies:
+    "@emotion/css": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
@@ -6319,13 +6280,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diff-sequences@npm:^29.4.3":
-  version: 29.4.3
-  resolution: "diff-sequences@npm:29.4.3"
-  checksum: 788bca9220b2c7453bed921045660717c0ffb4ba9ca1456417e6e32d67e21fcebc62b37c0291f8e32177aa7b30913dd2fe240dfb4872cfcd7a09b738f8f120d5
-  languageName: node
-  linkType: hard
-
 "diff@npm:^4.0.1":
   version: 4.0.2
   resolution: "diff@npm:4.0.2"
@@ -6938,19 +6892,6 @@ __metadata:
     jest-message-util: "npm:^28.1.3"
     jest-util: "npm:^28.1.3"
   checksum: 902d161163d85c50908d70d12ef227f31392ac12ab2ff43b54d8247eee0e9ff9be403fcc77407a7f459126f3437d6020bebc1cbf2ddb0ce9ff7a0b83ad09c563
-  languageName: node
-  linkType: hard
-
-"expect@npm:^29.0.0":
-  version: 29.5.0
-  resolution: "expect@npm:29.5.0"
-  dependencies:
-    "@jest/expect-utils": "npm:^29.5.0"
-    jest-get-type: "npm:^29.4.3"
-    jest-matcher-utils: "npm:^29.5.0"
-    jest-message-util: "npm:^29.5.0"
-    jest-util: "npm:^29.5.0"
-  checksum: 106a886342eaaf0443937ac0e76fdf6adadf87462c22f153edd588db6103817e43044ec7cfa5ebb713dc3f0c373dce002a867aa549d06de42b4f219eb95ec27d
   languageName: node
   linkType: hard
 
@@ -8984,18 +8925,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "jest-diff@npm:29.5.0"
-  dependencies:
-    chalk: "npm:^4.0.0"
-    diff-sequences: "npm:^29.4.3"
-    jest-get-type: "npm:^29.4.3"
-    pretty-format: "npm:^29.5.0"
-  checksum: 39da21a9a968edf1b646aa4e90c414f6aa183831f594d42acb1de39f7f3840c68fb1ce1af167b55d17453e666b0706aba625cdc757c6617471d37d88beb8719a
-  languageName: node
-  linkType: hard
-
 "jest-docblock@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-docblock@npm:27.5.1"
@@ -9094,13 +9023,6 @@ __metadata:
   version: 28.0.2
   resolution: "jest-get-type@npm:28.0.2"
   checksum: c359204db304447797aa3b6ad5c2ee378acc91b34f0f9c8a0924fc146360de72357606439033959d4e1b4340f9f5d148d77ea9b820ba622e8955388abb8943d2
-  languageName: node
-  linkType: hard
-
-"jest-get-type@npm:^29.4.3":
-  version: 29.4.3
-  resolution: "jest-get-type@npm:29.4.3"
-  checksum: f4e3ed9abb7473f91eef0c52dd7239a1eee5132a7c22016752b4488d45839dffe82698dd6b026d0999649d8436d1783e8cdff54967999577a40afff74c33b5ef
   languageName: node
   linkType: hard
 
@@ -9220,18 +9142,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-matcher-utils@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "jest-matcher-utils@npm:29.5.0"
-  dependencies:
-    chalk: "npm:^4.0.0"
-    jest-diff: "npm:^29.5.0"
-    jest-get-type: "npm:^29.4.3"
-    pretty-format: "npm:^29.5.0"
-  checksum: 051f4085b9cc9b2a97bd5008f9e4d2ac774170cc3e2fea680a1770544e3c163c53a4cb1652091b67531896f079c3110d4f688c04ef8cac287b3d1036e6aa228b
-  languageName: node
-  linkType: hard
-
 "jest-message-util@npm:^27.4.2, jest-message-util@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-message-util@npm:27.5.1"
@@ -9263,23 +9173,6 @@ __metadata:
     slash: "npm:^3.0.0"
     stack-utils: "npm:^2.0.3"
   checksum: c6d0856fff31eb38c8082bce034575e22bfcc1b6932202ec2ed42bdf1bd7784545e1eeb8f172f750017aaab09da48da790d8778f718596ffd913f0529f24c4a7
-  languageName: node
-  linkType: hard
-
-"jest-message-util@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "jest-message-util@npm:29.5.0"
-  dependencies:
-    "@babel/code-frame": "npm:^7.12.13"
-    "@jest/types": "npm:^29.5.0"
-    "@types/stack-utils": "npm:^2.0.0"
-    chalk: "npm:^4.0.0"
-    graceful-fs: "npm:^4.2.9"
-    micromatch: "npm:^4.0.4"
-    pretty-format: "npm:^29.5.0"
-    slash: "npm:^3.0.0"
-    stack-utils: "npm:^2.0.3"
-  checksum: 1f4b1881e8d09a2817f6c3b2a2013a04ace9cec4c2bb4b03301b1f28f22c001b730f18f7599acbe1663e3900b5e833e6273abec930a9e02ba7b74d2ee90ea4cd
   languageName: node
   linkType: hard
 
@@ -9606,20 +9499,6 @@ __metadata:
     graceful-fs: "npm:^4.2.9"
     picomatch: "npm:^2.2.3"
   checksum: 2a1574f44c5b6066140c3a59517607f98a2db47333f6fd50beae02db334aa25d479a638b68e5e7350726f88c714cb93971ac8a74692eed822327d9cabb85b41e
-  languageName: node
-  linkType: hard
-
-"jest-util@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "jest-util@npm:29.5.0"
-  dependencies:
-    "@jest/types": "npm:^29.5.0"
-    "@types/node": "npm:*"
-    chalk: "npm:^4.0.0"
-    ci-info: "npm:^3.2.0"
-    graceful-fs: "npm:^4.2.9"
-    picomatch: "npm:^2.2.3"
-  checksum: 899989dcd95698c5212f224bddc586fd71f14a372a9f553c1ac2a8c64dae6e19078ccaf2c7b3d04d41b32e5dd0b655501c4333fbaca973d8e906a9676bb88d21
   languageName: node
   linkType: hard
 
@@ -11884,17 +11763,6 @@ __metadata:
     ansi-styles: "npm:^5.0.0"
     react-is: "npm:^18.0.0"
   checksum: 7ea80c810b87645bfb7a92736ea12588430ded3ec7833d158c438ec1d463c4187abb2ec1bb6efcd99fc6b81c2b786bb4ec7c29eee6f881595b0170fae702448e
-  languageName: node
-  linkType: hard
-
-"pretty-format@npm:^29.0.0, pretty-format@npm:^29.5.0":
-  version: 29.5.0
-  resolution: "pretty-format@npm:29.5.0"
-  dependencies:
-    "@jest/schemas": "npm:^29.4.3"
-    ansi-styles: "npm:^5.0.0"
-    react-is: "npm:^18.0.0"
-  checksum: bdacd8f5e21c8fa6b155ed13035494c752106540b7d93d724e2b9d23f27c605f63f3d775b0e78cfa1f6764012817529e73376ea11380a3e4d0931ec119a49842
   languageName: node
   linkType: hard
 

@@ -13,6 +13,7 @@
     "start": "yarn next start src"
   },
   "dependencies": {
+    "@emotion/css": "11.11.0",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "next": "12.3.4",
