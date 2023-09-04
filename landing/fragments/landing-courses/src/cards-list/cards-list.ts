@@ -1,4 +1,4 @@
-enum CardCategory { // eslint-disable-line
+export enum CardCategory { // eslint-disable-line
   Teach = 'обучение',
   MiniCourse = 'мини-курс',
   EducationalMaterial = 'учебный материал',

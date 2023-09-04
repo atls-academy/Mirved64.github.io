@@ -11,6 +11,7 @@ import { Swiper }         from '@ui/swiper'
 import { SwiperSlide }    from '@ui/swiper'
 import { useWindowWidth } from '@ui/utils'
 
+import { CardCategory }   from '../cards-list'
 import { CadrsList }      from '../cards-list'
 
 export const CardsLearning = () => {
@@ -19,10 +20,10 @@ export const CardsLearning = () => {
   return (
     <Column>
       {CadrsList.filter(
-        (card) => card.category === 'обучение' || card.category === 'мини-курс'
+        (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
       ).map((card) => (
         <Column key={card.id}>
-          <Condition match={card.category === 'обучение' && isDesktop}>
+          <Condition match={card.category === CardCategory.Teach && isDesktop}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -32,7 +33,7 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Condition match={card.category === 'обучение' && isMobile}>
+          <Condition match={card.category === CardCategory.Teach && isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -42,7 +43,7 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Condition match={card.category === 'мини-курс' && isDesktop}>
+          <Condition match={card.category === CardCategory.MiniCourse && isDesktop}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -52,7 +53,7 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Condition match={card.category === 'мини-курс' && isMobile}>
+          <Condition match={card.category === CardCategory.MiniCourse && isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -71,11 +72,9 @@ export const CardsLearning = () => {
 
 export const CardsMaterials = () => (
   <Row>
-    {CadrsList.filter((card) => card.category === 'учебный материал' && !card.isMobileOnly).map((
-      card,
-      index,
-      array
-    ) => (
+    {CadrsList.filter(
+      (card) => card.category === CardCategory.EducationalMaterial && !card.isMobileOnly
+    ).map((card, index, array) => (
       <Row key={card.id}>
         <Condition match={index !== 0 && index !== array.length - 1}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
@@ -106,11 +105,9 @@ export const CardsMaterials = () => (
 
 export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, className }) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
-    {CadrsList.filter((card) => card.category === 'учебный материал' && card.isMobileOnly).map((
-      card,
-      index,
-      array
-    ) => (
+    {CadrsList.filter(
+      (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly
+    ).map((card, index, array) => (
       <SwiperSlide key={card.id}>
         <Row>
           <Condition match={index === 0}>
