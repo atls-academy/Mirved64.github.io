@@ -22,11 +22,11 @@ import { ItemNavLink }      from './item'
 import { NavigationProps }  from './navigation.interfaces'
 
 export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   return (
-    <Column>
+    <Column maxWidth={2600}>
       <Condition match={isIndex}>
         <DrawerIndexPage
           active={active}
@@ -69,7 +69,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
           <Layout flexBasis={20} />
         </Condition>
 
-        <Condition match={isDesktop}>
+        <Condition match={isDesktop || isWideDesktop || isTV}>
           <Layout flexBasis={40} />
 
           <Logo fill='white' width={56} height={56} />
@@ -113,7 +113,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
               backgroundIcon='background.white'
               radiiIcon='little'
             >
-              <Text color='white' fontSize='compact' lineHeight='small'>
+              <Text color='white' fontSize='little' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
