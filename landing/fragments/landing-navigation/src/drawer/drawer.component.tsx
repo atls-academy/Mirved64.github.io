@@ -1,33 +1,33 @@
-import { Scrollspy }        from '@makotot/ghostui'
+import { Scrollspy }            from '@makotot/ghostui'
 
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { FormattedMessage }     from 'react-intl'
 
-import { Background }       from '@ui/background'
-import { Button }           from '@ui/button'
-import { Card }             from '@ui/card'
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { DrawerContainer }  from '@ui/drawer'
-import { ArrowUpIcon }      from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Background }           from '@ui/background'
+import { Button }               from '@ui/button'
+import { Card }                 from '@ui/card'
+import { Condition }            from '@ui/condition'
+import { Divider }              from '@ui/divider'
+import { DrawerContainer }      from '@ui/drawer'
+import { ArrowUpIcon }          from '@ui/icons'
+import { Box }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Layout }               from '@ui/layout'
+import { Row }                  from '@ui/layout'
+import { Logo }                 from '@ui/logo'
+import { Text }                 from '@ui/text'
+import { useWindowWidth }       from '@ui/utils'
 
-import { CardDataDesktop }  from '../data'
-import { CardDataMobile }   from '../data'
-import { NavLinks }         from '../data'
-import { ItemDrawer }       from '../item'
-import { ItemNavLink }      from '../item'
+import { CardDataDesktop }      from '../data'
+import { CardDataMobile }       from '../data'
+import { NavLinks }             from '../data'
+import { ItemDrawer }           from '../item'
+import { ItemNavLink }          from '../item'
+import { DrawerIndexPageProps } from './drawer.interfaces'
+import { DrawerProps }          from './drawer.interfaces'
 
-import { DrawerProps }      from './drawer.interfaces'
-
-export const DrawerIndexPage: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
+export const DrawerIndexPage: FC<DrawerIndexPageProps> = ({ active, onClose, sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
@@ -221,7 +221,7 @@ export const DrawerIndexPage: FC<DrawerProps> = ({ active, onClose, sectionRefs 
   )
 }
 
-export const Drawer = ({ active, onClose }) => {
+export const Drawer: FC<DrawerProps> = ({ active, onClose }) => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   const cardsList = () =>

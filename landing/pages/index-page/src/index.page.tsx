@@ -1,19 +1,19 @@
-import React              from 'react'
-import { Parallax }       from 'react-scroll-parallax'
-import { useRef }         from 'react'
+import React                   from 'react'
+import { Parallax }            from 'react-scroll-parallax'
+import { useRef }              from 'react'
 
-import { About }          from '@landing/fragment-about'
-import { Courses }        from '@landing/fragment-courses'
-import { Faq }            from '@landing/fragment-faq'
-import { Hero }           from '@landing/fragment-hero'
-import { Navigation }     from '@landing/fragment-navigation'
-import { Process }        from '@landing/fragment-process'
-import { Steps }          from '@landing/fragment-steps'
-import { Technologies }   from '@landing/fragment-technologies'
-import { Background }     from '@ui/background'
-import { Condition }      from '@ui/condition'
-import { Navbar }         from '@ui/navbar'
-import { useWindowWidth } from '@ui/utils'
+import { About }               from '@landing/fragment-about'
+import { Courses }             from '@landing/fragment-courses'
+import { Faq }                 from '@landing/fragment-faq'
+import { Hero }                from '@landing/fragment-hero'
+import { NavigationIndexPage } from '@landing/fragment-navigation'
+import { Process }             from '@landing/fragment-process'
+import { Steps }               from '@landing/fragment-steps'
+import { Technologies }        from '@landing/fragment-technologies'
+import { Background }          from '@ui/background'
+import { Condition }           from '@ui/condition'
+import { Navbar }              from '@ui/navbar'
+import { useWindowWidth }      from '@ui/utils'
 
 const IndexPage = () => {
   const { isMobile, isDesktop } = useWindowWidth()
@@ -42,7 +42,7 @@ const IndexPage = () => {
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             >
-              <Navigation sectionRefs={sectionRefs} isIndex />
+              <NavigationIndexPage sectionRefs={sectionRefs} />
               <Hero />
             </Background>
 
@@ -57,7 +57,7 @@ const IndexPage = () => {
             backgroundRepeat='no-repeat'
             backgroundPosition='-260px -20px'
           >
-            <Navigation sectionRefs={sectionRefs} isIndex />
+            <NavigationIndexPage sectionRefs={sectionRefs} />
 
             <Hero />
           </Background>

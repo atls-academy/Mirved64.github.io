@@ -13,6 +13,7 @@
     "swiper": "8.4.7"
   },
   "peerDependencies": {
+    "@emotion/css": "*",
     "react": "*",
     "react-dom": "*",
     "swiper": "*"

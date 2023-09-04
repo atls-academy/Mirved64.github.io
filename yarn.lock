@@ -2277,8 +2277,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-library@workspace:landing/fragments/landing-library"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
@@ -2288,6 +2286,8 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -2317,11 +2317,11 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
-    react-scroll: "npm:1.8.9"
   peerDependencies:
     react: "*"
     react-dom: "*"
     react-intl: "*"
+    react-scroll: "*"
   languageName: unknown
   linkType: soft
 
@@ -2408,6 +2408,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
+    react-scroll: "npm:1.8.9"
     react-scroll-parallax: "npm:3.3.2"
   peerDependencies:
     next: "*"
@@ -2425,9 +2426,13 @@ __metadata:
     "@landing/fragment-library": "workspace:0.0.1"
     "@landing/fragment-navigation": "workspace:0.0.1"
     "@types/react": "npm:18.2.9"
+    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-scroll: "npm:1.8.9"
   peerDependencies:
     next: "*"
     react: "*"
@@ -3431,6 +3436,7 @@ __metadata:
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
+    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
@@ -3467,8 +3473,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
   dependencies:
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/icons": "workspace: 0.0.1"
@@ -3476,6 +3480,8 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
     react: "*"
@@ -3513,6 +3519,7 @@ __metadata:
     react: "npm:18.2.0"
     styled-system: "npm:5.1.5"
   peerDependencies:
+    "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     styled-system: "*"
@@ -3612,8 +3619,6 @@ __metadata:
     "@emotion/css": "npm:11.11.2"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     framer-motion: "npm:6.3.11"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -3632,14 +3637,13 @@ __metadata:
   resolution: "@ui/navbar@workspace:ui/navbar"
   dependencies:
     "@makotot/ghostui": "npm:2.0.0"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@types/react-scroll": "npm:1.8.7"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
-    react-scroll: "npm:1.8.9"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -3681,6 +3685,7 @@ __metadata:
     react-dom: "npm:18.2.0"
     swiper: "npm:8.4.7"
   peerDependencies:
+    "@emotion/css": "*"
     react: "*"
     react-dom: "*"
     swiper: "*"

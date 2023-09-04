@@ -21,7 +21,7 @@ import { Item }             from './item'
 import { ItemNavLink }      from './item'
 import { NavigationProps }  from './navigation.interfaces'
 
-export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }) => {
+export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
   const { isMobile, isDesktop } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
@@ -30,17 +30,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
 
   return (
     <Column>
-      <Condition match={isIndex}>
-        <DrawerIndexPage
-          active={active}
-          onClose={handleClose}
-          sectionRefs={sectionRefs}
-        />
-      </Condition>
-
-      <Condition match={!isIndex}>
-        <Drawer active={active} onClose={handleClose} />
-      </Condition>
+      <DrawerIndexPage active={active} onClose={handleClose} sectionRefs={sectionRefs} />
 
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
         <Condition match={isMobile}>
@@ -79,29 +69,99 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
 
           <Layout flexBasis={40} flexGrow='1' />
 
-          <Condition match={isIndex}>
-            {NavLinks.map((navLink, index) => (
-              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-                <Item name={navLink.name} path={navLink.path} />
+          {NavLinks.map((navLink, index) => (
+            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+              <Item name={navLink.name} path={navLink.path} />
 
-                <Condition match={index < NavLinks.length - 1}>
-                  <Layout flexBasis={20} />
-                </Condition>
-              </Box>
-            ))}
-          </Condition>
+              <Condition match={index < NavLinks.length - 1}>
+                <Layout flexBasis={20} />
+              </Condition>
+            </Box>
+          ))}
 
-          <Condition match={!isIndex}>
-            {NavLinks.map((navLink, index) => (
-              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-                <ItemNavLink name={navLink.name} path={navLink.path} />
+          <Layout flexBasis={40} flexGrow='1' />
 
-                <Condition match={index < NavLinks.length - 1}>
-                  <Layout flexBasis={20} />
-                </Condition>
-              </Box>
-            ))}
-          </Condition>
+          <Box width={136}>
+            <Button
+              onClick={handleOpen}
+              variant='ghostBackgroundWhiteText'
+              size='bigSizeNormalRadiiBigPadding'
+              icon={<ArrowDownIcon width={12} height={6} />}
+              widthIcon={40}
+              heightIcon={40}
+              backgroundIcon='background.white'
+              radiiIcon='little'
+            >
+              <Text color='white' fontSize='compact' lineHeight='small'>
+                <FormattedMessage id='navigation.button' />
+              </Text>
+            </Button>
+          </Box>
+
+          <Layout flexBasis={40} />
+        </Condition>
+      </Row>
+    </Column>
+  )
+}
+
+export const Navigation = () => {
+  const { isMobile, isDesktop } = useWindowWidth()
+  const [active, setActive] = useState<boolean>(false)
+
+  const handleClose = () => setActive(false)
+  const handleOpen = () => setActive(true)
+
+  return (
+    <Column>
+      <Drawer active={active} onClose={handleClose} />
+
+      <Row height={[80, 120]} alignItems='center' justifyContent='center'>
+        <Condition match={isMobile}>
+          <Layout flexBasis={20} />
+
+          <Box>
+            <Logo fill='white' width={40} height={40} />
+          </Box>
+
+          <Layout flexBasis={195} flexGrow='1' flexShrink='10' />
+
+          <Box width={100}>
+            <Button
+              onClick={handleOpen}
+              variant='ghostBackgroundWhiteText'
+              size='smallSizeLittleRadii'
+              icon={<ArrowDownIcon width={9} height={5} />}
+              widthIcon={28}
+              heightIcon={28}
+              backgroundIcon='background.white'
+              radiiIcon='atom'
+            >
+              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
+                <FormattedMessage id='navigation.button' />
+              </Text>
+            </Button>
+          </Box>
+
+          <Layout flexBasis={20} />
+        </Condition>
+
+        <Condition match={isDesktop}>
+          <Layout flexBasis={40} />
+
+          <Logo fill='white' width={56} height={56} />
+
+          <Layout flexBasis={40} flexGrow='1' />
+
+          {NavLinks.map((navLink, index) => (
+            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+              <ItemNavLink name={navLink.name} path={navLink.path} />
+
+              <Condition match={index < NavLinks.length - 1}>
+                <Layout flexBasis={20} />
+              </Condition>
+            </Box>
+          ))}
 
           <Layout flexBasis={40} flexGrow='1' />
 

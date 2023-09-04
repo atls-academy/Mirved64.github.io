@@ -74,7 +74,7 @@ export const Faq = () => {
             <Layout flexBasis={40} />
           </Condition>
 
-          {Items().map((item, index, array) => (
+          {Items.map((item, index, array) => (
             <Column key={item.id}>
               <Condition match={index !== 0}>
                 <Layout flexBasis={[16, 40]} />

@@ -1,4 +1,3 @@
 export interface NavigationProps {
-  sectionRefs?: React.RefObject<HTMLDivElement>[]
-  isIndex?: boolean
+  sectionRefs: React.RefObject<HTMLDivElement>[]
 }
