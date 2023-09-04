@@ -25,18 +25,21 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
   const { isMobile, isDesktop } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
+  const handleClose = () => setActive(false)
+  const handleOpen = () => setActive(true)
+
   return (
     <Column>
       <Condition match={isIndex}>
         <DrawerIndexPage
           active={active}
-          onClose={() => setActive(false)}
+          onClose={handleClose}
           sectionRefs={sectionRefs}
         />
       </Condition>
 
       <Condition match={!isIndex}>
-        <Drawer active={active} onClose={() => setActive(false)} />
+        <Drawer active={active} onClose={handleClose} />
       </Condition>
 
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
@@ -51,7 +54,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
 
           <Box width={100}>
             <Button
-              onClick={() => setActive(true)}
+              onClick={handleOpen}
               variant='ghostBackgroundWhiteText'
               size='smallSizeLittleRadii'
               icon={<ArrowDownIcon width={9} height={5} />}
@@ -104,7 +107,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs, isIndex = false }
 
           <Box width={136}>
             <Button
-              onClick={() => setActive(true)}
+              onClick={handleOpen}
               variant='ghostBackgroundWhiteText'
               size='bigSizeNormalRadiiBigPadding'
               icon={<ArrowDownIcon width={12} height={6} />}

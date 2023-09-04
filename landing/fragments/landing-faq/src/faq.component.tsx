@@ -21,9 +21,9 @@ export const Faq = () => {
   const { isMobile, isDesktop } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
+  const handleModalOpen = () => setOpen(false)
 
-  const Items = () =>
-    Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
+  const Items = Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
 
   return (
     <>
@@ -114,7 +114,7 @@ export const Faq = () => {
 
         <Layout flexBasis={[20, 80]} flexShrink='0' />
       </Row>
-      <QuestionModal open={open} setOpen={() => setOpen(false)} />
+      <QuestionModal open={open} setOpen={handleModalOpen} />
     </>
   )
 }

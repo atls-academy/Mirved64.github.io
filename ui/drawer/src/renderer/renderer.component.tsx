@@ -2,12 +2,15 @@ import { Layout }          from '@atls-ui-parts/layout'
 
 import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
+import { FC }              from 'react'
 import { Children }        from 'react'
 import { useState }        from 'react'
 import { useEffect }       from 'react'
 import { createPortal }    from 'react-dom'
 
-const Renderer = ({ children, active }) => {
+import { RendererProps }   from './renderer.interfaces'
+
+const Renderer: FC<RendererProps> = ({ children, active }) => {
   const [doc, setDoc] = useState<any>(null)
 
   useEffect(() => {

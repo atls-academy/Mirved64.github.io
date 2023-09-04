@@ -2,100 +2,130 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 
 export const Info = () => (
   <Box flexDirection={['column', 'row']}>
-    <Box display='inline' maxWidth={[335, 710]}>
-      <Text
-        display='inline'
-        color='text.primary'
-        fontSize={['small', 'ordinary']}
-        lineHeight='huge'
-      >
-        <FormattedMessage id='courses.subtitle.power-broker' />
-      </Text>
+    <Row maxWidth={[335, 710]} flexWrap='wrap'>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.power-broker' />
+        </Text>
+      </Box>
 
-      <Space count={2} />
+      <Layout flexBasis={5} />
 
-      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-        <FormattedMessage id='courses.subtitle.atlantis' />
-      </Text>
+      <Box>
+        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.atlantis' />
+        </Text>
+      </Box>
 
-      <Space count={1} />
+      <Layout flexBasis={5} />
 
-      <Text
-        display='inline'
-        color='text.primary'
-        fontSize={['small', 'ordinary']}
-        lineHeight='huge'
-      >
-        <FormattedMessage id='courses.subtitle.has-an-impact-on' />
-      </Text>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.has' />
+        </Text>
+      </Box>
 
-      <Space count={2} />
+      <Layout flexBasis={5} />
 
-      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-        <FormattedMessage id='courses.subtitle.it' />
-      </Text>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.impact-on' />
+        </Text>
+      </Box>
 
-      <Space count={2} />
+      <Layout flexBasis={5} />
 
-      <Text
-        display='inline'
-        color='text.primary'
-        fontSize={['small', 'ordinary']}
-        lineHeight='huge'
-      >
-        <FormattedMessage id='courses.subtitle.unlimited-possibilities' />
-      </Text>
+      <Box>
+        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.it' />
+        </Text>
+      </Box>
 
-      <Space count={2} />
+      <Layout flexBasis={5} />
 
-      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-        <FormattedMessage id='courses.subtitle.use-skills' />
-      </Text>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.unlimited' />
+        </Text>
+      </Box>
 
-      <Text
-        display='inline'
-        color='text.primary'
-        fontSize={['small', 'ordinary']}
-        lineHeight='huge'
-      >
-        <FormattedMessage id='courses.subtitle.point' />
-      </Text>
-    </Box>
+      <Layout flexBasis={5} />
+
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.possibilities' />
+        </Text>
+      </Box>
+
+      <Layout flexBasis={5} />
+
+      <Box>
+        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.use-skills' />
+        </Text>
+      </Box>
+
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.point' />
+        </Text>
+      </Box>
+    </Row>
 
     <Layout flexBasis={[20, 20]} flexGrow='1' />
 
-    <Box display='inline' maxWidth={[335, 559]}>
-      <Text
-        display='inline'
-        color='text.primary'
-        fontSize={['small', 'ordinary']}
-        lineHeight='huge'
-      >
-        <FormattedMessage id='courses.subtitle.advantage-of-learning' />
-      </Text>
+    <Row maxWidth={[335, 559]} flexWrap='wrap'>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.advantage-of-learning' />
+        </Text>
+      </Box>
 
-      <Space count={2} />
+      <Layout flexBasis={5} />
 
-      <Text display='inline' color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-        <FormattedMessage id='courses.subtitle.practice' />
-      </Text>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.visibly' />
+        </Text>
+      </Box>
 
-      <Space count={2} />
+      <Layout flexBasis={5} />
 
-      <Text
-        display='inline'
-        color='text.primary'
-        fontSize={['small', 'ordinary']}
-        lineHeight='huge'
-      >
-        <FormattedMessage id='courses.subtitle.on-existing-projects' />
-      </Text>
-    </Box>
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.grow' />
+        </Text>
+      </Box>
+
+      <Layout flexBasis={5} />
+
+      <Box>
+        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.practice' />
+        </Text>
+      </Box>
+
+      <Layout flexBasis={5} />
+
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.on' />
+        </Text>
+      </Box>
+
+      <Layout flexBasis={5} />
+
+      <Box>
+        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+          <FormattedMessage id='courses.subtitle.existing-projects' />
+        </Text>
+      </Box>
+    </Row>
   </Box>
 )
