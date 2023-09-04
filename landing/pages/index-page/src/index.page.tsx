@@ -6,6 +6,7 @@ import { About }               from '@landing/fragment-about'
 import { Courses }             from '@landing/fragment-courses'
 import { Faq }                 from '@landing/fragment-faq'
 import { Hero }                from '@landing/fragment-hero'
+import { HeroWide }            from '@landing/fragment-hero'
 import { NavigationIndexPage } from '@landing/fragment-navigation'
 import { Process }             from '@landing/fragment-process'
 import { Steps }               from '@landing/fragment-steps'
@@ -16,7 +17,7 @@ import { Navbar }              from '@ui/navbar'
 import { useWindowWidth }      from '@ui/utils'
 
 const IndexPage = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
   const sectionRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -34,7 +35,21 @@ const IndexPage = () => {
         backgroundColor='navyBlueGradient'
         position='absolute'
         width='100%'
+        height={{ standart: 1750, wide: 1440 }}
       >
+        <Condition match={isWideDesktop}>
+          <Parallax translateY={[-10, 9]}>
+            <Background
+              backgroundColor='banner'
+              backgroundSize='cover'
+              backgroundRepeat='no-repeat'
+            >
+              <NavigationIndexPage sectionRefs={sectionRefs} />
+              <HeroWide />
+            </Background>
+          </Parallax>
+        </Condition>
+
         <Condition match={isDesktop}>
           <Parallax translateY={[-5, 10]}>
             <Background

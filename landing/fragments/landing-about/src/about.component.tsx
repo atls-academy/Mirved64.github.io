@@ -2,6 +2,7 @@ import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { Condition }        from '@ui/condition'
+import { Delimiter }        from '@ui/delimiter'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -9,8 +10,6 @@ import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
-
-import { Delimiter }        from './delimiter'
 
 export const About = () => {
   const { isMobile, isDesktop } = useWindowWidth()

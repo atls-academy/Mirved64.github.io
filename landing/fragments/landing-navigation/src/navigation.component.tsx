@@ -22,7 +22,7 @@ import { ItemNavLink }      from './item'
 import { NavigationProps }  from './navigation.interfaces'
 
 export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
-  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   const handleClose = () => setActive(false)
@@ -53,7 +53,7 @@ export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
               backgroundIcon='background.white'
               radiiIcon='atom'
             >
-              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
+              <Text color='text.white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
@@ -62,7 +62,7 @@ export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
           <Layout flexBasis={20} />
         </Condition>
 
-        <Condition match={isDesktop || isWideDesktop || isTV}>
+        <Condition match={!isMobile}>
           <Layout flexBasis={40} />
 
           <Logo fill='white' width={56} height={56} />
@@ -92,7 +92,7 @@ export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
               backgroundIcon='background.white'
               radiiIcon='little'
             >
-              <Text color='white' fontSize='compact' lineHeight='small'>
+              <Text color='text.white' fontSize='compact' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
@@ -106,14 +106,14 @@ export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
 }
 
 export const Navigation = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   const handleClose = () => setActive(false)
   const handleOpen = () => setActive(true)
 
   return (
-    <Column>
+    <Column maxWidth={2600}>
       <Drawer active={active} onClose={handleClose} />
 
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
@@ -137,7 +137,7 @@ export const Navigation = () => {
               backgroundIcon='background.white'
               radiiIcon='atom'
             >
-              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
+              <Text color='text.white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>
@@ -146,7 +146,7 @@ export const Navigation = () => {
           <Layout flexBasis={20} />
         </Condition>
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Layout flexBasis={40} />
 
           <Logo fill='white' width={56} height={56} />
@@ -176,7 +176,7 @@ export const Navigation = () => {
               backgroundIcon='background.white'
               radiiIcon='little'
             >
-              <Text color='white' fontSize='little' lineHeight='small'>
+              <Text color='text.white' fontSize='little' lineHeight='small'>
                 <FormattedMessage id='navigation.button' />
               </Text>
             </Button>

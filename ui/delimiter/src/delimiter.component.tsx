@@ -1,8 +1,9 @@
+import { Box }        from '@atls-ui-parts/layout'
+
 import React          from 'react'
 
 import { Background } from '@ui/background'
 import { Image }      from '@ui/image'
-import { Box }        from '@ui/layout'
 
 export const Delimiter = () => (
   <Background
