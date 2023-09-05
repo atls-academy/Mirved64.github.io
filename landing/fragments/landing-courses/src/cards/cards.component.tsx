@@ -12,14 +12,14 @@ import { SwiperSlide }    from '@ui/swiper'
 import { useWindowWidth } from '@ui/utils'
 
 import { CardCategory }   from '../cards-list'
-import { CadrsList }      from '../cards-list'
+import { CardsList }      from '../cards-list'
 
 export const CardsLearning = () => {
   const { isDesktop, isMobile } = useWindowWidth()
 
   return (
     <Column>
-      {CadrsList.filter(
+      {CardsList.filter(
         (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
       ).map((card) => (
         <Column key={card.id}>
@@ -30,6 +30,7 @@ export const CardsLearning = () => {
               description={card.descriptionDesktop}
               indent={214}
               widthCategoryBox={104}
+              image={card.image}
             />
           </Condition>
 
@@ -50,6 +51,7 @@ export const CardsLearning = () => {
               description={card.descriptionDesktop}
               indent={56}
               widthCategoryBox={112}
+              image={card.image}
             />
           </Condition>
 
@@ -72,7 +74,7 @@ export const CardsLearning = () => {
 
 export const CardsMaterials = () => (
   <Row>
-    {CadrsList.filter(
+    {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && !card.isMobileOnly
     ).map((card, index, array) => (
       <Row key={card.id}>
@@ -105,7 +107,7 @@ export const CardsMaterials = () => (
 
 export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, className }) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
-    {CadrsList.filter(
+    {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly
     ).map((card, index, array) => (
       <SwiperSlide key={card.id}>
