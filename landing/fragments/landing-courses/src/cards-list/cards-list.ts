@@ -11,9 +11,10 @@ interface CardProps {
   title: string
   descriptionMobile?: string
   descriptionDesktop?: string
+  image?: string
 }
 
-export const CadrsList: CardProps[] = [
+export const CardsList: CardProps[] = [
   {
     id: 0,
     isMobileOnly: false,
@@ -23,6 +24,7 @@ export const CadrsList: CardProps[] = [
       'Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении программирования. Получите востребованную профессию и возможность открыть бизнес в сфере информационных технологий',
     descriptionDesktop:
       'Вы изучите фундаментальные знания в ИТ и прокачаетесь  в направлении программирования. Получите востребованную профессию и возможность открыть бизнес в сфере информационных технологий',
+    image: './image/Object.png',
   },
   {
     id: 1,
@@ -33,6 +35,7 @@ export const CadrsList: CardProps[] = [
       'Вы изучите фундаментальные знания в ИТ и прокачаетесь в направлении программирования. Получите востребованную профессию и возможность открыть бизнес в сфере информационных технологий',
     descriptionDesktop:
       'Вы изучите фундаментальные знания в ИТ и прокачаетесь  в направлении программирования. Получите востребованную профессию и возможность открыть бизнес в сфере информационных технологий',
+    image: './image/Object.png',
   },
   {
     id: 2,
@@ -57,5 +60,33 @@ export const CadrsList: CardProps[] = [
     isMobileOnly: true,
     category: CardCategory.EducationalMaterial,
     title: 'Дизайн, Figma, Математика',
+  },
+]
+
+export const CardsListWide: CardProps[] = [
+  {
+    id: 0,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 1,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 2,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 3,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 4,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
   },
 ]

@@ -1,3 +1,4 @@
+export * from './ArrowIcon'
 export * from './ArrowDownIcon'
 export * from './ArrowLeftWhiteIcon'
 export * from './ArrowRightIcon'

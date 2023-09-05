@@ -78,7 +78,7 @@ export const Info = () => (
       </Box>
     </Row>
 
-    <Layout flexBasis={[20, 20]} flexGrow='1' />
+    <Layout flexBasis={20} flexGrow='1' />
 
     <Row maxWidth={[335, 559]} flexWrap='wrap'>
       <Box>

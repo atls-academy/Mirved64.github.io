@@ -3,7 +3,7 @@ import { FC }             from 'react'
 
 import { Card }           from '@ui/card'
 import { Condition }      from '@ui/condition'
-import { Column }         from '@ui/layout'
+import { Box }            from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { SwiperProps }    from '@ui/swiper'
@@ -12,24 +12,35 @@ import { SwiperSlide }    from '@ui/swiper'
 import { useWindowWidth } from '@ui/utils'
 
 import { CardCategory }   from '../cards-list'
-import { CadrsList }      from '../cards-list'
+import { CardsList }      from '../cards-list'
+import { CardsListWide }  from '../cards-list'
+import { CardCellProps }  from './cards.interfaces'
 
 export const CardsLearning = () => {
-  const { isDesktop, isMobile } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
-    <Column>
-      {CadrsList.filter(
+    <Box flexDirection={{ _: 'column', standard: 'column', wide: 'row' }}>
+      {CardsList.filter(
         (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
-      ).map((card) => (
-        <Column key={card.id}>
-          <Condition match={card.category === CardCategory.Teach && isDesktop}>
+      ).map((card, index, array) => (
+        <Box
+          key={card.id}
+          flexDirection={{ _: 'column', standard: 'column', wide: 'row' }}
+          width='100%'
+        >
+          <Condition match={index !== 0}>
+            <Layout flexBasis={[10, 20]} flexShrink='0' />
+          </Condition>
+
+          <Condition match={card.category === CardCategory.Teach && !isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
               description={card.descriptionDesktop}
-              indent={214}
-              widthCategoryBox={104}
+              indent={{ standard: 214, wide: 356 }}
+              widthCategoryBox={{ standard: 104, wide: 156 }}
+              image={card.image}
             />
           </Condition>
 
@@ -43,13 +54,14 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Condition match={card.category === CardCategory.MiniCourse && isDesktop}>
+          <Condition match={card.category === CardCategory.MiniCourse && !isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
               description={card.descriptionDesktop}
-              indent={56}
-              widthCategoryBox={112}
+              indent={{ standard: 56, wide: 356 }}
+              widthCategoryBox={{ standard: 112, wide: 167 }}
+              image={card.image}
             />
           </Condition>
 
@@ -63,16 +75,18 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Layout flexBasis={[20, 40]} />
-        </Column>
+          <Condition match={index !== array.length - 1}>
+            <Layout flexBasis={[10, 20]} flexShrink='0' />
+          </Condition>
+        </Box>
       ))}
-    </Column>
+    </Box>
   )
 }
 
 export const CardsMaterials = () => (
   <Row>
-    {CadrsList.filter(
+    {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && !card.isMobileOnly
     ).map((card, index, array) => (
       <Row key={card.id}>
@@ -105,7 +119,7 @@ export const CardsMaterials = () => (
 
 export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, className }) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
-    {CadrsList.filter(
+    {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly
     ).map((card, index, array) => (
       <SwiperSlide key={card.id}>
@@ -130,3 +144,29 @@ export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, clas
     ))}
   </Swiper>
 )
+
+export const CardsMaterialsWide = () => {
+  const CardCell: FC<CardCellProps> = ({ index, category, title }) => (
+    <>
+      <Box flexDirection='column' width={{ wide: 572 }}>
+        <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
+
+        <Condition match={index < 3}>
+          <Layout flexBasis={40} />
+        </Condition>
+      </Box>
+
+      <Condition match={index !== 2}>
+        <Layout flexBasis={40} flexShrink='0' />
+      </Condition>
+    </>
+  )
+
+  return (
+    <>
+      {CardsListWide.map((card, index) => (
+        <CardCell key={card.id} index={index} category={card.category} title={card.title} />
+      ))}
+    </>
+  )
+}

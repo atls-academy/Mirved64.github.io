@@ -38,7 +38,7 @@ const IndexPage = () => {
         height={{ standart: 1750, wide: 1440 }}
       >
         <Condition match={isWideDesktop}>
-          <Parallax translateY={[-10, 9]}>
+          <Parallax translateY={[-10, 11]}>
             <Background
               backgroundColor='banner'
               backgroundSize='cover'
@@ -89,13 +89,19 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={1}
-        top={[939, 1750]}
+        top={{ _: 939, standard: 1670, wide: 1360 }}
+        overflow='hidden'
       >
         <Background
           backgroundColor='wavesGradient'
           backgroundSize={['2200px 400px', '4400px 800px']}
           backgroundRepeat='no-repeat'
-          backgroundPosition={['-982px 409px', '-2480px 645px']}
+          backgroundPosition={{
+            _: '-982px 409px',
+            standard: '-2480px 645px',
+            wide: '-1840px 464px',
+          }}
+          display='flex'
         >
           <Courses />
         </Background>
@@ -109,7 +115,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={2}
-        top={[2634, 3761]}
+        top={{ _: 2634, standard: 3761, wide: 3571 }}
       >
         <Background
           backgroundColor='wavesGradient'

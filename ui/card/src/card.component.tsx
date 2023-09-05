@@ -15,7 +15,7 @@ import { CardProps }      from './card.interfaces'
 
 export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
   const { hover, hoverProps } = useHover()
-  const { isDesktop } = useWindowWidth()
+  const { isDesktop, isWideDesktop } = useWindowWidth()
 
   return (
     <Box
@@ -32,8 +32,8 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
         width='100%'
         borderRadius={['normal', 'regular']}
       >
-        <Condition match={!!props.image && isDesktop}>
-          <Box position='absolute' top='40px' right='40px'>
+        <Condition match={!!props.image && (isDesktop || isWideDesktop)}>
+          <Box position='absolute' top='40px' right='34px'>
             <Image src={props.image} width={360} height={360} />
           </Box>
         </Condition>
@@ -44,11 +44,11 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           <Layout flexBasis={[16, 40]} />
 
           <Box
-            flexBasis={[27, 38]}
+            flexBasis={{ _: 27, standard: 38, wide: 57 }}
             width={props.widthCategoryBox}
             alignItems='center'
             backgroundColor='background.white'
-            borderRadius='tiny'
+            borderRadius={{ standard: 'tiny', wide: 'little' }}
             justifyContent='center'
           >
             <Text
@@ -64,7 +64,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           <Layout flexBasis={props.indent} />
 
           <Condition match={!isMobileOnly}>
-            <Box maxWidth={[303, 496]}>
+            <Box maxWidth={{ _: 303, standard: 496, wide: 556 }}>
               <Text color='text.primary' fontSize={['medium', 'regular']} lineHeight='usual'>
                 {props.titleDesktop}
               </Text>
@@ -83,9 +83,13 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
             <Column flexBasis={[132, 84]}>
               <Layout flexBasis={[12, 16]} />
 
-              <Box maxWidth={[303, 690]}>
+              <Box maxWidth={{ _: 303, standard: 690, wide: 694 }}>
                 <Text
-                  color={['text.primaryTransparentText', 'text.primary']}
+                  color={{
+                    _: 'text.primaryTransparentText',
+                    standard: 'text.primary',
+                    wide: 'text.primaryTransparentText',
+                  }}
                   fontSize={['tiny', 'small']}
                   lineHeight={['big', 'huge']}
                 >
