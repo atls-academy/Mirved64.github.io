@@ -21,7 +21,7 @@ export const LibraryBanner = () => {
   const intl = useIntl()
   const [searchQuery, setSearchQuery] = useState('')
 
-  const searcButton = (
+  const searchButton = (
     <Box width={[172, 132]}>
       <Button variant='navyBackgroundWhiteText' size='usualSizeCompactRadii'>
         <Text color='text.white' fontSize='little' lineHeight='usual'>
@@ -79,7 +79,7 @@ export const LibraryBanner = () => {
             widthIcon={20}
             heightIcon={20}
             filled={searchQuery}
-            addon={searchQuery ? searcButton : null}
+            addon={searchQuery ? searchButton : null}
             placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
             color={getColor()}
           />

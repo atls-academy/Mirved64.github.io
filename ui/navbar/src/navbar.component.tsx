@@ -52,7 +52,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                         height={8}
                         borderRadius='50%'
                         cursor='pointer'
-                        style={{ transition: '0.3s' }}
+                        zIndex={20}
                         backgroundColor={
                           currentElementIndexInViewport === 0 || currentElementIndexInViewport === 2
                             ? 'background.white'
@@ -71,7 +71,6 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                               ? 'text.white'
                               : 'text.purpur'
                           }
-                          style={{ transition: '0.3s' }}
                           cursor='pointer'
                           fontSize='tiny'
                           lineHeight='small'
@@ -93,7 +92,6 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                               : 'text.primaryTransparent'
                           }
                           cursor='pointer'
-                          style={{ transition: '0.3s' }}
                           fontSize='tiny'
                           lineHeight='small'
                         >
