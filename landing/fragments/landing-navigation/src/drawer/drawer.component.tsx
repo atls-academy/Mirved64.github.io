@@ -28,7 +28,7 @@ import { DrawerIndexPageProps } from './drawer.interfaces'
 import { DrawerProps }          from './drawer.interfaces'
 
 export const DrawerIndexPage: FC<DrawerIndexPageProps> = ({ active, onClose, sectionRefs }) => {
-  const { isMobile } = useWindowWidth()
+  const { isMobile, isTV } = useWindowWidth()
 
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
     ...el,
@@ -45,7 +45,13 @@ export const DrawerIndexPage: FC<DrawerIndexPageProps> = ({ active, onClose, sec
             <Row alignItems='center' height={56}>
               <Layout flexBasis={40} />
 
-              <Logo fill='rgba(58, 55, 93, 1)' width={56} height={56} />
+              <Condition match={!isTV}>
+                <Logo fill='rgba(58, 55, 93, 1)' width={56} height={50} />
+              </Condition>
+
+              <Condition match={isTV}>
+                <Logo fill='rgba(58, 55, 93, 1)' width={84} height={75} />
+              </Condition>
 
               <Layout flexBasis={40} flexGrow='1' />
 
@@ -53,7 +59,7 @@ export const DrawerIndexPage: FC<DrawerIndexPageProps> = ({ active, onClose, sec
                 {({ currentElementIndexInViewport }) => (
                   <Box>
                     {NavLinks.map((navLink, index) => (
-                      <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                      <Box key={navLink.id} width={index < NavLinks.length - 1 ? 330 : 300}>
                         <ItemDrawer
                           path={navLink.path}
                           name={navLink.name}
@@ -62,7 +68,7 @@ export const DrawerIndexPage: FC<DrawerIndexPageProps> = ({ active, onClose, sec
                         />
 
                         <Condition match={index < NavLinks.length - 1}>
-                          <Layout flexBasis={20} />
+                          <Layout flexBasis={30} />
                         </Condition>
                       </Box>
                     ))}
@@ -72,21 +78,40 @@ export const DrawerIndexPage: FC<DrawerIndexPageProps> = ({ active, onClose, sec
 
               <Layout flexBasis={40} flexGrow='1' />
 
-              <Box width={136}>
-                <Button
-                  onClick={onClose}
-                  variant='primaryBackgroundWhiteText'
-                  size='bigSizeNormalRadiiBigPadding'
-                  icon={<ArrowUpIcon width={12} height={6} />}
-                  widthIcon={40}
-                  heightIcon={40}
-                  backgroundIcon='background.white'
-                  radiiIcon='little'
-                >
-                  <Text color='white' fontSize='compact' lineHeight='small'>
-                    <FormattedMessage id='navigation.button' />
-                  </Text>
-                </Button>
+              <Box width={{ standard: 136, ultra: 203 }}>
+                <Condition match={!isTV}>
+                  <Button
+                    onClick={onClose}
+                    variant='primaryBackgroundWhiteText'
+                    size='bigSizeNormalRadiiBigPadding'
+                    icon={<ArrowUpIcon width={12} height={6} />}
+                    widthIcon={40}
+                    heightIcon={40}
+                    backgroundIcon='background.white'
+                    radiiIcon='little'
+                  >
+                    <Text color='text.white' fontSize='compact' lineHeight='small'>
+                      <FormattedMessage id='navigation.button' />
+                    </Text>
+                  </Button>
+                </Condition>
+
+                <Condition match={isTV}>
+                  <Button
+                    onClick={onClose}
+                    variant='primaryBackgroundWhiteText'
+                    size='giantSizeRegularRadii'
+                    icon={<ArrowUpIcon width={24} height={24} />}
+                    widthIcon={60}
+                    heightIcon={60}
+                    backgroundIcon='background.white'
+                    radiiIcon='usual'
+                  >
+                    <Text color='text.white' fontSize='medium' lineHeight='small'>
+                      <FormattedMessage id='navigation.button' />
+                    </Text>
+                  </Button>
+                </Condition>
               </Box>
 
               <Layout flexBasis={40} />

@@ -22,17 +22,21 @@ import { ItemNavLink }      from './item'
 import { NavigationProps }  from './navigation.interfaces'
 
 export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
-  const { isMobile } = useWindowWidth()
+  const { isMobile, isTV } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   const handleClose = () => setActive(false)
   const handleOpen = () => setActive(true)
 
   return (
-    <Column maxWidth={2600}>
+    <Column maxWidth={2600} margin='0 auto'>
       <DrawerIndexPage active={active} onClose={handleClose} sectionRefs={sectionRefs} />
 
-      <Row height={[80, 120]} alignItems='center' justifyContent='center'>
+      <Row
+        height={{ _: 80, standard: 120, ultra: 148 }}
+        alignItems='center'
+        justifyContent='center'
+      >
         <Condition match={isMobile}>
           <Layout flexBasis={20} />
 
@@ -65,37 +69,76 @@ export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
         <Condition match={!isMobile}>
           <Layout flexBasis={40} />
 
-          <Logo fill='white' width={56} height={56} />
+          <Condition match={!isTV}>
+            <Logo fill='white' width={56} height={50} />
+          </Condition>
+
+          <Condition match={isTV}>
+            <Logo fill='white' width={84} height={75} />
+          </Condition>
 
           <Layout flexBasis={40} flexGrow='1' />
 
-          {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-              <Item name={navLink.name} path={navLink.path} />
+          <Condition match={!isTV}>
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                <Item name={navLink.name} path={navLink.path} />
 
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
-              </Condition>
-            </Box>
-          ))}
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={20} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
+
+          <Condition match={isTV}>
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 330 : 300}>
+                <Item name={navLink.name} path={navLink.path} />
+
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={30} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
 
           <Layout flexBasis={40} flexGrow='1' />
 
-          <Box width={136}>
-            <Button
-              onClick={handleOpen}
-              variant='ghostBackgroundWhiteText'
-              size='bigSizeNormalRadiiBigPadding'
-              icon={<ArrowDownIcon width={12} height={6} />}
-              widthIcon={40}
-              heightIcon={40}
-              backgroundIcon='background.white'
-              radiiIcon='little'
-            >
-              <Text color='text.white' fontSize='compact' lineHeight='small'>
-                <FormattedMessage id='navigation.button' />
-              </Text>
-            </Button>
+          <Box width={{ standard: 136, ultra: 203 }}>
+            <Condition match={!isTV}>
+              <Button
+                onClick={handleOpen}
+                variant='ghostBackgroundWhiteText'
+                size='bigSizeNormalRadiiBigPadding'
+                icon={<ArrowDownIcon width={12} height={6} />}
+                widthIcon={40}
+                heightIcon={40}
+                backgroundIcon='background.white'
+                radiiIcon='little'
+              >
+                <Text color='text.white' fontSize='compact' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
+            </Condition>
+
+            <Condition match={isTV}>
+              <Button
+                onClick={handleOpen}
+                variant='ghostBackgroundWhiteText'
+                size='giantSizeRegularRadii'
+                icon={<ArrowDownIcon width={24} height={24} />}
+                widthIcon={60}
+                heightIcon={60}
+                backgroundIcon='background.white'
+                radiiIcon='usual'
+              >
+                <Text color='text.white' fontSize='medium' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
+            </Condition>
           </Box>
 
           <Layout flexBasis={40} />
@@ -106,14 +149,14 @@ export const NavigationIndexPage: FC<NavigationProps> = ({ sectionRefs }) => {
 }
 
 export const Navigation = () => {
-  const { isMobile } = useWindowWidth()
+  const { isMobile, isTV } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   const handleClose = () => setActive(false)
   const handleOpen = () => setActive(true)
 
   return (
-    <Column maxWidth={2600}>
+    <Column maxWidth={2600} margin='0 auto'>
       <Drawer active={active} onClose={handleClose} />
 
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
@@ -149,37 +192,76 @@ export const Navigation = () => {
         <Condition match={!isMobile}>
           <Layout flexBasis={40} />
 
-          <Logo fill='white' width={56} height={56} />
+          <Condition match={!isTV}>
+            <Logo fill='white' width={56} height={50} />
+          </Condition>
+
+          <Condition match={isTV}>
+            <Logo fill='white' width={84} height={75} />
+          </Condition>
 
           <Layout flexBasis={40} flexGrow='1' />
 
-          {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-              <ItemNavLink name={navLink.name} path={navLink.path} />
+          <Condition match={!isTV}>
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                <ItemNavLink name={navLink.name} path={navLink.path} />
 
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
-              </Condition>
-            </Box>
-          ))}
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={20} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
+
+          <Condition match={isTV}>
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 330 : 300}>
+                <ItemNavLink name={navLink.name} path={navLink.path} />
+
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={30} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
 
           <Layout flexBasis={40} flexGrow='1' />
 
-          <Box width={136}>
-            <Button
-              onClick={handleOpen}
-              variant='ghostBackgroundWhiteText'
-              size='bigSizeNormalRadiiBigPadding'
-              icon={<ArrowDownIcon width={12} height={6} />}
-              widthIcon={40}
-              heightIcon={40}
-              backgroundIcon='background.white'
-              radiiIcon='little'
-            >
-              <Text color='text.white' fontSize='little' lineHeight='small'>
-                <FormattedMessage id='navigation.button' />
-              </Text>
-            </Button>
+          <Box width={{ standard: 136, ultra: 203 }}>
+            <Condition match={!isTV}>
+              <Button
+                onClick={handleOpen}
+                variant='ghostBackgroundWhiteText'
+                size='bigSizeNormalRadiiBigPadding'
+                icon={<ArrowDownIcon width={12} height={6} />}
+                widthIcon={40}
+                heightIcon={40}
+                backgroundIcon='background.white'
+                radiiIcon='little'
+              >
+                <Text color='text.white' fontSize='compact' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
+            </Condition>
+
+            <Condition match={isTV}>
+              <Button
+                onClick={handleOpen}
+                variant='ghostBackgroundWhiteText'
+                size='giantSizeRegularRadii'
+                icon={<ArrowDownIcon width={24} height={24} />}
+                widthIcon={60}
+                heightIcon={60}
+                backgroundIcon='background.white'
+                radiiIcon='usual'
+              >
+                <Text color='text.white' fontSize='medium' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
+            </Condition>
           </Box>
 
           <Layout flexBasis={40} />

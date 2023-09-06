@@ -15,7 +15,9 @@ export const DrawerContainer: FC<DrawerProps> = ({ active, heightDrawer, childre
       exit={{ top: '-100%' }}
       transition={{ duration: 0.3 }}
     >
-      <Box height={heightDrawer}>{children}</Box>
+      <Box height={heightDrawer} maxWidth={2600} margin='0 auto'>
+        {children}
+      </Box>
     </motion.div>
   </Renderer>
 )

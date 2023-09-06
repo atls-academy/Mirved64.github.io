@@ -26,7 +26,6 @@
     "react-scroll-parallax": "3.3.2"
   },
   "peerDependencies": {
-    "@emotion/styled": "*",
     "next": "*",
     "react": "*",
     "react-dom": "*",

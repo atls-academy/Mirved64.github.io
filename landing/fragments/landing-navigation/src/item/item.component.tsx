@@ -18,13 +18,13 @@ export const Item: FC<ItemProps> = ({ name, path }) => {
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box width={200} {...hoverProps} cursor='pointer'>
+    <Box width={{ standard: 200, ultra: 300 }} {...hoverProps} cursor='pointer'>
       <Link to={path} width='100%' spy smooth duration={1000}>
         <Column alignItems='center'>
           <Box>
             <Text
               color={hover ? 'text.white' : 'text.gray'}
-              fontSize='compact'
+              fontSize={{ standard: 'compact', ultra: 'middle' }}
               lineHeight='small'
               textTransform='uppercase'
             >
@@ -32,12 +32,12 @@ export const Item: FC<ItemProps> = ({ name, path }) => {
             </Text>
           </Box>
 
-          <Layout flexBasis={10} />
+          <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
           <Divider
             backgroundColor={hover ? 'background.white' : 'background.graySemiTransparent'}
             weight={1}
-            width={200}
+            width={{ standard: 200, ultra: 300 }}
           />
         </Column>
       </Link>
@@ -54,14 +54,14 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box flexBasis={200} cursor='pointer' {...hoverProps}>
+    <Box flexBasis={{ standard: 200, ultra: 300 }} cursor='pointer' {...hoverProps}>
       <Link to={path} width='100%' spy smooth duration={1000}>
         <Column alignItems='center'>
           <Condition match={currentElementIndexInViewport !== index}>
             <Box>
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
-                fontSize='compact'
+                fontSize={{ standard: 'compact', ultra: 'middle' }}
                 lineHeight='small'
                 textTransform='uppercase'
               >
@@ -69,12 +69,12 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
               </Text>
             </Box>
 
-            <Layout flexBasis={10} />
+            <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
             <Divider
               backgroundColor={hover ? 'background.black' : 'background.blackTransparent'}
               weight={1}
-              width={200}
+              width={{ standard: 200, ultra: 300 }}
             />
           </Condition>
 
@@ -82,7 +82,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
             <Box>
               <Text
                 color='text.black'
-                fontSize='compact'
+                fontSize={{ standard: 'compact', ultra: 'middle' }}
                 lineHeight='small'
                 textTransform='uppercase'
               >
@@ -90,9 +90,13 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
               </Text>
             </Box>
 
-            <Layout flexBasis={10} />
+            <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
-            <Divider backgroundColor='background.black' weight={1} width={200} />
+            <Divider
+              backgroundColor='background.black'
+              weight={1}
+              width={{ standard: 200, ultra: 300 }}
+            />
           </Condition>
         </Column>
       </Link>
@@ -104,14 +108,14 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box width={200} {...hoverProps} cursor='pointer'>
+    <Box width={{ standard: 200, ultra: 300 }} {...hoverProps} cursor='pointer'>
       <NextLink path={`/#${path}`} width='100%'>
         <Condition match={active!}>
           <Column alignItems='center'>
             <Box>
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
-                fontSize='compact'
+                fontSize={{ standard: 'compact', ultra: 'middle' }}
                 lineHeight='small'
                 textTransform='uppercase'
               >
@@ -119,12 +123,12 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
               </Text>
             </Box>
 
-            <Layout flexBasis={10} />
+            <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
             <Divider
               backgroundColor={hover ? 'background.black' : 'background.blackTransparent'}
               weight={1}
-              width={200}
+              width={{ standard: 200, ultra: 300 }}
             />
           </Column>
         </Condition>
@@ -134,7 +138,7 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
             <Box>
               <Text
                 color={hover ? 'text.white' : 'text.gray'}
-                fontSize='compact'
+                fontSize={{ standard: 'compact', ultra: 'middle' }}
                 lineHeight='small'
                 textTransform='uppercase'
               >
@@ -142,12 +146,12 @@ export const ItemNavLink: FC<ItemProps> = ({ name, path, active }) => {
               </Text>
             </Box>
 
-            <Layout flexBasis={10} />
+            <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
             <Divider
               backgroundColor={hover ? 'background.white' : 'background.gray'}
               weight={1}
-              width={200}
+              width={{ standard: 200, ultra: 300 }}
             />
           </Column>
         </Condition>

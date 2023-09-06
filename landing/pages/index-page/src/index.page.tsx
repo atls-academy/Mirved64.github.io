@@ -17,7 +17,7 @@ import { Navbar }              from '@ui/navbar'
 import { useWindowWidth }      from '@ui/utils'
 
 const IndexPage = () => {
-  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
   const sectionRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -35,8 +35,21 @@ const IndexPage = () => {
         backgroundColor='navyBlueGradient'
         position='absolute'
         width='100%'
-        height={{ standart: 1750, wide: 1440 }}
+        height={{ standart: 1750, wide: 1440, ultra: 2240 }}
       >
+        <Condition match={isTV}>
+          <Parallax translateY={[-10, 15]}>
+            <Background
+              backgroundColor='banner'
+              backgroundSize='cover'
+              backgroundRepeat='no-repeat'
+            >
+              <NavigationIndexPage sectionRefs={sectionRefs} />
+              <HeroWide />
+            </Background>
+          </Parallax>
+        </Condition>
+
         <Condition match={isWideDesktop}>
           <Parallax translateY={[-10, 11]}>
             <Background
