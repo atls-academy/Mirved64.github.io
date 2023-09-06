@@ -117,24 +117,52 @@ const IndexPage = () => {
         zIndex={2}
         top={{ _: 2634, standard: 3761, wide: 3571 }}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['1015px 464px', 'cover']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-340px 121px', '0 124px']}
-        >
-          <Steps />
-        </Background>
+        <Condition match={!isWideDesktop}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize={['1015px 464px', 'cover']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition={['-340px 121px', '0 124px']}
+          >
+            <Steps />
+          </Background>
+        </Condition>
+
+        <Condition match={isWideDesktop}>
+          <Background
+            backgroundColor='wavesGradientWide'
+            backgroundSize='4400px 800px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='0 124px'
+          >
+            <Steps />
+          </Background>
+        </Condition>
 
         <Technologies />
 
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['1015px 464px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-341px 165px', '-2480px 235px']}
-        >
-          <Process />
+        <Background backgroundColor='darkPurpleGradientFlash'>
+          <Condition match={!isWideDesktop}>
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize={['1015px 464px', '4400px 800px']}
+              backgroundRepeat='no-repeat'
+              backgroundPosition={['-341px 165px', '-2480px 235px']}
+            >
+              <Process />
+            </Background>
+          </Condition>
+
+          <Condition match={isWideDesktop}>
+            <Background
+              backgroundColor='wavesGradientWide'
+              backgroundSize='2560px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='0 -40px'
+            >
+              <Process />
+            </Background>
+          </Condition>
         </Background>
       </Background>
 
@@ -146,7 +174,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={3}
-        top={[4264, 6450]}
+        top={{ _: 4264, standard: 6450, wide: 6600 }}
       >
         <Background
           backgroundColor='wavesGradient'

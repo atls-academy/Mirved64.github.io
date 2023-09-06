@@ -13,6 +13,7 @@ const fontSizes = {
   regular: '40px',
   common: '44px',
   huge: '46px',
+  great: '54px',
   giant: '56px',
   big: '60px',
   enormous: '64px',

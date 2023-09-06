@@ -13,7 +13,7 @@ import { useWindowWidth }   from '@ui/utils'
 import { SliderContainer }  from './slider'
 
 export const Process = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
 
   return (
     <Column flexGrow='1' alignItems='center'>
@@ -30,7 +30,7 @@ export const Process = () => {
         </Text>
       </Box>
 
-      <Layout flexBasis={[16, 24]} flexShrink='0' />
+      <Layout flexBasis={{ _: 16, standard: 24, wide: 33 }} flexShrink='0' />
 
       <Condition match={isDesktop}>
         <Column maxWidth={960}>
@@ -112,7 +112,47 @@ export const Process = () => {
         </Column>
       </Condition>
 
-      <Layout flexBasis={[24, 50]} flexShrink='0' />
+      <Condition match={isWideDesktop}>
+        <Column maxWidth={1300}>
+          <Row>
+            <Text color='text.white' fontSize='great' lineHeight='usual'>
+              <FormattedMessage id='slider.slogan.any-process-stops' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.whiteSemiTransparent' fontSize='great' lineHeight='usual'>
+              <FormattedMessage id='slider.slogan.be' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.white' fontSize='great' lineHeight='usual'>
+              <FormattedMessage id='slider.slogan.difficult' />
+            </Text>
+          </Row>
+
+          <Row justifyContent='center'>
+            <Text color='text.white' fontSize='great' lineHeight='usual'>
+              <FormattedMessage id='slider.slogan.when' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.whiteSemiTransparent' fontSize='great' lineHeight='usual'>
+              <FormattedMessage id='slider.slogan.you-know' />
+            </Text>
+
+            <Space count={3} />
+
+            <Text color='text.white' fontSize='great' lineHeight='usual'>
+              <FormattedMessage id='slider.slogan.how-it-happen' />
+            </Text>
+          </Row>
+        </Column>
+      </Condition>
+
+      <Layout flexBasis={{ _: 24, standard: 50, wide: 68 }} flexShrink='0' />
 
       <SliderContainer />
 

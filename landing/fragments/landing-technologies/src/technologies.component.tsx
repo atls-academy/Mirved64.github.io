@@ -1,36 +1,46 @@
 import React                from 'react'
 
+import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
+import { useWindowWidth }   from '@ui/utils'
 
 import { RunLine }          from './run-line'
 import { technologiesList } from './technologies-list'
 import { worckspaceList }   from './technologies-list'
 
-export const Technologies = () => (
-  <Column fill>
-    <Layout flexBasis={[32, 64]} />
+export const Technologies = () => {
+  const { isWideDesktop } = useWindowWidth()
 
-    <Divider backgroundColor='background.ghost' weight={1} />
+  return (
+    <Column fill>
+      <Condition match={isWideDesktop}>
+        <Layout flexBasis={64} />
+      </Condition>
 
-    <Layout flexBasis={[36, 64]} />
+      <Layout flexBasis={[32, 64]} />
 
-    <Row overflow='hidden'>
-      <RunLine technologies={technologiesList} font='light' />
-    </Row>
+      <Divider backgroundColor='background.ghost' weight={1} />
 
-    <Layout flexBasis={[36, 64]} />
+      <Layout flexBasis={[36, 64]} />
 
-    <Row overflow='hidden'>
-      <RunLine technologies={worckspaceList} font='secondary' />
-    </Row>
+      <Row overflow='hidden'>
+        <RunLine technologies={technologiesList} font='light' />
+      </Row>
 
-    <Layout flexBasis={[36, 64]} />
+      <Layout flexBasis={[36, 64]} />
 
-    <Divider backgroundColor='background.ghost' weight={1} />
+      <Row overflow='hidden'>
+        <RunLine technologies={worckspaceList} font='secondary' />
+      </Row>
 
-    <Layout flexBasis={[32, 64]} />
-  </Column>
-)
+      <Layout flexBasis={[36, 64]} />
+
+      <Divider backgroundColor='background.ghost' weight={1} />
+
+      <Layout flexBasis={[32, 64]} />
+    </Column>
+  )
+}

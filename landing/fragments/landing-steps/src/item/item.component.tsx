@@ -40,7 +40,12 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
       <Layout flexBasis={[12, 32]} flexShrink='0' />
 
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1'>
-        <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
+        <Box
+          alignItems='center'
+          flexBasis={{ _: 28, standard: 367, wide: 309 }}
+          flexShrink='0'
+          flexGrow='1'
+        >
           <Text color='text.white' fontSize={['medium', 'regular']} lineHeight='usual'>
             {props.name}
           </Text>
@@ -48,7 +53,7 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
 
         <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow='3' />
 
-        <Box flexBasis={[40, 560]}>
+        <Box flexBasis={{ _: 40, standard: 560, wide: 500 }}>
           <Text color='text.white' fontSize={['tiny', 'medium']} lineHeight='huge' textWrap='wrap'>
             {props.description}
           </Text>

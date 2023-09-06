@@ -20,7 +20,6 @@ export const CardsLearning = () => {
   const { isMobile } = useWindowWidth()
 
   return (
-
     <Box flexDirection={{ _: 'column', standard: 'column', wide: 'row' }}>
       {CardsList.filter(
         (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse

@@ -22,7 +22,7 @@ import { useHover }            from '@ui/utils'
 import { SliderProps }         from './slider.interfaces'
 
 export const Slider: FC<SliderProps> = ({ images }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
   const [slideIndex, setSlideIndex] = useState(0)
@@ -37,7 +37,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
     return () => clearTimeout(timer)
   }, [slideIndex, images.length])
 
-  const increaseslideIndex = () => {
+  const increaseSlideIndex = () => {
     if (slideIndex === images.length - 1) {
       setSlideIndex(0)
     } else setSlideIndex(slideIndex + 1)
@@ -45,7 +45,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
     setAnimation(animation + 1)
   }
 
-  const decreaseslideIndex = () => {
+  const decreaseSlideIndex = () => {
     if (slideIndex === 0) {
       setSlideIndex(images.length - 1)
     } else setSlideIndex(slideIndex - 1)
@@ -98,27 +98,66 @@ export const Slider: FC<SliderProps> = ({ images }) => {
         </Background>
       </Condition>
 
+      <Condition match={isWideDesktop}>
+        <Background backgroundColor='darkPurpleGradient' borderRadius='big' border='boldGhost'>
+          <Box
+            width={1300}
+            justifyContent='center'
+            borderRadius='regular'
+            position='relative'
+            maxHeight={731}
+            overflow='hidden'
+          >
+            <Box position='absolute' zIndex={9}>
+              <Image src='./image/Title-bar.png' width={1268} height={34} />
+            </Box>
+
+            <Box {...hoverProps} zIndex={8}>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Image src={images[slideIndex]} width={975} height={731} hover={hover} />
+              </motion.div>
+            </Box>
+          </Box>
+        </Background>
+      </Condition>
+
       <Layout flexBasis={[24, 32]} />
 
-      <Row maxWidth={[335, 960]}>
-        <Box>
-          <Button
-            variant='ghostBackgroundWhiteText'
-            size='LargeSizelittleRadii'
-            icon={<ArrowLeftWhiteIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={64}
-            radiiIcon='little'
-            onClick={decreaseslideIndex}
-          />
-        </Box>
+      <Row maxWidth={{ _: 335, standard: 960, wide: 1300 }}>
+        <Condition match={!isWideDesktop}>
+          <Box>
+            <Button
+              variant='ghostBackgroundWhiteText'
+              size='LargeSizelittleRadii'
+              icon={<ArrowLeftWhiteIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={64}
+              radiiIcon='little'
+              onClick={decreaseSlideIndex}
+            />
+          </Box>
+        </Condition>
+
+        <Condition match={isWideDesktop}>
+          <Box>
+            <Button
+              variant='ghostBackgroundWhiteText'
+              size='LargeSizelittleRadii'
+              icon={<ArrowLeftWhiteIcon width={21} height={21} />}
+              widthIcon={65}
+              heightIcon={87}
+              radiiIcon='little'
+              onClick={decreaseSlideIndex}
+            />
+          </Box>
+        </Condition>
 
         <Row>
-          <Layout flexBasis={[12, 16]} />
+          <Layout flexBasis={{ _: 12, standard: 16, wide: 22 }} />
 
           <Box
             height={[58, 60]}
-            flexBasis={[215, 832]}
+            flexBasis={{ _: 215, standard: 832, wide: 1127 }}
             alignItems='center'
             justifyContent='center'
             borderRadius='little'
@@ -149,20 +188,36 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             </Box>
           </Box>
 
-          <Layout flexBasis={[12, 16]} />
+          <Layout flexBasis={{ _: 12, standard: 16, wide: 22 }} />
         </Row>
 
-        <Box>
-          <Button
-            variant='ghostBackgroundWhiteText'
-            size='LargeSizelittleRadii'
-            icon={<ArrowRightWhiteIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={64}
-            radiiIcon='little'
-            onClick={increaseslideIndex}
-          />
-        </Box>
+        <Condition match={!isWideDesktop}>
+          <Box>
+            <Button
+              variant='ghostBackgroundWhiteText'
+              size='LargeSizelittleRadii'
+              icon={<ArrowRightWhiteIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={64}
+              radiiIcon='little'
+              onClick={increaseSlideIndex}
+            />
+          </Box>
+        </Condition>
+
+        <Condition match={isWideDesktop}>
+          <Box>
+            <Button
+              variant='ghostBackgroundWhiteText'
+              size='LargeSizelittleRadii'
+              icon={<ArrowRightWhiteIcon width={21} height={21} />}
+              widthIcon={65}
+              heightIcon={87}
+              radiiIcon='little'
+              onClick={decreaseSlideIndex}
+            />
+          </Box>
+        </Condition>
       </Row>
     </Column>
   )

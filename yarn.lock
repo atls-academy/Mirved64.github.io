@@ -2413,6 +2413,7 @@ __metadata:
     react-scroll: "npm:1.8.9"
     react-scroll-parallax: "npm:3.3.2"
   peerDependencies:
+    "@emotion/styled": "*"
     next: "*"
     react: "*"
     react-dom: "*"
