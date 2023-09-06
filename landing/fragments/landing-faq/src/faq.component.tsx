@@ -18,7 +18,7 @@ import { Question }         from './data'
 import { QuestionModal }    from './question-modal'
 
 export const Faq = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
   const handleModalOpen = () => setOpen(false)
@@ -44,8 +44,8 @@ export const Faq = () => {
               </Text>
             </Box>
 
-            <Condition match={isDesktop}>
-              <Layout flexBasis={[0, 20]} flexGrow='1' />
+            <Condition match={!isMobile}>
+              <Layout flexBasis={20} flexGrow='1' />
 
               <Box width={247} flexShrink='0'>
                 <Button
@@ -74,19 +74,41 @@ export const Faq = () => {
             <Layout flexBasis={40} />
           </Condition>
 
-          {Items.map((item, index, array) => (
-            <Column key={item.id}>
-              <Condition match={index !== 0}>
-                <Layout flexBasis={[16, 40]} />
-              </Condition>
+          <Condition match={!isWideDesktop}>
+            {Items.map((item, index, array) => (
+              <Column key={item.id} width={{ wide: 1005 }}>
+                <Condition match={index !== 0}>
+                  <Layout flexBasis={[16, 40]} />
+                </Condition>
 
-              <Accordion
-                question={item.question}
-                answer={item.answer}
-                isDivider={(index !== array.length - 1 && isMobile) || isDesktop}
-              />
-            </Column>
-          ))}
+                <Accordion
+                  question={item.question}
+                  answer={item.answer}
+                  isDivider={(index !== array.length - 1 && isMobile) || isDesktop}
+                />
+              </Column>
+            ))}
+          </Condition>
+
+          <Condition match={isWideDesktop}>
+            <Row flexWrap='wrap' justifyContent='space-between'>
+              {Items.map((item, index, array) => (
+                <Column key={item.id} width={1005}>
+                  <Condition match={index === 0 || index === 1}>
+                    <Divider backgroundColor='background.grayGhost' weight={1} />
+                  </Condition>
+
+                  <Layout flexBasis={40} />
+
+                  <Accordion
+                    question={item.question}
+                    answer={item.answer}
+                    isDivider={isWideDesktop}
+                  />
+                </Column>
+              ))}
+            </Row>
+          </Condition>
 
           <Condition match={isMobile}>
             <Layout flexBasis={60} />

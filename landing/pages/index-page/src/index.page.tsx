@@ -176,14 +176,27 @@ const IndexPage = () => {
         zIndex={3}
         top={{ _: 4264, standard: 6450, wide: 6600 }}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['1015px 464px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-340px 121px', '-2480px 232px']}
-        >
-          <Faq />
-        </Background>
+        <Condition match={!isWideDesktop}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize={['1015px 464px', '4400px 800px']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition={['-340px 121px', '-2480px 232px']}
+          >
+            <Faq />
+          </Background>
+        </Condition>
+
+        <Condition match={isWideDesktop}>
+          <Background
+            backgroundColor='wavesGradientWide'
+            backgroundSize='4400px 800px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-194px 186px'
+          >
+            <Faq />
+          </Background>
+        </Condition>
       </Background>
     </>
   )

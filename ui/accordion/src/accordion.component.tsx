@@ -19,7 +19,7 @@ import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
 export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
 
@@ -76,6 +76,30 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
           </Box>
         </Condition>
 
+        <Condition match={isWideDesktop}>
+          <Box {...hoverProps} alignItems='center' cursor='pointer'>
+            <motion.div style={{ display: 'flex', alignItems: 'center' }}>
+              {selected === true ? (
+                <MinusIcon width={30} height={30} hover={hover} />
+              ) : (
+                <CrossIcon width={30} height={30} hover={hover} />
+              )}
+            </motion.div>
+
+            <Layout flexBasis={24} flexShrink='0' />
+
+            <Box flexBasis={740}>
+              <Text
+                color={hover ? 'text.accent' : 'text.primary'}
+                fontSize='strong'
+                lineHeight='huge'
+              >
+                {question}
+              </Text>
+            </Box>
+          </Box>
+        </Condition>
+
         <AnimatePresence>
           {selected === true && (
             <motion.div
@@ -86,10 +110,10 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
             >
               <Layout height={[16, 24]} />
 
-              <Box maxWidth={[335, 740]}>
+              <Box maxWidth={{ _: 335, standard: 740, wide: 900 }}>
                 <Text
                   color={['text.primaryTransparentText', 'text.primaryText']}
-                  fontSize={['tiny', 'compact']}
+                  fontSize={{ _: 'tiny', standard: 'compact', wide: 'middle' }}
                   lineHeight={['huge', 'big']}
                 >
                   {answer}
