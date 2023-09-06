@@ -19,8 +19,10 @@ const fontSizes = {
   giant: '56px',
   big: '60px',
   enormous: '64px',
+  heavy: '66px',
   massive: '80px',
   stupendous: '96px',
+  colossal: '120px',
 }
 
 export { fontSizes }

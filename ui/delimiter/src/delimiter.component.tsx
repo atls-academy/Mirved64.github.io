@@ -24,3 +24,19 @@ export const Delimiter = () => (
     </Box>
   </Background>
 )
+
+export const DelimiterLarge = () => (
+  <Background backgroundColor='ghostTransparentGradient' borderRadius='usual' display='inline-flex'>
+    <Box
+      width={114}
+      height={78}
+      alignItems='center'
+      justifyContent='center'
+      borderRadius='usual'
+      border='thinnestGhost'
+      backgroundColor='background.whiteTransparent'
+    >
+      <Image src='./image/Sphere.png' width={60} height={60} />
+    </Box>
+  </Background>
+)
