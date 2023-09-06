@@ -14,5 +14,5 @@ export interface InputProps extends BaseInputProps {
   widthIcon?: number | number[]
   heightIcon?: number | number[]
   textarea?: boolean
-  filled?: boolean | string | undefined
+  filled?: boolean | string
 }
