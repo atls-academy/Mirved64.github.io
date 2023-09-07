@@ -37,19 +37,19 @@ const IndexPage = () => {
         width='100%'
       >
         <Condition match={!isMobile}>
-          <Parallax translateY={[-5, 10]}>
-            <Background
-              backgroundColor='banner'
-              backgroundSize='cover'
-              backgroundRepeat='no-repeat'
-            >
+          <Background
+            backgroundColor='banner'
+            backgroundSize='1920px 1080px'
+            backgroundRepeat='no-repeat'
+          >
+            <Parallax translateY={[-5, 10]}>
               <NavigationDesktopIndex sectionRefs={sectionRefs} />
 
               <Hero />
 
               <About />
-            </Background>
-          </Parallax>
+            </Parallax>
+          </Background>
         </Condition>
 
         <Condition match={isMobile}>
@@ -78,16 +78,22 @@ const IndexPage = () => {
         zIndex={1}
         top={[939, 1750]}
       >
-        <Parallax translateY={[-5, 10]}>
-          <Background
-            backgroundColor='wavesGradient'
-            backgroundSize={['2200px 400px', '4400px 800px']}
-            backgroundRepeat='no-repeat'
-            backgroundPosition={['-982px 409px', '-2480px 645px']}
-          >
+        <Background
+          backgroundColor='wavesGradient'
+          backgroundSize={['2200px 400px', '4400px 800px']}
+          backgroundRepeat='no-repeat'
+          backgroundPosition={['-982px 409px', '-2480px 645px']}
+        >
+          <Condition match={!isMobile}>
+            <Parallax translateY={[-5, 10]}>
+              <Courses />
+            </Parallax>
+          </Condition>
+
+          <Condition match={isMobile}>
             <Courses />
-          </Background>
-        </Parallax>
+          </Condition>
+        </Background>
       </Background>
 
       <Background
@@ -100,12 +106,36 @@ const IndexPage = () => {
         zIndex={2}
         top={[2634, 3761]}
       >
-        <Parallax translateY={[-5, 7]}>
+        <Condition match={!isMobile}>
+          <Parallax translateY={[-1, 5]}>
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='0 124px'
+            >
+              <Steps />
+            </Background>
+
+            <Technologies />
+
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-2480px 235px'
+            >
+              <Process />
+            </Background>
+          </Parallax>
+        </Condition>
+
+        <Condition match={isMobile}>
           <Background
             backgroundColor='wavesGradient'
-            backgroundSize={['1015px 464px', 'cover']}
+            backgroundSize='1015px 464px'
             backgroundRepeat='no-repeat'
-            backgroundPosition={['-340px 121px', '0 124px']}
+            backgroundPosition='-340px 121px'
           >
             <Steps />
           </Background>
@@ -114,13 +144,13 @@ const IndexPage = () => {
 
           <Background
             backgroundColor='wavesGradient'
-            backgroundSize={['1015px 464px', '4400px 800px']}
+            backgroundSize='1015px 464px'
             backgroundRepeat='no-repeat'
-            backgroundPosition={['-341px 165px', '-2480px 235px']}
+            backgroundPosition='-341px 165px'
           >
             <Process />
           </Background>
-        </Parallax>
+        </Condition>
       </Background>
 
       <Background
