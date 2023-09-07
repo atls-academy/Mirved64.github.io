@@ -14,8 +14,8 @@ import { useActive }      from '@ui/utils'
 
 import { CardKeys }       from './card.interfaces'
 
-export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => {
-  const { isDesktop } = useWindowWidth()
+export const Card: FC<CardKeys> = ({ title, technologiesList, description }: CardKeys) => {
+  const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
   const { active, activeProps } = useActive()
 
@@ -81,7 +81,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
         </Box>
       </Column>
 
-      <Condition match={isDesktop}>
+      <Condition match={!isMobile}>
         <Layout flexBasis={20} flexGrow='1' />
 
         <Box width={56} height={56} justifyContent='center' alignItems='center'>

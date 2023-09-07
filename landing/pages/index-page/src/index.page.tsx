@@ -46,7 +46,7 @@ const IndexPage = () => {
               <NavigationDesktopIndex sectionRefs={sectionRefs} />
 
               <Hero />
-            
+
               <About />
             </Background>
           </Parallax>
@@ -62,7 +62,7 @@ const IndexPage = () => {
             <NavigationMobile />
 
             <Hero />
-          
+
             <About />
           </Background>
         </Condition>
