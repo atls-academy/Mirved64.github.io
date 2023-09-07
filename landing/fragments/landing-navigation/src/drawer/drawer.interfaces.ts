@@ -3,3 +3,8 @@ export interface DrawerProps {
   onClose: () => void
   sectionRefs: React.RefObject<HTMLDivElement>[]
 }
+
+export interface MobileDrawerProps {
+  active: boolean
+  onClose: () => void
+}
