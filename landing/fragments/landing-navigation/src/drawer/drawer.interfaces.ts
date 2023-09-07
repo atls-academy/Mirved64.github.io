@@ -1,4 +1,4 @@
-export interface DrawerIndexPageProps {
+export interface DrawerIndexProps {
   active: boolean
   onClose: () => void
   sectionRefs: React.RefObject<HTMLDivElement>[]

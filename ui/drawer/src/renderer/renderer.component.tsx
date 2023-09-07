@@ -10,7 +10,7 @@ import { createPortal }    from 'react-dom'
 
 import { RendererProps }   from './renderer.interfaces'
 
-const Renderer: FC<RendererProps> = ({ children, active }) => {
+const Renderer: FC<RendererProps> = ({ children, active }: RendererProps) => {
   const [doc, setDoc] = useState<any>(null)
 
   useEffect(() => {

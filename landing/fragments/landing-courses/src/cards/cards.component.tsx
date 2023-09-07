@@ -15,7 +15,7 @@ import { CardCategory }   from '../cards-list'
 import { CardsList }      from '../cards-list'
 
 export const CardsLearning = () => {
-  const { isDesktop, isMobile } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column>
@@ -23,7 +23,7 @@ export const CardsLearning = () => {
         (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
       ).map((card) => (
         <Column key={card.id}>
-          <Condition match={card.category === CardCategory.Teach && isDesktop}>
+          <Condition match={card.category === CardCategory.Teach && !isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -44,7 +44,7 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Condition match={card.category === CardCategory.MiniCourse && isDesktop}>
+          <Condition match={card.category === CardCategory.MiniCourse && !isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -78,10 +78,6 @@ export const CardsMaterials = () => (
       (card) => card.category === CardCategory.EducationalMaterial && !card.isMobileOnly
     ).map((card, index, array) => (
       <Row key={card.id}>
-        <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
-
         <Condition match={index === array.length - 1}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
@@ -96,16 +92,16 @@ export const CardsMaterials = () => (
         <Condition match={index === 0}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
-
-        <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
       </Row>
     ))}
   </Row>
 )
 
-export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, className }) => (
+export const CardsSwiper: FC<SwiperProps> = ({
+  spaceBetween,
+  slidesPerView,
+  className,
+}: SwiperProps) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
     {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly

@@ -20,7 +20,7 @@ import { Info }             from './info'
 import { Sidebar }          from './sidebar'
 
 export const Courses = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Box borderRadius={['hugeTop', 'giantTop']} flexGrow='1'>
@@ -44,7 +44,7 @@ export const Courses = () => {
 
               <Layout flexBasis={20} flexGrow='1' />
 
-              <Condition match={isDesktop}>
+              <Condition match={!isMobile}>
                 <Box width={254} flexShrink='0'>
                   <NextLink path='/library' width='100%'>
                     <Button
@@ -79,7 +79,7 @@ export const Courses = () => {
               <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
                 <CardsLearning />
 
-                <Condition match={isDesktop}>
+                <Condition match={!isMobile}>
                   <CardsMaterials />
                 </Condition>
               </Column>

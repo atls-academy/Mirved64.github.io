@@ -7,7 +7,7 @@ import { motion }    from 'framer-motion'
 
 import { IconProps } from './icons.interfaces'
 
-export const CrossIcon: FC<IconProps> = ({ hover, ...props }) => {
+export const CrossIcon: FC<IconProps> = ({ hover, ...props }: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg

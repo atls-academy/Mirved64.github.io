@@ -13,7 +13,7 @@ import { useWindowWidth }   from '@ui/utils'
 import { SliderContainer }  from './slider'
 
 export const Process = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column flexGrow='1' alignItems='center'>
@@ -32,7 +32,7 @@ export const Process = () => {
 
       <Layout flexBasis={[16, 24]} flexShrink='0' />
 
-      <Condition match={isDesktop}>
+      <Condition match={!isMobile}>
         <Column maxWidth={960}>
           <Row>
             <Text color='text.white' fontSize='regular' lineHeight='usual'>

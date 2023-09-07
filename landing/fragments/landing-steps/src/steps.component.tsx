@@ -12,7 +12,7 @@ import { Item }           from './item'
 
 export const Steps = () => {
   const intl = useIntl()
-  const { isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column>
@@ -54,7 +54,7 @@ export const Steps = () => {
           />
         </Column>
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Box
             width='400px'
             height='400px'

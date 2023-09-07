@@ -18,7 +18,7 @@ import { Question }         from './data'
 import { QuestionModal }    from './question-modal'
 
 export const Faq = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
   const handleModalOpen = () => setOpen(false)
@@ -44,8 +44,8 @@ export const Faq = () => {
               </Text>
             </Box>
 
-            <Condition match={isDesktop}>
-              <Layout flexBasis={[0, 20]} flexGrow='1' />
+            <Condition match={!isMobile}>
+              <Layout flexBasis={20} flexGrow='1' />
 
               <Box width={247} flexShrink='0'>
                 <Button
@@ -68,7 +68,7 @@ export const Faq = () => {
 
           <Layout flexBasis={[60, 80]} />
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Divider backgroundColor='background.grayGhost' weight={1} />
 
             <Layout flexBasis={40} />
@@ -83,7 +83,7 @@ export const Faq = () => {
               <Accordion
                 question={item.question}
                 answer={item.answer}
-                isDivider={(index !== array.length - 1 && isMobile) || isDesktop}
+                isDivider={(index !== array.length - 1 && isMobile) || !isMobile}
               />
             </Column>
           ))}
