@@ -76,14 +76,16 @@ const IndexPage = () => {
         zIndex={1}
         top={[939, 1750]}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['2200px 400px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-982px 409px', '-2480px 645px']}
-        >
-          <Courses />
-        </Background>
+        <Parallax translateY={[-5, 10]}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize={['2200px 400px', '4400px 800px']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition={['-982px 409px', '-2480px 645px']}
+          >
+            <Courses />
+          </Background>
+        </Parallax>
       </Background>
 
       <Background
@@ -96,25 +98,27 @@ const IndexPage = () => {
         zIndex={2}
         top={[2634, 3761]}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['1015px 464px', 'cover']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-340px 121px', '0 124px']}
-        >
-          <Steps />
-        </Background>
+        <Parallax translateY={[-5, 7]}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize={['1015px 464px', 'cover']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition={['-340px 121px', '0 124px']}
+          >
+            <Steps />
+          </Background>
 
-        <Technologies />
+          <Technologies />
 
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['1015px 464px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-341px 165px', '-2480px 235px']}
-        >
-          <Process />
-        </Background>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize={['1015px 464px', '4400px 800px']}
+            backgroundRepeat='no-repeat'
+            backgroundPosition={['-341px 165px', '-2480px 235px']}
+          >
+            <Process />
+          </Background>
+        </Parallax>
       </Background>
 
       <Background
