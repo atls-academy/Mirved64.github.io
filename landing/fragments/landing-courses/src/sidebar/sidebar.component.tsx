@@ -14,7 +14,7 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const Sidebar = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column flexBasis={[212, 410]}>
@@ -38,7 +38,7 @@ export const Sidebar = () => {
 
             <Layout flexBasis={[16, 74]} />
 
-            <Condition match={isDesktop}>
+            <Condition match={!isMobile}>
               <Box justifyContent='center'>
                 <Image src='./image/Default.png' width={240} height={240} />
               </Box>
@@ -83,7 +83,7 @@ export const Sidebar = () => {
 
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
-      <Condition match={isDesktop}>
+      <Condition match={!isMobile}>
         <Button
           variant='primaryBackgroundWhiteText'
           size='hugeSizeRegularRadii'

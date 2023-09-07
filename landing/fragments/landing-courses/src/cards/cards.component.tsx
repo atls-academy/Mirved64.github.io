@@ -15,7 +15,7 @@ import { CardCategory }   from '../cards-list'
 import { CadrsList }      from '../cards-list'
 
 export const CardsLearning = () => {
-  const { isDesktop, isMobile } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column>
@@ -23,7 +23,7 @@ export const CardsLearning = () => {
         (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
       ).map((card) => (
         <Column key={card.id}>
-          <Condition match={card.category === CardCategory.Teach && isDesktop}>
+          <Condition match={card.category === CardCategory.Teach && !isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}
@@ -43,7 +43,7 @@ export const CardsLearning = () => {
             />
           </Condition>
 
-          <Condition match={card.category === CardCategory.MiniCourse && isDesktop}>
+          <Condition match={card.category === CardCategory.MiniCourse && !isMobile}>
             <Card
               category={card.category}
               titleDesktop={card.title}

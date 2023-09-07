@@ -16,7 +16,7 @@ import { Navbar }         from '@ui/navbar'
 import { useWindowWidth } from '@ui/utils'
 
 const IndexPage = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
   const sectionRefs = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -37,7 +37,7 @@ const IndexPage = () => {
       >
         <Navigation sectionRefs={sectionRefs} />
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Parallax translateY={[-7.5, 10]}>
             <Hero />
 

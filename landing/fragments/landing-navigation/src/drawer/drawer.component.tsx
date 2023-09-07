@@ -26,7 +26,7 @@ import { ItemDrawer }       from '../item'
 import { DrawerProps }      from './drawer.interfaces'
 
 export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
     ...el,
@@ -37,7 +37,7 @@ export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
     <DrawerContainer heightDrawer='100%' active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
         <Column>
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Layout flexBasis={32} />
 
             <Row alignItems='center' height={56}>

@@ -19,15 +19,15 @@ import { Item }             from './item'
 import { NavigationProps }  from './navigation.interfaces'
 
 export const Navigation: FC<NavigationProps> = ({ sectionRefs }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
-  const handleClose = () => setActive(false)
-  const handleOpen = () => setActive(true)
+  const handleClick = () => setActive(!active)
 
   return (
     <>
-      <Drawer active={active} onClose={handleClose} sectionRefs={sectionRefs} />
+      <Drawer active={active} onClose={handleClick} sectionRefs={sectionRefs} />
+
       <Row height={[80, 120]} alignItems='center' justifyContent='center'>
         <Condition match={isMobile}>
           <Layout flexBasis={20} />
@@ -40,7 +40,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs }) => {
 
           <Box width={100}>
             <Button
-              onClick={handleOpen}
+              onClick={handleClick}
               variant='ghostBackgroundWhiteText'
               size='smallSizeLittleRadii'
               icon={<ArrowDownIcon width={9} height={5} />}
@@ -58,7 +58,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs }) => {
           <Layout flexBasis={20} />
         </Condition>
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Layout flexBasis={40} />
 
           <Logo fill='white' width={56} height={56} />
@@ -79,7 +79,7 @@ export const Navigation: FC<NavigationProps> = ({ sectionRefs }) => {
 
           <Box width={136}>
             <Button
-              onClick={handleOpen}
+              onClick={handleClick}
               variant='ghostBackgroundWhiteText'
               size='bigSizeNormalRadiiBigPadding'
               icon={<ArrowDownIcon width={12} height={6} />}

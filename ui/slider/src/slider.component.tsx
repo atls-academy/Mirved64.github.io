@@ -22,7 +22,7 @@ import { useHover }            from '@ui/utils'
 import { SliderProps }         from './slider.interfaces'
 
 export const Slider: FC<SliderProps> = ({ images }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
   const [slideIndex, setSlideIndex] = useState(0)
@@ -55,7 +55,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
 
   return (
     <Column flexGrow='1' alignItems='center'>
-      <Condition match={isDesktop}>
+      <Condition match={!isMobile}>
         <Background backgroundColor='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
           <Box
             width={960}

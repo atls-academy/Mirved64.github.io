@@ -16,7 +16,7 @@ import { useWindowWidth }   from '@ui/utils'
 import { Question }         from './data'
 
 export const Faq = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   const Items = Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
 
@@ -38,7 +38,7 @@ export const Faq = () => {
             </Text>
           </Box>
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Layout flexBasis={[0, 20]} flexGrow='1' />
 
             <Box width={247} flexShrink='0'>
@@ -61,7 +61,7 @@ export const Faq = () => {
 
         <Layout flexBasis={[60, 80]} />
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Divider backgroundColor='background.grayGhost' weight={1} />
 
           <Layout flexBasis={40} />
@@ -76,7 +76,7 @@ export const Faq = () => {
             <Accordion
               question={item.question}
               answer={item.answer}
-              isDivider={(index !== array.length - 1 && isMobile) || isDesktop}
+              isDivider={(index !== array.length - 1 && isMobile) || !isMobile}
             />
           </Column>
         ))}

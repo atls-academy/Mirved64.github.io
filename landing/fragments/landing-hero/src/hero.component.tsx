@@ -18,7 +18,7 @@ import { SocialLinkDesktop } from './social-link'
 import { SocialLinkMobile }  from './social-link'
 
 export const Hero = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column flexGrow='1'>
@@ -75,7 +75,7 @@ export const Hero = () => {
 
           <Layout flexBasis={[24, 48]} />
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Box flexWrap='wrap' maxWidth={640}>
               <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-desktop' />
@@ -125,7 +125,7 @@ export const Hero = () => {
 
         <Layout flexBasis={[0, 134]} flexGrow={[0, 1]} />
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Box alignItems='end'>
             <Column height='200px' justifyContent='space-between'>
               <SocialLinkDesktop

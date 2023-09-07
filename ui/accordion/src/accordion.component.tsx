@@ -19,7 +19,7 @@ import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
 export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
 
@@ -28,7 +28,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
   return (
     <Column>
       <motion.div onClick={handleSelect}>
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
               {selected === true ? (
