@@ -2202,6 +2202,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-courses@workspace:landing/fragments/landing-courses"
   dependencies:
+    "@types/react-scroll": "npm:1.8.7"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/card": "workspace: 0.0.1"
@@ -2221,6 +2222,7 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-intl: "*"
+    react-scroll: "*"
   languageName: unknown
   linkType: soft
 
@@ -2425,8 +2427,6 @@ __metadata:
   dependencies:
     "@landing/fragment-library": "workspace:0.0.1"
     "@landing/fragment-navigation": "workspace:0.0.1"
-    "@types/react": "npm:18.2.9"
-    "@types/react-dom": "npm:18.2.4"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"

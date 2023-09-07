@@ -1,5 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
+import { Link }             from 'react-scroll'
 
 import { Background }       from '@ui/background'
 import { Button }           from '@ui/button'
@@ -84,19 +85,21 @@ export const Sidebar = () => {
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
       <Condition match={!isMobile}>
-        <Button
-          variant='primaryBackgroundWhiteText'
-          size='hugeSizeRegularRadii'
-          icon={<MouseIcon width={16} height={16} />}
-          widthIcon={48}
-          heightIcon={48}
-          backgroundIcon='background.white'
-          radiiIcon='normal'
-        >
-          <Text color='white' fontSize='small' lineHeight='normal'>
-            <FormattedMessage id='courses.sidebar.button-desktop' />
-          </Text>
-        </Button>
+        <Link to='teaching' width='100%' spy smooth duration={1000}>
+          <Button
+            variant='primaryBackgroundWhiteText'
+            size='hugeSizeRegularRadii'
+            icon={<MouseIcon width={16} height={16} />}
+            widthIcon={48}
+            heightIcon={48}
+            backgroundIcon='background.white'
+            radiiIcon='normal'
+          >
+            <Text color='white' fontSize='small' lineHeight='normal'>
+              <FormattedMessage id='courses.sidebar.button-desktop' />
+            </Text>
+          </Button>
+        </Link>
       </Condition>
     </Column>
   )
