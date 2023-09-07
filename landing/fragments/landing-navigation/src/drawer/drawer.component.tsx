@@ -31,8 +31,40 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, sectionRefs }:
     id: index,
   }))
 
+  const drawerCards = cardsList.map((card, index, array) => {
+    const Indent = () => (
+      <Condition match={index !== 0 && index !== array.length - 1}>
+        <Layout flexBasis={10} flexShrink='0' />
+      </Condition>
+    )
+
+    return (
+      <Row key={card.id}>
+        <Condition match={index === array.length - 1}>
+          <Layout flexBasis={20} flexShrink='0' />
+        </Condition>
+
+        <Indent />
+
+        <Card
+          category={card.category}
+          titleDesktop={card.title}
+          description={card.description}
+          indent={110}
+          widthCategoryBox={104}
+        />
+
+        <Indent />
+
+        <Condition match={index === 0}>
+          <Layout flexBasis={20} flexShrink='0' />
+        </Condition>
+      </Row>
+    )
+  })
+
   return (
-    <DrawerContainer heightDrawer='100%' active={active}>
+    <DrawerContainer active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
         <Column>
           <Layout flexBasis={32} />
@@ -90,33 +122,8 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, sectionRefs }:
           <Layout flexBasis={50} />
           <Row>
             <Layout flexBasis={40} flexShrink='0' />
-            {cardsList.map((card, index, array) => (
-              <Row key={card.id}>
-                <Condition match={index === array.length - 1}>
-                  <Layout flexBasis={20} flexShrink='0' />
-                </Condition>
 
-                <Condition match={index !== 0 && index !== array.length - 1}>
-                  <Layout flexBasis={10} flexShrink='0' />
-                </Condition>
-
-                <Card
-                  category={card.category}
-                  titleDesktop={card.title}
-                  description={card.description}
-                  indent={110}
-                  widthCategoryBox={104}
-                />
-
-                <Condition match={index !== 0 && index !== array.length - 1}>
-                  <Layout flexBasis={10} flexShrink='0' />
-                </Condition>
-
-                <Condition match={index === 0}>
-                  <Layout flexBasis={20} flexShrink='0' />
-                </Condition>
-              </Row>
-            ))}
+            {drawerCards}
 
             <Layout flexBasis={40} flexShrink='0' />
           </Row>
@@ -129,7 +136,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, sectionRefs }:
 }
 
 export const DrawerMobile: FC<MobileDrawerProps> = ({ active, onClose }: MobileDrawerProps) => (
-  <DrawerContainer heightDrawer='100%' active={active}>
+  <DrawerContainer active={active}>
     <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
       <Column>
         <Layout flexBasis={20} />

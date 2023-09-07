@@ -12,14 +12,14 @@ import { SwiperSlide }    from '@ui/swiper'
 import { useWindowWidth } from '@ui/utils'
 
 import { CardCategory }   from '../cards-list'
-import { CadrsList }      from '../cards-list'
+import { CardsList }      from '../cards-list'
 
 export const CardsLearning = () => {
   const { isMobile } = useWindowWidth()
 
   return (
     <Column>
-      {CadrsList.filter(
+      {CardsList.filter(
         (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
       ).map((card) => (
         <Column key={card.id}>
@@ -72,14 +72,10 @@ export const CardsLearning = () => {
 
 export const CardsMaterials = () => (
   <Row>
-    {CadrsList.filter(
+    {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && !card.isMobileOnly
     ).map((card, index, array) => (
       <Row key={card.id}>
-        <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
-
         <Condition match={index === array.length - 1}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
@@ -94,10 +90,6 @@ export const CardsMaterials = () => (
         <Condition match={index === 0}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
-
-        <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
       </Row>
     ))}
   </Row>
@@ -109,7 +101,7 @@ export const CardsSwiper: FC<SwiperProps> = ({
   className,
 }: SwiperProps) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
-    {CadrsList.filter(
+    {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly
     ).map((card, index, array) => (
       <SwiperSlide key={card.id}>

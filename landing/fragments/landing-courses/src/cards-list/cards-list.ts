@@ -13,7 +13,7 @@ interface CardProps {
   descriptionDesktop?: string
 }
 
-export const CadrsList: CardProps[] = [
+export const CardsList: CardProps[] = [
   {
     id: 0,
     isMobileOnly: false,

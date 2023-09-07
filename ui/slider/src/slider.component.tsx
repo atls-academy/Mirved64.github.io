@@ -37,7 +37,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
     return () => clearTimeout(timer)
   }, [slideIndex, images.length])
 
-  const increaseslideIndex = () => {
+  const increaseSlideIndex = () => {
     if (slideIndex === images.length - 1) {
       setSlideIndex(0)
     } else setSlideIndex(slideIndex + 1)
@@ -45,7 +45,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
     setAnimation(animation + 1)
   }
 
-  const decreaseslideIndex = () => {
+  const decreaseSlideIndex = () => {
     if (slideIndex === 0) {
       setSlideIndex(images.length - 1)
     } else setSlideIndex(slideIndex - 1)
@@ -109,7 +109,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
             widthIcon={48}
             heightIcon={64}
             radiiIcon='little'
-            onClick={decreaseslideIndex}
+            onClick={decreaseSlideIndex}
           />
         </Box>
 
@@ -160,7 +160,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
             widthIcon={48}
             heightIcon={64}
             radiiIcon='little'
-            onClick={increaseslideIndex}
+            onClick={increaseSlideIndex}
           />
         </Box>
       </Row>
