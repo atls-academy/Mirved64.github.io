@@ -45,7 +45,7 @@ export const LibraryBanner = () => {
       <Column flexGrow='1'>
         <Layout flexBasis={[100, 200]} />
 
-        <Box>
+        <Box maxWidth={[225, 1460]}>
           <Text
             color='text.white'
             fontSize={['normal', 'stupendous']}
