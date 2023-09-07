@@ -18,10 +18,14 @@ import { AccordionProps }  from './accordion.interfaces'
 import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
-export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
+export const Accordion: FC<AccordionProps> = ({
+  answer,
+  question,
+  isDivider = true,
+}: AccordionProps) => {
   const { isMobile } = useWindowWidth()
-  const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
+  const [selected, setSelected] = useState<boolean>(false)
 
   const handleSelect = () => setSelected(!selected)
 

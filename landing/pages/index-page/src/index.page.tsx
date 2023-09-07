@@ -17,7 +17,7 @@ import { useWindowWidth } from '@ui/utils'
 
 const IndexPage = () => {
   const { isMobile } = useWindowWidth()
-  const sectionRefs = [
+  const sectionRefs: React.RefObject<HTMLDivElement>[] = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),

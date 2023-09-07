@@ -11,7 +11,7 @@ import { useHover }   from '@ui/utils'
 
 import { CardProps }  from './card.interfaces'
 
-export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
+export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }: CardProps) => {
   const { hover, hoverProps } = useHover()
 
   return (

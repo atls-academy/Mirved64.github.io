@@ -18,7 +18,7 @@ import { Drawer }           from './drawer'
 import { Item }             from './item'
 import { NavigationProps }  from './navigation.interfaces'
 
-export const Navigation: FC<NavigationProps> = ({ sectionRefs }) => {
+export const Navigation: FC<NavigationProps> = ({ sectionRefs }: NavigationProps) => {
   const { isMobile } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 

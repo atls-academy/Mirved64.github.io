@@ -103,7 +103,11 @@ export const CardsMaterials = () => (
   </Row>
 )
 
-export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, className }) => (
+export const CardsSwiper: FC<SwiperProps> = ({
+  spaceBetween,
+  slidesPerView,
+  className,
+}: SwiperProps) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
     {CadrsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly

@@ -12,7 +12,7 @@ import { Text }       from '@ui/text'
 
 import { ItemProps }  from './item.interfaces'
 
-export const Item: FC<ItemProps> = ({ divider = true, ...props }) => (
+export const Item: FC<ItemProps> = ({ divider = true, ...props }: ItemProps) => (
   <Column>
     <Row alignItems={['start', 'center']}>
       <Background backgroundColor='ghostTransparentGradient' borderRadius={['little', 'ordinary']}>

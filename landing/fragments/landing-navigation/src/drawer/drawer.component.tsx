@@ -25,7 +25,7 @@ import { NavLinks }         from '../data'
 import { ItemDrawer }       from '../item'
 import { DrawerProps }      from './drawer.interfaces'
 
-export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
+export const Drawer: FC<DrawerProps> = ({ active, onClose, sectionRefs }: DrawerProps) => {
   const { isMobile } = useWindowWidth()
 
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({

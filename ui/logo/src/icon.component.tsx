@@ -3,7 +3,7 @@ import { FC }        from 'react'
 
 import { IconProps } from './icon.interfaces'
 
-export const Icon: FC<IconProps> = ({ fill, width, height }) => (
+export const Icon: FC<IconProps> = ({ fill, width, height }: IconProps) => (
   <svg
     width={width}
     height={height}
