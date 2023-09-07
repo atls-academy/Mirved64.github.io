@@ -29,7 +29,7 @@ export const Hero = () => {
 
         <Column flexBasis={[335, 1460]} flexGrow={[1, 0]}>
           <Row alignItems='end' flexWrap='wrap'>
-            <Box width={[225, 770]}>
+            <Box width={[230, 778]}>
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
@@ -39,7 +39,7 @@ export const Hero = () => {
               </Text>
             </Box>
 
-            <Layout flexBasis={[8, 28]} flexShrink='0' />
+            <Layout flexBasis={[3, 20]} flexShrink='0' />
 
             <Column>
               <Background
