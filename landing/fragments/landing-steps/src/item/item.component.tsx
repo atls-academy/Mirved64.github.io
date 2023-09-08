@@ -26,12 +26,7 @@ export const Item: FC<ItemProps> = ({ divider = true, ...props }: ItemProps) => 
           borderRadius={['little', 'ordinary']}
           border='thinnestGhost'
         >
-          <Text
-            color='text.white'
-            fontSize={['compact', 'medium']}
-            lineHeight='small'
-            fontFamily='regular'
-          >
+          <Text color='text.white' fontSize={['compact', 'medium']} lineHeight='small'>
             {props.sequenceNumber}
           </Text>
         </Box>

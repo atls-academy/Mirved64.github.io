@@ -1,8 +1,7 @@
 const fonts = {
-  primary: 'Helvetica',
+  primary: 'HelveticaRegular',
   secondary: 'GellaDisplay',
   light: 'HelveticaLight',
-  regular: 'HelveticaRegular',
 }
 
 export { fonts }
