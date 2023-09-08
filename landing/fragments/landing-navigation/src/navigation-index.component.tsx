@@ -1,4 +1,7 @@
+import { Scrollspy }        from '@makotot/ghostui'
+
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 
@@ -6,7 +9,6 @@ import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Logo }             from '@ui/logo'
@@ -14,27 +16,38 @@ import { Text }             from '@ui/text'
 
 import { NavLinks }         from './data'
 import { DrawerDesktop }    from './drawer'
-import { ItemNavLink }      from './item'
+import { Item }             from './item'
+import { ItemDrawer }       from './item'
+import { NavigationProps }  from './navigation.interfaces'
 
-export const Navigation = () => {
+export const NavigationIndex: FC<NavigationProps> = ({ sectionRefs }: NavigationProps) => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
 
   return (
-    <Column>
+    <>
       <DrawerDesktop active={active} onClose={handleClick}>
-        <Box>
-          {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-              <ItemNavLink path={navLink.path} name={navLink.name} active={active} />
+        <Scrollspy sectionRefs={sectionRefs} offset={-640}>
+          {({ currentElementIndexInViewport }) => (
+            <Box>
+              {NavLinks.map((navLink, index) => (
+                <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                  <ItemDrawer
+                    path={navLink.path}
+                    name={navLink.name}
+                    currentElementIndexInViewport={currentElementIndexInViewport}
+                    index={index}
+                  />
 
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
-              </Condition>
+                  <Condition match={index < NavLinks.length - 1}>
+                    <Layout flexBasis={20} />
+                  </Condition>
+                </Box>
+              ))}
             </Box>
-          ))}
-        </Box>
+          )}
+        </Scrollspy>
       </DrawerDesktop>
 
       <Row height={120} alignItems='center' justifyContent='center'>
@@ -46,7 +59,7 @@ export const Navigation = () => {
 
         {NavLinks.map((navLink, index) => (
           <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-            <ItemNavLink name={navLink.name} path={navLink.path} />
+            <Item name={navLink.name} path={navLink.path} />
 
             <Condition match={index < NavLinks.length - 1}>
               <Layout flexBasis={20} />
@@ -75,6 +88,6 @@ export const Navigation = () => {
 
         <Layout flexBasis={40} />
       </Row>
-    </Column>
+    </>
   )
 }

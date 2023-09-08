@@ -17,7 +17,7 @@ export const ItemDrawer: FC<ItemDrawerProps> = ({
   path,
   currentElementIndexInViewport,
   index,
-}) => {
+}: ItemDrawerProps) => {
   const { hover, hoverProps } = useHover()
 
   return (
