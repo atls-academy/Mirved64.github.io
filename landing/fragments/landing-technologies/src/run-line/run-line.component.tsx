@@ -13,7 +13,7 @@ import { Repeater }     from '@ui/utils'
 
 import { RunLineProps } from './run-line.interfaces'
 
-export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }: RunLineProps) => {
+export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) => {
   const infinityLine = useMemo(
     () => keyframes`0% { transform: translateX(0) } 100% { transform: translate(-50%) }`,
     []

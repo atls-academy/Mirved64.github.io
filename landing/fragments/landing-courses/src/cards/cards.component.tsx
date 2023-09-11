@@ -1,5 +1,4 @@
 import React              from 'react'
-import { FC }             from 'react'
 
 import { Card }           from '@ui/card'
 import { Condition }      from '@ui/condition'
@@ -97,11 +96,7 @@ export const CardsMaterials = () => (
   </Row>
 )
 
-export const CardsSwiper: FC<SwiperProps> = ({
-  spaceBetween,
-  slidesPerView,
-  className,
-}: SwiperProps) => (
+export const CardsSwiper = ({ spaceBetween, slidesPerView, className }: SwiperProps) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
     {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly

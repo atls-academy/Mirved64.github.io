@@ -13,7 +13,7 @@ import { useWindowWidth } from '@ui/utils'
 
 import { CardProps }      from './card.interfaces'
 
-export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }: CardProps) => {
+export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
   const { hover, hoverProps } = useHover()
   const { isMobile } = useWindowWidth()
 

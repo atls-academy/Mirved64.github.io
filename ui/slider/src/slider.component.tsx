@@ -21,7 +21,7 @@ import { useHover }            from '@ui/utils'
 
 import { SliderProps }         from './slider.interfaces'
 
-export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
+export const Slider: FC<SliderProps> = ({ images }) => {
   const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 

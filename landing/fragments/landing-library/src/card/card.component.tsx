@@ -14,7 +14,7 @@ import { useActive }      from '@ui/utils'
 
 import { CardKeys }       from './card.interfaces'
 
-export const Card: FC<CardKeys> = ({ title, technologiesList, description }: CardKeys) => {
+export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => {
   const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
   const { active, activeProps } = useActive()

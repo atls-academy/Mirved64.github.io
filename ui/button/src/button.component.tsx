@@ -11,7 +11,7 @@ import { IconAttachment } from './attachment'
 import { ButtonElement }  from './button.element'
 import { ButtonProps }    from './button.interfaces'
 
-export const Button: FC<ButtonProps> = forwardRef(({ children, ...props }: ButtonProps, ref) => {
+export const Button: FC<ButtonProps> = forwardRef(({ children, ...props }, ref) => {
   const { hover, hoverProps } = useHover()
   const { pressed, pressedProps } = usePressed()
 

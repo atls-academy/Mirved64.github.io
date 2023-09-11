@@ -18,11 +18,7 @@ import { AccordionProps }  from './accordion.interfaces'
 import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
-export const Accordion: FC<AccordionProps> = ({
-  answer,
-  question,
-  isDivider = true,
-}: AccordionProps) => {
+export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
   const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
   const [selected, setSelected] = useState<boolean>(false)
@@ -35,7 +31,7 @@ export const Accordion: FC<AccordionProps> = ({
         <Condition match={!isMobile}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
-              {selected === true ? (
+              {selected ? (
                 <MinusIcon width={20} height={20} hover={hover} />
               ) : (
                 <CrossIcon width={20} height={20} hover={hover} />
@@ -71,7 +67,7 @@ export const Accordion: FC<AccordionProps> = ({
             <Layout flexBasis={24} flexShrink='0' />
 
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
-              {selected === true ? (
+              {selected ? (
                 <MinusIcon width={14} height={14} hover={hover} />
               ) : (
                 <CrossIcon width={14} height={14} hover={hover} />
@@ -81,7 +77,7 @@ export const Accordion: FC<AccordionProps> = ({
         </Condition>
 
         <AnimatePresence>
-          {selected === true && (
+          {selected && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 90 }}

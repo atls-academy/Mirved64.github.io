@@ -15,7 +15,7 @@ import { useWindowWidth } from '@ui/utils'
 import { NavLinks }       from './data'
 import { NavbarProps }    from './navbar.interfaces'
 
-export const Navbar: FC<NavbarProps> = ({ sectionRefs }: NavbarProps) => {
+export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
   const { isMobile } = useWindowWidth()
 
   return (

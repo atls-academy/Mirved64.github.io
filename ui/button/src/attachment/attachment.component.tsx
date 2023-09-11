@@ -11,7 +11,7 @@ export const IconAttachment: FC<AttachmentProps> = ({
   heightIcon,
   backgroundIcon,
   radiiIcon,
-}: AttachmentProps) => (
+}) => (
   <Box
     width={widthIcon}
     height={heightIcon}
