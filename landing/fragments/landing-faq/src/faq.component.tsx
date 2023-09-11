@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import { Accordion }        from '@ui/accordion'
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
@@ -12,15 +13,19 @@ import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
-import { FaqList }          from './faq-list'
-import { Item }             from './item'
+import { Question }         from './data'
 
 export const Faq = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
+
+  const questions = Array.from({ length: 6 }, () => Question).map((el, index) => ({
+    ...el,
+    id: index,
+  }))
 
   return (
     <Row>
-      <Layout flexBasis={[16, 230]} flexShrink='0' />
+      <Layout flexBasis={[20, 230]} flexShrink='0' />
 
       <Column flexGrow='1'>
         <Layout flexBasis={[80, 160]} />
@@ -30,25 +35,26 @@ export const Faq = () => {
             <Text
               color='text.primary'
               fontSize={['ordinary', 'stupendous']}
-              lineHeight={['regular', 'massive']}
+              lineHeight={['huge', 'normal']}
             >
               <FormattedMessage id='faq.title' />
             </Text>
           </Box>
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Layout flexBasis={[0, 20]} flexGrow='1' />
 
             <Box width={247} flexShrink='0'>
               <Button
                 variant='primaryBackgroundWhiteText'
-                size='big'
+                size='hugeSizeRegularRadii'
                 icon={<MailIcon width={16} height={16} />}
                 widthIcon={48}
                 heightIcon={48}
                 backgroundIcon='background.white'
+                radiiIcon='normal'
               >
-                <Text color='white' fontSize='small' lineHeight='compact'>
+                <Text color='white' fontSize='small' lineHeight='normal'>
                   <FormattedMessage id='faq.button' />
                 </Text>
               </Button>
@@ -58,12 +64,24 @@ export const Faq = () => {
 
         <Layout flexBasis={[60, 80]} />
 
-        <Condition match={isDesktop}>
-          <Divider backgroundColor='divider.grayGhost' weight={1} />
+        <Condition match={!isMobile}>
+          <Divider backgroundColor='background.grayGhost' weight={1} />
+
+          <Layout flexBasis={40} />
         </Condition>
 
-        {FaqList.map((item) => (
-          <Item question={item.question} key={item.id} />
+        {questions.map((item, index, array) => (
+          <Column key={item.id}>
+            <Condition match={index !== 0}>
+              <Layout flexBasis={[16, 40]} />
+            </Condition>
+
+            <Accordion
+              question={item.question}
+              answer={item.answer}
+              isDivider={(index !== array.length - 1 && isMobile) || !isMobile}
+            />
+          </Column>
         ))}
 
         <Condition match={isMobile}>
@@ -72,13 +90,14 @@ export const Faq = () => {
           <Box>
             <Button
               variant='primaryBackgroundWhiteText'
-              size='big'
-              icon={<MailIcon width={16} height={16} />}
-              widthIcon={48}
-              heightIcon={48}
+              size='bigSizeNormalRadiiSmallPadding'
+              icon={<MailIcon width={12} height={10} />}
+              widthIcon={32}
+              heightIcon={32}
               backgroundIcon='background.white'
+              radiiIcon='tiny'
             >
-              <Text color='white' fontSize='small' lineHeight='compact'>
+              <Text color='white' fontSize='small' lineHeight='small'>
                 <FormattedMessage id='faq.button' />
               </Text>
             </Button>
@@ -88,7 +107,7 @@ export const Faq = () => {
         <Layout flexBasis={[80, 160]} />
       </Column>
 
-      <Layout flexBasis={[16, 80]} flexShrink='0' />
+      <Layout flexBasis={[20, 80]} flexShrink='0' />
     </Row>
   )
 }

@@ -1,6 +1,7 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useIntl }          from 'react-intl'
+import { useState }         from 'react'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
@@ -8,66 +9,61 @@ import { ArrowDownIcon }    from '@ui/icons'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
 
-import { Item }             from './item'
+import { NavLinks }         from './data'
+import { DrawerDesktop }    from './drawer'
+import { NavigationProps }  from './navigation.interfaces'
+import { NavLinkItem }      from './navlink-item'
 
-export const Navigation = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
-  const intl = useIntl()
+export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
+  const [active, setActive] = useState<boolean>(false)
+
+  const handleClick = () => setActive(!active)
 
   return (
-    <Row height={[80, 128]} alignItems='center' justifyContent='center'>
-      <Condition match={isMobile}>
-        <Logo fill='white' width={40} height={40} />
-      </Condition>
+    <>
+      <DrawerDesktop active={active} onClose={handleClick} sectionRefs={sectionRefs} />
 
-      <Condition match={isDesktop}>
+      <Row height={120} alignItems='center' justifyContent='center'>
         <Layout flexBasis={40} />
 
         <Logo fill='white' width={56} height={56} />
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        <Row height='29px' flexBasis={860}>
-          <Item name={intl.formatMessage({ id: 'navigation.item.academy' })} path='/' />
+        {NavLinks.map((navLink, index) => (
+          <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+            <NavLinkItem name={navLink.name} path={navLink.path} />
 
-          <Layout flexBasis={20} />
-
-          <Item name={intl.formatMessage({ id: 'navigation.item.courses' })} path='/' />
-
-          <Layout flexBasis={20} />
-
-          <Item name={intl.formatMessage({ id: 'navigation.item.teaching' })} path='/' />
-
-          <Layout flexBasis={20} />
-
-          <Item name={intl.formatMessage({ id: 'navigation.item.faq' })} path='/' />
-        </Row>
+            <Condition match={index < NavLinks.length - 1}>
+              <Layout flexBasis={20} />
+            </Condition>
+          </Box>
+        ))}
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        <Box width={163}>
+        <Box width={136}>
           <Button
+            onClick={handleClick}
             variant='ghostBackgroundWhiteText'
-            size='normal'
-            icon={<ArrowDownIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={48}
+            size='bigSizeNormalRadiiBigPadding'
+            icon={<ArrowDownIcon width={12} height={6} />}
+            widthIcon={40}
+            heightIcon={40}
             backgroundIcon='background.white'
+            radiiIcon='little'
           >
-            <NextLink>
-              <Text color='white' fontSize='compact' lineHeight='little'>
-                <FormattedMessage id='navigation.button' />
-              </Text>
-            </NextLink>
+            <Text color='white' fontSize='compact' lineHeight='small'>
+              <FormattedMessage id='navigation.button' />
+            </Text>
           </Button>
         </Box>
-        <Layout flexBasis={[0, 40]} />
-      </Condition>
-    </Row>
+
+        <Layout flexBasis={40} />
+      </Row>
+    </>
   )
 }

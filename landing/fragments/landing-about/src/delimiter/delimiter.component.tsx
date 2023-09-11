@@ -1,17 +1,25 @@
-import React     from 'react'
+import React          from 'react'
 
-import { Image } from '@ui/image'
-import { Box }   from '@ui/layout'
+import { Background } from '@ui/background'
+import { Image }      from '@ui/image'
+import { Box }        from '@ui/layout'
 
 export const Delimiter = () => (
-  <Box
+  <Background
+    backgroundColor='ghostTransparentGradient'
+    borderRadius='little'
     display='inline-flex'
-    backgroundColor='background.whiteTransparent'
-    width={76}
-    height={52}
-    alignItems='center'
-    justifyContent='center'
   >
-    <Image src='./image/Default.png' width={40} height={40} />
-  </Box>
+    <Box
+      width={76}
+      height={52}
+      alignItems='center'
+      justifyContent='center'
+      borderRadius='little'
+      border='thinnestGhost'
+      backgroundColor='background.whiteTransparent'
+    >
+      <Image src='./image/Default.png' width={40} height={40} />
+    </Box>
+  </Background>
 )

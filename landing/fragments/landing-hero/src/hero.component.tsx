@@ -1,25 +1,27 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                 from 'react'
+import { FormattedMessage }  from 'react-intl'
 
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { GitHubIcon }       from '@ui/icons'
-import { TelegramIcon }     from '@ui/icons'
-import { MailWhiteIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Background }        from '@ui/background'
+import { Condition }         from '@ui/condition'
+import { Divider }           from '@ui/divider'
+import { GitHubIcon }        from '@ui/icons'
+import { TelegramIcon }      from '@ui/icons'
+import { MailWhiteIcon }     from '@ui/icons'
+import { Box }               from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Text }              from '@ui/text'
+import { useWindowWidth }    from '@ui/utils'
 
-import { SocialLink }       from './social-link'
+import { SocialLinkDesktop } from './social-link'
+import { SocialLinkMobile }  from './social-link'
 
 export const Hero = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
-    <Column>
+    <Column flexGrow='1'>
       <Layout flexBasis={[80, 412]} />
 
       <Row flexGrow='1'>
@@ -31,7 +33,7 @@ export const Hero = () => {
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
-                lineHeight={['ordinary', 'stupendous']}
+                lineHeight={['huge', 'standart']}
               >
                 <FormattedMessage id='hero.title.text' />
               </Text>
@@ -39,32 +41,43 @@ export const Hero = () => {
 
             <Layout flexBasis={[8, 28]} flexShrink='0' />
 
-            <Box
-              width={[49, 134]}
-              height={[39, 116]}
-              justifyContent='center'
-              alignItems='center'
-              backgroundColor='background.whiteTransparent'
-            >
-              <Text
-                color='text.white'
-                fontSize={['normal', 'stupendous']}
-                lineHeight={['ordinary', 'stupendous']}
+            <Column>
+              <Background
+                backgroundColor='ghostTransparentGradient'
+                borderRadius={['little', 'regular']}
               >
-                <FormattedMessage id='hero.title.it' />
-              </Text>
-            </Box>
+                <Box
+                  width={[49, 134]}
+                  height={[39, 96]}
+                  justifyContent='center'
+                  alignItems='center'
+                  borderRadius={['little', 'regular']}
+                  backgroundColor='background.whiteTransparent'
+                  border='thinnestGhost'
+                >
+                  <Text
+                    color='text.white'
+                    fontSize={['normal', 'massive']}
+                    lineHeight={['huge', 'standart']}
+                  >
+                    <FormattedMessage id='hero.title.it' />
+                  </Text>
+                </Box>
+              </Background>
+
+              <Layout flexBasis={[0, 8]} />
+            </Column>
           </Row>
 
           <Layout flexBasis={[24, 48]} />
 
-          <Divider backgroundColor='divider.white' weight={1} />
+          <Divider backgroundColor='background.white' weight={1} />
 
           <Layout flexBasis={[24, 48]} />
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Box flexWrap='wrap' maxWidth={640}>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-desktop' />
               </Text>
             </Box>
@@ -72,13 +85,13 @@ export const Hero = () => {
 
           <Condition match={isMobile}>
             <Box>
-              <Text color='text.white' fontSize='tiny' lineHeight='compact'>
+              <Text color='text.white' fontSize='tiny' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-we-dont-teach-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='tiny' lineHeight='compact'>
+              <Text color='text.white' fontSize='tiny' lineHeight='huge'>
                 <FormattedMessage id='hero.slogan-we-teach-mobile' />
               </Text>
             </Box>
@@ -88,18 +101,21 @@ export const Hero = () => {
 
           <Condition match={isMobile}>
             <Row>
-              <SocialLink
+              <SocialLinkMobile
                 icon={<TelegramIcon width={15} height={12} />}
                 href='https://web.telegram.org/'
               />
 
               <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-              <SocialLink icon={<GitHubIcon width={15} height={15} />} href='https://github.com/' />
+              <SocialLinkMobile
+                icon={<GitHubIcon width={15} height={15} />}
+                href='https://github.com/'
+              />
 
               <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-              <SocialLink
+              <SocialLinkMobile
                 icon={<MailWhiteIcon width={18} height={14} />}
                 href='https://www.google.com/intl/ru/gmail/about/'
               />
@@ -109,17 +125,20 @@ export const Hero = () => {
 
         <Layout flexBasis={[0, 134]} flexGrow={[0, 1]} />
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Box alignItems='end'>
-            <Column height='200px' justifyContent='space-around'>
-              <SocialLink
+            <Column height='200px' justifyContent='space-between'>
+              <SocialLinkDesktop
                 icon={<TelegramIcon width={15} height={12} />}
                 href='https://web.telegram.org/'
               />
 
-              <SocialLink icon={<GitHubIcon width={15} height={15} />} href='https://github.com/' />
+              <SocialLinkDesktop
+                icon={<GitHubIcon width={15} height={15} />}
+                href='https://github.com/'
+              />
 
-              <SocialLink
+              <SocialLinkDesktop
                 icon={<MailWhiteIcon width={18} height={14} />}
                 href='https://www.google.com/intl/ru/gmail/about/'
               />

@@ -1,0 +1,28 @@
+{
+  "name": "@ui/slider",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/background": "workspace: 0.0.1",
+    "@ui/button": "workspace: 0.0.1",
+    "@ui/condition": "workspace: 0.0.1",
+    "@ui/icons": "workspace: 0.0.1",
+    "@ui/image": "workspace: 0.0.1",
+    "@ui/layout": "workspace: 0.0.1",
+    "@ui/text": "workspace: 0.0.1",
+    "@ui/utils": "workspace: 0.0.1"
+  },
+  "devDependencies": {
+    "framer-motion": "10.16.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-intl": "6.0.8"
+  },
+  "peerDependencies": {
+    "framer-motion": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-intl": "*"
+  }
+}

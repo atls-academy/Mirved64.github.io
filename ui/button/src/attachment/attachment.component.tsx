@@ -10,11 +10,13 @@ export const IconAttachment: FC<AttachmentProps> = ({
   widthIcon,
   heightIcon,
   backgroundIcon,
-}) => (
+  radiiIcon,
+}: AttachmentProps) => (
   <Box
     width={widthIcon}
     height={heightIcon}
     backgroundColor={backgroundIcon}
+    borderRadius={radiiIcon}
     justifyContent='center'
     alignItems='center'
     flexShrink='0'

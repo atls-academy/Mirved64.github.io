@@ -13,7 +13,7 @@ import { Repeater }     from '@ui/utils'
 
 import { RunLineProps } from './run-line.interfaces'
 
-export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) => {
+export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }: RunLineProps) => {
   const infinityLine = useMemo(
     () => keyframes`0% { transform: translateX(0) } 100% { transform: translate(-50%) }`,
     []
@@ -34,7 +34,7 @@ export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) =>
               fontSize={['huge', 'massive']}
               fontWeight='lighter'
               fontFamily={font}
-              lineHeight={['mean', 'giant']}
+              lineHeight='normal'
               whiteSpace='nowrap'
               textTransform='uppercase'
             >
@@ -46,7 +46,7 @@ export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) =>
             <Layout flexBasis={[12, 24]} flexShrink='0' />
 
             <Box width={[27, 48]} alignItems='center' flexShrink='0'>
-              <Divider backgroundColor='divider.white' weight={[2, 4]} />
+              <Divider backgroundColor='background.white' weight={[2, 4]} />
             </Box>
 
             <Layout flexBasis={[12, 24]} flexShrink='0' />

@@ -13,17 +13,17 @@ import { useWindowWidth }   from '@ui/utils'
 import { Delimiter }        from './delimiter'
 
 export const About = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
-    <Column>
+    <Column flexGrow='1'>
       <Layout flexBasis={[64, 160]} />
 
       <Row>
         <Layout flexBasis={[20, 230]} />
 
         <Column flexBasis={[335, 1460]} flexGrow='1'>
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Box display='inline'>
               <Text
                 display='inline'
@@ -59,19 +59,19 @@ export const About = () => {
 
           <Condition match={isMobile}>
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.intro-digital-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.intro-not-decrease-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.intro-for-your-decisions-mobile' />
               </Text>
             </Box>
@@ -79,25 +79,25 @@ export const About = () => {
             <Layout flexBasis={28} />
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-atlantis-teach-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-make-engineers-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-architects-mobile' />
               </Text>
             </Box>
 
             <Box>
-              <Text color='text.white' fontSize='small' lineHeight='normal'>
+              <Text color='text.white' fontSize='small' lineHeight='huge'>
                 <FormattedMessage id='about.central-idea-not-programmers-mobile' />
               </Text>
             </Box>
@@ -105,7 +105,7 @@ export const About = () => {
 
           <Layout flexBasis={[0, 40]} />
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Box display='inline'>
               <Text
                 display='inline'
@@ -127,7 +127,7 @@ export const About = () => {
         <Layout flexBasis={[20, 230]} />
       </Row>
 
-      <Layout flexBasis={[64, 160]} />
+      <Layout flexBasis={[128, 240]} />
     </Column>
   )
 }

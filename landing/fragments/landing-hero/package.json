@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/background": "workspace: 0.0.1",
     "@ui/button": "workspace: 0.0.1",
     "@ui/condition": "workspace: 0.0.1",
     "@ui/divider": "workspace: 0.0.1",
@@ -14,8 +15,8 @@
     "@ui/utils": "workspace: 0.0.1"
   },
   "devDependencies": {
-    "@types/react": "18.2.9",
-    "@types/react-dom": "18.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-intl": "6.0.8"
   },
   "peerDependencies": {

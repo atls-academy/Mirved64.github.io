@@ -16,7 +16,9 @@
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
     "react-dom": "*",
     "styled-system": "*"

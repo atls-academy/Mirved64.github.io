@@ -14,11 +14,16 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const Sidebar = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column flexBasis={[212, 410]}>
-      <Background display='flex' backgroundColor='blackTransparent'>
+      <Background
+        display='flex'
+        backgroundColor='blackTransparentGradient'
+        borderRadius={['normal', 'regular']}
+        border='thinnestGhostGray'
+      >
         <Row order={[1, 0]}>
           <Layout flexBasis={[16, 32]} />
 
@@ -26,18 +31,14 @@ export const Sidebar = () => {
             <Layout flexBasis={[16, 32]} />
 
             <Box>
-              <Text
-                color='text.primary'
-                fontSize={['tiny', 'little']}
-                lineHeight={['compact', 'medium']}
-              >
+              <Text color='text.primary' fontSize={['tiny', 'little']} lineHeight={['huge', 'big']}>
                 <FormattedMessage id='courses.sidebar.subtitle' />
               </Text>
             </Box>
 
             <Layout flexBasis={[16, 74]} />
 
-            <Condition match={isDesktop}>
+            <Condition match={!isMobile}>
               <Box justifyContent='center'>
                 <Image src='./image/Default.png' width={240} height={240} />
               </Box>
@@ -47,11 +48,7 @@ export const Sidebar = () => {
 
             <Box flexDirection={['row', 'column']} alignItems={['center', 'start']}>
               <Box>
-                <Text
-                  color='text.accent'
-                  fontSize={['giant', 'enormous']}
-                  lineHeight={['large', 'big']}
-                >
+                <Text color='text.accent' fontSize={['giant', 'enormous']} lineHeight='small'>
                   <FormattedMessage id='courses.sidebar.number' />
                 </Text>
               </Box>
@@ -62,7 +59,7 @@ export const Sidebar = () => {
                 <Text
                   color='text.primary'
                   fontSize={['atom', 'tiny']}
-                  lineHeight={['minor', 'small']}
+                  lineHeight={['large', 'big']}
                 >
                   <FormattedMessage id='courses.sidebar.sign' />
                 </Text>
@@ -86,16 +83,17 @@ export const Sidebar = () => {
 
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
-      <Condition match={isDesktop}>
+      <Condition match={!isMobile}>
         <Button
           variant='primaryBackgroundWhiteText'
-          size='big'
+          size='hugeSizeRegularRadii'
           icon={<MouseIcon width={16} height={16} />}
           widthIcon={48}
           heightIcon={48}
           backgroundIcon='background.white'
+          radiiIcon='normal'
         >
-          <Text color='white' fontSize='small' lineHeight='small'>
+          <Text color='white' fontSize='small' lineHeight='normal'>
             <FormattedMessage id='courses.sidebar.button-desktop' />
           </Text>
         </Button>

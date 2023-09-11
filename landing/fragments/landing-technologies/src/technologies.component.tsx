@@ -9,28 +9,32 @@ import { RunLine }          from './run-line'
 import { technologiesList } from './technologies-list'
 import { worckspaceList }   from './technologies-list'
 
-export const Technologies = () => (
-  <Column>
-    <Layout flexBasis={[32, 64]} />
+export const Technologies = () => {
+  const Indent = () => <Layout flexBasis={[36, 64]} />
 
-    <Divider backgroundColor='divider.ghost' weight={1} />
+  return (
+    <Column fill>
+      <Layout flexBasis={[32, 64]} />
 
-    <Layout flexBasis={[36, 64]} />
+      <Divider backgroundColor='background.ghost' weight={1} />
 
-    <Row overflow='hidden'>
-      <RunLine technologies={technologiesList} font='light' />
-    </Row>
+      <Indent />
 
-    <Layout flexBasis={[36, 64]} />
+      <Row overflow='hidden'>
+        <RunLine technologies={technologiesList} font='light' />
+      </Row>
 
-    <Row overflow='hidden'>
-      <RunLine technologies={worckspaceList} font='secondary' />
-    </Row>
+      <Indent />
 
-    <Layout flexBasis={[36, 64]} />
+      <Row overflow='hidden'>
+        <RunLine technologies={worckspaceList} font='secondary' />
+      </Row>
 
-    <Divider backgroundColor='divider.ghost' weight={1} />
+      <Indent />
 
-    <Layout flexBasis={[32, 64]} />
-  </Column>
-)
+      <Divider backgroundColor='background.ghost' weight={1} />
+
+      <Layout flexBasis={[32, 64]} />
+    </Column>
+  )
+}

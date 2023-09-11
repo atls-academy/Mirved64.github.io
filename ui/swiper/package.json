@@ -4,16 +4,17 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/swiper": "0.0.3",
-    "swiper": "8.4.7"
+    "@atls-ui-parts/swiper": "0.0.3"
   },
   "devDependencies": {
     "@emotion/css": "11.11.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "swiper": "8.4.7"
   },
   "peerDependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "swiper": "*"
   }
 }
