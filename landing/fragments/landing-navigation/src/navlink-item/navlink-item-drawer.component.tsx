@@ -1,18 +1,18 @@
-import React                  from 'react'
-import { FC }                 from 'react'
-import { Link }               from 'react-scroll'
+import React                      from 'react'
+import { FC }                     from 'react'
+import { Link }                   from 'react-scroll'
 
-import { Condition }          from '@ui/condition'
-import { Divider }            from '@ui/divider'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Text }               from '@ui/text'
-import { useHover }           from '@ui/utils'
+import { Condition }              from '@ui/condition'
+import { Divider }                from '@ui/divider'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Text }                   from '@ui/text'
+import { useHover }               from '@ui/utils'
 
-import { NavLinkDrawerProps } from './navlink.interfaces'
+import { NavLinkItemDrawerProps } from './navlink-item.interfaces'
 
-export const NavLinkDrawer: FC<NavLinkDrawerProps> = ({
+export const NavLinkItemDrawer: FC<NavLinkItemDrawerProps> = ({
   name,
   path,
   currentElementIndexInViewport,

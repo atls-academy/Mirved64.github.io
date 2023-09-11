@@ -15,7 +15,7 @@ import { Text }             from '@ui/text'
 import { NavLinks }         from './data'
 import { DrawerDesktop }    from './drawer'
 import { NavigationProps }  from './navigation.interfaces'
-import { NavLink }          from './navlink'
+import { NavLinkItem }      from './navlink-item'
 
 export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
@@ -35,7 +35,7 @@ export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
 
         {NavLinks.map((navLink, index) => (
           <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-            <NavLink name={navLink.name} path={navLink.path} />
+            <NavLinkItem name={navLink.name} path={navLink.path} />
 
             <Condition match={index < NavLinks.length - 1}>
               <Layout flexBasis={20} />

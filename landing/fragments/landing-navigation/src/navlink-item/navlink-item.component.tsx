@@ -1,17 +1,17 @@
-import React            from 'react'
-import { FC }           from 'react'
-import { Link }         from 'react-scroll'
+import React                from 'react'
+import { FC }               from 'react'
+import { Link }             from 'react-scroll'
 
-import { Divider }      from '@ui/divider'
-import { Box }          from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Text }         from '@ui/text'
-import { useHover }     from '@ui/utils'
+import { Divider }          from '@ui/divider'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { useHover }         from '@ui/utils'
 
-import { NavLinkProps } from './navlink.interfaces'
+import { NavLinkItemProps } from './navlink-item.interfaces'
 
-export const NavLink: FC<NavLinkProps> = ({ name, path }) => {
+export const NavLinkItem: FC<NavLinkItemProps> = ({ name, path }) => {
   const { hover, hoverProps } = useHover()
 
   return (
