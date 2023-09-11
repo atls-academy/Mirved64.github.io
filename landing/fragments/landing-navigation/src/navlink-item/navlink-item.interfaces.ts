@@ -1,10 +1,10 @@
-export interface ItemProps {
+export interface NavLinkItemProps {
   name: string
   path: string
   active?: boolean
 }
 
-export interface ItemDrawerProps {
+export interface NavLinkItemDrawerProps {
   name: string
   path: string
   currentElementIndexInViewport: number

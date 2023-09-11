@@ -1,4 +1,5 @@
 import React                from 'react'
+import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 
@@ -14,9 +15,10 @@ import { Text }             from '@ui/text'
 
 import { NavLinks }         from './data'
 import { DrawerDesktop }    from './drawer'
-import { ItemNavLink }      from './item'
+import { NavigationProps }  from './navigation.interfaces'
+import { NavLinkItem }      from './navlink-item'
 
-export const Navigation = () => {
+export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
@@ -46,7 +48,7 @@ export const Navigation = () => {
 
         {NavLinks.map((navLink, index) => (
           <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-            <ItemNavLink name={navLink.name} path={navLink.path} />
+            <NavLinkItem name={navLink.name} path={navLink.path} />
 
             <Condition match={index < NavLinks.length - 1}>
               <Layout flexBasis={20} />
