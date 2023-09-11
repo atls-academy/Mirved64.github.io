@@ -10,9 +10,9 @@ import { Layout }     from '@ui/layout'
 import { Box }        from '@ui/layout'
 import { Text }       from '@ui/text'
 
-import { ItemProps }  from './item.interfaces'
+import { StepProps }  from './step.interfaces'
 
-export const Item: FC<ItemProps> = ({ divider = true, ...props }: ItemProps) => (
+export const Step: FC<StepProps> = ({ divider = true, ...props }) => (
   <Column>
     <Row alignItems={['start', 'center']}>
       <Background backgroundColor='ghostTransparentGradient' borderRadius={['little', 'ordinary']}>
