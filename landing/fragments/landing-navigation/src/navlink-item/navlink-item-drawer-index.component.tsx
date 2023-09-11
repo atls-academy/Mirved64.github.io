@@ -21,14 +21,14 @@ export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box flexBasis={200} cursor='pointer' {...hoverProps}>
+    <Box flexBasis={{ standard: 200, ultra: 300 }} cursor='pointer' {...hoverProps}>
       <Link to={path} width='100%' spy smooth duration={1000}>
         <Column alignItems='center'>
           <Condition match={currentElementIndexInViewport !== index}>
             <Box>
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
-                fontSize='compact'
+                fontSize={{ standard: 'compact', ultra: 'middle' }}
                 lineHeight='small'
                 textTransform='uppercase'
               >
@@ -36,12 +36,12 @@ export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
               </Text>
             </Box>
 
-            <Layout flexBasis={10} />
+            <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
             <Divider
               backgroundColor={hover ? 'background.black' : 'background.blackTransparent'}
               weight={1}
-              width={200}
+              width={{ standard: 200, ultra: 300 }}
             />
           </Condition>
 
@@ -49,7 +49,7 @@ export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
             <Box>
               <Text
                 color='text.black'
-                fontSize='compact'
+                fontSize={{ standard: 'compact', ultra: 'middle' }}
                 lineHeight='small'
                 textTransform='uppercase'
               >
@@ -57,9 +57,13 @@ export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
               </Text>
             </Box>
 
-            <Layout flexBasis={10} />
+            <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
-            <Divider backgroundColor='background.black' weight={1} width={200} />
+            <Divider
+              backgroundColor='background.black'
+              weight={1}
+              width={{ standard: 200, ultra: 300 }}
+            />
           </Condition>
         </Column>
       </Link>

@@ -162,7 +162,6 @@ const IndexPage = () => {
           >
             <Steps />
           </Background>
-
         </Condition>
 
         <Technologies />

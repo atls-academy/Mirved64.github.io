@@ -14,19 +14,18 @@ import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
-import { useWindowWidth }       from '@ui/utils'
+import { useWindowWidth }   from '@ui/utils'
 
 import { CardDataDesktop }  from '../data'
 import { DrawerProps }      from './drawer.interfaces'
 
 export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) => {
-  const { isMobile, isTV } = useWindowWidth()
+  const { isTV } = useWindowWidth()
 
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
     ...el,
     id: index,
   }))
-
 
   const drawerCards = cardsList.map((card, index, array) => {
     const Indent = () => (
@@ -64,7 +63,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
     <DrawerContainer active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
         <Column>
-            <Layout flexBasis={32} />
+          <Layout flexBasis={32} />
 
           <Row alignItems='center' height={56}>
             <Layout flexBasis={40} />

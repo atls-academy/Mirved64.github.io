@@ -1,22 +1,22 @@
-import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useState }           from 'react'
+import React                 from 'react'
+import { FormattedMessage }  from 'react-intl'
+import { useState }          from 'react'
 
-import { Button }             from '@ui/button'
-import { Condition }          from '@ui/condition'
-import { ArrowDownIcon }      from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Logo }               from '@ui/logo'
-import { Text }               from '@ui/text'
-import { useWindowWidth }     from '@ui/utils'
+import { Button }            from '@ui/button'
+import { Condition }         from '@ui/condition'
+import { ArrowDownIcon }     from '@ui/icons'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Logo }              from '@ui/logo'
+import { Text }              from '@ui/text'
+import { useWindowWidth }    from '@ui/utils'
 
-import { NavLinks }           from './data'
-import { DrawerDesktop }      from './drawer'
-import { NavLinkItem }        from './navlink-item'
-import { NavLinkItemDrawer }  from './navlink-item'
+import { NavLinks }          from './data'
+import { DrawerDesktop }     from './drawer'
+import { NavLinkItem }       from './navlink-item'
+import { NavLinkItemDrawer } from './navlink-item'
 
 export const NavigationDesktop = () => {
   const { isMobile, isTV } = useWindowWidth()
@@ -29,22 +29,25 @@ export const NavigationDesktop = () => {
       <DrawerDesktop active={active} onClose={handleClick}>
         <Box>
           {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+            <Box
+              key={navLink.id}
+              width={
+                index < NavLinks.length - 1
+                  ? { standard: 220, ultra: 330 }
+                  : { standard: 200, ultra: 300 }
+              }
+            >
               <NavLinkItemDrawer path={navLink.path} name={navLink.name} active={active} />
 
               <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
+                <Layout flexBasis={{ standard: 20, ultra: 30 }} />
               </Condition>
             </Box>
           ))}
         </Box>
       </DrawerDesktop>
 
-      <Row
-        height={{standard: 120, ultra: 148 }}
-        alignItems='center'
-        justifyContent='center'
-      >
+      <Row height={{ standard: 120, ultra: 148 }} alignItems='center' justifyContent='center'>
         <Condition match={!isMobile}>
           <Layout flexBasis={40} />
 
@@ -59,15 +62,16 @@ export const NavigationDesktop = () => {
           <Layout flexBasis={40} flexGrow='1' />
 
           <Condition match={!isTV}>
-          {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-              <NavLinkItem name={navLink.name} path={navLink.path} />
+            {NavLinks.map((navLink, index) => (
+              <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                <NavLinkItem name={navLink.name} path={navLink.path} />
 
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
-              </Condition>
-            </Box>
-          ))}</Condition>
+                <Condition match={index < NavLinks.length - 1}>
+                  <Layout flexBasis={20} />
+                </Condition>
+              </Box>
+            ))}
+          </Condition>
 
           <Condition match={isTV}>
             {NavLinks.map((navLink, index) => (

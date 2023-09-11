@@ -11,10 +11,10 @@ import { Swiper }         from '@ui/swiper'
 import { SwiperSlide }    from '@ui/swiper'
 import { useWindowWidth } from '@ui/utils'
 
-import { CardsListWide }  from '../cards-list'
-import { CardCellProps }  from './cards.interfaces'
+import { CardsListWide }  from '../data'
 import { CardCategory }   from '../data'
 import { CardsList }      from '../data'
+import { CardCellProps }  from './cards.interfaces'
 
 export const CardsLearning = () => {
   const { isMobile } = useWindowWidth()

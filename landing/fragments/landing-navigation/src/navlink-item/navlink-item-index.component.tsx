@@ -15,13 +15,13 @@ export const NavLinkItemIndex: FC<NavLinkItemProps> = ({ name, path }) => {
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box width={200} {...hoverProps} cursor='pointer'>
+    <Box width={{ standard: 200, ultra: 300 }} {...hoverProps} cursor='pointer'>
       <Link to={path} width='100%' spy smooth duration={1000}>
         <Column alignItems='center'>
           <Box>
             <Text
               color={hover ? 'text.white' : 'text.gray'}
-              fontSize='compact'
+              fontSize={{ standard: 'compact', ultra: 'middle' }}
               lineHeight='small'
               textTransform='uppercase'
             >
@@ -29,12 +29,12 @@ export const NavLinkItemIndex: FC<NavLinkItemProps> = ({ name, path }) => {
             </Text>
           </Box>
 
-          <Layout flexBasis={10} />
+          <Layout flexBasis={{ standard: 10, ultra: 15 }} />
 
           <Divider
             backgroundColor={hover ? 'background.white' : 'background.graySemiTransparent'}
             weight={1}
-            width={200}
+            width={{ standard: 200, ultra: 300 }}
           />
         </Column>
       </Link>

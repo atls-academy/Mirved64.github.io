@@ -1,4 +1,4 @@
-import { CardCategory } from '../cards-list'
+import { CardCategory } from '../data'
 
 export interface CardCellProps {
   index: number
