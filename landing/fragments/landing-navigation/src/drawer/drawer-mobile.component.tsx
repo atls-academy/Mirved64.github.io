@@ -18,7 +18,7 @@ import { Text }             from '@ui/text'
 import { CardDataMobile }   from '../data'
 import { DrawerProps }      from './drawer.interfaces'
 
-export const DrawerMobile: FC<MobileDrawerProps> = ({ active, onClose }) => (
+export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => (
   <DrawerContainer active={active}>
     <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
       <Column>

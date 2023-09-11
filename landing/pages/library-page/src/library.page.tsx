@@ -1,13 +1,13 @@
-import React                from 'react'
-import { Parallax }         from 'react-scroll-parallax'
+import React                 from 'react'
+import { Parallax }          from 'react-scroll-parallax'
 
-import { CardsLibrary }     from '@landing/fragment-library'
-import { LibraryBanner }    from '@landing/fragment-library'
-import { Navigation }       from '@landing/fragment-navigation'
-import { NavigationMobile } from '@landing/fragment-navigation'
-import { Background }       from '@ui/background'
-import { Condition }        from '@ui/condition'
-import { useWindowWidth }   from '@ui/utils'
+import { CardsLibrary }      from '@landing/fragment-library'
+import { LibraryBanner }     from '@landing/fragment-library'
+import { NavigationDesktop } from '@landing/fragment-navigation'
+import { NavigationMobile }  from '@landing/fragment-navigation'
+import { Background }        from '@ui/background'
+import { Condition }         from '@ui/condition'
+import { useWindowWidth }    from '@ui/utils'
 
 const LibraryPage = () => {
   const { isMobile } = useWindowWidth()
@@ -23,7 +23,7 @@ const LibraryPage = () => {
         >
           <Condition match={!isMobile}>
             <Parallax translateY={[-17, 15]}>
-              <Navigation />
+              <NavigationDesktop />
 
               <LibraryBanner />
             </Parallax>
