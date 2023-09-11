@@ -1,42 +1,61 @@
-import React             from 'react'
+import React                 from 'react'
+import { Parallax }          from 'react-scroll-parallax'
 
-import { CardsLibrary }  from '@landing/fragment-library'
-import { LibraryBanner } from '@landing/fragment-library'
-import { Navigation }    from '@landing/fragment-navigation'
-import { Background }    from '@ui/background'
+import { CardsLibrary }      from '@landing/fragment-library'
+import { LibraryBanner }     from '@landing/fragment-library'
+import { NavigationDesktop } from '@landing/fragment-navigation'
+import { NavigationMobile }  from '@landing/fragment-navigation'
+import { Background }        from '@ui/background'
+import { Condition }         from '@ui/condition'
+import { useWindowWidth }    from '@ui/utils'
 
-const LibraryPage = () => (
-  <>
-    <Background backgroundColor='navyBlueGradient' width='100%'>
-      <Background
-        backgroundColor='banner'
-        backgroundSize={['736px 415px', '100% 1080px']}
-        backgroundPosition={['-260px -20px', '0']}
-        backgroundRepeat='no-repeat'
-      >
-        <Navigation />
+const LibraryPage = () => {
+  const { isMobile } = useWindowWidth()
 
-        <LibraryBanner />
+  return (
+    <>
+      <Background backgroundColor='navyBlueGradient' width='100%'>
+        <Background
+          backgroundColor='banner'
+          backgroundSize={['736px 415px', '100% 1080px']}
+          backgroundPosition={['-260px -20px', '0']}
+          backgroundRepeat='no-repeat'
+        >
+          <Condition match={!isMobile}>
+            <Parallax translateY={[-17, 15]}>
+              <NavigationDesktop />
+
+              <LibraryBanner />
+            </Parallax>
+          </Condition>
+
+          <Condition match={isMobile}>
+            <NavigationMobile />
+
+            <LibraryBanner />
+          </Condition>
+        </Background>
       </Background>
-    </Background>
 
-    <Background
-      backgroundColor='white'
-      borderRadius={['hugeTop', 'giantTop']}
-      position='absolute'
-      top={[460, 889]}
-      width='100%'
-    >
       <Background
-        backgroundColor='wavesGradient'
-        backgroundSize={['2200px 400px', '1920px 800px']}
-        backgroundRepeat='no-repeat'
-        backgroundPosition={['-982px 409px', '0 1104px']}
+        backgroundColor='white'
+        borderRadius={['hugeTop', 'giantTop']}
+        position='absolute'
+        top={[500, 889]}
+        width='100%'
+        zIndex={1}
       >
-        <CardsLibrary />
+        <Background
+          backgroundColor='wavesGradient'
+          backgroundSize={['2200px 400px', '1920px 800px']}
+          backgroundRepeat='no-repeat'
+          backgroundPosition={['-982px 409px', '0 1104px']}
+        >
+          <CardsLibrary />
+        </Background>
       </Background>
-    </Background>
-  </>
-)
+    </>
+  )
+}
 
 export default LibraryPage

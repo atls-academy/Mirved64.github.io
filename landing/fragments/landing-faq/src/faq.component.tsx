@@ -23,7 +23,10 @@ export const Faq = () => {
   const [open, setOpen] = useState<boolean>(false)
   const handleModalOpen = () => setOpen(false)
 
-  const Items = Array.from({ length: 6 }, () => Question).map((el, index) => ({ ...el, id: index }))
+  const questions = Array.from({ length: 6 }, () => Question).map((el, index) => ({
+    ...el,
+    id: index,
+  }))
 
   return (
     <>
@@ -44,7 +47,7 @@ export const Faq = () => {
               </Text>
             </Box>
 
-            <Condition match={!isMobile}>
+            <Condition match={isDesktop}>
               <Layout flexBasis={20} flexGrow='1' />
 
               <Box width={247} flexShrink='0'>
@@ -58,7 +61,7 @@ export const Faq = () => {
                   radiiIcon='normal'
                   onClick={() => setOpen(true)}
                 >
-                  <Text color='white' fontSize='small' lineHeight='normal'>
+                  <Text color='text.white' fontSize='small' lineHeight='normal'>
                     <FormattedMessage id='faq.button' />
                   </Text>
                 </Button>
@@ -75,7 +78,7 @@ export const Faq = () => {
           </Condition>
 
           <Condition match={!isWideDesktop}>
-            {Items.map((item, index, array) => (
+            {questions.map((item, index, array) => (
               <Column key={item.id} width={{ wide: 1005 }}>
                 <Condition match={index !== 0}>
                   <Layout flexBasis={[16, 40]} />
@@ -92,7 +95,7 @@ export const Faq = () => {
 
           <Condition match={isWideDesktop}>
             <Row flexWrap='wrap' justifyContent='space-between'>
-              {Items.map((item, index, array) => (
+              {questions.map((item, index) => (
                 <Column key={item.id} width={1005}>
                   <Condition match={index === 0 || index === 1}>
                     <Divider backgroundColor='background.grayGhost' weight={1} />

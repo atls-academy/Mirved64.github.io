@@ -8,7 +8,7 @@ import { Column }         from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { useWindowWidth } from '@ui/utils'
 
-import { Item }           from './item'
+import { Step }           from './step'
 
 export const Steps = () => {
   const intl = useIntl()
@@ -26,31 +26,31 @@ export const Steps = () => {
         />
 
         <Column flexGrow='1' flexBasis={{ _: 335, standard: 1760, wide: 2100 }}>
-          <Item
+          <Step
             sequenceNumber='1'
             name={intl.formatMessage({ id: 'process.item.team-integration' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
           />
 
-          <Item
+          <Step
             sequenceNumber='2'
             name={intl.formatMessage({ id: 'process.item.create-environment' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
           />
 
-          <Item
+          <Step
             sequenceNumber='3'
             name={intl.formatMessage({ id: 'process.item.studies-of-technologies' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
           />
 
-          <Item
+          <Step
             sequenceNumber='4'
             name={intl.formatMessage({ id: 'process.item.practical-work' })}
             description={intl.formatMessage({ id: 'process.item.text' })}
           />
 
-          <Item
+          <Step
             sequenceNumber='5'
             name={intl.formatMessage({ id: 'process.item.project-integration' })}
             description={intl.formatMessage({ id: 'process.item.text' })}

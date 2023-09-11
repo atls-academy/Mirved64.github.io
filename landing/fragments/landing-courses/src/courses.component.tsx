@@ -84,15 +84,15 @@ export const Courses = () => {
               <Column order={[3, 0]} flexBasis={{ _: 335, standard: 1160, wide: 1798 }}>
                 <CardsLearning />
 
-                <Condition match={isDesktop}>
+                <Condition match={!isMobile}>
                   <Layout flexBasis={[20, 40]} />
+                </Condition>
 
+                <Condition match={isDesktop}>
                   <CardsMaterials />
                 </Condition>
 
                 <Condition match={isWideDesktop}>
-                  <Layout flexBasis={[20, 40]} />
-
                   <Row flexWrap='wrap'>
                     <CardsMaterialsWide />
 

@@ -3,18 +3,18 @@ import { FC }             from 'react'
 
 import { Card }           from '@ui/card'
 import { Condition }      from '@ui/condition'
-import { Box }            from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
+import { Box }            from '@ui/layout'
 import { SwiperProps }    from '@ui/swiper'
 import { Swiper }         from '@ui/swiper'
 import { SwiperSlide }    from '@ui/swiper'
 import { useWindowWidth } from '@ui/utils'
 
-import { CardCategory }   from '../cards-list'
-import { CardsList }      from '../cards-list'
 import { CardsListWide }  from '../cards-list'
 import { CardCellProps }  from './cards.interfaces'
+import { CardCategory }   from '../data'
+import { CardsList }      from '../data'
 
 export const CardsLearning = () => {
   const { isMobile } = useWindowWidth()
@@ -90,10 +90,6 @@ export const CardsMaterials = () => (
       (card) => card.category === CardCategory.EducationalMaterial && !card.isMobileOnly
     ).map((card, index, array) => (
       <Row key={card.id}>
-        <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
-
         <Condition match={index === array.length - 1}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
@@ -108,16 +104,12 @@ export const CardsMaterials = () => (
         <Condition match={index === 0}>
           <Layout flexBasis={[10, 20]} flexShrink='0' />
         </Condition>
-
-        <Condition match={index !== 0 && index !== array.length - 1}>
-          <Layout flexBasis={[10, 20]} flexShrink='0' />
-        </Condition>
       </Row>
     ))}
   </Row>
 )
 
-export const CardsSwiper: FC<SwiperProps> = ({ spaceBetween, slidesPerView, className }) => (
+export const CardsSwiper = ({ spaceBetween, slidesPerView, className }: SwiperProps) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
     {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly

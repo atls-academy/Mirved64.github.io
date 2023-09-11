@@ -7,7 +7,7 @@ import { motion }    from 'framer-motion'
 
 import { IconProps } from './icons.interfaces'
 
-export const MinusIcon: FC<IconProps> = ({ hover, ...props }) => {
+export const MinusIcon: FC<IconProps> = ({ hover, ...props }: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg

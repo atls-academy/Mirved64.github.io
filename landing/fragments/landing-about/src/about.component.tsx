@@ -12,7 +12,7 @@ import { Space }            from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const About = () => {
-  const { isMobile, isDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column flexGrow='1'>
@@ -22,7 +22,7 @@ export const About = () => {
         <Layout flexBasis={[20, 230]} />
 
         <Column flexBasis={[335, 1460]} flexGrow='1'>
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Box display='inline'>
               <Text
                 display='inline'
@@ -50,7 +50,7 @@ export const About = () => {
                 <FormattedMessage id='about.problem-desktop' />
               </Text>
 
-              <Space count='14' />
+              <Space count='6' />
 
               <Delimiter />
             </Box>
@@ -104,7 +104,7 @@ export const About = () => {
 
           <Layout flexBasis={[0, 40]} />
 
-          <Condition match={isDesktop}>
+          <Condition match={!isMobile}>
             <Box display='inline'>
               <Text
                 display='inline'

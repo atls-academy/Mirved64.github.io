@@ -46,7 +46,8 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
 
                   <Condition match={send}>
                     <Text color='text.white' fontSize='regular' lineHeight='large'>
-                      {name}, спасибо!
+                      {name}
+                      <FormattedMessage id='form.thanks' />
                     </Text>
                   </Condition>
                 </Box>

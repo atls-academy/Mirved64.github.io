@@ -14,6 +14,8 @@ import { worckspaceList }   from './technologies-list'
 export const Technologies = () => {
   const { isWideDesktop } = useWindowWidth()
 
+  const Indent = () => <Layout flexBasis={[36, 64]} />
+
   return (
     <Column fill>
       <Condition match={isWideDesktop}>
@@ -24,19 +26,19 @@ export const Technologies = () => {
 
       <Divider backgroundColor='background.ghost' weight={1} />
 
-      <Layout flexBasis={[36, 64]} />
+      <Indent />
 
       <Row overflow='hidden'>
         <RunLine technologies={technologiesList} font='light' />
       </Row>
 
-      <Layout flexBasis={[36, 64]} />
+      <Indent />
 
       <Row overflow='hidden'>
         <RunLine technologies={worckspaceList} font='secondary' />
       </Row>
 
-      <Layout flexBasis={[36, 64]} />
+      <Indent />
 
       <Divider backgroundColor='background.ghost' weight={1} />
 

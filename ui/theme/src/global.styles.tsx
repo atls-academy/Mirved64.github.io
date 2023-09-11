@@ -23,7 +23,6 @@ const GlobalStyles = () => (
       #__next {
         margin: 0;
         height: 100%;
-        font: HelveticaRegular;
       }
     `}
   />

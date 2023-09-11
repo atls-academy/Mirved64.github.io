@@ -7,7 +7,7 @@ import { motion }      from 'framer-motion'
 import { DrawerProps } from './drawer.interaces'
 import { Renderer }    from './renderer'
 
-export const DrawerContainer: FC<DrawerProps> = ({ active, heightDrawer, children }) => (
+export const DrawerContainer: FC<DrawerProps> = ({ active, children }) => (
   <Renderer active={active}>
     <motion.div
       style={{ position: 'fixed', top: '-100%', width: '100%', zIndex: 12 }}
@@ -15,7 +15,7 @@ export const DrawerContainer: FC<DrawerProps> = ({ active, heightDrawer, childre
       exit={{ top: '-100%' }}
       transition={{ duration: 0.3 }}
     >
-      <Box height={heightDrawer} maxWidth={2600} margin='0 auto'>
+      <Box height='100%' maxWidth={2600} margin='0 auto'>
         {children}
       </Box>
     </motion.div>

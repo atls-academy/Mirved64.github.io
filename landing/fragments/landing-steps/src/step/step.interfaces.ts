@@ -1,4 +1,4 @@
-export interface ItemProps {
+export interface StepProps {
   sequenceNumber?: string
   name?: string
   description?: string

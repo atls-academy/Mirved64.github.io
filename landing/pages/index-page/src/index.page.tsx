@@ -1,24 +1,25 @@
-import React                   from 'react'
-import { Parallax }            from 'react-scroll-parallax'
-import { useRef }              from 'react'
+import React                      from 'react'
+import { Parallax }               from 'react-scroll-parallax'
+import { useRef }                 from 'react'
 
-import { About }               from '@landing/fragment-about'
-import { Courses }             from '@landing/fragment-courses'
-import { Faq }                 from '@landing/fragment-faq'
-import { Hero }                from '@landing/fragment-hero'
-import { HeroWide }            from '@landing/fragment-hero'
-import { NavigationIndexPage } from '@landing/fragment-navigation'
-import { Process }             from '@landing/fragment-process'
-import { Steps }               from '@landing/fragment-steps'
-import { Technologies }        from '@landing/fragment-technologies'
-import { Background }          from '@ui/background'
-import { Condition }           from '@ui/condition'
-import { Navbar }              from '@ui/navbar'
-import { useWindowWidth }      from '@ui/utils'
+import { About }                  from '@landing/fragment-about'
+import { Courses }                from '@landing/fragment-courses'
+import { Faq }                    from '@landing/fragment-faq'
+import { Hero }                   from '@landing/fragment-hero'
+import { HeroWide }               from '@landing/fragment-hero'
+import { NavigationDesktopIndex } from '@landing/fragment-navigation'
+import { NavigationMobile }       from '@landing/fragment-navigation'
+import { Process }                from '@landing/fragment-process'
+import { Steps }                  from '@landing/fragment-steps'
+import { Technologies }           from '@landing/fragment-technologies'
+import { Background }             from '@ui/background'
+import { Condition }              from '@ui/condition'
+import { Navbar }                 from '@ui/navbar'
+import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {
   const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
-  const sectionRefs = [
+  const sectionRefs: React.RefObject<HTMLDivElement>[] = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
@@ -44,7 +45,8 @@ const IndexPage = () => {
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             >
-              <NavigationIndexPage sectionRefs={sectionRefs} />
+              <NavigationDesktopIndex sectionRefs={sectionRefs} />
+
               <HeroWide />
             </Background>
           </Parallax>
@@ -57,7 +59,8 @@ const IndexPage = () => {
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             >
-              <NavigationIndexPage sectionRefs={sectionRefs} />
+              <NavigationDesktopIndex sectionRefs={sectionRefs} />
+
               <HeroWide />
             </Background>
           </Parallax>
@@ -70,11 +73,12 @@ const IndexPage = () => {
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             >
-              <NavigationIndexPage sectionRefs={sectionRefs} />
-              <Hero />
-            </Background>
+              <NavigationDesktopIndex sectionRefs={sectionRefs} />
 
-            <About />
+              <Hero />
+
+              <About />
+            </Background>
           </Parallax>
         </Condition>
 
@@ -85,12 +89,12 @@ const IndexPage = () => {
             backgroundRepeat='no-repeat'
             backgroundPosition='-260px -20px'
           >
-            <NavigationIndexPage sectionRefs={sectionRefs} />
+            <NavigationMobile />
 
             <Hero />
-          </Background>
 
-          <About />
+            <About />
+          </Background>
         </Condition>
       </Background>
 
@@ -116,7 +120,15 @@ const IndexPage = () => {
           }}
           display='flex'
         >
-          <Courses />
+          <Condition match={!isMobile}>
+            <Parallax translateY={[-5, 10]}>
+              <Courses />
+            </Parallax>
+          </Condition>
+
+          <Condition match={isMobile}>
+            <Courses />
+          </Condition>
         </Background>
       </Background>
 
@@ -150,6 +162,7 @@ const IndexPage = () => {
           >
             <Steps />
           </Background>
+
         </Condition>
 
         <Technologies />

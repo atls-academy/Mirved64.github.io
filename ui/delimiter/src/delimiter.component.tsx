@@ -10,6 +10,7 @@ export const Delimiter = () => (
     backgroundColor='ghostTransparentGradient'
     borderRadius='little'
     display='inline-flex'
+    verticalAlign='sub'
   >
     <Box
       width={76}

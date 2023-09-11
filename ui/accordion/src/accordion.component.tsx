@@ -31,7 +31,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
         <Condition match={isDesktop}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
-              {selected === true ? (
+              {selected ? (
                 <MinusIcon width={20} height={20} hover={hover} />
               ) : (
                 <CrossIcon width={20} height={20} hover={hover} />
@@ -67,7 +67,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
             <Layout flexBasis={24} flexShrink='0' />
 
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
-              {selected === true ? (
+              {selected ? (
                 <MinusIcon width={14} height={14} hover={hover} />
               ) : (
                 <CrossIcon width={14} height={14} hover={hover} />
@@ -79,7 +79,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
         <Condition match={isWideDesktop}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
-              {selected === true ? (
+              {selected ? (
                 <MinusIcon width={30} height={30} hover={hover} />
               ) : (
                 <CrossIcon width={30} height={30} hover={hover} />
@@ -101,7 +101,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
         </Condition>
 
         <AnimatePresence>
-          {selected === true && (
+          {selected && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 90 }}

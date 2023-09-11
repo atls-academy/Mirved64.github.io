@@ -15,7 +15,7 @@ import { CardProps }      from './card.interfaces'
 
 export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
   const { hover, hoverProps } = useHover()
-  const { isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Box
@@ -32,7 +32,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
         width='100%'
         borderRadius={['normal', 'regular']}
       >
-        <Condition match={!!props.image && (isDesktop || isWideDesktop)}>
+        <Condition match={!!props.image && !isMobile}>
           <Box position='absolute' top='40px' right='34px'>
             <Image src={props.image} width={360} height={360} />
           </Box>
