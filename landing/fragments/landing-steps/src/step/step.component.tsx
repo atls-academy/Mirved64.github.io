@@ -26,7 +26,12 @@ export const Step: FC<StepProps> = ({ divider = true, ...props }) => (
           borderRadius={['little', 'ordinary']}
           border='thinnestGhost'
         >
-          <Text color='text.white' fontSize={['compact', 'medium']} lineHeight='small'>
+          <Text
+            color='text.white'
+            fontSize={['compact', 'medium']}
+            lineHeight='small'
+            fontFamily='regular'
+          >
             {props.sequenceNumber}
           </Text>
         </Box>

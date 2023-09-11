@@ -34,6 +34,7 @@ export const Hero = () => {
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
                 lineHeight={['huge', 'standart']}
+                fontFamily='regular'
               >
                 <FormattedMessage id='hero.title.text' />
               </Text>
@@ -57,6 +58,7 @@ export const Hero = () => {
                     color='text.white'
                     fontSize={['normal', 'massive']}
                     lineHeight={['huge', 'standart']}
+                    fontFamily='regular'
                   >
                     <FormattedMessage id='hero.title.it' />
                   </Text>
