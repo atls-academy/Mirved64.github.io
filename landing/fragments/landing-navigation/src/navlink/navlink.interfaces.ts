@@ -1,9 +1,9 @@
-export interface ItemProps {
+export interface NavLinkProps {
   name: string
   path: string
 }
 
-export interface ItemDrawerProps {
+export interface NavLinkDrawerProps {
   name: string
   path: string
   currentElementIndexInViewport: number

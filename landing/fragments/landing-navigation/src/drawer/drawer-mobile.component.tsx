@@ -1,5 +1,4 @@
 import React                 from 'react'
-import { FC }                from 'react'
 import { FormattedMessage }  from 'react-intl'
 
 import { Background }        from '@ui/background'
@@ -18,7 +17,7 @@ import { Text }              from '@ui/text'
 import { CardDataMobile }    from '../data'
 import { MobileDrawerProps } from './drawer.interfaces'
 
-export const DrawerMobile: FC<MobileDrawerProps> = ({ active, onClose }: MobileDrawerProps) => (
+export const DrawerMobile = ({ active, onClose }: MobileDrawerProps) => (
   <DrawerContainer active={active}>
     <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
       <Column>

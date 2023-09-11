@@ -14,10 +14,10 @@ import { Text }             from '@ui/text'
 
 import { NavLinks }         from './data'
 import { DrawerDesktop }    from './drawer'
-import { Item }             from './item'
 import { NavigationProps }  from './navigation.interfaces'
+import { NavLink }          from './navlink'
 
-export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }: NavigationProps) => {
+export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
@@ -35,7 +35,7 @@ export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }: Navigati
 
         {NavLinks.map((navLink, index) => (
           <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-            <Item name={navLink.name} path={navLink.path} />
+            <NavLink name={navLink.name} path={navLink.path} />
 
             <Condition match={index < NavLinks.length - 1}>
               <Layout flexBasis={20} />

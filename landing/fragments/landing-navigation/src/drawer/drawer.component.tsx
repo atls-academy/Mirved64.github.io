@@ -19,10 +19,10 @@ import { Text }             from '@ui/text'
 
 import { CardDataDesktop }  from '../data'
 import { NavLinks }         from '../data'
-import { ItemDrawer }       from '../item'
+import { NavLinkDrawer }    from '../navlink'
 import { DrawerProps }      from './drawer.interfaces'
 
-export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, sectionRefs }: DrawerProps) => {
+export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, sectionRefs }) => {
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
     ...el,
     id: index,
@@ -78,7 +78,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, sectionRefs }:
                 <Box>
                   {NavLinks.map((navLink, index) => (
                     <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-                      <ItemDrawer
+                      <NavLinkDrawer
                         path={navLink.path}
                         name={navLink.name}
                         currentElementIndexInViewport={currentElementIndexInViewport}
