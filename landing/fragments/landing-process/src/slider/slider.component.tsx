@@ -10,7 +10,7 @@ import { imagesMobile }      from './slider.images'
 import { imagesWideDesktop } from './slider.images'
 
 export const SliderContainer = () => {
-  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
   return (
     <Box>
@@ -22,7 +22,7 @@ export const SliderContainer = () => {
         <Slider images={imagesMobile} />
       </Condition>
 
-      <Condition match={isWideDesktop}>
+      <Condition match={isWideDesktop || isTV}>
         <Slider images={imagesWideDesktop} />
       </Condition>
     </Box>

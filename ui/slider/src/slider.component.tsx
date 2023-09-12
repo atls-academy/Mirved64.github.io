@@ -22,7 +22,7 @@ import { useHover }            from '@ui/utils'
 import { SliderProps }         from './slider.interfaces'
 
 export const Slider: FC<SliderProps> = ({ images }) => {
-  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
   const [slideIndex, setSlideIndex] = useState(0)
@@ -98,7 +98,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
         </Background>
       </Condition>
 
-      <Condition match={isWideDesktop}>
+      <Condition match={isWideDesktop || isTV}>
         <Background backgroundColor='darkPurpleGradient' borderRadius='big' border='boldGhost'>
           <Box
             width={1300}
@@ -121,10 +121,10 @@ export const Slider: FC<SliderProps> = ({ images }) => {
         </Background>
       </Condition>
 
-      <Layout flexBasis={[24, 32]} />
+      <Layout flexBasis={{ _: 24, standard: 32, wide: 42, ultra: 43 }} />
 
       <Row maxWidth={{ _: 335, standard: 960, wide: 1300 }}>
-        <Condition match={!isWideDesktop}>
+        <Condition match={isMobile || isDesktop}>
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
@@ -138,7 +138,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           </Box>
         </Condition>
 
-        <Condition match={isWideDesktop}>
+        <Condition match={isWideDesktop || isTV}>
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
@@ -191,7 +191,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           <Layout flexBasis={{ _: 12, standard: 16, wide: 22 }} />
         </Row>
 
-        <Condition match={!isWideDesktop}>
+        <Condition match={isMobile || isDesktop}>
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
@@ -205,7 +205,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           </Box>
         </Condition>
 
-        <Condition match={isWideDesktop}>
+        <Condition match={isWideDesktop || isTV}>
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'

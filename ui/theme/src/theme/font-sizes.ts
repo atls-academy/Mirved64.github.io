@@ -11,6 +11,7 @@ const fontSizes = {
   normal: '28px',
   usual: '30px',
   ordinary: '32px',
+  customary: '36px',
   regular: '40px',
   common: '44px',
   huge: '46px',

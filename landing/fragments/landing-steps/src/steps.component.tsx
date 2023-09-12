@@ -12,11 +12,15 @@ import { Step }           from './step'
 
 export const Steps = () => {
   const intl = useIntl()
-  const { isDesktop, isWideDesktop } = useWindowWidth()
+  const { isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
   return (
     <Column>
       <Layout flexBasis={[64, 160]} />
+
+      <Condition match={isTV}>
+        <Layout flexBasis={160} />
+      </Condition>
 
       <Box position='relative'>
         <Layout
@@ -25,7 +29,10 @@ export const Steps = () => {
           flexGrow={{ wide: 3 }}
         />
 
-        <Column flexGrow='1' flexBasis={{ _: 335, standard: 1760, wide: 2100 }}>
+        <Column
+          flexGrow={{ _: '1', ultra: '0' }}
+          flexBasis={{ _: 335, standard: 1760, wide: 2100, ultra: 2440 }}
+        >
           <Step
             sequenceNumber='1'
             name={intl.formatMessage({ id: 'process.item.team-integration' })}
@@ -90,12 +97,32 @@ export const Steps = () => {
           </Box>
         </Condition>
 
+        <Condition match={isTV}>
+          <Box
+            width='1106px'
+            height='1106px'
+            position='absolute'
+            zIndex={10}
+            margin='auto'
+            top='0'
+            left='0'
+            bottom='0'
+            right='0'
+          >
+            <Image src='./image/Cubics.png' width={1106} height={1106} />
+          </Box>
+        </Condition>
+
         <Layout
           flexBasis={{ _: 20, standard: 80, wide: 230 }}
           flexShrink='0'
           flexGrow={{ wide: 3 }}
         />
       </Box>
+
+      <Condition match={isTV}>
+        <Layout flexBasis={160} />
+      </Condition>
 
       <Layout flexBasis={[24, 160]} />
     </Column>
