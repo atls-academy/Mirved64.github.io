@@ -13,6 +13,7 @@ import { Row }                    from '@ui/layout'
 import { Layout }                 from '@ui/layout'
 import { Logo }                   from '@ui/logo'
 import { Text }                   from '@ui/text'
+import { useWindowWidth }         from '@ui/utils/src'
 
 import { NavLinks }               from './data'
 import { DrawerDesktop }          from './drawer'
@@ -23,6 +24,8 @@ import { NavLinkItemIndex }       from './navlink-item'
 export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
 
+  const { isTV } = useWindowWidth()
+
   const handleClick = () => setActive(!active)
 
   return (
@@ -32,7 +35,14 @@ export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => 
           {({ currentElementIndexInViewport }) => (
             <Box>
               {NavLinks.map((navLink, index) => (
-                <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+                <Box
+                  key={navLink.id}
+                  width={
+                    index < NavLinks.length - 1
+                      ? { standard: 220, ultra: 330 }
+                      : { standard: 200, ultra: 300 }
+                  }
+                >
                   <NavLinkItemDrawerIndex
                     path={navLink.path}
                     name={navLink.name}
@@ -41,7 +51,7 @@ export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => 
                   />
 
                   <Condition match={index < NavLinks.length - 1}>
-                    <Layout flexBasis={20} />
+                    <Layout flexBasis={{ standard: 20, ultra: 30 }} />
                   </Condition>
                 </Box>
               ))}
@@ -50,40 +60,72 @@ export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => 
         </Scrollspy>
       </DrawerDesktop>
 
-      <Row height={120} alignItems='center' justifyContent='center'>
+      <Row height={120} alignItems='center' justifyContent='center' maxWidth={2600} margin='0 auto'>
         <Layout flexBasis={40} />
 
-        <Logo fill='white' width={56} height={56} />
+        <Condition match={!isTV}>
+          <Logo fill='white' width={56} height={50} />
+        </Condition>
+
+        <Condition match={isTV}>
+          <Logo fill='white' width={84} height={75} />
+        </Condition>
 
         <Layout flexBasis={40} flexGrow='1' />
 
         {NavLinks.map((navLink, index) => (
-          <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+          <Box
+            key={navLink.id}
+            width={
+              index < NavLinks.length - 1
+                ? { standard: 220, ultra: 330 }
+                : { standard: 200, ultra: 300 }
+            }
+          >
             <NavLinkItemIndex name={navLink.name} path={navLink.path} />
 
             <Condition match={index < NavLinks.length - 1}>
-              <Layout flexBasis={20} />
+              <Layout flexBasis={{ standard: 20, ultra: 30 }} />
             </Condition>
           </Box>
         ))}
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        <Box width={136}>
-          <Button
-            onClick={handleClick}
-            variant='ghostBackgroundWhiteText'
-            size='bigSizeNormalRadiiBigPadding'
-            icon={<ArrowDownIcon width={12} height={6} />}
-            widthIcon={40}
-            heightIcon={40}
-            backgroundIcon='background.white'
-            radiiIcon='little'
-          >
-            <Text color='white' fontSize='compact' lineHeight='small'>
-              <FormattedMessage id='navigation.button' />
-            </Text>
-          </Button>
+        <Box width={{ standard: 136, ultra: 203 }}>
+          <Condition match={!isTV}>
+            <Button
+              onClick={handleClick}
+              variant='ghostBackgroundWhiteText'
+              size='bigSizeNormalRadiiBigPadding'
+              icon={<ArrowDownIcon width={12} height={6} />}
+              widthIcon={40}
+              heightIcon={40}
+              backgroundIcon='background.white'
+              radiiIcon='little'
+            >
+              <Text color='text.white' fontSize='compact' lineHeight='small'>
+                <FormattedMessage id='navigation.button' />
+              </Text>
+            </Button>
+          </Condition>
+
+          <Condition match={isTV}>
+            <Button
+              onClick={handleClick}
+              variant='ghostBackgroundWhiteText'
+              size='giantSizeRegularRadii'
+              icon={<ArrowDownIcon width={24} height={24} />}
+              widthIcon={60}
+              heightIcon={60}
+              backgroundIcon='background.white'
+              radiiIcon='usual'
+            >
+              <Text color='text.white' fontSize='medium' lineHeight='small'>
+                <FormattedMessage id='navigation.button' />
+              </Text>
+            </Button>
+          </Condition>
         </Box>
 
         <Layout flexBasis={40} />
