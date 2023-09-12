@@ -109,27 +109,63 @@ const IndexPage = () => {
         top={{ _: 939, standard: 1670, wide: 1360 }}
         overflow='hidden'
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['2200px 400px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={{
-            _: '-982px 409px',
-            standard: '-2480px 645px',
-            wide: '-1840px 464px',
-          }}
-          display='flex'
-        >
-          <Condition match={!isMobile}>
-            <Parallax translateY={[-5, 10]}>
+        <Condition match={isTV}>
+          <Parallax translateY={[-5, 10]}>
+            <Background
+              backgroundColor='wavesGradientWide'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='0 777px'
+              display='flex'
+              width='100%'
+            >
               <Courses />
-            </Parallax>
-          </Condition>
+            </Background>
+          </Parallax>
+        </Condition>
 
-          <Condition match={isMobile}>
+        <Condition match={isWideDesktop}>
+          <Parallax translateY={[-5, 10]}>
+            <Background
+              backgroundColor='wavesGradientWide'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-1840px 464px'
+              display='flex'
+              width='100%'
+            >
+              <Courses />
+            </Background>
+          </Parallax>
+        </Condition>
+
+        <Condition match={isDesktop}>
+          <Parallax translateY={[-5, 10]}>
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-2480px 645px'
+              display='flex'
+              width='100%'
+            >
+              <Courses />
+            </Background>
+          </Parallax>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize='2200px 400px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-982px 409px'
+            display='flex'
+            width='100%'
+          >
             <Courses />
-          </Condition>
-        </Background>
+          </Background>
+        </Condition>
       </Background>
 
       <Background

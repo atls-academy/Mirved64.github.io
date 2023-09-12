@@ -24,32 +24,35 @@ import { Info }               from './info'
 import { Sidebar }            from './sidebar'
 
 export const Courses = () => {
-  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box flexBasis={{ wide: 2580 }} flexShrink={{ wide: 0 }}>
+    <Box flexBasis={{ wide: 2580 }} flexShrink={{ wide: 0 }} flexGrow={{ wide: '1' }}>
       <Column>
         <Layout flexBasis={[64, 160]} />
 
         <Row>
-          <Layout flexBasis={[20, 230]} />
+          <Layout
+            flexBasis={{ _: 20, standard: 230, ultra: 620 }}
+            // flexShrink='0'
+          />
 
-          <Column flexBasis={{ _: 335, standard: 1610, wide: 2250 }}>
+          <Column flexBasis={{ _: 335, standard: 1610, wide: 2250, ultra: 2600 }}>
             <Row alignItems='center'>
               <Box flexWrap='wrap'>
                 <Text
                   color='text.primary'
-                  fontSize={['regular', 'stupendous']}
+                  fontSize={{ _: 'regular', standard: 'stupendous', ultra: 'biggest' }}
                   lineHeight='standard'
                 >
                   <FormattedMessage id='courses.title' />
                 </Text>
               </Box>
 
-              <Layout flexBasis={20} flexGrow='1' />
-
               <Condition match={isDesktop}>
+                <Layout flexBasis={20} flexGrow='1' />
+
                 <Box width={254} flexShrink='0'>
                   <NextLink path='/library' width='100%'>
                     <Button
@@ -81,22 +84,25 @@ export const Courses = () => {
             <Layout flexBasis={[40, 80]} />
 
             <Box flexDirection={['column', 'row']}>
-              <Column order={[3, 0]} flexBasis={{ _: 335, standard: 1160, wide: 1798 }}>
+              <Column
+                order={[3, 0]}
+                flexBasis={{ _: 335, standard: 1160, wide: 1798, ultra: 2090 }}
+              >
                 <CardsLearning />
 
                 <Condition match={!isMobile}>
-                  <Layout flexBasis={[20, 40]} />
+                  <Layout flexBasis={40} />
                 </Condition>
 
                 <Condition match={isDesktop}>
                   <CardsMaterials />
                 </Condition>
 
-                <Condition match={isWideDesktop}>
+                <Condition match={isWideDesktop || isTV}>
                   <Row flexWrap='wrap'>
                     <CardsMaterialsWide />
 
-                    <NextLink path='/library' width={572}>
+                    <NextLink path='/library' width={{ wide: 572, ultra: 670 }}>
                       <Background
                         {...hoverProps}
                         borderRadius='regular'
@@ -105,12 +111,16 @@ export const Courses = () => {
                         display='flex'
                         height='100%'
                       >
-                        <Layout flexBasis={[16, 40]} flexShrink='0' />
+                        <Layout flexBasis={40} flexShrink='0' />
 
                         <Column justifyContent='end' flexGrow='1'>
                           <Row alignItems='center'>
                             <Box>
-                              <Text color='text.white' fontSize='regular' lineHeight='usual'>
+                              <Text
+                                color='text.white'
+                                fontSize={{ wide: 'regular', ultra: 'big' }}
+                                lineHeight='usual'
+                              >
                                 <FormattedMessage id='courses.button.all-materials' />
                               </Text>
                             </Box>
@@ -136,11 +146,11 @@ export const Courses = () => {
             </Box>
           </Column>
 
-          <Layout flexBasis={[20, 80]} />
+          <Layout flexBasis={{ _: 20, standard: 80, ultra: 620 }} flexShrink={0} />
         </Row>
 
         <Condition match={isMobile}>
-          <Layout flexBasis={[20, 40]} />
+          <Layout flexBasis={20} />
 
           <Row>
             <CardsSwiper spaceBetween={20} className='swiper-1' slidesPerView={1.23} />

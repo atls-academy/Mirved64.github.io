@@ -8,9 +8,13 @@ import { Text }             from '@ui/text'
 
 export const Info = () => (
   <Box flexDirection={['column', 'row']}>
-    <Row maxWidth={[335, 710]} flexWrap='wrap'>
+    <Row maxWidth={{ _: 335, standard: 710, ultra: 1065 }} flexWrap='wrap'>
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.power-broker' />
         </Text>
       </Box>
@@ -18,7 +22,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.accent'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.atlantis' />
         </Text>
       </Box>
@@ -26,7 +34,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.has' />
         </Text>
       </Box>
@@ -34,7 +46,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.impact-on' />
         </Text>
       </Box>
@@ -42,7 +58,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.accent'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.it' />
         </Text>
       </Box>
@@ -50,7 +70,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.unlimited' />
         </Text>
       </Box>
@@ -58,7 +82,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.possibilities' />
         </Text>
       </Box>
@@ -66,13 +94,21 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.accent'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.use-skills' />
         </Text>
       </Box>
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.point' />
         </Text>
       </Box>
@@ -80,9 +116,13 @@ export const Info = () => (
 
     <Layout flexBasis={20} flexGrow='1' />
 
-    <Row maxWidth={[335, 559]} flexWrap='wrap'>
+    <Row maxWidth={{ _: 335, standard: 559, ultra: 840 }} flexWrap='wrap'>
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.advantage-of-learning' />
         </Text>
       </Box>
@@ -90,7 +130,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.visibly' />
         </Text>
       </Box>
@@ -98,7 +142,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.grow' />
         </Text>
       </Box>
@@ -106,7 +154,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.accent'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.practice' />
         </Text>
       </Box>
@@ -114,7 +166,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.on' />
         </Text>
       </Box>
@@ -122,7 +178,11 @@ export const Info = () => (
       <Layout flexBasis={5} />
 
       <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
+        <Text
+          color='text.primary'
+          fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
+          lineHeight='huge'
+        >
           <FormattedMessage id='courses.subtitle.existing-projects' />
         </Text>
       </Box>

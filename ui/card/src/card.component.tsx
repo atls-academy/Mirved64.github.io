@@ -26,12 +26,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
       overflow='hidden'
       position='relative'
     >
-      <Background
-        display='flex'
-        backgroundColor='whiteGhostGradient'
-        width='100%'
-        borderRadius={['normal', 'regular']}
-      >
+      <Background display='flex' backgroundColor='whiteGhostGradient' width='100%'>
         <Condition match={!!props.image && !isMobile}>
           <Box position='absolute' top='40px' right='34px'>
             <Image src={props.image} width={360} height={360} />
@@ -53,7 +48,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           >
             <Text
               color='text.primary'
-              fontSize={['subAtom', 'tiny']}
+              fontSize={{ _: 'subAtom', standard: 'tiny', ultra: 'low' }}
               lineHeight='small'
               textTransform='uppercase'
             >
@@ -65,7 +60,11 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
 
           <Condition match={!isMobileOnly}>
             <Box maxWidth={{ _: 303, standard: 496, wide: 556 }}>
-              <Text color='text.primary' fontSize={['medium', 'regular']} lineHeight='usual'>
+              <Text
+                color='text.primary'
+                fontSize={{ _: 'medium', standard: 'regular', ultra: 'big' }}
+                lineHeight='usual'
+              >
                 {props.titleDesktop}
               </Text>
             </Box>
@@ -90,7 +89,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
                     standard: 'text.primary',
                     wide: 'text.primaryTransparentText',
                   }}
-                  fontSize={['tiny', 'small']}
+                  fontSize={{ _: 'tiny', standard: 'small', ultra: 'usual' }}
                   lineHeight={['big', 'huge']}
                 >
                   {props.description}

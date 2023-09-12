@@ -38,7 +38,7 @@ export const CardsLearning = () => {
               category={card.category}
               titleDesktop={card.title}
               description={card.descriptionDesktop}
-              indent={{ standard: 214, wide: 356 }}
+              indent={{ standard: 214, wide: 356, ultra: 222 }}
               widthCategoryBox={{ standard: 104, wide: 156 }}
               image={card.image}
             />
@@ -59,7 +59,7 @@ export const CardsLearning = () => {
               category={card.category}
               titleDesktop={card.title}
               description={card.descriptionDesktop}
-              indent={{ standard: 56, wide: 356 }}
+              indent={{ standard: 56, wide: 356, ultra: 222 }}
               widthCategoryBox={{ standard: 112, wide: 167 }}
               image={card.image}
             />
@@ -138,10 +138,18 @@ export const CardsSwiper = ({ spaceBetween, slidesPerView, className }: SwiperPr
 )
 
 export const CardsMaterialsWide = () => {
+  const { isWideDesktop, isTV } = useWindowWidth()
+
   const CardCell: FC<CardCellProps> = ({ index, category, title }) => (
     <>
-      <Box flexDirection='column' width={{ wide: 572 }}>
-        <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
+      <Box flexDirection='column' width={{ wide: 572, ultra: 670 }}>
+        <Condition match={isWideDesktop}>
+          <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
+        </Condition>
+
+        <Condition match={isTV}>
+          <Card category={category} titleDesktop={title} indent={45} widthCategoryBox={270} />
+        </Condition>
 
         <Condition match={index < 3}>
           <Layout flexBasis={40} />

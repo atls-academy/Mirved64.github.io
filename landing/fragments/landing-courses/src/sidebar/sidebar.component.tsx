@@ -15,10 +15,10 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const Sidebar = () => {
-  const { isMobile } = useWindowWidth()
+  const { isMobile, isTV } = useWindowWidth()
 
   return (
-    <Column flexBasis={[212, 410]}>
+    <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
       <Background
         display='flex'
         backgroundColor='blackTransparentGradient'
@@ -28,11 +28,20 @@ export const Sidebar = () => {
         <Row order={[1, 0]}>
           <Layout flexBasis={[16, 32]} />
 
-          <Column flexBasis={[303, 346]} flexGrow={[1, 0]} flexShrink={2}>
+          <Column
+            flexBasis={{ _: 303, standard: 346, ultra: 406 }}
+            flexGrow={[1, 0]}
+            flexShrink={{ _: 2, ultra: 0 }}
+            alignItems={{ ultra: 'center' }}
+          >
             <Layout flexBasis={[16, 32]} />
 
             <Box>
-              <Text color='text.primary' fontSize={['tiny', 'little']} lineHeight={['huge', 'big']}>
+              <Text
+                color='text.primary'
+                fontSize={{ _: 'tiny', standard: 'little', ultra: 'medium' }}
+                lineHeight={['huge', 'big']}
+              >
                 <FormattedMessage id='courses.sidebar.subtitle' />
               </Text>
             </Box>
@@ -43,32 +52,43 @@ export const Sidebar = () => {
               <Box justifyContent='center'>
                 <Image src='./image/Sphere.png' width={240} height={240} />
               </Box>
+
+              <Layout flexBasis={{ standard: 62, ultra: 68 }} />
             </Condition>
 
-            <Layout flexBasis={[0, 62]} />
-
-            <Box flexDirection={['row', 'column']} alignItems={['center', 'start']}>
+            <Box
+              flexDirection={['row', 'column']}
+              alignItems={['center', 'start']}
+              width={{ ultra: 346 }}
+            >
               <Box>
-                <Text color='text.accent' fontSize={['giant', 'enormous']} lineHeight='small'>
+                <Text
+                  color='text.accent'
+                  fontSize={{ _: 'giant', standard: 'enormous', ultra: 'stupendous' }}
+                  lineHeight='small'
+                >
                   <FormattedMessage id='courses.sidebar.number' />
                 </Text>
               </Box>
 
               <Layout flexBasis={[12, 8]} />
 
-              <Box flexBasis={[131, 44]} maxWidth={[131, 188]}>
+              <Box
+                flexBasis={{ _: 131, standard: 44, ultra: 68 }}
+                maxWidth={{ _: 131, standard: 188, ultra: 282 }}
+              >
                 <Text
                   color='text.primary'
-                  fontSize={['atom', 'tiny']}
+                  fontSize={{ _: 'atom', standard: 'tiny', ultra: 'low' }}
                   lineHeight={['large', 'big']}
                 >
                   <FormattedMessage id='courses.sidebar.sign' />
                 </Text>
               </Box>
 
-              <Layout flexBasis={[64, 0]} flexShrink='5' flexGrow='1' />
-
               <Condition match={isMobile}>
+                <Layout flexBasis={64} flexShrink='5' flexGrow='1' />
+
                 <Box flexShrink='0'>
                   <Image src='./image/Sphere.png' width={64} height={64} />
                 </Box>
@@ -86,19 +106,37 @@ export const Sidebar = () => {
 
       <Condition match={!isMobile}>
         <Link to='teaching' width='100%' spy smooth duration={1000}>
-          <Button
-            variant='primaryBackgroundWhiteText'
-            size='hugeSizeRegularRadii'
-            icon={<MouseIcon width={16} height={16} />}
-            widthIcon={48}
-            heightIcon={48}
-            backgroundIcon='background.white'
-            radiiIcon='normal'
-          >
-            <Text color='white' fontSize='small' lineHeight='normal'>
-              <FormattedMessage id='courses.sidebar.button-desktop' />
-            </Text>
-          </Button>
+          <Condition match={!isTV}>
+            <Button
+              variant='primaryBackgroundWhiteText'
+              size='hugeSizeRegularRadii'
+              icon={<MouseIcon width={16} height={16} />}
+              widthIcon={48}
+              heightIcon={48}
+              backgroundIcon='background.white'
+              radiiIcon='normal'
+            >
+              <Text color='white' fontSize='small' lineHeight='normal'>
+                <FormattedMessage id='courses.sidebar.button-desktop' />
+              </Text>
+            </Button>
+          </Condition>
+
+          <Condition match={isTV}>
+            <Button
+              variant='primaryBackgroundWhiteText'
+              size='massiveSizeLargeRadii'
+              icon={<MouseIcon width={24} height={24} />}
+              widthIcon={72}
+              heightIcon={72}
+              backgroundIcon='background.white'
+              radiiIcon='regular'
+            >
+              <Text color='white' fontSize='usual' lineHeight='normal'>
+                <FormattedMessage id='courses.sidebar.button-desktop' />
+              </Text>
+            </Button>
+          </Condition>
         </Link>
       </Condition>
     </Column>
