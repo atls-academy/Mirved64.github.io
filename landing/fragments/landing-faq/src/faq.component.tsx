@@ -18,10 +18,11 @@ import { Question }         from './data'
 import { QuestionModal }    from './question-modal'
 
 export const Faq = () => {
-  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
-  const handleModalOpen = () => setOpen(false)
+  const handleModalOpen = () => setOpen(true)
+  const handleModalClose = () => setOpen(false)
 
   const questions = Array.from({ length: 6 }, () => Question).map((el, index) => ({
     ...el,
@@ -31,7 +32,7 @@ export const Faq = () => {
   return (
     <>
       <Row>
-        <Layout flexBasis={[20, 230]} flexShrink='0' />
+        <Layout flexBasis={{ _: 20, standard: 230, wide: 230, ultra: 695 }} flexShrink='0' />
 
         <Column flexGrow='1'>
           <Layout flexBasis={[80, 160]} />
@@ -40,31 +41,55 @@ export const Faq = () => {
             <Box>
               <Text
                 color='text.primary'
-                fontSize={['ordinary', 'stupendous']}
+                fontSize={{
+                  _: 'ordinary',
+                  standard: 'stupendous',
+                  wide: 'stupendous',
+                  ultra: 'biggest',
+                }}
                 lineHeight={['huge', 'normal']}
               >
                 <FormattedMessage id='faq.title' />
               </Text>
             </Box>
 
-            <Condition match={isDesktop}>
+            <Condition match={!isMobile}>
               <Layout flexBasis={20} flexGrow='1' />
 
-              <Box width={247} flexShrink='0'>
-                <Button
-                  variant='primaryBackgroundWhiteText'
-                  size='hugeSizeRegularRadii'
-                  icon={<MailIcon width={16} height={16} />}
-                  widthIcon={48}
-                  heightIcon={48}
-                  backgroundIcon='background.white'
-                  radiiIcon='normal'
-                  onClick={() => setOpen(true)}
-                >
-                  <Text color='text.white' fontSize='small' lineHeight='normal'>
-                    <FormattedMessage id='faq.button' />
-                  </Text>
-                </Button>
+              <Box width={{ standard: 247, ultra: 371 }} flexShrink='0'>
+                <Condition match={!isTV}>
+                  <Button
+                    variant='primaryBackgroundWhiteText'
+                    size='hugeSizeRegularRadii'
+                    icon={<MailIcon width={16} height={16} />}
+                    widthIcon={48}
+                    heightIcon={48}
+                    backgroundIcon='background.white'
+                    radiiIcon='normal'
+                    onClick={handleModalOpen}
+                  >
+                    <Text color='text.white' fontSize='small' lineHeight='normal'>
+                      <FormattedMessage id='faq.button' />
+                    </Text>
+                  </Button>
+                </Condition>
+
+                <Condition match={isTV}>
+                  <Button
+                    variant='primaryBackgroundWhiteText'
+                    size='massiveSizeLargeRadii'
+                    icon={<MailIcon width={24} height={24} />}
+                    widthIcon={72}
+                    heightIcon={72}
+                    backgroundIcon='background.white'
+                    radiiIcon='regular'
+                    onClick={handleModalOpen}
+                  >
+                    <Text color='text.white' fontSize='usual' lineHeight='normal'>
+                      <FormattedMessage id='faq.button' />
+                    </Text>
+                  </Button>
+                </Condition>
               </Box>
             </Condition>
           </Row>
@@ -77,9 +102,9 @@ export const Faq = () => {
             <Layout flexBasis={40} />
           </Condition>
 
-          <Condition match={!isWideDesktop}>
+          <Condition match={isMobile || isDesktop}>
             {questions.map((item, index, array) => (
-              <Column key={item.id} width={{ wide: 1005 }}>
+              <Column key={item.id}>
                 <Condition match={index !== 0}>
                   <Layout flexBasis={[16, 40]} />
                 </Condition>
@@ -93,10 +118,10 @@ export const Faq = () => {
             ))}
           </Condition>
 
-          <Condition match={isWideDesktop}>
+          <Condition match={isWideDesktop || isTV}>
             <Row flexWrap='wrap' justifyContent='space-between'>
               {questions.map((item, index) => (
-                <Column key={item.id} width={1005}>
+                <Column key={item.id} width={{ wide: 1005, ultra: 1180 }}>
                   <Condition match={index === 0 || index === 1}>
                     <Divider backgroundColor='background.grayGhost' weight={1} />
                   </Condition>
@@ -125,7 +150,7 @@ export const Faq = () => {
                 heightIcon={32}
                 backgroundIcon='background.white'
                 radiiIcon='tiny'
-                onClick={() => setOpen(true)}
+                onClick={handleModalOpen}
               >
                 <Text color='text.white' fontSize='small' lineHeight='small'>
                   <FormattedMessage id='faq.button' />
@@ -137,9 +162,9 @@ export const Faq = () => {
           <Layout flexBasis={[80, 160]} />
         </Column>
 
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
+        <Layout flexBasis={{ _: 20, standard: 80, wide: 80, ultra: 545 }} flexShrink='0' />
       </Row>
-      <QuestionModal open={open} setOpen={handleModalOpen} />
+      <QuestionModal open={open} setOpen={handleModalClose} />
     </>
   )
 }

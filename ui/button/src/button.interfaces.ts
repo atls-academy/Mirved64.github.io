@@ -18,6 +18,7 @@ export type ButtonSize =
   | 'usualSizeNormalRadii'
   | 'usualSizeCompactRadii'
   | 'giantSizeRegularRadii'
+  | 'massiveSizeLargeRadii'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant

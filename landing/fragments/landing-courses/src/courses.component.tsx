@@ -41,7 +41,7 @@ export const Courses = () => {
                 <Text
                   color='text.primary'
                   fontSize={['regular', 'stupendous']}
-                  lineHeight='standart'
+                  lineHeight='standard'
                 >
                   <FormattedMessage id='courses.title' />
                 </Text>

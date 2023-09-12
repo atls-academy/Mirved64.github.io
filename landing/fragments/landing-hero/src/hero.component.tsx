@@ -174,7 +174,7 @@ export const HeroWide = () => {
               <Text
                 color='text.white'
                 fontSize={{ wide: 'stupendous', ultra: 'heavy' }}
-                lineHeight='standart'
+                lineHeight='standard'
               >
                 <FormattedMessage id='hero.title.text' />
               </Text>
@@ -199,7 +199,7 @@ export const HeroWide = () => {
                   <Text
                     color='text.white'
                     fontSize={{ wide: 'massive', ultra: 'colossal' }}
-                    lineHeight='standart'
+                    lineHeight='standard'
                   >
                     <FormattedMessage id='hero.title.it' />
                   </Text>

@@ -22,7 +22,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
     <Condition match={isDesktop || isWideDesktop}>
       <Box
         position='fixed'
-        top={{ standart: 540, wide: 376 }}
+        top={{ standard: 540, wide: 376 }}
         left={40}
         width={138}
         height={116}

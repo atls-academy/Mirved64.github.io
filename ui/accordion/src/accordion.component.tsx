@@ -19,7 +19,7 @@ import { CrossIcon }       from './icons'
 import { MinusIcon }       from './icons'
 
 export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
-  const { isMobile, isDesktop, isWideDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
 
@@ -76,7 +76,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
           </Box>
         </Condition>
 
-        <Condition match={isWideDesktop}>
+        <Condition match={isWideDesktop || isTV}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
               {selected ? (
@@ -86,9 +86,9 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
               )}
             </motion.div>
 
-            <Layout flexBasis={24} flexShrink='0' />
+            <Layout flexBasis={{ wide: 24, ultra: 36 }} flexShrink='0' />
 
-            <Box flexBasis={740}>
+            <Box flexBasis={{ wide: 740, ultra: 1110 }}>
               <Text
                 color={hover ? 'text.accent' : 'text.primary'}
                 fontSize='strong'
@@ -100,28 +100,51 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
           </Box>
         </Condition>
 
-        <AnimatePresence>
-          {selected && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 90 }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, easeInOut: 1 }}
-            >
-              <Layout height={[16, 24]} />
+        <Condition match={isMobile || isDesktop}>
+          <AnimatePresence>
+            {selected && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 90 }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, easeInOut: 1 }}
+              >
+                <Layout height={[16, 24]} />
 
-              <Box maxWidth={{ _: 335, standard: 740, wide: 900 }}>
-                <Text
-                  color={['text.primaryTransparentText', 'text.primaryText']}
-                  fontSize={{ _: 'tiny', standard: 'compact', wide: 'middle' }}
-                  lineHeight={['huge', 'big']}
-                >
-                  {answer}
-                </Text>
-              </Box>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                <Box maxWidth={[335, 740]}>
+                  <Text
+                    color={['text.primaryTransparentText', 'text.primaryText']}
+                    fontSize={{ _: 'tiny', standard: 'compact', wide: 'middle' }}
+                    lineHeight={['huge', 'big']}
+                  >
+                    {answer}
+                  </Text>
+                </Box>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </Condition>
+
+        <Condition match={isWideDesktop || isTV}>
+          <AnimatePresence>
+            {selected && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 140 }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, easeInOut: 1 }}
+              >
+                <Layout height={{ wide: 36 }} />
+
+                <Box maxWidth={{ wide: 900 }}>
+                  <Text color='text.primaryText' fontSize={{ wide: 'middle' }} lineHeight='big'>
+                    {answer}
+                  </Text>
+                </Box>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </Condition>
 
         <Condition match={isDivider}>
           <Layout height={[16, 40]} />

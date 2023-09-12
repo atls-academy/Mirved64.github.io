@@ -23,6 +23,7 @@ const fontSizes = {
   massive: '80px',
   stupendous: '96px',
   colossal: '120px',
+  biggest: '144px',
 }
 
 export { fontSizes }

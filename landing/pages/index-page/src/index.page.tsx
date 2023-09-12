@@ -36,7 +36,7 @@ const IndexPage = () => {
         backgroundColor='navyBlueGradient'
         position='absolute'
         width='100%'
-        height={{ standart: 1750, wide: 1440, ultra: 2240 }}
+        height={{ standard: 1750, wide: 1440, ultra: 2240 }}
       >
         <Condition match={isTV}>
           <Parallax translateY={[-10, 15]}>
@@ -201,7 +201,7 @@ const IndexPage = () => {
         zIndex={3}
         top={{ _: 4264, standard: 6450, wide: 6600 }}
       >
-        <Condition match={!isWideDesktop}>
+        <Condition match={isMobile || isDesktop}>
           <Background
             backgroundColor='wavesGradient'
             backgroundSize={['1015px 464px', '4400px 800px']}
@@ -212,12 +212,12 @@ const IndexPage = () => {
           </Background>
         </Condition>
 
-        <Condition match={isWideDesktop}>
+        <Condition match={isWideDesktop || isTV}>
           <Background
             backgroundColor='wavesGradientWide'
             backgroundSize='4400px 800px'
             backgroundRepeat='no-repeat'
-            backgroundPosition='-194px 186px'
+            backgroundPosition={{ wide: '-194px 186px', ultra: '0 102px' }}
           >
             <Faq />
           </Background>
