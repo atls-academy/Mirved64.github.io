@@ -106,7 +106,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={1}
-        top={{ _: 939, standard: 1670, wide: 1360 }}
+        top={{ _: 939, standard: 1670, wide: 1360, ultra: 2080 }}
         overflow='hidden'
       >
         <Condition match={isTV}>

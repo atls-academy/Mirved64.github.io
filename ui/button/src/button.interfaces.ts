@@ -12,11 +12,12 @@ export type ButtonSize =
   | 'bigSizeNormalRadii'
   | 'bigSizeNormalRadiiSmallPadding'
   | 'bigSizeNormalRadiiBigPadding'
-  | 'largeSizelittleRadii'
+  | 'largeSizeLittleRadii'
   | 'hugeSizeRegularRadii'
   | 'smallSizeCompactRadii'
   | 'usualSizeNormalRadii'
   | 'usualSizeCompactRadii'
+  | 'strongSizeRegularRadii'
   | 'giantSizeRegularRadii'
   | 'massiveSizeLargeRadii'
 

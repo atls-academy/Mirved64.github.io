@@ -42,7 +42,7 @@ export const SocialLinkUltra: FC<SocialLinkProps> = ({ icon, href }) => (
     <Link href={href}>
       <Button
         variant='ghostBackgroundWhiteText'
-        size='bigSizeNormalRadii'
+        size='strongSizeRegularRadii'
         icon={icon}
         widthIcon={84}
         heightIcon={84}

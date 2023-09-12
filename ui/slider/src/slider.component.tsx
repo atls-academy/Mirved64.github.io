@@ -128,7 +128,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
-              size='largeSizelittleRadii'
+              size='largeSizeLittleRadii'
               icon={<ArrowLeftWhiteIcon width={16} height={16} />}
               widthIcon={48}
               heightIcon={64}
@@ -142,7 +142,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
-              size='largeSizelittleRadii'
+              size='largeSizeLittleRadii'
               icon={<ArrowLeftWhiteIcon width={21} height={21} />}
               widthIcon={65}
               heightIcon={87}
@@ -195,7 +195,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
-              size='largeSizelittleRadii'
+              size='largeSizeLittleRadii'
               icon={<ArrowRightWhiteIcon width={16} height={16} />}
               widthIcon={48}
               heightIcon={64}
@@ -209,7 +209,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
-              size='largeSizelittleRadii'
+              size='largeSizeLittleRadii'
               icon={<ArrowRightWhiteIcon width={21} height={21} />}
               widthIcon={65}
               heightIcon={87}

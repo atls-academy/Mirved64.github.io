@@ -27,7 +27,12 @@ export const Delimiter = () => (
 )
 
 export const DelimiterLarge = () => (
-  <Background backgroundColor='ghostTransparentGradient' borderRadius='usual' display='inline-flex'>
+  <Background
+    backgroundColor='ghostTransparentGradient'
+    borderRadius='usual'
+    display='inline-flex'
+    verticalAlign='sub'
+  >
     <Box
       width={114}
       height={78}
