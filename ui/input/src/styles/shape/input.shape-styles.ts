@@ -5,8 +5,8 @@ import { ifProp }            from 'styled-tools'
 import { prop }              from 'styled-tools'
 import { switchProp }        from 'styled-tools'
 
-const normalSizeNormallRadiiStyles = createShapeStyles({
-  fontFamily: 'HelveticaRegular',
+const normalSizeNormalRadiiStyles = createShapeStyles({
+  fontFamily: 'Helvetica',
   fontWeight: 400,
   fontSize: 16,
   size: 56,
@@ -16,7 +16,7 @@ const normalSizeNormallRadiiStyles = createShapeStyles({
 })
 
 const bigSizeRegularRadiiStyles = createShapeStyles({
-  fontFamily: 'HelveticaRegular',
+  fontFamily: 'Helvetica',
   fontWeight: 400,
   fontSize: 18,
   size: 62,
@@ -26,7 +26,7 @@ const bigSizeRegularRadiiStyles = createShapeStyles({
 })
 
 export const textareaStyles: styleFn = ifProp(prop('textarea', true), {
-  fontFamily: 'HelveticaRegular',
+  fontFamily: 'Helvetica',
   fontWeight: 400,
   fontSize: 18,
   paddingTop: 16,
@@ -37,8 +37,8 @@ export const textareaStyles: styleFn = ifProp(prop('textarea', true), {
   borderRadius: 24,
 })
 
-export const shapeStyles = switchProp(prop('size', 'normalSizeNormallRadii'), {
-  normalSizeNormallRadii: normalSizeNormallRadiiStyles,
+export const shapeStyles = switchProp(prop('size', 'normalSizeNormalRadii'), {
+  normalSizeNormalRadii: normalSizeNormalRadiiStyles,
   bigSizeRegularRadii: bigSizeRegularRadiiStyles,
   textarea: textareaStyles,
 })
