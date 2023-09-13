@@ -32,9 +32,9 @@ export const LibraryBanner = () => {
   )
 
   const getColor = (): string => {
-    if (hover) return 'darkPurpurTransparent'
-    if (focus) return 'darkestPurpur'
-    if (searchQuery) return 'darkestPurpur'
+    if (hover) return 'darkPurpleTransparent'
+    if (focus) return 'darkestPurple'
+    if (searchQuery) return 'darkestPurple'
     return 'gray'
   }
 
@@ -74,7 +74,7 @@ export const LibraryBanner = () => {
             value={searchQuery}
             onChange={setSearchQuery}
             variant='search'
-            size='normalSizeNormallRadii'
+            size='normalSizeNormalRadii'
             icon={<SearchIcon width={20} height={20} color={getColor()} />}
             widthIcon={20}
             heightIcon={20}

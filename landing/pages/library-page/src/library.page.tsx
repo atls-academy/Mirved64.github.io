@@ -45,14 +45,27 @@ const LibraryPage = () => {
         width='100%'
         zIndex={1}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['2200px 400px', '1920px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-982px 409px', '0 1104px']}
-        >
-          <CardsLibrary />
-        </Background>
+        <Condition match={!isMobile}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize='4400px 800px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='0 1104px'
+          >
+            <CardsLibrary />
+          </Background>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundColor='wavesGradientSmall'
+            backgroundSize='2200px 400px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-982px 409px'
+          >
+            <CardsLibrary />
+          </Background>
+        </Condition>
       </Background>
     </>
   )
