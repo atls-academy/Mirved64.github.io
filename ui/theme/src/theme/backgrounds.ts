@@ -19,5 +19,6 @@ export const backgrounds = {
     'linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), linear-gradient(136deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%)',
   banner: 'url("./image/Banner.png")',
   wavesGradient: 'url("./image/Bg-gradient-waves.png")',
-  wavesGradientWide: 'url("./image/Bg-gradient-wide.png")',
+  wavesGradientSmall: 'url("./image/Bg-gradient-waves-small.png")',
+  blendGradient: 'url("./image/Bg-gradient.png")',
 }

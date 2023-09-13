@@ -36,10 +36,9 @@ const IndexPage = () => {
         backgroundColor='navyBlueGradient'
         position='absolute'
         width='100%'
-        height={{ standard: 1750, wide: 1440, ultra: 2240 }}
       >
         <Condition match={isTV}>
-          <Parallax translateY={[-10, 15]}>
+          <Parallax translateY={[-7.5, 15]}>
             <Background
               backgroundColor='banner'
               backgroundSize='cover'
@@ -106,13 +105,13 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={1}
-        top={{ _: 939, standard: 1670, wide: 1360, ultra: 2080 }}
+        top={{ _: 934, standard: 1670, wide: 1440, ultra: 2160 }}
         overflow='hidden'
       >
         <Condition match={isTV}>
-          <Parallax translateY={[-5, 10]}>
+          <Parallax translateY={[-5, 8]}>
             <Background
-              backgroundColor='wavesGradientWide'
+              backgroundColor='wavesGradient'
               backgroundSize='4400px 800px'
               backgroundRepeat='no-repeat'
               backgroundPosition='0 777px'
@@ -127,10 +126,10 @@ const IndexPage = () => {
         <Condition match={isWideDesktop}>
           <Parallax translateY={[-5, 10]}>
             <Background
-              backgroundColor='wavesGradientWide'
+              backgroundColor='wavesGradient'
               backgroundSize='4400px 800px'
               backgroundRepeat='no-repeat'
-              backgroundPosition='-1840px 464px'
+              backgroundPosition='-196px 464px'
               display='flex'
               width='100%'
             >
@@ -140,7 +139,7 @@ const IndexPage = () => {
         </Condition>
 
         <Condition match={isDesktop}>
-          <Parallax translateY={[-5, 10]}>
+          <Parallax translateY={[-5, 14]}>
             <Background
               backgroundColor='wavesGradient'
               backgroundSize='4400px 800px'
@@ -156,7 +155,7 @@ const IndexPage = () => {
 
         <Condition match={isMobile}>
           <Background
-            backgroundColor='wavesGradient'
+            backgroundColor='wavesGradientSmall'
             backgroundSize='2200px 400px'
             backgroundRepeat='no-repeat'
             backgroundPosition='-982px 409px'
@@ -176,55 +175,109 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={2}
-        top={{ _: 2634, standard: 3761, wide: 3571 }}
+        top={{ _: 2629, standard: 3761, wide: 3591, ultra: 4435 }}
       >
-        <Condition match={!isWideDesktop}>
-          <Background
-            backgroundColor='wavesGradient'
-            backgroundSize={['1015px 464px', 'cover']}
-            backgroundRepeat='no-repeat'
-            backgroundPosition={['-340px 121px', '0 124px']}
-          >
-            <Steps />
-          </Background>
+        <Condition match={isTV}>
+          <Parallax translateY={[-5, 5]}>
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-196px 124px'
+            >
+              <Steps />
+            </Background>
+
+            <Technologies />
+
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-470px 388px'
+            >
+              <Background backgroundColor='darkPurpleGradientFlash'>
+                <Process />
+              </Background>
+            </Background>
+          </Parallax>
         </Condition>
 
         <Condition match={isWideDesktop}>
+          <Parallax translateY={[-2, 5]}>
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-196px 124px'
+            >
+              <Steps />
+            </Background>
+
+            <Technologies />
+
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-920px -38px'
+            >
+              <Background backgroundColor='darkPurpleGradientFlash'>
+                <Process />
+              </Background>
+            </Background>
+          </Parallax>
+        </Condition>
+
+        <Condition match={isDesktop}>
+          <Parallax translateY={[-5, 8]}>
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-196px 124px'
+            >
+              <Steps />
+            </Background>
+
+            <Technologies />
+
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-2480px 235px'
+            >
+              <Background backgroundColor='darkPurpleGradientFlash'>
+                <Process />
+              </Background>
+            </Background>
+          </Parallax>
+        </Condition>
+
+        <Condition match={isMobile}>
           <Background
-            backgroundColor='wavesGradientWide'
-            backgroundSize='4400px 800px'
+            backgroundColor='blendGradient'
+            backgroundSize='1015px 464px'
             backgroundRepeat='no-repeat'
-            backgroundPosition='0 124px'
+            backgroundPosition='-300px 121px'
           >
             <Steps />
           </Background>
+
+          <Technologies />
+
+          <Background
+            backgroundColor='blendGradient'
+            backgroundSize='1015px 464px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-299px 165px'
+          >
+            <Background backgroundColor='darkPurpleGradientFlash'>
+              <Process />
+            </Background>
+          </Background>
         </Condition>
-
-        <Technologies />
-
-        <Background backgroundColor='darkPurpleGradientFlash'>
-          <Condition match={!isWideDesktop}>
-            <Background
-              backgroundColor='wavesGradient'
-              backgroundSize={['1015px 464px', '4400px 800px']}
-              backgroundRepeat='no-repeat'
-              backgroundPosition={['-341px 165px', '-2480px 235px']}
-            >
-              <Process />
-            </Background>
-          </Condition>
-
-          <Condition match={isWideDesktop}>
-            <Background
-              backgroundColor='wavesGradientWide'
-              backgroundSize='2560px 800px'
-              backgroundRepeat='no-repeat'
-              backgroundPosition='0 -40px'
-            >
-              <Process />
-            </Background>
-          </Condition>
-        </Background>
       </Background>
 
       <Background
@@ -235,25 +288,36 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={3}
-        top={{ _: 4264, standard: 6450, wide: 6600 }}
+        top={{ _: 4237, standard: 6491, wide: 6699, ultra: 7983 }}
       >
-        <Condition match={isMobile || isDesktop}>
+        <Condition match={isWideDesktop || isTV}>
           <Background
             backgroundColor='wavesGradient'
-            backgroundSize={['1015px 464px', '4400px 800px']}
+            backgroundSize='4400px 800px'
             backgroundRepeat='no-repeat'
-            backgroundPosition={['-340px 121px', '-2480px 232px']}
+            backgroundPosition={{ wide: '-194px 186px', ultra: '-190px 102px' }}
           >
             <Faq />
           </Background>
         </Condition>
 
-        <Condition match={isWideDesktop || isTV}>
+        <Condition match={isDesktop}>
           <Background
-            backgroundColor='wavesGradientWide'
+            backgroundColor='wavesGradient'
             backgroundSize='4400px 800px'
             backgroundRepeat='no-repeat'
-            backgroundPosition={{ wide: '-194px 186px', ultra: '0 102px' }}
+            backgroundPosition='-196px 232px'
+          >
+            <Faq />
+          </Background>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundColor='blendGradientSmall'
+            backgroundSize='1015px 464px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-300px 121px'
           >
             <Faq />
           </Background>

@@ -75,7 +75,7 @@ const colors = {
         background: 'rgba(77, 60, 242, .5)',
       },
       pressed: {
-        background: 'rgba(255, 255, 255, 0.5)',
+        background: 'rgba(77, 60, 242, 1)',
       },
       disabled: {
         background: 'rgba(255, 255, 255, 0.1)',

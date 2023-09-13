@@ -32,7 +32,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
           <Text
             color={getColor()}
             fontSize={['regular', 'giant']}
-            lineHeight={['standart', 'small']}
+            lineHeight={['standard', 'small']}
           >
             {title}
           </Text>

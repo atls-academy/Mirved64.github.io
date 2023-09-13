@@ -15,8 +15,8 @@ export const useWindowWidth = () => {
   return {
     windowWidth,
     isMobile: windowWidth < 1280,
-    isDesktop: windowWidth > 1280 && windowWidth < 2560,
-    isWideDesktop: windowWidth > 2560 && windowWidth < 3840,
+    isDesktop: windowWidth >= 1280 && windowWidth < 2560,
+    isWideDesktop: windowWidth >= 2560 && windowWidth < 3840,
     isTV: windowWidth >= 3840,
   }
 }
