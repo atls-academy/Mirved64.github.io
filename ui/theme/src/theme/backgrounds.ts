@@ -21,4 +21,6 @@ export const backgrounds = {
   wavesGradient: 'url("./image/Bg-gradient-waves.png")',
   wavesGradientSmall: 'url("./image/Bg-gradient-waves-small.png")',
   blendGradient: 'url("./image/Bg-gradient.png")',
+  symbol: 'url("./image/Symbol.png")',
+  triangleGradient: 'url("./image/Triangle-gradient.png")',
 }

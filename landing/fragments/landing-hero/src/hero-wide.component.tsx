@@ -24,13 +24,13 @@ export const HeroWide = () => {
   const { isWideDesktop, isTV } = useWindowWidth()
 
   return (
-    <Column margin='0 auto'>
+    <Column fill>
       <Layout flexBasis={{ wide: 256, ultra: 428 }} />
 
       <Row flexGrow='1'>
-        <Layout flexBasis={{ wide: 230, ultra: 620 }} flexShrink='0' />
+        <Layout flexBasis={{ wide: 230, ultra: 620 }} />
 
-        <Column flexBasis={{ wide: 2290, ultra: 2600 }}>
+        <Column flexShrink={{ wide: 0 }}>
           <Row alignItems='end' flexWrap='wrap'>
             <Box width={{ wide: 803, ultra: 1177 }}>
               <Text
@@ -195,7 +195,7 @@ export const HeroWide = () => {
           </Column>
         </Box>
 
-        <Layout flexBasis={{ wide: 40, ultra: 620 }} flexShrink='0' />
+        <Layout flexBasis={{ wide: 40, ultra: 620 }} />
       </Row>
 
       <Layout flexBasis={{ wide: 200, ultra: 320 }} />
