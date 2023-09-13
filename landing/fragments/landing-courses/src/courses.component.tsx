@@ -107,7 +107,7 @@ export const Courses = () => {
                         {...hoverProps}
                         borderRadius='regular'
                         overflow='hidden'
-                        backgroundColor={hover ? 'purpurGradient' : 'navyGradient'}
+                        backgroundColor={hover ? 'purpleGradient' : 'navyGradient'}
                         display='flex'
                         height='100%'
                       >

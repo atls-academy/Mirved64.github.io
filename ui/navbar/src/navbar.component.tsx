@@ -39,7 +39,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                 backgroundColor={
                   currentElementIndexInViewport === 0 || currentElementIndexInViewport === 2
                     ? 'background.grayTransparent'
-                    : 'background.purpurTransparent'
+                    : 'background.purpleTransparent'
                 }
               />
 
@@ -56,7 +56,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                         backgroundColor={
                           currentElementIndexInViewport === 0 || currentElementIndexInViewport === 2
                             ? 'background.white'
-                            : 'background.purpur'
+                            : 'background.purple'
                         }
                         flexShrink='0'
                       />
@@ -69,7 +69,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                             currentElementIndexInViewport === 0 ||
                             currentElementIndexInViewport === 2
                               ? 'text.white'
-                              : 'text.purpur'
+                              : 'text.purple'
                           }
                           cursor='pointer'
                           fontSize='tiny'

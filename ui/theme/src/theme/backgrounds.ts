@@ -3,7 +3,7 @@ export const backgrounds = {
     'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%), #4841EA',
   navyBlueGradient:
     'linear-gradient(180deg, #3D24EC 0%, rgba(61, 36, 236, 0.00) 100%), radial-gradient(151.52% 72.21% at 100.00% 100.00%, #3909F6 0%, rgba(104, 82, 255, 0.00) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), linear-gradient(161deg, #6F57FF 0%, #4C58FF 100%)',
-  purpurGradient:
+  purpleGradient:
     'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%), #6F57FF',
   blackTransparentGradient:
     'linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), rgba(255, 255, 255, 0.08)',
