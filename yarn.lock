@@ -266,17 +266,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/button@npm:0.0.13":
-  version: 0.0.13
-  resolution: "@atls-ui-parts/button@npm:0.0.13"
+"@atls-ui-parts/button@npm:0.0.16":
+  version: 0.0.16
+  resolution: "@atls-ui-parts/button@npm:0.0.16"
   dependencies:
-    "@atls-ui-parts/styles": "npm:0.0.4"
+    "@atls-ui-parts/styles": "npm:0.0.6"
   peerDependencies:
     "@emotion/styled": 11.9.3
     react: 18.2.0
     styled-system: 5.1.5
     styled-tools: 1.7.2
-  checksum: 2d8a6d0a083789835b96697132b536381f4213db4b8498e024a81c9084f25095fb4cccc06774fa46d61584360e1c42d4098868ac2e4b3a98fcae3590d483b477
+  checksum: 330841b0fe56ad4927b7ca3fb0721a598f30c32d29a8eb175a5db77cf72bb9e648078c26168902a40f32c408c79e3e04ac9cec0500593d127e7f04b4f225448d
   languageName: node
   linkType: hard
 
@@ -389,6 +389,15 @@ __metadata:
   peerDependencies:
     styled-system: ^5.1.5
   checksum: db71a0768b6526fbecebc10554e5d76baf030a3fcda279cafd3afedd14dfe6dc0a39152a83a8479042e6e45c263c1b2ab3c0ad5b2a99684581b22d7e8cbf5eb1
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/styles@npm:0.0.6":
+  version: 0.0.6
+  resolution: "@atls-ui-parts/styles@npm:0.0.6"
+  peerDependencies:
+    styled-system: ^5.1.5
+  checksum: bb6ebb00546bff2860963f3bc8b83788b178106cf23f500bd78e0bf61d3d93a1113e05119c36246958d3cafd8b8eab889aeafa22d00eda37ab7e4e4b49bc330b
   languageName: node
   linkType: hard
 
@@ -3458,7 +3467,7 @@ __metadata:
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
     "@atls-ui-generators/button": "npm:0.0.15"
-    "@atls-ui-parts/button": "npm:0.0.13"
+    "@atls-ui-parts/button": "npm:0.0.16"
     "@atls-ui-parts/conditional-render": "npm:0.0.6"
     "@atls-ui-parts/layout": "npm:0.0.10"
     "@emotion/react": "npm:11.9.3"
