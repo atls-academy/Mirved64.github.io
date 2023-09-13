@@ -7,7 +7,7 @@
     "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
   },
   "dependencies": {
-    "@atls-ui-generators/button": "0.0.13",
+    "@atls-ui-generators/button": "0.0.15",
     "@atls-ui-parts/button": "0.0.13",
     "@atls-ui-parts/conditional-render": "0.0.6",
     "@atls-ui-parts/layout": "0.0.10",

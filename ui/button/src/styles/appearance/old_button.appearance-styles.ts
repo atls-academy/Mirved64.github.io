@@ -1,7 +1,8 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
-import { ifProp } from 'styled-tools'
-import { switchProp } from 'styled-tools'
-import { prop } from 'styled-tools'
+
+import { ifProp }                 from 'styled-tools'
+import { switchProp }             from 'styled-tools'
+import { prop }                   from 'styled-tools'
 
 const appearancePrimaryBackgroundWhiteTextDefaultStyles = createAppearanceStyles({
   fontColor: prop('theme.colors.button.primaryBackgroundWhiteText.default.font'),
@@ -91,17 +92,9 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
     )
   ),
   navyBackgroundWhiteText: ifProp(
-    prop('disabled', false),
-    appearanceNavyBackgroundWhiteTextDisabledStyles,
-    ifProp(
-      prop('pressed', false),
-      appearanceNavyBackgroundWhiteTextPressedStyles,
-      ifProp(
-        prop('hover', false),
-        appearanceNavyBackgroundWhiteTextHoverStyles,
-        appearanceNavyBackgroundWhiteTextDefaultStyles
-      )
-    )
+    prop('hover', false),
+    appearanceNavyBackgroundWhiteTextHoverStyles,
+    appearanceNavyBackgroundWhiteTextDefaultStyles
   ),
 })
 

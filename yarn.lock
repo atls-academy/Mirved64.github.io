@@ -188,9 +188,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-generators/button@npm:0.0.13":
-  version: 0.0.13
-  resolution: "@atls-ui-generators/button@npm:0.0.13"
+"@atls-ui-generators/button@npm:0.0.15":
+  version: 0.0.15
+  resolution: "@atls-ui-generators/button@npm:0.0.15"
   dependencies:
     "@atls-ui-generators/utils": "npm:0.0.5"
     "@atls/config-prettier": "npm:^0.0.5"
@@ -201,7 +201,7 @@ __metadata:
     prettier: "npm:^2.5.1"
   bin:
     generate-styles: dist/generator.js
-  checksum: 3a29727815d2923fc839a060e9b2c34d0dd8ebf6c4cbd2501a99b36059e63d03b12febc6f5a495b125720a0034810a03afdb6d95ce62f57b067cc1078be642ef
+  checksum: f84b6ab8ac0a8ad666136071aff48bc451273d5083b372bf69a3a4b394e2acb3dfe8671e983df8d9b70b21290b6eab42def98307629dd10095cde5472cbe3686
   languageName: node
   linkType: hard
 
@@ -3457,7 +3457,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
-    "@atls-ui-generators/button": "npm:0.0.13"
+    "@atls-ui-generators/button": "npm:0.0.15"
     "@atls-ui-parts/button": "npm:0.0.13"
     "@atls-ui-parts/conditional-render": "npm:0.0.6"
     "@atls-ui-parts/layout": "npm:0.0.10"
