@@ -33,12 +33,12 @@ export const Courses = () => {
         <Layout flexBasis={[64, 160]} />
 
         <Row>
-          <Layout
-            flexBasis={{ _: 20, standard: 230, ultra: 620 }}
-            // flexShrink='0'
-          />
+          <Layout flexBasis={{ _: 20, standard: 230, ultra: 620 }} />
 
-          <Column flexBasis={{ _: 335, standard: 1610, wide: 2250, ultra: 2600 }}>
+          <Column
+            flexBasis={{ _: 335, standard: 1610, wide: 2250, ultra: 2600 }}
+            flexShrink={{ wide: 0 }}
+          >
             <Row alignItems='center'>
               <Box flexWrap='wrap'>
                 <Text
@@ -146,7 +146,7 @@ export const Courses = () => {
             </Box>
           </Column>
 
-          <Layout flexBasis={{ _: 20, standard: 80, ultra: 620 }} flexShrink={0} />
+          <Layout flexBasis={{ _: 20, standard: 80, ultra: 620 }} />
         </Row>
 
         <Condition match={isMobile}>

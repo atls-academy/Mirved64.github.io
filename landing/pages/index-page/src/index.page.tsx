@@ -124,7 +124,7 @@ const IndexPage = () => {
         </Condition>
 
         <Condition match={isWideDesktop}>
-          <Parallax translateY={[-5, 10]}>
+          <Parallax translateY={[-5, 9]}>
             <Background
               backgroundColor='wavesGradient'
               backgroundSize='4400px 800px'
