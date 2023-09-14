@@ -31,7 +31,7 @@ const IndexPage = () => {
 
   return (
     <>
-      <AnimateOnLoad animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 2 }}>
+      <AnimateOnLoad animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1.2 }}>
         <Navbar sectionRefs={sectionRefs} />
       </AnimateOnLoad>
 
@@ -49,7 +49,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
           >
             <Background
@@ -64,7 +64,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
           >
             <Background
@@ -79,7 +79,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ position: 'absolute', minWidth: '100%', zIndex: 3 }}
           >
             <NavigationDesktopIndex sectionRefs={sectionRefs} />
@@ -88,7 +88,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
           >
             <Parallax translateY={[6, 12]}>
@@ -101,7 +101,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
           >
             <Background
@@ -116,7 +116,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
           >
             <Background
@@ -131,7 +131,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ position: 'absolute', minWidth: '100%', zIndex: 2 }}
           >
             <NavigationDesktopIndex sectionRefs={sectionRefs} />
@@ -140,7 +140,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ position: 'absolute', minWidth: '100%' }}
           >
             <Parallax translateY={[4, 12]}>
@@ -153,7 +153,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
           >
             <Background
@@ -168,7 +168,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
           >
             <Background
@@ -183,7 +183,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ position: 'absolute', minWidth: '100%', zIndex: 2 }}
           >
             <NavigationDesktopIndex sectionRefs={sectionRefs} />
@@ -192,7 +192,7 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.2 }}
             style={{ position: 'absolute', minWidth: '100%' }}
           >
             <Column>
