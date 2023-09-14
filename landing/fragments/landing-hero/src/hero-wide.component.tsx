@@ -19,11 +19,11 @@ import { SocialLinkDesktop } from './social-link'
 import { SocialLinkUltra }   from './social-link'
 
 export const HeroWide = () => (
-  <Column fill>
+  <Box flexDirection='column' flexGrow='1'>
     <Layout flexBasis={{ wide: 256, ultra: 428 }} />
 
     <Row flexGrow='1'>
-      <Layout flexBasis={{ wide: 230, ultra: 620 }} />
+      <Layout flexBasis={{ wide: 230, ultra: 620 }} flexShrink='0' />
 
       <Column flexShrink={{ wide: 0 }}>
         <Row alignItems='end' flexWrap='wrap'>
@@ -196,9 +196,9 @@ export const HeroWide = () => (
         </Column>
       </Box>
 
-      <Layout flexBasis={{ wide: 40, ultra: 620 }} />
+      <Layout flexBasis={{ wide: 40, ultra: 620 }} flexShrink='0' />
     </Row>
 
     <Layout flexBasis={{ wide: 200, ultra: 320 }} />
-  </Column>
+  </Box>
 )

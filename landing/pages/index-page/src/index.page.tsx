@@ -42,7 +42,7 @@ const IndexPage = () => {
         position='absolute'
         overflow='hidden'
         width='100%'
-        height={{ _: '1030px', standard: '1830px', ultra: '2070px' }}
+        height={{ _: '1030px', standard: '1830px', wide: '1440px', ultra: '2070px' }}
         zIndex={1}
       >
         <Box display={{ _: 'none', ultra: 'flex' }}>
@@ -100,17 +100,57 @@ const IndexPage = () => {
         </Box>
 
         <Box display={{ _: 'none', wide: 'flex', ultra: 'none' }}>
-          <Parallax translateY={[-10, 11]}>
+          <AnimateOnLoad
+            animate={{ x: 0 }}
+            initial={{ x: '100%' }}
+            transition={{ duration: 2 }}
+            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
+          >
             <Background
-              backgroundColor='banner'
-              backgroundSize='cover'
+              width='100%'
+              height='1440px'
+              backgroundColor='symbol'
+              backgroundSize='contain'
               backgroundRepeat='no-repeat'
-            >
-              <NavigationDesktopIndex sectionRefs={sectionRefs} />
+              onCompositionEnd='absolute'
+            />
+          </AnimateOnLoad>
 
+          <AnimateOnLoad
+            animate={{ x: 0 }}
+            initial={{ x: '-100%' }}
+            transition={{ duration: 2 }}
+            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
+          >
+            <Background
+              width='100%'
+              height='1440px'
+              backgroundColor='triangleGradient'
+              backgroundSize='contain'
+              backgroundRepeat='no-repeat'
+              onCompositionEnd='absolute'
+            />
+          </AnimateOnLoad>
+
+          <AnimateOnLoad
+            animate={{ y: 0 }}
+            initial={{ y: '-100%' }}
+            transition={{ duration: 2 }}
+            style={{ position: 'absolute', minWidth: '100%', zIndex: 2 }}
+          >
+            <NavigationDesktopIndex sectionRefs={sectionRefs} />
+          </AnimateOnLoad>
+
+          <AnimateOnLoad
+            animate={{ y: 0 }}
+            initial={{ y: '100%' }}
+            transition={{ duration: 2 }}
+            style={{ position: 'absolute', minWidth: '100%' }}
+          >
+            <Parallax translateY={[4, 12]}>
               <HeroWide />
-            </Background>
-          </Parallax>
+            </Parallax>
+          </AnimateOnLoad>
         </Box>
 
         <Box display={{ _: 'none', standard: 'flex', wide: 'none' }}>
@@ -194,7 +234,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={11}
-        top={{ _: 934, standard: 1628, wide: 1440, ultra: 1989 }}
+        top={{ _: 934, standard: 1628, wide: 1340, ultra: 1989 }}
         overflow='hidden'
       >
         <Condition match={isTV}>
