@@ -46,57 +46,55 @@ const IndexPage = () => {
         zIndex={1}
       >
         <Box display={{ _: 'none', ultra: 'flex' }}>
-          <Parallax translateY={[-7.5, 15]}>
-            <AnimateOnLoad
-              animate={{ x: 0 }}
-              initial={{ x: '100%' }}
-              transition={{ duration: 2 }}
-              style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
-            >
-              <Background
-                width='100%'
-                height='2160px'
-                backgroundColor='symbol'
-                backgroundSize='cover'
-                backgroundRepeat='no-repeat'
-                onCompositionEnd='absolute'
-              />
-            </AnimateOnLoad>
+          <AnimateOnLoad
+            animate={{ x: 0 }}
+            initial={{ x: '100%' }}
+            transition={{ duration: 2 }}
+            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+          >
+            <Background
+              width='100%'
+              height='2070px'
+              backgroundColor='symbol'
+              backgroundSize='cover'
+              backgroundRepeat='no-repeat'
+            />
+          </AnimateOnLoad>
 
-            <AnimateOnLoad
-              animate={{ x: 0 }}
-              initial={{ x: '-100%' }}
-              transition={{ duration: 2 }}
-              style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
-            >
-              <Background
-                width='100%'
-                height='2160px'
-                backgroundColor='triangleGradient'
-                backgroundSize='cover'
-                backgroundRepeat='no-repeat'
-                onCompositionEnd='absolute'
-              />
-            </AnimateOnLoad>
+          <AnimateOnLoad
+            animate={{ x: 0 }}
+            initial={{ x: '-100%' }}
+            transition={{ duration: 2 }}
+            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+          >
+            <Background
+              width='100%'
+              height='2070px'
+              backgroundColor='triangleGradient'
+              backgroundSize='cover'
+              backgroundRepeat='no-repeat'
+            />
+          </AnimateOnLoad>
 
-            <AnimateOnLoad
-              animate={{ y: 0 }}
-              initial={{ y: '-100%' }}
-              transition={{ duration: 2 }}
-              style={{ position: 'absolute', minWidth: '100%', zIndex: 3 }}
-            >
-              <NavigationDesktopIndex sectionRefs={sectionRefs} />
-            </AnimateOnLoad>
+          <AnimateOnLoad
+            animate={{ y: 0 }}
+            initial={{ y: '-100%' }}
+            transition={{ duration: 2 }}
+            style={{ position: 'absolute', minWidth: '100%', zIndex: 3 }}
+          >
+            <NavigationDesktopIndex sectionRefs={sectionRefs} />
+          </AnimateOnLoad>
 
-            <AnimateOnLoad
-              animate={{ y: 0 }}
-              initial={{ y: '100%' }}
-              transition={{ duration: 2 }}
-              style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
-            >
+          <AnimateOnLoad
+            animate={{ y: 0 }}
+            initial={{ y: '100%' }}
+            transition={{ duration: 2 }}
+            style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
+          >
+            <Parallax translateY={[6, 12]}>
               <HeroWide />
-            </AnimateOnLoad>
-          </Parallax>
+            </Parallax>
+          </AnimateOnLoad>
         </Box>
 
         <Box display={{ _: 'none', wide: 'flex', ultra: 'none' }}>
@@ -112,7 +110,6 @@ const IndexPage = () => {
               backgroundColor='symbol'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
-              onCompositionEnd='absolute'
             />
           </AnimateOnLoad>
 
@@ -128,7 +125,6 @@ const IndexPage = () => {
               backgroundColor='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
-              onCompositionEnd='absolute'
             />
           </AnimateOnLoad>
 
@@ -166,7 +162,6 @@ const IndexPage = () => {
               backgroundColor='symbol'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
-              onCompositionEnd='absolute'
             />
           </AnimateOnLoad>
 
@@ -182,7 +177,6 @@ const IndexPage = () => {
               backgroundColor='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
-              onCompositionEnd='absolute'
             />
           </AnimateOnLoad>
 
@@ -304,7 +298,7 @@ const IndexPage = () => {
         position='absolute'
         width='100%'
         zIndex={12}
-        top={{ _: 2629, standard: 3636, wide: 3591, ultra: 4435 }}
+        top={{ _: 2629, standard: 3636, wide: 3591, ultra: 4275 }}
       >
         <Condition match={isTV}>
           <Parallax translateY={[-5, 5]}>
