@@ -14,6 +14,8 @@ import { Steps }                  from '@landing/fragment-steps'
 import { Technologies }           from '@landing/fragment-technologies'
 import { Background }             from '@ui/background'
 import { Condition }              from '@ui/condition'
+import { Column }                 from '@ui/layout'
+import { Box }                    from '@ui/layout'
 import { Navbar }                 from '@ui/navbar'
 import { AnimateOnLoad }          from '@ui/preloader'
 import { useWindowWidth }         from '@ui/utils'
@@ -29,30 +31,33 @@ const IndexPage = () => {
 
   return (
     <>
-      <Navbar sectionRefs={sectionRefs} />
+      <AnimateOnLoad animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 2 }}>
+        <Navbar sectionRefs={sectionRefs} />
+      </AnimateOnLoad>
 
       <Background
         id='academy'
         ref={sectionRefs[0]}
         backgroundColor='navyBlueGradient'
         position='absolute'
+        overflow='hidden'
         width='100%'
-        height={{ ultra: '2160px' }}
-        zIndex={-2}
+        height={{ _: '1030px', standard: '1830px', ultra: '2070px' }}
+        zIndex={1}
       >
-        <Condition match={isTV}>
+        <Box display={{ _: 'none', ultra: 'flex' }}>
           <Parallax translateY={[-7.5, 15]}>
             <AnimateOnLoad
               animate={{ x: 0 }}
               initial={{ x: '100%' }}
-              transition={{ duration: 3 }}
-              style={{ zIndex: -1, position: 'absolute', width: '100%' }}
+              transition={{ duration: 2 }}
+              style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
             >
               <Background
                 width='100%'
                 height='2160px'
                 backgroundColor='symbol'
-                backgroundSize='3840px 2160px'
+                backgroundSize='cover'
                 backgroundRepeat='no-repeat'
                 onCompositionEnd='absolute'
               />
@@ -61,14 +66,14 @@ const IndexPage = () => {
             <AnimateOnLoad
               animate={{ x: 0 }}
               initial={{ x: '-100%' }}
-              transition={{ duration: 3 }}
-              style={{ zIndex: -1, position: 'absolute', width: '100%' }}
+              transition={{ duration: 2 }}
+              style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
             >
               <Background
                 width='100%'
                 height='2160px'
                 backgroundColor='triangleGradient'
-                backgroundSize='3840px 2160px'
+                backgroundSize='cover'
                 backgroundRepeat='no-repeat'
                 onCompositionEnd='absolute'
               />
@@ -77,8 +82,8 @@ const IndexPage = () => {
             <AnimateOnLoad
               animate={{ y: 0 }}
               initial={{ y: '-100%' }}
-              transition={{ duration: 3 }}
-              style={{ position: 'absolute', width: '100%' }}
+              transition={{ duration: 2 }}
+              style={{ position: 'absolute', minWidth: '100%', zIndex: 3 }}
             >
               <NavigationDesktopIndex sectionRefs={sectionRefs} />
             </AnimateOnLoad>
@@ -86,15 +91,15 @@ const IndexPage = () => {
             <AnimateOnLoad
               animate={{ y: 0 }}
               initial={{ y: '100%' }}
-              transition={{ duration: 3 }}
-              style={{ position: 'absolute', width: '100%' }}
+              transition={{ duration: 2 }}
+              style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
             >
               <HeroWide />
             </AnimateOnLoad>
           </Parallax>
-        </Condition>
+        </Box>
 
-        <Condition match={isWideDesktop}>
+        <Box display={{ _: 'none', wide: 'flex', ultra: 'none' }}>
           <Parallax translateY={[-10, 11]}>
             <Background
               backgroundColor='banner'
@@ -106,25 +111,66 @@ const IndexPage = () => {
               <HeroWide />
             </Background>
           </Parallax>
-        </Condition>
+        </Box>
 
-        <Condition match={isDesktop}>
-          <Parallax translateY={[-5, 10]}>
+        <Box display={{ _: 'none', standard: 'flex', wide: 'none' }}>
+          <AnimateOnLoad
+            animate={{ x: 0 }}
+            initial={{ x: '100%' }}
+            transition={{ duration: 2 }}
+            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
+          >
             <Background
-              backgroundColor='banner'
-              backgroundSize='cover'
+              width='100%'
+              height='1708px'
+              backgroundColor='symbol'
+              backgroundSize='contain'
               backgroundRepeat='no-repeat'
-            >
-              <NavigationDesktopIndex sectionRefs={sectionRefs} />
+              onCompositionEnd='absolute'
+            />
+          </AnimateOnLoad>
 
-              <Hero />
+          <AnimateOnLoad
+            animate={{ x: 0 }}
+            initial={{ x: '-100%' }}
+            transition={{ duration: 2 }}
+            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
+          >
+            <Background
+              width='100%'
+              height='1708px'
+              backgroundColor='triangleGradient'
+              backgroundSize='contain'
+              backgroundRepeat='no-repeat'
+              onCompositionEnd='absolute'
+            />
+          </AnimateOnLoad>
 
-              <About />
-            </Background>
-          </Parallax>
-        </Condition>
+          <AnimateOnLoad
+            animate={{ y: 0 }}
+            initial={{ y: '-100%' }}
+            transition={{ duration: 2 }}
+            style={{ position: 'absolute', minWidth: '100%', zIndex: 2 }}
+          >
+            <NavigationDesktopIndex sectionRefs={sectionRefs} />
+          </AnimateOnLoad>
 
-        <Condition match={isMobile}>
+          <AnimateOnLoad
+            animate={{ y: 0 }}
+            initial={{ y: '100%' }}
+            transition={{ duration: 2 }}
+            style={{ position: 'absolute', minWidth: '100%' }}
+          >
+            <Column>
+              <Parallax translateY={[4, 11]}>
+                <Hero />
+                <About />
+              </Parallax>
+            </Column>
+          </AnimateOnLoad>
+        </Box>
+
+        <Box display={{ _: 'flex', standard: 'none' }}>
           <Background
             backgroundColor='banner'
             backgroundSize='736px 415px'
@@ -137,7 +183,7 @@ const IndexPage = () => {
 
             <About />
           </Background>
-        </Condition>
+        </Box>
       </Background>
 
       <Background
@@ -147,8 +193,8 @@ const IndexPage = () => {
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
         width='100%'
-        zIndex={1}
-        top={{ _: 934, standard: 1670, wide: 1440, ultra: 1989 }}
+        zIndex={11}
+        top={{ _: 934, standard: 1628, wide: 1440, ultra: 1989 }}
         overflow='hidden'
       >
         <Condition match={isTV}>
@@ -217,8 +263,8 @@ const IndexPage = () => {
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
         width='100%'
-        zIndex={2}
-        top={{ _: 2629, standard: 3761, wide: 3591, ultra: 4435 }}
+        zIndex={12}
+        top={{ _: 2629, standard: 3636, wide: 3591, ultra: 4435 }}
       >
         <Condition match={isTV}>
           <Parallax translateY={[-5, 5]}>
@@ -330,8 +376,8 @@ const IndexPage = () => {
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
         width='100%'
-        zIndex={3}
-        top={{ _: 4237, standard: 6491, wide: 6699, ultra: 7983 }}
+        zIndex={13}
+        top={{ _: 4237, standard: 6337, wide: 6699, ultra: 7983 }}
       >
         <Condition match={isWideDesktop || isTV}>
           <Background

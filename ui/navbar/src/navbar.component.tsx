@@ -26,7 +26,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
         left={40}
         width={138}
         height={116}
-        zIndex={11}
+        zIndex={21}
       >
         <Scrollspy sectionRefs={sectionRefs} offset={-640}>
           {({ currentElementIndexInViewport }) => (
