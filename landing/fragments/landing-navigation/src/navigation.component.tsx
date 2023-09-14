@@ -10,7 +10,6 @@ import { Row }               from '@ui/layout'
 import { Layout }            from '@ui/layout'
 import { Logo }              from '@ui/logo'
 import { Text }              from '@ui/text'
-import { useWindowWidth }    from '@ui/utils'
 
 import { NavLinks }          from './data'
 import { DrawerDesktop }     from './drawer'
@@ -18,7 +17,6 @@ import { NavLinkItem }       from './navlink-item'
 import { NavLinkItemDrawer } from './navlink-item'
 
 export const NavigationDesktop = () => {
-  const { isTV } = useWindowWidth()
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
@@ -55,13 +53,13 @@ export const NavigationDesktop = () => {
       >
         <Layout flexBasis={40} />
 
-        <Condition match={!isTV}>
+        <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
           <Logo fill='white' width={56} height={50} />
-        </Condition>
+        </Box>
 
-        <Condition match={isTV}>
+        <Box display={{ _: 'none', ultra: 'flex' }}>
           <Logo fill='white' width={84} height={75} />
-        </Condition>
+        </Box>
 
         <Layout flexBasis={40} flexGrow='1' />
 
@@ -84,40 +82,38 @@ export const NavigationDesktop = () => {
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        <Box width={{ standard: 136, ultra: 203 }}>
-          <Condition match={!isTV}>
-            <Button
-              onClick={handleClick}
-              variant='ghostBackgroundWhiteText'
-              size='bigSizeNormalRadiiBigPadding'
-              icon={<ArrowDownIcon width={12} height={6} />}
-              widthIcon={40}
-              heightIcon={40}
-              backgroundIcon='background.white'
-              radiiIcon='little'
-            >
-              <Text color='text.white' fontSize='compact' lineHeight='small'>
-                <FormattedMessage id='navigation.button' />
-              </Text>
-            </Button>
-          </Condition>
+        <Box width={136} display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
+          <Button
+            onClick={handleClick}
+            variant='ghostBackgroundWhiteText'
+            size='bigSizeNormalRadiiBigPadding'
+            icon={<ArrowDownIcon width={12} height={6} />}
+            widthIcon={40}
+            heightIcon={40}
+            backgroundIcon='background.white'
+            radiiIcon='little'
+          >
+            <Text color='text.white' fontSize='compact' lineHeight='small'>
+              <FormattedMessage id='navigation.button' />
+            </Text>
+          </Button>
+        </Box>
 
-          <Condition match={isTV}>
-            <Button
-              onClick={handleClick}
-              variant='ghostBackgroundWhiteText'
-              size='giantSizeRegularRadii'
-              icon={<ArrowDownIcon width={24} height={24} />}
-              widthIcon={60}
-              heightIcon={60}
-              backgroundIcon='background.white'
-              radiiIcon='usual'
-            >
-              <Text color='text.white' fontSize='medium' lineHeight='small'>
-                <FormattedMessage id='navigation.button' />
-              </Text>
-            </Button>
-          </Condition>
+        <Box width={203} display={{ _: 'none', ultra: 'flex' }}>
+          <Button
+            onClick={handleClick}
+            variant='ghostBackgroundWhiteText'
+            size='giantSizeRegularRadii'
+            icon={<ArrowDownIcon width={24} height={24} />}
+            widthIcon={60}
+            heightIcon={60}
+            backgroundIcon='background.white'
+            radiiIcon='usual'
+          >
+            <Text color='text.white' fontSize='medium' lineHeight='small'>
+              <FormattedMessage id='navigation.button' />
+            </Text>
+          </Button>
         </Box>
 
         <Layout flexBasis={40} />

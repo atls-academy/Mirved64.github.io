@@ -14,14 +14,11 @@ import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
 
 import { CardDataDesktop }  from '../data'
 import { DrawerProps }      from './drawer.interfaces'
 
 export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) => {
-  const { isTV } = useWindowWidth()
-
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
     ...el,
     id: index,
@@ -68,13 +65,13 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
           <Row alignItems='center' height={56}>
             <Layout flexBasis={40} />
 
-            <Condition match={!isTV}>
+            <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
               <Logo fill='rgba(58, 55, 93, 1)' width={56} height={50} />
-            </Condition>
+            </Box>
 
-            <Condition match={isTV}>
+            <Box display={{ _: 'none', ultra: 'flex' }}>
               <Logo fill='rgba(58, 55, 93, 1)' width={84} height={75} />
-            </Condition>
+            </Box>
 
             <Layout flexBasis={40} flexGrow='1' />
 
@@ -82,40 +79,38 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
 
             <Layout flexBasis={40} flexGrow='1' />
 
-            <Box width={{ standard: 136, ultra: 203 }}>
-              <Condition match={!isTV}>
-                <Button
-                  onClick={onClose}
-                  variant='primaryBackgroundWhiteText'
-                  size='bigSizeNormalRadiiBigPadding'
-                  icon={<ArrowUpIcon width={12} height={6} />}
-                  widthIcon={40}
-                  heightIcon={40}
-                  backgroundIcon='background.white'
-                  radiiIcon='little'
-                >
-                  <Text color='text.white' fontSize='compact' lineHeight='small'>
-                    <FormattedMessage id='navigation.button' />
-                  </Text>
-                </Button>
-              </Condition>
+            <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }} width={136}>
+              <Button
+                onClick={onClose}
+                variant='primaryBackgroundWhiteText'
+                size='bigSizeNormalRadiiBigPadding'
+                icon={<ArrowUpIcon width={12} height={6} />}
+                widthIcon={40}
+                heightIcon={40}
+                backgroundIcon='background.white'
+                radiiIcon='little'
+              >
+                <Text color='text.white' fontSize='compact' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
+            </Box>
 
-              <Condition match={isTV}>
-                <Button
-                  onClick={onClose}
-                  variant='primaryBackgroundWhiteText'
-                  size='giantSizeRegularRadii'
-                  icon={<ArrowUpIcon width={24} height={24} />}
-                  widthIcon={60}
-                  heightIcon={60}
-                  backgroundIcon='background.white'
-                  radiiIcon='usual'
-                >
-                  <Text color='text.white' fontSize='medium' lineHeight='small'>
-                    <FormattedMessage id='navigation.button' />
-                  </Text>
-                </Button>
-              </Condition>
+            <Box display={{ _: 'none', ultra: 'flex' }} width={203}>
+              <Button
+                onClick={onClose}
+                variant='primaryBackgroundWhiteText'
+                size='giantSizeRegularRadii'
+                icon={<ArrowUpIcon width={24} height={24} />}
+                widthIcon={60}
+                heightIcon={60}
+                backgroundIcon='background.white'
+                radiiIcon='usual'
+              >
+                <Text color='text.white' fontSize='medium' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
             </Box>
 
             <Layout flexBasis={40} />
