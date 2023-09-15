@@ -19,26 +19,25 @@ const LibraryPage = () => {
         <Header />
       </Condition>
 
-      <Background backgroundColor='navyBlueGradient' width='100%'>
+      <Background
+        backgroundColor='navyBlueGradient'
+        width='100%'
+        height={{ standard: 1815, wide: 970, ultra: 1226 }}
+      >
         <Background
           backgroundColor='banner'
           backgroundSize={['736px 415px', '100% 1080px']}
           backgroundPosition={['-260px -20px', '0']}
           backgroundRepeat='no-repeat'
         >
-          <Condition match={!isMobile}>
-            <Parallax translateY={[-17, 15]}>
-              <NavigationDesktop />
-
-              <LibraryBanner />
-            </Parallax>
-          </Condition>
-
-          <Condition match={isMobile}>
-            <NavigationMobile />
-
+          <NavigationDesktop />
+          <Parallax translateY={[-17, 15]}>
             <LibraryBanner />
-          </Condition>
+          </Parallax>
+
+          <NavigationMobile />
+
+          <LibraryBanner />
         </Background>
       </Background>
 
@@ -46,7 +45,7 @@ const LibraryPage = () => {
         backgroundColor='white'
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
-        top={[500, 889]}
+        top={{ _: 500, standard: 889, wide: 890, ultra: 1306 }}
         width='100%'
         zIndex={1}
       >

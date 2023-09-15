@@ -22,20 +22,14 @@ export const LibraryBanner = () => {
   const [searchQuery, setSearchQuery] = useState('')
 
   const searchButton = (
-    <Box width={{ standard: 132, ultra: 165 }}>
+    <Box width={172}>
       <Button variant='navyBackgroundWhiteText' size='usualSizeCompactRadii'>
-        <Text
-          color='text.white'
-          fontSize={{ standard: 'little', ultra: 'small' }}
-          lineHeight='usual'
-        >
+        <Text color='text.white' fontSize='little' lineHeight='usual'>
           <FormattedMessage id='library.search-button' />
         </Text>
       </Button>
     </Box>
   )
-
-  const Indent = () => <Layout flexBasis={{ standard: 48, ultra: 72 }} />
 
   const getColor = (): string => {
     if (hover) return 'darkPurpleTransparent'
@@ -45,41 +39,33 @@ export const LibraryBanner = () => {
   }
 
   return (
-    <Row display={{ standard: 'flex' }}>
-      <Layout flexBasis={{ standard: 230, ultra: 620 }} flexShrink='0' />
+    <Row display={{ _: 'flex', standard: 'none' }}>
+      <Layout flexBasis={20} flexShrink='0' />
 
       <Column flexGrow='1'>
-        <Layout flexBasis={{ standard: 200, wide: 256, ultra: 428 }} />
+        <Layout flexBasis={100} />
 
-        <Box maxWidth={{ standard: 1460, wide: 1987, ultra: 2920 }}>
-          <Text
-            color='text.white'
-            fontSize={{ standard: 'stupendous', ultra: 'biggest' }}
-            lineHeight='normal'
-          >
+        <Box maxWidth={225}>
+          <Text color='text.white' fontSize='normal' lineHeight='huge'>
             <FormattedMessage id='library.title' />
           </Text>
         </Box>
 
-        <Indent />
+        <Layout flexBasis={24} />
 
         <Divider backgroundColor='background.ghost' weight={1} />
 
-        <Indent />
+        <Layout flexBasis={24} />
 
-        <Box maxWidth={{ standard: '600px', wide: 640, ultra: 960 }}>
-          <Text
-            color='text.white'
-            fontSize={{ standard: 'medium', ultra: 'usual' }}
-            lineHeight='huge'
-          >
+        <Box maxWidth='100%'>
+          <Text color='text.white' fontSize='tiny' lineHeight='huge'>
             <FormattedMessage id='library.text' />
           </Text>
         </Box>
 
-        <Indent />
+        <Layout flexBasis={24} />
 
-        <Box maxWidth={[335, 600]} {...hoverProps} {...focusProps}>
+        <Box maxWidth={335} {...hoverProps} {...focusProps}>
           <Input
             value={searchQuery}
             onChange={setSearchQuery}
@@ -95,10 +81,10 @@ export const LibraryBanner = () => {
           />
         </Box>
 
-        <Layout flexBasis={240} />
+        <Layout flexBasis={100} />
       </Column>
 
-      <Layout flexBasis={{ standard: 230, ultra: 620 }} flexShrink='0' />
+      <Layout flexBasis={20} flexShrink='0' />
     </Row>
   )
 }
