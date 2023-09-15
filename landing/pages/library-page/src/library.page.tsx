@@ -1,6 +1,7 @@
 import React                 from 'react'
 import { Parallax }          from 'react-scroll-parallax'
 
+import { Header }            from '@landing/fragment-header'
 import { CardsLibrary }      from '@landing/fragment-library'
 import { LibraryBanner }     from '@landing/fragment-library'
 import { NavigationDesktop } from '@landing/fragment-navigation'
@@ -14,6 +15,10 @@ const LibraryPage = () => {
 
   return (
     <>
+      <Condition match={!isMobile}>
+        <Header />
+      </Condition>
+
       <Background backgroundColor='navyBlueGradient' width='100%'>
         <Background
           backgroundColor='banner'
