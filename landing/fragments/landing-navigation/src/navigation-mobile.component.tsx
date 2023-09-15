@@ -21,7 +21,12 @@ export const NavigationMobile = () => {
     <>
       <DrawerMobile active={active} onClose={handleClick} />
 
-      <Row height={80} alignItems='center' justifyContent='center'>
+      <Row
+        height={80}
+        alignItems='center'
+        justifyContent='center'
+        display={{ _: 'flex', standard: 'none' }}
+      >
         <Layout flexBasis={20} />
 
         <Box>
