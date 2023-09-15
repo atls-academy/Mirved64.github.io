@@ -7,6 +7,7 @@
     "@landing/fragment-about": "workspace: 0.0.1",
     "@landing/fragment-courses": "workspace:0.0.1",
     "@landing/fragment-faq": "workspace:0.0.1",
+    "@landing/fragment-header": "workspace:0.0.1",
     "@landing/fragment-hero": "workspace:0.0.1",
     "@landing/fragment-navigation": "workspace:0.0.1",
     "@landing/fragment-process": "workspace:0.0.1",

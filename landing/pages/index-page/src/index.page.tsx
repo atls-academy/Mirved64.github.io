@@ -5,6 +5,7 @@ import { useRef }                 from 'react'
 import { About }                  from '@landing/fragment-about'
 import { Courses }                from '@landing/fragment-courses'
 import { Faq }                    from '@landing/fragment-faq'
+import { Header }                 from '@landing/fragment-header'
 import { Hero }                   from '@landing/fragment-hero'
 import { HeroWide }               from '@landing/fragment-hero'
 import { NavigationDesktopIndex } from '@landing/fragment-navigation'
@@ -31,7 +32,15 @@ const IndexPage = () => {
 
   return (
     <>
-      <AnimateOnLoad animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: 1.2 }}>
+      <Condition match={!isMobile}>
+        <Header sectionRefs={sectionRefs} />
+      </Condition>
+
+      <AnimateOnLoad
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1.2 }}
+      >
         <Navbar sectionRefs={sectionRefs} />
       </AnimateOnLoad>
 
@@ -46,6 +55,7 @@ const IndexPage = () => {
         zIndex={1}
       >
         <Box display={{ _: 'none', ultra: 'flex' }}>
+          <Header sectionRefs={sectionRefs} />
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
