@@ -1,25 +1,30 @@
-import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useState }           from 'react'
+import { Scrollspy }              from '@makotot/ghostui'
 
-import { CardDataDesktop }    from '@landing/fragment-navigation'
-import { NavLinkItemDrawer }  from '@landing/fragment-navigation'
-import { NavLinks }           from '@landing/fragment-navigation'
-import { Background }         from '@ui/background/src'
-import { Button }             from '@ui/button'
-import { Card }               from '@ui/card/src'
-import { Condition }          from '@ui/condition'
-import { ArrowDownIcon }      from '@ui/icons'
-import { ArrowUpIcon }        from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Column }             from '@ui/layout/src'
-import { Logo }               from '@ui/logo'
-import { Text }               from '@ui/text'
-import { useScrollDirection } from '@ui/utils'
+import React                      from 'react'
+import { FC }                     from 'react'
+import { FormattedMessage }       from 'react-intl'
+import { useState }               from 'react'
 
-export const Header = () => {
+import { CardDataDesktop }        from '@landing/fragment-navigation'
+import { NavLinks }               from '@landing/fragment-navigation'
+import { NavLinkItemDrawerIndex } from '@landing/fragment-navigation'
+import { Background }             from '@ui/background/src'
+import { Button }                 from '@ui/button'
+import { Card }                   from '@ui/card/src'
+import { Condition }              from '@ui/condition'
+import { ArrowDownIcon }          from '@ui/icons'
+import { ArrowUpIcon }            from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Column }                 from '@ui/layout/src'
+import { Logo }                   from '@ui/logo'
+import { Text }                   from '@ui/text'
+import { useScrollDirection }     from '@ui/utils'
+
+import { HeaderIndexProps }       from './header.interfaces'
+
+export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs }) => {
   const [visible, setVisible] = useState<boolean>(false)
 
   const { scrollDir, scrollYpx } = useScrollDirection()
@@ -94,22 +99,33 @@ export const Header = () => {
 
             <Layout flexBasis={40} flexGrow='1' />
 
-            {NavLinks.map((navLink, index) => (
-              <Box
-                key={navLink.id}
-                width={
-                  index < NavLinks.length - 1
-                    ? { standard: 220, ultra: 330 }
-                    : { standard: 200, ultra: 300 }
-                }
-              >
-                <NavLinkItemDrawer path={navLink.path} name={navLink.name} />
+            <Scrollspy sectionRefs={sectionRefs} offset={-640}>
+              {({ currentElementIndexInViewport }) => (
+                <Box>
+                  {NavLinks.map((navLink, index) => (
+                    <Box
+                      key={navLink.id}
+                      width={
+                        index < NavLinks.length - 1
+                          ? { standard: 220, ultra: 330 }
+                          : { standard: 200, ultra: 300 }
+                      }
+                    >
+                      <NavLinkItemDrawerIndex
+                        path={navLink.path}
+                        name={navLink.name}
+                        currentElementIndexInViewport={currentElementIndexInViewport}
+                        index={index}
+                      />
 
-                <Condition match={index < NavLinks.length - 1}>
-                  <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-                </Condition>
-              </Box>
-            ))}
+                      <Condition match={index < NavLinks.length - 1}>
+                        <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+                      </Condition>
+                    </Box>
+                  ))}
+                </Box>
+              )}
+            </Scrollspy>
 
             <Layout flexBasis={40} flexGrow='1' />
 
