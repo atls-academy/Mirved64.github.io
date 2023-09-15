@@ -15,7 +15,7 @@ import { Text }             from '@ui/text'
 import { useFocus }         from '@ui/utils'
 import { useHover }         from '@ui/utils'
 
-export const LibraryBanner = () => {
+export const LibraryBannerMobile = () => {
   const { hover, hoverProps } = useHover()
   const { focus, focusProps } = useFocus()
   const intl = useIntl()

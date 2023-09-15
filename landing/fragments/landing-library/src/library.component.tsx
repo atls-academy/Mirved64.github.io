@@ -8,7 +8,6 @@ import { Divider }          from '@ui/divider'
 import { SearchIcon }       from '@ui/icons'
 import { Input }            from '@ui/input'
 import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
@@ -45,13 +44,13 @@ export const LibraryBanner = () => {
   }
 
   return (
-    <Row display={{ standard: 'flex' }}>
+    <Box display={{ standard: 'flex' }} flexGrow='1'>
       <Layout flexBasis={{ standard: 230, ultra: 620 }} flexShrink='0' />
 
-      <Column flexGrow='1'>
+      <Column flexGrow='1' flexShrink={{ wide: 0 }}>
         <Layout flexBasis={{ standard: 200, wide: 256, ultra: 428 }} />
 
-        <Box maxWidth={{ standard: 1460, wide: 1987, ultra: 2920 }}>
+        <Box width={{ standard: 1460, wide: 1987, ultra: 2920 }}>
           <Text
             color='text.white'
             fontSize={{ standard: 'stupendous', ultra: 'biggest' }}
@@ -99,6 +98,6 @@ export const LibraryBanner = () => {
       </Column>
 
       <Layout flexBasis={{ standard: 230, ultra: 620 }} flexShrink='0' />
-    </Row>
+    </Box>
   )
 }
