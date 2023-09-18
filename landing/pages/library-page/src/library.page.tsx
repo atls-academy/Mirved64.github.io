@@ -14,7 +14,7 @@ import { AnimateOnLoad }       from '@ui/preloader'
 import { useWindowWidth }      from '@ui/utils'
 
 const LibraryPage = () => {
-  const { isMobile } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
   return (
     <>
@@ -211,7 +211,18 @@ const LibraryPage = () => {
         width='100%'
         zIndex={11}
       >
-        <Condition match={!isMobile}>
+        <Condition match={isWideDesktop || isTV}>
+          <Background
+            backgroundColor='wavesGradient'
+            backgroundSize='4400px 800px'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='0 404px'
+          >
+            <CardsLibrary />
+          </Background>
+        </Condition>
+
+        <Condition match={isDesktop}>
           <Background
             backgroundColor='wavesGradient'
             backgroundSize='4400px 800px'
