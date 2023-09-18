@@ -7,10 +7,10 @@ import { LibraryBanner }       from '@landing/fragment-library'
 import { LibraryBannerMobile } from '@landing/fragment-library'
 import { NavigationDesktop }   from '@landing/fragment-navigation'
 import { NavigationMobile }    from '@landing/fragment-navigation'
+import { AnimateOnLoad }       from '@ui/animate'
 import { Background }          from '@ui/background'
 import { Condition }           from '@ui/condition'
 import { Box }                 from '@ui/layout'
-import { AnimateOnLoad }       from '@ui/preloader'
 import { useWindowWidth }      from '@ui/utils'
 
 const LibraryPage = () => {

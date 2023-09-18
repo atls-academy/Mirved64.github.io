@@ -13,12 +13,12 @@ import { NavigationMobile }       from '@landing/fragment-navigation'
 import { Process }                from '@landing/fragment-process'
 import { Steps }                  from '@landing/fragment-steps'
 import { Technologies }           from '@landing/fragment-technologies'
+import { AnimateOnLoad }          from '@ui/animate'
 import { Background }             from '@ui/background'
 import { Condition }              from '@ui/condition'
 import { Column }                 from '@ui/layout'
 import { Box }                    from '@ui/layout'
 import { Navbar }                 from '@ui/navbar'
-import { AnimateOnLoad }          from '@ui/preloader'
 import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {

@@ -2530,11 +2530,11 @@ __metadata:
     "@landing/fragment-technologies": "workspace:0.0.1"
     "@types/react": "npm:18.2.6"
     "@types/react-dom": "npm:18.2.4"
+    "@ui/animate": "workspace:0.0.1"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/navbar": "workspace:0.0.1"
-    "@ui/preloader": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -2556,10 +2556,10 @@ __metadata:
     "@landing/fragment-header": "workspace:0.0.1"
     "@landing/fragment-library": "workspace:0.0.1"
     "@landing/fragment-navigation": "workspace:0.0.1"
+    "@ui/animate": "workspace:0.0.1"
     "@ui/background": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
-    "@ui/preloader": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -2588,7 +2588,7 @@ __metadata:
     "@types/node": "npm:18"
     "@types/react": "npm:18.2.9"
     "@types/react-dom": "npm:18.2.4"
-    "@ui/preloader": "workspace:0.0.1"
+    "@ui/animate": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     next: "npm:12.3.4"
     react: "npm:18.2.0"
@@ -3476,6 +3476,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/animate@workspace:0.0.1, @ui/animate@workspace:ui/animate":
+  version: 0.0.0-use.local
+  resolution: "@ui/animate@workspace:ui/animate"
+  dependencies:
+    "@emotion/css": "npm:11.9.0"
+    "@emotion/react": "npm:11.9.3"
+    "@emotion/styled": "npm:11.9.3"
+    "@types/styled-system": "npm:5.1.16"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    framer-motion: "npm:10.16.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/background@workspace: 0.0.1, @ui/background@workspace:0.0.1, @ui/background@workspace:ui/background":
   version: 0.0.0-use.local
   resolution: "@ui/background@workspace:ui/background"
@@ -3803,31 +3827,6 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-scroll: "*"
-  languageName: unknown
-  linkType: soft
-
-"@ui/preloader@workspace:0.0.1, @ui/preloader@workspace:ui/preloader":
-  version: 0.0.0-use.local
-  resolution: "@ui/preloader@workspace:ui/preloader"
-  dependencies:
-    "@emotion/css": "npm:11.9.0"
-    "@emotion/react": "npm:11.9.3"
-    "@emotion/styled": "npm:11.9.3"
-    "@types/styled-system": "npm:5.1.16"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    framer-motion: "npm:10.16.1"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    framer-motion: "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
