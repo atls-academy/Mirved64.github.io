@@ -192,9 +192,10 @@ const LibraryPage = () => {
         <Box display={{ _: 'flex', standard: 'none' }}>
           <Background
             backgroundColor='banner'
-            backgroundSize='736px 415px'
-            backgroundPosition='-260px 0'
+            backgroundSize='cover'
+            backgroundPosition='right'
             backgroundRepeat='no-repeat'
+            width='100%'
           >
             <NavigationMobile />
 
