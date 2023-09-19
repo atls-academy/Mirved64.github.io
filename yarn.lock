@@ -2536,6 +2536,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/navbar": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-scroll: "npm:1.8.9"
@@ -3494,6 +3495,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    framer-motion: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"

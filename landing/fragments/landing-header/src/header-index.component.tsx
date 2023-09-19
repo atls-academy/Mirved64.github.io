@@ -24,7 +24,7 @@ import { useScrollDirection }     from '@ui/utils'
 
 import { HeaderIndexProps }       from './header.interfaces'
 
-export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs }) => {
+export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs}) => {
   const [visible, setVisible] = useState<boolean>(false)
 
   const { scrollDir, scrollYpx } = useScrollDirection()
