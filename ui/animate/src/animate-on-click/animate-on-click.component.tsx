@@ -6,10 +6,7 @@ import { motion }              from 'framer-motion'
 import { AnimateOnClickProps } from './animate-on-click.interfaces'
 
 export const AnimateOnClick: FC<PropsWithChildren<AnimateOnClickProps>> = ({
-  ref,
-  custom,
   animate,
-  initial,
   transition,
   style,
   children,
@@ -21,10 +18,7 @@ export const AnimateOnClick: FC<PropsWithChildren<AnimateOnClickProps>> = ({
       ...(style || {}),
     }}
     animate={animate}
-    initial={initial}
     transition={transition}
-    ref={ref}
-    custom={custom}
   >
     {children}
   </motion.div>

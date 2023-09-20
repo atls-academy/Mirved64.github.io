@@ -9,4 +9,5 @@ export interface NavLinkItemDrawerProps {
   path: string
   currentElementIndexInViewport: number
   index: number
+  onClick?: () => void
 }

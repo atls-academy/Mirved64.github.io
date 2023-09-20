@@ -17,11 +17,17 @@ export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
   path,
   currentElementIndexInViewport,
   index,
+  onClick,
 }) => {
   const { hover, hoverProps } = useHover()
 
   return (
-    <Box flexBasis={{ standard: 200, ultra: 300 }} cursor='pointer' {...hoverProps}>
+    <Box
+      flexBasis={{ standard: 200, ultra: 300 }}
+      cursor='pointer'
+      {...hoverProps}
+      onClick={onClick}
+    >
       <Link to={path} width='100%' spy smooth duration={1000}>
         <Column alignItems='center'>
           <Condition match={currentElementIndexInViewport !== index}>

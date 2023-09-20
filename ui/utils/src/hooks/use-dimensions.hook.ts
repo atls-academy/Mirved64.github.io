@@ -1,20 +1,20 @@
-import {RefObject, useLayoutEffect, useRef} from 'react'
-import { useState }    from 'react'
+import { RefObject } from 'react'
+import { useEffect } from 'react'
+import { useRef }    from 'react'
+import { useState }  from 'react'
 
-type DimensionsValues = {
-  height: number,
-  top: number,
-  y: number
-}
+export function useDimensions(): [RefObject<HTMLDivElement>, number, number, number] {
+  const ref: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null)
 
-export function useDimensions() {
-  const ref: RefObject<HTMLDivElement> = useRef()
-  const [dimensions, setDimensions] = useState<DimensionsValues>({})
+  const [divHeight, setDivHeight] = useState<number | null>(0)
+  const [divTop, setDivTop] = useState<number | null>(0)
+  const [divY, setDivY] = useState<number | null>(0)
 
-  useLayoutEffect(() => {
-    setDimensions(ref.current.getBoundingClientRect().toJSON())
+  useEffect(() => {
+    setDivHeight(ref.current!.getBoundingClientRect().height)
+    setDivTop(ref.current!.getBoundingClientRect().top)
+    setDivY(ref.current!.getBoundingClientRect().y)
+  }, [])
 
-  }, [ref.current])
-
-  return [ref, dimensions]
+  return [ref, divHeight!, divTop!, divY!]
 }

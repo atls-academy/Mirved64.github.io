@@ -1,52 +1,69 @@
-import React                            from 'react'
-import { Parallax }                     from 'react-scroll-parallax'
-import { useRef }                       from 'react'
+import React                      from 'react'
+import { RefObject }              from 'react'
+import { Parallax }               from 'react-scroll-parallax'
+import { useRef }                 from 'react'
+import { mergeRefs }              from 'react-merge-refs'
 
-import { About }                        from '@landing/fragment-about'
-import { Courses }                      from '@landing/fragment-courses'
-import { Faq }                          from '@landing/fragment-faq'
-import { HeaderIndex }                  from '@landing/fragment-header'
-import { Hero }                         from '@landing/fragment-hero'
-import { HeroWide }                     from '@landing/fragment-hero'
-import { NavigationDesktopIndex }       from '@landing/fragment-navigation'
-import { NavigationMobile }             from '@landing/fragment-navigation'
-import { Process }                      from '@landing/fragment-process'
-import { Steps }                        from '@landing/fragment-steps'
-import { Technologies }                 from '@landing/fragment-technologies'
-import { AnimateOnClick }               from '@ui/animate'
-import { AnimateOnLoad }                from '@ui/animate'
-import { Background }                   from '@ui/background'
-import { Condition }                    from '@ui/condition'
-import { Column }                       from '@ui/layout'
-import { Box }                          from '@ui/layout'
-import { Navbar }                       from '@ui/navbar'
-import {useDimensions} from '@ui/utils'
-
-import { useWindowWidth } from '@ui/utils'
-import {useAnimationControls} from "framer-motion"
+import { About }                  from '@landing/fragment-about'
+import { Courses }                from '@landing/fragment-courses'
+import { Faq }                    from '@landing/fragment-faq'
+import { HeaderIndex }            from '@landing/fragment-header'
+import { Hero }                   from '@landing/fragment-hero'
+import { HeroWide }               from '@landing/fragment-hero'
+import { NavigationDesktopIndex } from '@landing/fragment-navigation'
+import { NavigationMobile }       from '@landing/fragment-navigation'
+import { Process }                from '@landing/fragment-process'
+import { Steps }                  from '@landing/fragment-steps'
+import { Technologies }           from '@landing/fragment-technologies'
+import { AnimateOnClick }         from '@ui/animate'
+import { AnimateOnLoad }          from '@ui/animate'
+import { Background }             from '@ui/background'
+import { Condition }              from '@ui/condition'
+import { Column }                 from '@ui/layout'
+import { Box }                    from '@ui/layout'
+import { Navbar }                 from '@ui/navbar'
+import { useDimensions }          from '@ui/utils'
+import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {
   const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
-  const [academyRef, academyRefDimensions] = useDimensions()
-  const [coursesRef, coursesDimensions] = useDimensions()
-  const [teachingRef, teachingDimensions] = useDimensions()
-  const [faqRef, faqDimensions] = useDimensions()
+  const [academyRef, academyHeight] = useDimensions()
+  const [coursesRef, coursesHeight, coursesTop, coursesY] = useDimensions()
+  const [teachingRef, teachingHeight, teachingTop, teachingY] = useDimensions()
+  const [faqRef, faqHeight, faqTop, faqY] = useDimensions()
 
-  const controls = useAnimationControls()
+  const clickAnimation = {
+    transition: {
+      duration: 2.3,
+      times: [0, 1, 0.3, 1],
+      ease: ['linear', 'easeInOut', 'linear', 'easeInOut'],
+    },
+  }
 
-  controls.start((i) => ({
-    y: [i.y, , , i.y],
-    transition: { duration: 2.3, times: [0, 1, 0.3, 1], ease: ['linear', 'in-out', 'linear', 'in-out']},
-  }))
+  const COURSES_DELTA = -(0.75 * academyHeight - 80)
+  const TEACHING_DELTA = -(coursesHeight + 0.5 * academyHeight - 80)
+  const FAQ_DELTA = -(teachingHeight + coursesHeight + 0.25 * academyHeight - 80)
 
-  const sectionRefs: React.RefObject<HTMLDivElement>[] = [
+  const COURSES_DELTA_REVERSE = 0.75 * academyHeight - 80
+  const TEACHING_DELTA_REVERSE = COURSES_DELTA_REVERSE + coursesHeight - 80
+  const FAQ_DELTA_REVERSE = TEACHING_DELTA_REVERSE + teachingHeight - 80
+
+  const sectionRefs: RefObject<HTMLDivElement>[] = [
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
     useRef<HTMLDivElement>(null),
   ]
 
+  /* eslint-disable */
+  console.log(
+    `academyHeight ${academyHeight}, coursesHeight ${coursesHeight}, teachingHeight ${teachingHeight}, faqHeight ${faqHeight}, coursesTop ${coursesTop}, teachingTop ${teachingTop}, faqTop ${faqTop}, coursesY ${coursesY}, teachingY ${teachingY}, faqY ${faqY}`
+  )
+  console.log(
+    `${COURSES_DELTA}, ${COURSES_DELTA_REVERSE}, ${TEACHING_DELTA}, ${TEACHING_DELTA_REVERSE}, ${FAQ_DELTA}, ${FAQ_DELTA_REVERSE}`
+  )
+  /* eslint-enable */
   return (
     <>
       <Condition match={!isMobile}>
@@ -63,7 +80,7 @@ const IndexPage = () => {
 
       <Background
         id='academy'
-        ref={sectionRefs[0]}
+        ref={mergeRefs([sectionRefs[0], academyRef])}
         backgroundColor='navyBlueGradient'
         position='absolute'
         overflow='hidden'
@@ -247,15 +264,14 @@ const IndexPage = () => {
       </Background>
 
       <AnimateOnClick
-        ref={coursesRef}
-        custom={coursesDimensions}
-        initial={{ top: 1628 }}
-        animate={controls}
-        transition={{ duration: 2.3, times: [0, 1, 0.3, 1] }}
+        animate={{
+          y: [coursesTop, 0.25 * academyHeight, 0.25 * academyHeight, COURSES_DELTA_REVERSE],
+        }}
+        {...clickAnimation}
       >
         <Background
           id='courses'
-          ref={sectionRefs[1]}
+          ref={mergeRefs([sectionRefs[1], coursesRef])}
           backgroundColor='white'
           borderRadius={['hugeTop', 'giantTop']}
           position='absolute'
@@ -325,15 +341,14 @@ const IndexPage = () => {
       </AnimateOnClick>
 
       <AnimateOnClick
-        ref={teachingRef}
-        custom={teachingDimensions}
-        initial={{ top: 3636 }}
-        animate={controls}
-        transition={{ duration: 2.3, times: [0, 1, 0.3, 1] }}
+        animate={{
+          y: [teachingTop, 0.5 * academyHeight, 0.5 * academyHeight, TEACHING_DELTA_REVERSE],
+        }}
+        {...clickAnimation}
       >
         <Background
           id='teaching'
-          ref={sectionRefs[2]}
+          ref={mergeRefs([sectionRefs[2], teachingRef])}
           backgroundColor='darkPurple'
           borderRadius={['hugeTop', 'giantTop']}
           position='absolute'
@@ -446,15 +461,14 @@ const IndexPage = () => {
       </AnimateOnClick>
 
       <AnimateOnClick
-        ref={faqRef}
-        custom={faqDimensions}
-        initial={{ top: 6337 }}
-        animate={controls}
-        transition={{ duration: 2.3, times: [0, 1, 0.3, 1], ease: 'in-out' }}
+        animate={{
+          y: [faqTop, 0.75 * academyHeight, 0.75 * academyHeight, FAQ_DELTA_REVERSE],
+        }}
+        {...clickAnimation}
       >
         <Background
           id='faq'
-          ref={sectionRefs[3]}
+          ref={mergeRefs([sectionRefs[3], faqRef])}
           backgroundColor='white'
           borderRadius={['hugeTop', 'giantTop']}
           position='absolute'

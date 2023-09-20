@@ -24,7 +24,7 @@ import { useScrollDirection }     from '@ui/utils'
 
 import { HeaderIndexProps }       from './header.interfaces'
 
-export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs}) => {
+export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs }) => {
   const [visible, setVisible] = useState<boolean>(false)
 
   const { scrollDir, scrollYpx } = useScrollDirection()
@@ -102,7 +102,7 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs}) => {
             <Scrollspy sectionRefs={sectionRefs} offset={-640}>
               {({ currentElementIndexInViewport }) => (
                 <Box>
-                  {NavLinks.map((navLink, index) => (
+                  {NavLinks.map((navLink, index, array) => (
                     <Box
                       key={navLink.id}
                       width={
@@ -111,15 +111,52 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs}) => {
                           : { standard: 200, ultra: 300 }
                       }
                     >
-                      <NavLinkItemDrawerIndex
-                        path={navLink.path}
-                        name={navLink.name}
-                        currentElementIndexInViewport={currentElementIndexInViewport}
-                        index={index}
-                      />
+                      <Condition match={currentElementIndexInViewport !== array.length - 1}>
+                        <NavLinkItemDrawerIndex
+                          path={navLink.path}
+                          name={navLink.name}
+                          currentElementIndexInViewport={currentElementIndexInViewport}
+                          index={index}
+                        />
 
-                      <Condition match={index < NavLinks.length - 1}>
-                        <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+                        <Condition match={index < NavLinks.length - 1}>
+                          <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+                        </Condition>
+                      </Condition>
+
+                      <Condition match={currentElementIndexInViewport === array.length - 1}>
+                        <Condition match={index === 0}>
+                          <NavLinkItemDrawerIndex
+                            path={navLink.path}
+                            name={navLink.name}
+                            currentElementIndexInViewport={currentElementIndexInViewport}
+                            index={index}
+                          />
+
+                          <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+                        </Condition>
+
+                        <Condition match={index >= 1}>
+                          <Box
+                            key={navLink.id}
+                            width={
+                              index < NavLinks.length - 1
+                                ? { standard: 220, ultra: 330 }
+                                : { standard: 200, ultra: 300 }
+                            }
+                          >
+                            <NavLinkItemDrawerIndex
+                              path={navLink.path}
+                              name={navLink.name}
+                              currentElementIndexInViewport={currentElementIndexInViewport}
+                              index={index}
+                            />
+
+                            <Condition match={index < NavLinks.length - 1}>
+                              <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+                            </Condition>
+                          </Box>
+                        </Condition>
                       </Condition>
                     </Box>
                   ))}
