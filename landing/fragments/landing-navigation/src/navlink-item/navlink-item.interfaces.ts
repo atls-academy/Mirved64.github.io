@@ -10,4 +10,5 @@ export interface NavLinkItemDrawerProps {
   currentElementIndexInViewport: number
   index: number
   onClick?: () => void
+  duration?: number
 }

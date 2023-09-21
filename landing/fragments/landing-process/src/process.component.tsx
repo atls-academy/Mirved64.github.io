@@ -156,7 +156,7 @@ export const Process = () => {
 
       <SliderContainer />
 
-      <Layout flexBasis={{ _: 128, standard: 240, wide: 293 }} flexShrink='0' />
+      <Layout flexBasis={{ _: 144, standard: 240, wide: 293 }} flexShrink='0' />
     </Column>
   )
 }

@@ -1,6 +1,7 @@
 import React                      from 'react'
 import { RefObject }              from 'react'
 import { Parallax }               from 'react-scroll-parallax'
+import { useAnimationControls }   from 'framer-motion'
 import { useRef }                 from 'react'
 import { mergeRefs }              from 'react-merge-refs'
 
@@ -22,32 +23,23 @@ import { Condition }              from '@ui/condition'
 import { Column }                 from '@ui/layout'
 import { Box }                    from '@ui/layout'
 import { Navbar }                 from '@ui/navbar'
-import { useDimensions }          from '@ui/utils'
+import { useDivHeight }           from '@ui/utils'
 import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {
   const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
-  const [academyRef, academyHeight] = useDimensions()
-  const [coursesRef, coursesHeight, coursesTop, coursesY] = useDimensions()
-  const [teachingRef, teachingHeight, teachingTop, teachingY] = useDimensions()
-  const [faqRef, faqHeight, faqTop, faqY] = useDimensions()
+  const [academyRef, academyHeight] = useDivHeight()
+  const [coursesRef, coursesHeight] = useDivHeight()
+  const [teachingRef, teachingHeight] = useDivHeight()
 
-  const clickAnimation = {
-    transition: {
-      duration: 2.3,
-      times: [0, 1, 0.3, 1],
-      ease: ['linear', 'easeInOut', 'linear', 'easeInOut'],
-    },
-  }
+  const COURSES_DELTA = -(academyHeight - 80)
+  const TEACHING_DELTA = -(coursesHeight - COURSES_DELTA)
+  const FAQ_DELTA = -(teachingHeight - TEACHING_DELTA)
 
-  const COURSES_DELTA = -(0.75 * academyHeight - 80)
-  const TEACHING_DELTA = -(coursesHeight + 0.5 * academyHeight - 80)
-  const FAQ_DELTA = -(teachingHeight + coursesHeight + 0.25 * academyHeight - 80)
-
-  const COURSES_DELTA_REVERSE = 0.75 * academyHeight - 80
-  const TEACHING_DELTA_REVERSE = COURSES_DELTA_REVERSE + coursesHeight - 80
-  const FAQ_DELTA_REVERSE = TEACHING_DELTA_REVERSE + teachingHeight - 80
+  const controlsCourses = useAnimationControls()
+  const controlsTeaching = useAnimationControls()
+  const controlsFaq = useAnimationControls()
 
   const sectionRefs: RefObject<HTMLDivElement>[] = [
     useRef<HTMLDivElement>(null),
@@ -56,18 +48,18 @@ const IndexPage = () => {
     useRef<HTMLDivElement>(null),
   ]
 
-  /* eslint-disable */
-  console.log(
-    `academyHeight ${academyHeight}, coursesHeight ${coursesHeight}, teachingHeight ${teachingHeight}, faqHeight ${faqHeight}, coursesTop ${coursesTop}, teachingTop ${teachingTop}, faqTop ${faqTop}, coursesY ${coursesY}, teachingY ${teachingY}, faqY ${faqY}`
-  )
-  console.log(
-    `${COURSES_DELTA}, ${COURSES_DELTA_REVERSE}, ${TEACHING_DELTA}, ${TEACHING_DELTA_REVERSE}, ${FAQ_DELTA}, ${FAQ_DELTA_REVERSE}`
-  )
-  /* eslint-enable */
   return (
     <>
       <Condition match={!isMobile}>
-        <HeaderIndex sectionRefs={sectionRefs} />
+        <HeaderIndex
+          sectionRefs={sectionRefs}
+          controlsCourses={controlsCourses}
+          controlsTeaching={controlsTeaching}
+          controlsFaq={controlsFaq}
+          coursesDelta={COURSES_DELTA}
+          teachingDelta={TEACHING_DELTA}
+          faqDelta={FAQ_DELTA}
+        />
       </Condition>
 
       <AnimateOnLoad
@@ -85,8 +77,8 @@ const IndexPage = () => {
         position='absolute'
         overflow='hidden'
         width='100%'
-        height={{ _: '1030px', standard: '1830px', wide: '1440px', ultra: '2070px' }}
-        zIndex={1}
+        height={{ _: '1030px', standard: '1830px', wide: '1520px', ultra: '2240px' }}
+        zIndex={0}
       >
         <Box display={{ _: 'none', ultra: 'flex' }}>
           <AnimateOnLoad
@@ -263,12 +255,7 @@ const IndexPage = () => {
         </Box>
       </Background>
 
-      <AnimateOnClick
-        animate={{
-          y: [coursesTop, 0.25 * academyHeight, 0.25 * academyHeight, COURSES_DELTA_REVERSE],
-        }}
-        {...clickAnimation}
-      >
+      <AnimateOnClick animate={controlsCourses} style={{ zIndex: 11 }}>
         <Background
           id='courses'
           ref={mergeRefs([sectionRefs[1], coursesRef])}
@@ -277,7 +264,7 @@ const IndexPage = () => {
           position='absolute'
           width='100%'
           zIndex={11}
-          top={{ _: 934, standard: 1628, wide: 1340, ultra: 1989 }}
+          top={{ _: 950, standard: 1750, wide: 1440, ultra: 2160 }}
           overflow='hidden'
         >
           <Condition match={isTV}>
@@ -340,12 +327,7 @@ const IndexPage = () => {
         </Background>
       </AnimateOnClick>
 
-      <AnimateOnClick
-        animate={{
-          y: [teachingTop, 0.5 * academyHeight, 0.5 * academyHeight, TEACHING_DELTA_REVERSE],
-        }}
-        {...clickAnimation}
-      >
+      <AnimateOnClick animate={controlsTeaching} style={{ zIndex: 12 }}>
         <Background
           id='teaching'
           ref={mergeRefs([sectionRefs[2], teachingRef])}
@@ -354,7 +336,7 @@ const IndexPage = () => {
           position='absolute'
           width='100%'
           zIndex={12}
-          top={{ _: 2629, standard: 3636, wide: 3591, ultra: 4275 }}
+          top={{ _: 2645, standard: 3761, wide: 3591, ultra: 4435 }}
         >
           <Condition match={isTV}>
             <Parallax translateY={[-5, 5]}>
@@ -460,21 +442,16 @@ const IndexPage = () => {
         </Background>
       </AnimateOnClick>
 
-      <AnimateOnClick
-        animate={{
-          y: [faqTop, 0.75 * academyHeight, 0.75 * academyHeight, FAQ_DELTA_REVERSE],
-        }}
-        {...clickAnimation}
-      >
+      <AnimateOnClick animate={controlsFaq} style={{ zIndex: 13 }}>
         <Background
           id='faq'
-          ref={mergeRefs([sectionRefs[3], faqRef])}
+          ref={sectionRefs[3]}
           backgroundColor='white'
           borderRadius={['hugeTop', 'giantTop']}
           position='absolute'
           width='100%'
           zIndex={13}
-          top={{ _: 4237, standard: 6337, wide: 6699, ultra: 7983 }}
+          top={{ _: 4254, standard: 6491, wide: 6699, ultra: 7983 }}
         >
           <Condition match={isWideDesktop || isTV}>
             <Background

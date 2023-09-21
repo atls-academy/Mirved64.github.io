@@ -24,12 +24,49 @@ import { useScrollDirection }     from '@ui/utils'
 
 import { HeaderIndexProps }       from './header.interfaces'
 
-export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs }) => {
+export const HeaderIndex: FC<HeaderIndexProps> = ({
+  sectionRefs,
+  controlsCourses,
+  controlsTeaching,
+  controlsFaq,
+  coursesDelta,
+  teachingDelta,
+  faqDelta,
+}) => {
   const [visible, setVisible] = useState<boolean>(false)
 
   const { scrollDir, scrollYpx } = useScrollDirection()
 
   const handleClick = () => setVisible(!visible)
+
+  const handleStartAnimation = () => {
+    controlsCourses.start({
+      y: [coursesDelta, 0],
+      transition: {
+        duration: 4,
+        times: [0, 1],
+        ease: ['easeInOut', 'easeInOut'],
+      },
+    })
+
+    controlsTeaching.start({
+      y: [teachingDelta, 0],
+      transition: {
+        duration: 4,
+        times: [0, 1],
+        ease: ['easeInOut', 'easeInOut'],
+      },
+    })
+
+    controlsFaq.start({
+      y: [faqDelta, 0],
+      transition: {
+        duration: 4,
+        times: [0, 1],
+        ease: ['easeInOut', 'easeInOut'],
+      },
+    })
+  }
 
   const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
     ...el,
@@ -131,6 +168,8 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({ sectionRefs }) => {
                             name={navLink.name}
                             currentElementIndexInViewport={currentElementIndexInViewport}
                             index={index}
+                            onClick={handleStartAnimation}
+                            duration={0}
                           />
 
                           <Layout flexBasis={{ standard: 20, ultra: 30 }} />

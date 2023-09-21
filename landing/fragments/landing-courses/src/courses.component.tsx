@@ -185,7 +185,7 @@ export const Courses = () => {
           </Row>
         </Condition>
 
-        <Layout flexBasis={[64, 80]} />
+        <Layout flexBasis={[144, 80]} />
       </Column>
     </Box>
   )

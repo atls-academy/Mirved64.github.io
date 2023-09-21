@@ -2366,10 +2366,12 @@ __metadata:
     "@ui/logo": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
+    framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-intl: "npm:6.0.8"
   peerDependencies:
+    framer-motion: "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"

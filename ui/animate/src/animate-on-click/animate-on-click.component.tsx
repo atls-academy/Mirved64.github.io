@@ -7,7 +7,6 @@ import { AnimateOnClickProps } from './animate-on-click.interfaces'
 
 export const AnimateOnClick: FC<PropsWithChildren<AnimateOnClickProps>> = ({
   animate,
-  transition,
   style,
   children,
 }) => (
@@ -18,7 +17,6 @@ export const AnimateOnClick: FC<PropsWithChildren<AnimateOnClickProps>> = ({
       ...(style || {}),
     }}
     animate={animate}
-    transition={transition}
   >
     {children}
   </motion.div>
