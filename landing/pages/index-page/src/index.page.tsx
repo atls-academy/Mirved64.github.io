@@ -48,6 +48,10 @@ const IndexPage = () => {
     useRef<HTMLDivElement>(null),
   ]
 
+  const animateOnLoadProps = {
+    transition: { duration: 1.2 },
+  }
+
   return (
     <>
       <Condition match={!isMobile}>
@@ -62,11 +66,7 @@ const IndexPage = () => {
         />
       </Condition>
 
-      <AnimateOnLoad
-        animate={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 1.2 }}
-      >
+      <AnimateOnLoad animate={{ opacity: 1 }} initial={{ opacity: 0 }} {...animateOnLoadProps}>
         <Navbar sectionRefs={sectionRefs} />
       </AnimateOnLoad>
 
@@ -81,12 +81,7 @@ const IndexPage = () => {
         zIndex={0}
       >
         <Box display={{ _: 'none', ultra: 'flex' }}>
-          <AnimateOnLoad
-            animate={{ x: 0 }}
-            initial={{ x: '100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ x: 0 }} initial={{ x: '100%' }} {...animateOnLoadProps}>
             <Background
               width='100%'
               height='2070px'
@@ -96,12 +91,7 @@ const IndexPage = () => {
             />
           </AnimateOnLoad>
 
-          <AnimateOnLoad
-            animate={{ x: 0 }}
-            initial={{ x: '-100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ x: 0 }} initial={{ x: '-100%' }} {...animateOnLoadProps}>
             <Background
               width='100%'
               height='2070px'
@@ -114,8 +104,8 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 3 }}
+            {...animateOnLoadProps}
+            style={{ zIndex: 3 }}
           >
             <NavigationDesktopIndex sectionRefs={sectionRefs} />
           </AnimateOnLoad>
@@ -123,8 +113,8 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
+            {...animateOnLoadProps}
+            style={{ zIndex: 2 }}
           >
             <Parallax translateY={[6, 12]}>
               <HeroWide />
@@ -133,27 +123,18 @@ const IndexPage = () => {
         </Box>
 
         <Box display={{ _: 'none', wide: 'flex', ultra: 'none' }}>
-          <AnimateOnLoad
-            animate={{ x: 0 }}
-            initial={{ x: '100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ x: 0 }} initial={{ x: '100%' }} {...animateOnLoadProps}>
             <Background
               width='100%'
               height='1440px'
               backgroundColor='symbol'
               backgroundSize='contain'
+              backgroundPosition='right'
               backgroundRepeat='no-repeat'
             />
           </AnimateOnLoad>
 
-          <AnimateOnLoad
-            animate={{ x: 0 }}
-            initial={{ x: '-100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ x: 0 }} initial={{ x: '-100%' }} {...animateOnLoadProps}>
             <Background
               width='100%'
               height='1440px'
@@ -166,18 +147,13 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 2 }}
+            {...animateOnLoadProps}
+            style={{ zIndex: 2 }}
           >
             <NavigationDesktopIndex sectionRefs={sectionRefs} />
           </AnimateOnLoad>
 
-          <AnimateOnLoad
-            animate={{ y: 0 }}
-            initial={{ y: '100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ y: 0 }} initial={{ y: '100%' }} {...animateOnLoadProps}>
             <Parallax translateY={[4, 12]}>
               <HeroWide />
             </Parallax>
@@ -185,12 +161,7 @@ const IndexPage = () => {
         </Box>
 
         <Box display={{ _: 'none', standard: 'flex', wide: 'none' }}>
-          <AnimateOnLoad
-            animate={{ x: 0 }}
-            initial={{ x: '100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ x: 0 }} initial={{ x: '100%' }} {...animateOnLoadProps}>
             <Background
               width='100%'
               height='1708px'
@@ -200,12 +171,7 @@ const IndexPage = () => {
             />
           </AnimateOnLoad>
 
-          <AnimateOnLoad
-            animate={{ x: 0 }}
-            initial={{ x: '-100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ zIndex: -1, position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ x: 0 }} initial={{ x: '-100%' }} {...animateOnLoadProps}>
             <Background
               width='100%'
               height='1708px'
@@ -218,21 +184,17 @@ const IndexPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 2 }}
+            {...animateOnLoadProps}
+            style={{ zIndex: 2 }}
           >
             <NavigationDesktopIndex sectionRefs={sectionRefs} />
           </AnimateOnLoad>
 
-          <AnimateOnLoad
-            animate={{ y: 0 }}
-            initial={{ y: '100%' }}
-            transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%' }}
-          >
+          <AnimateOnLoad animate={{ y: 0 }} initial={{ y: '100%' }} {...animateOnLoadProps}>
             <Column>
-              <Parallax translateY={[4, 11]}>
+              <Parallax translateY={[4, 15]}>
                 <Hero />
+
                 <About />
               </Parallax>
             </Column>
@@ -244,7 +206,7 @@ const IndexPage = () => {
             backgroundColor='banner'
             backgroundSize='736px 415px'
             backgroundRepeat='no-repeat'
-            backgroundPosition='-260px -20px'
+            backgroundPosition='right top'
           >
             <NavigationMobile />
 
@@ -288,7 +250,7 @@ const IndexPage = () => {
                 backgroundColor='wavesGradient'
                 backgroundSize='4400px 800px'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-196px 464px'
+                backgroundPosition='left 464px'
                 display='flex'
                 width='100%'
               >
@@ -303,7 +265,7 @@ const IndexPage = () => {
                 backgroundColor='wavesGradient'
                 backgroundSize='4400px 800px'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-2480px 645px'
+                backgroundPosition='left center'
                 display='flex'
                 width='100%'
               >
@@ -370,7 +332,7 @@ const IndexPage = () => {
                 backgroundColor='wavesGradient'
                 backgroundSize='4400px 800px'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-196px 124px'
+                backgroundPosition='left center'
               >
                 <Steps />
               </Background>
@@ -381,7 +343,7 @@ const IndexPage = () => {
                 backgroundColor='wavesGradient'
                 backgroundSize='4400px 800px'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-920px -38px'
+                backgroundPosition='center -38px'
               >
                 <Background backgroundColor='darkPurpleGradientFlash'>
                   <Process />
@@ -396,7 +358,7 @@ const IndexPage = () => {
                 backgroundColor='wavesGradient'
                 backgroundSize='4400px 800px'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-196px 124px'
+                backgroundPosition='left 124px'
               >
                 <Steps />
               </Background>
@@ -407,7 +369,7 @@ const IndexPage = () => {
                 backgroundColor='wavesGradient'
                 backgroundSize='4400px 800px'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-2480px 235px'
+                backgroundPosition='right 235px'
               >
                 <Background backgroundColor='darkPurpleGradientFlash'>
                   <Process />
@@ -421,7 +383,7 @@ const IndexPage = () => {
               backgroundColor='blendGradient'
               backgroundSize='1015px 464px'
               backgroundRepeat='no-repeat'
-              backgroundPosition='-300px 121px'
+              backgroundPosition='center 121px'
             >
               <Steps />
             </Background>
@@ -432,7 +394,7 @@ const IndexPage = () => {
               backgroundColor='blendGradient'
               backgroundSize='1015px 464px'
               backgroundRepeat='no-repeat'
-              backgroundPosition='-299px 165px'
+              backgroundPosition='center 165px'
             >
               <Background backgroundColor='darkPurpleGradientFlash'>
                 <Process />
@@ -458,7 +420,7 @@ const IndexPage = () => {
               backgroundColor='wavesGradient'
               backgroundSize='4400px 800px'
               backgroundRepeat='no-repeat'
-              backgroundPosition={{ wide: '-194px 186px', ultra: '-190px 102px' }}
+              backgroundPosition={{ wide: 'left 231px', ultra: 'left 102px' }}
             >
               <Faq />
             </Background>
@@ -467,9 +429,9 @@ const IndexPage = () => {
           <Condition match={isDesktop}>
             <Background
               backgroundColor='wavesGradient'
-              backgroundSize='4400px 800px'
+              backgroundSize='containe'
               backgroundRepeat='no-repeat'
-              backgroundPosition='-196px 232px'
+              backgroundPosition='left 232px'
             >
               <Faq />
             </Background>
@@ -477,10 +439,10 @@ const IndexPage = () => {
 
           <Condition match={isMobile}>
             <Background
-              backgroundColor='blendGradientSmall'
+              backgroundColor='blendGradient'
               backgroundSize='1015px 464px'
               backgroundRepeat='no-repeat'
-              backgroundPosition='-300px 121px'
+              backgroundPosition='center 121px'
             >
               <Faq />
             </Background>

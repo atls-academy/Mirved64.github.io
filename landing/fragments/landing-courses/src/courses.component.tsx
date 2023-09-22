@@ -29,7 +29,7 @@ export const Courses = () => {
 
   return (
     <Box flexBasis={{ wide: 2580 }} flexShrink={{ wide: 0 }} flexGrow={{ wide: '1' }}>
-      <Column>
+      <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
         <Row>
@@ -38,6 +38,7 @@ export const Courses = () => {
           <Column
             flexBasis={{ _: 335, standard: 1610, wide: 2250, ultra: 2600 }}
             flexShrink={{ wide: 0 }}
+            flexGrow='1'
           >
             <Row alignItems='center'>
               <Box flexWrap='wrap'>
@@ -87,6 +88,7 @@ export const Courses = () => {
               <Column
                 order={[3, 0]}
                 flexBasis={{ _: 335, standard: 1160, wide: 1798, ultra: 2090 }}
+                flexGrow='1'
               >
                 <CardsLearning />
 
@@ -99,7 +101,7 @@ export const Courses = () => {
                 </Condition>
 
                 <Condition match={isWideDesktop || isTV}>
-                  <Row flexWrap='wrap'>
+                  <Row flexWrap='wrap' maxWidth={{ wide: 1800, ultra: 2090 }}>
                     <CardsMaterialsWide />
 
                     <NextLink path='/library' width={{ wide: 572, ultra: 670 }}>

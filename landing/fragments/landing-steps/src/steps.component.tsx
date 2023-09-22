@@ -12,6 +12,7 @@ import { Step }           from './step'
 
 export const Steps = () => {
   const intl = useIntl()
+
   const { isDesktop, isWideDesktop, isTV } = useWindowWidth()
 
   return (

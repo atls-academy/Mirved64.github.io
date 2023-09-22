@@ -93,11 +93,11 @@ export const HeroWide = () => (
 
             <Space count='6' />
 
-            <Box display={{ _: 'none', standard: 'none', wide: 'inline', ultra: 'none' }}>
+            <Box display={{ _: 'none', wide: 'inline', ultra: 'none' }}>
               <Delimiter />
             </Box>
 
-            <Box display={{ _: 'none', standard: 'none', wide: 'none', ultra: 'inline' }}>
+            <Box display={{ _: 'none', ultra: 'inline' }}>
               <DelimiterLarge />
             </Box>
 
@@ -115,11 +115,11 @@ export const HeroWide = () => (
 
             <Space count='6' />
 
-            <Box display={{ _: 'none', standard: 'none', wide: 'inline', ultra: 'none' }}>
+            <Box display={{ _: 'none', wide: 'inline', ultra: 'none' }}>
               <Delimiter />
             </Box>
 
-            <Box display={{ _: 'none', standard: 'none', wide: 'none', ultra: 'inline' }}>
+            <Box display={{ _: 'none', ultra: 'inline' }}>
               <DelimiterLarge />
             </Box>
           </Box>
@@ -139,11 +139,11 @@ export const HeroWide = () => (
 
             <Space count='6' />
 
-            <Box display={{ _: 'none', standard: 'none', wide: 'inline', ultra: 'none' }}>
+            <Box display={{ _: 'none', wide: 'inline', ultra: 'none' }}>
               <Delimiter />
             </Box>
 
-            <Box display={{ _: 'none', standard: 'none', wide: 'none', ultra: 'inline' }}>
+            <Box display={{ _: 'none', ultra: 'inline' }}>
               <DelimiterLarge />
             </Box>
           </Box>
@@ -154,7 +154,7 @@ export const HeroWide = () => (
 
       <Box alignItems='end'>
         <Column
-          display={{ _: 'none', standard: 'none', wide: 'flex', ultra: 'none' }}
+          display={{ _: 'none', wide: 'flex', ultra: 'none' }}
           height={200}
           justifyContent='space-between'
         >
@@ -174,11 +174,7 @@ export const HeroWide = () => (
           />
         </Column>
 
-        <Column
-          display={{ _: 'none', standard: 'none', wide: 'none', ultra: 'flex' }}
-          height={300}
-          justifyContent='space-between'
-        >
+        <Column display={{ _: 'none', ultra: 'flex' }} height={300} justifyContent='space-between'>
           <SocialLinkUltra
             icon={<TelegramIcon width={36} height={36} />}
             href='https://web.telegram.org/'

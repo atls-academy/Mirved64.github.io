@@ -16,6 +16,8 @@ export const AnimateOnLoad: FC<PropsWithChildren<AnimateOnLoadProps>> = ({
     style={{
       display: 'flex',
       boxSizing: 'border-box',
+      position: 'absolute',
+      width: '100%',
       ...(style || {}),
     }}
     animate={animate}

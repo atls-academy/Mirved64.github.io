@@ -17,7 +17,7 @@ export const About = () => (
       <Layout flexBasis={[20, 230]} />
 
       <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='0'>
-        <Box display={{ _: 'none', standard: 'inline', wide: 'none' }}>
+        <Box display={['none', 'inline']}>
           <Text
             display='inline'
             color='text.white'
@@ -49,7 +49,7 @@ export const About = () => (
           <Delimiter />
         </Box>
 
-        <Column display={{ _: 'flex', standard: 'none' }}>
+        <Column display={['flex', 'none']}>
           <Box>
             <Text color='text.white' fontSize='small' lineHeight='huge'>
               <FormattedMessage id='about.intro-digital-mobile' />
@@ -97,7 +97,7 @@ export const About = () => (
 
         <Layout flexBasis={[0, 40]} />
 
-        <Box display={{ _: 'none', standard: 'inline', wide: 'none' }}>
+        <Box display={['none', 'inline']}>
           <Box display='inline'>
             <Text
               display='inline'
