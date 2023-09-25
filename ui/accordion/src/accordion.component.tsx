@@ -10,13 +10,13 @@ import { useState }        from 'react'
 
 import { Condition }       from '@ui/condition'
 import { Divider }         from '@ui/divider'
+import { CrossIcon }       from '@ui/icons'
+import { MinusIcon }       from '@ui/icons'
 import { Text }            from '@ui/text'
 import { useWindowWidth }  from '@ui/utils'
 import { useHover }        from '@ui/utils'
 
 import { AccordionProps }  from './accordion.interfaces'
-import { CrossIcon }       from './icons'
-import { MinusIcon }       from './icons'
 
 export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
   const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()

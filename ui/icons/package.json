@@ -10,8 +10,9 @@
     "@atls-ui-generators/icons": "0.0.2"
   },
   "devDependencies": {
-    "@emotion/react": "11.9.3",
-    "@emotion/styled": "11.9.3",
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "framer-motion": "10.16.1",
     "glob": "8.0.3",
     "glob-promise": "6.0.2",
     "react": "18.2.0",
@@ -20,6 +21,7 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "framer-motion": "*",
     "react": "*",
     "react-dom": "*"
   }
