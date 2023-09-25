@@ -13,13 +13,13 @@ import { Step }           from './step'
 export const Steps = () => {
   const intl = useIntl()
 
-  const { isDesktop, isWideDesktop, isTV } = useWindowWidth()
+  const { isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
 
   return (
     <Column>
       <Layout flexBasis={[64, 160]} />
 
-      <Condition match={isTV}>
+      <Condition match={isUltraDesktop}>
         <Layout flexBasis={160} />
       </Condition>
 
@@ -98,7 +98,7 @@ export const Steps = () => {
           </Box>
         </Condition>
 
-        <Condition match={isTV}>
+        <Condition match={isUltraDesktop}>
           <Box
             width='1106px'
             height='1106px'
@@ -121,7 +121,7 @@ export const Steps = () => {
         />
       </Box>
 
-      <Condition match={isTV}>
+      <Condition match={isUltraDesktop}>
         <Layout flexBasis={160} />
       </Condition>
 

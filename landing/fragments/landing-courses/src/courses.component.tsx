@@ -24,7 +24,7 @@ import { Info }               from './info'
 import { Sidebar }            from './sidebar'
 
 export const Courses = () => {
-  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
   return (
@@ -100,7 +100,7 @@ export const Courses = () => {
                   <CardsMaterials />
                 </Condition>
 
-                <Condition match={isWideDesktop || isTV}>
+                <Condition match={isWideDesktop || isUltraDesktop}>
                   <Row flexWrap='wrap' maxWidth={{ wide: 1800, ultra: 2090 }}>
                     <CardsMaterialsWide />
 

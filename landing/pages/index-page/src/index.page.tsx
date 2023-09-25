@@ -27,7 +27,7 @@ import { useDivHeight }           from '@ui/utils'
 import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {
-  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
 
   const [academyRef, academyHeight] = useDivHeight()
   const [coursesRef, coursesHeight] = useDivHeight()
@@ -229,7 +229,7 @@ const IndexPage = () => {
           top={{ _: 950, standard: 1750, wide: 1440, ultra: 2160 }}
           overflow='hidden'
         >
-          <Condition match={isTV}>
+          <Condition match={isUltraDesktop}>
             <Parallax translateY={[-5, 8]}>
               <Background
                 backgroundColor='wavesGradient'
@@ -300,7 +300,7 @@ const IndexPage = () => {
           zIndex={12}
           top={{ _: 2645, standard: 3761, wide: 3591, ultra: 4435 }}
         >
-          <Condition match={isTV}>
+          <Condition match={isUltraDesktop}>
             <Parallax translateY={[-5, 5]}>
               <Background
                 backgroundColor='wavesGradient'
@@ -415,7 +415,7 @@ const IndexPage = () => {
           zIndex={13}
           top={{ _: 4254, standard: 6491, wide: 6699, ultra: 7983 }}
         >
-          <Condition match={isWideDesktop || isTV}>
+          <Condition match={isWideDesktop || isUltraDesktop}>
             <Background
               backgroundColor='wavesGradient'
               backgroundSize='4400px 800px'

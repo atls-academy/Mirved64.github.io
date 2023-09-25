@@ -14,7 +14,7 @@ import { Box }                 from '@ui/layout'
 import { useWindowWidth }      from '@ui/utils'
 
 const LibraryPage = () => {
-  const { isMobile, isDesktop, isWideDesktop, isTV } = useWindowWidth()
+  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
 
   return (
     <>
@@ -212,7 +212,7 @@ const LibraryPage = () => {
         width='100%'
         zIndex={11}
       >
-        <Condition match={isWideDesktop || isTV}>
+        <Condition match={isWideDesktop || isUltraDesktop}>
           <Background
             backgroundColor='wavesGradient'
             backgroundSize='4400px 800px'

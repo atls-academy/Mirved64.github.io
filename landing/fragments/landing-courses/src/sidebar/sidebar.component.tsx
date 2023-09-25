@@ -15,7 +15,7 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 export const Sidebar = () => {
-  const { isMobile, isTV } = useWindowWidth()
+  const { isMobile, isUltraDesktop } = useWindowWidth()
 
   return (
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
@@ -106,7 +106,7 @@ export const Sidebar = () => {
 
       <Condition match={!isMobile}>
         <Link to='teaching' width='100%' spy smooth duration={1000}>
-          <Condition match={!isTV}>
+          <Condition match={!isUltraDesktop}>
             <Button
               variant='primaryBackgroundWhiteText'
               size='hugeSizeRegularRadii'
@@ -122,7 +122,7 @@ export const Sidebar = () => {
             </Button>
           </Condition>
 
-          <Condition match={isTV}>
+          <Condition match={isUltraDesktop}>
             <Button
               variant='primaryBackgroundWhiteText'
               size='massiveSizeLargeRadii'

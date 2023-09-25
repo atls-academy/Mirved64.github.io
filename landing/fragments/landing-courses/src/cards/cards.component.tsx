@@ -138,7 +138,7 @@ export const CardsSwiper = ({ spaceBetween, slidesPerView, className }: SwiperPr
 )
 
 export const CardsMaterialsWide = () => {
-  const { isWideDesktop, isTV } = useWindowWidth()
+  const { isWideDesktop, isUltraDesktop } = useWindowWidth()
 
   const CardCell: FC<CardCellProps> = ({ index, category, title }) => (
     <>
@@ -147,7 +147,7 @@ export const CardsMaterialsWide = () => {
           <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
         </Condition>
 
-        <Condition match={isTV}>
+        <Condition match={isUltraDesktop}>
           <Card category={category} titleDesktop={title} indent={45} widthCategoryBox={270} />
         </Condition>
 
