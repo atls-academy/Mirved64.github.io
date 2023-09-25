@@ -5,9 +5,9 @@ import { useState }           from 'react'
 import { CardDataDesktop }    from '@landing/fragment-navigation'
 import { NavLinkItemDrawer }  from '@landing/fragment-navigation'
 import { NavLinks }           from '@landing/fragment-navigation'
+import { DrawerCard }         from '@landing/fragment-navigation'
 import { Background }         from '@ui/background/src'
 import { Button }             from '@ui/button'
-import { Card }               from '@ui/card/src'
 import { Condition }          from '@ui/condition'
 import { ArrowDownIcon }      from '@ui/icons'
 import { ArrowUpIcon }        from '@ui/icons'
@@ -31,37 +31,9 @@ export const Header = () => {
     id: index,
   }))
 
-  const drawerCards = cardsList.map((card, index, array) => {
-    const Indent = () => (
-      <Condition match={index !== 0 && index !== array.length - 1}>
-        <Layout flexBasis={10} flexShrink='0' />
-      </Condition>
-    )
-
-    return (
-      <Row key={card.id}>
-        <Condition match={index === array.length - 1}>
-          <Layout flexBasis={20} flexShrink='0' />
-        </Condition>
-
-        <Indent />
-
-        <Card
-          category={card.category}
-          titleDesktop={card.title}
-          description={card.description}
-          indent={110}
-          widthCategoryBox={104}
-        />
-
-        <Indent />
-
-        <Condition match={index === 0}>
-          <Layout flexBasis={20} flexShrink='0' />
-        </Condition>
-      </Row>
-    )
-  })
+  const headerCards = cardsList.map((card, index, array) => (
+    <DrawerCard index={index} array={array} card={card} key={card.id} />
+  ))
 
   return (
     <Row justifyContent='center'>
@@ -162,18 +134,17 @@ export const Header = () => {
             <Layout flexBasis={40} />
           </Row>
 
-          {visible ? (
-            <>
-              <Layout flexBasis={50} />
-              <Row>
-                <Layout flexBasis={40} flexShrink='0' />
+          <Condition match={visible}>
+            <Layout flexBasis={50} />
 
-                {drawerCards}
+            <Row>
+              <Layout flexBasis={40} flexShrink='0' />
 
-                <Layout flexBasis={40} flexShrink='0' />
-              </Row>
-            </>
-          ) : null}
+              {headerCards}
+
+              <Layout flexBasis={40} flexShrink='0' />
+            </Row>
+          </Condition>
 
           <Layout flexBasis={32} />
         </Column>
