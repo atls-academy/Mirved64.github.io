@@ -3328,6 +3328,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.0"
     "@ui/condition": "workspace:0.0.1"
     "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: "npm:10.16.1"
@@ -3492,13 +3493,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/icons@workspace: 0.0.1, @ui/icons@workspace:ui/icons":
+"@ui/icons@workspace: 0.0.1, @ui/icons@workspace:0.0.1, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
     "@atls-ui-generators/icons": "npm:0.0.2"
     "@emotion/react": "npm:11.11.1"
     "@emotion/styled": "npm:11.11.0"
+    framer-motion: "npm:10.16.1"
     glob: "npm:8.0.3"
     glob-promise: "npm:6.0.2"
     react: "npm:18.2.0"
@@ -3506,6 +3508,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    framer-motion: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
