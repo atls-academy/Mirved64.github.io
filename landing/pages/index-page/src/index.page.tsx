@@ -10,7 +10,6 @@ import { Courses }                from '@landing/fragment-courses'
 import { Faq }                    from '@landing/fragment-faq'
 import { HeaderIndex }            from '@landing/fragment-header'
 import { Hero }                   from '@landing/fragment-hero'
-import { HeroWide }               from '@landing/fragment-hero'
 import { NavigationDesktopIndex } from '@landing/fragment-navigation'
 import { NavigationMobile }       from '@landing/fragment-navigation'
 import { Process }                from '@landing/fragment-process'
@@ -117,7 +116,7 @@ const IndexPage = () => {
             style={{ zIndex: 2 }}
           >
             <Parallax translateY={[6, 12]}>
-              <HeroWide />
+              <Hero />
             </Parallax>
           </AnimateOnLoad>
         </Box>
@@ -155,7 +154,7 @@ const IndexPage = () => {
 
           <AnimateOnLoad animate={{ y: 0 }} initial={{ y: '100%' }} {...animateOnLoadProps}>
             <Parallax translateY={[4, 12]}>
-              <HeroWide />
+              <Hero />
             </Parallax>
           </AnimateOnLoad>
         </Box>
