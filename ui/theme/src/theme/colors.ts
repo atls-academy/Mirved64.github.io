@@ -127,6 +127,9 @@ const colors = {
       },
     },
   },
+  modal: {
+    backdrop: 'rgba(0, 0, 0, 0.5)',
+  },
 }
 
 export { colors }

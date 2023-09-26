@@ -7531,9 +7531,11 @@ const RAW_RUNTIME_STATE =
           ["@types/framer-motion", null],\
           ["@types/react", null],\
           ["@types/react-dom", null],\
+          ["@types/styled-system", null],\
           ["framer-motion", "virtual:60ce17904085f34685bc225be706caa4fb8ebaac3e379a1eb0f501a849ffcff29cec7d860983146422d47397f553ace1d995673edb549aa0d5913fd5db5d326b#npm:6.3.11"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:58dce9411aad80ff4117b4e2f7848d73ee5abc711977828083ec94c4803b740439acb582d5801a1708f9d8dfdedafd11fc709756f8d266412fdceb475d0d9e7a#npm:18.2.0"]\
+          ["react-dom", "virtual:58dce9411aad80ff4117b4e2f7848d73ee5abc711977828083ec94c4803b740439acb582d5801a1708f9d8dfdedafd11fc709756f8d266412fdceb475d0d9e7a#npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
           "@types/emotion__css",\
@@ -7542,6 +7544,7 @@ const RAW_RUNTIME_STATE =
           "@types/framer-motion",\
           "@types/react-dom",\
           "@types/react",\
+          "@types/styled-system",\
           "react-dom",\
           "react"\
         ],\
@@ -7561,9 +7564,11 @@ const RAW_RUNTIME_STATE =
           ["@types/framer-motion", null],\
           ["@types/react", "npm:17.0.39"],\
           ["@types/react-dom", "npm:18.2.4"],\
+          ["@types/styled-system", null],\
           ["framer-motion", "virtual:95042f1fd2b86d639daf42c4ce2b525eb3b4117d8753aa8a1f7ab6e2bb78f40ef822a2c22ad1f56a64a9e49a9f5913f5285d8fc03f3ae2ce0bbe91dea470324f#npm:6.3.11"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"]\
+          ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
           "@types/emotion__css",\
@@ -7572,6 +7577,7 @@ const RAW_RUNTIME_STATE =
           "@types/framer-motion",\
           "@types/react-dom",\
           "@types/react",\
+          "@types/styled-system",\
           "react-dom",\
           "react"\
         ],\
@@ -7587,7 +7593,8 @@ const RAW_RUNTIME_STATE =
           ["@emotion/styled", "virtual:18e41040f81d3fd51f25df277b940a20645a1b7fd297949458aca359413915e92841147fc8fe2bcd924ab87820d79c29e9fb06d6c0ff5f744293a1febb1e79cb#npm:11.11.0"],\
           ["framer-motion", "virtual:60ce17904085f34685bc225be706caa4fb8ebaac3e379a1eb0f501a849ffcff29cec7d860983146422d47397f553ace1d995673edb549aa0d5913fd5db5d326b#npm:6.3.11"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:58dce9411aad80ff4117b4e2f7848d73ee5abc711977828083ec94c4803b740439acb582d5801a1708f9d8dfdedafd11fc709756f8d266412fdceb475d0d9e7a#npm:18.2.0"]\
+          ["react-dom", "virtual:58dce9411aad80ff4117b4e2f7848d73ee5abc711977828083ec94c4803b740439acb582d5801a1708f9d8dfdedafd11fc709756f8d266412fdceb475d0d9e7a#npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
         ],\
         "linkType": "SOFT"\
       }]\

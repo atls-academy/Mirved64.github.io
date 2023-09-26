@@ -3627,6 +3627,7 @@ __metadata:
     framer-motion: "npm:6.3.11"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/css": "*"
     "@emotion/react": "*"
@@ -3634,6 +3635,7 @@ __metadata:
     framer-motion: "*"
     react: "*"
     react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
