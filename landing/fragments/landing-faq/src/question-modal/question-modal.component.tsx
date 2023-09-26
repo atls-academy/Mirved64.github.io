@@ -13,7 +13,7 @@ import { Column }             from '@ui/layout'
 import { Modal }              from '@ui/modal'
 import { Text }               from '@ui/text'
 
-import { QuestionModalProps } from './question-modal.intarfaces'
+import { QuestionModalProps } from './question-modal.interfaces'
 
 export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
   const [send, setSend] = useState<boolean>(false)
