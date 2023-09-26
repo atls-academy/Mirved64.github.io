@@ -42,7 +42,7 @@ export const Hero = () => {
 
             <Column>
               <Background
-                backgroundColor='ghostTransparentGradient'
+                backgroundImage='ghostTransparentGradient'
                 borderRadius={['little', 'regular']}
               >
                 <Box

@@ -56,7 +56,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
   return (
     <Column flexGrow='1' alignItems='center'>
       <Condition match={!isMobile}>
-        <Background backgroundColor='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
+        <Background backgroundImage='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
           <Box
             width={960}
             justifyContent='center'
@@ -79,7 +79,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
       </Condition>
 
       <Condition match={isMobile}>
-        <Background backgroundColor='darkPurpleGradient' borderRadius='ordinary' border='thinGhost'>
+        <Background backgroundImage='darkPurpleGradient' borderRadius='ordinary' border='thinGhost'>
           <Box
             position='relative'
             borderRadius='ordinary'

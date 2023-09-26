@@ -24,12 +24,12 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
   return (
     <Modal open={open} onClose={setOpen}>
       <Column width={375}>
-        <Background backgroundColor='navyBlueGradient' borderRadius='regular' overflow='hidden'>
+        <Background backgroundImage='navyBlueGradient' borderRadius='regular' overflow='hidden'>
           <Background
-            backgroundColor='banner'
+            backgroundImage='banner'
             backgroundRepeat='no-repeat'
             backgroundPosition='-227px -168px'
-            backgroundSize='684px 428px'
+            backgroundSize='tiny'
           >
             <Row>
               <Layout flexBasis={30} />

@@ -14,27 +14,34 @@ const LibraryPage = () => {
 
   return (
     <>
-      <Background backgroundColor='navyBlueGradient' width='100%'>
-        <Background
-          backgroundColor='banner'
-          backgroundSize={['736px 415px', '100% 1080px']}
-          backgroundPosition={['-260px -20px', '0']}
-          backgroundRepeat='no-repeat'
-        >
-          <Condition match={!isMobile}>
+      <Background backgroundImage='navyBlueGradient' width='100%'>
+        <Condition match={!isMobile}>
+          <Background
+            backgroundImage='banner'
+            backgroundSize='usual'
+            backgroundPosition='0'
+            backgroundRepeat='no-repeat'
+          >
             <Parallax translateY={[-17, 15]}>
               <NavigationDesktop />
 
               <LibraryBanner />
             </Parallax>
-          </Condition>
+          </Background>
+        </Condition>
 
-          <Condition match={isMobile}>
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='banner'
+            backgroundSize='little'
+            backgroundPosition='-260px -20px'
+            backgroundRepeat='no-repeat'
+          >
             <NavigationMobile />
 
             <LibraryBanner />
-          </Condition>
-        </Background>
+          </Background>
+        </Condition>
       </Background>
 
       <Background
@@ -45,14 +52,27 @@ const LibraryPage = () => {
         width='100%'
         zIndex={1}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['2200px 400px', '1920px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-982px 409px', '0 1104px']}
-        >
-          <CardsLibrary />
-        </Background>
+        <Condition match={!isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='ordinary'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='0 1104px'
+          >
+            <CardsLibrary />
+          </Background>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='normal'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-982px 409px'
+          >
+            <CardsLibrary />
+          </Background>
+        </Condition>
       </Background>
     </>
   )

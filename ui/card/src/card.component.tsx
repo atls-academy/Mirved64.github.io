@@ -28,7 +28,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
     >
       <Background
         display='flex'
-        backgroundColor='whiteGhostGradient'
+        backgroundImage='whiteGhostGradient'
         width='100%'
         borderRadius={['normal', 'regular']}
       >

@@ -32,16 +32,12 @@ const IndexPage = () => {
       <Background
         id='academy'
         ref={sectionRefs[0]}
-        backgroundColor='navyBlueGradient'
+        backgroundImage='navyBlueGradient'
         position='absolute'
         width='100%'
       >
         <Condition match={!isMobile}>
-          <Background
-            backgroundColor='banner'
-            backgroundSize='1920px 1080px'
-            backgroundRepeat='no-repeat'
-          >
+          <Background backgroundImage='banner' backgroundSize='usual' backgroundRepeat='no-repeat'>
             <Parallax translateY={[-5, 10]}>
               <NavigationDesktopIndex sectionRefs={sectionRefs} />
 
@@ -54,8 +50,8 @@ const IndexPage = () => {
 
         <Condition match={isMobile}>
           <Background
-            backgroundColor='banner'
-            backgroundSize='736px 415px'
+            backgroundImage='banner'
+            backgroundSize='little'
             backgroundRepeat='no-repeat'
             backgroundPosition='-260px -20px'
           >
@@ -78,22 +74,29 @@ const IndexPage = () => {
         zIndex={1}
         top={[939, 1750]}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['2200px 400px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-982px 409px', '-2480px 645px']}
-        >
-          <Condition match={!isMobile}>
+        <Condition match={!isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='big'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-2480px 645px'
+          >
             <Parallax translateY={[-5, 10]}>
               <Courses />
             </Parallax>
-          </Condition>
+          </Background>
+        </Condition>
 
-          <Condition match={isMobile}>
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='normal'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-982px 409px'
+          >
             <Courses />
-          </Condition>
-        </Background>
+          </Background>
+        </Condition>
       </Background>
 
       <Background
@@ -109,8 +112,8 @@ const IndexPage = () => {
         <Condition match={!isMobile}>
           <Parallax translateY={[-1, 5]}>
             <Background
-              backgroundColor='wavesGradient'
-              backgroundSize='4400px 800px'
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
               backgroundRepeat='no-repeat'
               backgroundPosition='0 124px'
             >
@@ -120,8 +123,8 @@ const IndexPage = () => {
             <Technologies />
 
             <Background
-              backgroundColor='wavesGradient'
-              backgroundSize='4400px 800px'
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
               backgroundRepeat='no-repeat'
               backgroundPosition='-2480px 235px'
             >
@@ -132,8 +135,8 @@ const IndexPage = () => {
 
         <Condition match={isMobile}>
           <Background
-            backgroundColor='wavesGradient'
-            backgroundSize='1015px 464px'
+            backgroundImage='wavesGradient'
+            backgroundSize='small'
             backgroundRepeat='no-repeat'
             backgroundPosition='-340px 121px'
           >
@@ -143,8 +146,8 @@ const IndexPage = () => {
           <Technologies />
 
           <Background
-            backgroundColor='wavesGradient'
-            backgroundSize='1015px 464px'
+            backgroundImage='wavesGradient'
+            backgroundSize='small'
             backgroundRepeat='no-repeat'
             backgroundPosition='-341px 165px'
           >
@@ -163,14 +166,27 @@ const IndexPage = () => {
         zIndex={3}
         top={[4264, 6450]}
       >
-        <Background
-          backgroundColor='wavesGradient'
-          backgroundSize={['1015px 464px', '4400px 800px']}
-          backgroundRepeat='no-repeat'
-          backgroundPosition={['-340px 121px', '-2480px 232px']}
-        >
-          <Faq />
-        </Background>
+        <Condition match={!isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='big'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-2480px 232px'
+          >
+            <Faq />
+          </Background>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='small'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-340px 121px'
+          >
+            <Faq />
+          </Background>
+        </Condition>
       </Background>
     </>
   )

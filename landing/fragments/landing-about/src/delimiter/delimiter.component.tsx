@@ -6,7 +6,7 @@ import { Box }        from '@ui/layout'
 
 export const Delimiter = () => (
   <Background
-    backgroundColor='ghostTransparentGradient'
+    backgroundImage='ghostTransparentGradient'
     borderRadius='little'
     display='inline-flex'
     verticalAlign='sub'
