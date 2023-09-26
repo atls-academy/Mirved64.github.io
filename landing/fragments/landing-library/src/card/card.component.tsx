@@ -50,7 +50,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
                   borderRadius='tiny'
                   border='thinnestPrimaryTransparent'
                   maxWidth={103}
-                  padding='10px 12px 10px 12px'
+                  padding='tinyYopSmallX'
                 >
                   <Text
                     color='text.primaryText'
