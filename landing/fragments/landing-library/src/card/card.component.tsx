@@ -20,9 +20,9 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
   const { active, activeProps } = useActive()
 
   const getColor = (): string => {
-    if (hover) return 'accentPurpur'
-    if (active) return 'ghostPurpur'
-    return 'darkPurpur'
+    if (hover) return 'accentPurple'
+    if (active) return 'ghostPurple'
+    return 'darkPurple'
   }
 
   return (

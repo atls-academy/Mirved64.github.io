@@ -32,9 +32,9 @@ export const LibraryBanner = () => {
   )
 
   const getColor = (): string => {
-    if (hover) return 'darkPurpurTransparent'
-    if (focus) return 'darkestPurpur'
-    if (searchQuery) return 'darkestPurpur'
+    if (hover) return 'darkPurpleTransparent'
+    if (focus) return 'darkestPurple'
+    if (searchQuery) return 'darkestPurple'
     return 'gray'
   }
 
