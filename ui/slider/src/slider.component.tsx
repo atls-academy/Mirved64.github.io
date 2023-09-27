@@ -25,8 +25,8 @@ export const Slider: FC<SliderProps> = ({ images }) => {
   const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
-  const [slideIndex, setSlideIndex] = useState(0)
-  const [animation, setAnimation] = useState(0)
+  const [slideIndex, setSlideIndex] = useState<number>(0)
+  const [animation, setAnimation] = useState<number>(0)
 
   useEffect(() => {
     const timer = setTimeout(() => {
