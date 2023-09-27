@@ -7,8 +7,8 @@ import { Row }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 
-import { CardKeys }  from '../card'
-import { Card }      from '../card'
+import { CardKeys }  from './card'
+import { Card }      from './card'
 import { dataCards } from '../data'
 
 export const CardsLibrary = () => {
@@ -29,12 +29,12 @@ export const CardsLibrary = () => {
 
         <Box flexDirection={{ _: 'column', wide: 'row' }} flexWrap='wrap'>
           {cards(dataCards).map((card, index, array) => (
-            <Row maxWidth={{ wide: '50%' }}>
+            <Row maxWidth={{ wide: '50%' }} key={card.id}>
               <Condition match={index % 2 !== 0}>
                 <Layout flexBasis={{ _: 0, wide: 20 }} flexShrink='0' />
               </Condition>
 
-              <Column key={card.id} flexGrow='1'>
+              <Column flexGrow='1'>
                 <Layout flexBasis={32} />
 
                 <Card

@@ -1,20 +1,20 @@
 import React              from 'react'
 import { FC }             from 'react'
 
-import { Condition }      from '@ui/condition'
-import { ArrowRightIcon } from '@ui/icons'
-import { Box }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Text }           from '@ui/text'
-import { useWindowWidth } from '@ui/utils'
-import { useHover }       from '@ui/utils'
-import { useActive }      from '@ui/utils'
+import { Condition }      from '@ui/condition/src'
+import { ArrowRightIcon } from '@ui/icons/src'
+import { Box }            from '@ui/layout/src'
+import { Column }         from '@ui/layout/src'
+import { Layout }         from '@ui/layout/src'
+import { Row }            from '@ui/layout/src'
+import { Text }           from '@ui/text/src'
+import { useWindowWidth } from '@ui/utils/src'
+import { useHover }       from '@ui/utils/src'
+import { useActive }      from '@ui/utils/src'
 
 import { CardKeys }       from './card.interfaces'
-import { getColorText }   from '../helpers'
-import { getColorIcon }   from '../helpers'
+import { getColorText }   from '../../helpers'
+import { getColorIcon }   from '../../helpers'
 
 export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => {
   const { isMobile } = useWindowWidth()

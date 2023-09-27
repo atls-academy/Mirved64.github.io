@@ -1,17 +1,16 @@
-import React                   from 'react'
-import { Parallax }            from 'react-scroll-parallax'
+import React                 from 'react'
+import { Parallax }          from 'react-scroll-parallax'
 
-import { Header }              from '@landing/fragment-header'
-import { CardsLibrary }        from '@landing/fragment-library'
-import { LibraryBanner }       from '@landing/fragment-library'
-import { LibraryBannerMobile } from '@landing/fragment-library'
-import { NavigationDesktop }   from '@landing/fragment-navigation'
-import { NavigationMobile }    from '@landing/fragment-navigation'
-import { AnimateOnLoad }       from '@ui/animate'
-import { Background }          from '@ui/background'
-import { Condition }           from '@ui/condition'
-import { Box }                 from '@ui/layout'
-import { useWindowWidth }      from '@ui/utils'
+import { Header }            from '@landing/fragment-header'
+import { CardsLibrary }      from '@landing/fragment-library'
+import { LibraryBanner }     from '@landing/fragment-library'
+import { NavigationDesktop } from '@landing/fragment-navigation'
+import { NavigationMobile }  from '@landing/fragment-navigation'
+import { AnimateOnLoad }     from '@ui/animate'
+import { Background }        from '@ui/background'
+import { Condition }         from '@ui/condition'
+import { Box }               from '@ui/layout'
+import { useWindowWidth }    from '@ui/utils'
 
 const LibraryPage = () => {
   const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
@@ -196,14 +195,14 @@ const LibraryPage = () => {
         <Box display={{ _: 'flex', standard: 'none' }}>
           <Background
             backgroundImage='banner'
-            backgroundSize='cover'
-            backgroundPosition='right'
+            backgroundSize='little'
+            backgroundPosition='-260px top'
             backgroundRepeat='no-repeat'
             width='100%'
           >
             <NavigationMobile />
 
-            <LibraryBannerMobile />
+            <LibraryBanner />
           </Background>
         </Box>
       </Background>
