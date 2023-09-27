@@ -13,24 +13,20 @@ import { useHover }       from '@ui/utils'
 import { useActive }      from '@ui/utils'
 
 import { CardKeys }       from './card.interfaces'
+import { getColorText }   from '../helpers'
+import { getColorIcon }   from '../helpers'
 
 export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => {
   const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
   const { active, activeProps } = useActive()
 
-  const getColor = (): string => {
-    if (hover) return 'accentPurple'
-    if (active) return 'ghostPurple'
-    return 'darkPurple'
-  }
-
   return (
     <Box alignItems='center' {...hoverProps} {...activeProps} cursor='pointer'>
       <Column maxWidth={['100%', 785]}>
         <Box>
           <Text
-            color={getColor()}
+            color={getColorText(hover, active)}
             fontSize={['regular', 'giant']}
             lineHeight={['standard', 'small']}
           >
@@ -85,7 +81,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
         <Layout flexBasis={20} flexGrow='1' />
 
         <Box width={56} height={56} justifyContent='center' alignItems='center'>
-          <ArrowRightIcon width={21} height={42} color={getColor()} />
+          <ArrowRightIcon width={21} height={42} color={getColorIcon(hover, active)} />
         </Box>
       </Condition>
     </Box>
