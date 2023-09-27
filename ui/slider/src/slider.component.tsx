@@ -56,11 +56,15 @@ export const Slider: FC<SliderProps> = ({ images }) => {
   return (
     <Column flexGrow='1' alignItems='center'>
       <Condition match={isDesktop}>
-        <Background backgroundImage='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
+        <Background
+          backgroundImage='darkPurpleGradient'
+          borderRadius='regular'
+          border='boldGhost'
+          overflow='hidden'
+        >
           <Box
             width={960}
             justifyContent='center'
-            borderRadius='regular'
             position='relative'
             maxHeight={540}
             overflow='hidden'
@@ -79,14 +83,13 @@ export const Slider: FC<SliderProps> = ({ images }) => {
       </Condition>
 
       <Condition match={isMobile}>
-        <Background backgroundImage='darkPurpleGradient' borderRadius='ordinary' border='thinGhost'>
-          <Box
-            position='relative'
-            borderRadius='ordinary'
-            width={155}
-            justifyContent='center'
-            overflow='hidden'
-          >
+        <Background
+          backgroundImage='darkPurpleGradient'
+          borderRadius='ordinary'
+          border='thinGhost'
+          overflow='hidden'
+        >
+          <Box position='relative' width={155} justifyContent='center' overflow='hidden'>
             <Box position='absolute' top='2px'>
               <Image src='./image/Toolbar-mobile.png' width={143} height={22} />
             </Box>
@@ -99,11 +102,15 @@ export const Slider: FC<SliderProps> = ({ images }) => {
       </Condition>
 
       <Condition match={isWideDesktop || isUltraDesktop}>
-        <Background backgroundImage='darkPurpleGradient' borderRadius='big' border='boldGhost'>
+        <Background
+          backgroundImage='darkPurpleGradient'
+          borderRadius='big'
+          border='boldGhost'
+          overflow='hidden'
+        >
           <Box
             width={1300}
             justifyContent='center'
-            borderRadius='regular'
             position='relative'
             maxHeight={731}
             overflow='hidden'

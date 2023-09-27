@@ -16,6 +16,10 @@ import { useWindowWidth }      from '@ui/utils'
 const LibraryPage = () => {
   const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
 
+  const animateOnLoadProps = {
+    transition: { duration: 1.2 },
+  }
+
   return (
     <>
       <Condition match={!isMobile}>
@@ -34,14 +38,14 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='1226px'
               backgroundImage='symbol'
-              backgroundSize='3840px 2160px'
+              backgroundSize='large'
               backgroundPosition='right top'
               backgroundRepeat='no-repeat'
             />
@@ -50,13 +54,13 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='1226px'
-              backgroundColor='triangleGradient'
+              backgroundImage='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
             />
@@ -65,7 +69,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 23 }}
           >
             <NavigationDesktop />
@@ -74,7 +78,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 4 }}
           >
             <Parallax translateY={[5, 17]}>
@@ -87,7 +91,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 2 }}
           >
             <Background
@@ -103,7 +107,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 2 }}
           >
             <Background
@@ -118,7 +122,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 23 }}
           >
             <NavigationDesktop />
@@ -127,7 +131,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 4 }}
           >
             <Parallax translateY={[5, 15]}>
@@ -140,7 +144,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 2 }}
           >
             <Background
@@ -156,7 +160,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 2 }}
           >
             <Background
@@ -171,7 +175,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 23 }}
           >
             <NavigationDesktop />
@@ -180,7 +184,7 @@ const LibraryPage = () => {
           <AnimateOnLoad
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
-            transition={{ duration: 1.2 }}
+            {...animateOnLoadProps}
             style={{ zIndex: 4 }}
           >
             <Parallax translateY={[9, 15]}>

@@ -13,7 +13,7 @@ export const backgrounds = {
     purpleGradient:
       'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%), #6F57FF',
     darkPurpleGradient:
-      'radial-gradient(50% 50.00% at 50% 50.00%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(19, 24, 31, 0.75)',
+      'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(19, 24, 31, 0.75)',
     darkPurpleGradientFlash:
       'radial-gradient(48.94% 48.94% at 50% 51.06%, rgba(72, 65, 234, 0.50) 0%, rgba(72, 65, 234, 0.00) 100%)',
     whiteGhostGradient:
@@ -21,12 +21,14 @@ export const backgrounds = {
     ghostTransparentGradient:
       'linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), linear-gradient(136deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%)',
     banner: 'url("./image/Banner.png")',
-    wavesGradientSmall: 'url("./image/Bg-gradient-waves-small.png")',
-    blendGradient: 'url("./image/Bg-gradient.png")'
+    symbol: 'url("./image/Symbol.png")',
+    triangleGradient: 'url("./image/Triangle-gradient.png")',
+    blendGradient: 'url("./image/Bg-gradient.png")',
     wavesGradient: 'url("./image/Bg-gradient-waves.png")',
   },
   backgroundSize: {
     big: '4400px 800px',
+    large: '3840px 2160px',
     normal: '2200px 400px',
     usual: '1920px 1080px',
     ordinary: '1920px 800px',

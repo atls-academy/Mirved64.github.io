@@ -19,7 +19,6 @@ import { AnimateOnClick }         from '@ui/animate'
 import { AnimateOnLoad }          from '@ui/animate'
 import { Background }             from '@ui/background'
 import { Condition }              from '@ui/condition'
-import { Column }                 from '@ui/layout'
 import { Box }                    from '@ui/layout'
 import { Navbar }                 from '@ui/navbar'
 import { useDivHeight }           from '@ui/utils'
@@ -190,13 +189,11 @@ const IndexPage = () => {
           </AnimateOnLoad>
 
           <AnimateOnLoad animate={{ y: 0 }} initial={{ y: '100%' }} {...animateOnLoadProps}>
-            <Column>
-              <Parallax translateY={[4, 15]}>
-                <Hero />
+            <Parallax translateY={[4, 15]}>
+              <Hero />
 
-                <About />
-              </Parallax>
-            </Column>
+              <About />
+            </Parallax>
           </AnimateOnLoad>
         </Box>
 
@@ -260,8 +257,8 @@ const IndexPage = () => {
 
           <Condition match={isDesktop}>
             <Background
-              backgroundColor='wavesGradient'
-              backgroundSize='4400px 800px'
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
               backgroundRepeat='no-repeat'
               backgroundPosition='left center'
               display='flex'
@@ -379,7 +376,7 @@ const IndexPage = () => {
 
           <Condition match={isMobile}>
             <Background
-              backgroundImage='wavesGradient'
+              backgroundImage='blendGradient'
               backgroundSize='small'
               backgroundRepeat='no-repeat'
               backgroundPosition='center 121px'
@@ -390,15 +387,18 @@ const IndexPage = () => {
             <Technologies />
 
             <Background
-              backgroundImage='wavesGradient'
+              backgroundImage='blendGradient'
               backgroundSize='small'
               backgroundRepeat='no-repeat'
               backgroundPosition='center 165px'
             >
-              <Process />
+              <Background backgroundImage='darkPurpleGradientFlash'>
+                <Process />
+              </Background>
             </Background>
           </Condition>
         </Background>
+      </AnimateOnClick>
 
       <AnimateOnClick animate={controlsFaq} style={{ zIndex: 13 }}>
         <Background

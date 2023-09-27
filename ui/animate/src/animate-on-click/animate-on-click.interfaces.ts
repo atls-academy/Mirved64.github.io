@@ -6,5 +6,4 @@ type StyleFunc = (theme: any) => CSSProperties
 export interface AnimateOnClickProps {
   animate: AnimationControls
   style?: CSSProperties | StyleFunc
-  children: JSX.Element
 }
