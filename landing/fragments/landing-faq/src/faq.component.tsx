@@ -21,7 +21,7 @@ export const Faq = () => {
   const { isMobile } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
-  const handleModalOpen = () => setOpen(false)
+  const handleModalState = () => setOpen(!open)
 
   const questions = Array.from({ length: 6 }, () => Question).map((el, index) => ({
     ...el,
@@ -59,7 +59,7 @@ export const Faq = () => {
                   heightIcon={48}
                   backgroundIcon='background.white'
                   radiiIcon='normal'
-                  onClick={() => setOpen(true)}
+                  onClick={handleModalState}
                 >
                   <Text color='text.white' fontSize='small' lineHeight='normal'>
                     <FormattedMessage id='faq.button' />
@@ -103,7 +103,7 @@ export const Faq = () => {
                 heightIcon={32}
                 backgroundIcon='background.white'
                 radiiIcon='tiny'
-                onClick={() => setOpen(true)}
+                onClick={handleModalState}
               >
                 <Text color='text.white' fontSize='small' lineHeight='small'>
                   <FormattedMessage id='faq.button' />
@@ -117,7 +117,7 @@ export const Faq = () => {
 
         <Layout flexBasis={[20, 80]} flexShrink='0' />
       </Row>
-      <QuestionModal open={open} setOpen={handleModalOpen} />
+      <QuestionModal open={open} setOpen={handleModalState} />
     </>
   )
 }

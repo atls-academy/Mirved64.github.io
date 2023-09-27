@@ -1,4 +1,6 @@
+import { MouseEventHandler } from 'react'
+
 export interface QuestionModalProps {
   open: boolean
-  setOpen: () => void
+  setOpen: MouseEventHandler<HTMLDivElement>
 }
