@@ -22,6 +22,7 @@ export const Sidebar = () => {
       <Background
         display='flex'
         backgroundImage='blackTransparentGradient'
+        backgroundColor='blackTransparentGradient'
         borderRadius={['normal', 'regular']}
         border='thinnestGhostGray'
       >

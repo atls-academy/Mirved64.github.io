@@ -110,6 +110,7 @@ export const Courses = () => {
                         borderRadius='regular'
                         overflow='hidden'
                         backgroundImage={hover ? 'purpleGradient' : 'navyGradient'}
+                        backgroundColor={hover ? 'purpleGradient' : 'navyGradient'}
                         display='flex'
                         height='100%'
                       >

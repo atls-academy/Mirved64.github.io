@@ -2,18 +2,22 @@ export const backgrounds = {
   backgroundColor: {
     darkPurple: 'rgba(39, 37, 59, 1)',
     white: 'rgba(255, 255, 255, 1)',
+    darkPurpleGradient: 'rgba(19, 24, 31, 0.75)',
+    navyGradient: '#4841EA',
+    purpleGradient: '#6F57FF',
+    blackTransparentGradient: 'rgba(255, 255, 255, 0.08)',
   },
   backgroundImage: {
     navyGradient:
-      'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%), #4841EA',
+      'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%)',
     navyBlueGradient:
       'linear-gradient(180deg, #3D24EC 0%, rgba(61, 36, 236, 0.00) 100%), radial-gradient(151.52% 72.21% at 100.00% 100.00%, #3909F6 0%, rgba(104, 82, 255, 0.00) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.11) 100%), linear-gradient(161deg, #6F57FF 0%, #4C58FF 100%)',
     blackTransparentGradient:
-      'linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), rgba(255, 255, 255, 0.08)',
+      'linear-gradient(0deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%)',
     purpleGradient:
-      'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%), #6F57FF',
+      'radial-gradient(50% 50% at 50% 50%, rgba(36, 0, 254, 0.00) 63.7%, rgba(36, 0, 254, 0.20) 100%)',
     darkPurpleGradient:
-      'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(19, 24, 31, 0.75)',
+      'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%)',
     darkPurpleGradientFlash:
       'radial-gradient(48.94% 48.94% at 50% 51.06%, rgba(72, 65, 234, 0.50) 0%, rgba(72, 65, 234, 0.00) 100%)',
     whiteGhostGradient:

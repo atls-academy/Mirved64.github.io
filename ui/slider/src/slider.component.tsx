@@ -58,6 +58,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
       <Condition match={isDesktop}>
         <Background
           backgroundImage='darkPurpleGradient'
+          backgroundColor='darkPurpleGradient'
           borderRadius='regular'
           border='boldGhost'
           overflow='hidden'
@@ -85,6 +86,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
       <Condition match={isMobile}>
         <Background
           backgroundImage='darkPurpleGradient'
+          backgroundColor='darkPurpleGradient'
           borderRadius='ordinary'
           border='thinGhost'
           overflow='hidden'
@@ -104,6 +106,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
       <Condition match={isWideDesktop || isUltraDesktop}>
         <Background
           backgroundImage='darkPurpleGradient'
+          backgroundColor='darkPurpleGradient'
           borderRadius='big'
           border='boldGhost'
           overflow='hidden'
