@@ -2,8 +2,8 @@ import React                 from 'react'
 import { FormattedMessage }  from 'react-intl'
 
 import { Background }        from '@ui/background'
-import { Delimiter }         from '@ui/delimiter/src'
-import { DelimiterLarge }    from '@ui/delimiter/src'
+import { Delimiter }         from '@ui/delimiter'
+import { DelimiterLarge }    from '@ui/delimiter'
 import { Divider }           from '@ui/divider'
 import { GitHubIcon }        from '@ui/icons'
 import { TelegramIcon }      from '@ui/icons'
@@ -13,7 +13,7 @@ import { Row }               from '@ui/layout'
 import { Layout }            from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Text }              from '@ui/text'
-import { Space }             from '@ui/text/src'
+import { Space }             from '@ui/text'
 
 import { SocialLinkDesktop } from './social-link'
 import { SocialLinkUltra }   from './social-link'
@@ -41,7 +41,7 @@ export const Hero = () => (
 
           <Column>
             <Background
-              backgroundColor='ghostTransparentGradient'
+              backgroundImage='ghostTransparentGradient'
               borderRadius={{ _: 'little', standard: 'regular', ultra: 'large' }}
               overflow='hidden'
               border='thinnestGhost'

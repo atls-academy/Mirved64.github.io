@@ -13,7 +13,7 @@ import { Column }             from '@ui/layout'
 import { Modal }              from '@ui/modal'
 import { Text }               from '@ui/text'
 
-import { QuestionModalProps } from './question-modal.intarfaces'
+import { QuestionModalProps } from './question-modal.interfaces'
 
 export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
   const [send, setSend] = useState<boolean>(false)
@@ -24,12 +24,12 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
   return (
     <Modal open={open} onClose={setOpen}>
       <Column width={375}>
-        <Background backgroundColor='navyBlueGradient' borderRadius='regular' overflow='hidden'>
+        <Background backgroundImage='navyBlueGradient' borderRadius='regular' overflow='hidden'>
           <Background
-            backgroundColor='banner'
+            backgroundImage='banner'
             backgroundRepeat='no-repeat'
             backgroundPosition='-227px -168px'
-            backgroundSize='684px 428px'
+            backgroundSize='tiny'
           >
             <Row>
               <Layout flexBasis={30} />

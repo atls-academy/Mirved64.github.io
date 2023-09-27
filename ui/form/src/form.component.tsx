@@ -36,8 +36,8 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
     setPhoneNumber('')
   }
 
-  const handleClose = () => {
-    onClose()
+  const handleClose = (e) => {
+    onClose(e)
     setSend(false)
     onChange('')
   }
@@ -62,7 +62,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
             maxLength={500}
           />
 
-          <Condition match={!!display}>
+          <Condition match={display}>
             <Layout flexBasis={12} />
 
             <Input

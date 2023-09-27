@@ -23,7 +23,7 @@ const LibraryPage = () => {
       </Condition>
 
       <Background
-        backgroundColor='navyBlueGradient'
+        backgroundImage='navyBlueGradient'
         position='absolute'
         overflow='hidden'
         width='100%'
@@ -35,12 +35,12 @@ const LibraryPage = () => {
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
             transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+            style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='1226px'
-              backgroundColor='symbol'
+              backgroundImage='symbol'
               backgroundSize='3840px 2160px'
               backgroundPosition='right top'
               backgroundRepeat='no-repeat'
@@ -51,7 +51,7 @@ const LibraryPage = () => {
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
             transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+            style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
@@ -66,7 +66,7 @@ const LibraryPage = () => {
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
             transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 23 }}
+            style={{ zIndex: 23 }}
           >
             <NavigationDesktop />
           </AnimateOnLoad>
@@ -75,7 +75,7 @@ const LibraryPage = () => {
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
             transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
+            style={{ zIndex: 4 }}
           >
             <Parallax translateY={[5, 17]}>
               <LibraryBanner />
@@ -88,12 +88,12 @@ const LibraryPage = () => {
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
             transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+            style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='970px'
-              backgroundColor='symbol'
+              backgroundImage='symbol'
               backgroundSize='contain'
               backgroundPosition='right top'
               backgroundRepeat='no-repeat'
@@ -104,12 +104,12 @@ const LibraryPage = () => {
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
             transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+            style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='970px'
-              backgroundColor='triangleGradient'
+              backgroundImage='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
             />
@@ -119,7 +119,7 @@ const LibraryPage = () => {
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
             transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 23 }}
+            style={{ zIndex: 23 }}
           >
             <NavigationDesktop />
           </AnimateOnLoad>
@@ -128,7 +128,7 @@ const LibraryPage = () => {
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
             transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
+            style={{ zIndex: 4 }}
           >
             <Parallax translateY={[5, 15]}>
               <LibraryBanner />
@@ -141,12 +141,12 @@ const LibraryPage = () => {
             animate={{ x: 0 }}
             initial={{ x: '100%' }}
             transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+            style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='1815px'
-              backgroundColor='symbol'
+              backgroundImage='symbol'
               backgroundSize='contain'
               backgroundPosition='right top'
               backgroundRepeat='no-repeat'
@@ -157,12 +157,12 @@ const LibraryPage = () => {
             animate={{ x: 0 }}
             initial={{ x: '-100%' }}
             transition={{ duration: 1.2 }}
-            style={{ zIndex: 2, position: 'absolute', minWidth: '100%' }}
+            style={{ zIndex: 2 }}
           >
             <Background
               width='100%'
               height='1815px'
-              backgroundColor='triangleGradient'
+              backgroundImage='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
             />
@@ -172,7 +172,7 @@ const LibraryPage = () => {
             animate={{ y: 0 }}
             initial={{ y: '-100%' }}
             transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 23 }}
+            style={{ zIndex: 23 }}
           >
             <NavigationDesktop />
           </AnimateOnLoad>
@@ -181,7 +181,7 @@ const LibraryPage = () => {
             animate={{ y: 0 }}
             initial={{ y: '100%' }}
             transition={{ duration: 1.2 }}
-            style={{ position: 'absolute', minWidth: '100%', zIndex: 4 }}
+            style={{ zIndex: 4 }}
           >
             <Parallax translateY={[9, 15]}>
               <LibraryBanner />
@@ -191,7 +191,7 @@ const LibraryPage = () => {
 
         <Box display={{ _: 'flex', standard: 'none' }}>
           <Background
-            backgroundColor='banner'
+            backgroundImage='banner'
             backgroundSize='cover'
             backgroundPosition='right'
             backgroundRepeat='no-repeat'
@@ -214,8 +214,8 @@ const LibraryPage = () => {
       >
         <Condition match={isWideDesktop || isUltraDesktop}>
           <Background
-            backgroundColor='wavesGradient'
-            backgroundSize='4400px 800px'
+            backgroundImage='wavesGradient'
+            backgroundSize='big'
             backgroundRepeat='no-repeat'
             backgroundPosition='0 404px'
           >
@@ -225,8 +225,8 @@ const LibraryPage = () => {
 
         <Condition match={isDesktop}>
           <Background
-            backgroundColor='wavesGradient'
-            backgroundSize='4400px 800px'
+            backgroundImage='wavesGradient'
+            backgroundSize='big'
             backgroundRepeat='no-repeat'
             backgroundPosition='0 1104px'
           >
@@ -236,8 +236,8 @@ const LibraryPage = () => {
 
         <Condition match={isMobile}>
           <Background
-            backgroundColor='wavesGradientSmall'
-            backgroundSize='2200px 400px'
+            backgroundImage='wavesGradient'
+            backgroundSize='normal'
             backgroundRepeat='no-repeat'
             backgroundPosition='-982px 409px'
           >

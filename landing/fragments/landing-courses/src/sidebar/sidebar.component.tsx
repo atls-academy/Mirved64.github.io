@@ -21,7 +21,7 @@ export const Sidebar = () => {
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
       <Background
         display='flex'
-        backgroundColor='blackTransparentGradient'
+        backgroundImage='blackTransparentGradient'
         borderRadius={['normal', 'regular']}
         border='thinnestGhostGray'
       >

@@ -1,4 +1,6 @@
+import { MouseEventHandler } from 'react'
+
 export interface ModalProps {
-  open?: boolean
-  onClose?: () => void
+  open: boolean
+  onClose: MouseEventHandler<HTMLDivElement>
 }

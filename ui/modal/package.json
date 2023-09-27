@@ -12,7 +12,8 @@
     "@emotion/styled": "11.9.3",
     "framer-motion": "10.16.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-system": "5.1.5"
   },
   "peerDependencies": {
     "@emotion/css": "*",
@@ -20,6 +21,7 @@
     "@emotion/styled": "*",
     "framer-motion": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "styled-system": "*"
   }
 }

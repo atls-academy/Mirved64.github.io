@@ -72,7 +72,7 @@ const IndexPage = () => {
       <Background
         id='academy'
         ref={mergeRefs([sectionRefs[0], academyRef])}
-        backgroundColor='navyBlueGradient'
+        backgroundImage='navyBlueGradient'
         position='absolute'
         overflow='hidden'
         width='100%'
@@ -84,7 +84,7 @@ const IndexPage = () => {
             <Background
               width='100%'
               height='2070px'
-              backgroundColor='symbol'
+              backgroundImage='symbol'
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             />
@@ -94,7 +94,7 @@ const IndexPage = () => {
             <Background
               width='100%'
               height='2070px'
-              backgroundColor='triangleGradient'
+              backgroundImage='triangleGradient'
               backgroundSize='cover'
               backgroundRepeat='no-repeat'
             />
@@ -126,7 +126,7 @@ const IndexPage = () => {
             <Background
               width='100%'
               height='1440px'
-              backgroundColor='symbol'
+              backgroundImage='symbol'
               backgroundSize='contain'
               backgroundPosition='right'
               backgroundRepeat='no-repeat'
@@ -137,7 +137,7 @@ const IndexPage = () => {
             <Background
               width='100%'
               height='1440px'
-              backgroundColor='triangleGradient'
+              backgroundImage='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
             />
@@ -164,7 +164,7 @@ const IndexPage = () => {
             <Background
               width='100%'
               height='1708px'
-              backgroundColor='symbol'
+              backgroundImage='symbol'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
             />
@@ -174,7 +174,7 @@ const IndexPage = () => {
             <Background
               width='100%'
               height='1708px'
-              backgroundColor='triangleGradient'
+              backgroundImage='triangleGradient'
               backgroundSize='contain'
               backgroundRepeat='no-repeat'
             />
@@ -202,8 +202,8 @@ const IndexPage = () => {
 
         <Box display={{ _: 'flex', standard: 'none' }}>
           <Background
-            backgroundColor='banner'
-            backgroundSize='736px 415px'
+            backgroundImage='banner'
+            backgroundSize='little'
             backgroundRepeat='no-repeat'
             backgroundPosition='right top'
           >
@@ -231,8 +231,8 @@ const IndexPage = () => {
           <Condition match={isUltraDesktop}>
             <Parallax translateY={[-5, 8]}>
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='0 777px'
                 display='flex'
@@ -246,8 +246,8 @@ const IndexPage = () => {
           <Condition match={isWideDesktop}>
             <Parallax translateY={[-5, 9]}>
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='left 464px'
                 display='flex'
@@ -259,24 +259,24 @@ const IndexPage = () => {
           </Condition>
 
           <Condition match={isDesktop}>
-            <Parallax translateY={[-5, 14]}>
-              <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
-                backgroundRepeat='no-repeat'
-                backgroundPosition='left center'
-                display='flex'
-                width='100%'
-              >
+            <Background
+              backgroundColor='wavesGradient'
+              backgroundSize='4400px 800px'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='left center'
+              display='flex'
+              width='100%'
+            >
+              <Parallax translateY={[-5, 14]}>
                 <Courses />
-              </Background>
-            </Parallax>
+              </Parallax>
+            </Background>
           </Condition>
 
           <Condition match={isMobile}>
             <Background
-              backgroundColor='wavesGradientSmall'
-              backgroundSize='2200px 400px'
+              backgroundImage='wavesGradient'
+              backgroundSize='normal'
               backgroundRepeat='no-repeat'
               backgroundPosition='-982px 409px'
               display='flex'
@@ -302,8 +302,8 @@ const IndexPage = () => {
           <Condition match={isUltraDesktop}>
             <Parallax translateY={[-5, 5]}>
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='-196px 124px'
               >
@@ -313,12 +313,12 @@ const IndexPage = () => {
               <Technologies />
 
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='-470px 388px'
               >
-                <Background backgroundColor='darkPurpleGradientFlash'>
+                <Background backgroundImage='darkPurpleGradientFlash'>
                   <Process />
                 </Background>
               </Background>
@@ -328,8 +328,8 @@ const IndexPage = () => {
           <Condition match={isWideDesktop}>
             <Parallax translateY={[-2, 5]}>
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='left center'
               >
@@ -339,12 +339,12 @@ const IndexPage = () => {
               <Technologies />
 
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='center -38px'
               >
-                <Background backgroundColor='darkPurpleGradientFlash'>
+                <Background backgroundImage='darkPurpleGradientFlash'>
                   <Process />
                 </Background>
               </Background>
@@ -354,8 +354,8 @@ const IndexPage = () => {
           <Condition match={isDesktop}>
             <Parallax translateY={[-5, 8]}>
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='left 124px'
               >
@@ -365,12 +365,12 @@ const IndexPage = () => {
               <Technologies />
 
               <Background
-                backgroundColor='wavesGradient'
-                backgroundSize='4400px 800px'
+                backgroundImage='wavesGradient'
+                backgroundSize='big'
                 backgroundRepeat='no-repeat'
                 backgroundPosition='right 235px'
               >
-                <Background backgroundColor='darkPurpleGradientFlash'>
+                <Background backgroundImage='darkPurpleGradientFlash'>
                   <Process />
                 </Background>
               </Background>
@@ -379,8 +379,8 @@ const IndexPage = () => {
 
           <Condition match={isMobile}>
             <Background
-              backgroundColor='blendGradient'
-              backgroundSize='1015px 464px'
+              backgroundImage='wavesGradient'
+              backgroundSize='small'
               backgroundRepeat='no-repeat'
               backgroundPosition='center 121px'
             >
@@ -390,18 +390,15 @@ const IndexPage = () => {
             <Technologies />
 
             <Background
-              backgroundColor='blendGradient'
-              backgroundSize='1015px 464px'
+              backgroundImage='wavesGradient'
+              backgroundSize='small'
               backgroundRepeat='no-repeat'
               backgroundPosition='center 165px'
             >
-              <Background backgroundColor='darkPurpleGradientFlash'>
-                <Process />
-              </Background>
+              <Process />
             </Background>
           </Condition>
         </Background>
-      </AnimateOnClick>
 
       <AnimateOnClick animate={controlsFaq} style={{ zIndex: 13 }}>
         <Background
@@ -416,8 +413,8 @@ const IndexPage = () => {
         >
           <Condition match={isWideDesktop || isUltraDesktop}>
             <Background
-              backgroundColor='wavesGradient'
-              backgroundSize='4400px 800px'
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
               backgroundRepeat='no-repeat'
               backgroundPosition={{ wide: 'left 231px', ultra: 'left 102px' }}
             >
@@ -427,8 +424,8 @@ const IndexPage = () => {
 
           <Condition match={isDesktop}>
             <Background
-              backgroundColor='wavesGradient'
-              backgroundSize='containe'
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
               backgroundRepeat='no-repeat'
               backgroundPosition='left 232px'
             >
@@ -438,8 +435,8 @@ const IndexPage = () => {
 
           <Condition match={isMobile}>
             <Background
-              backgroundColor='blendGradient'
-              backgroundSize='1015px 464px'
+              backgroundImage='blendGradient'
+              backgroundSize='small'
               backgroundRepeat='no-repeat'
               backgroundPosition='center 121px'
             >

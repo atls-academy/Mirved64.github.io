@@ -1,5 +1,7 @@
+import { MouseEventHandler } from 'react'
+
 export interface DrawerProps {
   active: boolean
-  onClose: () => void
+  onClose: MouseEventHandler<HTMLButtonElement>
   children?: JSX.Element
 }

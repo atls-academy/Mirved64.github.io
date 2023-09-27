@@ -26,7 +26,12 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
       overflow='hidden'
       position='relative'
     >
-      <Background display='flex' backgroundColor='whiteGhostGradient' width='100%'>
+      <Background
+        display='flex'
+        backgroundImage='whiteGhostGradient'
+        width='100%'
+        borderRadius={['normal', 'regular']}
+      >
         <Condition match={!!props.image && !isMobile}>
           <Box position='absolute' top='40px' right='34px'>
             <Image src={props.image} width={360} height={360} />

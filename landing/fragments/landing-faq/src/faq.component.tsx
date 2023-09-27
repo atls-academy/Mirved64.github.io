@@ -21,8 +21,7 @@ export const Faq = () => {
   const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
-  const handleModalOpen = () => setOpen(true)
-  const handleModalClose = () => setOpen(false)
+  const handleModalState = () => setOpen(!open)
 
   const questions = Array.from({ length: 6 }, () => Question).map((el, index) => ({
     ...el,
@@ -32,7 +31,7 @@ export const Faq = () => {
   return (
     <>
       <Row>
-        <Layout flexBasis={{ _: 20, standard: 230, wide: 230, ultra: 695 }} flexShrink='0' />
+        <Layout flexBasis={{ _: 20, standard: 230, ultra: 695 }} flexShrink='0' />
 
         <Column flexGrow='1'>
           <Layout flexBasis={[80, 160]} />
@@ -44,7 +43,6 @@ export const Faq = () => {
                 fontSize={{
                   _: 'ordinary',
                   standard: 'stupendous',
-                  wide: 'stupendous',
                   ultra: 'biggest',
                 }}
                 lineHeight={['huge', 'normal']}
@@ -66,7 +64,7 @@ export const Faq = () => {
                     heightIcon={48}
                     backgroundIcon='background.white'
                     radiiIcon='normal'
-                    onClick={handleModalOpen}
+                    onClick={handleModalState}
                   >
                     <Text color='text.white' fontSize='small' lineHeight='normal'>
                       <FormattedMessage id='faq.button' />
@@ -83,7 +81,7 @@ export const Faq = () => {
                     heightIcon={72}
                     backgroundIcon='background.white'
                     radiiIcon='regular'
-                    onClick={handleModalOpen}
+                    onClick={handleModalState}
                   >
                     <Text color='text.white' fontSize='usual' lineHeight='normal'>
                       <FormattedMessage id='faq.button' />
@@ -150,7 +148,7 @@ export const Faq = () => {
                 heightIcon={32}
                 backgroundIcon='background.white'
                 radiiIcon='tiny'
-                onClick={handleModalOpen}
+                onClick={handleModalState}
               >
                 <Text color='text.white' fontSize='small' lineHeight='small'>
                   <FormattedMessage id='faq.button' />
@@ -162,9 +160,9 @@ export const Faq = () => {
           <Layout flexBasis={[80, 160]} />
         </Column>
 
-        <Layout flexBasis={{ _: 20, standard: 80, wide: 80, ultra: 545 }} flexShrink='0' />
+        <Layout flexBasis={{ _: 20, standard: 80, ultra: 545 }} flexShrink='0' />
       </Row>
-      <QuestionModal open={open} setOpen={handleModalClose} />
+      <QuestionModal open={open} setOpen={handleModalState} />
     </>
   )
 }

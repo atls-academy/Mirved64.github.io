@@ -7,7 +7,7 @@ import { Image }      from '@ui/image'
 
 export const Delimiter = () => (
   <Background
-    backgroundColor='ghostTransparentGradient'
+    backgroundImage='ghostTransparentGradient'
     borderRadius='little'
     display='inline-flex'
     verticalAlign='sub'
