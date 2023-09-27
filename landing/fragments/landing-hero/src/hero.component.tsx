@@ -6,18 +6,17 @@ import { Delimiter }         from '@ui/delimiter'
 import { DelimiterLarge }    from '@ui/delimiter'
 import { Divider }           from '@ui/divider'
 import { GitHubIcon }        from '@ui/icons'
-import { TelegramIcon }      from '@ui/icons'
 import { MailWhiteIcon }     from '@ui/icons'
+import { TelegramIcon }      from '@ui/icons'
 import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Layout }            from '@ui/layout'
 import { Column }            from '@ui/layout'
-import { Text }              from '@ui/text'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
 import { Space }             from '@ui/text'
+import { Text }              from '@ui/text'
 
-import { SocialLinkDesktop } from './social-link'
-import { SocialLinkUltra }   from './social-link'
-import { SocialLinkMobile }  from './social-link'
+import { SocialLink }        from './social-link'
+import { SocialLinkDisplay } from './social-link'
 
 export const Hero = () => (
   <Box flexDirection='column' flexGrow='1'>
@@ -170,21 +169,24 @@ export const Hero = () => (
         <Layout flexBasis={[24, 0]} />
 
         <Row display={['flex', 'none']}>
-          <SocialLinkMobile
+          <SocialLink
+            display={SocialLinkDisplay.Mobile}
             icon={<TelegramIcon width={15} height={12} />}
             href='https://web.telegram.org/'
           />
 
           <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-          <SocialLinkMobile
+          <SocialLink
+            display={SocialLinkDisplay.Mobile}
             icon={<GitHubIcon width={15} height={15} />}
             href='https://github.com/'
           />
 
           <Layout flexBasis={5} flexGrow='1' flexShrink='0' />
 
-          <SocialLinkMobile
+          <SocialLink
+            display={SocialLinkDisplay.Mobile}
             icon={<MailWhiteIcon width={18} height={14} />}
             href='https://www.google.com/intl/ru/gmail/about/'
           />
@@ -203,34 +205,40 @@ export const Hero = () => (
           justifyContent='space-between'
           display={{ standard: 'flex', ultra: 'none' }}
         >
-          <SocialLinkDesktop
+          <SocialLink
+            display={SocialLinkDisplay.Desktop}
             icon={<TelegramIcon width={15} height={12} />}
             href='https://web.telegram.org/'
           />
 
-          <SocialLinkDesktop
+          <SocialLink
+            display={SocialLinkDisplay.Desktop}
             icon={<GitHubIcon width={15} height={15} />}
             href='https://github.com/'
           />
 
-          <SocialLinkDesktop
+          <SocialLink
+            display={SocialLinkDisplay.Desktop}
             icon={<MailWhiteIcon width={18} height={14} />}
             href='https://www.google.com/intl/ru/gmail/about/'
           />
         </Column>
 
         <Column display={{ _: 'none', ultra: 'flex' }} height={300} justifyContent='space-between'>
-          <SocialLinkUltra
+          <SocialLink
+            display={SocialLinkDisplay.Ultra}
             icon={<TelegramIcon width={36} height={36} />}
             href='https://web.telegram.org/'
           />
 
-          <SocialLinkUltra
+          <SocialLink
+            display={SocialLinkDisplay.Ultra}
             icon={<GitHubIcon width={36} height={36} />}
             href='https://github.com/'
           />
 
-          <SocialLinkUltra
+          <SocialLink
+            display={SocialLinkDisplay.Ultra}
             icon={<MailWhiteIcon width={36} height={36} />}
             href='https://www.google.com/intl/ru/gmail/about/'
           />
