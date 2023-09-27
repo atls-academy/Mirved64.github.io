@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl'
 import { useState }         from 'react'
 import { useIntl }          from 'react-intl'
 
-import { Button }           from '@ui/button'
 import { Divider }          from '@ui/divider'
 import { SearchIcon }       from '@ui/icons'
 import { Input }            from '@ui/input'
@@ -14,25 +13,13 @@ import { Text }             from '@ui/text'
 import { useFocus }         from '@ui/utils'
 import { useHover }         from '@ui/utils'
 
+import { SearchButton }     from './search'
+
 export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
   const { focus, focusProps } = useFocus()
   const intl = useIntl()
   const [searchQuery, setSearchQuery] = useState('')
-
-  const searchButton = (
-    <Box width={{ standard: 132, ultra: 165 }}>
-      <Button variant='navyBackgroundWhiteText' size='usualSizeCompactRadii'>
-        <Text
-          color='text.white'
-          fontSize={{ standard: 'little', ultra: 'small' }}
-          lineHeight='usual'
-        >
-          <FormattedMessage id='library.search-button' />
-        </Text>
-      </Button>
-    </Box>
-  )
 
   const Indent = () => <Layout flexBasis={{ standard: 48, ultra: 72 }} />
 
@@ -88,7 +75,7 @@ export const LibraryBanner = () => {
             widthIcon={20}
             heightIcon={20}
             filled={searchQuery}
-            addon={searchQuery ? searchButton : null}
+            addon={searchQuery ? <SearchButton /> : null}
             placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
             color={getColor()}
           />
