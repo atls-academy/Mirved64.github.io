@@ -18,7 +18,7 @@ import { Question }         from './data'
 import { QuestionModal }    from './question-modal'
 
 export const Faq = () => {
-  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
 
   const [open, setOpen] = useState<boolean>(false)
   const handleModalState = () => setOpen(!open)
@@ -55,7 +55,7 @@ export const Faq = () => {
               <Layout flexBasis={20} flexGrow='1' />
 
               <Box width={{ standard: 247, ultra: 371 }} flexShrink='0'>
-                <Condition match={!isUltraDesktop}>
+                <Condition match={!isUltra}>
                   <Button
                     variant='primaryBackgroundWhiteText'
                     size='hugeSizeRegularRadii'
@@ -72,7 +72,7 @@ export const Faq = () => {
                   </Button>
                 </Condition>
 
-                <Condition match={isUltraDesktop}>
+                <Condition match={isUltra}>
                   <Button
                     variant='primaryBackgroundWhiteText'
                     size='massiveSizeLargeRadii'
@@ -116,7 +116,7 @@ export const Faq = () => {
             ))}
           </Condition>
 
-          <Condition match={isWideDesktop || isUltraDesktop}>
+          <Condition match={isWide || isUltra}>
             <Row flexWrap='wrap' justifyContent='space-between'>
               {questions.map((item, index) => (
                 <Column key={item.id} width={{ wide: 1005, ultra: 1180 }}>
@@ -129,7 +129,7 @@ export const Faq = () => {
                   <Accordion
                     question={item.question}
                     answer={item.answer}
-                    isDivider={isWideDesktop}
+                    isDivider={isWide}
                   />
                 </Column>
               ))}

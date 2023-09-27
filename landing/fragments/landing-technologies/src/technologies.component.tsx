@@ -12,13 +12,13 @@ import { technologiesList } from './technologies-list'
 import { worckspaceList }   from './technologies-list'
 
 export const Technologies = () => {
-  const { isWideDesktop } = useWindowWidth()
+  const { isWide } = useWindowWidth()
 
   const Indent = () => <Layout flexBasis={[36, 64]} />
 
   return (
     <Column fill>
-      <Condition match={isWideDesktop}>
+      <Condition match={isWide}>
         <Layout flexBasis={64} />
       </Condition>
 

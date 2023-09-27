@@ -11,16 +11,16 @@ import { CardsListWide }  from '../data'
 import { CardCellProps }  from './cards.interfaces'
 
 export const CardsMaterialsWide = () => {
-  const { isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isWide, isUltra } = useWindowWidth()
 
   const CardCell: FC<CardCellProps> = ({ index, category, title }) => (
     <>
       <Box flexDirection='column' width={{ wide: 572, ultra: 670 }}>
-        <Condition match={isWideDesktop}>
+        <Condition match={isWide}>
           <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
         </Condition>
 
-        <Condition match={isUltraDesktop}>
+        <Condition match={isUltra}>
           <Card category={category} titleDesktop={title} indent={45} widthCategoryBox={270} />
         </Condition>
 

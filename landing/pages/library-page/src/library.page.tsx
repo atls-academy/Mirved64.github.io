@@ -13,7 +13,7 @@ import { Box }               from '@ui/layout'
 import { useWindowWidth }    from '@ui/utils'
 
 const LibraryPage = () => {
-  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
 
   const animateOnLoadProps = {
     transition: { duration: 1.2 },
@@ -215,7 +215,7 @@ const LibraryPage = () => {
         width='100%'
         zIndex={11}
       >
-        <Condition match={isWideDesktop || isUltraDesktop}>
+        <Condition match={isWide || isUltra}>
           <Background
             backgroundImage='wavesGradient'
             backgroundSize='big'

@@ -16,10 +16,10 @@ import { NavLinks }       from './data'
 import { NavbarProps }    from './navbar.interfaces'
 
 export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
-  const { isDesktop, isWideDesktop } = useWindowWidth()
+  const { isDesktop, isWide } = useWindowWidth()
 
   return (
-    <Condition match={isDesktop || isWideDesktop}>
+    <Condition match={isDesktop || isWide}>
       <Box
         position='fixed'
         top={{ standard: 540, wide: 376 }}

@@ -22,7 +22,7 @@ import { useHover }            from '@ui/utils'
 import { SliderProps }         from './slider.interfaces'
 
 export const Slider: FC<SliderProps> = ({ images }) => {
-  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
   const [slideIndex, setSlideIndex] = useState<number>(0)
@@ -103,7 +103,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
         </Background>
       </Condition>
 
-      <Condition match={isWideDesktop || isUltraDesktop}>
+      <Condition match={isWide || isUltra}>
         <Background
           backgroundImage='darkPurpleGradient'
           backgroundColor='darkPurpleGradient'
@@ -148,7 +148,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           </Box>
         </Condition>
 
-        <Condition match={isWideDesktop || isUltraDesktop}>
+        <Condition match={isWide || isUltra}>
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'
@@ -215,7 +215,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
           </Box>
         </Condition>
 
-        <Condition match={isWideDesktop || isUltraDesktop}>
+        <Condition match={isWide || isUltra}>
           <Box>
             <Button
               variant='ghostBackgroundWhiteText'

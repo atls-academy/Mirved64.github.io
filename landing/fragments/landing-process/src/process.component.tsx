@@ -13,7 +13,7 @@ import { useWindowWidth }   from '@ui/utils'
 import { SliderContainer }  from './slider'
 
 export const Process = () => {
-  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
 
   return (
     <Column flexGrow='1' alignItems='center' justifyContent={{ wide: 'center' }}>
@@ -112,7 +112,7 @@ export const Process = () => {
         </Column>
       </Condition>
 
-      <Condition match={isWideDesktop || isUltraDesktop}>
+      <Condition match={isWide || isUltra}>
         <Column maxWidth={1300}>
           <Row>
             <Text color='text.white' fontSize='great' lineHeight='usual'>

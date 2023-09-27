@@ -25,7 +25,7 @@ import { useDivHeight }           from '@ui/utils'
 import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {
-  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
 
   const [academyRef, academyHeight] = useDivHeight()
   const [coursesRef, coursesHeight] = useDivHeight()
@@ -225,7 +225,7 @@ const IndexPage = () => {
           top={{ _: 950, standard: 1750, wide: 1440, ultra: 2160 }}
           overflow='hidden'
         >
-          <Condition match={isUltraDesktop}>
+          <Condition match={isUltra}>
             <Parallax translateY={[-5, 8]}>
               <Background
                 backgroundImage='wavesGradient'
@@ -240,7 +240,7 @@ const IndexPage = () => {
             </Parallax>
           </Condition>
 
-          <Condition match={isWideDesktop}>
+          <Condition match={isWide}>
             <Parallax translateY={[-5, 9]}>
               <Background
                 backgroundImage='wavesGradient'
@@ -296,7 +296,7 @@ const IndexPage = () => {
           zIndex={12}
           top={{ _: 2645, standard: 3761, wide: 3591, ultra: 4435 }}
         >
-          <Condition match={isUltraDesktop}>
+          <Condition match={isUltra}>
             <Parallax translateY={[-5, 5]}>
               <Background
                 backgroundImage='wavesGradient'
@@ -322,7 +322,7 @@ const IndexPage = () => {
             </Parallax>
           </Condition>
 
-          <Condition match={isWideDesktop}>
+          <Condition match={isWide}>
             <Parallax translateY={[-2, 5]}>
               <Background
                 backgroundImage='wavesGradient'
@@ -411,7 +411,7 @@ const IndexPage = () => {
           zIndex={13}
           top={{ _: 4254, standard: 6491, wide: 6699, ultra: 7983 }}
         >
-          <Condition match={isWideDesktop || isUltraDesktop}>
+          <Condition match={isWide || isUltra}>
             <Background
               backgroundImage='wavesGradient'
               backgroundSize='big'

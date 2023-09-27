@@ -19,7 +19,7 @@ import { useHover }        from '@ui/utils'
 import { AccordionProps }  from './accordion.interfaces'
 
 export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
-  const { isMobile, isDesktop, isWideDesktop, isUltraDesktop } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
   const { hover, hoverProps } = useHover()
 
@@ -76,7 +76,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
           </Box>
         </Condition>
 
-        <Condition match={isWideDesktop || isUltraDesktop}>
+        <Condition match={isWide || isUltra}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
               {selected ? (
@@ -125,7 +125,7 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
           </AnimatePresence>
         </Condition>
 
-        <Condition match={isWideDesktop || isUltraDesktop}>
+        <Condition match={isWide || isUltra}>
           <AnimatePresence>
             {selected && (
               <motion.div
