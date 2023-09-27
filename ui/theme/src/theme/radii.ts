@@ -2,6 +2,7 @@ export const radii = {
   atom: '5px',
   tiny: '8px',
   little: '12px',
+  compact: '14px',
   normal: '16px',
   ordinary: '20px',
   regular: '24px',

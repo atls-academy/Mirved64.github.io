@@ -1,30 +1,25 @@
-import React                      from 'react'
-import { FC }                     from 'react'
-import { Link }                   from 'react-scroll'
+import React                from 'react'
+import { FC }               from 'react'
 
-import { Condition }              from '@ui/condition'
-import { Divider }                from '@ui/divider'
-import { Box }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Text }                   from '@ui/text'
-import { useHover }               from '@ui/utils'
+import { Condition }        from '@ui/condition'
+import { Divider }          from '@ui/divider'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
+import { useHover }         from '@ui/utils'
 
-import { NavLinkItemDrawerProps } from './navlink-item.interfaces'
+import { NavLinkItemProps } from './navlink-item.interfaces'
 
-export const NavLinkItemDrawer: FC<NavLinkItemDrawerProps> = ({
-  name,
-  path,
-  currentElementIndexInViewport,
-  index,
-}) => {
+export const NavLinkItemDrawer: FC<NavLinkItemProps> = ({ name, path, active }) => {
   const { hover, hoverProps } = useHover()
 
   return (
     <Box flexBasis={200} cursor='pointer' {...hoverProps}>
-      <Link to={path} width='100%' spy smooth duration={1000}>
+      <NextLink path={`/#${path}`} width='100%'>
         <Column alignItems='center'>
-          <Condition match={currentElementIndexInViewport !== index}>
+          <Condition match={active!}>
             <Box>
               <Text
                 color={hover ? 'text.black' : 'text.ghost'}
@@ -45,7 +40,7 @@ export const NavLinkItemDrawer: FC<NavLinkItemDrawerProps> = ({
             />
           </Condition>
 
-          <Condition match={currentElementIndexInViewport === index}>
+          <Condition match={!active}>
             <Box>
               <Text
                 color='text.black'
@@ -62,7 +57,7 @@ export const NavLinkItemDrawer: FC<NavLinkItemDrawerProps> = ({
             <Divider backgroundColor='background.black' weight={1} width={200} />
           </Condition>
         </Column>
-      </Link>
+      </NextLink>
     </Box>
   )
 }

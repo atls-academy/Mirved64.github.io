@@ -46,21 +46,21 @@ export const Courses = () => {
 
               <Condition match={!isMobile}>
                 <Box width={254} flexShrink='0'>
-                  <Button
-                    variant='primaryBackgroundWhiteText'
-                    size='hugeSizeRegularRadii'
-                    icon={<ArrowRightIcon width={16} height={16} />}
-                    widthIcon={48}
-                    heightIcon={48}
-                    backgroundIcon='background.white'
-                    radiiIcon='normal'
-                  >
-                    <NextLink>
+                  <NextLink path='/library' width='100%'>
+                    <Button
+                      variant='primaryBackgroundWhiteText'
+                      size='hugeSizeRegularRadii'
+                      icon={<ArrowRightIcon width={16} height={16} />}
+                      widthIcon={48}
+                      heightIcon={48}
+                      backgroundIcon='background.white'
+                      radiiIcon='normal'
+                    >
                       <Text color='white' fontSize='small' lineHeight='normal'>
                         <FormattedMessage id='courses.button.all-materials' />
                       </Text>
-                    </NextLink>
-                  </Button>
+                    </Button>
+                  </NextLink>
                 </Box>
               </Condition>
             </Row>
@@ -106,7 +106,7 @@ export const Courses = () => {
             <Layout flexBasis={20} />
 
             <Box flexBasis={335} flexGrow='1'>
-              <NextLink path='/' width='100%'>
+              <NextLink path='/library' width='100%'>
                 <Button
                   variant='primaryBackgroundWhiteText'
                   size='bigSizeNormalRadiiSmallPadding'

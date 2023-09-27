@@ -29,21 +29,20 @@ export const Hero = () => {
 
         <Column flexBasis={[335, 1460]} flexGrow={[1, 0]}>
           <Row alignItems='end' flexWrap='wrap'>
-            <Box width={[225, 770]}>
+            <Box width={[233, 798]}>
               <Text
                 color='text.white'
                 fontSize={['normal', 'stupendous']}
                 lineHeight={['huge', 'standart']}
+                fontFamily='regular'
               >
                 <FormattedMessage id='hero.title.text' />
               </Text>
             </Box>
 
-            <Layout flexBasis={[8, 28]} flexShrink='0' />
-
             <Column>
               <Background
-                backgroundColor='ghostTransparentGradient'
+                backgroundImage='ghostTransparentGradient'
                 borderRadius={['little', 'regular']}
               >
                 <Box
@@ -59,6 +58,7 @@ export const Hero = () => {
                     color='text.white'
                     fontSize={['normal', 'massive']}
                     lineHeight={['huge', 'standart']}
+                    fontFamily='regular'
                   >
                     <FormattedMessage id='hero.title.it' />
                   </Text>

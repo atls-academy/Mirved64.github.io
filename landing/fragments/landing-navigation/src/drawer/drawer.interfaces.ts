@@ -1,10 +1,7 @@
+import { MouseEventHandler } from 'react'
+
 export interface DrawerProps {
   active: boolean
-  onClose: () => void
-  sectionRefs: React.RefObject<HTMLDivElement>[]
-}
-
-export interface MobileDrawerProps {
-  active: boolean
-  onClose: () => void
+  onClose: MouseEventHandler<HTMLButtonElement>
+  children?: JSX.Element
 }

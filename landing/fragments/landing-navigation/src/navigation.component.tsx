@@ -1,30 +1,42 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React                 from 'react'
+import { FormattedMessage }  from 'react-intl'
+import { useState }          from 'react'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { ArrowDownIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
+import { Button }            from '@ui/button'
+import { Condition }         from '@ui/condition'
+import { ArrowDownIcon }     from '@ui/icons'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Logo }              from '@ui/logo'
+import { Text }              from '@ui/text'
 
-import { NavLinks }         from './data'
-import { DrawerDesktop }    from './drawer'
-import { NavigationProps }  from './navigation.interfaces'
-import { NavLinkItem }      from './navlink-item'
+import { NavLinks }          from './data'
+import { DrawerDesktop }     from './drawer'
+import { NavLinkItem }       from './navlink-item'
+import { NavLinkItemDrawer } from './navlink-item'
 
-export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
+export const NavigationDesktop = () => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
 
   return (
-    <>
-      <DrawerDesktop active={active} onClose={handleClick} sectionRefs={sectionRefs} />
+    <Column>
+      <DrawerDesktop active={active} onClose={handleClick}>
+        <Box>
+          {NavLinks.map((navLink, index) => (
+            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
+              <NavLinkItemDrawer path={navLink.path} name={navLink.name} active={active} />
+
+              <Condition match={index < NavLinks.length - 1}>
+                <Layout flexBasis={20} />
+              </Condition>
+            </Box>
+          ))}
+        </Box>
+      </DrawerDesktop>
 
       <Row height={120} alignItems='center' justifyContent='center'>
         <Layout flexBasis={40} />
@@ -64,6 +76,6 @@ export const NavigationDesktop: FC<NavigationProps> = ({ sectionRefs }) => {
 
         <Layout flexBasis={40} />
       </Row>
-    </>
+    </Column>
   )
 }

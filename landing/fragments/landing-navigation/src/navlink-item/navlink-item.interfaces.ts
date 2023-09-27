@@ -1,6 +1,7 @@
 export interface NavLinkItemProps {
   name: string
   path: string
+  active?: boolean
 }
 
 export interface NavLinkItemDrawerProps {

@@ -1,24 +1,24 @@
-import React                 from 'react'
-import { FC }                from 'react'
-import { FormattedMessage }  from 'react-intl'
+import React                from 'react'
+import { FC }               from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { Background }        from '@ui/background'
-import { Button }            from '@ui/button'
-import { Condition }         from '@ui/condition'
-import { Divider }           from '@ui/divider'
-import { DrawerContainer }   from '@ui/drawer'
-import { ArrowUpIcon }       from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Logo }              from '@ui/logo'
-import { Text }              from '@ui/text'
+import { Background }       from '@ui/background'
+import { Button }           from '@ui/button'
+import { Condition }        from '@ui/condition'
+import { Divider }          from '@ui/divider'
+import { DrawerContainer }  from '@ui/drawer'
+import { ArrowUpIcon }      from '@ui/icons'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Logo }             from '@ui/logo'
+import { Text }             from '@ui/text'
 
-import { CardDataMobile }    from '../data'
-import { MobileDrawerProps } from './drawer.interfaces'
+import { CardDataMobile }   from '../data'
+import { DrawerProps }      from './drawer.interfaces'
 
-export const DrawerMobile: FC<MobileDrawerProps> = ({ active, onClose }) => (
+export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => (
   <DrawerContainer active={active}>
     <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
       <Column>

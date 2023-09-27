@@ -12,10 +12,10 @@
     "@ui/drawer": "workspace: 0.0.1",
     "@ui/icons": "workspace: 0.0.1",
     "@ui/layout": "workspace: 0.0.1",
+    "@ui/link": "workspace: 0.0.1",
     "@ui/logo": "workspace: 0.0.1",
     "@ui/text": "workspace: 0.0.1",
-    "@ui/utils": "workspace: 0.0.1",
-    "react-scroll": "1.8.9"
+    "@ui/utils": "workspace: 0.0.1"
   },
   "devDependencies": {
     "@types/react-scroll": "1.8.7",
@@ -26,6 +26,7 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
-    "react-intl": "*"
+    "react-intl": "*",
+    "react-scroll": "*"
   }
 }

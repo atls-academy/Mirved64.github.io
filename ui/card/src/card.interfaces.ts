@@ -6,4 +6,5 @@ export interface CardProps {
   titleDesktop?: string
   titleMobile?: string
   description?: string
+  image?: string
 }

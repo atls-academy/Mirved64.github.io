@@ -15,7 +15,8 @@
     "@ui/background": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/navbar": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1",
+    "react-scroll": "1.8.9"
   },
   "devDependencies": {
     "@types/react": "18.2.6",

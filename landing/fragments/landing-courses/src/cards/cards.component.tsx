@@ -1,5 +1,4 @@
 import React              from 'react'
-import { FC }             from 'react'
 
 import { Card }           from '@ui/card'
 import { Condition }      from '@ui/condition'
@@ -30,6 +29,7 @@ export const CardsLearning = () => {
               description={card.descriptionDesktop}
               indent={214}
               widthCategoryBox={104}
+              image={card.image}
             />
           </Condition>
 
@@ -50,6 +50,7 @@ export const CardsLearning = () => {
               description={card.descriptionDesktop}
               indent={56}
               widthCategoryBox={112}
+              image={card.image}
             />
           </Condition>
 
@@ -95,11 +96,7 @@ export const CardsMaterials = () => (
   </Row>
 )
 
-export const CardsSwiper: FC<SwiperProps> = ({
-  spaceBetween,
-  slidesPerView,
-  className,
-}: SwiperProps) => (
+export const CardsSwiper = ({ spaceBetween, slidesPerView, className }: SwiperProps) => (
   <Swiper spaceBetween={spaceBetween} slidesPerView={slidesPerView} className={className}>
     {CardsList.filter(
       (card) => card.category === CardCategory.EducationalMaterial && card.isMobileOnly

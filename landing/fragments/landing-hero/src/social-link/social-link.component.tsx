@@ -7,7 +7,7 @@ import { Link }            from '@ui/link'
 
 import { SocialLinkProps } from './social-link.interface'
 
-export const SocialLinkDesktop: FC<SocialLinkProps> = ({ icon, href }: SocialLinkProps) => (
+export const SocialLinkDesktop: FC<SocialLinkProps> = ({ icon, href }) => (
   <Box>
     <Link href={href}>
       <Button
@@ -22,7 +22,7 @@ export const SocialLinkDesktop: FC<SocialLinkProps> = ({ icon, href }: SocialLin
   </Box>
 )
 
-export const SocialLinkMobile: FC<SocialLinkProps> = ({ icon, href }: SocialLinkProps) => (
+export const SocialLinkMobile: FC<SocialLinkProps> = ({ icon, href }) => (
   <Box>
     <Link href={href}>
       <Button

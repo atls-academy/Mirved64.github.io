@@ -1,20 +1,20 @@
-import React                 from 'react'
-import { Parallax }          from 'react-scroll-parallax'
-import { useRef }            from 'react'
+import React                      from 'react'
+import { Parallax }               from 'react-scroll-parallax'
+import { useRef }                 from 'react'
 
-import { About }             from '@landing/fragment-about'
-import { Courses }           from '@landing/fragment-courses'
-import { Faq }               from '@landing/fragment-faq'
-import { Hero }              from '@landing/fragment-hero'
-import { NavigationDesktop } from '@landing/fragment-navigation'
-import { NavigationMobile }  from '@landing/fragment-navigation'
-import { Process }           from '@landing/fragment-process'
-import { Steps }             from '@landing/fragment-steps'
-import { Technologies }      from '@landing/fragment-technologies'
-import { Background }        from '@ui/background'
-import { Condition }         from '@ui/condition'
-import { Navbar }            from '@ui/navbar'
-import { useWindowWidth }    from '@ui/utils'
+import { About }                  from '@landing/fragment-about'
+import { Courses }                from '@landing/fragment-courses'
+import { Faq }                    from '@landing/fragment-faq'
+import { Hero }                   from '@landing/fragment-hero'
+import { NavigationDesktopIndex } from '@landing/fragment-navigation'
+import { NavigationMobile }       from '@landing/fragment-navigation'
+import { Process }                from '@landing/fragment-process'
+import { Steps }                  from '@landing/fragment-steps'
+import { Technologies }           from '@landing/fragment-technologies'
+import { Background }             from '@ui/background'
+import { Condition }              from '@ui/condition'
+import { Navbar }                 from '@ui/navbar'
+import { useWindowWidth }         from '@ui/utils'
 
 const IndexPage = () => {
   const { isMobile } = useWindowWidth()
@@ -32,26 +32,35 @@ const IndexPage = () => {
       <Background
         id='academy'
         ref={sectionRefs[0]}
-        backgroundColor='navyBlueGradient'
+        backgroundImage='navyBlueGradient'
         position='absolute'
         width='100%'
       >
         <Condition match={!isMobile}>
-          <NavigationDesktop sectionRefs={sectionRefs} />
+          <Background backgroundImage='banner' backgroundSize='usual' backgroundRepeat='no-repeat'>
+            <Parallax translateY={[-5, 10]}>
+              <NavigationDesktopIndex sectionRefs={sectionRefs} />
 
-          <Parallax translateY={[-7.5, 10]}>
-            <Hero />
+              <Hero />
 
-            <About />
-          </Parallax>
+              <About />
+            </Parallax>
+          </Background>
         </Condition>
 
         <Condition match={isMobile}>
-          <NavigationMobile />
+          <Background
+            backgroundImage='banner'
+            backgroundSize='little'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-260px -20px'
+          >
+            <NavigationMobile />
 
-          <Hero />
+            <Hero />
 
-          <About />
+            <About />
+          </Background>
         </Condition>
       </Background>
 
@@ -65,7 +74,29 @@ const IndexPage = () => {
         zIndex={1}
         top={[939, 1750]}
       >
-        <Courses />
+        <Condition match={!isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='big'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-2480px 645px'
+          >
+            <Parallax translateY={[-5, 10]}>
+              <Courses />
+            </Parallax>
+          </Background>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='normal'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-982px 409px'
+          >
+            <Courses />
+          </Background>
+        </Condition>
       </Background>
 
       <Background
@@ -78,11 +109,51 @@ const IndexPage = () => {
         zIndex={2}
         top={[2634, 3761]}
       >
-        <Steps />
+        <Condition match={!isMobile}>
+          <Parallax translateY={[-1, 5]}>
+            <Background
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='0 124px'
+            >
+              <Steps />
+            </Background>
 
-        <Technologies />
+            <Technologies />
 
-        <Process />
+            <Background
+              backgroundImage='wavesGradient'
+              backgroundSize='big'
+              backgroundRepeat='no-repeat'
+              backgroundPosition='-2480px 235px'
+            >
+              <Process />
+            </Background>
+          </Parallax>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='small'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-340px 121px'
+          >
+            <Steps />
+          </Background>
+
+          <Technologies />
+
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='small'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-341px 165px'
+          >
+            <Process />
+          </Background>
+        </Condition>
       </Background>
 
       <Background
@@ -95,7 +166,27 @@ const IndexPage = () => {
         zIndex={3}
         top={[4264, 6450]}
       >
-        <Faq />
+        <Condition match={!isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='big'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-2480px 232px'
+          >
+            <Faq />
+          </Background>
+        </Condition>
+
+        <Condition match={isMobile}>
+          <Background
+            backgroundImage='wavesGradient'
+            backgroundSize='small'
+            backgroundRepeat='no-repeat'
+            backgroundPosition='-340px 121px'
+          >
+            <Faq />
+          </Background>
+        </Condition>
       </Background>
     </>
   )

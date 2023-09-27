@@ -51,7 +51,7 @@ export const About = () => {
                 <FormattedMessage id='about.problem-desktop' />
               </Text>
 
-              <Space count='14' />
+              <Space count='6' />
 
               <Delimiter />
             </Box>

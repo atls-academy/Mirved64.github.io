@@ -21,7 +21,7 @@ import { useHover }            from '@ui/utils'
 
 import { SliderProps }         from './slider.interfaces'
 
-export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
+export const Slider: FC<SliderProps> = ({ images }) => {
   const { isMobile } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
@@ -56,7 +56,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
   return (
     <Column flexGrow='1' alignItems='center'>
       <Condition match={!isMobile}>
-        <Background backgroundColor='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
+        <Background backgroundImage='darkPurpleGradient' borderRadius='regular' border='boldGhost'>
           <Box
             width={960}
             justifyContent='center'
@@ -66,7 +66,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
             overflow='hidden'
           >
             <Box position='absolute' zIndex={9}>
-              <Image src='./image/integrated-title-bar.png' width={960} height={25} />
+              <Image src='./image/Title-bar.png' width={960} height={25} />
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
@@ -79,7 +79,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
       </Condition>
 
       <Condition match={isMobile}>
-        <Background backgroundColor='darkPurpleGradient' borderRadius='ordinary' border='thinGhost'>
+        <Background backgroundImage='darkPurpleGradient' borderRadius='ordinary' border='thinGhost'>
           <Box
             position='relative'
             borderRadius='ordinary'
@@ -88,7 +88,7 @@ export const Slider: FC<SliderProps> = ({ images }: SliderProps) => {
             overflow='hidden'
           >
             <Box position='absolute' top='2px'>
-              <Image src='./image/toolbar-mobile.png' width={143} height={22} />
+              <Image src='./image/Toolbar-mobile.png' width={143} height={22} />
             </Box>
 
             <Box width={155} height={323} justifyContent='center'>

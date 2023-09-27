@@ -18,7 +18,7 @@ export const ArrowRightIcon = (props: IconProps) => {
     >
       <path
         d='M1 1L7 7.00001L1 13'
-        stroke='#3A375D'
+        stroke={theme.colors[props.color || 0] || props.color || '#3A375D'}
         strokeWidth={1.75}
         strokeLinecap='round'
         strokeLinejoin='round'

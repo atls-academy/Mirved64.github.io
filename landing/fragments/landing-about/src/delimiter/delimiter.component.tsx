@@ -6,9 +6,10 @@ import { Box }        from '@ui/layout'
 
 export const Delimiter = () => (
   <Background
-    backgroundColor='ghostTransparentGradient'
+    backgroundImage='ghostTransparentGradient'
     borderRadius='little'
     display='inline-flex'
+    verticalAlign='sub'
   >
     <Box
       width={76}
@@ -19,7 +20,7 @@ export const Delimiter = () => (
       border='thinnestGhost'
       backgroundColor='background.whiteTransparent'
     >
-      <Image src='./image/Default.png' width={40} height={40} />
+      <Image src='./image/Sphere.png' width={40} height={40} />
     </Box>
   </Background>
 )

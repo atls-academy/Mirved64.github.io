@@ -15,7 +15,7 @@ import { StepProps }  from './step.interfaces'
 export const Step: FC<StepProps> = ({ divider = true, ...props }) => (
   <Column>
     <Row alignItems={['start', 'center']}>
-      <Background backgroundColor='ghostTransparentGradient' borderRadius={['little', 'ordinary']}>
+      <Background backgroundImage='ghostTransparentGradient' borderRadius={['little', 'ordinary']}>
         <Box
           width={[35, 64]}
           height={[35, 64]}

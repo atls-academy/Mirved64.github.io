@@ -15,7 +15,7 @@ import { useWindowWidth } from '@ui/utils'
 import { NavLinks }       from './data'
 import { NavbarProps }    from './navbar.interfaces'
 
-export const Navbar: FC<NavbarProps> = ({ sectionRefs }: NavbarProps) => {
+export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
   const { isMobile } = useWindowWidth()
 
   return (
@@ -32,7 +32,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }: NavbarProps) => {
                 backgroundColor={
                   currentElementIndexInViewport === 0 || currentElementIndexInViewport === 2
                     ? 'background.grayTransparent'
-                    : 'background.purpurTransparent'
+                    : 'background.purpleTransparent'
                 }
               />
 
@@ -45,11 +45,11 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }: NavbarProps) => {
                         height={8}
                         borderRadius='50%'
                         cursor='pointer'
-                        style={{ transition: '0.3s' }}
+                        zIndex={20}
                         backgroundColor={
                           currentElementIndexInViewport === 0 || currentElementIndexInViewport === 2
                             ? 'background.white'
-                            : 'background.purpur'
+                            : 'background.purple'
                         }
                         flexShrink='0'
                       />
@@ -62,9 +62,8 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }: NavbarProps) => {
                             currentElementIndexInViewport === 0 ||
                             currentElementIndexInViewport === 2
                               ? 'text.white'
-                              : 'text.purpur'
+                              : 'text.purple'
                           }
-                          style={{ transition: '0.3s' }}
                           cursor='pointer'
                           fontSize='tiny'
                           lineHeight='small'
@@ -86,7 +85,6 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }: NavbarProps) => {
                               : 'text.primaryTransparent'
                           }
                           cursor='pointer'
-                          style={{ transition: '0.3s' }}
                           fontSize='tiny'
                           lineHeight='small'
                         >
