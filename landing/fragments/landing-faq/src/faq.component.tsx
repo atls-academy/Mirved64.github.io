@@ -126,11 +126,7 @@ export const Faq = () => {
 
                   <Layout flexBasis={40} />
 
-                  <Accordion
-                    question={item.question}
-                    answer={item.answer}
-                    isDivider={isWide}
-                  />
+                  <Accordion question={item.question} answer={item.answer} isDivider={isWide} />
                 </Column>
               ))}
             </Row>

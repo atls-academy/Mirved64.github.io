@@ -88,7 +88,6 @@ export const Courses = () => {
               <Column
                 order={[3, 0]}
                 flexBasis={{ _: 335, standard: 1160, wide: 1798, ultra: 2090 }}
-                flexGrow='1'
               >
                 <CardsLearning />
 

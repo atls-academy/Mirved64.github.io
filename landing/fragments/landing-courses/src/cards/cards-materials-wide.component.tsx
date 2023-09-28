@@ -16,13 +16,15 @@ export const CardsMaterialsWide = () => {
   const CardCell: FC<CardCellProps> = ({ index, category, title }) => (
     <>
       <Box flexDirection='column' width={{ wide: 572, ultra: 670 }}>
-        <Condition match={isWide}>
-          <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
-        </Condition>
+        <Box height={320}>
+          <Condition match={isWide}>
+            <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
+          </Condition>
 
-        <Condition match={isUltra}>
-          <Card category={category} titleDesktop={title} indent={45} widthCategoryBox={270} />
-        </Condition>
+          <Condition match={isUltra}>
+            <Card category={category} titleDesktop={title} indent={45} widthCategoryBox={270} />
+          </Condition>
+        </Box>
 
         <Condition match={index < 3}>
           <Layout flexBasis={40} />

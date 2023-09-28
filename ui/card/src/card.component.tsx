@@ -44,7 +44,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           <Layout flexBasis={[16, 40]} />
 
           <Box
-            flexBasis={{ _: 27, standard: 38, wide: 57 }}
+            flexBasis={{ _: 27, standard: 38, wide: 38, ultra: 57 }}
             width={props.widthCategoryBox}
             alignItems='center'
             backgroundColor='background.white'
