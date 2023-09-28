@@ -1,100 +1,73 @@
 import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Space }            from '@ui/text'
 
-import { TextProps }        from './info.interfaces'
+import { TextBlockAccent }  from './text-block'
+import { TextBlockPrimary } from './text-block'
 
-export const Info = () => {
-  const TextPrimary: FC<TextProps> = ({ id }) => (
-    <Box>
-      <Text
-        color='text.primary'
-        fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
-        lineHeight='huge'
-      >
-        <FormattedMessage id={id} />
-      </Text>
-    </Box>
-  )
+export const Info = () => (
+  <Box flexDirection={['column', 'row']}>
+    <Row maxWidth={{ _: 335, standard: 710, ultra: 1065 }} flexWrap='wrap'>
+      <TextBlockPrimary id='courses.subtitle.power-broker' />
 
-  const TextAccent: FC<TextProps> = ({ id }) => (
-    <Box>
-      <Text
-        color='text.accent'
-        fontSize={{ _: 'small', standard: 'ordinary', ultra: 'strong' }}
-        lineHeight='huge'
-      >
-        <FormattedMessage id={id} />
-      </Text>
-    </Box>
-  )
+      <Space count={5} />
 
-  return (
-    <Box flexDirection={['column', 'row']}>
-      <Row maxWidth={{ _: 335, standard: 710, ultra: 1065 }} flexWrap='wrap'>
-        <TextPrimary id='courses.subtitle.power-broker' />
+      <TextBlockAccent id='courses.subtitle.atlantis' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextAccent id='courses.subtitle.atlantis' />
+      <TextBlockPrimary id='courses.subtitle.has' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.has' />
+      <TextBlockPrimary id='courses.subtitle.impact-on' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.impact-on' />
+      <TextBlockAccent id='courses.subtitle.it' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextAccent id='courses.subtitle.it' />
+      <TextBlockPrimary id='courses.subtitle.unlimited' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.unlimited' />
+      <TextBlockPrimary id='courses.subtitle.possibilities' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.possibilities' />
+      <TextBlockAccent id='courses.subtitle.use-skills' />
 
-        <Layout flexBasis={5} />
+      <TextBlockPrimary id='courses.subtitle.point' />
+    </Row>
 
-        <TextAccent id='courses.subtitle.use-skills' />
+    <Layout flexBasis={20} flexGrow='1' />
 
-        <TextPrimary id='courses.subtitle.point' />
-      </Row>
+    <Row maxWidth={{ _: 335, standard: 559, ultra: 840 }} flexWrap='wrap'>
+      <TextBlockPrimary id='courses.subtitle.advantage-of-learning' />
 
-      <Layout flexBasis={20} flexGrow='1' />
+      <Space count={5} />
 
-      <Row maxWidth={{ _: 335, standard: 559, ultra: 840 }} flexWrap='wrap'>
-        <TextPrimary id='courses.subtitle.advantage-of-learning' />
+      <TextBlockPrimary id='courses.subtitle.visibly' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.visibly' />
+      <TextBlockPrimary id='courses.subtitle.grow' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.grow' />
+      <TextBlockAccent id='courses.subtitle.practice' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextAccent id='courses.subtitle.practice' />
+      <TextBlockPrimary id='courses.subtitle.on' />
 
-        <Layout flexBasis={5} />
+      <Space count={5} />
 
-        <TextPrimary id='courses.subtitle.on' />
-
-        <Layout flexBasis={5} />
-
-        <TextPrimary id='courses.subtitle.existing-projects' />
-      </Row>
-    </Box>
-  )
-}
+      <TextBlockPrimary id='courses.subtitle.existing-projects' />
+    </Row>
+  </Box>
+)
