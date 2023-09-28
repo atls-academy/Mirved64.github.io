@@ -264,7 +264,7 @@ const IndexPage = () => {
               display='flex'
               width='100%'
             >
-              <Parallax translateY={[-5, 14]}>
+              <Parallax translateY={[-5, 10]}>
                 <Courses />
               </Parallax>
             </Background>
@@ -302,7 +302,7 @@ const IndexPage = () => {
                 backgroundImage='wavesGradient'
                 backgroundSize='big'
                 backgroundRepeat='no-repeat'
-                backgroundPosition='-196px 124px'
+                backgroundPosition='left 332px'
               >
                 <Steps />
               </Background>
