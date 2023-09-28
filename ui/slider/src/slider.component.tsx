@@ -54,24 +54,24 @@ export const Slider: FC<SliderProps> = ({ images }) => {
   }
 
   return (
-    <Column flexGrow='1' alignItems='center'>
-      <Condition match={isDesktop}>
-        <Background
-          backgroundImage='darkPurpleGradient'
-          backgroundColor='darkPurpleGradient'
-          borderRadius='regular'
-          border='boldGhost'
+    <Column alignItems='center'>
+      <Background
+        backgroundImage='darkPurpleGradient'
+        backgroundColor='darkPurpleGradient'
+        borderRadius={{ _: 'ordinary', standard: 'regular', wide: 'big' }}
+        border={['thinGhost', 'boldGhost']}
+        overflow='hidden'
+        width={{ _: 155, standard: 960, wide: 1280, ultra: 1300 }}
+      >
+        <Box
+          justifyContent='center'
+          position='relative'
+          height={{ _: 323, standard: 540, wide: 731 }}
           overflow='hidden'
         >
-          <Box
-            width={960}
-            justifyContent='center'
-            position='relative'
-            maxHeight={540}
-            overflow='hidden'
-          >
+          <Condition match={isDesktop}>
             <Box position='absolute' zIndex={9}>
-              <Image src='./image/Title-bar.png' width={960} height={25} />
+              <Image src='./image/Title-bar.png' width={936} height={25} />
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
@@ -79,19 +79,9 @@ export const Slider: FC<SliderProps> = ({ images }) => {
                 <Image src={images[slideIndex]} width={720} height={540} hover={hover} />
               </motion.div>
             </Box>
-          </Box>
-        </Background>
-      </Condition>
+          </Condition>
 
-      <Condition match={isMobile}>
-        <Background
-          backgroundImage='darkPurpleGradient'
-          backgroundColor='darkPurpleGradient'
-          borderRadius='ordinary'
-          border='thinGhost'
-          overflow='hidden'
-        >
-          <Box position='relative' width={155} justifyContent='center' overflow='hidden'>
+          <Condition match={isMobile}>
             <Box position='absolute' top='2px'>
               <Image src='./image/Toolbar-mobile.png' width={143} height={22} />
             </Box>
@@ -99,27 +89,11 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             <Box width={155} height={323} justifyContent='center'>
               <Image src={images[slideIndex]} width={138} height={339} />
             </Box>
-          </Box>
-        </Background>
-      </Condition>
+          </Condition>
 
-      <Condition match={isWide || isUltra}>
-        <Background
-          backgroundImage='darkPurpleGradient'
-          backgroundColor='darkPurpleGradient'
-          borderRadius='big'
-          border='boldGhost'
-          overflow='hidden'
-        >
-          <Box
-            width={1300}
-            justifyContent='center'
-            position='relative'
-            maxHeight={731}
-            overflow='hidden'
-          >
+          <Condition match={isWide || isUltra}>
             <Box position='absolute' zIndex={9}>
-              <Image src='./image/Title-bar.png' width={1268} height={34} />
+              <Image src='./image/Title-bar.png' width={1248} height={34} />
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
@@ -127,13 +101,13 @@ export const Slider: FC<SliderProps> = ({ images }) => {
                 <Image src={images[slideIndex]} width={975} height={731} hover={hover} />
               </motion.div>
             </Box>
-          </Box>
-        </Background>
-      </Condition>
+          </Condition>
+        </Box>
+      </Background>
 
       <Layout flexBasis={{ _: 24, standard: 32, wide: 42, ultra: 43 }} />
 
-      <Row maxWidth={{ _: 335, standard: 960, wide: 1300 }}>
+      <Row width={{ _: 335, standard: 960, wide: 1280, ultra: 1300 }}>
         <Condition match={isMobile || isDesktop}>
           <Box>
             <Button
@@ -167,7 +141,8 @@ export const Slider: FC<SliderProps> = ({ images }) => {
 
           <Box
             height={[58, 60]}
-            flexBasis={{ _: 215, standard: 832, wide: 1127 }}
+            flexBasis={{ _: 215, standard: 832, wide: 1110, ultra: 1127 }}
+            flexShrink='0'
             alignItems='center'
             justifyContent='center'
             borderRadius='little'
