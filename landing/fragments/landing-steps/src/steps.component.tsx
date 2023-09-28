@@ -13,15 +13,11 @@ import { Step }           from './step'
 export const Steps = () => {
   const intl = useIntl()
 
-  const { isDesktop, isWide, isUltra } = useWindowWidth()
+  const { isMobile } = useWindowWidth()
 
   return (
     <Column>
-      <Layout flexBasis={[64, 160]} />
-
-      <Condition match={isUltra}>
-        <Layout flexBasis={160} />
-      </Condition>
+      <Layout flexBasis={{ _: 64, standard: 160, ultra: 320 }} />
 
       <Box position='relative'>
         <Layout
@@ -66,10 +62,10 @@ export const Steps = () => {
           />
         </Column>
 
-        <Condition match={isDesktop}>
+        <Condition match={!isMobile}>
           <Box
-            width='400px'
-            height='400px'
+            width={{ standard: 400, wide: 884, ultra: 1106 }}
+            height={{ standard: 400, wide: 884, ultra: 1106 }}
             position='absolute'
             zIndex={10}
             margin='auto'
@@ -78,39 +74,7 @@ export const Steps = () => {
             bottom='0'
             right='0'
           >
-            <Image src='./image/Cubics.png' width={400} height={400} />
-          </Box>
-        </Condition>
-
-        <Condition match={isWide}>
-          <Box
-            width='884px'
-            height='884px'
-            position='absolute'
-            zIndex={10}
-            margin='auto'
-            top='0'
-            left='0'
-            bottom='0'
-            right='0'
-          >
-            <Image src='./image/Cubics.png' width={884} height={884} />
-          </Box>
-        </Condition>
-
-        <Condition match={isUltra}>
-          <Box
-            width='1106px'
-            height='1106px'
-            position='absolute'
-            zIndex={10}
-            margin='auto'
-            top='0'
-            left='0'
-            bottom='0'
-            right='0'
-          >
-            <Image src='./image/Cubics.png' width={1106} height={1106} />
+            <Image src='./image/Cubics.png' width='100%' height='100%' />
           </Box>
         </Condition>
 
@@ -120,10 +84,6 @@ export const Steps = () => {
           flexGrow={{ wide: 3 }}
         />
       </Box>
-
-      <Condition match={isUltra}>
-        <Layout flexBasis={160} />
-      </Condition>
 
       <Layout flexBasis={[24, 160]} />
     </Column>
