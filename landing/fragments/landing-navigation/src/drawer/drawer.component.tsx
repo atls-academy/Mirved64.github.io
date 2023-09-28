@@ -30,7 +30,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
   return (
     <DrawerContainer active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
-        <Column>
+        <Column maxWidth={2600} margin='0 auto'>
           <Layout flexBasis={32} />
 
           <Row alignItems='center' height={56}>

@@ -83,7 +83,6 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
         backgroundColor='white'
         borderRadius={['normalBottom', 'bigBottom']}
         width='100%'
-        maxWidth={2600}
         position='fixed'
         zIndex={30}
         style={
@@ -92,7 +91,7 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
             : { top: '-100%', opacity: 0, transition: '.3s' }
         }
       >
-        <Column>
+        <Column maxWidth={2600} margin='0 auto'>
           <Layout flexBasis={32} />
 
           <Row alignItems='center' height={56}>
