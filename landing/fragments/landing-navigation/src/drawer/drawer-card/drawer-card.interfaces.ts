@@ -1,4 +1,4 @@
-interface DrawerCardProps {
+export interface DrawerCardProps {
   id: number
   category: string
   title: string

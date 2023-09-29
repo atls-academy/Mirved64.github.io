@@ -1,6 +1,5 @@
 export * from './navigation.component'
 export * from './navigation-mobile.component'
 export * from './navigation-index.component'
-export * from './navlink-item'
-export * from './data'
 export * from './drawer'
+export * from './data'

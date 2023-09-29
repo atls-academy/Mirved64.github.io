@@ -1,20 +1,18 @@
-import React                 from 'react'
-import { FormattedMessage }  from 'react-intl'
-import { useState }          from 'react'
+import React                   from 'react'
+import { FormattedMessage }    from 'react-intl'
+import { useState }            from 'react'
 
-import { Button }            from '@ui/button'
-import { Condition }         from '@ui/condition'
-import { ArrowDownIcon }     from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Logo }              from '@ui/logo'
-import { Text }              from '@ui/text'
+import { Button }              from '@ui/button'
+import { ArrowDownIcon }       from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Logo }                from '@ui/logo'
+import { NavLinksBlock }       from '@ui/navlinks-block'
+import { NavLinksBlockDrawer } from '@ui/navlinks-block'
+import { Text }                from '@ui/text'
 
-import { NavLinks }          from './data'
-import { DrawerDesktop }     from './drawer'
-import { NavLinkItem }       from './navlink-item'
-import { NavLinkItemDrawer } from './navlink-item'
+import { DrawerDesktop }       from './drawer'
 
 export const NavigationDesktop = () => {
   const [active, setActive] = useState<boolean>(false)
@@ -24,24 +22,7 @@ export const NavigationDesktop = () => {
   return (
     <>
       <DrawerDesktop active={active} onClose={handleClick}>
-        <Box>
-          {NavLinks.map((navLink, index) => (
-            <Box
-              key={navLink.id}
-              width={
-                index < NavLinks.length - 1
-                  ? { standard: 220, ultra: 330 }
-                  : { standard: 200, ultra: 300 }
-              }
-            >
-              <NavLinkItemDrawer path={navLink.path} name={navLink.name} active={active} />
-
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-              </Condition>
-            </Box>
-          ))}
-        </Box>
+        <NavLinksBlockDrawer active={active} />
       </DrawerDesktop>
 
       <Row
@@ -63,22 +44,7 @@ export const NavigationDesktop = () => {
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        {NavLinks.map((navLink, index) => (
-          <Box
-            key={navLink.id}
-            width={
-              index < NavLinks.length - 1
-                ? { standard: 220, ultra: 330 }
-                : { standard: 200, ultra: 300 }
-            }
-          >
-            <NavLinkItem name={navLink.name} path={navLink.path} />
-
-            <Condition match={index < NavLinks.length - 1}>
-              <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-            </Condition>
-          </Box>
-        ))}
+        <NavLinksBlock />
 
         <Layout flexBasis={40} flexGrow='1' />
 
