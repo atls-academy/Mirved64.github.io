@@ -9,12 +9,12 @@ import { Box }                      from '@ui/layout'
 import { Row }                      from '@ui/layout'
 import { Layout }                   from '@ui/layout'
 import { Logo }                     from '@ui/logo'
-import { NavLinksBlockIndex }       from '@ui/navlinks-block/src'
-import { NavLinksBlockDrawerIndex } from '@ui/navlinks-block/src'
+import { NavLinksBlockIndex }       from '@ui/navlinks-block'
+import { NavLinksBlockDrawerIndex } from '@ui/navlinks-block'
 import { Text }                     from '@ui/text'
 
-import { DrawerDesktop }            from './drawer'
-import { NavigationProps }          from './navigation.interfaces'
+import { DrawerDesktop }            from '../drawer'
+import { NavigationProps }          from '../navigation.interfaces'
 
 export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
