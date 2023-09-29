@@ -20,7 +20,7 @@
     "@ui/navbar": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
     "framer-motion": "10.16.1",
-    "react-merge-refs": "^2.0.2",
+    "react-merge-refs": "2.0.2",
     "react-scroll": "1.8.9"
   },
   "devDependencies": {

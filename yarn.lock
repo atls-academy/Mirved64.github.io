@@ -2343,7 +2343,6 @@ __metadata:
   resolution: "@landing/fragment-header@workspace:landing/fragments/landing-header"
   dependencies:
     "@landing/fragment-navigation": "workspace: 0.0.1"
-    "@makotot/ghostui": "npm:2.0.0"
     "@types/react-scroll": "npm:1.8.7"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
@@ -2355,6 +2354,7 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/link": "workspace: 0.0.1"
     "@ui/logo": "workspace: 0.0.1"
+    "@ui/navlinks-block": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
     framer-motion: "npm:10.16.1"
@@ -2433,6 +2433,7 @@ __metadata:
     "@ui/layout": "workspace: 0.0.1"
     "@ui/link": "workspace: 0.0.1"
     "@ui/logo": "workspace: 0.0.1"
+    "@ui/navlinks-block": "workspace: 0.0.1"
     "@ui/text": "workspace: 0.0.1"
     "@ui/utils": "workspace: 0.0.1"
     react: "npm:18.2.0"
@@ -2533,7 +2534,7 @@ __metadata:
     framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-merge-refs: "npm:^2.0.2"
+    react-merge-refs: "npm:2.0.2"
     react-scroll: "npm:1.8.9"
     react-scroll-parallax: "npm:3.3.2"
   peerDependencies:
@@ -3828,6 +3829,29 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
+    react-scroll: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/navlinks-block@workspace: 0.0.1, @ui/navlinks-block@workspace:ui/navlinks-block":
+  version: 0.0.0-use.local
+  resolution: "@ui/navlinks-block@workspace:ui/navlinks-block"
+  dependencies:
+    "@makotot/ghostui": "npm:2.0.0"
+    "@types/react-scroll": "npm:1.8.7"
+    "@ui/condition": "workspace: 0.0.1"
+    "@ui/divider": "workspace: 0.0.1"
+    "@ui/layout": "workspace: 0.0.1"
+    "@ui/link": "workspace: 0.0.1"
+    "@ui/text": "workspace: 0.0.1"
+    "@ui/utils": "workspace: 0.0.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-intl: "npm:6.0.8"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
     react-scroll: "*"
   languageName: unknown
   linkType: soft
@@ -12218,7 +12242,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-merge-refs@npm:^2.0.2":
+"react-merge-refs@npm:2.0.2":
   version: 2.0.2
   resolution: "react-merge-refs@npm:2.0.2"
   checksum: 8e42b070769d0d484e145845c9c2c8bc8958d3e31695e488c573f602016b27746008a4e7465569c7f79af36d16ed82f1d939286d5cc12f4bd56974e8c50d526a
