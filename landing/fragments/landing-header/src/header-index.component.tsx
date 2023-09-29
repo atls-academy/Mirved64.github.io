@@ -1,28 +1,25 @@
-import { Scrollspy }              from '@makotot/ghostui'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { FormattedMessage }         from 'react-intl'
+import { useState }                 from 'react'
 
-import React                      from 'react'
-import { FC }                     from 'react'
-import { FormattedMessage }       from 'react-intl'
-import { useState }               from 'react'
+import { CardDataDesktop }          from '@landing/fragment-navigation'
+import { DrawerCard }               from '@landing/fragment-navigation'
+import { Background }               from '@ui/background/src'
+import { Button }                   from '@ui/button'
+import { Condition }                from '@ui/condition'
+import { ArrowDownIcon }            from '@ui/icons'
+import { ArrowUpIcon }              from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Column }                   from '@ui/layout/src'
+import { Logo }                     from '@ui/logo'
+import { NavLinksBlockHeaderIndex } from '@ui/navlinks-block'
+import { Text }                     from '@ui/text'
+import { useScrollDirection }       from '@ui/utils'
 
-import { CardDataDesktop }        from '@landing/fragment-navigation'
-import { NavLinks }               from '@landing/fragment-navigation'
-import { NavLinkItemDrawerIndex } from '@landing/fragment-navigation'
-import { DrawerCard }             from '@landing/fragment-navigation'
-import { Background }             from '@ui/background/src'
-import { Button }                 from '@ui/button'
-import { Condition }              from '@ui/condition'
-import { ArrowDownIcon }          from '@ui/icons'
-import { ArrowUpIcon }            from '@ui/icons'
-import { Box }                    from '@ui/layout'
-import { Row }                    from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Column }                 from '@ui/layout/src'
-import { Logo }                   from '@ui/logo'
-import { Text }                   from '@ui/text'
-import { useScrollDirection }     from '@ui/utils'
-
-import { HeaderIndexProps }       from './header.interfaces'
+import { HeaderIndexProps }         from './header.interfaces'
 
 export const HeaderIndex: FC<HeaderIndexProps> = ({
   sectionRefs,
@@ -107,72 +104,10 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
 
             <Layout flexBasis={40} flexGrow='1' />
 
-            <Scrollspy sectionRefs={sectionRefs} offset={-640}>
-              {({ currentElementIndexInViewport }) => (
-                <Box>
-                  {NavLinks.map((navLink, index, array) => (
-                    <Box
-                      key={navLink.id}
-                      width={
-                        index < NavLinks.length - 1
-                          ? { standard: 220, ultra: 330 }
-                          : { standard: 200, ultra: 300 }
-                      }
-                    >
-                      <Condition match={currentElementIndexInViewport !== array.length - 1}>
-                        <NavLinkItemDrawerIndex
-                          path={navLink.path}
-                          name={navLink.name}
-                          currentElementIndexInViewport={currentElementIndexInViewport}
-                          index={index}
-                        />
-
-                        <Condition match={index < NavLinks.length - 1}>
-                          <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-                        </Condition>
-                      </Condition>
-
-                      <Condition match={currentElementIndexInViewport === array.length - 1}>
-                        <Condition match={index === 0}>
-                          <NavLinkItemDrawerIndex
-                            path={navLink.path}
-                            name={navLink.name}
-                            currentElementIndexInViewport={currentElementIndexInViewport}
-                            index={index}
-                            onClick={handleStartAnimation}
-                            duration={0}
-                          />
-
-                          <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-                        </Condition>
-
-                        <Condition match={index >= 1}>
-                          <Box
-                            key={navLink.id}
-                            width={
-                              index < NavLinks.length - 1
-                                ? { standard: 220, ultra: 330 }
-                                : { standard: 200, ultra: 300 }
-                            }
-                          >
-                            <NavLinkItemDrawerIndex
-                              path={navLink.path}
-                              name={navLink.name}
-                              currentElementIndexInViewport={currentElementIndexInViewport}
-                              index={index}
-                            />
-
-                            <Condition match={index < NavLinks.length - 1}>
-                              <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-                            </Condition>
-                          </Box>
-                        </Condition>
-                      </Condition>
-                    </Box>
-                  ))}
-                </Box>
-              )}
-            </Scrollspy>
+            <NavLinksBlockHeaderIndex
+              sectionRefs={sectionRefs}
+              handleStartAnimation={handleStartAnimation}
+            />
 
             <Layout flexBasis={40} flexGrow='1' />
 

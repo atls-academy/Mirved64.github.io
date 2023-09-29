@@ -1,23 +1,22 @@
-import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
-import { useState }           from 'react'
+import React                   from 'react'
+import { FormattedMessage }    from 'react-intl'
+import { useState }            from 'react'
 
-import { CardDataDesktop }    from '@landing/fragment-navigation'
-import { NavLinkItemDrawer }  from '@landing/fragment-navigation'
-import { NavLinks }           from '@landing/fragment-navigation'
-import { DrawerCard }         from '@landing/fragment-navigation'
-import { Background }         from '@ui/background/src'
-import { Button }             from '@ui/button'
-import { Condition }          from '@ui/condition'
-import { ArrowDownIcon }      from '@ui/icons'
-import { ArrowUpIcon }        from '@ui/icons'
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Column }             from '@ui/layout/src'
-import { Logo }               from '@ui/logo'
-import { Text }               from '@ui/text'
-import { useScrollDirection } from '@ui/utils'
+import { CardDataDesktop }     from '@landing/fragment-navigation'
+import { DrawerCard }          from '@landing/fragment-navigation'
+import { Background }          from '@ui/background/src'
+import { Button }              from '@ui/button'
+import { Condition }           from '@ui/condition'
+import { ArrowDownIcon }       from '@ui/icons'
+import { ArrowUpIcon }         from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Column }              from '@ui/layout/src'
+import { Logo }                from '@ui/logo'
+import { NavLinksBlockHeader } from '@ui/navlinks-block/src'
+import { Text }                from '@ui/text'
+import { useScrollDirection }  from '@ui/utils'
 
 export const Header = () => {
   const [visible, setVisible] = useState<boolean>(false)
@@ -65,22 +64,7 @@ export const Header = () => {
 
             <Layout flexBasis={40} flexGrow='1' />
 
-            {NavLinks.map((navLink, index) => (
-              <Box
-                key={navLink.id}
-                width={
-                  index < NavLinks.length - 1
-                    ? { standard: 220, ultra: 330 }
-                    : { standard: 200, ultra: 300 }
-                }
-              >
-                <NavLinkItemDrawer path={navLink.path} name={navLink.name} />
-
-                <Condition match={index < NavLinks.length - 1}>
-                  <Layout flexBasis={{ standard: 20, ultra: 30 }} />
-                </Condition>
-              </Box>
-            ))}
+            <NavLinksBlockHeader />
 
             <Layout flexBasis={40} flexGrow='1' />
 
