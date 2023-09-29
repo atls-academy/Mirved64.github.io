@@ -10,7 +10,7 @@ import { Layout }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
 import { useHover }               from '@ui/utils'
 
-import { NavLinkItemDrawerProps } from './navlink-item.interfaces'
+import { NavLinkItemDrawerProps } from '../navlink-item.interfaces'
 
 export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
   name,

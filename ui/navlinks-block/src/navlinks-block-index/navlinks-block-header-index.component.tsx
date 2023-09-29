@@ -1,0 +1,84 @@
+import { Scrollspy }                    from '@makotot/ghostui'
+
+import React                            from 'react'
+import { FC }                           from 'react'
+
+import { Condition }                    from '@ui/condition/src'
+import { Box }                          from '@ui/layout/src'
+import { Layout }                       from '@ui/layout/src'
+
+import { NavLinks }                     from '../data'
+import { NavLinkItemDrawerIndex }       from '../navlink-item'
+import { NavLinksBlockIndexInterfaces } from './navlinks-blok.interfaces'
+
+export const NavLinksBlockHeaderIndex: FC<NavLinksBlockIndexInterfaces> = ({
+  sectionRefs,
+  handleStartAnimation,
+}) => (
+  <Scrollspy sectionRefs={sectionRefs} offset={-640}>
+    {({ currentElementIndexInViewport }) => (
+      <Box>
+        {NavLinks.map((navLink, index, array) => (
+          <Box
+            key={navLink.id}
+            width={
+              index < NavLinks.length - 1
+                ? { standard: 220, ultra: 330 }
+                : { standard: 200, ultra: 300 }
+            }
+          >
+            <Condition match={currentElementIndexInViewport !== array.length - 1}>
+              <NavLinkItemDrawerIndex
+                path={navLink.path}
+                name={navLink.name}
+                currentElementIndexInViewport={currentElementIndexInViewport}
+                index={index}
+              />
+
+              <Condition match={index < NavLinks.length - 1}>
+                <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+              </Condition>
+            </Condition>
+
+            <Condition match={currentElementIndexInViewport === array.length - 1}>
+              <Condition match={index === 0}>
+                <NavLinkItemDrawerIndex
+                  path={navLink.path}
+                  name={navLink.name}
+                  currentElementIndexInViewport={currentElementIndexInViewport}
+                  index={index}
+                  onClick={handleStartAnimation}
+                  duration={0}
+                />
+
+                <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+              </Condition>
+
+              <Condition match={index >= 1}>
+                <Box
+                  key={navLink.id}
+                  width={
+                    index < NavLinks.length - 1
+                      ? { standard: 220, ultra: 330 }
+                      : { standard: 200, ultra: 300 }
+                  }
+                >
+                  <NavLinkItemDrawerIndex
+                    path={navLink.path}
+                    name={navLink.name}
+                    currentElementIndexInViewport={currentElementIndexInViewport}
+                    index={index}
+                  />
+
+                  <Condition match={index < NavLinks.length - 1}>
+                    <Layout flexBasis={{ standard: 20, ultra: 30 }} />
+                  </Condition>
+                </Box>
+              </Condition>
+            </Condition>
+          </Box>
+        ))}
+      </Box>
+    )}
+  </Scrollspy>
+)

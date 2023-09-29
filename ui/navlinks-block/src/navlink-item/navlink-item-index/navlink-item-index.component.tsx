@@ -9,7 +9,7 @@ import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-import { NavLinkItemProps } from './navlink-item.interfaces'
+import { NavLinkItemProps } from '../navlink-item.interfaces'
 
 export const NavLinkItemIndex: FC<NavLinkItemProps> = ({ name, path }) => {
   const { hover, hoverProps } = useHover()
