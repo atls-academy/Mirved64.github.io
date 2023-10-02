@@ -24,8 +24,8 @@ export const NavLinkItemDrawerIndex: FC<NavLinkItemDrawerProps> = ({
 
   return (
     <Box flexBasis={{ standard: 200, ultra: 300 }} cursor='pointer' {...hoverProps}>
-      <Link to={path} width='100%' spy smooth duration={duration} onClick={onClick}>
-        <Column alignItems='center'>
+      <Link to={path} width='100%' spy smooth duration={duration}>
+        <Column alignItems='center' onClick={onClick}>
           <Condition match={currentElementIndexInViewport !== index}>
             <Box>
               <Text

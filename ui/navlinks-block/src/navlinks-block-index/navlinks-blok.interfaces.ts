@@ -1,6 +1,7 @@
-import { RefObject } from 'react'
+import { MouseEventHandler } from 'react'
+import { RefObject }         from 'react'
 
 export interface NavLinksBlockIndexInterfaces {
   sectionRefs: RefObject<HTMLDivElement>[]
-  handleStartAnimation?: () => void
+  handleStartAnimation?: MouseEventHandler<HTMLDivElement>
 }

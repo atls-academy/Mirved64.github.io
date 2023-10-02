@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react'
+
 export interface NavLinkItemProps {
   name: string
   path: string
@@ -9,6 +11,6 @@ export interface NavLinkItemDrawerProps {
   path: string
   currentElementIndexInViewport: number
   index: number
-  onClick?: () => void
+  onClick?: MouseEventHandler<HTMLDivElement>
   duration?: number
 }
