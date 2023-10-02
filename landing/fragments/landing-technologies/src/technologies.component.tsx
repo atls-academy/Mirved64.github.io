@@ -8,7 +8,7 @@ import { Column }           from '@ui/layout'
 import { Indent }           from './indent'
 import { RunLine }          from './run-line'
 import { technologiesList } from './technologies-list'
-import { worckspaceList }   from './technologies-list'
+import { workspaceList }    from './technologies-list'
 
 export const Technologies = () => (
   <Column fill>
@@ -25,7 +25,7 @@ export const Technologies = () => (
     <Indent />
 
     <Row overflow='hidden'>
-      <RunLine technologies={worckspaceList} font='secondary' />
+      <RunLine technologies={workspaceList} font='secondary' />
     </Row>
 
     <Indent />

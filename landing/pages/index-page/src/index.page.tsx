@@ -294,7 +294,7 @@ const IndexPage = () => {
           position='absolute'
           width='100%'
           zIndex={12}
-          top={{ _: 2645, standard: 3761, wide: 3591, ultra: 4435 }}
+          top={{ _: 2655, standard: 3761, wide: 3591, ultra: 4435 }}
         >
           <Condition match={isUltra}>
             <Parallax translateY={[-5, 5]}>
