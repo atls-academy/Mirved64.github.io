@@ -26,6 +26,8 @@
     "react-scroll-parallax": "3.3.2"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
+    "graphql": "*",
     "next": "*",
     "react": "*",
     "react-dom": "*",

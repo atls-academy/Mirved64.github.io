@@ -1,4 +1,4 @@
 export interface RunLineProps {
-  technologies?: { name: string }[]
+  technologies?: { id: string; title: string }[]
   font?: string
 }

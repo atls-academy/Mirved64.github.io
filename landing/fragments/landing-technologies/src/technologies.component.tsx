@@ -1,16 +1,17 @@
-import React                from 'react'
+import React             from 'react'
 
-import { Divider }          from '@ui/divider'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
+import { Divider }       from '@ui/divider'
+import { Row }           from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Column }        from '@ui/layout'
 
-import { RunLine }          from './run-line'
-import { technologiesList } from './technologies-list'
-import { worckspaceList }   from './technologies-list'
+import { RunLine }       from './run-line'
+import { useTechnogies } from './data'
 
 export const Technologies = () => {
   const Indent = () => <Layout flexBasis={[36, 64]} />
+
+  const technologies = useTechnogies()
 
   return (
     <Column fill>
@@ -21,13 +22,23 @@ export const Technologies = () => {
       <Indent />
 
       <Row overflow='hidden'>
-        <RunLine technologies={technologiesList} font='light' />
+        <RunLine
+          technologies={technologies?.data?.skills.nodes
+            .slice(3)
+            .map((el) => ({ id: el.skillId, title: el.title }))}
+          font='light'
+        />
       </Row>
 
       <Indent />
 
       <Row overflow='hidden'>
-        <RunLine technologies={worckspaceList} font='secondary' />
+        <RunLine
+          technologies={technologies?.data?.skills.nodes
+            .slice(0, 3)
+            .map((el) => ({ id: el.skillId, title: el.title }))}
+          font='secondary'
+        />
       </Row>
 
       <Indent />
