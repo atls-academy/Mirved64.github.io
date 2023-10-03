@@ -1,5 +1,4 @@
 import React              from 'react'
-import { useIntl }        from 'react-intl'
 
 import { Condition }      from '@ui/condition'
 import { Image }          from '@ui/image'
@@ -9,11 +8,14 @@ import { Layout }         from '@ui/layout'
 import { useWindowWidth } from '@ui/utils'
 
 import { Step }           from './step'
+import { useSteps }       from './data'
 
 export const Steps = () => {
-  const intl = useIntl()
-
+  const steps = useSteps()
   const { isMobile } = useWindowWidth()
+
+  const stepsList: { process: { description: string; title: string }; processId: number }[] =
+    steps?.data?.processes?.nodes
 
   return (
     <Column>
@@ -30,36 +32,14 @@ export const Steps = () => {
           flexGrow={{ _: '1', ultra: '0' }}
           flexBasis={{ _: 335, standard: 1760, wide: 2100, ultra: 2440 }}
         >
-          <Step
-            sequenceNumber='1'
-            name={intl.formatMessage({ id: 'process.item.team-integration' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Step
-            sequenceNumber='2'
-            name={intl.formatMessage({ id: 'process.item.create-environment' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Step
-            sequenceNumber='3'
-            name={intl.formatMessage({ id: 'process.item.studies-of-technologies' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Step
-            sequenceNumber='4'
-            name={intl.formatMessage({ id: 'process.item.practical-work' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-          />
-
-          <Step
-            sequenceNumber='5'
-            name={intl.formatMessage({ id: 'process.item.project-integration' })}
-            description={intl.formatMessage({ id: 'process.item.text' })}
-            divider={false}
-          />
+          {stepsList?.map((step, index) => (
+            <Step
+              key={step.processId}
+              sequenceNumber={(index + 1).toString()}
+              name={step.process.title}
+              description={step.process.description}
+            />
+          ))}
         </Column>
 
         <Condition match={!isMobile}>
