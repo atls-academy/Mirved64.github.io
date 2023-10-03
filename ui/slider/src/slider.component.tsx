@@ -1,6 +1,5 @@
 import React                   from 'react'
 import { FC }                  from 'react'
-import { FormattedMessage }    from 'react-intl'
 import { motion }              from 'framer-motion'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
@@ -21,7 +20,7 @@ import { useHover }            from '@ui/utils'
 
 import { SliderProps }         from './slider.interfaces'
 
-export const Slider: FC<SliderProps> = ({ images }) => {
+export const Slider: FC<SliderProps> = ({ images, text }) => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
   const { hover, hoverProps } = useHover()
 
@@ -30,25 +29,19 @@ export const Slider: FC<SliderProps> = ({ images }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (slideIndex === images.length - 1) {
-        setSlideIndex(0)
-      } else setSlideIndex(slideIndex + 1)
+      setSlideIndex(slideIndex + 1)
     }, 9050)
     return () => clearTimeout(timer)
-  }, [slideIndex, images.length])
+  }, [slideIndex])
 
   const increaseSlideIndex = () => {
-    if (slideIndex === images.length - 1) {
-      setSlideIndex(0)
-    } else setSlideIndex(slideIndex + 1)
+    setSlideIndex(slideIndex + 1)
 
     setAnimation(animation + 1)
   }
 
   const decreaseSlideIndex = () => {
-    if (slideIndex === 0) {
-      setSlideIndex(images.length - 1)
-    } else setSlideIndex(slideIndex - 1)
+    setSlideIndex(slideIndex - 1)
 
     setAnimation(animation + 1)
   }
@@ -75,8 +68,14 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
-              <motion.div whileHover={{ scale: 1.05 }}>
-                <Image src={images[slideIndex]} width={720} height={540} hover={hover} />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                key={slideIndex}
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image src={images} width={720} height={540} hover={hover} />
               </motion.div>
             </Box>
           </Condition>
@@ -87,7 +86,15 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             </Box>
 
             <Box width={155} height={323} justifyContent='center'>
-              <Image src={images[slideIndex]} width={138} height={339} />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                key={slideIndex}
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image src={images} width={138} height={339} />
+              </motion.div>
             </Box>
           </Condition>
 
@@ -97,8 +104,14 @@ export const Slider: FC<SliderProps> = ({ images }) => {
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
-              <motion.div whileHover={{ scale: 1.05 }}>
-                <Image src={images[slideIndex]} width={975} height={731} hover={hover} />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                key={slideIndex}
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image src={images} width={975} height={731} hover={hover} />
               </motion.div>
             </Box>
           </Condition>
@@ -156,7 +169,7 @@ export const Slider: FC<SliderProps> = ({ images }) => {
               lineHeight={['usual', 'big']}
               textAlign='center'
             >
-              <FormattedMessage id='slider.sign' />
+              {text}
             </Text>
 
             <Box width='100%' position='absolute' top={[52, 54]}>

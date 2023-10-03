@@ -2521,6 +2521,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-process@workspace:landing/fragments/landing-process"
   dependencies:
+    "@apollo/client": "npm:3.8.4"
     "@ui/condition": "workspace: 0.0.1"
     "@ui/layout": "workspace: 0.0.1"
     "@ui/slider": "workspace: 0.0.1"
@@ -2528,11 +2529,11 @@ __metadata:
     "@ui/utils": "workspace: 0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
+    "@apollo/client": "*"
+    graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -4053,12 +4054,10 @@ __metadata:
     framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
     framer-motion: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 

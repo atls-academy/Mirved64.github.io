@@ -1,20 +1,20 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React               from 'react'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Box }             from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Text }            from '@ui/text'
 
-import { SliderContainer }  from './slider'
-import { TextBlockGhost }   from './text-block'
-import { TextBlockWhite }   from './text-block'
+import { SliderContainer } from './slider'
+import { TextBlockGhost }  from './text-block'
+import { TextBlockWhite }  from './text-block'
+import { useProcess }      from './data'
 
 export const Process = () => {
-  const { isMobile } = useWindowWidth()
+  const process = useProcess()
+  const title: string = process?.data?.section.sections.title
+  const slogan: string[] = process?.data?.section.content.split('\n')[1].split(' ')
 
   return (
     <Column flexGrow='1' alignItems='center'>
@@ -27,41 +27,35 @@ export const Process = () => {
           lineHeight='small'
           textTransform='uppercase'
         >
-          <FormattedMessage id='slider.subtitle' />
+          {title}
         </Text>
       </Box>
 
       <Layout flexBasis={{ _: 16, standard: 24, wide: 33 }} flexShrink='0' />
 
       <Row flexWrap='wrap' justifyContent='center' maxWidth={{ _: 335, standard: 880, wide: 1160 }}>
-        <TextBlockWhite id='slider.slogan.any-process-stops' />
+        {slogan?.slice(0, 3).map((word) => (
+          <TextBlockWhite text={word} key={word} />
+        ))}
 
-        <Space count={isMobile ? 2 : 3} />
+        <TextBlockGhost text={slogan?.slice(3, 4)} />
 
-        <TextBlockGhost id='slider.slogan.be' />
+        {slogan?.slice(4, 6).map((word) => (
+          <TextBlockWhite text={word} key={word} />
+        ))}
 
-        <Space count={isMobile ? 2 : 3} />
+        <TextBlockGhost text={slogan?.slice(6, 7)} />
 
-        <TextBlockWhite id='slider.slogan.difficult' />
-
-        <Space count={isMobile ? 2 : 3} />
-
-        <TextBlockWhite id='slider.slogan.when' />
-
-        <Space count={isMobile ? 2 : 3} />
-
-        <TextBlockGhost id='slider.slogan.you-know' />
-
-        <Space count={isMobile ? 2 : 3} />
-
-        <TextBlockWhite id='slider.slogan.how-it-happen' />
+        {slogan?.slice(7, 10).map((word) => (
+          <TextBlockWhite text={word} key={word} />
+        ))}
       </Row>
 
       <Layout flexBasis={{ _: 24, standard: 50, wide: 68 }} flexShrink='0' />
 
       <SliderContainer />
 
-      <Layout flexBasis={{ _: 144, standard: 240, wide: 293 }} flexShrink='0' />
+      <Layout flexBasis={{ _: 144, standard: 240, wide: 293, ultra: 456 }} flexShrink='0' />
     </Column>
   )
 }
