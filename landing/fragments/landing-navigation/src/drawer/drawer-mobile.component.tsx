@@ -27,7 +27,7 @@ export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => (
           <Layout flexBasis={20} />
 
           <Box>
-            <Logo fill='rgba(58, 55, 93, 1)' width={40} height={40} />
+            <Logo fill='primary' width={40} height={40} />
           </Box>
 
           <Layout flexBasis={195} flexGrow='1' flexShrink='10' />

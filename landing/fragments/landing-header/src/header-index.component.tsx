@@ -78,11 +78,11 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
             <Layout flexBasis={40} />
 
             <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
-              <Logo fill='rgba(58, 55, 93, 1)' width={56} height={50} />
+              <Logo fill='primary' width={56} height={50} />
             </Box>
 
             <Box display={{ _: 'none', ultra: 'flex' }}>
-              <Logo fill='rgba(58, 55, 93, 1)' width={84} height={75} />
+              <Logo fill='primary' width={84} height={75} />
             </Box>
 
             <Layout flexBasis={40} flexGrow='1' />

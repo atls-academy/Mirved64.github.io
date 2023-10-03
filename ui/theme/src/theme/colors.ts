@@ -136,6 +136,12 @@ const colors = {
   modal: {
     backdrop: 'rgba(0, 0, 0, 0.5)',
   },
+  logo: {
+    fill: {
+      primary: 'rgba(58, 55, 93, 1)',
+      white: 'rgba(255, 255, 255, 1)',
+    },
+  },
 }
 
 export { colors }
