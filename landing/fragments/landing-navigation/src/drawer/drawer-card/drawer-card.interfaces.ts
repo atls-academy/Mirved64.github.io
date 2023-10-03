@@ -1,6 +1,11 @@
+export enum DrawerCardCategory { // eslint-disable-line
+  Base = 'базовый',
+  Advanced = 'продвинутый',
+}
+
 export interface DrawerCardProps {
   id: number
-  category: string
+  category: DrawerCardCategory | string
   title: string
   description?: string
 }
