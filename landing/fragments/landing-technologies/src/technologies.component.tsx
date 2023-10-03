@@ -14,7 +14,7 @@ export const Technologies = () => {
 
   return (
     <Column fill>
-      <Layout flexBasis={{ _: 32, standard: 64, wide: 128, ultra: 64 }} />
+      <Layout flexBasis={{ _: 32, standard: 128, wide: 128, ultra: 64 }} />
 
       <Divider backgroundColor='background.ghost' weight={1} />
 

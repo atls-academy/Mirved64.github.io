@@ -29,15 +29,16 @@ export const Steps = () => {
         />
 
         <Column
-          flexGrow={{ _: '1', ultra: '0' }}
-          flexBasis={{ _: 335, standard: 1760, wide: 2100, ultra: 2440 }}
+          flexGrow={{ standard: '1', ultra: '0' }}
+          flexBasis={{ _: 325, standard: 1760, wide: 2100, ultra: 2440 }}
         >
-          {stepsList?.map((step, index) => (
+          {stepsList?.map((step, index, array) => (
             <Step
               key={step.processId}
               sequenceNumber={(index + 1).toString()}
               name={step.process.title}
               description={step.process.description}
+              divider={index !== array.length - 1}
             />
           ))}
         </Column>

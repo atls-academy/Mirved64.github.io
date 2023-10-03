@@ -349,7 +349,7 @@ const IndexPage = () => {
           </Condition>
 
           <Condition match={isDesktop}>
-            <Parallax translateY={[-5, 8]}>
+            <Parallax translateY={[-5, 6]}>
               <Background
                 backgroundImage='wavesGradient'
                 backgroundSize='big'
