@@ -1,131 +1,93 @@
 import React                from 'react'
-import { FormattedMessage } from 'react-intl'
 
+import { Condition }        from '@ui/condition/src'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Space }            from '@ui/text'
+import { useWindowWidth }   from '@ui/utils/src'
 
-export const Info = () => (
-  <Box flexDirection={['column', 'row']}>
-    <Row maxWidth={[335, 710]} flexWrap='wrap'>
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.power-broker' />
-        </Text>
-      </Box>
+import { TextBlockAccent }  from './text-block'
+import { TextBlockPrimary } from './text-block'
 
-      <Layout flexBasis={5} />
+export const Info = () => {
+  const { isMobile } = useWindowWidth()
 
-      <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.atlantis' />
-        </Text>
-      </Box>
+  return (
+    <Box flexDirection={['column', 'row']}>
+      <Row maxWidth={{ _: 335, standard: 710, ultra: 1065 }} flexWrap='wrap'>
+        <TextBlockPrimary id='courses.subtitle.power-broker' />
 
-      <Layout flexBasis={5} />
+        <Space count={isMobile ? 2 : 4} />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.has' />
-        </Text>
-      </Box>
+        <TextBlockAccent id='courses.subtitle.atlantis' />
 
-      <Layout flexBasis={5} />
+        <Space count={isMobile ? 2 : 4} />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.impact-on' />
-        </Text>
-      </Box>
+        <TextBlockPrimary id='courses.subtitle.has' />
 
-      <Layout flexBasis={5} />
+        <Space count={isMobile ? 2 : 4} />
 
-      <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.it' />
-        </Text>
-      </Box>
+        <TextBlockPrimary id='courses.subtitle.impact-on' />
 
-      <Layout flexBasis={5} />
+        <TextBlockAccent id='courses.subtitle.it' />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.unlimited' />
-        </Text>
-      </Box>
+        <TextBlockPrimary id='courses.subtitle.unlimited' />
 
-      <Layout flexBasis={5} />
+        <Space count={isMobile ? 2 : 4} />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.possibilities' />
-        </Text>
-      </Box>
+        <TextBlockPrimary id='courses.subtitle.possibilities' />
 
-      <Layout flexBasis={5} />
+        <Space count={isMobile ? 6 : 4} />
 
-      <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.use-skills' />
-        </Text>
-      </Box>
+        <TextBlockPrimary id='courses.subtitle.in' />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.point' />
-        </Text>
-      </Box>
-    </Row>
+        <TextBlockAccent id='courses.subtitle.use-skills' />
 
-    <Layout flexBasis={[20, 20]} flexGrow='1' />
+        <TextBlockPrimary id='courses.subtitle.point' />
+      </Row>
 
-    <Row maxWidth={[335, 559]} flexWrap='wrap'>
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.advantage-of-learning' />
-        </Text>
-      </Box>
+      <Layout flexBasis={20} flexGrow='1' />
 
-      <Layout flexBasis={5} />
+      <Row maxWidth={{ _: 335, standard: 559, ultra: 840 }} flexWrap='wrap'>
+        <TextBlockPrimary id='courses.subtitle.advantage-of-learning' />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.visibly' />
-        </Text>
-      </Box>
+        <Space count={isMobile ? 2 : 5} />
 
-      <Layout flexBasis={5} />
+        <TextBlockPrimary id='courses.subtitle.visibly' />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.grow' />
-        </Text>
-      </Box>
+        <Space count={isMobile ? 2 : 5} />
 
-      <Layout flexBasis={5} />
+        <TextBlockPrimary id='courses.subtitle.grow' />
 
-      <Box>
-        <Text color='text.accent' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.practice' />
-        </Text>
-      </Box>
+        <Space count={isMobile ? 2 : 5} />
 
-      <Layout flexBasis={5} />
+        <Condition match={isMobile}>
+          <TextBlockPrimary id='courses.subtitle.because-mobile' />
+        </Condition>
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.on' />
-        </Text>
-      </Box>
+        <Condition match={!isMobile}>
+          <TextBlockPrimary id='courses.subtitle.because-desktop' />
+        </Condition>
 
-      <Layout flexBasis={5} />
+        <Space count={isMobile ? 2 : 5} />
 
-      <Box>
-        <Text color='text.primary' fontSize={['small', 'ordinary']} lineHeight='huge'>
-          <FormattedMessage id='courses.subtitle.existing-projects' />
-        </Text>
-      </Box>
-    </Row>
-  </Box>
-)
+        <TextBlockAccent id='courses.subtitle.practice' />
+
+        <Space count={isMobile ? 2 : 5} />
+
+        <Condition match={isMobile}>
+          <TextBlockPrimary id='courses.subtitle.existing-projects-mobile' />
+        </Condition>
+
+        <Condition match={!isMobile}>
+          <TextBlockPrimary id='courses.subtitle.on-desktop' />
+
+          <Space count={5} />
+
+          <TextBlockPrimary id='courses.subtitle.existing-projects-desktop' />
+        </Condition>
+      </Row>
+    </Box>
+  )
+}

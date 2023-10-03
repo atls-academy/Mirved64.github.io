@@ -4,8 +4,6 @@ import { FormattedMessage } from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { Button }           from '@ui/button'
-import { Card }             from '@ui/card'
-import { Condition }        from '@ui/condition'
 import { DrawerContainer }  from '@ui/drawer'
 import { ArrowUpIcon }      from '@ui/icons'
 import { Box }              from '@ui/layout'
@@ -16,6 +14,7 @@ import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 
 import { CardDataDesktop }  from '../data'
+import { DrawerCard }       from './drawer-card'
 import { DrawerProps }      from './drawer.interfaces'
 
 export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) => {
@@ -24,48 +23,26 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
     id: index,
   }))
 
-  const drawerCards = cardsList.map((card, index, array) => {
-    const Indent = () => (
-      <Condition match={index !== 0 && index !== array.length - 1}>
-        <Layout flexBasis={10} flexShrink='0' />
-      </Condition>
-    )
-
-    return (
-      <Row key={card.id}>
-        <Condition match={index === array.length - 1}>
-          <Layout flexBasis={20} flexShrink='0' />
-        </Condition>
-
-        <Indent />
-
-        <Card
-          category={card.category}
-          titleDesktop={card.title}
-          description={card.description}
-          indent={110}
-          widthCategoryBox={104}
-        />
-
-        <Indent />
-
-        <Condition match={index === 0}>
-          <Layout flexBasis={20} flexShrink='0' />
-        </Condition>
-      </Row>
-    )
-  })
+  const drawerCards = cardsList.map((card, index, array) => (
+    <DrawerCard key={card.id} card={card} array={array} index={index} />
+  ))
 
   return (
     <DrawerContainer active={active}>
       <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
-        <Column>
+        <Column maxWidth={2600} margin='0 auto'>
           <Layout flexBasis={32} />
 
           <Row alignItems='center' height={56}>
             <Layout flexBasis={40} />
 
-            <Logo fill='rgba(58, 55, 93, 1)' width={56} height={56} />
+            <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
+              <Logo fill='primary' width={56} height={50} />
+            </Box>
+
+            <Box display={{ _: 'none', ultra: 'flex' }}>
+              <Logo fill='primary' width={84} height={75} />
+            </Box>
 
             <Layout flexBasis={40} flexGrow='1' />
 
@@ -73,7 +50,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
 
             <Layout flexBasis={40} flexGrow='1' />
 
-            <Box width={136}>
+            <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }} width={136}>
               <Button
                 onClick={onClose}
                 variant='primaryBackgroundWhiteText'
@@ -84,7 +61,24 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
                 backgroundIcon='background.white'
                 radiiIcon='little'
               >
-                <Text color='white' fontSize='compact' lineHeight='small'>
+                <Text color='text.white' fontSize='compact' lineHeight='small'>
+                  <FormattedMessage id='navigation.button' />
+                </Text>
+              </Button>
+            </Box>
+
+            <Box display={{ _: 'none', ultra: 'flex' }} width={203}>
+              <Button
+                onClick={onClose}
+                variant='primaryBackgroundWhiteText'
+                size='giantSizeRegularRadii'
+                icon={<ArrowUpIcon width={24} height={24} />}
+                widthIcon={60}
+                heightIcon={60}
+                backgroundIcon='background.white'
+                radiiIcon='usual'
+              >
+                <Text color='text.white' fontSize='medium' lineHeight='small'>
                   <FormattedMessage id='navigation.button' />
                 </Text>
               </Button>

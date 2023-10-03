@@ -1,21 +1,18 @@
-import React                 from 'react'
-import { FormattedMessage }  from 'react-intl'
-import { useState }          from 'react'
+import React                   from 'react'
+import { FormattedMessage }    from 'react-intl'
+import { useState }            from 'react'
 
-import { Button }            from '@ui/button'
-import { Condition }         from '@ui/condition'
-import { ArrowDownIcon }     from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Logo }              from '@ui/logo'
-import { Text }              from '@ui/text'
+import { Button }              from '@ui/button'
+import { ArrowDownIcon }       from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Logo }                from '@ui/logo'
+import { NavLinksBlock }       from '@ui/navlinks-block'
+import { NavLinksBlockDrawer } from '@ui/navlinks-block'
+import { Text }                from '@ui/text'
 
-import { NavLinks }          from './data'
-import { DrawerDesktop }     from './drawer'
-import { NavLinkItem }       from './navlink-item'
-import { NavLinkItemDrawer } from './navlink-item'
+import { DrawerDesktop }       from './drawer'
 
 export const NavigationDesktop = () => {
   const [active, setActive] = useState<boolean>(false)
@@ -23,41 +20,35 @@ export const NavigationDesktop = () => {
   const handleClick = () => setActive(!active)
 
   return (
-    <Column>
+    <>
       <DrawerDesktop active={active} onClose={handleClick}>
-        <Box>
-          {NavLinks.map((navLink, index) => (
-            <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-              <NavLinkItemDrawer path={navLink.path} name={navLink.name} active={active} />
-
-              <Condition match={index < NavLinks.length - 1}>
-                <Layout flexBasis={20} />
-              </Condition>
-            </Box>
-          ))}
-        </Box>
+        <NavLinksBlockDrawer active={active} />
       </DrawerDesktop>
 
-      <Row height={120} alignItems='center' justifyContent='center'>
+      <Row
+        height={{ standard: 120, ultra: 148 }}
+        maxWidth={2600}
+        margin='0 auto'
+        alignItems='center'
+        justifyContent='center'
+      >
         <Layout flexBasis={40} />
 
-        <Logo fill='white' width={56} height={56} />
+        <Box display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
+          <Logo fill='white' width={56} height={50} />
+        </Box>
+
+        <Box display={{ _: 'none', ultra: 'flex' }}>
+          <Logo fill='white' width={84} height={75} />
+        </Box>
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        {NavLinks.map((navLink, index) => (
-          <Box key={navLink.id} width={index < NavLinks.length - 1 ? 220 : 200}>
-            <NavLinkItem name={navLink.name} path={navLink.path} />
-
-            <Condition match={index < NavLinks.length - 1}>
-              <Layout flexBasis={20} />
-            </Condition>
-          </Box>
-        ))}
+        <NavLinksBlock />
 
         <Layout flexBasis={40} flexGrow='1' />
 
-        <Box width={136}>
+        <Box width={136} display={{ _: 'none', standard: 'flex', ultra: 'none' }}>
           <Button
             onClick={handleClick}
             variant='ghostBackgroundWhiteText'
@@ -68,7 +59,24 @@ export const NavigationDesktop = () => {
             backgroundIcon='background.white'
             radiiIcon='little'
           >
-            <Text color='white' fontSize='compact' lineHeight='small'>
+            <Text color='text.white' fontSize='compact' lineHeight='small'>
+              <FormattedMessage id='navigation.button' />
+            </Text>
+          </Button>
+        </Box>
+
+        <Box width={203} display={{ _: 'none', ultra: 'flex' }}>
+          <Button
+            onClick={handleClick}
+            variant='ghostBackgroundWhiteText'
+            size='giantSizeRegularRadii'
+            icon={<ArrowDownIcon width={24} height={24} />}
+            widthIcon={60}
+            heightIcon={60}
+            backgroundIcon='background.white'
+            radiiIcon='usual'
+          >
+            <Text color='text.white' fontSize='medium' lineHeight='small'>
               <FormattedMessage id='navigation.button' />
             </Text>
           </Button>
@@ -76,6 +84,6 @@ export const NavigationDesktop = () => {
 
         <Layout flexBasis={40} />
       </Row>
-    </Column>
+    </>
   )
 }

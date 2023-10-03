@@ -1,94 +1,92 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
-import { useIntl }          from 'react-intl'
+import React                  from 'react'
+import { FormattedMessage }   from 'react-intl'
+import { useState }           from 'react'
+import { useIntl }            from 'react-intl'
 
-import { Button }           from '@ui/button'
-import { Divider }          from '@ui/divider'
-import { SearchIcon }       from '@ui/icons'
-import { Input }            from '@ui/input'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useFocus }         from '@ui/utils'
-import { useHover }         from '@ui/utils'
+import { Divider }            from '@ui/divider'
+import { SearchIcon }         from '@ui/icons'
+import { Input }              from '@ui/input'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
+import { useFocus }           from '@ui/utils'
+import { useHover }           from '@ui/utils'
+
+import { Indent }             from './indent'
+import { SearchButton }       from './search'
+import { getColorSearchIcon } from './helpers'
+import { getColorSearchText } from './helpers'
 
 export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
   const { focus, focusProps } = useFocus()
+
   const intl = useIntl()
-  const [searchQuery, setSearchQuery] = useState('')
 
-  const searchButton = (
-    <Box width={[172, 132]}>
-      <Button variant='navyBackgroundWhiteText' size='usualSizeCompactRadii'>
-        <Text color='text.white' fontSize='little' lineHeight='usual'>
-          <FormattedMessage id='library.search-button' />
-        </Text>
-      </Button>
-    </Box>
-  )
-
-  const getColor = (): string => {
-    if (hover) return 'darkPurpleTransparent'
-    if (focus) return 'darkestPurple'
-    if (searchQuery) return 'darkestPurple'
-    return 'gray'
-  }
+  const [searchQuery, setSearchQuery] = useState<string>('')
 
   return (
-    <Row>
-      <Layout flexBasis={[20, 230]} flexShrink='0' />
+    <Box flexGrow='1'>
+      <Layout flexBasis={{ _: 20, standard: 230, ultra: 620 }} flexShrink='0' />
 
-      <Column flexGrow='1'>
-        <Layout flexBasis={[100, 200]} />
+      <Column flexGrow='1' flexShrink={{ wide: 0 }}>
+        <Layout flexBasis={{ _: 100, standard: 200, wide: 256, ultra: 428 }} />
 
-        <Box maxWidth={[225, 1460]}>
+        <Box width={{ _: 225, standard: 1460, wide: 1987, ultra: 2920 }}>
           <Text
             color='text.white'
-            fontSize={['normal', 'stupendous']}
-            lineHeight={['huge', 'normal']}
+            fontSize={{ _: 'normal', standard: 'stupendous', ultra: 'biggest' }}
+            lineHeight={{ _: 'huge', standard: 'normal' }}
           >
             <FormattedMessage id='library.title' />
           </Text>
         </Box>
 
-        <Layout flexBasis={[24, 48]} />
+        <Indent />
 
         <Divider backgroundColor='background.ghost' weight={1} />
 
-        <Layout flexBasis={[24, 48]} />
+        <Indent />
 
-        <Box maxWidth={['100%', '600px']}>
-          <Text color='text.white' fontSize={['tiny', 'medium']} lineHeight='huge'>
+        <Box maxWidth={{ _: '100%', standard: 600, wide: 640, ultra: 960 }}>
+          <Text
+            color='text.white'
+            fontSize={{ _: 'tiny', standard: 'medium', ultra: 'usual' }}
+            lineHeight='huge'
+          >
             <FormattedMessage id='library.text' />
           </Text>
         </Box>
 
-        <Layout flexBasis={[24, 48]} />
+        <Indent />
 
         <Box maxWidth={[335, 600]} {...hoverProps} {...focusProps}>
           <Input
             value={searchQuery}
             onChange={setSearchQuery}
             variant='search'
-            size='normalSizeNormallRadii'
-            icon={<SearchIcon width={20} height={20} color={getColor()} />}
+            size='normalSizeNormalRadii'
+            icon={
+              <SearchIcon
+                width={20}
+                height={20}
+                color={getColorSearchIcon(hover, focus, searchQuery)}
+              />
+            }
             widthIcon={20}
             heightIcon={20}
             filled={searchQuery}
-            addon={searchQuery ? searchButton : null}
+            addon={searchQuery ? <SearchButton /> : null}
             placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
-            color={getColor()}
+            color={getColorSearchText(hover, focus, searchQuery)}
           />
         </Box>
 
-        <Layout flexBasis={[100, 240]} />
+        <Layout flexBasis={{ _: 100, standard: 240 }} />
       </Column>
 
-      <Layout flexBasis={[20, 230]} flexShrink='0' />
-    </Row>
+      <Layout flexBasis={{ _: 20, standard: 230, ultra: 620 }} flexShrink='0' />
+    </Box>
   )
 }

@@ -1,7 +1,7 @@
 export interface CardProps {
   category: string
-  widthCategoryBox: string | string[] | number | number[]
-  indent: string | string[] | number | number[]
+  widthCategoryBox: string | string[] | number | number[] | object
+  indent: string | string[] | number | number[] | object
   isMobileOnly?: boolean
   titleDesktop?: string
   titleMobile?: string

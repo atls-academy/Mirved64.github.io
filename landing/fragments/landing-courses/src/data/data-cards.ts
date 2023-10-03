@@ -62,3 +62,31 @@ export const CardsList: CardProps[] = [
     title: 'Дизайн, Figma, Математика',
   },
 ]
+
+export const CardsListWide: CardProps[] = [
+  {
+    id: 0,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 1,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 2,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 3,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+  {
+    id: 4,
+    category: CardCategory.EducationalMaterial,
+    title: 'Как использовать библиотеки',
+  },
+]

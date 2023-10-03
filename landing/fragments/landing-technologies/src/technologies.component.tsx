@@ -7,19 +7,18 @@ import { Column }        from '@ui/layout'
 
 import { RunLine }       from './run-line'
 import { useTechnogies } from './data'
+import { Indent }        from './indent'
 
 export const Technologies = () => {
-  const Indent = () => <Layout flexBasis={[36, 64]} />
-
   const technologies = useTechnogies()
 
   return (
     <Column fill>
-      <Layout flexBasis={[32, 64]} />
+      <Layout flexBasis={{ _: 32, standard: 64, wide: 128, ultra: 64 }} />
 
-      <Divider backgroundColor='background.ghost' weight={1} />
+    <Divider backgroundColor='background.ghost' weight={1} />
 
-      <Indent />
+    <Indent />
 
       <Row overflow='hidden'>
         <RunLine
@@ -30,7 +29,7 @@ export const Technologies = () => {
         />
       </Row>
 
-      <Indent />
+    <Indent />
 
       <Row overflow='hidden'>
         <RunLine
@@ -41,11 +40,10 @@ export const Technologies = () => {
         />
       </Row>
 
-      <Indent />
+    <Indent />
 
-      <Divider backgroundColor='background.ghost' weight={1} />
+    <Divider backgroundColor='background.ghost' weight={1} />
 
-      <Layout flexBasis={[32, 64]} />
-    </Column>
-  )
-}
+    <Layout flexBasis={[32, 64]} />
+  </Column>
+)

@@ -16,11 +16,18 @@ import { NavLinks }       from './data'
 import { NavbarProps }    from './navbar.interfaces'
 
 export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
-  const { isMobile } = useWindowWidth()
+  const { isDesktop, isWide } = useWindowWidth()
 
   return (
-    <Condition match={!isMobile}>
-      <Box position='fixed' top={540} left={40} width={138} height={116} zIndex={11}>
+    <Condition match={isDesktop || isWide}>
+      <Box
+        position='fixed'
+        top={{ standard: 540, wide: 376 }}
+        left={40}
+        width={138}
+        height={116}
+        zIndex={21}
+      >
         <Scrollspy sectionRefs={sectionRefs} offset={-640}>
           {({ currentElementIndexInViewport }) => (
             <Column>

@@ -1,7 +1,6 @@
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import { Condition }        from '@ui/condition'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -11,13 +10,15 @@ import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
 import { SliderContainer }  from './slider'
+import { TextBlockGhost }   from './text-block'
+import { TextBlockWhite }   from './text-block'
 
 export const Process = () => {
   const { isMobile } = useWindowWidth()
 
   return (
     <Column flexGrow='1' alignItems='center'>
-      <Layout flexBasis={[24, 160]} flexShrink='0' />
+      <Layout flexBasis={{ _: 24, standard: 160, wide: 213 }} flexShrink='0' />
 
       <Box>
         <Text
@@ -30,93 +31,37 @@ export const Process = () => {
         </Text>
       </Box>
 
-      <Layout flexBasis={[16, 24]} flexShrink='0' />
+      <Layout flexBasis={{ _: 16, standard: 24, wide: 33 }} flexShrink='0' />
 
-      <Condition match={!isMobile}>
-        <Column maxWidth={960}>
-          <Row>
-            <Text color='text.white' fontSize='regular' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.any-process-stops' />
-            </Text>
+      <Row flexWrap='wrap' justifyContent='center' maxWidth={{ _: 335, standard: 880, wide: 1160 }}>
+        <TextBlockWhite id='slider.slogan.any-process-stops' />
 
-            <Space count={3} />
+        <Space count={isMobile ? 2 : 3} />
 
-            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.be' />
-            </Text>
+        <TextBlockGhost id='slider.slogan.be' />
 
-            <Space count={3} />
+        <Space count={isMobile ? 2 : 3} />
 
-            <Text color='text.white' fontSize='regular' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.difficult' />
-            </Text>
-          </Row>
+        <TextBlockWhite id='slider.slogan.difficult' />
 
-          <Row justifyContent='center'>
-            <Text color='text.white' fontSize='regular' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.when' />
-            </Text>
+        <Space count={isMobile ? 2 : 3} />
 
-            <Space count={3} />
+        <TextBlockWhite id='slider.slogan.when' />
 
-            <Text color='text.whiteSemiTransparent' fontSize='regular' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.you-know' />
-            </Text>
+        <Space count={isMobile ? 2 : 3} />
 
-            <Space count={3} />
+        <TextBlockGhost id='slider.slogan.you-know' />
 
-            <Text color='text.white' fontSize='regular' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.how-it-happen' />
-            </Text>
-          </Row>
-        </Column>
-      </Condition>
+        <Space count={isMobile ? 2 : 3} />
 
-      <Condition match={isMobile}>
-        <Column maxWidth={335}>
-          <Row justifyContent='center'>
-            <Text color='text.white' fontSize='medium' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.any-process-stops' />
-            </Text>
-          </Row>
+        <TextBlockWhite id='slider.slogan.how-it-happen' />
+      </Row>
 
-          <Row>
-            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.be' />
-            </Text>
-
-            <Space count={2} />
-
-            <Text color='text.white' fontSize='medium' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.difficult' />
-            </Text>
-
-            <Space count={2} />
-
-            <Text color='text.white' fontSize='medium' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.when' />
-            </Text>
-
-            <Space count={2} />
-
-            <Text color='text.whiteSemiTransparent' fontSize='medium' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.you-know' />
-            </Text>
-          </Row>
-
-          <Row justifyContent='center'>
-            <Text color='text.white' fontSize='medium' lineHeight='usual'>
-              <FormattedMessage id='slider.slogan.how-it-happen' />
-            </Text>
-          </Row>
-        </Column>
-      </Condition>
-
-      <Layout flexBasis={[24, 50]} flexShrink='0' />
+      <Layout flexBasis={{ _: 24, standard: 50, wide: 68 }} flexShrink='0' />
 
       <SliderContainer />
 
-      <Layout flexBasis={[128, 240]} flexShrink='0' />
+      <Layout flexBasis={{ _: 144, standard: 240, wide: 293 }} flexShrink='0' />
     </Column>
   )
 }

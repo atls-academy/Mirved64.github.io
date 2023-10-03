@@ -12,16 +12,24 @@ import { Step }           from './step'
 
 export const Steps = () => {
   const intl = useIntl()
+
   const { isMobile } = useWindowWidth()
 
   return (
     <Column>
-      <Layout flexBasis={[64, 160]} />
+      <Layout flexBasis={{ _: 64, standard: 160, ultra: 320 }} />
 
       <Box position='relative'>
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
+        <Layout
+          flexBasis={{ _: 20, standard: 80, wide: 230 }}
+          flexShrink='0'
+          flexGrow={{ wide: 3 }}
+        />
 
-        <Column flexGrow='1' flexBasis={[335, 1760]}>
+        <Column
+          flexGrow={{ _: '1', ultra: '0' }}
+          flexBasis={{ _: 335, standard: 1760, wide: 2100, ultra: 2440 }}
+        >
           <Step
             sequenceNumber='1'
             name={intl.formatMessage({ id: 'process.item.team-integration' })}
@@ -56,8 +64,8 @@ export const Steps = () => {
 
         <Condition match={!isMobile}>
           <Box
-            width='400px'
-            height='400px'
+            width={{ standard: 400, wide: 884, ultra: 1106 }}
+            height={{ standard: 400, wide: 884, ultra: 1106 }}
             position='absolute'
             zIndex={10}
             margin='auto'
@@ -66,11 +74,15 @@ export const Steps = () => {
             bottom='0'
             right='0'
           >
-            <Image src='./image/Cubics.png' width={400} height={400} />
+            <Image src='./image/Cubics.png' width='100%' height='100%' />
           </Box>
         </Condition>
 
-        <Layout flexBasis={[20, 80]} flexShrink='0' />
+        <Layout
+          flexBasis={{ _: 20, standard: 80, wide: 230 }}
+          flexShrink='0'
+          flexGrow={{ wide: 3 }}
+        />
       </Box>
 
       <Layout flexBasis={[24, 160]} />

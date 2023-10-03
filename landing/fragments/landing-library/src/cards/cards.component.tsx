@@ -3,11 +3,12 @@ import React         from 'react'
 import { Condition } from '@ui/condition'
 import { Divider }   from '@ui/divider'
 import { Box }       from '@ui/layout'
+import { Row }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 
-import { CardKeys }  from '../card'
-import { Card }      from '../card'
+import { CardKeys }  from './card'
+import { Card }      from './card'
 import { dataCards } from '../data'
 
 export const CardsLibrary = () => {
@@ -19,37 +20,49 @@ export const CardsLibrary = () => {
 
   return (
     <Box>
-      <Layout flexBasis={[20, 230]} flexShrink='0' />
+      <Layout flexBasis={{ _: 20, standard: 230, ultra: 620 }} flexShrink='0' />
 
       <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
         <Divider weight={1} backgroundColor='background.grayGhost' />
 
-        {cards(dataCards).map((card, index, array) => (
-          <Column key={card.id}>
-            <Layout flexBasis={32} />
+        <Box flexDirection={{ _: 'column', wide: 'row' }} flexWrap='wrap'>
+          {cards(dataCards).map((card, index, array) => (
+            <Row maxWidth={{ wide: '50%' }} key={card.id}>
+              <Condition match={index % 2 !== 0}>
+                <Layout flexBasis={{ _: 0, wide: 20 }} flexShrink='0' />
+              </Condition>
 
-            <Card
-              title={card.title}
-              technologiesList={card.technologiesList}
-              description={card.description}
-            />
+              <Column flexGrow='1'>
+                <Layout flexBasis={32} />
 
-            <Layout flexBasis={32} />
+                <Card
+                  title={card.title}
+                  technologiesList={card.technologiesList}
+                  description={card.description}
+                />
 
-            <Divider weight={1} backgroundColor='background.grayGhost' />
+                <Layout flexBasis={32} />
 
-            <Condition match={index === array.length - 1}>
-              <Layout flexBasis={32} />
-            </Condition>
-          </Column>
-        ))}
+                <Divider weight={1} backgroundColor='background.grayGhost' />
+
+                <Condition match={index === array.length - 1}>
+                  <Layout flexBasis={32} />
+                </Condition>
+              </Column>
+
+              <Condition match={index === 0 || index % 2 === 0}>
+                <Layout flexBasis={{ _: 0, wide: 20 }} flexShrink='0' />
+              </Condition>
+            </Row>
+          ))}
+        </Box>
 
         <Layout flexBasis={[144, 240]} />
       </Column>
 
-      <Layout flexBasis={[20, 230]} flexShrink='0' />
+      <Layout flexBasis={{ _: 20, standard: 230, ultra: 620 }} flexShrink='0' />
     </Box>
   )
 }

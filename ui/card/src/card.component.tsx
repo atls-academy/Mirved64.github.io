@@ -33,7 +33,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
         borderRadius={['normal', 'regular']}
       >
         <Condition match={!!props.image && !isMobile}>
-          <Box position='absolute' top='40px' right='40px'>
+          <Box position='absolute' top='40px' right='34px'>
             <Image src={props.image} width={360} height={360} />
           </Box>
         </Condition>
@@ -44,16 +44,16 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           <Layout flexBasis={[16, 40]} />
 
           <Box
-            flexBasis={[27, 38]}
+            flexBasis={{ _: 27, standard: 38, wide: 38, ultra: 57 }}
             width={props.widthCategoryBox}
             alignItems='center'
             backgroundColor='background.white'
-            borderRadius='tiny'
+            borderRadius={{ standard: 'tiny', wide: 'little' }}
             justifyContent='center'
           >
             <Text
               color='text.primary'
-              fontSize={['subAtom', 'tiny']}
+              fontSize={{ _: 'subAtom', standard: 'tiny', ultra: 'low' }}
               lineHeight='small'
               textTransform='uppercase'
             >
@@ -64,8 +64,12 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           <Layout flexBasis={props.indent} />
 
           <Condition match={!isMobileOnly}>
-            <Box maxWidth={[303, 496]}>
-              <Text color='text.primary' fontSize={['medium', 'regular']} lineHeight='usual'>
+            <Box maxWidth={{ _: 303, standard: 496, wide: 556 }}>
+              <Text
+                color='text.primary'
+                fontSize={{ _: 'medium', standard: 'regular', ultra: 'big' }}
+                lineHeight='usual'
+              >
                 {props.titleDesktop}
               </Text>
             </Box>
@@ -83,10 +87,14 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
             <Column flexBasis={[132, 84]}>
               <Layout flexBasis={[12, 16]} />
 
-              <Box maxWidth={[303, 690]}>
+              <Box maxWidth={{ _: 303, standard: 690, wide: 694 }}>
                 <Text
-                  color={['text.primaryTransparentText', 'text.primary']}
-                  fontSize={['tiny', 'small']}
+                  color={{
+                    _: 'text.primaryTransparentText',
+                    standard: 'text.primary',
+                    wide: 'text.primaryTransparentText',
+                  }}
+                  fontSize={{ _: 'tiny', standard: 'small', ultra: 'usual' }}
                   lineHeight={['big', 'huge']}
                 >
                   {props.description}
