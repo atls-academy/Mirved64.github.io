@@ -1,3 +1,3 @@
 export interface TextBlockProps {
-  id: string
+  children: string
 }

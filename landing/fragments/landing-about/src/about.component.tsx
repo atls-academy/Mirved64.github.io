@@ -1,73 +1,63 @@
 import React                from 'react'
 
-import { Delimiter }        from '@ui/delimiter'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { Space }            from '@ui/text'
+import { Text }             from '@ui/text/src'
 
 import { DesktopTextBlock } from './text-block'
-import { MobileTextBlock }  from './text-block'
+import { useAbout }         from './data'
 
-export const About = () => (
-  <Column flexGrow='1'>
-    <Layout flexBasis={[64, 160]} />
+export const About = () => {
+  const about = useAbout()
 
-    <Row>
-      <Layout flexBasis={[20, 230]} />
+  const problemMobile: string = about?.data?.section.content.split('\n')[1]
+  const sloganMobile: string = about?.data?.section.content.split('\n')[2]
+  const problemDesktop: string[] = about?.data?.section.content
+    .split('\n')[1]
+    .split('.')
+    .slice(0, 2)
+  const sloganDesktop: string = about?.data?.section.content.split('\n')[2].slice(0, -1)
+  return (
+    <Column flexGrow='1'>
+      <Layout flexBasis={[64, 160]} />
 
-      <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='0'>
-        <Box display={['none', 'inline']}>
-          <DesktopTextBlock id='about.intro-desktop' />
+      <Row>
+        <Layout flexBasis={[20, 230]} />
 
-          <Space count='6' />
+        <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='0'>
+          <Box display={['none', 'inline']}>
+            {problemDesktop?.map((el) => (
+              <DesktopTextBlock key={el[0]}>{el.trim()}</DesktopTextBlock>
+            ))}
+          </Box>
 
-          <Delimiter />
+          <Column display={['flex', 'none']}>
+            <Text color='text.white' fontSize='small' lineHeight='huge'>
+              {problemMobile}
+            </Text>
 
-          <Space count='6' />
+            <Layout flexBasis={28} />
 
-          <DesktopTextBlock id='about.problem-desktop' />
+            <Text color='text.white' fontSize='small' lineHeight='huge'>
+              {sloganMobile}
+            </Text>
+          </Column>
 
-          <Space count='6' />
+          <Layout flexBasis={[0, 40]} />
 
-          <Delimiter />
-        </Box>
-
-        <Column display={['flex', 'none']}>
-          <MobileTextBlock id='about.intro-digital-mobile' />
-
-          <MobileTextBlock id='about.intro-not-decrease-mobile' />
-
-          <MobileTextBlock id='about.intro-for-your-decisions-mobile' />
-
-          <Layout flexBasis={28} />
-
-          <MobileTextBlock id='about.central-idea-atlantis-teach-mobile' />
-
-          <MobileTextBlock id='about.central-idea-make-engineers-mobile' />
-
-          <MobileTextBlock id='about.central-idea-architects-mobile' />
-
-          <MobileTextBlock id='about.central-idea-not-programmers-mobile' />
+          <Box display={['none', 'inline']}>
+            <Box display='inline'>
+              <DesktopTextBlock>{sloganDesktop}</DesktopTextBlock>
+            </Box>
+          </Box>
         </Column>
 
-        <Layout flexBasis={[0, 40]} />
+        <Layout flexBasis={[20, 230]} />
+      </Row>
 
-        <Box display={['none', 'inline']}>
-          <Box display='inline'>
-            <DesktopTextBlock id='about.central-idea-desktop' />
-
-            <Space count='6' />
-
-            <Delimiter />
-          </Box>
-        </Box>
-      </Column>
-
-      <Layout flexBasis={[20, 230]} />
-    </Row>
-
-    <Layout flexBasis={[128, 240]} />
-  </Column>
-)
+      <Layout flexBasis={[128, 240]} />
+    </Column>
+  )
+}

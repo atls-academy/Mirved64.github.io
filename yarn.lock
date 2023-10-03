@@ -2338,6 +2338,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-about@workspace:landing/fragments/landing-about"
   dependencies:
+    "@apollo/client": "npm:3.8.4"
     "@ui/background": "workspace: 0.0.1"
     "@ui/delimiter": "workspace: 0.0.1"
     "@ui/image": "workspace: 0.0.1"
@@ -2345,11 +2346,11 @@ __metadata:
     "@ui/text": "workspace: 0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
+    "@apollo/client": "*"
+    graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 
