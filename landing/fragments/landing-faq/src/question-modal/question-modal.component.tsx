@@ -14,12 +14,15 @@ import { Modal }              from '@ui/modal'
 import { Text }               from '@ui/text'
 
 import { QuestionModalProps } from './question-modal.interfaces'
+import { useFaq }             from '../data'
 
 export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
   const [send, setSend] = useState<boolean>(false)
   const [name, setName] = useState<string>('')
 
   const handleNameChange = (userName: string) => setName(userName)
+
+  const faq = useFaq()
 
   return (
     <Modal open={open} onClose={setOpen}>
@@ -40,7 +43,7 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
                 <Box>
                   <Condition match={!send}>
                     <Text color='text.white' fontSize='regular' lineHeight='large'>
-                      <FormattedMessage id='modal.title' />
+                      {faq?.data?.navigationBy.title}
                     </Text>
                   </Condition>
 

@@ -1,1 +1,1 @@
-export * from './data-question'
+export * from './queries'

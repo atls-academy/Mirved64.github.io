@@ -1,21 +1,20 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React              from 'react'
+import { useState }       from 'react'
 
-import { Accordion }        from '@ui/accordion'
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { MailIcon }         from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Accordion }      from '@ui/accordion'
+import { Button }         from '@ui/button'
+import { Condition }      from '@ui/condition'
+import { Divider }        from '@ui/divider'
+import { MailIcon }       from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useWindowWidth } from '@ui/utils'
 
-import { Question }         from './data'
-import { QuestionModal }    from './question-modal'
+import { QuestionModal }  from './question-modal'
+import { useFaq }         from './data'
 
 export const Faq = () => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
@@ -23,10 +22,19 @@ export const Faq = () => {
   const [open, setOpen] = useState<boolean>(false)
   const handleModalState = () => setOpen(!open)
 
-  const questions = Array.from({ length: 6 }, () => Question).map((el, index) => ({
+  const faq = useFaq()
+  const question: string = faq?.data?.allFAQ?.nodes[0].faq.question
+  const answer: string = faq?.data?.allFAQ?.nodes[0].faq.answer
+  const questionAnswer: { question: string; answer: string } = { question, answer }
+
+  const questionAnswerList = Array.from({ length: 6 }, () => questionAnswer).map((el, index) => ({
     ...el,
     id: index,
   }))
+
+  const title: string = faq?.data?.section.sections.title
+
+  const faqButton: string = faq?.data?.navigationBy.title
 
   return (
     <>
@@ -47,7 +55,7 @@ export const Faq = () => {
                 }}
                 lineHeight={['huge', 'normal']}
               >
-                <FormattedMessage id='faq.title' />
+                {`${title?.charAt(0).toUpperCase()}${title?.slice(1)}`}
               </Text>
             </Box>
 
@@ -67,7 +75,7 @@ export const Faq = () => {
                     onClick={handleModalState}
                   >
                     <Text color='text.white' fontSize='small' lineHeight='normal'>
-                      <FormattedMessage id='faq.button' />
+                      {faqButton}
                     </Text>
                   </Button>
                 </Condition>
@@ -84,7 +92,7 @@ export const Faq = () => {
                     onClick={handleModalState}
                   >
                     <Text color='text.white' fontSize='usual' lineHeight='normal'>
-                      <FormattedMessage id='faq.button' />
+                      {faqButton}
                     </Text>
                   </Button>
                 </Condition>
@@ -101,7 +109,7 @@ export const Faq = () => {
           </Condition>
 
           <Condition match={isMobile || isDesktop}>
-            {questions.map((item, index, array) => (
+            {questionAnswerList.map((item, index, array) => (
               <Column key={item.id}>
                 <Condition match={index !== 0}>
                   <Layout flexBasis={[16, 40]} />
@@ -118,7 +126,7 @@ export const Faq = () => {
 
           <Condition match={isWide || isUltra}>
             <Row flexWrap='wrap' justifyContent='space-between'>
-              {questions.map((item, index) => (
+              {questionAnswerList.map((item, index) => (
                 <Column key={item.id} width={{ wide: 1005, ultra: 1180 }}>
                   <Condition match={index === 0 || index === 1}>
                     <Divider backgroundColor='background.grayGhost' weight={1} />
@@ -147,7 +155,7 @@ export const Faq = () => {
                 onClick={handleModalState}
               >
                 <Text color='text.white' fontSize='small' lineHeight='small'>
-                  <FormattedMessage id='faq.button' />
+                  {faqButton}
                 </Text>
               </Button>
             </Box>
