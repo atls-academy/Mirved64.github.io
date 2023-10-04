@@ -1,20 +1,20 @@
-import React                  from 'react'
-import { FC }                 from 'react'
+import React                from 'react'
+import { FC }               from 'react'
 
-import { Condition }          from '@ui/condition'
-import { Divider }            from '@ui/divider'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Text }               from '@ui/text'
+import { Condition }        from '@ui/condition'
+import { Divider }          from '@ui/divider'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Text }             from '@ui/text'
 
-import { DrawerCardCategory } from './drawer-card.interfaces'
-import { DrawerCardsProps }   from './drawer-card.interfaces'
+import { DrawerCardType }   from './drawer-card.interfaces'
+import { DrawerCardsProps } from './drawer-card.interfaces'
 
 export const DrawerCardMobile: FC<DrawerCardsProps> = ({ card, index, array }) => (
   <Column>
     <Box
-      width={card.category === DrawerCardCategory.Base ? 87 : 122}
+      width={card.type === DrawerCardType.Base ? 87 : 122}
       height={32}
       border='thinnestPrimary'
       borderRadius='tiny'
