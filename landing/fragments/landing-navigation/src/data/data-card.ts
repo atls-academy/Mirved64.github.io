@@ -1,5 +1,12 @@
+enum DrawerCardType { // eslint-disable-line
+  Base = 'Base',
+  Advanced = 'Advanced',
+  Training = 'Training',
+}
+
 interface CardProp {
   id: number
+  type: DrawerCardType
   category: string
   title: string
   description?: string
@@ -7,6 +14,7 @@ interface CardProp {
 
 export const CardDataDesktop: CardProp = {
   id: 0,
+  type: DrawerCardType.Training,
   category: 'обучение',
   title: 'Frontend Engineer',
   description:
@@ -15,16 +23,19 @@ export const CardDataDesktop: CardProp = {
 export const CardDataMobile: CardProp[] = [
   {
     id: 0,
+    type: DrawerCardType.Base,
     category: 'базовый',
     title: 'Frontend Engineer',
   },
   {
     id: 1,
+    type: DrawerCardType.Advanced,
     category: 'продвинутый',
     title: 'Frontend Engineer',
   },
   {
     id: 2,
+    type: DrawerCardType.Base,
     category: 'базовый',
     title: 'Backend Engineer',
   },
