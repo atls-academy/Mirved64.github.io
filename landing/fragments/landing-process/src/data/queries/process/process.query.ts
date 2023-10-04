@@ -8,5 +8,18 @@ export const GET_PROCESS = gql`
         title
       }
     }
+    slides {
+      nodes {
+        slider {
+          text
+          imageDesktop {
+            sourceUrl
+          }
+          imageMobile {
+            sourceUrl
+          }
+        }
+      }
+    }
   }
 `

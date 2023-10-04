@@ -5,11 +5,11 @@ import { Box }            from '@ui/layout'
 import { Slider }         from '@ui/slider'
 import { useWindowWidth } from '@ui/utils'
 
-import { useSlider }      from '../data'
+import { useProcess }     from '../data'
 
 export const SliderContainer = () => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
-  const slider = useSlider()
+  const slider = useProcess()
 
   const sliderData = slider?.data?.slides?.nodes[0].slider
 
