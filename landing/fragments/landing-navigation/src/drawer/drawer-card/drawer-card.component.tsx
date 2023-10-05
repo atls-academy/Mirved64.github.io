@@ -23,8 +23,8 @@ export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
 
       <Condition match={!isUltra}>
         <Card
-          category={card.category}
-          titleDesktop={card.title}
+          label={card.category}
+          title={card.title}
           description={card.description}
           indent={110}
           widthCategoryBox={104}
@@ -33,8 +33,8 @@ export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
 
       <Condition match={isUltra}>
         <Card
-          category={card.category}
-          titleDesktop={card.title}
+          label={card.category}
+          title={card.title}
           description={card.description}
           indent={110}
           widthCategoryBox={154}

@@ -3,26 +3,25 @@ import { FC }             from 'react'
 
 import { Card }           from '@ui/card'
 import { Condition }      from '@ui/condition'
-import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
 import { useWindowWidth } from '@ui/utils'
 
-import { CardsListWide }  from '../data'
 import { CardCellProps }  from './cards.interfaces'
 
-export const CardsMaterialsWide = () => {
+export const CardCell: FC<CardCellProps> = ({ index, label, title }) => {
   const { isWide, isUltra } = useWindowWidth()
 
-  const CardCell: FC<CardCellProps> = ({ index, category, title }) => (
+  return (
     <>
       <Box flexDirection='column' width={{ wide: 572, ultra: 670 }}>
         <Box height={320}>
           <Condition match={isWide}>
-            <Card category={category} titleDesktop={title} indent={110} widthCategoryBox={180} />
+            <Card label={label} title={title} indent={110} widthCategoryBox={180} />
           </Condition>
 
           <Condition match={isUltra}>
-            <Card category={category} titleDesktop={title} indent={45} widthCategoryBox={270} />
+            <Card label={label} title={title} indent={45} widthCategoryBox={270} />
           </Condition>
         </Box>
 
@@ -34,14 +33,6 @@ export const CardsMaterialsWide = () => {
       <Condition match={index !== 2}>
         <Layout flexBasis={40} flexShrink='0' />
       </Condition>
-    </>
-  )
-
-  return (
-    <>
-      {CardsListWide.map((card, index) => (
-        <CardCell key={card.id} index={index} category={card.category} title={card.title} />
-      ))}
     </>
   )
 }

@@ -14,8 +14,12 @@ import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 import { useWindowWidth }   from '@ui/utils'
 
+import { useCourses }       from '../data'
+
 export const Sidebar = () => {
   const { isMobile, isUltra } = useWindowWidth()
+
+  const sidebarData = useCourses()
 
   return (
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
@@ -43,7 +47,7 @@ export const Sidebar = () => {
                 fontSize={{ _: 'tiny', standard: 'little', ultra: 'medium' }}
                 lineHeight={['huge', 'big']}
               >
-                <FormattedMessage id='courses.sidebar.subtitle' />
+                {sidebarData?.data?.courseBy?.course.description}
               </Text>
             </Box>
 
@@ -68,7 +72,7 @@ export const Sidebar = () => {
                   fontSize={{ _: 'giant', standard: 'enormous', ultra: 'stupendous' }}
                   lineHeight='small'
                 >
-                  <FormattedMessage id='courses.sidebar.number' />
+                  {sidebarData?.data?.courseBy?.course.title}
                 </Text>
               </Box>
 
@@ -83,7 +87,7 @@ export const Sidebar = () => {
                   fontSize={{ _: 'atom', standard: 'tiny', ultra: 'low' }}
                   lineHeight={['large', 'big']}
                 >
-                  <FormattedMessage id='courses.sidebar.sign' />
+                  {sidebarData?.data?.courseBy?.content}
                 </Text>
               </Box>
 

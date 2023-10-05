@@ -1,7 +1,5 @@
-import { CardCategory } from '../data'
-
 export interface CardCellProps {
   index: number
+  label: string
   title: string
-  category: CardCategory
 }
