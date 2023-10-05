@@ -1,22 +1,30 @@
-import React         from 'react'
+import React          from 'react'
 
-import { Condition } from '@ui/condition'
-import { Divider }   from '@ui/divider'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
+import { Condition }  from '@ui/condition'
+import { Divider }    from '@ui/divider'
+import { Box }        from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
 
-import { CardKeys }  from './card'
-import { Card }      from './card'
-import { dataCards } from '../data'
+import { Card }       from './card'
+import { useLibrary } from '../data'
 
 export const CardsLibrary = () => {
-  const cards = (array: Array<CardKeys>): Array<CardKeys> =>
-    Array.from({ length: 3 })
-      .fill(array)
-      .flat()
-      .map((el, index) => ({ ...(el as CardKeys), id: index }))
+  const libraryCards = useLibrary()
+
+  const libraryCardsList = libraryCards?.data?.allTutorials?.nodes?.map((element) => ({
+    title: element.title,
+    description: element.learningMaterials.description,
+    skills: element.learningMaterials.skills,
+  }))
+  const libraryCardsListLong = Array.from({ length: 3 })
+    .fill(libraryCardsList)
+    .flat()
+    .map((el, index) => ({
+      ...(el as { title: string; description: string; skills: { title: string }[] }),
+      id: index,
+    }))
 
   return (
     <Box>
@@ -28,8 +36,8 @@ export const CardsLibrary = () => {
         <Divider weight={1} backgroundColor='background.grayGhost' />
 
         <Box flexDirection={{ _: 'column', wide: 'row' }} flexWrap='wrap'>
-          {cards(dataCards).map((card, index, array) => (
-            <Row maxWidth={{ wide: '50%' }} key={card.id}>
+          {libraryCardsListLong.map((card, index, array) => (
+            <Row maxWidth={{ wide: '50%' }} key={card?.id}>
               <Condition match={index % 2 !== 0}>
                 <Layout flexBasis={{ _: 0, wide: 20 }} flexShrink='0' />
               </Condition>
@@ -38,9 +46,9 @@ export const CardsLibrary = () => {
                 <Layout flexBasis={32} />
 
                 <Card
-                  title={card.title}
-                  technologiesList={card.technologiesList}
-                  description={card.description}
+                  title={card?.title}
+                  technologiesList={card?.skills}
+                  description={card?.description}
                 />
 
                 <Layout flexBasis={32} />

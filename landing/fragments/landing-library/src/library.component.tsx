@@ -1,7 +1,5 @@
 import React                  from 'react'
-import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
-import { useIntl }            from 'react-intl'
 
 import { Divider }            from '@ui/divider'
 import { SearchIcon }         from '@ui/icons'
@@ -15,6 +13,7 @@ import { useHover }           from '@ui/utils'
 
 import { Indent }             from './indent'
 import { SearchButton }       from './search'
+import { useLibrary }         from './data'
 import { getColorSearchIcon } from './helpers'
 import { getColorSearchText } from './helpers'
 
@@ -22,9 +21,12 @@ export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
   const { focus, focusProps } = useFocus()
 
-  const intl = useIntl()
-
   const [searchQuery, setSearchQuery] = useState<string>('')
+
+  const library = useLibrary()
+  const title = library?.data?.sectionBy?.sections?.title
+  const about = library?.data?.sectionBy?.content?.split('\n')[1]
+  const search = library?.data?.sectionBy?.content?.split('\n')[5]
 
   return (
     <Box flexGrow='1'>
@@ -39,7 +41,7 @@ export const LibraryBanner = () => {
             fontSize={{ _: 'normal', standard: 'stupendous', ultra: 'biggest' }}
             lineHeight={{ _: 'huge', standard: 'normal' }}
           >
-            <FormattedMessage id='library.title' />
+            {title}
           </Text>
         </Box>
 
@@ -55,7 +57,7 @@ export const LibraryBanner = () => {
             fontSize={{ _: 'tiny', standard: 'medium', ultra: 'usual' }}
             lineHeight='huge'
           >
-            <FormattedMessage id='library.text' />
+            {about}
           </Text>
         </Box>
 
@@ -78,7 +80,7 @@ export const LibraryBanner = () => {
             heightIcon={20}
             filled={searchQuery}
             addon={searchQuery ? <SearchButton /> : null}
-            placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
+            placeholder={search}
             color={getColorSearchText(hover, focus, searchQuery)}
           />
         </Box>
