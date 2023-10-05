@@ -12,11 +12,20 @@ import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 import { useWindowWidth } from '@ui/utils'
 
-import { NavLinks }       from './data'
 import { NavbarProps }    from './navbar.interfaces'
+import { useNavBar }      from './data'
 
 export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
   const { isDesktop, isWide } = useWindowWidth()
+
+  const navbar = useNavBar()
+  const navLinksList: { path: string; title: string }[] = navbar?.data?.allNavigation?.nodes
+    ?.slice(2, 6)
+    .reverse()
+    .map((link) => ({
+      title: link?.title,
+      path: link?.id,
+    }))
 
   return (
     <Condition match={isDesktop || isWide}>
@@ -43,8 +52,8 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                 }
               />
 
-              {NavLinks.map((element, index) => (
-                <Column key={element.id} width={138}>
+              {navLinksList?.map((element, index, array) => (
+                <Column key={element.path} width={138}>
                   <Row alignItems='center' height={14}>
                     <Condition match={currentElementIndexInViewport === index}>
                       <Box
@@ -63,7 +72,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
 
                       <Layout flexBasis={20} flexShrink='0' />
 
-                      <Link to={element.id} spy smooth duration={1000}>
+                      <Link to={element.path} spy smooth duration={1000}>
                         <Text
                           color={
                             currentElementIndexInViewport === 0 ||
@@ -74,8 +83,9 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                           cursor='pointer'
                           fontSize='tiny'
                           lineHeight='small'
+                          textTransform={index === array.length - 1 ? 'uppercase' : 'none'}
                         >
-                          {element.name}
+                          {element.title}
                         </Text>
                       </Link>
                     </Condition>
@@ -83,7 +93,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                     <Condition match={currentElementIndexInViewport !== index}>
                       <Layout flexBasis={28} flexShrink='0' />
 
-                      <Link to={element.id} spy smooth duration={1000}>
+                      <Link to={element.path} spy smooth duration={1000}>
                         <Text
                           color={
                             currentElementIndexInViewport === 0 ||
@@ -95,13 +105,13 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                           fontSize='tiny'
                           lineHeight='small'
                         >
-                          {element.name}
+                          {element.title}
                         </Text>
                       </Link>
                     </Condition>
                   </Row>
 
-                  <Condition match={index < NavLinks.length - 1}>
+                  <Condition match={index < navLinksList.length - 1}>
                     <Layout flexBasis={20} flexShrink='0' />
                   </Condition>
                 </Column>
