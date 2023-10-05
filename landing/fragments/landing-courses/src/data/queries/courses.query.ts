@@ -39,11 +39,5 @@ export const GET_COURSES = gql`
       }
       title
     }
-    allNavigation {
-      nodes {
-        id
-        title
-      }
-    }
   }
 `

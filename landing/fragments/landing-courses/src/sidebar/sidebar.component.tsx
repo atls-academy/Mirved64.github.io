@@ -20,7 +20,6 @@ export const Sidebar = () => {
   const { isMobile, isUltra } = useWindowWidth()
 
   const sidebarData = useCourses()
-  const path = sidebarData?.data?.allNavigation?.nodes?.find((el) => el.id === 'cG9zdDoyMjQ=').id
 
   return (
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
@@ -111,7 +110,7 @@ export const Sidebar = () => {
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
       <Condition match={!isMobile}>
-        <Link to={path} width='100%' spy smooth duration={1000}>
+        <Link to='cG9zdDoyMjQ=' width='100%' spy smooth duration={1000}>
           <Condition match={!isUltra}>
             <Button
               variant='primaryBackgroundWhiteText'
