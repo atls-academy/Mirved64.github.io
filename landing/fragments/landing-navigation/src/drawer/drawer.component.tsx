@@ -1,31 +1,34 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React               from 'react'
+import { FC }              from 'react'
 
-import { Background }       from '@ui/background'
-import { Button }           from '@ui/button'
-import { DrawerContainer }  from '@ui/drawer'
-import { ArrowUpIcon }      from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
+import { Background }      from '@ui/background'
+import { Button }          from '@ui/button'
+import { DrawerContainer } from '@ui/drawer'
+import { ArrowUpIcon }     from '@ui/icons'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Logo }            from '@ui/logo'
+import { Text }            from '@ui/text'
 
-import { CardDataDesktop }  from '../data'
-import { DrawerCard }       from './drawer-card'
-import { DrawerProps }      from './drawer.interfaces'
+import { DrawerCard }      from './drawer-card'
+import { DrawerProps }     from './drawer.interfaces'
+import { useNavigation }   from '../data'
 
 export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) => {
-  const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
-    ...el,
-    id: index,
-  }))
+  const navigation = useNavigation()
 
-  const drawerCards = cardsList.map((card, index, array) => (
-    <DrawerCard key={card.id} card={card} array={array} index={index} />
-  ))
+  const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
+  const cardData = navigation?.data?.courseBy?.course
+
+  const cardsList: { id: number; title: string; description: string; label: { title: string } }[] =
+    Array.from({ length: 3 }, () => cardData).map((el, index) => ({
+      ...(el as { title: string; description: string; label: { title: string } }),
+      id: index,
+    }))
 
   return (
     <DrawerContainer active={active}>
@@ -62,7 +65,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
                 radiiIcon='little'
               >
                 <Text color='text.white' fontSize='compact' lineHeight='small'>
-                  <FormattedMessage id='navigation.button' />
+                  {buttonTitle}
                 </Text>
               </Button>
             </Box>
@@ -79,7 +82,7 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
                 radiiIcon='usual'
               >
                 <Text color='text.white' fontSize='medium' lineHeight='small'>
-                  <FormattedMessage id='navigation.button' />
+                  {buttonTitle}
                 </Text>
               </Button>
             </Box>
@@ -91,7 +94,9 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
           <Row>
             <Layout flexBasis={40} flexShrink='0' />
 
-            {drawerCards}
+            {cardsList?.map((card, index, array) => (
+              <DrawerCard index={index} array={array} card={card} key={card.id} />
+            ))}
 
             <Layout flexBasis={40} flexShrink='0' />
           </Row>

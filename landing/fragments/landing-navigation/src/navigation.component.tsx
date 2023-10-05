@@ -1,5 +1,4 @@
 import React                   from 'react'
-import { FormattedMessage }    from 'react-intl'
 import { useState }            from 'react'
 
 import { Button }              from '@ui/button'
@@ -13,11 +12,18 @@ import { NavLinksBlockDrawer } from '@ui/navlinks-block'
 import { Text }                from '@ui/text'
 
 import { DrawerDesktop }       from './drawer'
+import { useNavigation }       from './data'
 
 export const NavigationDesktop = () => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
+
+  const navigation = useNavigation()
+
+  const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
 
   return (
     <>
@@ -60,7 +66,7 @@ export const NavigationDesktop = () => {
             radiiIcon='little'
           >
             <Text color='text.white' fontSize='compact' lineHeight='small'>
-              <FormattedMessage id='navigation.button' />
+              {buttonTitle}
             </Text>
           </Button>
         </Box>
@@ -77,7 +83,7 @@ export const NavigationDesktop = () => {
             radiiIcon='usual'
           >
             <Text color='text.white' fontSize='medium' lineHeight='small'>
-              <FormattedMessage id='navigation.button' />
+              {buttonTitle}
             </Text>
           </Button>
         </Box>

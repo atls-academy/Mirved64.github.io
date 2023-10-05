@@ -8,13 +8,13 @@ import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Text }             from '@ui/text'
 
-import { DrawerCardType }   from './drawer-card.interfaces'
+import { DrawerCardType }   from '../../data'
 import { DrawerCardsProps } from './drawer-card.interfaces'
 
 export const DrawerCardMobile: FC<DrawerCardsProps> = ({ card, index, array }) => (
   <Column>
     <Box
-      width={card.type === DrawerCardType.Base ? 87 : 122}
+      width={card?.type === DrawerCardType.Base ? 87 : 122}
       height={32}
       border='thinnestPrimary'
       borderRadius='tiny'
@@ -22,7 +22,7 @@ export const DrawerCardMobile: FC<DrawerCardsProps> = ({ card, index, array }) =
       alignItems='center'
     >
       <Text color='text.primaryText' fontSize='atom' lineHeight='small' textTransform='uppercase'>
-        {card.category}
+        {card?.label}
       </Text>
     </Box>
 
@@ -30,7 +30,7 @@ export const DrawerCardMobile: FC<DrawerCardsProps> = ({ card, index, array }) =
 
     <Box>
       <Text color='text.primaryText' fontSize='ordinary' lineHeight='huge'>
-        {card.title}
+        {card?.title}
       </Text>
     </Box>
 

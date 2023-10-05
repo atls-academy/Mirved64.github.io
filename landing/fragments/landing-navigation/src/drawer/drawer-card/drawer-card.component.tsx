@@ -23,9 +23,9 @@ export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
 
       <Condition match={!isUltra}>
         <Card
-          label={card.category}
-          title={card.title}
-          description={card.description}
+          label={card?.label[0].title}
+          title={card?.title}
+          description={card?.description}
           indent={110}
           widthCategoryBox={104}
         />
@@ -33,9 +33,9 @@ export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
 
       <Condition match={isUltra}>
         <Card
-          label={card.category}
-          title={card.title}
-          description={card.description}
+          label={card?.label[0].title}
+          title={card?.title}
+          description={card?.description}
           indent={110}
           widthCategoryBox={154}
         />

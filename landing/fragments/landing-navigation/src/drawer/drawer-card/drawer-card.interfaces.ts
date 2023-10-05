@@ -1,13 +1,9 @@
-export enum DrawerCardType { // eslint-disable-line
-  Base = 'Base',
-  Advanced = 'Advanced',
-  Training = 'Training',
-}
+import { DrawerCardType } from '../../data'
 
 export interface DrawerCardProps {
   id: number
-  type: DrawerCardType
-  category: string
+  type?: DrawerCardType
+  label: { title: string } | string
   title: string
   description?: string
 }
