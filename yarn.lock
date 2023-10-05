@@ -2417,6 +2417,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-header@workspace:landing/fragments/landing-header"
   dependencies:
+    "@apollo/client": "npm:3.8.4"
     "@landing/fragment-navigation": "workspace: 0.0.1"
     "@types/react-scroll": "npm:1.8.7"
     "@ui/background": "workspace: 0.0.1"
@@ -2435,14 +2436,12 @@ __metadata:
     framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
     "@apollo/client": "*"
     framer-motion: "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
     react-scroll: "*"
   languageName: unknown
   linkType: soft
@@ -2502,6 +2501,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/fragment-navigation@workspace:landing/fragments/landing-navigation"
   dependencies:
+    "@apollo/client": "npm:3.8.4"
     "@makotot/ghostui": "npm:2.0.0"
     "@types/react-scroll": "npm:1.8.7"
     "@ui/background": "workspace: 0.0.1"
@@ -2519,13 +2519,11 @@ __metadata:
     "@ui/utils": "workspace: 0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
     "@apollo/client": "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
     react-scroll: "*"
   languageName: unknown
   linkType: soft

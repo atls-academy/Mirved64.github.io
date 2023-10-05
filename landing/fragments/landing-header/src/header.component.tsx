@@ -1,10 +1,8 @@
 import React                   from 'react'
-import { FormattedMessage }    from 'react-intl'
 import { useState }            from 'react'
 
-import { CardDataDesktop }     from '@landing/fragment-navigation'
 import { DrawerCard }          from '@landing/fragment-navigation'
-import { Background }          from '@ui/background/src'
+import { Background }          from '@ui/background'
 import { Button }              from '@ui/button'
 import { Condition }           from '@ui/condition'
 import { ArrowDownIcon }       from '@ui/icons'
@@ -12,11 +10,13 @@ import { ArrowUpIcon }         from '@ui/icons'
 import { Box }                 from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { Layout }              from '@ui/layout'
-import { Column }              from '@ui/layout/src'
+import { Column }              from '@ui/layout'
 import { Logo }                from '@ui/logo'
-import { NavLinksBlockHeader } from '@ui/navlinks-block/src'
+import { NavLinksBlockHeader } from '@ui/navlinks-block'
 import { Text }                from '@ui/text'
 import { useScrollDirection }  from '@ui/utils'
+
+import { useHeader }           from './data'
 
 export const Header = () => {
   const [visible, setVisible] = useState<boolean>(false)
@@ -25,14 +25,18 @@ export const Header = () => {
 
   const handleClick = () => setVisible(!visible)
 
-  const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
-    ...el,
-    id: index,
-  }))
+  const header = useHeader()
 
-  const headerCards = cardsList.map((card, index, array) => (
-    <DrawerCard index={index} array={array} card={card} key={card.id} />
-  ))
+  const buttonTitle: string = header?.data?.allNavigation?.nodes?.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
+  const cardData = header?.data?.courseBy?.course
+
+  const cardsList: { id: number; title: string; description: string; label: { title: string } }[] =
+    Array.from({ length: 3 }, () => cardData).map((el, index) => ({
+      ...(el as { title: string; description: string; label: { title: string } }),
+      id: index,
+    }))
 
   return (
     <Row justifyContent='center'>
@@ -86,7 +90,7 @@ export const Header = () => {
                 radiiIcon='little'
               >
                 <Text color='text.white' fontSize='compact' lineHeight='small'>
-                  <FormattedMessage id='navigation.button' />
+                  {buttonTitle}
                 </Text>
               </Button>
             </Box>
@@ -109,7 +113,7 @@ export const Header = () => {
                 radiiIcon='usual'
               >
                 <Text color='text.white' fontSize='medium' lineHeight='small'>
-                  <FormattedMessage id='navigation.button' />
+                  {buttonTitle}
                 </Text>
               </Button>
             </Box>
@@ -123,7 +127,9 @@ export const Header = () => {
             <Row>
               <Layout flexBasis={40} flexShrink='0' />
 
-              {headerCards}
+              {cardsList?.map((card, index, array) => (
+                <DrawerCard index={index} array={array} card={card} key={card.id} />
+              ))}
 
               <Layout flexBasis={40} flexShrink='0' />
             </Row>

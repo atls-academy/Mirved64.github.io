@@ -1,10 +1,8 @@
 import React                        from 'react'
 import { MouseEventHandler }        from 'react'
 import { FC }                       from 'react'
-import { FormattedMessage }         from 'react-intl'
 import { useState }                 from 'react'
 
-import { CardDataDesktop }          from '@landing/fragment-navigation'
 import { DrawerCard }               from '@landing/fragment-navigation'
 import { Background }               from '@ui/background/src'
 import { Button }                   from '@ui/button'
@@ -21,6 +19,7 @@ import { Text }                     from '@ui/text'
 import { useScrollDirection }       from '@ui/utils'
 
 import { HeaderIndexProps }         from './header.interfaces'
+import { useHeader }                from './data'
 import { startAnimation }           from './helpers'
 
 export const HeaderIndex: FC<HeaderIndexProps> = ({
@@ -48,14 +47,17 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
       faqDelta
     )
 
-  const cardsList = Array.from({ length: 3 }, () => CardDataDesktop).map((el, index) => ({
-    ...el,
-    id: index,
-  }))
+  const header = useHeader()
+  const buttonTitle: string = header?.data?.allNavigation?.nodes?.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
+  const cardData = header?.data?.courseBy?.course
 
-  const headerCards = cardsList.map((card, index, array) => (
-    <DrawerCard card={card} index={index} array={array} key={card.id} />
-  ))
+  const cardsList: { id: number; title: string; description: string; label: { title: string } }[] =
+    Array.from({ length: 3 }, () => cardData).map((el, index) => ({
+      ...(el as { title: string; description: string; label: { title: string } }),
+      id: index,
+    }))
 
   return (
     <Row justifyContent='center'>
@@ -112,7 +114,7 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
                 radiiIcon='little'
               >
                 <Text color='text.white' fontSize='compact' lineHeight='small'>
-                  <FormattedMessage id='navigation.button' />
+                  {buttonTitle}
                 </Text>
               </Button>
             </Box>
@@ -135,7 +137,7 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
                 radiiIcon='usual'
               >
                 <Text color='text.white' fontSize='medium' lineHeight='small'>
-                  <FormattedMessage id='navigation.button' />
+                  {buttonTitle}
                 </Text>
               </Button>
             </Box>
@@ -148,7 +150,9 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
             <Row>
               <Layout flexBasis={40} flexShrink='0' />
 
-              {headerCards}
+              {cardsList?.map((card, index, array) => (
+                <DrawerCard index={index} array={array} card={card} key={card.id} />
+              ))}
 
               <Layout flexBasis={40} flexShrink='0' />
             </Row>
