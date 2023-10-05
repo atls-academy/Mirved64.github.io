@@ -1,1 +1,1 @@
-export * from './data-navlinks'
+export * from './queries'

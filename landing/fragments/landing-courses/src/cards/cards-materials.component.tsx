@@ -20,7 +20,7 @@ export const CardsMaterials = () => {
 
   return (
     <Row>
-      {cardsList.map((card, index, array) => (
+      {cardsList?.map((card, index, array) => (
         <Row key={card.title}>
           <Condition match={index === array.length - 1}>
             <Layout flexBasis={[10, 20]} flexShrink='0' />
