@@ -24,6 +24,7 @@ export const Courses = () => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
 
   const courses = useCourses()
+
   const title: string = courses?.data?.sectionBy.sections.title
   const path: string = courses?.data?.navigationBy.navigation.linkName
   const buttonTitle: string = courses?.data?.navigationBy.title

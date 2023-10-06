@@ -21,7 +21,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
   const { hover, hoverProps } = useHover()
   const { active, activeProps } = useActive()
 
-  const technologyList = technologiesList
+  const technologyList: string[] = technologiesList
     ?.map((technology) => Object.values(technology))
     .map((el) => el[1])
 

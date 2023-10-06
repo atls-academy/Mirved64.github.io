@@ -3,7 +3,7 @@ import React                from 'react'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { useWindowWidth }   from '@ui/utils/src'
+import { useWindowWidth }   from '@ui/utils'
 
 import { TextBlockAccent }  from './text-block'
 import { TextBlockPrimary } from './text-block'

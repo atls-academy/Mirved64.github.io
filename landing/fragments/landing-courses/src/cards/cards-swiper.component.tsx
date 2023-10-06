@@ -1,7 +1,7 @@
 import React           from 'react'
 
 import { Card }        from '@ui/card'
-import { Condition }   from '@ui/condition/src'
+import { Condition }   from '@ui/condition'
 import { Row }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
 import { SwiperProps } from '@ui/swiper'

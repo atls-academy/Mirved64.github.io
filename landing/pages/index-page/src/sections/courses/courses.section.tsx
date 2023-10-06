@@ -1,10 +1,10 @@
 import React              from 'react'
 import { Parallax }       from 'react-scroll-parallax'
 
-import { Courses }        from '@landing/fragment-courses/src'
-import { Background }     from '@ui/background/src'
-import { Condition }      from '@ui/condition/src'
-import { useWindowWidth } from '@ui/utils/src'
+import { Courses }        from '@landing/fragment-courses'
+import { Background }     from '@ui/background'
+import { Condition }      from '@ui/condition'
+import { useWindowWidth } from '@ui/utils'
 
 export const CoursesSection = () => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()

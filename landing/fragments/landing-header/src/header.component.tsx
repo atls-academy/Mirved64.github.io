@@ -30,7 +30,8 @@ export const Header = () => {
   const buttonTitle: string = header?.data?.allNavigation?.nodes?.find(
     (obj) => obj.id === 'cG9zdDoyMjI='
   )?.title
-  const cardData = header?.data?.courseBy?.course
+  const cardData: { title: string; description: string; label: { title: string } } =
+    header?.data?.courseBy?.course
 
   const cardsList: { id: number; title: string; description: string; label: { title: string } }[] =
     Array.from({ length: 3 }, () => cardData).map((el, index) => ({

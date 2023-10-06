@@ -19,6 +19,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
   const { isDesktop, isWide } = useWindowWidth()
 
   const navbar = useNavBar()
+
   const navLinksList: { path: string; title: string }[] = navbar?.data?.allNavigation?.nodes
     ?.slice(2, 6)
     .reverse()

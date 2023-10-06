@@ -24,9 +24,10 @@ export const LibraryBanner = () => {
   const [searchQuery, setSearchQuery] = useState<string>('')
 
   const library = useLibrary()
-  const title = library?.data?.sectionBy?.sections?.title
-  const about = library?.data?.sectionBy?.content?.split('\n')[1]
-  const search = library?.data?.sectionBy?.content?.split('\n')[5]
+
+  const title: string = library?.data?.sectionBy?.sections?.title
+  const about: string = library?.data?.sectionBy?.content?.split('\n')[1]
+  const search: string = library?.data?.sectionBy?.content?.split('\n')[5]
 
   return (
     <Box flexGrow='1'>

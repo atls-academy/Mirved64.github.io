@@ -1,11 +1,14 @@
 import React              from 'react'
+import { FC }             from 'react'
 
 import { Condition }      from '@ui/condition'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
 import { useWindowWidth } from '@ui/utils'
 
-export const TextBlockPrimary = ({ text, space = true }) => {
+import { TextBlockProps } from './text-block.interfaces'
+
+export const TextBlockPrimary: FC<TextBlockProps> = ({ text, space = true }) => {
   const { isMobile } = useWindowWidth()
 
   return (
@@ -25,7 +28,7 @@ export const TextBlockPrimary = ({ text, space = true }) => {
   )
 }
 
-export const TextBlockAccent = ({ text, space = true }) => {
+export const TextBlockAccent: FC<TextBlockProps> = ({ text, space = true }) => {
   const { isMobile } = useWindowWidth()
 
   return (

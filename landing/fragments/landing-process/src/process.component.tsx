@@ -13,6 +13,7 @@ import { useProcess }      from './data'
 
 export const Process = () => {
   const process = useProcess()
+
   const title: string = process?.data?.section.sections.title
   const slogan: string[] = process?.data?.section.content.split('\n')[1].split(' ')
 

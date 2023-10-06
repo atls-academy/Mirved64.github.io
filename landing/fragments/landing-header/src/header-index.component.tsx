@@ -4,7 +4,7 @@ import { FC }                       from 'react'
 import { useState }                 from 'react'
 
 import { DrawerCard }               from '@landing/fragment-navigation'
-import { Background }               from '@ui/background/src'
+import { Background }               from '@ui/background'
 import { Button }                   from '@ui/button'
 import { Condition }                from '@ui/condition'
 import { ArrowDownIcon }            from '@ui/icons'
@@ -12,7 +12,7 @@ import { ArrowUpIcon }              from '@ui/icons'
 import { Box }                      from '@ui/layout'
 import { Row }                      from '@ui/layout'
 import { Layout }                   from '@ui/layout'
-import { Column }                   from '@ui/layout/src'
+import { Column }                   from '@ui/layout'
 import { Logo }                     from '@ui/logo'
 import { NavLinksBlockHeaderIndex } from '@ui/navlinks-block'
 import { Text }                     from '@ui/text'
@@ -48,10 +48,12 @@ export const HeaderIndex: FC<HeaderIndexProps> = ({
     )
 
   const header = useHeader()
+
   const buttonTitle: string = header?.data?.allNavigation?.nodes?.find(
     (obj) => obj.id === 'cG9zdDoyMjI='
   )?.title
-  const cardData = header?.data?.courseBy?.course
+  const cardData: { title: string; description: string; label: { title: string } } =
+    header?.data?.courseBy?.course
 
   const cardsList: { id: number; title: string; description: string; label: { title: string } }[] =
     Array.from({ length: 3 }, () => cardData).map((el, index) => ({

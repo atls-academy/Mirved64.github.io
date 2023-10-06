@@ -4,7 +4,7 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
-import { Text }             from '@ui/text/src'
+import { Text }             from '@ui/text'
 
 import { DesktopTextBlock } from './text-block'
 import { useAbout }         from './data'
@@ -14,11 +14,9 @@ export const About = () => {
 
   const problemMobile: string = about?.data?.section.content.split('\n')[1]
   const sloganMobile: string = about?.data?.section.content.split('\n')[2]
-  const problemDesktop: string[] = about?.data?.section.content
-    .split('\n')[1]
-    .split('.')
-    .slice(0, 2)
-  const sloganDesktop: string = about?.data?.section.content.split('\n')[2].slice(0, -1)
+  const problemDesktop: string[] = problemMobile?.split('.').slice(0, 2)
+  const sloganDesktop: string = sloganMobile?.slice(0, -1)
+
   return (
     <Column flexGrow='1'>
       <Layout flexBasis={[64, 160]} />
@@ -29,7 +27,7 @@ export const About = () => {
         <Column flexBasis={[335, 1460]} flexGrow='1' flexShrink='0'>
           <Box display={['none', 'inline']}>
             {problemDesktop?.map((el) => (
-              <DesktopTextBlock key={el[0]}>{el.trim()}</DesktopTextBlock>
+              <DesktopTextBlock key={el[0]} text={el.trim()} />
             ))}
           </Box>
 
@@ -49,7 +47,7 @@ export const About = () => {
 
           <Box display={['none', 'inline']}>
             <Box display='inline'>
-              <DesktopTextBlock>{sloganDesktop}</DesktopTextBlock>
+              <DesktopTextBlock text={sloganDesktop} />
             </Box>
           </Box>
         </Column>

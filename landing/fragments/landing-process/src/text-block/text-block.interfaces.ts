@@ -1,3 +1,3 @@
 export interface TextBlockProps {
-  text: string
+  text: string | string[]
 }

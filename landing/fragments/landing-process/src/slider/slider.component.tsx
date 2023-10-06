@@ -9,22 +9,25 @@ import { useProcess }     from '../data'
 
 export const SliderContainer = () => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
+
   const slider = useProcess()
 
-  const sliderData = slider?.data?.slides?.nodes[0].slider
+  const imageUrlDesktop: string = slider?.data?.slides?.nodes[0].slider?.imageDesktop?.sourceUrl
+  const imageUrlMobile: string = slider?.data?.slides?.nodes[0].slider?.imageMobile?.sourceUrl
+  const text: string = slider?.data?.slides?.nodes[0].slider?.text
 
   return (
     <Box>
       <Condition match={isDesktop}>
-        <Slider images={sliderData?.imageDesktop?.sourceUrl} text={sliderData?.text} />
+        <Slider images={imageUrlDesktop} text={text} />
       </Condition>
 
       <Condition match={isMobile}>
-        <Slider images={sliderData?.imageMobile?.sourceUrl} text={sliderData?.text} />
+        <Slider images={imageUrlMobile} text={text} />
       </Condition>
 
       <Condition match={isWide || isUltra}>
-        <Slider images={sliderData?.imageDesktop?.sourceUrl} text={sliderData?.text} />
+        <Slider images={imageUrlDesktop} text={text} />
       </Condition>
     </Box>
   )

@@ -17,29 +17,41 @@ export const CardsMaterialsWide = () => {
   const { hover, hoverProps } = useHover()
 
   const cards = useCourses()
+
   const path: string = cards?.data?.navigationBy.navigation.linkName
   const cardLibraryTitle: string = cards?.data?.navigationBy.title
+  const cardsList: { id: string; label: string; title: string }[] = cards?.data?.courses.nodes
+    .filter((obj) => obj.course.label[0].labelId === 194)
+    ?.map((element) => ({
+      id: element.id,
+      label: element.course.label[0].title,
+      title: element.course.title,
+    }))
+    .reverse()
 
-  const cardsList: { id: string; label: string; labelId: number; title: string }[] =
-    cards?.data?.courses.nodes
-      .filter((obj) => obj.course.label[0].labelId === 194)
-      ?.map((element) => ({
-        id: element.id,
-        label: element.course.label[0].title,
-        title: element.course.title,
-      }))
-      .reverse()
-
-  const cardsListLong = Array.from({ length: 5 }, (card, index) =>
-    index < 3 ? cardsList?.slice(0, 1) : cardsList?.slice(1, 2)).map((el, index) => ({
-    ...el,
-    id: index,
-  }))
+  const cardsListLong: { id: number; label: string; title: string }[] = Array.from({ length: 5 }, (
+    _,
+    index
+  ) =>
+    index < 3
+      ? cardsList?.slice(0, 1).map((el) => ({
+          ...(el as { id: string; label: string; title: string }),
+          id: index,
+        }))
+      : cardsList?.slice(1, 2).map((el) => ({
+          ...(el as { id: string; label: string; title: string }),
+          id: index,
+        }))).flat()
 
   return (
     <Row flexWrap='wrap' maxWidth={{ wide: 1800, ultra: 2090 }}>
       {cardsListLong?.map((card, index) => (
-        <CardCell key={card?.id} index={index} label={card[0]?.label} title={card[0]?.title} />
+        <CardCell
+          key={index} /*eslint-disable-line */
+          index={card?.id}
+          label={card?.label}
+          title={card?.title}
+        />
       ))}
 
       <NextLink path={path} width={{ wide: 572, ultra: 670 }}>

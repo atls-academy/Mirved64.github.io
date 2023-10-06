@@ -13,12 +13,19 @@ import { useLibrary } from '../data'
 export const CardsLibrary = () => {
   const libraryCards = useLibrary()
 
-  const libraryCardsList = libraryCards?.data?.allTutorials?.nodes?.map((element) => ({
-    title: element.title,
-    description: element.learningMaterials.description,
-    skills: element.learningMaterials.skills,
-  }))
-  const libraryCardsListLong = Array.from({ length: 3 })
+  const libraryCardsList: { title: string; description: string; skills: { title: string }[] }[] =
+    libraryCards?.data?.allTutorials?.nodes?.map((element) => ({
+      title: element.title,
+      description: element.learningMaterials.description,
+      skills: element.learningMaterials.skills,
+    }))
+
+  const libraryCardsListLong: {
+    id: number
+    title: string
+    description: string
+    skills: { title: string }[]
+  }[] = Array.from({ length: 3 })
     .fill(libraryCardsList)
     .flat()
     .map((el, index) => ({

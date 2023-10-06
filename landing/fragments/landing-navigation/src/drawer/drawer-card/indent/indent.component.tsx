@@ -1,8 +1,8 @@
 import React           from 'react'
 import { FC }          from 'react'
 
-import { Condition }   from '@ui/condition/src'
-import { Layout }      from '@ui/layout/src'
+import { Condition }   from '@ui/condition'
+import { Layout }      from '@ui/layout'
 
 import { IndentProps } from './indent.interfaces'
 

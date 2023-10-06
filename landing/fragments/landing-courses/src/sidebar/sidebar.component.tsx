@@ -21,6 +21,10 @@ export const Sidebar = () => {
 
   const sidebarData = useCourses()
 
+  const description: string = sidebarData?.data?.courseBy?.course?.description
+  const numberOfStudents: string = sidebarData?.data?.courseBy?.course?.title
+  const inscription: string = sidebarData?.data?.courseBy?.content
+
   return (
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
       <Background
@@ -47,7 +51,7 @@ export const Sidebar = () => {
                 fontSize={{ _: 'tiny', standard: 'little', ultra: 'medium' }}
                 lineHeight={['huge', 'big']}
               >
-                {sidebarData?.data?.courseBy?.course.description}
+                {description}
               </Text>
             </Box>
 
@@ -72,7 +76,7 @@ export const Sidebar = () => {
                   fontSize={{ _: 'giant', standard: 'enormous', ultra: 'stupendous' }}
                   lineHeight='small'
                 >
-                  {sidebarData?.data?.courseBy?.course.title}
+                  {numberOfStudents}
                 </Text>
               </Box>
 
@@ -87,7 +91,7 @@ export const Sidebar = () => {
                   fontSize={{ _: 'atom', standard: 'tiny', ultra: 'low' }}
                   lineHeight={['large', 'big']}
                 >
-                  {sidebarData?.data?.courseBy?.content}
+                  {inscription}
                 </Text>
               </Box>
 

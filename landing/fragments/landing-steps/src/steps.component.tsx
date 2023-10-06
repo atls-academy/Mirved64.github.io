@@ -11,8 +11,9 @@ import { Step }           from './step'
 import { useSteps }       from './data'
 
 export const Steps = () => {
-  const steps = useSteps()
   const { isMobile } = useWindowWidth()
+
+  const steps = useSteps()
 
   const stepsList: { process: { description: string; title: string }; processId: number }[] =
     steps?.data?.processes?.nodes

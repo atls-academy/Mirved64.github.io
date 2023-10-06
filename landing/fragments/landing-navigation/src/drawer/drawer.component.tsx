@@ -22,7 +22,8 @@ export const DrawerDesktop: FC<DrawerProps> = ({ active, onClose, children }) =>
   const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
     (obj) => obj.id === 'cG9zdDoyMjI='
   )?.title
-  const cardData = navigation?.data?.courseBy?.course
+  const cardData: { title: string; description: string; label: { title: string } } =
+    navigation?.data?.courseBy?.course
 
   const cardsList: { id: number; title: string; description: string; label: { title: string } }[] =
     Array.from({ length: 3 }, () => cardData).map((el, index) => ({

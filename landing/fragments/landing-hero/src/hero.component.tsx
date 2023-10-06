@@ -19,10 +19,10 @@ import { useHero }           from './data'
 export const Hero = () => {
   const hero = useHero()
 
-  const title: string = hero?.data?.section.sections.title
-  const mainIdea: string = hero?.data?.section.content.split('\n').slice(-2)
-  const problem: string[] = hero?.data?.section.content.split('\n')[1].split('.').slice(0, 2)
-  const slogan: string = hero?.data?.section.content.split('\n')[2].slice(0, -1)
+  const title: string = hero?.data?.section?.sections.title
+  const mainIdea: string = hero?.data?.section?.content.split('\n').slice(1, 2)
+  const problem: string[] = hero?.data?.section?.content.split('\n')[1]?.split('.').slice(0, 2)
+  const slogan: string = hero?.data?.section?.content.split('\n')[2]?.slice(0, -1)
 
   return (
     <Box>
@@ -95,13 +95,13 @@ export const Hero = () => {
             <Column display={{ _: 'none', wide: 'flex' }} minWidth={{ wide: 1460, ultra: 2190 }}>
               <Box display='inline'>
                 {problem?.map((el) => (
-                  <TextBlock key={el[0]}>{el.trim()}</TextBlock>
+                  <TextBlock key={el[0]} text={el.trim()} />
                 ))}
               </Box>
 
               <Layout flexBasis={{ wide: 40 }} />
 
-              <TextBlock>{slogan}</TextBlock>
+              <TextBlock text={slogan} />
             </Column>
 
             <Layout flexBasis={[24, 0]} />

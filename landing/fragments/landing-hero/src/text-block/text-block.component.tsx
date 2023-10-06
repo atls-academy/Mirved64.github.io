@@ -1,4 +1,5 @@
 import React              from 'react'
+import { FC }             from 'react'
 
 import { Delimiter }      from '@ui/delimiter'
 import { DelimiterLarge } from '@ui/delimiter'
@@ -6,7 +7,9 @@ import { Box }            from '@ui/layout'
 import { Space }          from '@ui/text'
 import { Text }           from '@ui/text'
 
-export const TextBlock = ({ children }) => (
+import { TextBlockProps } from './text-block.interfaces'
+
+export const TextBlock: FC<TextBlockProps> = ({ text }) => (
   <Box display='inline'>
     <Text
       display='inline'
@@ -15,7 +18,7 @@ export const TextBlock = ({ children }) => (
       lineHeight='huge'
       wordWrap='break-word'
     >
-      {children}
+      {text}
     </Text>
 
     <Space count='6' />

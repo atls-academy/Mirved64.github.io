@@ -9,6 +9,7 @@ import { useNavlinksBlock }  from './data'
 
 export const NavLinksBlockHeader = () => {
   const navLinks = useNavlinksBlock()
+
   const navLinksList: { path: string; title: string }[] = navLinks?.data?.allNavigation?.nodes
     ?.slice(2, 6)
     .reverse()

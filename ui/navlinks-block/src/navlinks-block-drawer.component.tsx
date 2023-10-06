@@ -11,6 +11,7 @@ import { useNavlinksBlock }   from './data'
 
 export const NavLinksBlockDrawer: FC<NavLinksBlockProps> = ({ active }) => {
   const navLinks = useNavlinksBlock()
+
   const navLinksList: { path: string; title: string }[] = navLinks?.data?.allNavigation?.nodes
     ?.slice(2, 6)
     .reverse()

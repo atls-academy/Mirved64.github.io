@@ -24,6 +24,8 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
 
   const faq = useFaq()
 
+  const title: string = faq?.data?.navigationBy?.title
+
   return (
     <Modal open={open} onClose={setOpen}>
       <Column width={375}>
@@ -43,7 +45,7 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
                 <Box>
                   <Condition match={!send}>
                     <Text color='text.white' fontSize='regular' lineHeight='large'>
-                      {faq?.data?.navigationBy.title}
+                      {title}
                     </Text>
                   </Condition>
 

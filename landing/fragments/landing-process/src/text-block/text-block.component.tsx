@@ -1,11 +1,15 @@
 import React              from 'react'
+import { FC }             from 'react'
 
 import { Space }          from '@ui/text'
 import { Text }           from '@ui/text'
-import { useWindowWidth } from '@ui/utils/src'
+import { useWindowWidth } from '@ui/utils'
 
-export const TextBlockWhite = ({ text }) => {
+import { TextBlockProps } from './text-block.interfaces'
+
+export const TextBlockWhite: FC<TextBlockProps> = ({ text }) => {
   const { isMobile } = useWindowWidth()
+
   return (
     <>
       <Text
@@ -21,8 +25,9 @@ export const TextBlockWhite = ({ text }) => {
   )
 }
 
-export const TextBlockGhost = ({ text }) => {
+export const TextBlockGhost: FC<TextBlockProps> = ({ text }) => {
   const { isMobile } = useWindowWidth()
+
   return (
     <>
       <Text
