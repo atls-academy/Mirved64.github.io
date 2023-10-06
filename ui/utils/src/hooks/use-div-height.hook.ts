@@ -9,7 +9,11 @@ export function useDivHeight(): [RefObject<HTMLDivElement>, number] {
   const [divHeight, setDivHeight] = useState<number | null>(0)
 
   useEffect(() => {
-    setDivHeight(ref.current!.getBoundingClientRect().height)
+    const timer = setTimeout(() => {
+      setDivHeight(ref.current!.getBoundingClientRect().height)
+    }, 4000)
+
+    return () => clearTimeout(timer)
   }, [])
 
   return [ref, divHeight!]
