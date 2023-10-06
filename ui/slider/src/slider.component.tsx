@@ -4,6 +4,7 @@ import { motion }              from 'framer-motion'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
 
+import { AnimateOnTimer }      from '@ui/animate/src'
 import { Background }          from '@ui/background'
 import { Button }              from '@ui/button'
 import { Condition }           from '@ui/condition'
@@ -46,6 +47,13 @@ export const Slider: FC<SliderProps> = ({ images, text }) => {
     setAnimation(animation + 1)
   }
 
+  const animateOnTimerProps = {
+    whileHover: { scale: 1.05 },
+    animate: { opacity: 1 },
+    initial: { opacity: 0 },
+    transition: { duration: 0.5 },
+  }
+
   return (
     <Column alignItems='center'>
       <Background
@@ -68,15 +76,9 @@ export const Slider: FC<SliderProps> = ({ images, text }) => {
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                key={slideIndex}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
+              <AnimateOnTimer key={slideIndex} {...animateOnTimerProps}>
                 <Image src={images} width={720} height={540} hover={hover} />
-              </motion.div>
+              </AnimateOnTimer>
             </Box>
           </Condition>
 
@@ -86,15 +88,9 @@ export const Slider: FC<SliderProps> = ({ images, text }) => {
             </Box>
 
             <Box width={155} height={323} justifyContent='center'>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                key={slideIndex}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
+              <AnimateOnTimer key={slideIndex} {...animateOnTimerProps}>
                 <Image src={images} width={138} height={339} />
-              </motion.div>
+              </AnimateOnTimer>
             </Box>
           </Condition>
 
@@ -104,15 +100,9 @@ export const Slider: FC<SliderProps> = ({ images, text }) => {
             </Box>
 
             <Box {...hoverProps} zIndex={8}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                key={slideIndex}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
+              <AnimateOnTimer key={slideIndex} {...animateOnTimerProps}>
                 <Image src={images} width={975} height={731} hover={hover} />
-              </motion.div>
+              </AnimateOnTimer>
             </Box>
           </Condition>
         </Box>

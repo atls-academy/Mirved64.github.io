@@ -3670,7 +3670,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/animate@workspace:0.0.1, @ui/animate@workspace:ui/animate":
+"@ui/animate@workspace: 0.0.1, @ui/animate@workspace:0.0.1, @ui/animate@workspace:ui/animate":
   version: 0.0.0-use.local
   resolution: "@ui/animate@workspace:ui/animate"
   dependencies:
@@ -4063,6 +4063,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
+    "@ui/animate": "workspace: 0.0.1"
     "@ui/background": "workspace: 0.0.1"
     "@ui/button": "workspace: 0.0.1"
     "@ui/condition": "workspace: 0.0.1"
