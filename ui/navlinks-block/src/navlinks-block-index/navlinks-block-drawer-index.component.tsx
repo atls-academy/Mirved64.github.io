@@ -7,6 +7,7 @@ import { Condition }                    from '@ui/condition'
 import { Box }                          from '@ui/layout'
 import { Layout }                       from '@ui/layout'
 
+import { NODE_ID_LIST }                 from '../helpers'
 import { NavLinkItemDrawerIndex }       from '../navlink-item'
 import { NavLinksBlockIndexInterfaces } from './navlinks-blok.interfaces'
 import { useNavlinksBlock }             from '../data'
@@ -14,35 +15,29 @@ import { useNavlinksBlock }             from '../data'
 export const NavLinksBlockDrawerIndex: FC<NavLinksBlockIndexInterfaces> = ({ sectionRefs }) => {
   const navLinks = useNavlinksBlock()
 
-  const navLinksList: { path: string; title: string }[] = navLinks?.data?.allNavigation?.nodes
-    ?.slice(2, 6)
-    .reverse()
-    .map((link) => ({
-      title: link?.title,
-      path: link?.id,
-    }))
+  const getNodeId = (id) => navLinks?.data?.allNavigation?.nodes?.find((obj) => obj.id === id)
 
   return (
     <Scrollspy sectionRefs={sectionRefs} offset={-640}>
       {({ currentElementIndexInViewport }) => (
         <Box>
-          {navLinksList?.map((navLink, index) => (
+          {NODE_ID_LIST?.map((id, index) => (
             <Box
-              key={navLink.path}
+              key={id}
               width={
-                index < navLinksList.length - 1
+                index < NODE_ID_LIST.length - 1
                   ? { standard: 220, ultra: 330 }
                   : { standard: 200, ultra: 300 }
               }
             >
               <NavLinkItemDrawerIndex
-                path={navLink.path}
-                name={navLink.title}
+                path={id}
+                name={getNodeId(id)?.title}
                 currentElementIndexInViewport={currentElementIndexInViewport}
                 index={index}
               />
 
-              <Condition match={index < navLinksList.length - 1}>
+              <Condition match={index < NODE_ID_LIST.length - 1}>
                 <Layout flexBasis={{ standard: 20, ultra: 30 }} />
               </Condition>
             </Box>

@@ -5,6 +5,7 @@ import { Condition }          from '@ui/condition'
 import { Box }                from '@ui/layout'
 import { Layout }             from '@ui/layout'
 
+import { NODE_ID_LIST }       from './helpers'
 import { NavLinkItemDrawer }  from './navlink-item'
 import { NavLinksBlockProps } from './navlinks-block.interfaces'
 import { useNavlinksBlock }   from './data'
@@ -12,28 +13,22 @@ import { useNavlinksBlock }   from './data'
 export const NavLinksBlockDrawer: FC<NavLinksBlockProps> = ({ active }) => {
   const navLinks = useNavlinksBlock()
 
-  const navLinksList: { path: string; title: string }[] = navLinks?.data?.allNavigation?.nodes
-    ?.slice(2, 6)
-    .reverse()
-    .map((link) => ({
-      title: link?.title,
-      path: link?.id,
-    }))
+  const getNodeId = (id) => navLinks?.data?.allNavigation?.nodes?.find((obj) => obj.id === id)
 
   return (
     <Box>
-      {navLinksList?.map((navLink, index) => (
+      {NODE_ID_LIST?.map((id, index) => (
         <Box
-          key={navLink.title}
+          key={getNodeId(id).title}
           width={
-            index < navLinksList.length - 1
+            index < NODE_ID_LIST.length - 1
               ? { standard: 220, ultra: 330 }
               : { standard: 200, ultra: 300 }
           }
         >
-          <NavLinkItemDrawer path={navLink.path} name={navLink.title} active={active} />
+          <NavLinkItemDrawer path={id} name={getNodeId(id)?.title} active={active} />
 
-          <Condition match={index < navLinksList.length - 1}>
+          <Condition match={index < NODE_ID_LIST.length - 1}>
             <Layout flexBasis={{ standard: 20, ultra: 30 }} />
           </Condition>
         </Box>
