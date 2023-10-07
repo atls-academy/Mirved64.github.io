@@ -25,7 +25,15 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
 
   const form = useForm()
 
-  const formData = form?.data?.allForms.nodes
+  const getNodeId = (id) => form?.data?.allForms?.nodes?.find((el) => el.id === id)
+
+  const placeholderMessage: string = getNodeId('cG9zdDoyOTM=')?.forms.text
+  const placeholderName: string = getNodeId('cG9zdDoyOTQ=')?.forms.text
+  const placeholderPhone: string = getNodeId('cG9zdDoyOTU=')?.forms.text
+  const sendMessage: string = getNodeId('cG9zdDoyOTY=')?.forms.text
+  const agreementText: string = getNodeId('cG9zdDoyOTg=')?.forms.text
+  const personalDataText: string = getNodeId('cG9zdDoyOTk=')?.forms.text
+  const successText: string = getNodeId('cG9zdDozMDA=')?.forms.text
 
   const handleChangeName = (userName) => {
     onChange(userName)
@@ -58,7 +66,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
             onChange={setMessage}
             variant='common'
             size='textarea'
-            placeholder={formData[6].forms.text}
+            placeholder={placeholderMessage}
             onClick={() => setDisplay(true)}
             filled={Boolean(message)}
             maxLength={500}
@@ -72,7 +80,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
               onChange={handleChangeName}
               variant='common'
               size='bigSizeRegularRadii'
-              placeholder={formData[5].forms.text}
+              placeholder={placeholderName}
               filled={Boolean(name)}
             />
 
@@ -83,7 +91,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
               onChange={setPhoneNumber}
               variant='common'
               size='bigSizeRegularRadii'
-              placeholder={formData[4].forms.text}
+              placeholder={placeholderPhone}
               filled={Boolean(phoneNumber)}
             />
           </Condition>
@@ -103,7 +111,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
               disabled={!handleChangeName || !phoneNumber || !message}
             >
               <Text color='text.white' fontSize='small' lineHeight='normal'>
-                {formData[3].forms.text}
+                {sendMessage}
               </Text>
             </Button>
           </Box>
@@ -113,7 +121,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
 
             <Box display='inline'>
               <Text display='inline' color='primaryTransparent' fontSize='tiny' lineHeight='huge'>
-                {formData[2].forms.text}
+                {agreementText}
               </Text>
 
               <Space />
@@ -125,7 +133,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
                 fontSize='tiny'
                 lineHeight='huge'
               >
-                {formData[1].forms.text}
+                {personalDataText}
               </Text>
             </Box>
           </Condition>
@@ -159,7 +167,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
 
             <Box width={335}>
               <Text color='primary' fontSize='small' lineHeight='normal' textAlign='center'>
-                {formData[0].forms.text}
+                {successText}
               </Text>
             </Box>
 

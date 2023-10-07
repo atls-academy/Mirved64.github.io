@@ -7,6 +7,7 @@ export const GET_FORM = gql`
         forms {
           text
         }
+        id
       }
     }
   }
