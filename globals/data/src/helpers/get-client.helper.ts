@@ -3,6 +3,6 @@ import { InMemoryCache } from '@apollo/client'
 
 export const getClient = () =>
   new ApolloClient({
-    uri: 'https://wp.api.atls.academy/graphql',
+    uri: process.env.GQL_URI,
     cache: new InMemoryCache(),
   })
