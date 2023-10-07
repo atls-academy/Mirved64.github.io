@@ -20,13 +20,9 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
 
   const navbar = useNavBar()
 
-  const navLinksList: { path: string; title: string }[] = navbar?.data?.allNavigation?.nodes
-    ?.slice(2, 6)
-    .reverse()
-    .map((link) => ({
-      title: link?.title,
-      path: link?.id,
-    }))
+  const getNodeId = (id) => navbar?.data?.allNavigation?.nodes?.find((obj) => obj.id === id)
+
+  const nodeIdList = ['cG9zdDoyMjE=', 'cG9zdDoyMjI=', 'cG9zdDoyMjQ=', 'cG9zdDoyMjU=']
 
   return (
     <Condition match={isDesktop || isWide}>
@@ -53,8 +49,8 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                 }
               />
 
-              {navLinksList?.map((element, index, array) => (
-                <Column key={element.path} width={138}>
+              {nodeIdList?.map((id, index, array) => (
+                <Column key={id} width={138}>
                   <Row alignItems='center' height={14}>
                     <Condition match={currentElementIndexInViewport === index}>
                       <Box
@@ -73,7 +69,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
 
                       <Layout flexBasis={20} flexShrink='0' />
 
-                      <Link to={element.path} spy smooth duration={1000}>
+                      <Link to={id} spy smooth duration={1000}>
                         <Text
                           color={
                             currentElementIndexInViewport === 0 ||
@@ -86,7 +82,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                           lineHeight='small'
                           textTransform={index === array.length - 1 ? 'uppercase' : 'none'}
                         >
-                          {element.title}
+                          {getNodeId(id)?.title}
                         </Text>
                       </Link>
                     </Condition>
@@ -94,7 +90,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                     <Condition match={currentElementIndexInViewport !== index}>
                       <Layout flexBasis={28} flexShrink='0' />
 
-                      <Link to={element.path} spy smooth duration={1000}>
+                      <Link to={id} spy smooth duration={1000}>
                         <Text
                           color={
                             currentElementIndexInViewport === 0 ||
@@ -106,13 +102,13 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                           fontSize='tiny'
                           lineHeight='small'
                         >
-                          {element.title}
+                          {getNodeId(id)?.title}
                         </Text>
                       </Link>
                     </Condition>
                   </Row>
 
-                  <Condition match={index < navLinksList.length - 1}>
+                  <Condition match={index < nodeIdList.length - 1}>
                     <Layout flexBasis={20} flexShrink='0' />
                   </Condition>
                 </Column>
