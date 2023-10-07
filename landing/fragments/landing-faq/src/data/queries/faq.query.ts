@@ -8,6 +8,7 @@ export const GET_FAQ = gql`
           question
           answer
         }
+        id
       }
     }
     section(id: "cG9zdDoyMzE=") {
@@ -17,13 +18,6 @@ export const GET_FAQ = gql`
     }
     navigationBy(id: "cG9zdDoyODQ=") {
       title
-    }
-    allForms {
-      nodes {
-        forms {
-          text
-        }
-      }
     }
   }
 `

@@ -24,13 +24,18 @@ export const Faq = () => {
 
   const faq = useFaq()
 
-  const question: string = faq?.data?.allFAQ?.nodes[0].faq.question
-  const answer: string = faq?.data?.allFAQ?.nodes[0].faq.answer
+  const getNodeId = (id) => faq?.data?.allFAQ?.nodes?.find((node) => node.id === id)
+
+  const question: string = getNodeId('cG9zdDoyMDA=')?.faq.question
+  const answer: string = getNodeId('cG9zdDoyMDA=')?.faq.answer
   const questionAnswer: { question: string; answer: string } = { question, answer }
   const title: string = faq?.data?.section?.sections?.title
   const faqButton: string = faq?.data?.navigationBy?.title
 
-  const questionAnswerList = Array.from({ length: 6 }, () => questionAnswer).map((el, index) => ({
+  const questionAnswerList: { question: string; answer: string; id: number }[] = Array.from(
+    { length: 6 },
+    () => questionAnswer
+  ).map((el, index) => ({
     ...el,
     id: index,
   }))
