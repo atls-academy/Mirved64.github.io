@@ -2374,13 +2374,11 @@ __metadata:
     "@ui/utils": "workspace: 0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
     "@apollo/client": "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
     react-scroll: "*"
   languageName: unknown
   linkType: soft
@@ -2403,13 +2401,11 @@ __metadata:
     "@ui/utils": "workspace: 0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
     "@apollo/client": "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -2487,13 +2483,11 @@ __metadata:
     "@ui/utils": "workspace: 0.0.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
   peerDependencies:
     "@apollo/client": "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -2629,7 +2623,6 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
     react-scroll-parallax: "*"
   languageName: unknown
   linkType: soft
@@ -2658,7 +2651,6 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
-    react-intl: "*"
     react-scroll-parallax: "*"
   languageName: unknown
   linkType: soft
@@ -2687,7 +2679,6 @@ __metadata:
     next: "npm:12.3.4"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    react-intl: "npm:6.0.8"
     react-scroll-parallax: "npm:3.3.2"
     ts-node: "npm:10.9.1"
     ttypescript: "npm:1.5.15"

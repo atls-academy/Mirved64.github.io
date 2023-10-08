@@ -23,5 +23,14 @@ export const GET_LIBRARY = gql`
         }
       }
     }
+    allForms {
+      nodes {
+        id
+        title
+        forms {
+          text
+        }
+      }
+    }
   }
 `

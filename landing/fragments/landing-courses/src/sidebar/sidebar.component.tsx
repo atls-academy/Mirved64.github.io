@@ -1,20 +1,19 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { Link }             from 'react-scroll'
+import React              from 'react'
+import { Link }           from 'react-scroll'
 
-import { Background }       from '@ui/background'
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { MouseIcon }        from '@ui/icons'
-import { Image }            from '@ui/image'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Background }     from '@ui/background'
+import { Button }         from '@ui/button'
+import { Condition }      from '@ui/condition'
+import { MouseIcon }      from '@ui/icons'
+import { Image }          from '@ui/image'
+import { Box }            from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useWindowWidth } from '@ui/utils'
 
-import { useCourses }       from '../data'
+import { useCourses }     from '../data'
 
 export const Sidebar = () => {
   const { isMobile, isUltra } = useWindowWidth()
@@ -24,6 +23,9 @@ export const Sidebar = () => {
   const description: string = sidebarData?.data?.courseBy?.course?.description
   const numberOfStudents: string = sidebarData?.data?.courseBy?.course?.title
   const inscription: string = sidebarData?.data?.courseBy?.content
+  const buttonText: string = sidebarData?.data?.allNavigation?.nodes?.find(
+    (node) => node.id === 'cG9zdDozMDg='
+  )?.title
 
   return (
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
@@ -126,7 +128,7 @@ export const Sidebar = () => {
               radiiIcon='normal'
             >
               <Text color='white' fontSize='small' lineHeight='normal'>
-                <FormattedMessage id='courses.sidebar.button-desktop' />
+                {buttonText}
               </Text>
             </Button>
           </Condition>
@@ -142,7 +144,7 @@ export const Sidebar = () => {
               radiiIcon='regular'
             >
               <Text color='white' fontSize='usual' lineHeight='normal'>
-                <FormattedMessage id='courses.sidebar.button-desktop' />
+                {buttonText}
               </Text>
             </Button>
           </Condition>

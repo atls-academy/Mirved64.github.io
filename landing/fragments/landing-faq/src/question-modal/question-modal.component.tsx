@@ -1,6 +1,5 @@
 import React                  from 'react'
 import { FC }                 from 'react'
-import { FormattedMessage }   from 'react-intl'
 import { useState }           from 'react'
 
 import { Background }         from '@ui/background'
@@ -25,6 +24,9 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
   const faq = useFaq()
 
   const title: string = faq?.data?.navigationBy?.title
+  const successTitle: string = faq?.data?.allForms?.nodes?.find(
+    (node) => node.id === 'cG9zdDozMDk='
+  )?.title
 
   return (
     <Modal open={open} onClose={setOpen}>
@@ -52,7 +54,7 @@ export const QuestionModal: FC<QuestionModalProps> = ({ open, setOpen }) => {
                   <Condition match={send}>
                     <Text color='text.white' fontSize='regular' lineHeight='large'>
                       {name}
-                      <FormattedMessage id='form.thanks' />
+                      {successTitle}
                     </Text>
                   </Condition>
                 </Box>
