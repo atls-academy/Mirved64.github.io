@@ -1,9 +1,6 @@
-import { DrawerCardType } from '../../data'
-
 export interface DrawerCardProps {
   id: number
-  type?: DrawerCardType
-  label: { title: string } | string
+  label: { title: string } | { title: string; labelId: number }
   title: string
   description?: string
 }
@@ -11,5 +8,5 @@ export interface DrawerCardProps {
 export interface DrawerCardsProps {
   card: DrawerCardProps
   index: number
-  array: DrawerCardProps[]
+  array: DrawerCardProps[] | string[]
 }

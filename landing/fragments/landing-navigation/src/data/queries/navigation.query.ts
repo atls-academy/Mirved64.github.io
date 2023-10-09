@@ -19,5 +19,19 @@ export const GET_NAVIGATION = gql`
         }
       }
     }
+    courses {
+      nodes {
+        id
+        course {
+          label {
+            ... on Label {
+              title
+              labelId
+            }
+          }
+          title
+        }
+      }
+    }
   }
 `

@@ -12,7 +12,7 @@ import { Row }              from '@ui/layout'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 
-import { CardDataMobile }   from '../data'
+import { NODE_ID_LIST }     from '../helpers'
 import { DrawerCardMobile } from './drawer-card'
 import { DrawerProps }      from './drawer.interfaces'
 import { useNavigation }    from '../data'
@@ -23,6 +23,8 @@ export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => {
   const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
     (obj) => obj.id === 'cG9zdDoyMjI='
   )?.title
+
+  const getNodeId = (id) => navigation?.data?.courses?.nodes?.find((node) => node.id === id)?.course
 
   return (
     <DrawerContainer active={active}>
@@ -65,8 +67,8 @@ export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => {
             <Layout flexBasis={20} />
 
             <Column flexGrow='1'>
-              {CardDataMobile?.map((card, index, array) => (
-                <DrawerCardMobile card={card} index={index} array={array} key={card.id} />
+              {NODE_ID_LIST?.map((id, index, array) => (
+                <DrawerCardMobile card={getNodeId(id)} index={index} array={array} key={id} />
               ))}
             </Column>
 
