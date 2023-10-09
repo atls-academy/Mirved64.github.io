@@ -12,6 +12,7 @@ import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 import { useWindowWidth } from '@ui/utils'
 
+import { NODE_ID_LIST }   from './helpers'
 import { NavbarProps }    from './navbar.interfaces'
 import { useNavBar }      from './data'
 
@@ -21,8 +22,6 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
   const navbar = useNavBar()
 
   const getNodeId = (id) => navbar?.data?.allNavigation?.nodes?.find((obj) => obj.id === id)
-
-  const nodeIdList = ['cG9zdDoyMjE=', 'cG9zdDoyMjI=', 'cG9zdDoyMjQ=', 'cG9zdDoyMjU=']
 
   return (
     <Condition match={isDesktop || isWide}>
@@ -49,7 +48,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                 }
               />
 
-              {nodeIdList?.map((id, index, array) => (
+              {NODE_ID_LIST?.map((id, index, array) => (
                 <Column key={id} width={138}>
                   <Row alignItems='center' height={14}>
                     <Condition match={currentElementIndexInViewport === index}>
@@ -108,7 +107,7 @@ export const Navbar: FC<NavbarProps> = ({ sectionRefs }) => {
                     </Condition>
                   </Row>
 
-                  <Condition match={index < nodeIdList.length - 1}>
+                  <Condition match={index < NODE_ID_LIST.length - 1}>
                     <Layout flexBasis={20} flexShrink='0' />
                   </Condition>
                 </Column>
