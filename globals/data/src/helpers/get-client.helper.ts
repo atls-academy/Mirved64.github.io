@@ -3,6 +3,6 @@ import { InMemoryCache } from '@apollo/client'
 
 export const getClient = () =>
   new ApolloClient({
-    uri: process.env.GQL_URI,
+    uri: process.env.NEXT_PUBLIC_ENV_LOCAL_GQL_URI,
     cache: new InMemoryCache(),
   })

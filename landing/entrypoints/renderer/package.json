@@ -17,6 +17,7 @@
     "@emotion/css": "11.9.0",
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
+    "@next/env": "12.3.4",
     "@ui/animate": "workspace:0.0.1",
     "express": "4.18.1",
     "graphql": "16.8.1",
