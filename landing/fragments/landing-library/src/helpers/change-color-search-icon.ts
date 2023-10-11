@@ -1,4 +1,8 @@
-export const getColorSearchIcon = (hover: boolean, focus: boolean, searchQuery: string): string => {
+export const changeColorSearchIcon = (
+  hover: boolean,
+  focus: boolean,
+  searchQuery: string
+): string => {
   if (hover) return 'darkPurpleTransparent'
   if (focus) return 'darkestPurple'
   if (searchQuery) return 'darkestPurple'

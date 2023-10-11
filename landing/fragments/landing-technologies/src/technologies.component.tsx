@@ -1,13 +1,12 @@
-import React             from 'react'
+import React              from 'react'
 
-import { Divider }       from '@ui/divider'
-import { Row }           from '@ui/layout'
-import { Layout }        from '@ui/layout'
-import { Column }        from '@ui/layout'
+import { Divider }        from '@ui/divider'
+import { Row }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Column }         from '@ui/layout'
 
-import { Indent }        from './indent'
-import { RunLine }       from './run-line'
-import { useTechnogies } from './data'
+import { RunLine }        from './run-line'
+import { useTechnogies }  from './data'
 
 export const Technologies = () => {
   const technologies = useTechnogies()
@@ -18,7 +17,7 @@ export const Technologies = () => {
 
       <Divider backgroundColor='background.ghost' weight={1} />
 
-      <Indent />
+      <Layout flexBasis={[36, 64]} />
 
       <Row overflow='hidden'>
         <RunLine
@@ -29,7 +28,7 @@ export const Technologies = () => {
         />
       </Row>
 
-      <Indent />
+      <Layout flexBasis={[36, 64]} />
 
       <Row overflow='hidden'>
         <RunLine
@@ -40,7 +39,7 @@ export const Technologies = () => {
         />
       </Row>
 
-      <Indent />
+      <Layout flexBasis={[36, 64]} />
 
       <Divider backgroundColor='background.ghost' weight={1} />
 

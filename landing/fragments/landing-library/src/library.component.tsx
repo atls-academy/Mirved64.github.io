@@ -1,21 +1,20 @@
-import React                  from 'react'
-import { useState }           from 'react'
+import React                     from 'react'
+import { useState }              from 'react'
 
-import { Divider }            from '@ui/divider'
-import { SearchIcon }         from '@ui/icons'
-import { Input }              from '@ui/input'
-import { Box }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Text }               from '@ui/text'
-import { useFocus }           from '@ui/utils'
-import { useHover }           from '@ui/utils'
+import { Divider }               from '@ui/divider'
+import { SearchIcon }            from '@ui/icons'
+import { Input }                 from '@ui/input'
+import { Box }                   from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { Text }                  from '@ui/text'
+import { useFocus }              from '@ui/utils'
+import { useHover }              from '@ui/utils'
 
-import { Indent }             from './indent'
-import { SearchButton }       from './search'
-import { useLibrary }         from './data'
-import { getColorSearchIcon } from './helpers'
-import { getColorSearchText } from './helpers'
+import { SearchButton }          from './search'
+import { useLibrary }            from './data'
+import { changeColorSearchIcon } from './helpers'
+import { changeColorSearchText } from './helpers'
 
 export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
@@ -46,11 +45,11 @@ export const LibraryBanner = () => {
           </Text>
         </Box>
 
-        <Indent />
+        <Layout flexBasis={{ _: 24, standard: 48, ultra: 72 }} />
 
         <Divider backgroundColor='background.ghost' weight={1} />
 
-        <Indent />
+        <Layout flexBasis={{ _: 24, standard: 48, ultra: 72 }} />
 
         <Box maxWidth={{ _: '100%', standard: 600, wide: 640, ultra: 960 }}>
           <Text
@@ -62,7 +61,7 @@ export const LibraryBanner = () => {
           </Text>
         </Box>
 
-        <Indent />
+        <Layout flexBasis={{ _: 24, standard: 48, ultra: 72 }} />
 
         <Box maxWidth={[335, 600]} {...hoverProps} {...focusProps}>
           <Input
@@ -74,7 +73,7 @@ export const LibraryBanner = () => {
               <SearchIcon
                 width={20}
                 height={20}
-                color={getColorSearchIcon(hover, focus, searchQuery)}
+                color={changeColorSearchIcon(hover, focus, searchQuery)}
               />
             }
             widthIcon={20}
@@ -82,7 +81,7 @@ export const LibraryBanner = () => {
             filled={searchQuery}
             addon={searchQuery ? <SearchButton /> : null}
             placeholder={search}
-            color={getColorSearchText(hover, focus, searchQuery)}
+            color={changeColorSearchText(hover, focus, searchQuery)}
           />
         </Box>
 
