@@ -5,7 +5,6 @@ import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Column }           from '@ui/layout'
 
-import { Indent }           from './indent'
 import { RunLine }          from './run-line'
 import { technologiesList } from './technologies-list'
 import { workspaceList }    from './technologies-list'
@@ -16,19 +15,19 @@ export const Technologies = () => (
 
     <Divider backgroundColor='background.ghost' weight={1} />
 
-    <Indent />
+    <Layout flexBasis={[36, 64]} />
 
     <Row overflow='hidden'>
       <RunLine technologies={technologiesList} font='light' />
     </Row>
 
-    <Indent />
+    <Layout flexBasis={[36, 64]} />
 
     <Row overflow='hidden'>
       <RunLine technologies={workspaceList} font='secondary' />
     </Row>
 
-    <Indent />
+    <Layout flexBasis={[36, 64]} />
 
     <Divider backgroundColor='background.ghost' weight={1} />
 

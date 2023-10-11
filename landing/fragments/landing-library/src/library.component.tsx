@@ -13,7 +13,6 @@ import { Text }               from '@ui/text'
 import { useFocus }           from '@ui/utils'
 import { useHover }           from '@ui/utils'
 
-import { Indent }             from './indent'
 import { SearchButton }       from './search'
 import { getColorSearchIcon } from './helpers'
 import { getColorSearchText } from './helpers'
@@ -43,11 +42,11 @@ export const LibraryBanner = () => {
           </Text>
         </Box>
 
-        <Indent />
+        <Layout flexBasis={{ _: 24, standard: 48, ultra: 72 }} />
 
         <Divider backgroundColor='background.ghost' weight={1} />
 
-        <Indent />
+        <Layout flexBasis={{ _: 24, standard: 48, ultra: 72 }} />
 
         <Box maxWidth={{ _: '100%', standard: 600, wide: 640, ultra: 960 }}>
           <Text
@@ -59,7 +58,7 @@ export const LibraryBanner = () => {
           </Text>
         </Box>
 
-        <Indent />
+        <Layout flexBasis={{ _: 24, standard: 48, ultra: 72 }} />
 
         <Box maxWidth={[335, 600]} {...hoverProps} {...focusProps}>
           <Input

@@ -8,7 +8,6 @@ import { Layout }           from '@ui/layout'
 import { useWindowWidth }   from '@ui/utils'
 
 import { DrawerCardsProps } from './drawer-card.interfaces'
-import { Indent }           from './indent'
 
 export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
   const { isUltra } = useWindowWidth()
@@ -19,7 +18,9 @@ export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
         <Layout flexBasis={20} flexShrink='0' />
       </Condition>
 
-      <Indent index={index} array={array} />
+      <Condition match={index !== 0 && index !== array.length - 1}>
+        <Layout flexBasis={10} flexShrink='0' />
+      </Condition>
 
       <Condition match={!isUltra}>
         <Card
@@ -41,7 +42,9 @@ export const DrawerCard: FC<DrawerCardsProps> = ({ card, index, array }) => {
         />
       </Condition>
 
-      <Indent index={index} array={array} />
+      <Condition match={index !== 0 && index !== array.length - 1}>
+        <Layout flexBasis={10} flexShrink='0' />
+      </Condition>
 
       <Condition match={index === 0}>
         <Layout flexBasis={20} flexShrink='0' />
