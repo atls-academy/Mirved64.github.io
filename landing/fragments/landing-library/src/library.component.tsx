@@ -1,21 +1,21 @@
-import React                     from 'react'
-import { FormattedMessage }      from 'react-intl'
-import { useState }              from 'react'
-import { useIntl }               from 'react-intl'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
+import { useIntl }          from 'react-intl'
 
-import { Divider }               from '@ui/divider'
-import { SearchIcon }            from '@ui/icons'
-import { Input }                 from '@ui/input'
-import { Box }                   from '@ui/layout'
-import { Column }                from '@ui/layout'
-import { Layout }                from '@ui/layout'
-import { Text }                  from '@ui/text'
-import { useFocus }              from '@ui/utils'
-import { useHover }              from '@ui/utils'
+import { Divider }          from '@ui/divider'
+import { SearchIcon }       from '@ui/icons'
+import { Input }            from '@ui/input'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { useFocus }         from '@ui/utils'
+import { useHover }         from '@ui/utils'
 
-import { SearchButton }          from './search'
-import { changeColorSearchIcon } from './helpers'
-import { changeColorSearchText } from './helpers'
+import { SearchButton }     from './search'
+import { colorSearchIcon }  from './helpers'
+import { colorSearchText }  from './helpers'
 
 export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
@@ -70,7 +70,7 @@ export const LibraryBanner = () => {
               <SearchIcon
                 width={20}
                 height={20}
-                color={changeColorSearchIcon(hover, focus, searchQuery)}
+                color={colorSearchIcon(hover, focus, searchQuery)}
               />
             }
             widthIcon={20}
@@ -78,7 +78,7 @@ export const LibraryBanner = () => {
             filled={searchQuery}
             addon={searchQuery ? <SearchButton /> : null}
             placeholder={intl.formatMessage({ id: 'library.search.placeholder' })}
-            color={changeColorSearchText(hover, focus, searchQuery)}
+            color={colorSearchText(hover, focus, searchQuery)}
           />
         </Box>
 
