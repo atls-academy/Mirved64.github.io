@@ -10,6 +10,7 @@ export const Background = styled.div(
     backgroundColor: backgroundColor ? theme.backgrounds.backgroundColor[backgroundColor] : 'none',
     backgroundImage: backgroundImage ? theme.backgrounds.backgroundImage[backgroundImage] : 'none',
     backgroundSize: backgroundSize ? theme.backgrounds.backgroundSize[backgroundSize] : 'none',
+    boxSizing: 'border-box',
   }),
   background,
   layout,

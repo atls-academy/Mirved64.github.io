@@ -19,16 +19,16 @@ import { useHover }        from '@ui/utils'
 import { AccordionProps }  from './accordion.interfaces'
 
 export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = true }) => {
-  const { isMobile } = useWindowWidth()
-  const { hover, hoverProps } = useHover()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
   const [selected, setSelected] = useState<boolean>(false)
+  const { hover, hoverProps } = useHover()
 
   const handleSelect = () => setSelected(!selected)
 
   return (
     <Column>
       <motion.div onClick={handleSelect}>
-        <Condition match={!isMobile}>
+        <Condition match={isDesktop}>
           <Box {...hoverProps} alignItems='center' cursor='pointer'>
             <motion.div style={{ display: 'flex', alignItems: 'center' }}>
               {selected ? (
@@ -76,28 +76,75 @@ export const Accordion: FC<AccordionProps> = ({ answer, question, isDivider = tr
           </Box>
         </Condition>
 
-        <AnimatePresence>
-          {selected && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 90 }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3, easeInOut: 1 }}
-            >
-              <Layout height={[16, 24]} />
-
-              <Box maxWidth={[335, 740]}>
-                <Text
-                  color={['text.primaryTransparentText', 'text.primaryText']}
-                  fontSize={['tiny', 'compact']}
-                  lineHeight={['huge', 'big']}
-                >
-                  {answer}
-                </Text>
-              </Box>
+        <Condition match={isWide || isUltra}>
+          <Box {...hoverProps} alignItems='center' cursor='pointer'>
+            <motion.div style={{ display: 'flex', alignItems: 'center' }}>
+              {selected ? (
+                <MinusIcon width={30} height={30} hover={hover} />
+              ) : (
+                <CrossIcon width={30} height={30} hover={hover} />
+              )}
             </motion.div>
-          )}
-        </AnimatePresence>
+
+            <Layout flexBasis={{ wide: 24, ultra: 36 }} flexShrink='0' />
+
+            <Box flexBasis={{ wide: 740, ultra: 1110 }}>
+              <Text
+                color={hover ? 'text.accent' : 'text.primary'}
+                fontSize='strong'
+                lineHeight='huge'
+              >
+                {question}
+              </Text>
+            </Box>
+          </Box>
+        </Condition>
+
+        <Condition match={isMobile || isDesktop}>
+          <AnimatePresence>
+            {selected && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 90 }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, easeInOut: 1 }}
+              >
+                <Layout height={[16, 24]} />
+
+                <Box maxWidth={[335, 740]}>
+                  <Text
+                    color={['text.primaryTransparentText', 'text.primaryText']}
+                    fontSize={{ _: 'tiny', standard: 'compact', wide: 'middle' }}
+                    lineHeight={['huge', 'big']}
+                  >
+                    {answer}
+                  </Text>
+                </Box>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </Condition>
+
+        <Condition match={isWide || isUltra}>
+          <AnimatePresence>
+            {selected && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 140 }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, easeInOut: 1 }}
+              >
+                <Layout height={{ wide: 36 }} />
+
+                <Box maxWidth={{ wide: 900 }}>
+                  <Text color='text.primaryText' fontSize={{ wide: 'middle' }} lineHeight='big'>
+                    {answer}
+                  </Text>
+                </Box>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </Condition>
 
         <Condition match={isDivider}>
           <Layout height={[16, 40]} />

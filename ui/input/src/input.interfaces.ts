@@ -1,6 +1,6 @@
 import { InputProps as BaseInputProps } from '@atls-ui-parts/input'
 
-export type InputSize = 'normalSizeNormallRadii' | 'bigSizeRegularRadii' | 'textarea'
+export type InputSize = 'normalSizeNormalRadii' | 'bigSizeRegularRadii' | 'textarea'
 
 export type InputVariant = 'common' | 'search'
 

@@ -1,78 +1,42 @@
-import React                 from 'react'
-import { Parallax }          from 'react-scroll-parallax'
+import React                from 'react'
 
-import { CardsLibrary }      from '@landing/fragment-library'
-import { LibraryBanner }     from '@landing/fragment-library'
-import { NavigationDesktop } from '@landing/fragment-navigation'
-import { NavigationMobile }  from '@landing/fragment-navigation'
-import { Background }        from '@ui/background'
-import { Condition }         from '@ui/condition'
-import { useWindowWidth }    from '@ui/utils'
+import { Header }           from '@landing/fragment-header'
+import { Background }       from '@ui/background'
+import { Condition }        from '@ui/condition'
+import { useWindowWidth }   from '@ui/utils'
+
+import { LibrarySection }   from './sections'
+import { MaterialsSection } from './sections'
 
 const LibraryPage = () => {
   const { isMobile } = useWindowWidth()
 
   return (
     <>
-      <Background backgroundImage='navyBlueGradient' width='100%'>
-        <Condition match={!isMobile}>
-          <Background
-            backgroundImage='banner'
-            backgroundSize='usual'
-            backgroundPosition='0'
-            backgroundRepeat='no-repeat'
-          >
-            <Parallax translateY={[-17, 15]}>
-              <NavigationDesktop />
+      <Condition match={!isMobile}>
+        <Header />
+      </Condition>
 
-              <LibraryBanner />
-            </Parallax>
-          </Background>
-        </Condition>
-
-        <Condition match={isMobile}>
-          <Background
-            backgroundImage='banner'
-            backgroundSize='little'
-            backgroundPosition='-260px -20px'
-            backgroundRepeat='no-repeat'
-          >
-            <NavigationMobile />
-
-            <LibraryBanner />
-          </Background>
-        </Condition>
+      <Background
+        backgroundImage='navyBlueGradient'
+        position='absolute'
+        overflow='hidden'
+        width='100%'
+        height={{ _: 587, standard: 1815, wide: 970, ultra: 1326 }}
+        zIndex={1}
+      >
+        <LibrarySection />
       </Background>
 
       <Background
         backgroundColor='white'
         borderRadius={['hugeTop', 'giantTop']}
         position='absolute'
-        top={[500, 889]}
+        top={{ _: 500, standard: 739, wide: 800, ultra: 1196 }}
         width='100%'
-        zIndex={1}
+        zIndex={11}
       >
-        <Condition match={!isMobile}>
-          <Background
-            backgroundImage='wavesGradient'
-            backgroundSize='ordinary'
-            backgroundRepeat='no-repeat'
-            backgroundPosition='0 1104px'
-          >
-            <CardsLibrary />
-          </Background>
-        </Condition>
-
-        <Condition match={isMobile}>
-          <Background
-            backgroundImage='wavesGradient'
-            backgroundSize='normal'
-            backgroundRepeat='no-repeat'
-            backgroundPosition='-982px 409px'
-          >
-            <CardsLibrary />
-          </Background>
-        </Condition>
+        <MaterialsSection />
       </Background>
     </>
   )

@@ -12,11 +12,14 @@ export type ButtonSize =
   | 'bigSizeNormalRadii'
   | 'bigSizeNormalRadiiSmallPadding'
   | 'bigSizeNormalRadiiBigPadding'
-  | 'LargeSizelittleRadii'
+  | 'largeSizeLittleRadii'
   | 'hugeSizeRegularRadii'
   | 'smallSizeCompactRadii'
   | 'usualSizeNormalRadii'
   | 'usualSizeCompactRadii'
+  | 'strongSizeRegularRadii'
+  | 'giantSizeRegularRadii'
+  | 'massiveSizeLargeRadii'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant

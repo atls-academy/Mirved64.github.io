@@ -66,7 +66,7 @@ const bigSizeNormalRadiiStyles = createShapeStyles({
   rounding: prop('theme.radii.normal') as unknown as number,
 })
 
-const LargeSizelittleRadiiStyles = createShapeStyles({
+const largeSizeLittleRadiiStyles = createShapeStyles({
   size: 64,
   paddingLeft: -28,
   paddingRight: -28,
@@ -80,6 +80,27 @@ const hugeSizeRegularRadiiStyles = createShapeStyles({
   rounding: prop('theme.radii.regular') as unknown as number,
 })
 
+const strongSizeRegularRadiiStyles = createShapeStyles({
+  size: 84,
+  paddingLeft: -28,
+  paddingRight: -28,
+  rounding: prop('theme.radii.regular') as unknown as number,
+})
+
+const giantSizeRegularRadiiStyles = createShapeStyles({
+  size: 84,
+  paddingLeft: 30,
+  paddingRight: 12,
+  rounding: prop('theme.radii.regular') as unknown as number,
+})
+
+const massiveSizeLargeRadiiStyles = createShapeStyles({
+  size: 108,
+  paddingLeft: 36,
+  paddingRight: 18,
+  rounding: prop('theme.radii.large') as unknown as number,
+})
+
 export const shapeStyles = switchProp(prop('size'), {
   smallSizeLittleRadii: smallSizeLittleRadiiStyles,
   littleSizeLittleRadii: littleSizeLittleRadiiStyles,
@@ -88,8 +109,11 @@ export const shapeStyles = switchProp(prop('size'), {
   bigSizeNormalRadii: bigSizeNormalRadiiStyles,
   bigSizeNormalRadiiSmallPadding: bigSizeNormalRadiiSmallPaddingStyles,
   bigSizeNormalRadiiBigPadding: bigSizeNormalRadiiBigPaddingStyles,
-  LargeSizelittleRadii: LargeSizelittleRadiiStyles,
+  largeSizeLittleRadii: largeSizeLittleRadiiStyles,
   hugeSizeRegularRadii: hugeSizeRegularRadiiStyles,
   usualSizeNormalRadii: usualSizeNormalRadiiStyles,
   usualSizeCompactRadii: usualSizeCompactRadiiStyles,
+  strongSizeRegularRadii: strongSizeRegularRadiiStyles,
+  giantSizeRegularRadii: giantSizeRegularRadiiStyles,
+  massiveSizeLargeRadii: massiveSizeLargeRadiiStyles,
 })

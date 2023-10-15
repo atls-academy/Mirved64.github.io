@@ -7,34 +7,30 @@ import { Column }           from '@ui/layout'
 
 import { RunLine }          from './run-line'
 import { technologiesList } from './technologies-list'
-import { worckspaceList }   from './technologies-list'
+import { workspaceList }    from './technologies-list'
 
-export const Technologies = () => {
-  const Indent = () => <Layout flexBasis={[36, 64]} />
+export const Technologies = () => (
+  <Column fill>
+    <Layout flexBasis={{ _: 32, standard: 64, wide: 128, ultra: 64 }} />
 
-  return (
-    <Column fill>
-      <Layout flexBasis={[32, 64]} />
+    <Divider backgroundColor='background.ghost' weight={1} />
 
-      <Divider backgroundColor='background.ghost' weight={1} />
+    <Layout flexBasis={[36, 64]} />
 
-      <Indent />
+    <Row overflow='hidden'>
+      <RunLine technologies={technologiesList} font='light' />
+    </Row>
 
-      <Row overflow='hidden'>
-        <RunLine technologies={technologiesList} font='light' />
-      </Row>
+    <Layout flexBasis={[36, 64]} />
 
-      <Indent />
+    <Row overflow='hidden'>
+      <RunLine technologies={workspaceList} font='secondary' />
+    </Row>
 
-      <Row overflow='hidden'>
-        <RunLine technologies={worckspaceList} font='secondary' />
-      </Row>
+    <Layout flexBasis={[36, 64]} />
 
-      <Indent />
+    <Divider backgroundColor='background.ghost' weight={1} />
 
-      <Divider backgroundColor='background.ghost' weight={1} />
-
-      <Layout flexBasis={[32, 64]} />
-    </Column>
-  )
-}
+    <Layout flexBasis={[32, 64]} />
+  </Column>
+)

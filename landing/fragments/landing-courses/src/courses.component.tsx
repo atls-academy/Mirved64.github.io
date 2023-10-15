@@ -1,50 +1,59 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React                  from 'react'
+import { FormattedMessage }   from 'react-intl'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { ArrowRightIcon }   from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Background }         from '@ui/background'
+import { Button }             from '@ui/button'
+import { Condition }          from '@ui/condition'
+import { Divider }            from '@ui/divider'
+import { ArrowRightIcon }     from '@ui/icons'
+import { ArrowIcon }          from '@ui/icons'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { NextLink }           from '@ui/link'
+import { Text }               from '@ui/text'
+import { useHover }           from '@ui/utils'
+import { useWindowWidth }     from '@ui/utils'
 
-import { CardsMaterials }   from './cards'
-import { CardsSwiper }      from './cards'
-import { CardsLearning }    from './cards'
-import { Info }             from './info'
-import { Sidebar }          from './sidebar'
+import { CardsMaterials }     from './cards'
+import { CardsMaterialsWide } from './cards'
+import { CardsSwiper }        from './cards'
+import { CardsLearning }      from './cards'
+import { Info }               from './info'
+import { Sidebar }            from './sidebar'
 
 export const Courses = () => {
-  const { isMobile } = useWindowWidth()
+  const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
+  const { hover, hoverProps } = useHover()
 
   return (
-    <Box borderRadius={['hugeTop', 'giantTop']} flexGrow='1'>
-      <Column>
+    <Box flexBasis={{ wide: 2580 }} flexShrink={{ wide: 0 }} flexGrow={{ wide: '1' }}>
+      <Column flexGrow='1'>
         <Layout flexBasis={[64, 160]} />
 
         <Row>
-          <Layout flexBasis={[20, 230]} />
+          <Layout flexBasis={{ _: 20, standard: 230, ultra: 620 }} />
 
-          <Column flexBasis={[335, 1610]} flexGrow='1'>
+          <Column
+            flexBasis={{ _: 335, standard: 1610, wide: 2250, ultra: 2600 }}
+            flexShrink={{ wide: 0 }}
+            flexGrow='1'
+          >
             <Row alignItems='center'>
               <Box flexWrap='wrap'>
                 <Text
                   color='text.primary'
-                  fontSize={['regular', 'stupendous']}
-                  lineHeight='standart'
+                  fontSize={{ _: 'regular', standard: 'stupendous', ultra: 'biggest' }}
+                  lineHeight='standard'
                 >
                   <FormattedMessage id='courses.title' />
                 </Text>
               </Box>
 
-              <Layout flexBasis={20} flexGrow='1' />
+              <Condition match={isDesktop}>
+                <Layout flexBasis={20} flexGrow='1' />
 
-              <Condition match={!isMobile}>
                 <Box width={254} flexShrink='0'>
                   <NextLink path='/library' width='100%'>
                     <Button
@@ -76,11 +85,60 @@ export const Courses = () => {
             <Layout flexBasis={[40, 80]} />
 
             <Box flexDirection={['column', 'row']}>
-              <Column order={[3, 0]} flexBasis={[335, 1160]} flexGrow='1'>
+              <Column
+                order={[3, 0]}
+                flexBasis={{ _: 335, standard: 1160, wide: 1798, ultra: 2090 }}
+              >
                 <CardsLearning />
 
                 <Condition match={!isMobile}>
+                  <Layout flexBasis={40} />
+                </Condition>
+
+                <Condition match={isDesktop}>
                   <CardsMaterials />
+                </Condition>
+
+                <Condition match={isWide || isUltra}>
+                  <Row flexWrap='wrap' maxWidth={{ wide: 1800, ultra: 2090 }}>
+                    <CardsMaterialsWide />
+
+                    <NextLink path='/library' width={{ wide: 572, ultra: 670 }}>
+                      <Background
+                        {...hoverProps}
+                        borderRadius='regular'
+                        overflow='hidden'
+                        backgroundImage={hover ? 'purpleGradient' : 'navyGradient'}
+                        backgroundColor={hover ? 'purpleGradient' : 'navyGradient'}
+                        display='flex'
+                        height='100%'
+                      >
+                        <Layout flexBasis={40} flexShrink='0' />
+
+                        <Column justifyContent='end' flexGrow='1'>
+                          <Row alignItems='center'>
+                            <Box>
+                              <Text
+                                color='text.white'
+                                fontSize={{ wide: 'regular', ultra: 'big' }}
+                                lineHeight='usual'
+                              >
+                                <FormattedMessage id='courses.button.all-materials' />
+                              </Text>
+                            </Box>
+
+                            <Layout flexBasis={15} />
+
+                            <ArrowIcon width={66} height={40} />
+                          </Row>
+
+                          <Layout flexBasis={40} />
+                        </Column>
+
+                        <Layout flexBasis={40} flexShrink='0' />
+                      </Background>
+                    </NextLink>
+                  </Row>
                 </Condition>
               </Column>
 
@@ -90,10 +148,12 @@ export const Courses = () => {
             </Box>
           </Column>
 
-          <Layout flexBasis={[20, 80]} />
+          <Layout flexBasis={{ _: 20, standard: 80, ultra: 620 }} />
         </Row>
 
         <Condition match={isMobile}>
+          <Layout flexBasis={20} />
+
           <Row>
             <CardsSwiper spaceBetween={20} className='swiper-1' slidesPerView={1.23} />
           </Row>
@@ -127,7 +187,7 @@ export const Courses = () => {
           </Row>
         </Condition>
 
-        <Layout flexBasis={[64, 80]} />
+        <Layout flexBasis={[144, 80]} />
       </Column>
     </Box>
   )

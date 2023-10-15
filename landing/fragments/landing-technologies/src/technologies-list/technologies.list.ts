@@ -2,7 +2,7 @@ interface TechnologyProps {
   name: string
 }
 
-interface WorckspaceProps {
+interface WorkspaceProps {
   name: string
 }
 
@@ -15,7 +15,7 @@ export const technologiesList: TechnologyProps[] = [
   { name: 'javacsript' },
 ]
 
-export const worckspaceList: WorckspaceProps[] = [
+export const workspaceList: WorkspaceProps[] = [
   { name: 'figma' },
   { name: 'github' },
   { name: 'atom' },

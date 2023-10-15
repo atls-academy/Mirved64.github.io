@@ -40,16 +40,30 @@ export const Step: FC<StepProps> = ({ divider = true, ...props }) => (
       <Layout flexBasis={[12, 32]} flexShrink='0' />
 
       <Box flexBasis={[312, 1700]} flexDirection={['column', 'row']} flexGrow='1'>
-        <Box alignItems='center' flexBasis={[28, 367]} flexShrink='0' flexGrow='1'>
-          <Text color='text.white' fontSize={['medium', 'regular']} lineHeight='usual'>
+        <Box
+          alignItems='center'
+          flexBasis={{ _: 28, standard: 367, wide: 309, ultra: 952 }}
+          flexShrink='0'
+          flexGrow='1'
+        >
+          <Text
+            color='text.white'
+            fontSize={{ _: 'medium', standard: 'regular', ultra: 'big' }}
+            lineHeight='usual'
+          >
             {props.name}
           </Text>
         </Box>
 
         <Layout flexBasis={[8, 430]} flexShrink='0' flexGrow='3' />
 
-        <Box flexBasis={[40, 560]}>
-          <Text color='text.white' fontSize={['tiny', 'medium']} lineHeight='huge' textWrap='wrap'>
+        <Box flexBasis={{ _: 40, standard: 560, wide: 500, ultra: 740 }}>
+          <Text
+            color='text.white'
+            fontSize={{ _: 'tiny', standard: 'medium', ultra: 'customary' }}
+            lineHeight='huge'
+            textWrap='wrap'
+          >
             {props.description}
           </Text>
         </Box>
