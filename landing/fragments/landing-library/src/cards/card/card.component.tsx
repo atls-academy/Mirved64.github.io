@@ -1,5 +1,5 @@
-import React               from 'react'
-import { FC }              from 'react'
+import React              from 'react'
+import { FC }             from 'react'
 
 import { Condition }        from '@ui/condition'
 import { ArrowRightIcon }   from '@ui/icons'
@@ -12,9 +12,9 @@ import { useWindowWidth }   from '@ui/utils'
 import { useHover }         from '@ui/utils'
 import { useActive }        from '@ui/utils'
 
-import { CardKeys }        from './card.interfaces'
-import { changeColorText } from '../../helpers'
-import { changeColorIcon } from '../../helpers'
+import { CardKeys }       from './card.interfaces'
+import { colorText }      from '../../helpers'
+import { colorIcon }      from '../../helpers'
 
 export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => {
   const { isMobile } = useWindowWidth()
@@ -30,7 +30,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
       <Column maxWidth={['100%', 785]}>
         <Box>
           <Text
-            color={changeColorText(hover, active)}
+            color={colorText(hover, active)}
             fontSize={['regular', 'giant']}
             lineHeight={['standard', 'small']}
           >
@@ -85,7 +85,7 @@ export const Card: FC<CardKeys> = ({ title, technologiesList, description }) => 
         <Layout flexBasis={20} flexGrow='1' />
 
         <Box width={56} height={56} justifyContent='center' alignItems='center'>
-          <ArrowRightIcon width={21} height={42} color={changeColorIcon(hover, active)} />
+          <ArrowRightIcon width={21} height={42} color={colorIcon(hover, active)} />
         </Box>
       </Condition>
     </Box>

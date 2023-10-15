@@ -73,7 +73,7 @@ export const LibraryBanner = () => {
               <SearchIcon
                 width={20}
                 height={20}
-                color={changeColorSearchIcon(hover, focus, searchQuery)}
+                color={colorSearchIcon(hover, focus, searchQuery)}
               />
             }
             widthIcon={20}
