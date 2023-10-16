@@ -1,20 +1,20 @@
-import React                     from 'react'
-import { useState }              from 'react'
+import React               from 'react'
+import { useState }        from 'react'
 
-import { Divider }               from '@ui/divider'
-import { SearchIcon }            from '@ui/icons'
-import { Input }                 from '@ui/input'
-import { Box }                   from '@ui/layout'
-import { Column }                from '@ui/layout'
-import { Layout }                from '@ui/layout'
-import { Text }                  from '@ui/text'
-import { useFocus }              from '@ui/utils'
-import { useHover }              from '@ui/utils'
+import { Divider }         from '@ui/divider'
+import { SearchIcon }      from '@ui/icons'
+import { Input }           from '@ui/input'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Text }            from '@ui/text'
+import { useFocus }        from '@ui/utils'
+import { useHover }        from '@ui/utils'
 
-import { SearchButton }          from './search'
-import { useLibrary }            from './data'
-import { changeColorSearchIcon } from './helpers'
-import { changeColorSearchText } from './helpers'
+import { SearchButton }    from './search'
+import { useLibrary }      from './data'
+import { colorSearchIcon } from './helpers'
+import { colorSearchText } from './helpers'
 
 export const LibraryBanner = () => {
   const { hover, hoverProps } = useHover()
@@ -81,7 +81,7 @@ export const LibraryBanner = () => {
             filled={searchQuery}
             addon={searchQuery ? <SearchButton /> : null}
             placeholder={search}
-            color={changeColorSearchText(hover, focus, searchQuery)}
+            color={colorSearchText(hover, focus, searchQuery)}
           />
         </Box>
 
