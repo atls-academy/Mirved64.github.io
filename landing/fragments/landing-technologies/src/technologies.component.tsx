@@ -1,36 +1,49 @@
-import React                from 'react'
+import React             from 'react'
 
-import { Divider }          from '@ui/divider'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
+import { Divider }       from '@ui/divider'
+import { Row }           from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Column }        from '@ui/layout'
 
-import { RunLine }          from './run-line'
-import { technologiesList } from './technologies-list'
-import { workspaceList }    from './technologies-list'
+import { RunLine }       from './run-line'
+import { useTechnogies } from './data'
 
-export const Technologies = () => (
-  <Column fill>
-    <Layout flexBasis={{ _: 32, standard: 64, wide: 128, ultra: 64 }} />
+export const Technologies = () => {
+  const technologies = useTechnogies()
 
-    <Divider backgroundColor='background.ghost' weight={1} />
+  return (
+    <Column fill>
+      <Layout flexBasis={{ _: 32, standard: 128, wide: 128, ultra: 64 }} />
 
-    <Layout flexBasis={[36, 64]} />
+      <Divider backgroundColor='background.ghost' weight={1} />
 
-    <Row overflow='hidden'>
-      <RunLine technologies={technologiesList} font='light' />
-    </Row>
+      <Layout flexBasis={[36, 64]} />
 
-    <Layout flexBasis={[36, 64]} />
+      <Row overflow='hidden'>
+        <RunLine
+          technologies={technologies?.data?.skills.nodes
+            .slice(3)
+            .map((el) => ({ id: el.skillId, title: el.title }))}
+          font='light'
+        />
+      </Row>
 
-    <Row overflow='hidden'>
-      <RunLine technologies={workspaceList} font='secondary' />
-    </Row>
+      <Layout flexBasis={[36, 64]} />
 
-    <Layout flexBasis={[36, 64]} />
+      <Row overflow='hidden'>
+        <RunLine
+          technologies={technologies?.data?.skills.nodes
+            .slice(0, 3)
+            .map((el) => ({ id: el.skillId, title: el.title }))}
+          font='secondary'
+        />
+      </Row>
 
-    <Divider backgroundColor='background.ghost' weight={1} />
+      <Layout flexBasis={[36, 64]} />
 
-    <Layout flexBasis={[32, 64]} />
-  </Column>
-)
+      <Divider backgroundColor='background.ghost' weight={1} />
+
+      <Layout flexBasis={[32, 64]} />
+    </Column>
+  )
+}

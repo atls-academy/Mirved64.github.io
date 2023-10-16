@@ -1,13 +1,6 @@
-export enum DrawerCardType { // eslint-disable-line
-  Base = 'Base',
-  Advanced = 'Advanced',
-  Training = 'Training',
-}
-
 export interface DrawerCardProps {
   id: number
-  type: DrawerCardType
-  category: string
+  label: { title: string } | { title: string; labelId: number }
   title: string
   description?: string
 }
@@ -15,5 +8,5 @@ export interface DrawerCardProps {
 export interface DrawerCardsProps {
   card: DrawerCardProps
   index: number
-  array: DrawerCardProps[]
+  array: DrawerCardProps[] | string[]
 }

@@ -1,1 +1,1 @@
-export * from './data-card'
+export * from './queries'

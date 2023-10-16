@@ -1,6 +1,5 @@
 export interface CardKeys {
-  id?: number
   title: string
-  technologiesList: string[]
+  technologiesList: { title: string }[]
   description: string
 }

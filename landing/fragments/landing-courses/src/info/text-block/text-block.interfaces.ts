@@ -1,3 +1,4 @@
 export interface TextBlockProps {
-  id: string
+  text: string | string[]
+  space?: boolean
 }

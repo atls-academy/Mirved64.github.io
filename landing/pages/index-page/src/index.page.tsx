@@ -41,7 +41,7 @@ const IndexPage = () => {
   ]
 
   const animateOnLoadProps = {
-    transition: { duration: 1.2 },
+    transition: { duration: 4 },
   }
 
   return (
@@ -63,7 +63,7 @@ const IndexPage = () => {
       </AnimateOnLoad>
 
       <Background
-        id='academy'
+        id='cG9zdDoyMjE='
         ref={mergeRefs([sectionRefs[0], academyRef])}
         backgroundImage='navyBlueGradient'
         position='absolute'
@@ -77,7 +77,7 @@ const IndexPage = () => {
 
       <AnimateOnClick animate={controlsCourses} style={{ zIndex: 11 }}>
         <Background
-          id='courses'
+          id='cG9zdDoyMjI='
           ref={mergeRefs([sectionRefs[1], coursesRef])}
           backgroundColor='white'
           borderRadius={['hugeTop', 'giantTop']}
@@ -93,7 +93,7 @@ const IndexPage = () => {
 
       <AnimateOnClick animate={controlsTeaching} style={{ zIndex: 12 }}>
         <Background
-          id='teaching'
+          id='cG9zdDoyMjQ='
           ref={mergeRefs([sectionRefs[2], teachingRef])}
           backgroundColor='darkPurple'
           borderRadius={['hugeTop', 'giantTop']}
@@ -108,7 +108,7 @@ const IndexPage = () => {
 
       <AnimateOnClick animate={controlsFaq} style={{ zIndex: 13 }}>
         <Background
-          id='faq'
+          id='cG9zdDoyMjU='
           ref={sectionRefs[3]}
           backgroundColor='white'
           borderRadius={['hugeTop', 'giantTop']}

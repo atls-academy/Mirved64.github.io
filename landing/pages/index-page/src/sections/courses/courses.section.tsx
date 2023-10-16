@@ -1,10 +1,10 @@
 import React              from 'react'
 import { Parallax }       from 'react-scroll-parallax'
 
-import { Courses }        from '@landing/fragment-courses/src'
-import { Background }     from '@ui/background/src'
-import { Condition }      from '@ui/condition/src'
-import { useWindowWidth } from '@ui/utils/src'
+import { Courses }        from '@landing/fragment-courses'
+import { Background }     from '@ui/background'
+import { Condition }      from '@ui/condition'
+import { useWindowWidth } from '@ui/utils'
 
 export const CoursesSection = () => {
   const { isMobile, isDesktop, isWide, isUltra } = useWindowWidth()
@@ -12,7 +12,7 @@ export const CoursesSection = () => {
   return (
     <>
       <Condition match={isUltra}>
-        <Parallax translateY={[-5, 8]}>
+        <Parallax translateY={[-7, 8]}>
           <Background
             backgroundImage='wavesGradient'
             backgroundSize='big'
@@ -27,7 +27,7 @@ export const CoursesSection = () => {
       </Condition>
 
       <Condition match={isWide}>
-        <Parallax translateY={[-5, 9]}>
+        <Parallax translateY={[-7, 9]}>
           <Background
             backgroundImage='wavesGradient'
             backgroundSize='big'
@@ -50,7 +50,7 @@ export const CoursesSection = () => {
           display='flex'
           width='100%'
         >
-          <Parallax translateY={[-5, 10]}>
+          <Parallax translateY={[-8, 10]}>
             <Courses />
           </Parallax>
         </Background>

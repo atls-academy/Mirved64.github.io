@@ -1,29 +1,39 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
-import { useIntl }          from 'react-intl'
+import React              from 'react'
+import { FC }             from 'react'
+import { useState }       from 'react'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { CheckIcon }        from '@ui/icons'
-import { ArrowRightIcon }   from '@ui/icons'
-import { Input }            from '@ui/input'
-import { Box }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
+import { Button }         from '@ui/button'
+import { Condition }      from '@ui/condition'
+import { CheckIcon }      from '@ui/icons'
+import { ArrowRightIcon } from '@ui/icons'
+import { Input }          from '@ui/input'
+import { Box }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Space }          from '@ui/text'
+import { Text }           from '@ui/text'
 
-import { FormProps }        from './form.interfaces'
+import { FormProps }      from './form.interfaces'
+import { useForm }        from './data'
 
 export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) => {
   const [message, setMessage] = useState<string>('')
   const [phoneNumber, setPhoneNumber] = useState<string>('')
 
   const [display, setDisplay] = useState<boolean>(false)
-  const intl = useIntl()
+
+  const form = useForm()
+
+  const getNodeId = (id) => form?.data?.allForms?.nodes?.find((el) => el.id === id)
+
+  const placeholderMessage: string = getNodeId('cG9zdDoyOTM=')?.forms.text
+  const placeholderName: string = getNodeId('cG9zdDoyOTQ=')?.forms.text
+  const placeholderPhone: string = getNodeId('cG9zdDoyOTU=')?.forms.text
+  const sendMessage: string = getNodeId('cG9zdDoyOTY=')?.forms.text
+  const agreementText: string = getNodeId('cG9zdDoyOTg=')?.forms.text
+  const personalDataText: string = getNodeId('cG9zdDoyOTk=')?.forms.text
+  const successText: string = getNodeId('cG9zdDozMDA=')?.forms.text
 
   const handleChangeName = (userName) => {
     onChange(userName)
@@ -56,7 +66,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
             onChange={setMessage}
             variant='common'
             size='textarea'
-            placeholder={intl.formatMessage({ id: 'form.message.placeholder' })}
+            placeholder={placeholderMessage}
             onClick={() => setDisplay(true)}
             filled={Boolean(message)}
             maxLength={500}
@@ -70,7 +80,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
               onChange={handleChangeName}
               variant='common'
               size='bigSizeRegularRadii'
-              placeholder={intl.formatMessage({ id: 'form.name.placeholder' })}
+              placeholder={placeholderName}
               filled={Boolean(name)}
             />
 
@@ -81,7 +91,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
               onChange={setPhoneNumber}
               variant='common'
               size='bigSizeRegularRadii'
-              placeholder={intl.formatMessage({ id: 'form.phone-number.placeholder' })}
+              placeholder={placeholderPhone}
               filled={Boolean(phoneNumber)}
             />
           </Condition>
@@ -101,7 +111,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
               disabled={!handleChangeName || !phoneNumber || !message}
             >
               <Text color='text.white' fontSize='small' lineHeight='normal'>
-                <FormattedMessage id='form.button.send' />
+                {sendMessage}
               </Text>
             </Button>
           </Box>
@@ -111,7 +121,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
 
             <Box display='inline'>
               <Text display='inline' color='primaryTransparent' fontSize='tiny' lineHeight='huge'>
-                <FormattedMessage id='form.agreement.you-agree' />
+                {agreementText}
               </Text>
 
               <Space />
@@ -123,7 +133,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
                 fontSize='tiny'
                 lineHeight='huge'
               >
-                <FormattedMessage id='form.agreement.agreement' />
+                {personalDataText}
               </Text>
             </Box>
           </Condition>
@@ -157,7 +167,7 @@ export const Form: FC<FormProps> = ({ name, send, setSend, onClose, onChange }) 
 
             <Box width={335}>
               <Text color='primary' fontSize='small' lineHeight='normal' textAlign='center'>
-                <FormattedMessage id='form.success-message' />
+                {successText}
               </Text>
             </Box>
 

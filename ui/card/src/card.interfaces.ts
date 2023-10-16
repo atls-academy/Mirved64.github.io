@@ -1,10 +1,9 @@
 export interface CardProps {
-  category: string
+  label: string
+  isMobileOnly?: boolean
   widthCategoryBox: string | string[] | number | number[] | object
   indent: string | string[] | number | number[] | object
-  isMobileOnly?: boolean
-  titleDesktop?: string
-  titleMobile?: string
+  title: string
   description?: string
   image?: string
 }

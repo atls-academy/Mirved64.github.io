@@ -48,7 +48,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
             width={props.widthCategoryBox}
             alignItems='center'
             backgroundColor='background.white'
-            borderRadius={{ standard: 'tiny', wide: 'little' }}
+            borderRadius={{ _: 'tiny', wide: 'little' }}
             justifyContent='center'
           >
             <Text
@@ -57,7 +57,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
               lineHeight='small'
               textTransform='uppercase'
             >
-              {props.category}
+              {props.label}
             </Text>
           </Box>
 
@@ -70,7 +70,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
                 fontSize={{ _: 'medium', standard: 'regular', ultra: 'big' }}
                 lineHeight='usual'
               >
-                {props.titleDesktop}
+                {props.title}
               </Text>
             </Box>
           </Condition>
@@ -78,7 +78,7 @@ export const Card: FC<CardProps> = ({ isMobileOnly = false, ...props }) => {
           <Condition match={isMobileOnly}>
             <Box maxWidth={228} flexBasis={46}>
               <Text color='text.primary' fontSize='small' lineHeight='usual'>
-                {props.titleMobile}
+                {props.title}
               </Text>
             </Box>
           </Condition>

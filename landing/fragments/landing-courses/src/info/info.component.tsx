@@ -1,92 +1,65 @@
 import React                from 'react'
 
-import { Condition }        from '@ui/condition/src'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Space }            from '@ui/text'
-import { useWindowWidth }   from '@ui/utils/src'
+import { useWindowWidth }   from '@ui/utils'
 
 import { TextBlockAccent }  from './text-block'
 import { TextBlockPrimary } from './text-block'
+import { useCourses }       from '../data'
 
 export const Info = () => {
   const { isMobile } = useWindowWidth()
 
+  const infoData = useCourses()
+
+  const atlantisInfo: string[] = infoData?.data?.sectionBy?.content?.split('\n')[1].split(' ')
+  const courseInfo: string[] = infoData?.data?.sectionBy?.content?.split('\n')[2].split(' ')
+
   return (
     <Box flexDirection={['column', 'row']}>
       <Row maxWidth={{ _: 335, standard: 710, ultra: 1065 }} flexWrap='wrap'>
-        <TextBlockPrimary id='courses.subtitle.power-broker' />
+        {atlantisInfo?.slice(0, 3).map((word) => (
+          <TextBlockPrimary text={word} key={word} />
+        ))}
 
-        <Space count={isMobile ? 2 : 4} />
+        <TextBlockAccent text={atlantisInfo?.slice(3, 4)} />
 
-        <TextBlockAccent id='courses.subtitle.atlantis' />
+        {atlantisInfo?.slice(4, 7).map((word) => (
+          <TextBlockPrimary text={word} key={word} />
+        ))}
 
-        <Space count={isMobile ? 2 : 4} />
+        {atlantisInfo?.slice(7, 9).map((word) => (
+          <TextBlockAccent text={word} key={word} />
+        ))}
 
-        <TextBlockPrimary id='courses.subtitle.has' />
+        {atlantisInfo?.slice(9, 13).map((word) => (
+          <TextBlockPrimary text={word} key={word} />
+        ))}
 
-        <Space count={isMobile ? 2 : 4} />
+        <TextBlockAccent text={atlantisInfo?.slice(13, 14)} />
 
-        <TextBlockPrimary id='courses.subtitle.impact-on' />
+        <TextBlockAccent
+          text={atlantisInfo?.slice(-1).join('').split('').slice(0, -1).join('')}
+          space={false}
+        />
 
-        <TextBlockAccent id='courses.subtitle.it' />
-
-        <TextBlockPrimary id='courses.subtitle.unlimited' />
-
-        <Space count={isMobile ? 2 : 4} />
-
-        <TextBlockPrimary id='courses.subtitle.possibilities' />
-
-        <Space count={isMobile ? 6 : 4} />
-
-        <TextBlockPrimary id='courses.subtitle.in' />
-
-        <TextBlockAccent id='courses.subtitle.use-skills' />
-
-        <TextBlockPrimary id='courses.subtitle.point' />
+        <TextBlockPrimary text={atlantisInfo?.slice(-1).join('').split('').splice(-1).join('')} />
       </Row>
 
       <Layout flexBasis={20} flexGrow='1' />
 
       <Row maxWidth={{ _: 335, standard: 559, ultra: 840 }} flexWrap='wrap'>
-        <TextBlockPrimary id='courses.subtitle.advantage-of-learning' />
+        {courseInfo?.slice(0, 5).map((word, index) => (
+          <TextBlockPrimary text={word} key={word} space={!(isMobile && index === 2)} />
+        ))}
 
-        <Space count={isMobile ? 2 : 5} />
+        <TextBlockAccent text={courseInfo?.slice(5, 6)} />
 
-        <TextBlockPrimary id='courses.subtitle.visibly' />
-
-        <Space count={isMobile ? 2 : 5} />
-
-        <TextBlockPrimary id='courses.subtitle.grow' />
-
-        <Space count={isMobile ? 2 : 5} />
-
-        <Condition match={isMobile}>
-          <TextBlockPrimary id='courses.subtitle.because-mobile' />
-        </Condition>
-
-        <Condition match={!isMobile}>
-          <TextBlockPrimary id='courses.subtitle.because-desktop' />
-        </Condition>
-
-        <Space count={isMobile ? 2 : 5} />
-
-        <TextBlockAccent id='courses.subtitle.practice' />
-
-        <Space count={isMobile ? 2 : 5} />
-
-        <Condition match={isMobile}>
-          <TextBlockPrimary id='courses.subtitle.existing-projects-mobile' />
-        </Condition>
-
-        <Condition match={!isMobile}>
-          <TextBlockPrimary id='courses.subtitle.on-desktop' />
-
-          <Space count={5} />
-
-          <TextBlockPrimary id='courses.subtitle.existing-projects-desktop' />
-        </Condition>
+        {courseInfo?.slice(6, 9).map((word) => (
+          <TextBlockPrimary text={word} key={word} />
+        ))}
       </Row>
     </Box>
   )

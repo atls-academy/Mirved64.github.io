@@ -10,7 +10,7 @@ import { Box }               from '@ui/layout'
 
 export const LibrarySection = () => {
   const animateOnLoadProps = {
-    transition: { duration: 1.2 },
+    transition: { duration: 4 },
   }
 
   return (

@@ -1,21 +1,27 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useState }         from 'react'
+import React             from 'react'
+import { useState }      from 'react'
 
-import { Button }           from '@ui/button'
-import { ArrowDownIcon }    from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Logo }             from '@ui/logo'
-import { Text }             from '@ui/text'
+import { Button }        from '@ui/button'
+import { ArrowDownIcon } from '@ui/icons'
+import { Box }           from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Logo }          from '@ui/logo'
+import { Text }          from '@ui/text'
 
-import { DrawerMobile }     from './drawer'
+import { DrawerMobile }  from './drawer'
+import { useNavigation } from './data'
 
 export const NavigationMobile = () => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
+
+  const navigation = useNavigation()
+
+  const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
 
   return (
     <>
@@ -42,7 +48,7 @@ export const NavigationMobile = () => {
             radiiIcon='atom'
           >
             <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
-              <FormattedMessage id='navigation.button' />
+              {buttonTitle}
             </Text>
           </Button>
         </Box>

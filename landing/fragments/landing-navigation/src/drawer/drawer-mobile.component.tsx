@@ -1,6 +1,5 @@
 import React                from 'react'
 import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
 
 import { Background }       from '@ui/background'
 import { Button }           from '@ui/button'
@@ -13,61 +12,72 @@ import { Row }              from '@ui/layout'
 import { Logo }             from '@ui/logo'
 import { Text }             from '@ui/text'
 
-import { CardDataMobile }   from '../data'
+import { NODE_ID_LIST }     from '../helpers'
 import { DrawerCardMobile } from './drawer-card'
 import { DrawerProps }      from './drawer.interfaces'
+import { useNavigation }    from '../data'
 
-export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => (
-  <DrawerContainer active={active}>
-    <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
-      <Column>
-        <Layout flexBasis={20} />
+export const DrawerMobile: FC<DrawerProps> = ({ active, onClose }) => {
+  const navigation = useNavigation()
 
-        <Row height={40} alignItems='center'>
+  const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
+
+  const getNodeId = (id) => navigation?.data?.courses?.nodes?.find((node) => node.id === id)?.course
+
+  return (
+    <DrawerContainer active={active}>
+      <Background backgroundColor='white' borderRadius={['normalBottom', 'bigBottom']} width='100%'>
+        <Column>
           <Layout flexBasis={20} />
 
-          <Box>
-            <Logo fill='primary' width={40} height={40} />
-          </Box>
+          <Row height={40} alignItems='center'>
+            <Layout flexBasis={20} />
 
-          <Layout flexBasis={195} flexGrow='1' flexShrink='10' />
+            <Box>
+              <Logo fill='primary' width={40} height={40} />
+            </Box>
 
-          <Box width={100}>
-            <Button
-              onClick={onClose}
-              variant='primaryBackgroundWhiteText'
-              size='smallSizeLittleRadii'
-              icon={<ArrowUpIcon width={9} height={5} />}
-              widthIcon={28}
-              heightIcon={28}
-              backgroundIcon='background.white'
-              radiiIcon='atom'
-            >
-              <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
-                <FormattedMessage id='navigation.button' />
-              </Text>
-            </Button>
-          </Box>
+            <Layout flexBasis={195} flexGrow='1' flexShrink='10' />
+
+            <Box width={100}>
+              <Button
+                onClick={onClose}
+                variant='primaryBackgroundWhiteText'
+                size='smallSizeLittleRadii'
+                icon={<ArrowUpIcon width={9} height={5} />}
+                widthIcon={28}
+                heightIcon={28}
+                backgroundIcon='background.white'
+                radiiIcon='atom'
+              >
+                <Text color='white' fontSize='tiny' fontWeight='normal' lineHeight='small'>
+                  {buttonTitle}
+                </Text>
+              </Button>
+            </Box>
+
+            <Layout flexBasis={20} />
+          </Row>
+
+          <Layout flexBasis={78} />
+
+          <Row>
+            <Layout flexBasis={20} />
+
+            <Column flexGrow='1'>
+              {NODE_ID_LIST?.map((id, index, array) => (
+                <DrawerCardMobile card={getNodeId(id)} index={index} array={array} key={id} />
+              ))}
+            </Column>
+
+            <Layout flexBasis={20} />
+          </Row>
 
           <Layout flexBasis={20} />
-        </Row>
-
-        <Layout flexBasis={78} />
-
-        <Row>
-          <Layout flexBasis={20} />
-
-          <Column flexGrow='1'>
-            {CardDataMobile.map((card, index, array) => (
-              <DrawerCardMobile card={card} index={index} array={array} key={card.id} />
-            ))}
-          </Column>
-
-          <Layout flexBasis={20} />
-        </Row>
-
-        <Layout flexBasis={20} />
-      </Column>
-    </Background>
-  </DrawerContainer>
-)
+        </Column>
+      </Background>
+    </DrawerContainer>
+  )
+}

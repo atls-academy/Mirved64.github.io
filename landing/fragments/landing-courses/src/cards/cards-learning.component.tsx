@@ -1,24 +1,37 @@
-import React              from 'react'
+import React          from 'react'
 
-import { Card }           from '@ui/card'
-import { Condition }      from '@ui/condition'
-import { Layout }         from '@ui/layout'
-import { Box }            from '@ui/layout'
-import { useWindowWidth } from '@ui/utils'
+import { Card }       from '@ui/card'
+import { Condition }  from '@ui/condition'
+import { Layout }     from '@ui/layout'
+import { Box }        from '@ui/layout'
 
-import { CardCategory }   from '../data'
-import { CardsList }      from '../data'
+import { useCourses } from '../data'
 
 export const CardsLearning = () => {
-  const { isMobile } = useWindowWidth()
+  const cards = useCourses()
+
+  const cardsList: {
+    label: string
+    labelId: number
+    title: string
+    description: string
+    image: string
+  }[] = cards?.data?.courses.nodes
+    .filter((obj) => obj.course.label[0].labelId === 196 || obj.course.label[0].labelId === 252)
+    ?.map((element) => ({
+      label: element.course.label[0].title,
+      labelId: element.course.label[0].labelId,
+      title: element.course.title,
+      description: element.course.description,
+      image: element.course.image?.sourceUrl,
+    }))
+    .reverse()
 
   return (
     <Box flexDirection={{ _: 'column', standard: 'column', wide: 'row' }}>
-      {CardsList.filter(
-        (card) => card.category === CardCategory.Teach || card.category === CardCategory.MiniCourse
-      ).map((card, index, array) => (
+      {cardsList?.map((card, index, array) => (
         <Box
-          key={card.id}
+          key={card.title}
           flexDirection={{ _: 'column', standard: 'column', wide: 'row' }}
           width='100%'
         >
@@ -26,45 +39,25 @@ export const CardsLearning = () => {
             <Layout flexBasis={[10, 20]} flexShrink='0' />
           </Condition>
 
-          <Condition match={card.category === CardCategory.Teach && !isMobile}>
+          <Condition match={card.labelId === 196}>
             <Card
-              category={card.category}
-              titleDesktop={card.title}
-              description={card.descriptionDesktop}
-              indent={{ standard: 214, wide: 356, ultra: 222 }}
-              widthCategoryBox={{ standard: 104, wide: 156 }}
+              label={card.label}
+              title={card.title}
+              description={card.description}
+              indent={{ _: 104, standard: 214, wide: 356, ultra: 222 }}
+              widthCategoryBox={{ _: 80, standard: 104, wide: 156 }}
               image={card.image}
             />
           </Condition>
 
-          <Condition match={card.category === CardCategory.Teach && isMobile}>
+          <Condition match={card.labelId === 252}>
             <Card
-              category={card.category}
-              titleDesktop={card.title}
-              description={card.descriptionMobile}
-              indent={104}
-              widthCategoryBox={80}
-            />
-          </Condition>
-
-          <Condition match={card.category === CardCategory.MiniCourse && !isMobile}>
-            <Card
-              category={card.category}
-              titleDesktop={card.title}
-              description={card.descriptionDesktop}
-              indent={{ standard: 56, wide: 356, ultra: 222 }}
-              widthCategoryBox={{ standard: 112, wide: 167 }}
+              label={card.label}
+              title={card.title}
+              description={card.description}
+              indent={{ _: 49, standard: 56, wide: 356, ultra: 222 }}
+              widthCategoryBox={{ _: 87, standard: 112, wide: 167 }}
               image={card.image}
-            />
-          </Condition>
-
-          <Condition match={card.category === CardCategory.MiniCourse && isMobile}>
-            <Card
-              category={card.category}
-              titleDesktop={card.title}
-              description={card.descriptionMobile}
-              indent={49}
-              widthCategoryBox={87}
             />
           </Condition>
 

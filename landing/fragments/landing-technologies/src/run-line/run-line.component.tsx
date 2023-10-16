@@ -26,8 +26,8 @@ export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) =>
 
   const technologyElement = useMemo(
     () =>
-      technologies!.map((item) => (
-        <Box key={item.name}>
+      technologies?.map((item) => (
+        <Box key={item.id}>
           <Box>
             <Text
               color='text.white'
@@ -38,7 +38,7 @@ export const RunLine: FC<RunLineProps> = ({ technologies, font = 'primary' }) =>
               whiteSpace='nowrap'
               textTransform='uppercase'
             >
-              {item.name}
+              {item.title}
             </Text>
           </Box>
 

@@ -1,21 +1,31 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
-import { Link }             from 'react-scroll'
+import React              from 'react'
+import { Link }           from 'react-scroll'
 
-import { Background }       from '@ui/background'
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { MouseIcon }        from '@ui/icons'
-import { Image }            from '@ui/image'
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { useWindowWidth }   from '@ui/utils'
+import { Background }     from '@ui/background'
+import { Button }         from '@ui/button'
+import { Condition }      from '@ui/condition'
+import { MouseIcon }      from '@ui/icons'
+import { Image }          from '@ui/image'
+import { Box }            from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useWindowWidth } from '@ui/utils'
+
+import { useCourses }     from '../data'
 
 export const Sidebar = () => {
   const { isMobile, isUltra } = useWindowWidth()
+
+  const sidebarData = useCourses()
+
+  const description: string = sidebarData?.data?.courseBy?.course?.description
+  const numberOfStudents: string = sidebarData?.data?.courseBy?.course?.title
+  const inscription: string = sidebarData?.data?.courseBy?.content
+  const buttonText: string = sidebarData?.data?.allNavigation?.nodes?.find(
+    (node) => node.id === 'cG9zdDozMDg='
+  )?.title
 
   return (
     <Column flexBasis={{ _: 212, standard: 410, ultra: 470 }}>
@@ -43,7 +53,7 @@ export const Sidebar = () => {
                 fontSize={{ _: 'tiny', standard: 'little', ultra: 'medium' }}
                 lineHeight={['huge', 'big']}
               >
-                <FormattedMessage id='courses.sidebar.subtitle' />
+                {description}
               </Text>
             </Box>
 
@@ -68,7 +78,7 @@ export const Sidebar = () => {
                   fontSize={{ _: 'giant', standard: 'enormous', ultra: 'stupendous' }}
                   lineHeight='small'
                 >
-                  <FormattedMessage id='courses.sidebar.number' />
+                  {numberOfStudents}
                 </Text>
               </Box>
 
@@ -83,7 +93,7 @@ export const Sidebar = () => {
                   fontSize={{ _: 'atom', standard: 'tiny', ultra: 'low' }}
                   lineHeight={['large', 'big']}
                 >
-                  <FormattedMessage id='courses.sidebar.sign' />
+                  {inscription}
                 </Text>
               </Box>
 
@@ -106,7 +116,7 @@ export const Sidebar = () => {
       <Layout order={[2, 0]} flexBasis={[40, 20]} />
 
       <Condition match={!isMobile}>
-        <Link to='teaching' width='100%' spy smooth duration={1000}>
+        <Link to='cG9zdDoyMjQ=' width='100%' spy smooth duration={1000}>
           <Condition match={!isUltra}>
             <Button
               variant='primaryBackgroundWhiteText'
@@ -118,7 +128,7 @@ export const Sidebar = () => {
               radiiIcon='normal'
             >
               <Text color='white' fontSize='small' lineHeight='normal'>
-                <FormattedMessage id='courses.sidebar.button-desktop' />
+                {buttonText}
               </Text>
             </Button>
           </Condition>
@@ -134,7 +144,7 @@ export const Sidebar = () => {
               radiiIcon='regular'
             >
               <Text color='white' fontSize='usual' lineHeight='normal'>
-                <FormattedMessage id='courses.sidebar.button-desktop' />
+                {buttonText}
               </Text>
             </Button>
           </Condition>

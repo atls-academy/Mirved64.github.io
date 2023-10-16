@@ -1,28 +1,29 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Box }              from '@ui/layout'
-import { Text }             from '@ui/text'
+import { Delimiter }      from '@ui/delimiter'
+import { Box }            from '@ui/layout'
+import { Text }           from '@ui/text'
+import { Space }          from '@ui/text'
 
-import { TextBlockProps }   from './text-block.interfaces'
+import { TextBlockProps } from './text-block.interfaces'
 
-export const DesktopTextBlock: FC<TextBlockProps> = ({ id }) => (
-  <Text
-    display='inline'
-    color='text.white'
-    fontSize='common'
-    lineHeight='huge'
-    wordWrap='break-word'
-  >
-    <FormattedMessage id={id} />
-  </Text>
-)
-
-export const MobileTextBlock: FC<TextBlockProps> = ({ id }) => (
-  <Box>
-    <Text color='text.white' fontSize='small' lineHeight='huge'>
-      <FormattedMessage id={id} />
+export const DesktopTextBlock: FC<TextBlockProps> = ({ text }) => (
+  <Box display='inline'>
+    <Text
+      display='inline'
+      color='text.white'
+      fontSize='common'
+      lineHeight='huge'
+      wordWrap='break-word'
+    >
+      {text}
     </Text>
+
+    <Space count='6' />
+
+    <Delimiter />
+
+    <Space count='6' />
   </Box>
 )

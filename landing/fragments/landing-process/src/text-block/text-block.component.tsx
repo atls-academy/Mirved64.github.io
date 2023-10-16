@@ -1,24 +1,44 @@
-import React                from 'react'
-import { FormattedMessage } from 'react-intl'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Text }             from '@ui/text'
+import { Space }          from '@ui/text'
+import { Text }           from '@ui/text'
+import { useWindowWidth } from '@ui/utils'
 
-export const TextBlockWhite = ({ id }) => (
-  <Text
-    color='text.white'
-    fontSize={{ _: 'medium', standard: 'regular', wide: 'great' }}
-    lineHeight='usual'
-  >
-    <FormattedMessage id={id} />
-  </Text>
-)
+import { TextBlockProps } from './text-block.interfaces'
 
-export const TextBlockGhost = ({ id }) => (
-  <Text
-    color='text.whiteSemiTransparent'
-    fontSize={{ _: 'medium', standard: 'regular', wide: 'great' }}
-    lineHeight='usual'
-  >
-    <FormattedMessage id={id} />
-  </Text>
-)
+export const TextBlockWhite: FC<TextBlockProps> = ({ text }) => {
+  const { isMobile } = useWindowWidth()
+
+  return (
+    <>
+      <Text
+        color='text.white'
+        fontSize={{ _: 'medium', standard: 'regular', wide: 'great' }}
+        lineHeight='usual'
+      >
+        {text}
+      </Text>
+
+      <Space count={isMobile ? 2 : 3} />
+    </>
+  )
+}
+
+export const TextBlockGhost: FC<TextBlockProps> = ({ text }) => {
+  const { isMobile } = useWindowWidth()
+
+  return (
+    <>
+      <Text
+        color='text.whiteSemiTransparent'
+        fontSize={{ _: 'medium', standard: 'regular', wide: 'great' }}
+        lineHeight='usual'
+      >
+        {text}
+      </Text>
+
+      <Space count={isMobile ? 2 : 3} />
+    </>
+  )
+}

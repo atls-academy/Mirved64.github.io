@@ -1,6 +1,5 @@
 import React                        from 'react'
 import { FC }                       from 'react'
-import { FormattedMessage }         from 'react-intl'
 import { useState }                 from 'react'
 
 import { Button }                   from '@ui/button'
@@ -15,11 +14,18 @@ import { Text }                     from '@ui/text'
 
 import { DrawerDesktop }            from '../drawer'
 import { NavigationProps }          from '../navigation.interfaces'
+import { useNavigation }            from '../data'
 
 export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => {
   const [active, setActive] = useState<boolean>(false)
 
   const handleClick = () => setActive(!active)
+
+  const navigation = useNavigation()
+
+  const buttonTitle: string = navigation?.data?.allNavigation.nodes.find(
+    (obj) => obj.id === 'cG9zdDoyMjI='
+  )?.title
 
   return (
     <>
@@ -56,7 +62,7 @@ export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => 
             radiiIcon='little'
           >
             <Text color='text.white' fontSize='compact' lineHeight='small'>
-              <FormattedMessage id='navigation.button' />
+              {buttonTitle}
             </Text>
           </Button>
         </Box>
@@ -73,7 +79,7 @@ export const NavigationDesktopIndex: FC<NavigationProps> = ({ sectionRefs }) => 
             radiiIcon='usual'
           >
             <Text color='text.white' fontSize='medium' lineHeight='small'>
-              <FormattedMessage id='navigation.button' />
+              {buttonTitle}
             </Text>
           </Button>
         </Box>

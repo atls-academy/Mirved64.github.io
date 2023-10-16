@@ -4,6 +4,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/animate": "workspace: 0.0.1",
     "@ui/background": "workspace: 0.0.1",
     "@ui/button": "workspace: 0.0.1",
     "@ui/condition": "workspace: 0.0.1",
@@ -16,13 +17,11 @@
   "devDependencies": {
     "framer-motion": "10.16.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-intl": "6.0.8"
+    "react-dom": "18.2.0"
   },
   "peerDependencies": {
     "framer-motion": "*",
     "react": "*",
-    "react-dom": "*",
-    "react-intl": "*"
+    "react-dom": "*"
   }
 }
